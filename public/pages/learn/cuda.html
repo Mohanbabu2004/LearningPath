@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CUDA Programming - Learning Path</title>
+
+    <link rel="stylesheet" href="../../style.css">
+
+    <style>
+        .course-page {
+            display: flex;
+            min-height: calc(100vh - 70px);
+            background: #f5f7fb;
+        }
+
+        .course-sidebar {
+            width: 260px;
+            background: white;
+            padding: 25px 15px;
+            border-right: 1px solid #ddd;
+        }
+
+        .course-sidebar h3 {
+            margin-bottom: 20px;
+            color: #222;
+        }
+
+        .course-sidebar a {
+            display: block;
+            padding: 12px 15px;
+            margin-bottom: 5px;
+            text-decoration: none;
+            color: #444;
+            border-radius: 8px;
+        }
+
+        .course-sidebar a:hover,
+        .course-sidebar a.active {
+            background: #eef2ff;
+            color: #76b900;
+            font-weight: bold;
+        }
+
+        .course-content {
+            flex: 1;
+            padding: 40px;
+            max-width: 1000px;
+        }
+
+        .course-badge {
+            display: inline-block;
+            padding: 7px 15px;
+            background: #eef7df;
+            color: #5b8f00;
+            border-radius: 20px;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .course-content h1 {
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+
+        .course-content h2 {
+            margin-top: 35px;
+            margin-bottom: 15px;
+            color: #222;
+        }
+
+        .course-content p {
+            line-height: 1.7;
+            color: #555;
+        }
+
+        .progress-container {
+            margin: 20px 0;
+        }
+
+        .progress-text {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+
+        .progress-bar {
+            height: 10px;
+            background: #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .progress {
+            height: 100%;
+            width: 0%;
+            background: #76b900;
+        }
+
+        .lesson-card {
+            background: white;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 12px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+        }
+
+        .lesson-card pre {
+            background: #1e1e1e;
+            color: white;
+            padding: 18px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin-top: 15px;
+        }
+
+        .lesson-card code {
+            font-family: Consolas, monospace;
+        }
+
+        .action-buttons {
+            margin-top: 30px;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .action-btn {
+            display: inline-block;
+            padding: 12px 22px;
+            background: #4f46e5;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+
+        .action-btn:hover {
+            background: #3730a3;
+        }
+
+        @media (max-width: 800px) {
+            .course-page {
+                flex-direction: column;
+            }
+
+            .course-sidebar {
+                width: 100%;
+                border-right: none;
+                border-bottom: 1px solid #ddd;
+            }
+
+            .course-sidebar a {
+                display: inline-block;
+                margin-right: 5px;
+            }
+
+            .course-content {
+                padding: 25px 18px;
+            }
+
+            .course-content h1 {
+                font-size: 30px;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .course-sidebar {
+                padding: 15px 10px;
+            }
+
+            .course-sidebar a {
+                padding: 9px 10px;
+                font-size: 14px;
+            }
+
+            .course-content {
+                padding: 20px 15px;
+            }
+
+            .course-content h1 {
+                font-size: 26px;
+            }
+
+            .lesson-card {
+                padding: 18px;
+            }
+
+            .lesson-card pre {
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+
+        <div class="logo">
+            Learning<span>Path</span>
+        </div>
+
+        <button class="menu-btn" onclick="toggleMenu()">
+            ☰
+        </button>
+
+        <div class="nav-menu" id="navMenu">
+            <a href="../../index.html">Home</a>
+            <a href="../roadmap.html">Roadmap</a>
+            <a href="../continue-learning.html">
+                Continue Learning
+            </a>
+        </div>
+
+    </nav>
+
+
+    <!-- Course Page -->
+    <div class="course-page">
+
+        <!-- Sidebar -->
+        <aside class="course-sidebar">
+
+            <h3>CUDA Course</h3>
+
+            <a href="#" class="active">
+                1. Introduction
+            </a>
+
+            <a href="#gpu">
+                2. GPU Computing
+            </a>
+
+            <a href="#basics">
+                3. CUDA Basics
+            </a>
+
+            <a href="#kernel">
+                4. CUDA Kernels
+            </a>
+
+            <a href="#threads">
+                5. Threads
+            </a>
+
+            <a href="#blocks">
+                6. Thread Blocks
+            </a>
+
+            <a href="#grid">
+                7. Grid
+            </a>
+
+            <a href="#memory">
+                8. CUDA Memory
+            </a>
+
+            <a href="#device">
+                9. Device Memory
+            </a>
+
+            <a href="#host">
+                10. Host & Device
+            </a>
+
+            <a href="#parallel">
+                11. Parallel Programming
+            </a>
+
+            <a href="#vectors">
+                12. Vector Addition
+            </a>
+
+            <a href="#errors">
+                13. Error Handling
+            </a>
+
+            <a href="#practice">
+                14. Practice
+            </a>
+
+        </aside>
+
+
+        <!-- Main Content -->
+        <main class="course-content">
+
+            <span class="course-badge">
+                CUDA Programming
+            </span>
+
+            <h1>Learn CUDA Programming</h1>
+
+            <p>
+                Learn GPU programming with CUDA and understand
+                parallel computing using NVIDIA GPUs.
+            </p>
+
+
+            <!-- Progress -->
+            <div class="progress-container">
+
+                <div class="progress-text">
+                    <span>Course Progress</span>
+                    <strong>0%</strong>
+                </div>
+
+                <div class="progress-bar">
+                    <div class="progress"></div>
+                </div>
+
+            </div>
+
+
+            <!-- Introduction -->
+            <div class="lesson-card">
+
+                <h2>1. Introduction to CUDA</h2>
+
+                <p>
+                    CUDA is a parallel computing platform and programming
+                    model developed by NVIDIA.
+                </p>
+
+                <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+
+    printf("Hello CUDA\n");
+
+    return 0;
+}</code></pre>
+
+            </div>
+
+
+            <!-- GPU -->
+            <div class="lesson-card" id="gpu">
+
+                <h2>2. GPU Computing</h2>
+
+                <p>
+                    GPUs can perform many calculations simultaneously,
+                    making them useful for parallel computing.
+                </p>
+
+                <pre><code>CPU
+  |
+  └── Few powerful cores
+
+GPU
+  |
+  ├── Many smaller cores
+  ├── Parallel execution
+  └── High throughput</code></pre>
+
+            </div>
+
+
+            <!-- Basics -->
+            <div class="lesson-card" id="basics">
+
+                <h2>3. CUDA Basics</h2>
+
+                <p>
+                    CUDA programs can contain code that runs on the
+                    CPU and code that runs on the GPU.
+                </p>
+
+                <pre><code>#include &lt;stdio.h&gt;
+
+__global__ void hello() {
+
+    printf("Hello from GPU\n");
+
+}
+
+int main() {
+
+    hello&lt;&lt;&lt;1, 1&gt;&gt;&gt;();
+
+    cudaDeviceSynchronize();
+
+    return 0;
+}</code></pre>
+
+            </div>
+
+
+            <!-- Kernel -->
+            <div class="lesson-card" id="kernel">
+
+                <h2>4. CUDA Kernels</h2>
+
+                <p>
+                    A kernel is a function that executes on the GPU.
+                    The __global__ keyword is commonly used for kernels.
+                </p>
+
+                <pre><code>__global__ void myKernel() {
+
+    printf("Running on GPU\n");
+
+}</code></pre>
+
+            </div>
+
+
+            <!-- Threads -->
+            <div class="lesson-card" id="threads">
+
+                <h2>5. Threads</h2>
+
+                <p>
+                    Threads are individual execution units used
+                    to perform parallel work.
+                </p>
+
+                <pre><code>__global__ void showThread() {
+
+    printf(
+        "Thread ID: %d\n",
+        threadIdx.x
+    );
+
+}</code></pre>
+
+            </div>
+
+
+            <!-- Blocks -->
+            <div class="lesson-card" id="blocks">
+
+                <h2>6. Thread Blocks</h2>
+
+                <p>
+                    Threads are organized into blocks.
+                </p>
+
+                <pre><code>__global__ void showThread() {
+
+    printf(
+        "Thread: %d\n",
+        threadIdx.x
+    );
+
+}
+
+int main() {
+
+    showThread&lt;&lt;&lt;1, 4&gt;&gt;&gt;();
+
+    cudaDeviceSynchronize();
+
+    return 0;
+}</code></pre>
+
+            </div>
+
+
+            <!-- Grid -->
+            <div class="lesson-card" id="grid">
+
+                <h2>7. Grid</h2>
+
+                <p>
+                    A grid contains one or more thread blocks.
+                </p>
+
+                <pre><code>Kernel Launch
+
+Grid
+ |
+ ├── Block 0
+ │    ├── Thread 0
+ │    ├── Thread 1
+ │    └── Thread 2
+ |
+ └── Block 1
+      ├── Thread 0
+      ├── Thread 1
+      └── Thread 2</code></pre>
+
+            </div>
+
+
+            <!-- Memory -->
+            <div class="lesson-card" id="memory">
+
+                <h2>8. CUDA Memory</h2>
+
+                <p>
+                    CUDA provides different memory types such as
+                    global, shared, constant and local memory.
+                </p>
+
+                <pre><code>Global Memory
+      |
+Shared Memory
+      |
+Registers
+      |
+Thread</code></pre>
+
+            </div>
+
+
+            <!-- Device -->
+            <div class="lesson-card" id="device">
+
+                <h2>9. Device Memory</h2>
+
+                <p>
+                    cudaMalloc() can be used to allocate memory
+                    on the GPU.
+                </p>
+
+                <pre><code>int *d_data;
+
+cudaMalloc(
+    (void**)&d_data,
+    size
+);</code></pre>
+
+            </div>
+
+
+            <!-- Host Device -->
+            <div class="lesson-card" id="host">
+
+                <h2>10. Host & Device</h2>
+
+                <p>
+                    The host usually refers to the CPU and the device
+                    refers to the GPU.
+                </p>
+
+                <pre><code>CPU
+ |
+ | cudaMemcpy
+ v
+GPU
+
+GPU
+ |
+ | cudaMemcpy
+ v
+CPU</code></pre>
+
+            </div>
+
+
+            <!-- Parallel -->
+            <div class="lesson-card" id="parallel">
+
+                <h2>11. Parallel Programming</h2>
+
+                <p>
+                    CUDA allows many threads to perform similar
+                    operations at the same time.
+                </p>
+
+                <pre><code>__global__ void add() {
+
+    int id = threadIdx.x;
+
+    printf(
+        "Processing element %d\n",
+        id
+    );
+}</code></pre>
+
+            </div>
+
+
+            <!-- Vector Addition -->
+            <div class="lesson-card" id="vectors">
+
+                <h2>12. Vector Addition</h2>
+
+                <p>
+                    Vector addition is a common beginner CUDA example.
+                </p>
+
+                <pre><code>__global__ void vectorAdd(
+    int *a,
+    int *b,
+    int *c
+) {
+
+    int id = threadIdx.x;
+
+    c[id] = a[id] + b[id];
+
+}</code></pre>
+
+            </div>
+
+
+            <!-- Error Handling -->
+            <div class="lesson-card" id="errors">
+
+                <h2>13. Error Handling</h2>
+
+                <p>
+                    CUDA functions can return error codes that should
+                    be checked during development.
+                </p>
+
+                <pre><code>cudaError_t error;
+
+error = cudaGetLastError();
+
+if (error != cudaSuccess) {
+
+    printf(
+        "CUDA Error: %s\n",
+        cudaGetErrorString(error)
+    );
+
+}</code></pre>
+
+            </div>
+
+
+            <!-- Practice -->
+            <div class="lesson-card" id="practice">
+
+                <h2>14. Practice</h2>
+
+                <p>
+                    Create a CUDA program that adds two arrays using
+                    multiple GPU threads.
+                </p>
+
+                <pre><code>__global__ void addArrays(
+    int *a,
+    int *b,
+    int *c
+) {
+
+    int id = threadIdx.x;
+
+    c[id] = a[id] + b[id];
+
+}</code></pre>
+
+            </div>
+
+
+            <!-- Buttons -->
+            <div class="action-buttons">
+
+                <a href="../quiz.html" class="action-btn">
+                    📝 Take Quiz
+                </a>
+
+                <a href="../projects.html" class="action-btn">
+                    🚀 Practice Projects
+                </a>
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 LearningPath. Learn Coding the Easy Way.
+        </p>
+
+    </footer>
+
+
+    <script src="../../script.js"></script>
+
+</body>
+</html>

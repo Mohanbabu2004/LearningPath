@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>My Progress - LearningPath</title>
+
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+
+        .progress-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .page-icon {
+            font-size: 55px;
+        }
+
+        .page-header h1 {
+            font-size: 38px;
+            margin: 10px 0;
+        }
+
+        .page-header p {
+            color: #666;
+            font-size: 17px;
+        }
+
+        /* Overall Progress */
+
+        .overall-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            margin-bottom: 30px;
+        }
+
+        .overall-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .overall-top h2 {
+            margin: 0;
+        }
+
+        .overall-percent {
+            font-size: 40px;
+            font-weight: bold;
+            color: #2563eb;
+        }
+
+        .progress-track {
+            width: 100%;
+            height: 15px;
+            background: #e5e7eb;
+            border-radius: 20px;
+            margin-top: 20px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            width: 18%;
+            height: 100%;
+            background: #2563eb;
+            border-radius: 20px;
+        }
+
+        /* Statistics */
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+        }
+
+        .stat-icon {
+            font-size: 35px;
+        }
+
+        .stat-number {
+            font-size: 30px;
+            font-weight: bold;
+            margin: 8px 0;
+        }
+
+        .stat-card p {
+            color: #666;
+            margin: 0;
+        }
+
+        /* Courses */
+
+        .courses-section {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .courses-section h2 {
+            margin-top: 0;
+        }
+
+        .course-item {
+            margin: 25px 0;
+        }
+
+        .course-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+
+        .course-name {
+            font-weight: bold;
+        }
+
+        .course-percent {
+            font-weight: bold;
+        }
+
+        .course-track {
+            width: 100%;
+            height: 10px;
+            background: #e5e7eb;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .course-fill {
+            height: 100%;
+            border-radius: 10px;
+            background: #2563eb;
+        }
+
+        /* Achievements */
+
+        .achievement-section {
+            margin-top: 30px;
+        }
+
+        .achievement-section h2 {
+            margin-bottom: 20px;
+        }
+
+        .achievement-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .achievement-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+        }
+
+        .achievement-icon {
+            font-size: 45px;
+        }
+
+        .achievement-card h3 {
+            margin: 10px 0;
+        }
+
+        .achievement-card p {
+            color: #666;
+        }
+
+        @media (max-width: 900px) {
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .achievement-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+        }
+
+        @media (max-width: 700px) {
+
+            .page-header h1 {
+                font-size: 30px;
+            }
+
+            .overall-top {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .achievement-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .courses-section,
+            .overall-card {
+                padding: 20px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- Navbar -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+                🚀 LearningPath
+            </div>
+
+            <button
+                class="menu-btn"
+                onclick="toggleMenu()"
+            >
+                ☰
+            </button>
+
+            <ul
+                class="nav-menu"
+                id="navMenu"
+            >
+
+                <li>
+                    <a href="../index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="roadmap.html">
+                        Roadmap
+                    </a>
+                </li>
+
+                <li>
+                    <a href="continue-learning.html">
+                        Continue Learning
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- Main -->
+
+    <main class="progress-container">
+
+
+        <!-- Header -->
+
+        <section class="page-header">
+
+            <div class="page-icon">
+                📊
+            </div>
+
+            <h1>
+                My Learning Progress
+            </h1>
+
+            <p>
+                Track your programming learning journey.
+            </p>
+
+        </section>
+
+
+        <!-- Overall Progress -->
+
+        <section class="overall-card">
+
+            <div class="overall-top">
+
+                <div>
+
+                    <h2>
+                        Overall Progress
+                    </h2>
+
+                    <p>
+                        Keep learning and complete your roadmap.
+                    </p>
+
+                </div>
+
+                <div class="overall-percent">
+                    18%
+                </div>
+
+            </div>
+
+
+            <div class="progress-track">
+
+                <div class="progress-fill"></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Statistics -->
+
+        <section class="stats-grid">
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    📚
+                </div>
+
+                <div class="stat-number">
+                    12
+                </div>
+
+                <p>
+                    Courses Started
+                </p>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    ✅
+                </div>
+
+                <div class="stat-number">
+                    24
+                </div>
+
+                <p>
+                    Lessons Completed
+                </p>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    📝
+                </div>
+
+                <div class="stat-number">
+                    85%
+                </div>
+
+                <p>
+                    Quiz Average
+                </p>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    🏆
+                </div>
+
+                <div class="stat-number">
+                    3
+                </div>
+
+                <p>
+                    Achievements
+                </p>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- Courses -->
+
+        <section class="courses-section">
+
+            <h2>
+                📚 Course Progress
+            </h2>
+
+
+            <!-- Programming Basics -->
+
+            <div class="course-item">
+
+                <div class="course-header">
+
+                    <span class="course-name">
+                        Programming Basics
+                    </span>
+
+                    <span class="course-percent">
+                        100%
+                    </span>
+
+                </div>
+
+                <div class="course-track">
+
+                    <div
+                        class="course-fill"
+                        style="width:100%"
+                    ></div>
+
+                </div>
+
+            </div>
+
+
+            <!-- C -->
+
+            <div class="course-item">
+
+                <div class="course-header">
+
+                    <span class="course-name">
+                        C Programming
+                    </span>
+
+                    <span class="course-percent">
+                        100%
+                    </span>
+
+                </div>
+
+                <div class="course-track">
+
+                    <div
+                        class="course-fill"
+                        style="width:100%"
+                    ></div>
+
+                </div>
+
+            </div>
+
+
+            <!-- C++ -->
+
+            <div class="course-item">
+
+                <div class="course-header">
+
+                    <span class="course-name">
+                        C++ Programming
+                    </span>
+
+                    <span class="course-percent">
+                        30%
+                    </span>
+
+                </div>
+
+                <div class="course-track">
+
+                    <div
+                        class="course-fill"
+                        style="width:30%"
+                    ></div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Python -->
+
+            <div class="course-item">
+
+                <div class="course-header">
+
+                    <span class="course-name">
+                        Python Programming
+                    </span>
+
+                    <span class="course-percent">
+                        0%
+                    </span>
+
+                </div>
+
+                <div class="course-track">
+
+                    <div
+                        class="course-fill"
+                        style="width:0%"
+                    ></div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Java -->
+
+            <div class="course-item">
+
+                <div class="course-header">
+
+                    <span class="course-name">
+                        Java Programming
+                    </span>
+
+                    <span class="course-percent">
+                        0%
+                    </span>
+
+                </div>
+
+                <div class="course-track">
+
+                    <div
+                        class="course-fill"
+                        style="width:0%"
+                    ></div>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- Achievements -->
+
+        <section class="achievement-section">
+
+            <h2>
+                🏆 Achievements
+            </h2>
+
+
+            <div class="achievement-grid">
+
+
+                <div class="achievement-card">
+
+                    <div class="achievement-icon">
+                        🎯
+                    </div>
+
+                    <h3>
+                        First Course
+                    </h3>
+
+                    <p>
+                        Completed your first programming course.
+                    </p>
+
+                </div>
+
+
+                <div class="achievement-card">
+
+                    <div class="achievement-icon">
+                        💯
+                    </div>
+
+                    <h3>
+                        Perfect Score
+                    </h3>
+
+                    <p>
+                        Scored 100% in a practice quiz.
+                    </p>
+
+                </div>
+
+
+                <div class="achievement-card">
+
+                    <div class="achievement-icon">
+                        🚀
+                    </div>
+
+                    <h3>
+                        Project Builder
+                    </h3>
+
+                    <p>
+                        Started your first programming project.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            © 2026 LearningPath | Learn Coding the Easy Way
+        </p>
+
+    </footer>
+
+
+    <script src="../script.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Learning Path - Roadmap</title>
+
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+
+        .roadmap {
+            padding: 70px 7%;
+            background: #f7f8fc;
+        }
+
+        .roadmap-header {
+            text-align: center;
+            max-width: 750px;
+            margin: 0 auto 60px;
+        }
+
+        .roadmap-header span {
+            color: #4f46e5;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .roadmap-header h1 {
+            font-size: 45px;
+            margin: 10px 0;
+        }
+
+        .roadmap-header h1 strong {
+            color: #4f46e5;
+        }
+
+        .roadmap-header p {
+            color: #6b7280;
+            font-size: 18px;
+        }
+
+        .roadmap-container {
+            max-width: 900px;
+            margin: auto;
+            position: relative;
+        }
+
+        .roadmap-container::before {
+            content: "";
+            position: absolute;
+            left: 30px;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: #c7d2fe;
+        }
+
+        .roadmap-item {
+            position: relative;
+            padding-left: 80px;
+            margin-bottom: 35px;
+        }
+
+        .roadmap-number {
+            position: absolute;
+            left: 8px;
+            top: 5px;
+
+            width: 48px;
+            height: 48px;
+
+            border-radius: 50%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: #4f46e5;
+            color: white;
+
+            font-weight: bold;
+
+            z-index: 2;
+        }
+
+        .roadmap-card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+
+            box-shadow:
+                0 5px 20px rgba(0,0,0,0.06);
+
+            border: 1px solid #e5e7eb;
+        }
+
+        .roadmap-card h2 {
+            margin-bottom: 8px;
+        }
+
+        .roadmap-card p {
+            color: #6b7280;
+            margin-bottom: 15px;
+        }
+
+        .roadmap-topics {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .topic {
+            background: #eef2ff;
+            color: #4338ca;
+
+            padding: 6px 11px;
+
+            border-radius: 20px;
+
+            font-size: 13px;
+        }
+
+        .roadmap-status {
+            display: inline-block;
+
+            margin-top: 15px;
+
+            padding: 6px 12px;
+
+            border-radius: 20px;
+
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .completed-status {
+            background: #dcfce7;
+            color: #15803d;
+        }
+
+        .current-status {
+            background: #fef3c7;
+            color: #b45309;
+        }
+
+        .locked-status {
+            background: #f3f4f6;
+            color: #6b7280;
+        }
+
+        .roadmap-action {
+            display: inline-block;
+
+            margin-top: 15px;
+
+            text-decoration: none;
+
+            color: #4f46e5;
+
+            font-weight: bold;
+        }
+
+        .roadmap-summary {
+            max-width: 900px;
+            margin: 60px auto 0;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .summary-card {
+            background: white;
+            padding: 25px;
+
+            text-align: center;
+
+            border-radius: 15px;
+
+            box-shadow:
+                0 5px 20px rgba(0,0,0,0.05);
+        }
+
+        .summary-card h2 {
+            color: #4f46e5;
+            font-size: 30px;
+        }
+
+        .summary-card p {
+            color: #6b7280;
+        }
+
+        @media (max-width: 700px) {
+
+            .roadmap {
+                padding: 50px 5%;
+            }
+
+            .roadmap-header h1 {
+                font-size: 34px;
+            }
+
+            .roadmap-header p {
+                font-size: 16px;
+            }
+
+            .roadmap-container::before {
+                left: 22px;
+            }
+
+            .roadmap-item {
+                padding-left: 60px;
+            }
+
+            .roadmap-number {
+                left: 0;
+
+                width: 44px;
+                height: 44px;
+            }
+
+            .roadmap-card {
+                padding: 20px;
+            }
+
+            .roadmap-summary {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- Navigation -->
+
+<header class="navbar">
+
+    <div class="logo">
+        Learning<span>Path</span>
+    </div>
+
+    <button class="menu-btn"
+            onclick="toggleMenu()">
+
+        ☰
+
+    </button>
+
+    <nav id="navMenu">
+
+        <a href="home.html">
+            Home
+        </a>
+
+        <a href="roadmap.html">
+            Roadmap
+        </a>
+
+        <a href="continue-learning.html">
+            Continue
+        </a>
+
+        <a href="quiz.html">
+            Quiz
+        </a>
+
+        <a href="projects.html">
+            Projects
+        </a>
+
+    </nav>
+
+    <a href="profile.html"
+       class="login-btn">
+
+        Profile
+
+    </a>
+
+</header>
+
+
+
+<!-- Roadmap -->
+
+<main class="roadmap">
+
+
+    <div class="roadmap-header">
+
+        <span>
+            YOUR LEARNING JOURNEY
+        </span>
+
+        <h1>
+            Programming
+            <strong>Roadmap</strong>
+        </h1>
+
+        <p>
+            Follow this step-by-step roadmap
+            to become a confident programmer.
+        </p>
+
+    </div>
+
+
+
+    <div class="roadmap-container">
+
+
+        <!-- Step 1 -->
+
+        <div class="roadmap-item">
+
+            <div class="roadmap-number">
+                1
+            </div>
+
+            <div class="roadmap-card">
+
+                <h2>
+                    🧠 Programming Basics
+                </h2>
+
+                <p>
+                    Learn the fundamental concepts
+                    required for programming.
+                </p>
+
+                <div class="roadmap-topics">
+
+                    <span class="topic">
+                        Variables
+                    </span>
+
+                    <span class="topic">
+                        Data Types
+                    </span>
+
+                    <span class="topic">
+                        Operators
+                    </span>
+
+                    <span class="topic">
+                        Conditions
+                    </span>
+
+                    <span class="topic">
+                        Loops
+                    </span>
+
+                    <span class="topic">
+                        Functions
+                    </span>
+
+                </div>
+
+                <span class="roadmap-status completed-status">
+                    ✓ Completed
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Step 2 -->
+
+        <div class="roadmap-item">
+
+            <div class="roadmap-number">
+                2
+            </div>
+
+            <div class="roadmap-card">
+
+                <h2>
+                    💻 C Programming
+                </h2>
+
+                <p>
+                    Build strong programming fundamentals
+                    using C language.
+                </p>
+
+                <div class="roadmap-topics">
+
+                    <span class="topic">
+                        C Basics
+                    </span>
+
+                    <span class="topic">
+                        Arrays
+                    </span>
+
+                    <span class="topic">
+                        Strings
+                    </span>
+
+                    <span class="topic">
+                        Functions
+                    </span>
+
+                    <span class="topic">
+                        Pointers
+                    </span>
+
+                    <span class="topic">
+                        Structures
+                    </span>
+
+                </div>
+
+                <span class="roadmap-status completed-status">
+                    ✓ Completed
+                </span>
+
+                <br>
+
+                <a href="learn/c.html"
+                   class="roadmap-action">
+
+                    Start C →
+                    
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Step 3 -->
+
+        <div class="roadmap-item">
+
+            <div class="roadmap-number">
+                3
+            </div>
+
+            <div class="roadmap-card">
+
+                <h2>
+                    ⚡ C++ Programming
+                </h2>
+
+                <p>
+                    Learn object-oriented programming
+                    and modern C++ concepts.
+                </p>
+
+                <div class="roadmap-topics">
+
+                    <span class="topic">
+                        OOP
+                    </span>
+
+                    <span class="topic">
+                        Classes
+                    </span>
+
+                    <span class="topic">
+                        Objects
+                    </span>
+
+                    <span class="topic">
+                        Inheritance
+                    </span>
+
+                    <span class="topic">
+                        Polymorphism
+                    </span>
+
+                </div>
+
+                <span class="roadmap-status current-status">
+                    → In Progress
+                </span>
+
+                <br>
+
+                <a href="learn/cpp.html"
+                   class="roadmap-action">
+
+                    Continue C++ →
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Step 4 -->
+
+        <div class="roadmap-item">
+
+            <div class="roadmap-number">
+                4
+            </div>
+
+            <div class="roadmap-card">
+
+                <h2>
+                    🐍 Python
+                </h2>
+
+                <p>
+                    Learn Python from basics to
+                    practical programming.
+                </p>
+
+                <div class="roadmap-topics">
+
+                    <span class="topic">
+                        Python Basics
+                    </span>
+
+                    <span class="topic">
+                        Lists
+                    </span>
+
+                    <span class="topic">
+                        Dictionaries
+                    </span>
+
+                    <span class="topic">
+                        Functions
+                    </span>
+
+                    <span class="topic">
+                        OOP
+                    </span>
+
+                </div>
+
+                <span class="roadmap-status locked-status">
+                    🔒 Not Started
+                </span>
+
+                <br>
+
+                <a href="learn/python.html"
+                   class="roadmap-action">
+
+                    View Python →
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Step 5 -->
+
+        <div class="roadmap-item">
+
+            <div class="roadmap-number">
+                5
+            </div>
+
+            <div class="roadmap-card">
+
+                <h2>
+                    ☕ Java
+                </h2>
+
+                <p>
+                    Learn Java and object-oriented
+                    programming concepts.
+                </p>
+
+                <div class="roadmap-topics">
+
+                    <span class="topic">
+                        Classes
+                    </span>
+
+                    <span class="topic">
+                        Objects
+                    </span>
+
+                    <span class="topic">
+                        Inheritance
+                    </span>
+
+                    <span class="topic">
+                        Exceptions
+                    </span>
+
+                    <span class="topic">
+                        JavaFX
+                    </span>
+
+                </div>
+
+                <span class="roadmap-status locked-status">
+                    🔒 Locked
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Step 6 -->
+
+        <div class="roadmap-item">
+
+            <div class="roadmap-number">
+                6
+            </div>
+
+            <div class="roadmap-card">
+
+                <h2>
+                    🌐 Web Development
+                </h2>
+
+                <p>
+                    Learn how to create modern
+                    websites and web applications.
+                </p>
+
+                <div class="roadmap-topics">
+
+                    <span class="topic">
+                        HTML
+                    </span>
+
+                    <span class="topic">
+                        CSS
+                    </span>
+
+                    <span class="topic">
+                        JavaScript
+                    </span>
+
+                    <span class="topic">
+                        Responsive Design
+                    </span>
+
+                </div>
+
+                <span class="roadmap-status locked-status">
+                    🔒 Locked
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Step 7 -->
+
+        <div class="roadmap-item">
+
+            <div class="roadmap-number">
+                7
+            </div>
+
+            <div class="roadmap-card">
+
+                <h2>
+                    🗄️ SQL & Database
+                </h2>
+
+                <p>
+                    Learn how to store, retrieve
+                    and manage application data.
+                </p>
+
+                <div class="roadmap-topics">
+
+                    <span class="topic">
+                        SQL
+                    </span>
+
+                    <span class="topic">
+                        SELECT
+                    </span>
+
+                    <span class="topic">
+                        JOIN
+                    </span>
+
+                    <span class="topic">
+                        GROUP BY
+                    </span>
+
+                    <span class="topic">
+                        Database
+                    </span>
+
+                </div>
+
+                <span class="roadmap-status locked-status">
+                    🔒 Locked
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Step 8 -->
+
+        <div class="roadmap-item">
+
+            <div class="roadmap-number">
+                8
+            </div>
+
+            <div class="roadmap-card">
+
+                <h2>
+                    🧩 Data Structures & Algorithms
+                </h2>
+
+                <p>
+                    Improve problem-solving and
+                    coding interview skills.
+                </p>
+
+                <div class="roadmap-topics">
+
+                    <span class="topic">
+                        Arrays
+                    </span>
+
+                    <span class="topic">
+                        Linked List
+                    </span>
+
+                    <span class="topic">
+                        Stack
+                    </span>
+
+                    <span class="topic">
+                        Queue
+                    </span>
+
+                    <span class="topic">
+                        Trees
+                    </span>
+
+                    <span class="topic">
+                        Graphs
+                    </span>
+
+                </div>
+
+                <span class="roadmap-status locked-status">
+                    🔒 Locked
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Step 9 -->
+
+        <div class="roadmap-item">
+
+            <div class="roadmap-number">
+                9
+            </div>
+
+            <div class="roadmap-card">
+
+                <h2>
+                    🚀 Projects
+                </h2>
+
+                <p>
+                    Apply your programming knowledge
+                    by building real projects.
+                </p>
+
+                <div class="roadmap-topics">
+
+                    <span class="topic">
+                        Mini Projects
+                    </span>
+
+                    <span class="topic">
+                        Web Apps
+                    </span>
+
+                    <span class="topic">
+                        APIs
+                    </span>
+
+                    <span class="topic">
+                        Full Stack
+                    </span>
+
+                </div>
+
+                <span class="roadmap-status locked-status">
+                    🔒 Locked
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Step 10 -->
+
+        <div class="roadmap-item">
+
+            <div class="roadmap-number">
+                10
+            </div>
+
+            <div class="roadmap-card">
+
+                <h2>
+                    🤖 AI & Machine Learning
+                </h2>
+
+                <p>
+                    Start your journey into AI,
+                    machine learning and modern technologies.
+                </p>
+
+                <div class="roadmap-topics">
+
+                    <span class="topic">
+                        NumPy
+                    </span>
+
+                    <span class="topic">
+                        Pandas
+                    </span>
+
+                    <span class="topic">
+                        Machine Learning
+                    </span>
+
+                    <span class="topic">
+                        Deep Learning
+                    </span>
+
+                    <span class="topic">
+                        Generative AI
+                    </span>
+
+                </div>
+
+                <span class="roadmap-status locked-status">
+                    🔒 Future
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- Summary -->
+
+    <div class="roadmap-summary">
+
+        <div class="summary-card">
+
+            <h2>
+                10
+            </h2>
+
+            <p>
+                Learning Stages
+            </p>
+
+        </div>
+
+
+        <div class="summary-card">
+
+            <h2>
+                18%
+            </h2>
+
+            <p>
+                Overall Progress
+            </p>
+
+        </div>
+
+
+        <div class="summary-card">
+
+            <h2>
+                50+
+            </h2>
+
+            <p>
+                Topics to Learn
+            </p>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+
+<!-- Footer -->
+
+<footer>
+
+    <div class="footer-logo">
+        Learning<span>Path</span>
+    </div>
+
+    <p>
+        Learn Coding the Easy Way.
+    </p>
+
+    <p class="copyright">
+        © 2026 Learning Path. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+<script src="../script.js"></script>
+
+</body>
+
+</html>

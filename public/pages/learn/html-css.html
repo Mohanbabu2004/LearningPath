@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HTML & CSS - Learning Path</title>
+
+    <link rel="stylesheet" href="../../style.css">
+
+    <style>
+        .course-page {
+            display: flex;
+            min-height: calc(100vh - 70px);
+            background: #f5f7fb;
+        }
+
+        .course-sidebar {
+            width: 260px;
+            background: white;
+            padding: 25px 15px;
+            border-right: 1px solid #ddd;
+        }
+
+        .course-sidebar h3 {
+            margin-bottom: 20px;
+            color: #222;
+        }
+
+        .course-sidebar a {
+            display: block;
+            padding: 12px 15px;
+            margin-bottom: 5px;
+            text-decoration: none;
+            color: #444;
+            border-radius: 8px;
+        }
+
+        .course-sidebar a:hover,
+        .course-sidebar a.active {
+            background: #eef2ff;
+            color: #4f46e5;
+            font-weight: bold;
+        }
+
+        .course-content {
+            flex: 1;
+            padding: 40px;
+            max-width: 1000px;
+        }
+
+        .course-badge {
+            display: inline-block;
+            padding: 7px 15px;
+            background: #ffe8d6;
+            color: #d35400;
+            border-radius: 20px;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .course-content h1 {
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+
+        .course-content h2 {
+            margin-top: 35px;
+            margin-bottom: 15px;
+            color: #222;
+        }
+
+        .course-content p {
+            line-height: 1.7;
+            color: #555;
+        }
+
+        .progress-container {
+            margin: 20px 0;
+        }
+
+        .progress-text {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+
+        .progress-bar {
+            height: 10px;
+            background: #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .progress {
+            height: 100%;
+            width: 0%;
+            background: #e34c26;
+        }
+
+        .lesson-card {
+            background: white;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 12px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+        }
+
+        .lesson-card pre {
+            background: #1e1e1e;
+            color: white;
+            padding: 18px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin-top: 15px;
+        }
+
+        .lesson-card code {
+            font-family: Consolas, monospace;
+        }
+
+        .action-buttons {
+            margin-top: 30px;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .action-btn {
+            display: inline-block;
+            padding: 12px 22px;
+            background: #4f46e5;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+
+        .action-btn:hover {
+            background: #3730a3;
+        }
+
+        @media (max-width: 800px) {
+
+            .course-page {
+                flex-direction: column;
+            }
+
+            .course-sidebar {
+                width: 100%;
+                border-right: none;
+                border-bottom: 1px solid #ddd;
+            }
+
+            .course-sidebar a {
+                display: inline-block;
+                margin-right: 5px;
+            }
+
+            .course-content {
+                padding: 25px 18px;
+            }
+
+            .course-content h1 {
+                font-size: 30px;
+            }
+        }
+
+        @media (max-width: 500px) {
+
+            .course-sidebar {
+                padding: 15px 10px;
+            }
+
+            .course-sidebar a {
+                padding: 9px 10px;
+                font-size: 14px;
+            }
+
+            .course-content {
+                padding: 20px 15px;
+            }
+
+            .course-content h1 {
+                font-size: 26px;
+            }
+
+            .lesson-card {
+                padding: 18px;
+            }
+
+            .lesson-card pre {
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+
+        <div class="logo">
+            Learning<span>Path</span>
+        </div>
+
+        <button class="menu-btn" onclick="toggleMenu()">
+            ☰
+        </button>
+
+        <div class="nav-menu" id="navMenu">
+            <a href="../../index.html">Home</a>
+            <a href="../roadmap.html">Roadmap</a>
+            <a href="../continue-learning.html">
+                Continue Learning
+            </a>
+        </div>
+
+    </nav>
+
+
+    <!-- Course Page -->
+    <div class="course-page">
+
+        <!-- Sidebar -->
+        <aside class="course-sidebar">
+
+            <h3>HTML & CSS Course</h3>
+
+            <a href="#" class="active">
+                1. Introduction
+            </a>
+
+            <a href="#html-basics">
+                2. HTML Basics
+            </a>
+
+            <a href="#headings">
+                3. Headings & Paragraphs
+            </a>
+
+            <a href="#links-images">
+                4. Links & Images
+            </a>
+
+            <a href="#lists">
+                5. Lists
+            </a>
+
+            <a href="#tables">
+                6. Tables
+            </a>
+
+            <a href="#forms">
+                7. Forms
+            </a>
+
+            <a href="#css-basics">
+                8. CSS Basics
+            </a>
+
+            <a href="#selectors">
+                9. CSS Selectors
+            </a>
+
+            <a href="#colors">
+                10. Colors & Fonts
+            </a>
+
+            <a href="#box-model">
+                11. Box Model
+            </a>
+
+            <a href="#flexbox">
+                12. Flexbox
+            </a>
+
+            <a href="#responsive">
+                13. Responsive Design
+            </a>
+
+            <a href="#practice">
+                14. Practice
+            </a>
+
+        </aside>
+
+
+        <!-- Main Content -->
+        <main class="course-content">
+
+            <span class="course-badge">
+                HTML & CSS
+            </span>
+
+            <h1>Learn HTML & CSS</h1>
+
+            <p>
+                Learn how to create beautiful and responsive websites
+                using HTML and CSS.
+            </p>
+
+
+            <!-- Progress -->
+            <div class="progress-container">
+
+                <div class="progress-text">
+                    <span>Course Progress</span>
+                    <strong>0%</strong>
+                </div>
+
+                <div class="progress-bar">
+                    <div class="progress"></div>
+                </div>
+
+            </div>
+
+
+            <!-- Introduction -->
+            <div class="lesson-card">
+
+                <h2>1. Introduction</h2>
+
+                <p>
+                    HTML is used to create the structure of a webpage.
+                    CSS is used to design and style the webpage.
+                </p>
+
+                <pre><code>&lt;h1&gt;Welcome to Learning Path&lt;/h1&gt;
+
+&lt;p&gt;Learn programming easily.&lt;/p&gt;</code></pre>
+
+            </div>
+
+
+            <!-- HTML Basics -->
+            <div class="lesson-card" id="html-basics">
+
+                <h2>2. HTML Basics</h2>
+
+                <p>
+                    HTML uses tags to create webpage elements.
+                </p>
+
+                <pre><code>&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;My Website&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;h1&gt;Hello World&lt;/h1&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+            </div>
+
+
+            <!-- Headings -->
+            <div class="lesson-card" id="headings">
+
+                <h2>3. Headings & Paragraphs</h2>
+
+                <p>
+                    HTML provides headings from h1 to h6 and paragraph
+                    elements using p.
+                </p>
+
+                <pre><code>&lt;h1&gt;Main Heading&lt;/h1&gt;
+
+&lt;h2&gt;Sub Heading&lt;/h2&gt;
+
+&lt;p&gt;
+    This is a paragraph.
+&lt;/p&gt;</code></pre>
+
+            </div>
+
+
+            <!-- Links Images -->
+            <div class="lesson-card" id="links-images">
+
+                <h2>4. Links & Images</h2>
+
+                <p>
+                    The a tag creates links and the img tag displays images.
+                </p>
+
+                <pre><code>&lt;a href="https://example.com"&gt;
+    Visit Website
+&lt;/a&gt;
+
+&lt;img src="image.jpg" alt="My Image"&gt;</code></pre>
+
+            </div>
+
+
+            <!-- Lists -->
+            <div class="lesson-card" id="lists">
+
+                <h2>5. Lists</h2>
+
+                <p>
+                    HTML supports ordered and unordered lists.
+                </p>
+
+                <pre><code>&lt;ul&gt;
+    &lt;li&gt;C&lt;/li&gt;
+    &lt;li&gt;C++&lt;/li&gt;
+    &lt;li&gt;Python&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+    &lt;li&gt;HTML&lt;/li&gt;
+    &lt;li&gt;CSS&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+
+            </div>
+
+
+            <!-- Tables -->
+            <div class="lesson-card" id="tables">
+
+                <h2>6. Tables</h2>
+
+                <p>
+                    Tables are used to display information in rows
+                    and columns.
+                </p>
+
+                <pre><code>&lt;table border="1"&gt;
+
+    &lt;tr&gt;
+        &lt;th&gt;Name&lt;/th&gt;
+        &lt;th&gt;Age&lt;/th&gt;
+    &lt;/tr&gt;
+
+    &lt;tr&gt;
+        &lt;td&gt;Mohan&lt;/td&gt;
+        &lt;td&gt;21&lt;/td&gt;
+    &lt;/tr&gt;
+
+&lt;/table&gt;</code></pre>
+
+            </div>
+
+
+            <!-- Forms -->
+            <div class="lesson-card" id="forms">
+
+                <h2>7. Forms</h2>
+
+                <p>
+                    Forms collect information from users.
+                </p>
+
+                <pre><code>&lt;form&gt;
+
+    &lt;label&gt;Name&lt;/label&gt;
+
+    &lt;input type="text"
+           placeholder="Enter your name"&gt;
+
+    &lt;button type="submit"&gt;
+        Submit
+    &lt;/button&gt;
+
+&lt;/form&gt;</code></pre>
+
+            </div>
+
+
+            <!-- CSS Basics -->
+            <div class="lesson-card" id="css-basics">
+
+                <h2>8. CSS Basics</h2>
+
+                <p>
+                    CSS is used to style HTML elements.
+                </p>
+
+                <pre><code>h1 {
+    color: blue;
+    font-size: 30px;
+}
+
+p {
+    color: gray;
+}</code></pre>
+
+            </div>
+
+
+            <!-- Selectors -->
+            <div class="lesson-card" id="selectors">
+
+                <h2>9. CSS Selectors</h2>
+
+                <p>
+                    Selectors identify the HTML elements that CSS should
+                    style.
+                </p>
+
+                <pre><code>/* Element selector */
+
+p {
+    color: red;
+}
+
+/* Class selector */
+
+.title {
+    color: blue;
+}
+
+/* ID selector */
+
+#main {
+    background: white;
+}</code></pre>
+
+            </div>
+
+
+            <!-- Colors Fonts -->
+            <div class="lesson-card" id="colors">
+
+                <h2>10. Colors & Fonts</h2>
+
+                <p>
+                    CSS can change colors, fonts and text appearance.
+                </p>
+
+                <pre><code>body {
+    background-color: white;
+    color: black;
+    font-family: Arial;
+}
+
+h1 {
+    color: blue;
+}</code></pre>
+
+            </div>
+
+
+            <!-- Box Model -->
+            <div class="lesson-card" id="box-model">
+
+                <h2>11. Box Model</h2>
+
+                <p>
+                    The CSS box model contains content, padding, border
+                    and margin.
+                </p>
+
+                <pre><code>.card {
+    width: 300px;
+    padding: 20px;
+    border: 2px solid black;
+    margin: 20px;
+}</code></pre>
+
+            </div>
+
+
+            <!-- Flexbox -->
+            <div class="lesson-card" id="flexbox">
+
+                <h2>12. Flexbox</h2>
+
+                <p>
+                    Flexbox makes it easier to arrange elements in rows
+                    and columns.
+                </p>
+
+                <pre><code>.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}</code></pre>
+
+            </div>
+
+
+            <!-- Responsive -->
+            <div class="lesson-card" id="responsive">
+
+                <h2>13. Responsive Design</h2>
+
+                <p>
+                    Responsive design makes websites work properly on
+                    computers, tablets and mobile phones.
+                </p>
+
+                <pre><code>@media (max-width: 600px) {
+
+    h1 {
+        font-size: 25px;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+}</code></pre>
+
+            </div>
+
+
+            <!-- Practice -->
+            <div class="lesson-card" id="practice">
+
+                <h2>14. Practice</h2>
+
+                <p>
+                    Create your own responsive webpage using HTML and CSS.
+                </p>
+
+                <pre><code>&lt;div class="card"&gt;
+
+    &lt;h2&gt;Learning Path&lt;/h2&gt;
+
+    &lt;p&gt;
+        Learn coding the easy way.
+    &lt;/p&gt;
+
+    &lt;button&gt;
+        Start Learning
+    &lt;/button&gt;
+
+&lt;/div&gt;</code></pre>
+
+            </div>
+
+
+            <!-- Buttons -->
+            <div class="action-buttons">
+
+                <a href="../quiz.html" class="action-btn">
+                    📝 Take Quiz
+                </a>
+
+                <a href="../projects.html" class="action-btn">
+                    🚀 Practice Projects
+                </a>
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 LearningPath. Learn Coding the Easy Way.
+        </p>
+
+    </footer>
+
+
+    <script src="../../script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TypeScript Programming - Learning Path</title>
+
+    <link rel="stylesheet" href="../../style.css">
+
+    <style>
+        .course-page {
+            display: flex;
+            min-height: calc(100vh - 70px);
+            background: #f5f7fb;
+        }
+
+        .course-sidebar {
+            width: 260px;
+            background: white;
+            padding: 25px 15px;
+            border-right: 1px solid #ddd;
+        }
+
+        .course-sidebar h3 {
+            margin-bottom: 20px;
+            color: #222;
+        }
+
+        .course-sidebar a {
+            display: block;
+            padding: 12px 15px;
+            margin-bottom: 5px;
+            text-decoration: none;
+            color: #444;
+            border-radius: 8px;
+        }
+
+        .course-sidebar a:hover,
+        .course-sidebar a.active {
+            background: #eef2ff;
+            color: #4f46e5;
+            font-weight: bold;
+        }
+
+        .course-content {
+            flex: 1;
+            padding: 40px;
+            max-width: 1000px;
+        }
+
+        .course-badge {
+            display: inline-block;
+            padding: 7px 15px;
+            background: #e8f1ff;
+            color: #3178c6;
+            border-radius: 20px;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .course-content h1 {
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+
+        .course-content h2 {
+            margin-top: 35px;
+            margin-bottom: 15px;
+            color: #222;
+        }
+
+        .course-content p {
+            line-height: 1.7;
+            color: #555;
+        }
+
+        .progress-container {
+            margin: 20px 0;
+        }
+
+        .progress-text {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+
+        .progress-bar {
+            height: 10px;
+            background: #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .progress {
+            height: 100%;
+            width: 0%;
+            background: #3178c6;
+        }
+
+        .lesson-card {
+            background: white;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 12px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+        }
+
+        .lesson-card pre {
+            background: #1e1e1e;
+            color: white;
+            padding: 18px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin-top: 15px;
+        }
+
+        .lesson-card code {
+            font-family: Consolas, monospace;
+        }
+
+        .action-buttons {
+            margin-top: 30px;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .action-btn {
+            display: inline-block;
+            padding: 12px 22px;
+            background: #4f46e5;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+
+        .action-btn:hover {
+            background: #3730a3;
+        }
+
+        @media (max-width: 800px) {
+            .course-page {
+                flex-direction: column;
+            }
+
+            .course-sidebar {
+                width: 100%;
+                border-right: none;
+                border-bottom: 1px solid #ddd;
+            }
+
+            .course-sidebar a {
+                display: inline-block;
+                margin-right: 5px;
+            }
+
+            .course-content {
+                padding: 25px 18px;
+            }
+
+            .course-content h1 {
+                font-size: 30px;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .course-sidebar {
+                padding: 15px 10px;
+            }
+
+            .course-sidebar a {
+                padding: 9px 10px;
+                font-size: 14px;
+            }
+
+            .course-content {
+                padding: 20px 15px;
+            }
+
+            .course-content h1 {
+                font-size: 26px;
+            }
+
+            .lesson-card {
+                padding: 18px;
+            }
+
+            .lesson-card pre {
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+
+        <div class="logo">
+            Learning<span>Path</span>
+        </div>
+
+        <button class="menu-btn" onclick="toggleMenu()">
+            ☰
+        </button>
+
+        <div class="nav-menu" id="navMenu">
+            <a href="../../index.html">Home</a>
+            <a href="../roadmap.html">Roadmap</a>
+            <a href="../continue-learning.html">
+                Continue Learning
+            </a>
+        </div>
+
+    </nav>
+
+
+    <!-- Course Page -->
+    <div class="course-page">
+
+        <!-- Sidebar -->
+        <aside class="course-sidebar">
+
+            <h3>TypeScript Course</h3>
+
+            <a href="#" class="active">
+                1. Introduction
+            </a>
+
+            <a href="#basics">
+                2. TypeScript Basics
+            </a>
+
+            <a href="#variables">
+                3. Variables & Types
+            </a>
+
+            <a href="#arrays">
+                4. Arrays
+            </a>
+
+            <a href="#objects">
+                5. Objects
+            </a>
+
+            <a href="#functions">
+                6. Functions
+            </a>
+
+            <a href="#interfaces">
+                7. Interfaces
+            </a>
+
+            <a href="#classes">
+                8. Classes
+            </a>
+
+            <a href="#inheritance">
+                9. Inheritance
+            </a>
+
+            <a href="#generics">
+                10. Generics
+            </a>
+
+            <a href="#union">
+                11. Union Types
+            </a>
+
+            <a href="#enums">
+                12. Enums
+            </a>
+
+            <a href="#dom">
+                13. DOM
+            </a>
+
+            <a href="#practice">
+                14. Practice
+            </a>
+
+        </aside>
+
+
+        <!-- Main Content -->
+        <main class="course-content">
+
+            <span class="course-badge">
+                TypeScript Programming
+            </span>
+
+            <h1>Learn TypeScript Programming</h1>
+
+            <p>
+                Learn TypeScript from JavaScript basics to types,
+                interfaces, classes, generics and web development.
+            </p>
+
+
+            <!-- Progress -->
+            <div class="progress-container">
+
+                <div class="progress-text">
+                    <span>Course Progress</span>
+                    <strong>0%</strong>
+                </div>
+
+                <div class="progress-bar">
+                    <div class="progress"></div>
+                </div>
+
+            </div>
+
+
+            <!-- Introduction -->
+            <div class="lesson-card">
+
+                <h2>1. Introduction to TypeScript</h2>
+
+                <p>
+                    TypeScript is a programming language that builds
+                    on JavaScript and adds static type checking.
+                </p>
+
+                <pre><code>let message: string = "Hello TypeScript";
+
+console.log(message);</code></pre>
+
+            </div>
+
+
+            <!-- Basics -->
+            <div class="lesson-card" id="basics">
+
+                <h2>2. TypeScript Basics</h2>
+
+                <p>
+                    TypeScript allows you to specify the type of a variable.
+                </p>
+
+                <pre><code>let name: string = "Mohan";
+let age: number = 21;
+let student: boolean = true;</code></pre>
+
+            </div>
+
+
+            <!-- Variables -->
+            <div class="lesson-card" id="variables">
+
+                <h2>3. Variables & Types</h2>
+
+                <p>
+                    Common TypeScript types include string, number,
+                    boolean and any.
+                </p>
+
+                <pre><code>let course: string = "CSE-AI";
+let marks: number = 85;
+let passed: boolean = true;</code></pre>
+
+            </div>
+
+
+            <!-- Arrays -->
+            <div class="lesson-card" id="arrays">
+
+                <h2>4. Arrays</h2>
+
+                <p>
+                    TypeScript allows you to define the type of
+                    array elements.
+                </p>
+
+                <pre><code>let numbers: number[] = [10, 20, 30];
+
+let languages: string[] = [
+    "C",
+    "Python",
+    "JavaScript"
+];
+
+console.log(numbers);</code></pre>
+
+            </div>
+
+
+            <!-- Objects -->
+            <div class="lesson-card" id="objects">
+
+                <h2>5. Objects</h2>
+
+                <p>
+                    Objects can contain properties with specific types.
+                </p>
+
+                <pre><code>let student: {
+    name: string;
+    age: number;
+} = {
+    name: "Mohan",
+    age: 21
+};
+
+console.log(student.name);</code></pre>
+
+            </div>
+
+
+            <!-- Functions -->
+            <div class="lesson-card" id="functions">
+
+                <h2>6. Functions</h2>
+
+                <p>
+                    TypeScript allows you to define parameter and
+                    return types.
+                </p>
+
+                <pre><code>function add(
+    a: number,
+    b: number
+): number {
+
+    return a + b;
+}
+
+console.log(add(10, 20));</code></pre>
+
+            </div>
+
+
+            <!-- Interfaces -->
+            <div class="lesson-card" id="interfaces">
+
+                <h2>7. Interfaces</h2>
+
+                <p>
+                    Interfaces define the structure of objects.
+                </p>
+
+                <pre><code>interface Student {
+    name: string;
+    age: number;
+}
+
+let student: Student = {
+    name: "Mohan",
+    age: 21
+};
+
+console.log(student);</code></pre>
+
+            </div>
+
+
+            <!-- Classes -->
+            <div class="lesson-card" id="classes">
+
+                <h2>8. Classes</h2>
+
+                <p>
+                    Classes are used to create objects using
+                    object-oriented programming.
+                </p>
+
+                <pre><code>class Student {
+
+    name: string;
+
+    constructor(name: string) {
+        this.name = name;
+    }
+
+    display(): void {
+        console.log(this.name);
+    }
+}
+
+let s1 = new Student("Mohan");
+
+s1.display();</code></pre>
+
+            </div>
+
+
+            <!-- Inheritance -->
+            <div class="lesson-card" id="inheritance">
+
+                <h2>9. Inheritance</h2>
+
+                <p>
+                    A class can inherit properties and methods
+                    from another class.
+                </p>
+
+                <pre><code>class Animal {
+
+    sound(): void {
+        console.log("Animal sound");
+    }
+}
+
+class Dog extends Animal {
+
+    bark(): void {
+        console.log("Dog barks");
+    }
+}
+
+let dog = new Dog();
+
+dog.sound();
+dog.bark();</code></pre>
+
+            </div>
+
+
+            <!-- Generics -->
+            <div class="lesson-card" id="generics">
+
+                <h2>10. Generics</h2>
+
+                <p>
+                    Generics allow reusable code that works with
+                    different types.
+                </p>
+
+                <pre><code>function display&lt;T&gt;(value: T): T {
+
+    return value;
+}
+
+console.log(display&lt;number&gt;(10));
+
+console.log(
+    display&lt;string&gt;("Hello")
+);</code></pre>
+
+            </div>
+
+
+            <!-- Union -->
+            <div class="lesson-card" id="union">
+
+                <h2>11. Union Types</h2>
+
+                <p>
+                    Union types allow a variable to contain
+                    more than one type.
+                </p>
+
+                <pre><code>let id: number | string;
+
+id = 101;
+
+id = "STUDENT101";
+
+console.log(id);</code></pre>
+
+            </div>
+
+
+            <!-- Enums -->
+            <div class="lesson-card" id="enums">
+
+                <h2>12. Enums</h2>
+
+                <p>
+                    Enums define a set of named constants.
+                </p>
+
+                <pre><code>enum Direction {
+    North,
+    South,
+    East,
+    West
+}
+
+let direction: Direction = Direction.North;
+
+console.log(direction);</code></pre>
+
+            </div>
+
+
+            <!-- DOM -->
+            <div class="lesson-card" id="dom">
+
+                <h2>13. DOM</h2>
+
+                <p>
+                    TypeScript can be used to interact with
+                    HTML DOM elements.
+                </p>
+
+                <pre><code>const title =
+    document.getElementById("title");
+
+if (title) {
+    title.textContent =
+        "Learning TypeScript";
+}</code></pre>
+
+            </div>
+
+
+            <!-- Practice -->
+            <div class="lesson-card" id="practice">
+
+                <h2>14. Practice</h2>
+
+                <p>
+                    Create a TypeScript student management program
+                    using interfaces, classes and arrays.
+                </p>
+
+                <pre><code>interface Student {
+    name: string;
+    age: number;
+}
+
+let students: Student[] = [
+    {
+        name: "Mohan",
+        age: 21
+    }
+];
+
+console.log(students);</code></pre>
+
+            </div>
+
+
+            <!-- Buttons -->
+            <div class="action-buttons">
+
+                <a href="../quiz.html" class="action-btn">
+                    📝 Take Quiz
+                </a>
+
+                <a href="../projects.html" class="action-btn">
+                    🚀 Practice Projects
+                </a>
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 LearningPath. Learn Coding the Easy Way.
+        </p>
+
+    </footer>
+
+
+    <script src="../../script.js"></script>
+
+</body>
+</html>

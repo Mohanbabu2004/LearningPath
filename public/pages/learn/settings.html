@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Settings - LearningPath</title>
+
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+        .settings-section {
+            min-height: 80vh;
+            padding: 50px 20px;
+            background: #f5f7fb;
+        }
+
+        .settings-container {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .settings-header {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .settings-header h1 {
+            margin-bottom: 10px;
+        }
+
+        .settings-header p {
+            color: #666;
+        }
+
+        .settings-card {
+            background: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+        }
+
+        .settings-card h2 {
+            margin-bottom: 20px;
+        }
+
+        .setting-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 0;
+            border-bottom: 1px solid #eee;
+            gap: 20px;
+        }
+
+        .setting-item:last-child {
+            border-bottom: none;
+        }
+
+        .setting-info h3 {
+            margin-bottom: 5px;
+        }
+
+        .setting-info p {
+            margin: 0;
+            color: #666;
+            font-size: 14px;
+        }
+
+        .setting-item input[type="text"],
+        .setting-item input[type="email"],
+        .setting-item select {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 7px;
+            min-width: 200px;
+        }
+
+        .toggle {
+            width: 45px;
+            height: 24px;
+            cursor: pointer;
+        }
+
+        .save-btn {
+            width: 100%;
+            padding: 13px;
+            border: none;
+            border-radius: 8px;
+            background: #4f46e5;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .save-btn:hover {
+            background: #3730a3;
+        }
+
+        .logout-btn {
+            width: 100%;
+            padding: 13px;
+            border: none;
+            border-radius: 8px;
+            background: #dc2626;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .logout-btn:hover {
+            background: #b91c1c;
+        }
+
+        .message {
+            display: none;
+            padding: 12px;
+            margin-top: 15px;
+            text-align: center;
+            border-radius: 8px;
+            background: #dcfce7;
+            color: #166534;
+        }
+
+        @media (max-width: 700px) {
+            .settings-section {
+                padding: 30px 15px;
+            }
+
+            .setting-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .setting-item input[type="text"],
+            .setting-item input[type="email"],
+            .setting-item select {
+                width: 100%;
+                box-sizing: border-box;
+                min-width: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            LearningPath
+        </div>
+
+        <button class="menu-btn" onclick="toggleMenu()">
+            ☰
+        </button>
+
+        <div class="nav-menu" id="navMenu">
+
+            <a href="../index.html">Home</a>
+
+            <a href="roadmap.html">
+                Roadmap
+            </a>
+
+            <a href="continue-learning.html">
+                Continue Learning
+            </a>
+
+            <a href="profile.html">
+                Profile
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- Settings -->
+
+    <section class="settings-section">
+
+        <div class="settings-container">
+
+            <div class="settings-header">
+
+                <h1>⚙️ Settings</h1>
+
+                <p>
+                    Manage your LearningPath account and preferences.
+                </p>
+
+            </div>
+
+
+            <!-- Account Settings -->
+
+            <div class="settings-card">
+
+                <h2>👤 Account Settings</h2>
+
+                <div class="setting-item">
+
+                    <div class="setting-info">
+
+                        <h3>Full Name</h3>
+
+                        <p>
+                            Your LearningPath display name.
+                        </p>
+
+                    </div>
+
+                    <input
+                        type="text"
+                        id="name"
+                        value="Mohan"
+                    >
+
+                </div>
+
+
+                <div class="setting-item">
+
+                    <div class="setting-info">
+
+                        <h3>Email</h3>
+
+                        <p>
+                            Your registered email address.
+                        </p>
+
+                    </div>
+
+                    <input
+                        type="email"
+                        id="email"
+                        value="student@example.com"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- Learning Settings -->
+
+            <div class="settings-card">
+
+                <h2>📚 Learning Settings</h2>
+
+                <div class="setting-item">
+
+                    <div class="setting-info">
+
+                        <h3>Learning Language</h3>
+
+                        <p>
+                            Select your preferred programming language.
+                        </p>
+
+                    </div>
+
+                    <select id="language">
+
+                        <option>C</option>
+
+                        <option>C++</option>
+
+                        <option>Python</option>
+
+                        <option>Java</option>
+
+                        <option>JavaScript</option>
+
+                        <option>SQL</option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="setting-item">
+
+                    <div class="setting-info">
+
+                        <h3>Daily Learning Reminder</h3>
+
+                        <p>
+                            Receive reminders to continue learning.
+                        </p>
+
+                    </div>
+
+                    <input
+                        type="checkbox"
+                        class="toggle"
+                        id="reminder"
+                        checked
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- Appearance -->
+
+            <div class="settings-card">
+
+                <h2>🎨 Appearance</h2>
+
+                <div class="setting-item">
+
+                    <div class="setting-info">
+
+                        <h3>Dark Mode</h3>
+
+                        <p>
+                            Enable dark mode for the website.
+                        </p>
+
+                    </div>
+
+                    <input
+                        type="checkbox"
+                        class="toggle"
+                        id="darkMode"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- Notifications -->
+
+            <div class="settings-card">
+
+                <h2>🔔 Notifications</h2>
+
+                <div class="setting-item">
+
+                    <div class="setting-info">
+
+                        <h3>Learning Notifications</h3>
+
+                        <p>
+                            Get updates about courses and quizzes.
+                        </p>
+
+                    </div>
+
+                    <input
+                        type="checkbox"
+                        class="toggle"
+                        id="notifications"
+                        checked
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- Save -->
+
+            <div class="settings-card">
+
+                <button
+                    class="save-btn"
+                    onclick="saveSettings()"
+                >
+                    💾 Save Settings
+                </button>
+
+                <div
+                    class="message"
+                    id="message"
+                >
+                    Settings saved successfully!
+                </div>
+
+            </div>
+
+
+            <!-- Logout -->
+
+            <div class="settings-card">
+
+                <h2>🚪 Account</h2>
+
+                <button
+                    class="logout-btn"
+                    onclick="logout()"
+                >
+                    Logout
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            © 2026 LearningPath |
+            Learn Coding the Easy Way
+        </p>
+
+    </footer>
+
+
+    <script src="../script.js"></script>
+
+
+    <script>
+
+        // Save Settings
+
+        function saveSettings() {
+
+            const name =
+                document.getElementById("name").value;
+
+            const email =
+                document.getElementById("email").value;
+
+            const language =
+                document.getElementById("language").value;
+
+
+            // Demo local storage
+
+            localStorage.setItem(
+                "learningName",
+                name
+            );
+
+            localStorage.setItem(
+                "learningEmail",
+                email
+            );
+
+            localStorage.setItem(
+                "learningLanguage",
+                language
+            );
+
+
+            const message =
+                document.getElementById("message");
+
+            message.style.display = "block";
+
+        }
+
+
+        // Logout
+
+        function logout() {
+
+            const result =
+                confirm("Are you sure you want to logout?");
+
+            if (result) {
+
+                alert("You have been logged out.");
+
+                window.location.href =
+                    "login.html";
+
+            }
+
+        }
+
+
+        // Dark Mode Demo
+
+        const darkMode =
+            document.getElementById("darkMode");
+
+        darkMode.addEventListener(
+            "change",
+            function () {
+
+                if (this.checked) {
+
+                    document.body.style.background =
+                        "#111827";
+
+                    document.body.style.color =
+                        "white";
+
+                } else {
+
+                    document.body.style.background =
+                        "";
+
+                    document.body.style.color =
+                        "";
+
+                }
+
+            }
+        );
+
+
+        // Load saved name
+
+        const savedName =
+            localStorage.getItem("learningName");
+
+        if (savedName) {
+
+            document.getElementById("name").value =
+                savedName;
+
+        }
+
+
+        // Load saved email
+
+        const savedEmail =
+            localStorage.getItem("learningEmail");
+
+        if (savedEmail) {
+
+            document.getElementById("email").value =
+                savedEmail;
+
+        }
+
+
+        // Load saved language
+
+        const savedLanguage =
+            localStorage.getItem("learningLanguage");
+
+        if (savedLanguage) {
+
+            document.getElementById("language").value =
+                savedLanguage;
+
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sign Up - LearningPath</title>
+
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+        .signup-section {
+            min-height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 50px 20px;
+            background: #f5f7fb;
+        }
+
+        .signup-card {
+            width: 100%;
+            max-width: 500px;
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .signup-icon {
+            text-align: center;
+            font-size: 50px;
+            margin-bottom: 10px;
+        }
+
+        .signup-card h1 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .signup-subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 7px;
+            font-weight: bold;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 13px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #4f46e5;
+        }
+
+        .terms {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            margin: 15px 0 20px;
+            font-size: 14px;
+        }
+
+        .terms input {
+            margin-top: 3px;
+        }
+
+        .signup-btn {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 8px;
+            background: #4f46e5;
+            color: white;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .signup-btn:hover {
+            background: #3730a3;
+        }
+
+        .message {
+            margin-top: 20px;
+            padding: 12px;
+            border-radius: 8px;
+            text-align: center;
+            display: none;
+        }
+
+        .success {
+            background: #dcfce7;
+            color: #166534;
+        }
+
+        .error {
+            background: #fee2e2;
+            color: #991b1b;
+        }
+
+        .login-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .login-link a {
+            color: #4f46e5;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .show-password {
+            margin-top: 8px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+            .signup-section {
+                padding: 30px 15px;
+            }
+
+            .signup-card {
+                padding: 25px 20px;
+            }
+
+            .signup-card h1 {
+                font-size: 26px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            LearningPath
+        </div>
+
+        <button class="menu-btn" onclick="toggleMenu()">
+            ☰
+        </button>
+
+        <div class="nav-menu" id="navMenu">
+            <a href="../index.html">Home</a>
+            <a href="roadmap.html">Roadmap</a>
+            <a href="continue-learning.html">Continue Learning</a>
+        </div>
+    </nav>
+
+    <!-- Signup Section -->
+    <section class="signup-section">
+
+        <div class="signup-card">
+
+            <div class="signup-icon">
+                👤
+            </div>
+
+            <h1>Create Your Account</h1>
+
+            <p class="signup-subtitle">
+                Start your programming learning journey today.
+            </p>
+
+            <form id="signupForm">
+
+                <!-- Full Name -->
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Enter your full name"
+                        required
+                    >
+                </div>
+
+                <!-- Email -->
+                <div class="form-group">
+                    <label for="email">Email</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter your email"
+                        required
+                    >
+                </div>
+
+                <!-- Password -->
+                <div class="form-group">
+                    <label for="password">Password</label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Create a password"
+                        required
+                    >
+
+                    <div class="show-password">
+                        <input type="checkbox" id="showPassword">
+                        <label for="showPassword">Show Password</label>
+                    </div>
+                </div>
+
+                <!-- Confirm Password -->
+                <div class="form-group">
+                    <label for="confirmPassword">
+                        Confirm Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="confirmPassword"
+                        placeholder="Confirm your password"
+                        required
+                    >
+                </div>
+
+                <!-- Terms -->
+                <div class="terms">
+                    <input type="checkbox" id="terms">
+
+                    <label for="terms">
+                        I agree to the Terms and Conditions.
+                    </label>
+                </div>
+
+                <!-- Button -->
+                <button type="submit" class="signup-btn">
+                    📝 Create Account
+                </button>
+
+            </form>
+
+            <!-- Message -->
+            <div id="message" class="message"></div>
+
+            <!-- Login -->
+            <div class="login-link">
+                Already have an account?
+                <a href="login.html">Login here</a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>
+            © 2026 LearningPath | Learn Coding the Easy Way
+        </p>
+    </footer>
+
+    <script src="../script.js"></script>
+
+    <script>
+
+        const signupForm = document.getElementById("signupForm");
+
+        const password = document.getElementById("password");
+        const confirmPassword =
+            document.getElementById("confirmPassword");
+
+        const terms = document.getElementById("terms");
+
+        const message = document.getElementById("message");
+
+        const showPassword =
+            document.getElementById("showPassword");
+
+
+        // Show / Hide Password
+        showPassword.addEventListener("change", function () {
+
+            if (this.checked) {
+
+                password.type = "text";
+                confirmPassword.type = "text";
+
+            } else {
+
+                password.type = "password";
+                confirmPassword.type = "password";
+
+            }
+
+        });
+
+
+        // Signup Form
+        signupForm.addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            const name =
+                document.getElementById("name").value.trim();
+
+            const email =
+                document.getElementById("email").value.trim();
+
+
+            // Check fields
+            if (name === "" || email === "" ||
+                password.value === "" ||
+                confirmPassword.value === "") {
+
+                showMessage(
+                    "Please fill all the fields.",
+                    "error"
+                );
+
+                return;
+            }
+
+
+            // Check password
+            if (password.value.length < 6) {
+
+                showMessage(
+                    "Password must contain at least 6 characters.",
+                    "error"
+                );
+
+                return;
+            }
+
+
+            // Check confirm password
+            if (password.value !== confirmPassword.value) {
+
+                showMessage(
+                    "Passwords do not match.",
+                    "error"
+                );
+
+                return;
+            }
+
+
+            // Check terms
+            if (!terms.checked) {
+
+                showMessage(
+                    "Please accept the Terms and Conditions.",
+                    "error"
+                );
+
+                return;
+            }
+
+
+            // Demo success
+            showMessage(
+                "Account created successfully! You can now login.",
+                "success"
+            );
+
+            signupForm.reset();
+
+        });
+
+
+        function showMessage(text, type) {
+
+            message.textContent = text;
+
+            message.className =
+                "message " + type;
+
+            message.style.display = "block";
+
+        }
+
+    </script>
+
+</body>
+</html>

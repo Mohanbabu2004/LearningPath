@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Code Generator - LearningPath</title>
+
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+        .generator-container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .page-icon {
+            font-size: 55px;
+        }
+
+        .page-header h1 {
+            font-size: 38px;
+            margin: 10px 0;
+        }
+
+        .page-header p {
+            color: #666;
+            font-size: 17px;
+        }
+
+        .generator-box {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            margin-bottom: 35px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 15px;
+            box-sizing: border-box;
+        }
+
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .generate-btn {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 8px;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+            background: #2563eb;
+            color: white;
+        }
+
+        .generate-btn:hover {
+            background: #1d4ed8;
+        }
+
+        .result-box {
+            display: none;
+            background: #f8fafc;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 25px;
+        }
+
+        .result-box h2 {
+            margin-top: 0;
+        }
+
+        .code-result {
+            background: #111827;
+            color: #f8fafc;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            font-family: monospace;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+        }
+
+        .feature-card .icon {
+            font-size: 35px;
+        }
+
+        .feature-card h3 {
+            margin: 10px 0;
+        }
+
+        .feature-card p {
+            color: #666;
+        }
+
+        @media (max-width: 700px) {
+            .page-header h1 {
+                font-size: 30px;
+            }
+
+            .generator-box {
+                padding: 20px;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                🚀 LearningPath
+            </div>
+
+            <button class="menu-btn" onclick="toggleMenu()">
+                ☰
+            </button>
+
+            <ul class="nav-menu" id="navMenu">
+                <li>
+                    <a href="../index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="roadmap.html">Roadmap</a>
+                </li>
+
+                <li>
+                    <a href="continue-learning.html">
+                        Continue Learning
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+    </header>
+
+
+    <!-- Main Content -->
+    <main class="generator-container">
+
+        <section class="page-header">
+
+            <div class="page-icon">
+                🤖
+            </div>
+
+            <h1>AI Code Generator</h1>
+
+            <p>
+                Describe what you want to build and generate programming code.
+            </p>
+
+        </section>
+
+
+        <!-- Generator -->
+        <section class="generator-box">
+
+            <div class="form-group">
+
+                <label for="language">
+                    Select Programming Language
+                </label>
+
+                <select id="language">
+
+                    <option value="C">C</option>
+
+                    <option value="C++">
+                        C++
+                    </option>
+
+                    <option value="Python">
+                        Python
+                    </option>
+
+                    <option value="Java">
+                        Java
+                    </option>
+
+                    <option value="JavaScript">
+                        JavaScript
+                    </option>
+
+                    <option value="HTML">
+                        HTML
+                    </option>
+
+                    <option value="CSS">
+                        CSS
+                    </option>
+
+                    <option value="SQL">
+                        SQL
+                    </option>
+
+                    <option value="PHP">
+                        PHP
+                    </option>
+
+                    <option value="TypeScript">
+                        TypeScript
+                    </option>
+
+                    <option value="R">
+                        R
+                    </option>
+
+                    <option value="Ruby">
+                        Ruby
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="problem">
+                    What code do you want?
+                </label>
+
+                <textarea
+                    id="problem"
+                    placeholder="Example: Write a C program to find the largest number in an array."
+                ></textarea>
+
+            </div>
+
+
+            <button
+                class="generate-btn"
+                onclick="generateCode()"
+            >
+                🤖 Generate Code
+            </button>
+
+
+            <!-- Result -->
+            <div
+                class="result-box"
+                id="resultBox"
+            >
+
+                <h2>
+                    Generated Code
+                </h2>
+
+                <p id="resultMessage"></p>
+
+                <div
+                    class="code-result"
+                    id="generatedCode"
+                ></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Features -->
+        <section class="features">
+
+            <div class="feature-card">
+
+                <div class="icon">
+                    💡
+                </div>
+
+                <h3>
+                    Natural Language
+                </h3>
+
+                <p>
+                    Describe your programming requirement in simple English.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="icon">
+                    ⚡
+                </div>
+
+                <h3>
+                    Fast Generation
+                </h3>
+
+                <p>
+                    Generate programming code quickly from your requirements.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="icon">
+                    🧠
+                </div>
+
+                <h3>
+                    AI Powered
+                </h3>
+
+                <p>
+                    Later this page will connect to the LearningPath AI backend.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 LearningPath | Learn Coding the Easy Way
+        </p>
+
+    </footer>
+
+
+    <script src="../script.js"></script>
+
+    <script>
+
+        function generateCode() {
+
+            const language =
+                document.getElementById("language").value;
+
+            const problem =
+                document.getElementById("problem").value.trim();
+
+            const resultBox =
+                document.getElementById("resultBox");
+
+            const resultMessage =
+                document.getElementById("resultMessage");
+
+            const generatedCode =
+                document.getElementById("generatedCode");
+
+
+            if (problem === "") {
+
+                alert(
+                    "Please enter what code you want to generate."
+                );
+
+                return;
+            }
+
+
+            resultBox.style.display = "block";
+
+
+            resultMessage.innerHTML =
+                "Frontend demo: AI Code Generator received your request for <b>"
+                + language
+                + "</b>.";
+
+
+            generatedCode.textContent =
+                "// LearningPath AI Code Generator\n\n"
+                + "// Language: "
+                + language
+                + "\n"
+                + "// Request: "
+                + problem
+                + "\n\n"
+                + "// Real AI-generated code will appear here.\n"
+                + "// Backend AI API will be connected later.";
+
+
+            resultBox.scrollIntoView({
+                behavior: "smooth"
+            });
+
+        }
+
+    </script>
+
+</body>
+</html>

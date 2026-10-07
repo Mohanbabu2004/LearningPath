@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Learning Path - Java Programming</title>
+
+    <link rel="stylesheet" href="../../style.css">
+
+    <style>
+
+        body {
+            background: #f7f8fc;
+        }
+
+        .learn-page {
+            display: flex;
+            min-height: calc(100vh - 70px);
+        }
+
+        .learn-sidebar {
+            width: 270px;
+            background: white;
+            border-right: 1px solid #e5e7eb;
+            padding: 25px 18px;
+
+            position: sticky;
+            top: 70px;
+
+            height: calc(100vh - 70px);
+
+            overflow-y: auto;
+        }
+
+        .learn-sidebar h3 {
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+
+        .topic-link {
+            display: block;
+
+            text-decoration: none;
+
+            color: #374151;
+
+            padding: 11px 13px;
+
+            border-radius: 8px;
+
+            margin-bottom: 5px;
+
+            font-size: 14px;
+        }
+
+        .topic-link:hover,
+        .topic-link.active {
+            background: #eef2ff;
+            color: #4f46e5;
+            font-weight: bold;
+        }
+
+        .learn-content {
+            flex: 1;
+
+            padding: 45px 6%;
+
+            max-width: 1100px;
+        }
+
+        .course-badge {
+            display: inline-block;
+
+            background: #e0e7ff;
+            color: #4338ca;
+
+            padding: 6px 12px;
+
+            border-radius: 20px;
+
+            font-size: 13px;
+
+            font-weight: bold;
+
+            margin-bottom: 12px;
+        }
+
+        .learn-content h1 {
+            font-size: 44px;
+            margin-bottom: 12px;
+        }
+
+        .learn-content h1 span {
+            color: #4f46e5;
+        }
+
+        .intro {
+            color: #6b7280;
+
+            font-size: 18px;
+
+            margin-bottom: 30px;
+        }
+
+        /* Progress */
+
+        .learning-progress {
+            background: white;
+
+            padding: 20px;
+
+            border-radius: 12px;
+
+            margin-bottom: 35px;
+
+            border: 1px solid #e5e7eb;
+        }
+
+        .progress-top {
+            display: flex;
+
+            justify-content: space-between;
+
+            margin-bottom: 8px;
+        }
+
+        .learning-progress-bar {
+            width: 100%;
+
+            height: 9px;
+
+            background: #e5e7eb;
+
+            border-radius: 20px;
+
+            overflow: hidden;
+        }
+
+        .learning-progress-value {
+            width: 0%;
+
+            height: 100%;
+
+            background: #4f46e5;
+        }
+
+        /* Lessons */
+
+        .lesson-section {
+            background: white;
+
+            padding: 30px;
+
+            border-radius: 15px;
+
+            margin-bottom: 25px;
+
+            border: 1px solid #e5e7eb;
+        }
+
+        .lesson-section h2 {
+            font-size: 28px;
+
+            margin-bottom: 12px;
+        }
+
+        .lesson-section h3 {
+            margin-top: 22px;
+
+            margin-bottom: 8px;
+        }
+
+        .lesson-section p {
+            color: #4b5563;
+
+            margin-bottom: 12px;
+        }
+
+        .lesson-section ul {
+            padding-left: 25px;
+
+            color: #4b5563;
+        }
+
+        .lesson-section li {
+            margin-bottom: 6px;
+        }
+
+        /* Code */
+
+        .code-box {
+            background: #111827;
+
+            color: #e5e7eb;
+
+            padding: 20px;
+
+            border-radius: 10px;
+
+            overflow-x: auto;
+
+            margin: 15px 0;
+
+            font-family: Consolas, monospace;
+
+            font-size: 14px;
+
+            line-height: 1.6;
+        }
+
+        /* Buttons */
+
+        .lesson-buttons {
+            display: flex;
+
+            gap: 12px;
+
+            flex-wrap: wrap;
+
+            margin-top: 25px;
+        }
+
+        .lesson-btn {
+            display: inline-block;
+
+            text-decoration: none;
+
+            padding: 11px 18px;
+
+            border-radius: 8px;
+
+            font-weight: bold;
+        }
+
+        .primary-lesson {
+            background: #4f46e5;
+
+            color: white;
+        }
+
+        .secondary-lesson {
+            border: 2px solid #4f46e5;
+
+            color: #4f46e5;
+        }
+
+        /* Mobile */
+
+        @media (max-width: 800px) {
+
+            .learn-page {
+                display: block;
+            }
+
+            .learn-sidebar {
+                width: 100%;
+
+                height: auto;
+
+                position: static;
+
+                border-right: none;
+
+                border-bottom: 1px solid #e5e7eb;
+            }
+
+            .learn-sidebar h3 {
+                text-align: center;
+            }
+
+            .topic-link {
+                display: inline-block;
+
+                margin: 3px;
+            }
+
+            .learn-content {
+                padding: 35px 5%;
+            }
+
+            .learn-content h1 {
+                font-size: 35px;
+            }
+
+            .lesson-section {
+                padding: 22px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- Navigation -->
+
+<header class="navbar">
+
+    <div class="logo">
+        Learning<span>Path</span>
+    </div>
+
+    <button class="menu-btn"
+            onclick="toggleMenu()">
+
+        ☰
+
+    </button>
+
+    <nav id="navMenu">
+
+        <a href="../home.html">
+            Home
+        </a>
+
+        <a href="../roadmap.html">
+            Roadmap
+        </a>
+
+        <a href="../continue-learning.html">
+            Continue
+        </a>
+
+        <a href="../quiz.html">
+            Quiz
+        </a>
+
+        <a href="../projects.html">
+            Projects
+        </a>
+
+    </nav>
+
+    <a href="../profile.html"
+       class="login-btn">
+
+        Profile
+
+    </a>
+
+</header>
+
+
+
+<div class="learn-page">
+
+
+    <!-- Sidebar -->
+
+    <aside class="learn-sidebar">
+
+        <h3>
+            ☕ Java Programming
+        </h3>
+
+        <a href="#intro"
+           class="topic-link active">
+            1. Introduction
+        </a>
+
+        <a href="#basics"
+           class="topic-link">
+            2. Java Basics
+        </a>
+
+        <a href="#variables"
+           class="topic-link">
+            3. Variables & Data Types
+        </a>
+
+        <a href="#operators"
+           class="topic-link">
+            4. Operators
+        </a>
+
+        <a href="#conditions"
+           class="topic-link">
+            5. Conditions
+        </a>
+
+        <a href="#loops"
+           class="topic-link">
+            6. Loops
+        </a>
+
+        <a href="#arrays"
+           class="topic-link">
+            7. Arrays
+        </a>
+
+        <a href="#methods"
+           class="topic-link">
+            8. Methods
+        </a>
+
+        <a href="#class"
+           class="topic-link">
+            9. Classes & Objects
+        </a>
+
+        <a href="#inheritance"
+           class="topic-link">
+            10. Inheritance
+        </a>
+
+        <a href="#polymorphism"
+           class="topic-link">
+            11. Polymorphism
+        </a>
+
+        <a href="#exceptions"
+           class="topic-link">
+            12. Exception Handling
+        </a>
+
+        <a href="#practice"
+           class="topic-link">
+            13. Practice
+        </a>
+
+    </aside>
+
+
+
+    <!-- Main Content -->
+
+    <main class="learn-content">
+
+        <span class="course-badge">
+            JAVA PROGRAMMING
+        </span>
+
+        <h1>
+            Learn <span>Java Programming</span>
+        </h1>
+
+        <p class="intro">
+            Learn Java from the basics and understand
+            object-oriented programming step by step.
+        </p>
+
+
+        <!-- Progress -->
+
+        <div class="learning-progress">
+
+            <div class="progress-top">
+
+                <strong>
+                    Course Progress
+                </strong>
+
+                <strong>
+                    0%
+                </strong>
+
+            </div>
+
+            <div class="learning-progress-bar">
+
+                <div class="learning-progress-value">
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Introduction -->
+
+        <section class="lesson-section"
+                 id="intro">
+
+            <h2>
+                1. Introduction to Java
+            </h2>
+
+            <p>
+                Java is a popular object-oriented programming
+                language used to build desktop applications,
+                web applications, Android applications and
+                enterprise software.
+            </p>
+
+            <h3>
+                Why Learn Java?
+            </h3>
+
+            <ul>
+
+                <li>
+                    Object-oriented programming
+                </li>
+
+                <li>
+                    Platform independent
+                </li>
+
+                <li>
+                    Used in Android development
+                </li>
+
+                <li>
+                    Strongly typed programming language
+                </li>
+
+            </ul>
+
+        </section>
+
+
+        <!-- Basics -->
+
+        <section class="lesson-section"
+                 id="basics">
+
+            <h2>
+                2. Java Basics
+            </h2>
+
+            <p>
+                A simple Java program starts from
+                the main() method.
+            </p>
+
+            <div class="code-box">
+<pre>
+public class Main {
+
+    public static void main(String[] args) {
+
+        System.out.println("Hello World");
+
+    }
+}
+</pre>
+            </div>
+
+        </section>
+
+
+        <!-- Variables -->
+
+        <section class="lesson-section"
+                 id="variables">
+
+            <h2>
+                3. Variables & Data Types
+            </h2>
+
+            <p>
+                Java requires variables to have a declared
+                data type.
+            </p>
+
+            <div class="code-box">
+<pre>
+int age = 22;
+
+double marks = 85.5;
+
+char grade = 'A';
+
+boolean passed = true;
+
+String name = "Mohan";
+</pre>
+            </div>
+
+            <h3>
+                Common Data Types
+            </h3>
+
+            <ul>
+
+                <li>
+                    int
+                </li>
+
+                <li>
+                    float
+                </li>
+
+                <li>
+                    double
+                </li>
+
+                <li>
+                    char
+                </li>
+
+                <li>
+                    boolean
+                </li>
+
+                <li>
+                    String
+                </li>
+
+            </ul>
+
+        </section>
+
+
+        <!-- Operators -->
+
+        <section class="lesson-section"
+                 id="operators">
+
+            <h2>
+                4. Operators
+            </h2>
+
+            <p>
+                Operators perform calculations and comparisons.
+            </p>
+
+            <div class="code-box">
+<pre>
+int a = 10;
+int b = 5;
+
+System.out.println(a + b);
+System.out.println(a - b);
+System.out.println(a * b);
+System.out.println(a / b);
+</pre>
+            </div>
+
+        </section>
+
+
+        <!-- Conditions -->
+
+        <section class="lesson-section"
+                 id="conditions">
+
+            <h2>
+                5. Conditional Statements
+            </h2>
+
+            <p>
+                if, else if and else are used for
+                decision making.
+            </p>
+
+            <div class="code-box">
+<pre>
+int age = 20;
+
+if(age >= 18) {
+
+    System.out.println("Adult");
+
+} else {
+
+    System.out.println("Minor");
+}
+</pre>
+            </div>
+
+        </section>
+
+
+        <!-- Loops -->
+
+        <section class="lesson-section"
+                 id="loops">
+
+            <h2>
+                6. Loops
+            </h2>
+
+            <p>
+                Loops execute a block of code repeatedly.
+            </p>
+
+            <div class="code-box">
+<pre>
+for(int i = 1; i <= 5; i++) {
+
+    System.out.println(i);
+
+}
+</pre>
+            </div>
+
+        </section>
+
+
+        <!-- Arrays -->
+
+        <section class="lesson-section"
+                 id="arrays">
+
+            <h2>
+                7. Arrays
+            </h2>
+
+            <p>
+                Arrays store multiple values of the
+                same type.
+            </p>
+
+            <div class="code-box">
+<pre>
+int[] numbers = {
+    10, 20, 30, 40, 50
+};
+
+System.out.println(numbers[0]);
+</pre>
+            </div>
+
+        </section>
+
+
+        <!-- Methods -->
+
+        <section class="lesson-section"
+                 id="methods">
+
+            <h2>
+                8. Methods
+            </h2>
+
+            <p>
+                Methods contain reusable blocks of code.
+            </p>
+
+            <div class="code-box">
+<pre>
+static int add(int a, int b) {
+
+    return a + b;
+}
+
+public static void main(String[] args) {
+
+    System.out.println(add(10, 20));
+
+}
+</pre>
+            </div>
+
+        </section>
+
+
+        <!-- Classes -->
+
+        <section class="lesson-section"
+                 id="class">
+
+            <h2>
+                9. Classes & Objects
+            </h2>
+
+            <p>
+                A class is a blueprint for creating objects.
+            </p>
+
+            <div class="code-box">
+<pre>
+class Student {
+
+    String name;
+
+    void display() {
+
+        System.out.println(name);
+
+    }
+}
+</pre>
+            </div>
+
+        </section>
+
+
+        <!-- Inheritance -->
+
+        <section class="lesson-section"
+                 id="inheritance">
+
+            <h2>
+                10. Inheritance
+            </h2>
+
+            <p>
+                Inheritance allows one class to inherit
+                properties and methods from another class.
+            </p>
+
+            <div class="code-box">
+<pre>
+class Animal {
+
+    void eat() {
+
+        System.out.println("Eating");
+
+    }
+}
+
+class Dog extends Animal {
+
+    void bark() {
+
+        System.out.println("Barking");
+
+    }
+}
+</pre>
+            </div>
+
+        </section>
+
+
+        <!-- Polymorphism -->
+
+        <section class="lesson-section"
+                 id="polymorphism">
+
+            <h2>
+                11. Polymorphism
+            </h2>
+
+            <p>
+                Polymorphism allows the same method name
+                to behave differently.
+            </p>
+
+            <div class="code-box">
+<pre>
+class Animal {
+
+    void sound() {
+
+        System.out.println("Animal sound");
+
+    }
+}
+
+class Dog extends Animal {
+
+    void sound() {
+
+        System.out.println("Dog barks");
+
+    }
+}
+</pre>
+            </div>
+
+        </section>
+
+
+        <!-- Exception Handling -->
+
+        <section class="lesson-section"
+                 id="exceptions">
+
+            <h2>
+                12. Exception Handling
+            </h2>
+
+            <p>
+                Exception handling allows programs to
+                handle runtime errors safely.
+            </p>
+
+            <div class="code-box">
+<pre>
+try {
+
+    int result = 10 / 0;
+
+} catch (Exception e) {
+
+    System.out.println("Error occurred");
+
+}
+</pre>
+            </div>
+
+        </section>
+
+
+        <!-- Practice -->
+
+        <section class="lesson-section"
+                 id="practice">
+
+            <h2>
+                13. Practice Java
+            </h2>
+
+            <p>
+                Test your Java knowledge using quizzes
+                and programming projects.
+            </p>
+
+            <div class="lesson-buttons">
+
+                <a href="../quiz.html"
+                   class="lesson-btn primary-lesson">
+
+                    Take Java Quiz →
+
+                </a>
+
+                <a href="../projects.html"
+                   class="lesson-btn secondary-lesson">
+
+                    Java Projects →
+
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<footer>
+
+    <div class="footer-logo">
+        Learning<span>Path</span>
+    </div>
+
+    <p>
+        Learn Coding the Easy Way.
+    </p>
+
+    <p class="copyright">
+        © 2026 Learning Path. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+<script src="../../script.js"></script>
+
+</body>
+
+</html>

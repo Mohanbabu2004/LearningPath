@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Code Error Fixer - LearningPath</title>
+
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+        .fixer-container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .page-icon {
+            font-size: 55px;
+        }
+
+        .page-header h1 {
+            font-size: 38px;
+            margin: 10px 0;
+        }
+
+        .page-header p {
+            color: #666;
+            font-size: 17px;
+        }
+
+        .fixer-box {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 15px;
+            box-sizing: border-box;
+        }
+
+        .form-group textarea {
+            min-height: 180px;
+            resize: vertical;
+            font-family: monospace;
+        }
+
+        .error-textarea {
+            min-height: 100px !important;
+        }
+
+        .fix-btn {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 8px;
+            background: #dc2626;
+            color: white;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .fix-btn:hover {
+            background: #b91c1c;
+        }
+
+        .result-box {
+            display: none;
+            margin-top: 25px;
+            padding: 20px;
+            background: #f8fafc;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+        }
+
+        .result-box h2 {
+            margin-top: 0;
+        }
+
+        .result-section {
+            margin-top: 20px;
+        }
+
+        .result-section h3 {
+            margin-bottom: 8px;
+        }
+
+        .code-result {
+            background: #111827;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            white-space: pre-wrap;
+            overflow-x: auto;
+            font-family: monospace;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 35px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+        }
+
+        .feature-icon {
+            font-size: 38px;
+        }
+
+        .feature-card h3 {
+            margin: 10px 0;
+        }
+
+        .feature-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 700px) {
+
+            .page-header h1 {
+                font-size: 30px;
+            }
+
+            .fixer-box {
+                padding: 20px;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+                🚀 LearningPath
+            </div>
+
+            <button class="menu-btn" onclick="toggleMenu()">
+                ☰
+            </button>
+
+            <ul class="nav-menu" id="navMenu">
+
+                <li>
+                    <a href="../index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="roadmap.html">
+                        Roadmap
+                    </a>
+                </li>
+
+                <li>
+                    <a href="continue-learning.html">
+                        Continue Learning
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- Main -->
+
+    <main class="fixer-container">
+
+        <!-- Page Header -->
+
+        <section class="page-header">
+
+            <div class="page-icon">
+                🛠️
+            </div>
+
+            <h1>
+                Code Error Fixer
+            </h1>
+
+            <p>
+                Paste your code and error message to find and fix programming errors.
+            </p>
+
+        </section>
+
+
+        <!-- Code Fixer -->
+
+        <section class="fixer-box">
+
+            <!-- Language -->
+
+            <div class="form-group">
+
+                <label for="language">
+                    Select Programming Language
+                </label>
+
+                <select id="language">
+
+                    <option value="C">
+                        C
+                    </option>
+
+                    <option value="C++">
+                        C++
+                    </option>
+
+                    <option value="Python">
+                        Python
+                    </option>
+
+                    <option value="Java">
+                        Java
+                    </option>
+
+                    <option value="JavaScript">
+                        JavaScript
+                    </option>
+
+                    <option value="HTML">
+                        HTML
+                    </option>
+
+                    <option value="CSS">
+                        CSS
+                    </option>
+
+                    <option value="SQL">
+                        SQL
+                    </option>
+
+                    <option value="PHP">
+                        PHP
+                    </option>
+
+                    <option value="TypeScript">
+                        TypeScript
+                    </option>
+
+                    <option value="R">
+                        R
+                    </option>
+
+                    <option value="Ruby">
+                        Ruby
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- Code -->
+
+            <div class="form-group">
+
+                <label for="code">
+                    Paste Your Code
+                </label>
+
+                <textarea
+                    id="code"
+                    placeholder="Paste your code here..."
+                ></textarea>
+
+            </div>
+
+
+            <!-- Error -->
+
+            <div class="form-group">
+
+                <label for="error">
+
+                    Error Message
+                    <span style="font-weight: normal;">
+                        (Optional)
+                    </span>
+
+                </label>
+
+                <textarea
+                    id="error"
+                    class="error-textarea"
+                    placeholder="Paste the error message here..."
+                ></textarea>
+
+            </div>
+
+
+            <!-- Button -->
+
+            <button
+                class="fix-btn"
+                onclick="fixCode()"
+            >
+                🛠️ Fix Error
+            </button>
+
+
+            <!-- Result -->
+
+            <div
+                class="result-box"
+                id="resultBox"
+            >
+
+                <h2>
+                    🔍 Error Analysis
+                </h2>
+
+                <p id="resultMessage"></p>
+
+
+                <div class="result-section">
+
+                    <h3>
+                        ⚠️ Problem
+                    </h3>
+
+                    <div
+                        class="code-result"
+                        id="problemResult"
+                    ></div>
+
+                </div>
+
+
+                <div class="result-section">
+
+                    <h3>
+                        💡 Suggested Fix
+                    </h3>
+
+                    <div
+                        class="code-result"
+                        id="fixResult"
+                    ></div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Features -->
+
+        <section class="features">
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    🔍
+                </div>
+
+                <h3>
+                    Detect Errors
+                </h3>
+
+                <p>
+                    Identify syntax and programming errors in your code.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    💡
+                </div>
+
+                <h3>
+                    Explain Problem
+                </h3>
+
+                <p>
+                    Understand why the error happened in simple language.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    🛠️
+                </div>
+
+                <h3>
+                    Suggest Fix
+                </h3>
+
+                <p>
+                    Get a corrected version of your code with AI assistance.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            © 2026 LearningPath | Learn Coding the Easy Way
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+
+    <script src="../script.js"></script>
+
+    <script>
+
+        function fixCode() {
+
+            const language =
+                document.getElementById("language").value;
+
+            const code =
+                document.getElementById("code").value.trim();
+
+            const error =
+                document.getElementById("error").value.trim();
+
+            const resultBox =
+                document.getElementById("resultBox");
+
+            const resultMessage =
+                document.getElementById("resultMessage");
+
+            const problemResult =
+                document.getElementById("problemResult");
+
+            const fixResult =
+                document.getElementById("fixResult");
+
+
+            if (code === "") {
+
+                alert("Please paste your code.");
+
+                return;
+            }
+
+
+            resultBox.style.display = "block";
+
+
+            resultMessage.innerHTML =
+                "LearningPath received your "
+                + "<b>"
+                + language
+                + "</b>"
+                + " code for error analysis.";
+
+
+            if (error === "") {
+
+                problemResult.textContent =
+                    "No error message was provided.\n\n"
+                    + "The real AI backend will analyze the code "
+                    + "and identify possible errors.";
+
+            } else {
+
+                problemResult.textContent =
+                    error;
+
+            }
+
+
+            fixResult.textContent =
+                "// AI Code Fixer Demo\n\n"
+                + "// Language: "
+                + language
+                + "\n\n"
+                + "// Your code:\n"
+                + code
+                + "\n\n"
+                + "// Corrected code will appear here\n"
+                + "// after the AI backend is connected.";
+
+
+            resultBox.scrollIntoView({
+                behavior: "smooth"
+            });
+
+        }
+
+    </script>
+
+</body>
+
+</html>
