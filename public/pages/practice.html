@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Coding | LearningPath</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        body {
+            background: #050816;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+        }
+
+        .practice-container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .tabs-row {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 25px;
+        }
+
+        .tab-btn {
+            padding: 8px 18px;
+            border-radius: 6px;
+            background: #0b1126;
+            border: 1px solid #1c244b;
+            color: #94a3b8;
+            font-weight: bold;
+            font-size: 13px;
+            cursor: pointer;
+        }
+
+        .tab-btn.active {
+            background: #20d99a;
+            color: #050816;
+            border-color: #20d99a;
+        }
+
+        .editor-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 20px;
+        }
+
+        /* Problem Card (Left) */
+        .problem-card {
+            background: #0b1126;
+            border: 1px solid #1c244b;
+            border-radius: 12px;
+            padding: 25px;
+        }
+
+        .problem-card h2 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+
+        .problem-description {
+            color: #cbd5e1;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* Code Editor Card (Right) */
+        .editor-card {
+            background: #0b1126;
+            border: 1px solid #1c244b;
+            border-radius: 12px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .code-textarea {
+            width: 100%;
+            height: 250px;
+            background: #070c1e;
+            border: 1px solid #20284b;
+            border-radius: 8px;
+            color: #20d99a;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 14px;
+            padding: 15px;
+            line-height: 1.5;
+            resize: vertical;
+            outline: none;
+        }
+
+        /* Input / Output Section */
+        .io-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            background: #070c1e;
+            border: 1px solid #20284b;
+            border-radius: 8px;
+            padding: 15px;
+        }
+
+        .io-box label {
+            display: block;
+            font-size: 12px;
+            color: #94a3b8;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .io-input, .io-output {
+            width: 100%;
+            background: #0b1126;
+            border: 1px solid #1c244b;
+            border-radius: 6px;
+            color: #ffffff;
+            padding: 8px 12px;
+            font-family: monospace;
+            font-size: 13px;
+        }
+
+        .buttons-row {
+            display: flex;
+            justify-content: flex-end;
+            gap: 12px;
+        }
+
+        .btn-run {
+            background: #20d99a;
+            color: #050816;
+            border: none;
+            padding: 10px 22px;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 13px;
+            cursor: pointer;
+        }
+
+        .btn-submit {
+            background: #6645ff;
+            color: #ffffff;
+            border: none;
+            padding: 10px 22px;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 13px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 850px) {
+            .editor-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navbar -->
+    <header class="navbar">
+        <div class="logo">
+            <div class="logo-bars"><span></span><span></span><span></span></div>
+            <span class="logo-white">Learning</span><span class="logo-purple">Path</span>
+        </div>
+        <div class="user-name">Mohan</div>
+    </header>
+
+    <div class="practice-container">
+
+        <!-- Difficulty Tabs (Screen 14) -->
+        <div class="tabs-row">
+            <button class="tab-btn active">Easy</button>
+            <button class="tab-btn">Medium</button>
+            <button class="tab-btn">Hard</button>
+        </div>
+
+        <div class="editor-grid">
+
+            <!-- Problem Card (Left) -->
+            <div class="problem-card">
+                <h2>Practice Coding</h2>
+                <div class="problem-description">
+                    <p><strong>Problem:</strong> Write a C program to check whether a number is Even or Odd.</p>
+                    <br>
+                    <p><strong>Input Format:</strong> A single integer <code>n</code>.</p>
+                    <p><strong>Output Format:</strong> Print <code>Even</code> if the number is even, otherwise print <code>Odd</code>.</p>
+                </div>
+            </div>
+
+            <!-- Code Editor Card (Right) -->
+            <div class="editor-card">
+
+                <textarea class="code-textarea" id="codeEditor" spellcheck="false">#include <stdio.h>
+
+int main() {
+    int n;
+    scanf("%d", &n);
+
+    if(n % 2 == 0)
+        printf("Even");
+    else
+        printf("Odd");
+
+    return 0;
+}</textarea>
+
+                <!-- Input / Output -->
+                <div class="io-container">
+                    <div class="io-box">
+                        <label>Input</label>
+                        <input type="text" class="io-input" id="userInput" value="4">
+                    </div>
+                    <div class="io-box">
+                        <label>Output</label>
+                        <div class="io-output" id="userOutput">Even</div>
+                    </div>
+                </div>
+
+                <!-- Run / Submit Buttons -->
+                <div class="buttons-row">
+                    <button class="btn-run" onclick="runCode()">Run Code</button>
+                    <button class="btn-submit" onclick="submitCode()">Submit</button>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+        function runCode() {
+            const inputVal = parseInt(document.getElementById("userInput").value);
+            const outputBox = document.getElementById("userOutput");
+
+            if (isNaN(inputVal)) {
+                outputBox.textContent = "Invalid Input";
+                outputBox.style.color = "#ff3e57";
+            } else {
+                const result = (inputVal % 2 === 0) ? "Even" : "Odd";
+                outputBox.textContent = result;
+                outputBox.style.color = "#20d99a";
+            }
+        }
+
+        function submitCode() {
+            alert("🎉 Solution Accepted! Test cases passed: 5/5");
+        }
+    </script>
+</body>
+</html>
