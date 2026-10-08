@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Learning Path - C++ Programming</title>
+
+    <link rel="stylesheet" href="../../style.css">
+
+    <style>
+
+        body {
+            background: #f7f8fc;
+        }
+
+        .learn-page {
+            display: flex;
+            min-height: calc(100vh - 70px);
+        }
+
+        /* Sidebar */
+
+        .learn-sidebar {
+            width: 270px;
+            background: white;
+            border-right: 1px solid #e5e7eb;
+            padding: 25px 18px;
+            position: sticky;
+            top: 70px;
+            height: calc(100vh - 70px);
+            overflow-y: auto;
+        }
+
+        .learn-sidebar h3 {
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+
+        .topic-link {
+            display: block;
+            text-decoration: none;
+            color: #374151;
+            padding: 11px 13px;
+            border-radius: 8px;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+
+        .topic-link:hover,
+        .topic-link.active {
+            background: #eef2ff;
+            color: #4f46e5;
+            font-weight: bold;
+        }
+
+        /* Main */
+
+        .learn-content {
+            flex: 1;
+            padding: 45px 6%;
+            max-width: 1100px;
+        }
+
+        .course-badge {
+            display: inline-block;
+            background: #e0e7ff;
+            color: #4338ca;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        .learn-content h1 {
+            font-size: 44px;
+            margin-bottom: 12px;
+        }
+
+        .learn-content h1 span {
+            color: #4f46e5;
+        }
+
+        .intro {
+            color: #6b7280;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        /* Progress */
+
+        .learning-progress {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 35px;
+            border: 1px solid #e5e7eb;
+        }
+
+        .progress-top {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+
+        .learning-progress-bar {
+            width: 100%;
+            height: 9px;
+            background: #e5e7eb;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .learning-progress-value {
+            width: 30%;
+            height: 100%;
+            background: #4f46e5;
+        }
+
+        /* Lessons */
+
+        .lesson-section {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            border: 1px solid #e5e7eb;
+        }
+
+        .lesson-section h2 {
+            font-size: 28px;
+            margin-bottom: 12px;
+        }
+
+        .lesson-section h3 {
+            margin-top: 22px;
+            margin-bottom: 8px;
+        }
+
+        .lesson-section p {
+            color: #4b5563;
+            margin-bottom: 12px;
+        }
+
+        .lesson-section ul {
+            padding-left: 25px;
+            color: #4b5563;
+        }
+
+        .lesson-section li {
+            margin-bottom: 6px;
+        }
+
+        /* Code */
+
+        .code-box {
+            background: #111827;
+            color: #e5e7eb;
+            padding: 20px;
+            border-radius: 10px;
+            overflow-x: auto;
+            margin: 15px 0;
+            font-family: Consolas, monospace;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* Buttons */
+
+        .lesson-buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 25px;
+        }
+
+        .lesson-btn {
+            display: inline-block;
+            text-decoration: none;
+            padding: 11px 18px;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .primary-lesson {
+            background: #4f46e5;
+            color: white;
+        }
+
+        .secondary-lesson {
+            border: 2px solid #4f46e5;
+            color: #4f46e5;
+        }
+
+        /* Mobile */
+
+        @media (max-width: 800px) {
+
+            .learn-page {
+                display: block;
+            }
+
+            .learn-sidebar {
+                width: 100%;
+                height: auto;
+                position: static;
+                border-right: none;
+                border-bottom: 1px solid #e5e7eb;
+            }
+
+            .learn-sidebar h3 {
+                text-align: center;
+            }
+
+            .topic-link {
+                display: inline-block;
+                margin: 3px;
+            }
+
+            .learn-content {
+                padding: 35px 5%;
+            }
+
+            .learn-content h1 {
+                font-size: 35px;
+            }
+
+            .lesson-section {
+                padding: 22px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- Navigation -->
+
+<header class="navbar">
+
+    <div class="logo">
+        Learning<span>Path</span>
+    </div>
+
+    <button class="menu-btn"
+            onclick="toggleMenu()">
+
+        ☰
+
+    </button>
+
+    <nav id="navMenu">
+
+        <a href="../home.html">
+            Home
+        </a>
+
+        <a href="../roadmap.html">
+            Roadmap
+        </a>
+
+        <a href="../continue-learning.html">
+            Continue
+        </a>
+
+        <a href="../quiz.html">
+            Quiz
+        </a>
+
+        <a href="../projects.html">
+            Projects
+        </a>
+
+    </nav>
+
+    <a href="../profile.html"
+       class="login-btn">
+
+        Profile
+
+    </a>
+
+</header>
+
+
+
+<div class="learn-page">
+
+
+    <!-- Sidebar -->
+
+    <aside class="learn-sidebar">
+
+        <h3>
+            ⚡ C++ Programming
+        </h3>
+
+        <a href="#intro"
+           class="topic-link active">
+
+            1. Introduction
+
+        </a>
+
+        <a href="#basics"
+           class="topic-link">
+
+            2. C++ Basics
+
+        </a>
+
+        <a href="#variables"
+           class="topic-link">
+
+            3. Variables & Data Types
+
+        </a>
+
+        <a href="#operators"
+           class="topic-link">
+
+            4. Operators
+
+        </a>
+
+        <a href="#conditions"
+           class="topic-link">
+
+            5. Conditions
+
+        </a>
+
+        <a href="#loops"
+           class="topic-link">
+
+            6. Loops
+
+        </a>
+
+        <a href="#functions"
+           class="topic-link">
+
+            7. Functions
+
+        </a>
+
+        <a href="#arrays"
+           class="topic-link">
+
+            8. Arrays
+
+        </a>
+
+        <a href="#strings"
+           class="topic-link">
+
+            9. Strings
+
+        </a>
+
+        <a href="#oops"
+           class="topic-link">
+
+            10. OOP
+
+        </a>
+
+        <a href="#inheritance"
+           class="topic-link">
+
+            11. Inheritance
+
+        </a>
+
+        <a href="#polymorphism"
+           class="topic-link">
+
+            12. Polymorphism
+
+        </a>
+
+        <a href="#practice"
+           class="topic-link">
+
+            13. Practice
+
+        </a>
+
+    </aside>
+
+
+
+    <!-- Main -->
+
+    <main class="learn-content">
+
+
+        <span class="course-badge">
+            C++ PROGRAMMING
+        </span>
+
+        <h1>
+            Learn <span>C++ Programming</span>
+        </h1>
+
+        <p class="intro">
+            Learn modern C++ and understand
+            object-oriented programming step by step.
+        </p>
+
+
+
+        <!-- Progress -->
+
+        <div class="learning-progress">
+
+            <div class="progress-top">
+
+                <strong>
+                    Course Progress
+                </strong>
+
+                <strong>
+                    30%
+                </strong>
+
+            </div>
+
+            <div class="learning-progress-bar">
+
+                <div class="learning-progress-value">
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Introduction -->
+
+        <section class="lesson-section"
+                 id="intro">
+
+            <h2>
+                1. Introduction to C++
+            </h2>
+
+            <p>
+                C++ is a powerful general-purpose programming
+                language that supports procedural and
+                object-oriented programming.
+            </p>
+
+            <h3>
+                Why Learn C++?
+            </h3>
+
+            <ul>
+
+                <li>
+                    Supports Object-Oriented Programming
+                </li>
+
+                <li>
+                    Useful for Data Structures and Algorithms
+                </li>
+
+                <li>
+                    Used in competitive programming
+                </li>
+
+                <li>
+                    Provides high performance
+                </li>
+
+            </ul>
+
+        </section>
+
+
+
+        <!-- Basics -->
+
+        <section class="lesson-section"
+                 id="basics">
+
+            <h2>
+                2. C++ Basics
+            </h2>
+
+            <p>
+                A basic C++ program uses the main()
+                function and the iostream library.
+            </p>
+
+            <div class="code-box">
+<pre>
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main()
+{
+    cout &lt;&lt; "Hello World";
+
+    return 0;
+}
+</pre>
+            </div>
+
+        </section>
+
+
+
+        <!-- Variables -->
+
+        <section class="lesson-section"
+                 id="variables">
+
+            <h2>
+                3. Variables & Data Types
+            </h2>
+
+            <p>
+                Variables are used to store values.
+            </p>
+
+            <div class="code-box">
+<pre>
+int age = 20;
+
+float marks = 85.5;
+
+char grade = 'A';
+
+bool passed = true;
+</pre>
+            </div>
+
+            <h3>
+                Common Data Types
+            </h3>
+
+            <ul>
+
+                <li>
+                    int
+                </li>
+
+                <li>
+                    float
+                </li>
+
+                <li>
+                    double
+                </li>
+
+                <li>
+                    char
+                </li>
+
+                <li>
+                    bool
+                </li>
+
+            </ul>
+
+        </section>
+
+
+
+        <!-- Operators -->
+
+        <section class="lesson-section"
+                 id="operators">
+
+            <h2>
+                4. Operators
+            </h2>
+
+            <p>
+                Operators perform operations on values.
+            </p>
+
+            <div class="code-box">
+<pre>
+int a = 10;
+int b = 5;
+
+cout &lt;&lt; a + b;
+</pre>
+            </div>
+
+        </section>
+
+
+
+        <!-- Conditions -->
+
+        <section class="lesson-section"
+                 id="conditions">
+
+            <h2>
+                5. Conditional Statements
+            </h2>
+
+            <p>
+                Conditional statements allow a program
+                to make decisions.
+            </p>
+
+            <div class="code-box">
+<pre>
+int age = 20;
+
+if(age >= 18)
+{
+    cout &lt;&lt; "Adult";
+}
+else
+{
+    cout &lt;&lt; "Minor";
+}
+</pre>
+            </div>
+
+        </section>
+
+
+
+        <!-- Loops -->
+
+        <section class="lesson-section"
+                 id="loops">
+
+            <h2>
+                6. Loops
+            </h2>
+
+            <p>
+                Loops execute a block of code repeatedly.
+            </p>
+
+            <div class="code-box">
+<pre>
+for(int i = 1; i <= 5; i++)
+{
+    cout &lt;&lt; i &lt;&lt; endl;
+}
+</pre>
+            </div>
+
+        </section>
+
+
+
+        <!-- Functions -->
+
+        <section class="lesson-section"
+                 id="functions">
+
+            <h2>
+                7. Functions
+            </h2>
+
+            <p>
+                Functions allow us to reuse code.
+            </p>
+
+            <div class="code-box">
+<pre>
+int add(int a, int b)
+{
+    return a + b;
+}
+
+int main()
+{
+    cout &lt;&lt; add(10, 20);
+
+    return 0;
+}
+</pre>
+            </div>
+
+        </section>
+
+
+
+        <!-- Arrays -->
+
+        <section class="lesson-section"
+                 id="arrays">
+
+            <h2>
+                8. Arrays
+            </h2>
+
+            <p>
+                Arrays store multiple values of the
+                same data type.
+            </p>
+
+            <div class="code-box">
+<pre>
+int numbers[5] =
+{
+    10, 20, 30, 40, 50
+};
+
+cout &lt;&lt; numbers[0];
+</pre>
+            </div>
+
+        </section>
+
+
+
+        <!-- Strings -->
+
+        <section class="lesson-section"
+                 id="strings">
+
+            <h2>
+                9. Strings
+            </h2>
+
+            <p>
+                C++ provides the string class for
+                working with text.
+            </p>
+
+            <div class="code-box">
+<pre>
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+using namespace std;
+
+int main()
+{
+    string name = "Learning Path";
+
+    cout &lt;&lt; name;
+
+    return 0;
+}
+</pre>
+            </div>
+
+        </section>
+
+
+
+        <!-- OOP -->
+
+        <section class="lesson-section"
+                 id="oops">
+
+            <h2>
+                10. Object-Oriented Programming
+            </h2>
+
+            <p>
+                C++ supports object-oriented programming.
+                The main concepts are classes and objects.
+            </p>
+
+            <div class="code-box">
+<pre>
+class Student
+{
+public:
+
+    string name;
+
+    void display()
+    {
+        cout &lt;&lt; name;
+    }
+};
+</pre>
+            </div>
+
+        </section>
+
+
+
+        <!-- Inheritance -->
+
+        <section class="lesson-section"
+                 id="inheritance">
+
+            <h2>
+                11. Inheritance
+            </h2>
+
+            <p>
+                Inheritance allows one class to
+                acquire properties of another class.
+            </p>
+
+            <div class="code-box">
+<pre>
+class Animal
+{
+public:
+
+    void eat()
+    {
+        cout &lt;&lt; "Eating";
+    }
+};
+
+class Dog : public Animal
+{
+public:
+
+    void bark()
+    {
+        cout &lt;&lt; "Barking";
+    }
+};
+</pre>
+            </div>
+
+        </section>
+
+
+
+        <!-- Polymorphism -->
+
+        <section class="lesson-section"
+                 id="polymorphism">
+
+            <h2>
+                12. Polymorphism
+            </h2>
+
+            <p>
+                Polymorphism means one interface
+                can have multiple forms.
+            </p>
+
+            <div class="code-box">
+<pre>
+class Animal
+{
+public:
+
+    virtual void sound()
+    {
+        cout &lt;&lt; "Animal sound";
+    }
+};
+
+class Dog : public Animal
+{
+public:
+
+    void sound()
+    {
+        cout &lt;&lt; "Dog barks";
+    }
+};
+</pre>
+            </div>
+
+        </section>
+
+
+
+        <!-- Practice -->
+
+        <section class="lesson-section"
+                 id="practice">
+
+            <h2>
+                13. Practice C++
+            </h2>
+
+            <p>
+                Test your C++ knowledge with quizzes
+                and programming projects.
+            </p>
+
+            <div class="lesson-buttons">
+
+                <a href="../quiz.html"
+                   class="lesson-btn primary-lesson">
+
+                    Take C++ Quiz →
+
+                </a>
+
+                <a href="../projects.html"
+                   class="lesson-btn secondary-lesson">
+
+                    C++ Projects →
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+</div>
+
+
+
+<footer>
+
+    <div class="footer-logo">
+        Learning<span>Path</span>
+    </div>
+
+    <p>
+        Learn Coding the Easy Way.
+    </p>
+
+    <p class="copyright">
+        © 2026 Learning Path. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+<script src="../../script.js"></script>
+
+</body>
+
+</html>

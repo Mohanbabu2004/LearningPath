@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearningPath - Quiz</title>
+    <link rel="stylesheet" href="quiz.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <h2>📚 LearningPath</h2>
+
+        <a href="home.html">🏠 Home</a>
+        <a href="roadmap.html">🗺️ Roadmap</a>
+        <a href="continue-learning.html">▶ Continue Learning</a>
+        <a class="active" href="quiz.html">📝 Quiz</a>
+        <a href="practice.html">💻 Practice Coding</a>
+        <a href="projects.html">🚀 Projects</a>
+        <a href="settings.html">⚙ Settings</a>
+    </aside>
+
+    <main class="main">
+
+        <header>
+            <h1>Quiz</h1>
+            <span id="userName">Student</span>
+        </header>
+
+        <!-- ================= SELECT SCREEN ================= -->
+
+        <section id="selectScreen" class="screen">
+
+            <h2>Select Language & Level</h2>
+            <p>Complete 100 questions to finish the quiz.</p>
+
+            <div class="language-grid">
+
+                <button class="language selected" data-language="C">C</button>
+                <button class="language locked" data-language="C++">C++ 🔒</button>
+                <button class="language locked" data-language="Python">Python 🔒</button>
+                <button class="language locked" data-language="TypeScript">TypeScript 🔒</button>
+
+                <button class="language locked" data-language="JavaScript">JavaScript 🔒</button>
+                <button class="language locked" data-language="Java">Java 🔒</button>
+                <button class="language locked" data-language="R">R 🔒</button>
+                <button class="language locked" data-language="CUDA">CUDA 🔒</button>
+
+                <button class="language locked" data-language="Ruby">Ruby 🔒</button>
+                <button class="language locked" data-language="PHP">PHP 🔒</button>
+                <button class="language locked" data-language="HTML">HTML 🔒</button>
+                <button class="language locked" data-language="CSS">CSS 🔒</button>
+
+            </div>
+
+            <h3>Select Level</h3>
+
+            <div class="levels">
+                <button class="level selected" data-level="Beginner">
+                    Beginner
+                </button>
+
+                <button class="level locked" data-level="Intermediate">
+                    🔒 Intermediate
+                </button>
+
+                <button class="level locked" data-level="Advanced">
+                    🔒 Advanced
+                </button>
+            </div>
+
+            <button id="startQuizBtn" class="primary">
+                Start Quiz – 100 Questions →
+            </button>
+
+        </section>
+
+
+        <!-- ================= QUIZ SCREEN ================= -->
+
+        <section id="quizScreen" class="screen hidden">
+
+            <div class="quiz-header">
+
+                <div>
+                    <h2 id="quizTitle">C Programming – Beginner</h2>
+                    <p>
+                        Question
+                        <span id="currentNumber">1</span>
+                        / 100
+                    </p>
+                </div>
+
+                <div class="marks">
+                    <span>1 Mark</span>
+                </div>
+
+            </div>
+
+            <div class="progress-bar">
+                <div id="questionProgress"></div>
+            </div>
+
+            <div class="question-card">
+
+                <h2 id="questionText"></h2>
+
+                <div id="options"></div>
+
+            </div>
+
+            <div class="quiz-buttons">
+
+                <button id="previousBtn">
+                    ← Previous
+                </button>
+
+                <button id="nextBtn" class="primary">
+                    Next →
+                </button>
+
+                <button id="submitBtn" class="submit hidden">
+                    Submit Quiz ✓
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= RESULT SCREEN ================= -->
+
+        <section id="resultScreen" class="screen hidden">
+
+            <div id="resultIcon">🏆</div>
+
+            <h1>QUIZ COMPLETED!</h1>
+
+            <h2 id="resultTitle"></h2>
+
+            <div class="result-grid">
+
+                <div>
+                    <span>Total Questions</span>
+                    <strong>100</strong>
+                </div>
+
+                <div>
+                    <span>Total Marks</span>
+                    <strong>100</strong>
+                </div>
+
+                <div>
+                    <span>Pass Marks</span>
+                    <strong>35</strong>
+                </div>
+
+                <div>
+                    <span>Your Score</span>
+                    <strong id="score"></strong>
+                </div>
+
+                <div class="correct-box">
+                    <span>Correct</span>
+                    <strong id="correct"></strong>
+                </div>
+
+                <div class="wrong-box">
+                    <span>Incorrect</span>
+                    <strong id="incorrect"></strong>
+                </div>
+
+                <div>
+                    <span>Percentage</span>
+                    <strong id="percentage"></strong>
+                </div>
+
+            </div>
+
+            <div id="passFail"></div>
+
+            <div class="progress-section">
+
+                <h3>Your Progress</h3>
+
+                <div class="big-progress">
+                    <div id="finalProgress"></div>
+                </div>
+
+                <strong id="progressText"></strong>
+
+            </div>
+
+            <div id="nextLevel"></div>
+
+            <div class="result-buttons">
+
+                <button id="answersBtn" class="primary">
+                    View All 100 Answers
+                </button>
+
+                <button id="retryBtn">
+                    Retry Quiz
+                </button>
+
+                <button id="nextLevelBtn" class="primary">
+                    Next Level →
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= ANSWERS SCREEN ================= -->
+
+        <section id="answersScreen" class="screen hidden">
+
+            <h1>All Answers</h1>
+
+            <p id="answerSummary"></p>
+
+            <div id="answersList"></div>
+
+            <button id="backResultBtn" class="primary">
+                ← Back to Result
+            </button>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="c_beginner_100_questions.js"></script>
+<script src="c_intermediate_100_questions.js"></script>
+<script src="c_advanced_100_questions.js"></script>
+<script src="quiz.js"></script>
+
+</body>
+</html>

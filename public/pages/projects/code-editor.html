@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - LearningPath</title>
+    <link rel="stylesheet" href="../../style.css">
+    <style>
+        body {
+            background: #050816;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+        }
+
+        .projects-page {
+            max-width: 1200px;
+            margin: 35px auto;
+            padding: 0 20px;
+        }
+
+        .header-title h1 {
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+
+        .header-title p {
+            color: #94a3b8;
+            font-size: 15px;
+            margin-bottom: 30px;
+        }
+
+        /* Difficulty Tabs */
+        .diff-tabs {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .diff-tab {
+            padding: 10px 22px;
+            border-radius: 8px;
+            background: #0b1126;
+            border: 1px solid #1c244b;
+            color: #94a3b8;
+            font-weight: bold;
+            font-size: 14px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .diff-tab:hover, .diff-tab.active {
+            background: #6645ff;
+            color: #ffffff;
+            border-color: #6645ff;
+        }
+
+        /* Project Card Layout */
+        .project-editor-container {
+            background: #0b1126;
+            border: 1px solid #1c244b;
+            border-radius: 14px;
+            padding: 25px;
+            margin-bottom: 30px;
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 25px;
+        }
+
+        .project-meta {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 12px;
+        }
+
+        .pill {
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .pill-lang {
+            background: #1e293b;
+            color: #20d99a;
+        }
+
+        .pill-diff {
+            background: #103f35;
+            color: #20d99a;
+        }
+
+        .code-box {
+            width: 100%;
+            height: 220px;
+            background: #070c1e;
+            border: 1px solid #20284b;
+            border-radius: 8px;
+            color: #20d99a;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 13px;
+            padding: 14px;
+            line-height: 1.5;
+            outline: none;
+            resize: vertical;
+        }
+
+        .io-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin: 12px 0;
+            background: #070c1e;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #20284b;
+        }
+
+        .io-grid label {
+            font-size: 11px;
+            color: #64748b;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .io-val {
+            font-family: monospace;
+            font-size: 12px;
+            color: #ffffff;
+        }
+
+        .btn-group {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+        }
+
+        .btn-run {
+            background: #20d99a;
+            color: #050816;
+            border: none;
+            padding: 9px 20px;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 13px;
+            cursor: pointer;
+        }
+
+        .btn-submit {
+            background: #6645ff;
+            color: #ffffff;
+            border: none;
+            padding: 9px 20px;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 13px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 900px) {
+            .project-editor-container { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navbar -->
+    <header class="navbar">
+        <div class="logo">
+            <div class="logo-bars"><span></span><span></span><span></span></div>
+            <span class="logo-white">Learning</span><span class="logo-purple">Path</span>
+        </div>
+        <div class="user-name">Mohan</div>
+    </header>
+
+    <main class="projects-page">
+
+        <div class="header-title">
+            <h1>🚀 Coding Projects</h1>
+            <p>Apply your learning path skills to build real-world software projects.</p>
+        </div>
+
+        <!-- Difficulty Tabs -->
+        <div class="diff-tabs">
+            <button class="diff-tab active" onclick="filterProjects('Easy')">Easy</button>
+            <button class="diff-tab" onclick="filterProjects('Medium')">Medium</button>
+            <button class="diff-tab" onclick="filterProjects('Hard')">Hard</button>
+        </div>
+
+        <!-- Project Item 1 -->
+        <div class="project-editor-container">
+            <div>
+                <div class="project-meta">
+                    <span class="pill pill-lang">C Language</span>
+                    <span class="pill pill-diff">Easy</span>
+                </div>
+                <h2 style="font-size:22px; margin-bottom:10px;">Calculator Application</h2>
+                <p style="color:#cbd5e1; font-size:14px; line-height:1.6;">
+                    Build a basic command-line calculator in C that takes two numbers and an operator (+, -, *, /) and computes the result.
+                </p>
+                <div class="io-grid">
+                    <div>
+                        <label>INPUT</label>
+                        <div class="io-val">10 + 20</div>
+                    </div>
+                    <div>
+                        <label>EXPECTED OUTPUT</label>
+                        <div class="io-val" style="color:#20d99a;">Result: 30</div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <textarea class="code-box" id="projCode1">#include <stdio.h>
+
+int main() {
+    int a = 10, b = 20;
+    char op = '+';
+
+    if (op == '+')
+        printf("Result: %d\n", a + b);
+
+    return 0;
+}</textarea>
+                <div style="background:#070c1e; padding:10px; border-radius:6px; border:1px solid #20284b; margin:10px 0; font-family:monospace; font-size:13px; color:#20d99a;" id="projOut1">Output: Result: 30</div>
+
+                <div class="btn-group">
+                    <button class="btn-run" onclick="runProject(1)">Run Code</button>
+                    <button class="btn-submit" onclick="submitProject(1)">Submit Project</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project Item 2 -->
+        <div class="project-editor-container">
+            <div>
+                <div class="project-meta">
+                    <span class="pill pill-lang">C Language</span>
+                    <span class="pill pill-diff">Medium</span>
+                </div>
+                <h2 style="font-size:22px; margin-bottom:10px;">Student Grade Management System</h2>
+                <p style="color:#cbd5e1; font-size:14px; line-height:1.6;">
+                    Implement a C program using structures to store student names, marks, and calculate average grades.
+                </p>
+                <div class="io-grid">
+                    <div>
+                        <label>INPUT</label>
+                        <div class="io-val">Marks: 85, 90, 80</div>
+                    </div>
+                    <div>
+                        <label>EXPECTED OUTPUT</label>
+                        <div class="io-val" style="color:#20d99a;">Grade: A (Avg: 85%)</div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <textarea class="code-box" id="projCode2">#include <stdio.h>
+
+struct Student {
+    char name[20];
+    int marks[3];
+};
+
+int main() {
+    int avg = (85 + 90 + 80) / 3;
+    printf("Grade: A (Avg: %d%%)\n", avg);
+    return 0;
+}</textarea>
+                <div style="background:#070c1e; padding:10px; border-radius:6px; border:1px solid #20284b; margin:10px 0; font-family:monospace; font-size:13px; color:#20d99a;" id="projOut2">Output: Grade: A (Avg: 85%)</div>
+
+                <div class="btn-group">
+                    <button class="btn-run" onclick="runProject(2)">Run Code</button>
+                    <button class="btn-submit" onclick="submitProject(2)">Submit Project</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script>
+        function runProject(id) {
+            alert(`Running Project ${id} code... Execution successful!`);
+        }
+
+        function submitProject(id) {
+            alert(`🎉 Project ${id} Submitted! All tests passed.`);
+        }
+
+        function filterProjects(diff) {
+            document.querySelectorAll(".diff-tab").forEach(t => t.classList.remove("active"));
+            event.target.classList.add("active");
+        }
+    </script>
+</body>
+</html>

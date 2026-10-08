@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript Programming - Learning Path</title>
+
+    <link rel="stylesheet" href="../../style.css">
+
+    <style>
+        .course-page {
+            display: flex;
+            min-height: calc(100vh - 70px);
+            background: #f5f7fb;
+        }
+
+        .course-sidebar {
+            width: 260px;
+            background: #ffffff;
+            padding: 25px 15px;
+            border-right: 1px solid #ddd;
+        }
+
+        .course-sidebar h3 {
+            margin-bottom: 20px;
+            color: #222;
+        }
+
+        .course-sidebar a {
+            display: block;
+            padding: 12px 15px;
+            margin-bottom: 5px;
+            text-decoration: none;
+            color: #444;
+            border-radius: 8px;
+        }
+
+        .course-sidebar a:hover,
+        .course-sidebar a.active {
+            background: #eef2ff;
+            color: #4f46e5;
+            font-weight: bold;
+        }
+
+        .course-content {
+            flex: 1;
+            padding: 40px;
+            max-width: 1000px;
+        }
+
+        .course-badge {
+            display: inline-block;
+            padding: 7px 15px;
+            background: #fff3cd;
+            color: #856404;
+            border-radius: 20px;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .course-content h1 {
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+
+        .course-content h2 {
+            margin-top: 35px;
+            margin-bottom: 15px;
+            color: #222;
+        }
+
+        .course-content p {
+            line-height: 1.7;
+            color: #555;
+        }
+
+        .progress-container {
+            margin: 20px 0;
+        }
+
+        .progress-text {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+
+        .progress-bar {
+            height: 10px;
+            background: #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .progress {
+            height: 100%;
+            width: 0%;
+            background: #f7df1e;
+        }
+
+        .lesson-card {
+            background: white;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 12px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+        }
+
+        .lesson-card pre {
+            background: #1e1e1e;
+            color: #ffffff;
+            padding: 18px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin-top: 15px;
+        }
+
+        .lesson-card code {
+            font-family: Consolas, monospace;
+        }
+
+        .action-buttons {
+            margin-top: 30px;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .action-btn {
+            display: inline-block;
+            padding: 12px 22px;
+            background: #4f46e5;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+
+        .action-btn:hover {
+            background: #3730a3;
+        }
+
+        @media (max-width: 800px) {
+            .course-page {
+                flex-direction: column;
+            }
+
+            .course-sidebar {
+                width: 100%;
+                border-right: none;
+                border-bottom: 1px solid #ddd;
+            }
+
+            .course-sidebar a {
+                display: inline-block;
+                margin-right: 5px;
+            }
+
+            .course-content {
+                padding: 25px 18px;
+            }
+
+            .course-content h1 {
+                font-size: 30px;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .course-sidebar {
+                padding: 15px 10px;
+            }
+
+            .course-sidebar a {
+                padding: 9px 10px;
+                font-size: 14px;
+            }
+
+            .course-content {
+                padding: 20px 15px;
+            }
+
+            .course-content h1 {
+                font-size: 26px;
+            }
+
+            .lesson-card {
+                padding: 18px;
+            }
+
+            .lesson-card pre {
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+
+        <div class="logo">
+            Learning<span>Path</span>
+        </div>
+
+        <button class="menu-btn" onclick="toggleMenu()">
+            ☰
+        </button>
+
+        <div class="nav-menu" id="navMenu">
+            <a href="../../index.html">Home</a>
+            <a href="../roadmap.html">Roadmap</a>
+            <a href="../continue-learning.html">Continue Learning</a>
+        </div>
+
+    </nav>
+
+
+    <!-- Course Page -->
+    <div class="course-page">
+
+        <!-- Sidebar -->
+        <aside class="course-sidebar">
+
+            <h3>JavaScript Course</h3>
+
+            <a href="#" class="active">1. Introduction</a>
+            <a href="#basics">2. JavaScript Basics</a>
+            <a href="#variables">3. Variables & Data Types</a>
+            <a href="#operators">4. Operators</a>
+            <a href="#conditions">5. Conditions</a>
+            <a href="#loops">6. Loops</a>
+            <a href="#functions">7. Functions</a>
+            <a href="#arrays">8. Arrays</a>
+            <a href="#objects">9. Objects</a>
+            <a href="#strings">10. Strings</a>
+            <a href="#dom">11. DOM</a>
+            <a href="#events">12. Events</a>
+            <a href="#practice">13. Practice</a>
+
+        </aside>
+
+
+        <!-- Main Content -->
+        <main class="course-content">
+
+            <span class="course-badge">
+                JavaScript Programming
+            </span>
+
+            <h1>Learn JavaScript Programming</h1>
+
+            <p>
+                Learn JavaScript from basic concepts to web development
+                and interactive websites.
+            </p>
+
+
+            <!-- Progress -->
+            <div class="progress-container">
+
+                <div class="progress-text">
+                    <span>Course Progress</span>
+                    <strong>0%</strong>
+                </div>
+
+                <div class="progress-bar">
+                    <div class="progress"></div>
+                </div>
+
+            </div>
+
+
+            <!-- Introduction -->
+            <div class="lesson-card">
+
+                <h2>1. Introduction to JavaScript</h2>
+
+                <p>
+                    JavaScript is a programming language used to make
+                    websites interactive and dynamic.
+                </p>
+
+                <pre><code>console.log("Hello JavaScript");</code></pre>
+
+            </div>
+
+
+            <!-- Basics -->
+            <div class="lesson-card" id="basics">
+
+                <h2>2. JavaScript Basics</h2>
+
+                <p>
+                    JavaScript code can be written inside an HTML
+                    &lt;script&gt; tag.
+                </p>
+
+                <pre><code>&lt;script&gt;
+    console.log("Hello World");
+&lt;/script&gt;</code></pre>
+
+            </div>
+
+
+            <!-- Variables -->
+            <div class="lesson-card" id="variables">
+
+                <h2>3. Variables & Data Types</h2>
+
+                <p>
+                    JavaScript uses let, const and var to create variables.
+                </p>
+
+                <pre><code>let name = "Mohan";
+let age = 21;
+let student = true;
+
+console.log(name);
+console.log(age);
+console.log(student);</code></pre>
+
+            </div>
+
+
+            <!-- Operators -->
+            <div class="lesson-card" id="operators">
+
+                <h2>4. Operators</h2>
+
+                <p>
+                    Operators are used to perform calculations and
+                    comparisons.
+                </p>
+
+                <pre><code>let a = 10;
+let b = 5;
+
+console.log(a + b);
+console.log(a - b);
+console.log(a * b);
+console.log(a / b);</code></pre>
+
+            </div>
+
+
+            <!-- Conditions -->
+            <div class="lesson-card" id="conditions">
+
+                <h2>5. Conditions</h2>
+
+                <p>
+                    if and else are used to make decisions.
+                </p>
+
+                <pre><code>let age = 18;
+
+if (age >= 18) {
+    console.log("Eligible");
+} else {
+    console.log("Not Eligible");
+}</code></pre>
+
+            </div>
+
+
+            <!-- Loops -->
+            <div class="lesson-card" id="loops">
+
+                <h2>6. Loops</h2>
+
+                <p>
+                    Loops are used to repeat a block of code.
+                </p>
+
+                <pre><code>for (let i = 1; i <= 5; i++) {
+    console.log(i);
+}</code></pre>
+
+            </div>
+
+
+            <!-- Functions -->
+            <div class="lesson-card" id="functions">
+
+                <h2>7. Functions</h2>
+
+                <p>
+                    A function is a reusable block of code.
+                </p>
+
+                <pre><code>function add(a, b) {
+    return a + b;
+}
+
+console.log(add(10, 20));</code></pre>
+
+            </div>
+
+
+            <!-- Arrays -->
+            <div class="lesson-card" id="arrays">
+
+                <h2>8. Arrays</h2>
+
+                <p>
+                    Arrays store multiple values in one variable.
+                </p>
+
+                <pre><code>let languages = [
+    "C",
+    "C++",
+    "Python",
+    "JavaScript"
+];
+
+console.log(languages[0]);</code></pre>
+
+            </div>
+
+
+            <!-- Objects -->
+            <div class="lesson-card" id="objects">
+
+                <h2>9. Objects</h2>
+
+                <p>
+                    Objects store data using key-value pairs.
+                </p>
+
+                <pre><code>let student = {
+    name: "Mohan",
+    age: 21,
+    course: "CSE-AI"
+};
+
+console.log(student.name);</code></pre>
+
+            </div>
+
+
+            <!-- Strings -->
+            <div class="lesson-card" id="strings">
+
+                <h2>10. Strings</h2>
+
+                <p>
+                    Strings are used to store text.
+                </p>
+
+                <pre><code>let message = "Learning JavaScript";
+
+console.log(message);
+console.log(message.length);
+console.log(message.toUpperCase());</code></pre>
+
+            </div>
+
+
+            <!-- DOM -->
+            <div class="lesson-card" id="dom">
+
+                <h2>11. DOM</h2>
+
+                <p>
+                    DOM allows JavaScript to access and change HTML
+                    elements.
+                </p>
+
+                <pre><code>document.getElementById("title")
+    .innerHTML = "Learning JavaScript";</code></pre>
+
+            </div>
+
+
+            <!-- Events -->
+            <div class="lesson-card" id="events">
+
+                <h2>12. Events</h2>
+
+                <p>
+                    Events allow JavaScript to respond to user actions
+                    such as button clicks.
+                </p>
+
+                <pre><code>function showMessage() {
+    alert("Hello from JavaScript!");
+}</code></pre>
+
+            </div>
+
+
+            <!-- Practice -->
+            <div class="lesson-card" id="practice">
+
+                <h2>13. Practice</h2>
+
+                <p>
+                    Practice JavaScript programs and improve your
+                    programming skills.
+                </p>
+
+                <pre><code>let number = 10;
+
+if (number % 2 === 0) {
+    console.log("Even");
+} else {
+    console.log("Odd");
+}</code></pre>
+
+            </div>
+
+
+            <!-- Buttons -->
+            <div class="action-buttons">
+
+                <a href="../quiz.html" class="action-btn">
+                    📝 Take Quiz
+                </a>
+
+                <a href="../projects.html" class="action-btn">
+                    🚀 Practice Projects
+                </a>
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 LearningPath. Learn Coding the Easy Way.
+        </p>
+
+    </footer>
+
+
+    <script src="../../script.js"></script>
+
+</body>
+</html>

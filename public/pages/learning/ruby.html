@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ruby Programming - Learning Path</title>
+
+    <link rel="stylesheet" href="../../style.css">
+
+    <style>
+        .course-page {
+            display: flex;
+            min-height: calc(100vh - 70px);
+            background: #f5f7fb;
+        }
+
+        .course-sidebar {
+            width: 260px;
+            background: white;
+            padding: 25px 15px;
+            border-right: 1px solid #ddd;
+        }
+
+        .course-sidebar h3 {
+            margin-bottom: 20px;
+            color: #222;
+        }
+
+        .course-sidebar a {
+            display: block;
+            padding: 12px 15px;
+            margin-bottom: 5px;
+            text-decoration: none;
+            color: #444;
+            border-radius: 8px;
+        }
+
+        .course-sidebar a:hover,
+        .course-sidebar a.active {
+            background: #eef2ff;
+            color: #e74c3c;
+            font-weight: bold;
+        }
+
+        .course-content {
+            flex: 1;
+            padding: 40px;
+            max-width: 1000px;
+        }
+
+        .course-badge {
+            display: inline-block;
+            padding: 7px 15px;
+            background: #ffe8e8;
+            color: #c0392b;
+            border-radius: 20px;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .course-content h1 {
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+
+        .course-content h2 {
+            margin-top: 35px;
+            margin-bottom: 15px;
+            color: #222;
+        }
+
+        .course-content p {
+            line-height: 1.7;
+            color: #555;
+        }
+
+        .progress-container {
+            margin: 20px 0;
+        }
+
+        .progress-text {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+
+        .progress-bar {
+            height: 10px;
+            background: #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .progress {
+            height: 100%;
+            width: 0%;
+            background: #e74c3c;
+        }
+
+        .lesson-card {
+            background: white;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 12px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+        }
+
+        .lesson-card pre {
+            background: #1e1e1e;
+            color: white;
+            padding: 18px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin-top: 15px;
+        }
+
+        .lesson-card code {
+            font-family: Consolas, monospace;
+        }
+
+        .action-buttons {
+            margin-top: 30px;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .action-btn {
+            display: inline-block;
+            padding: 12px 22px;
+            background: #4f46e5;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+
+        .action-btn:hover {
+            background: #3730a3;
+        }
+
+        @media (max-width: 800px) {
+            .course-page {
+                flex-direction: column;
+            }
+
+            .course-sidebar {
+                width: 100%;
+                border-right: none;
+                border-bottom: 1px solid #ddd;
+            }
+
+            .course-sidebar a {
+                display: inline-block;
+                margin-right: 5px;
+            }
+
+            .course-content {
+                padding: 25px 18px;
+            }
+
+            .course-content h1 {
+                font-size: 30px;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .course-sidebar {
+                padding: 15px 10px;
+            }
+
+            .course-sidebar a {
+                padding: 9px 10px;
+                font-size: 14px;
+            }
+
+            .course-content {
+                padding: 20px 15px;
+            }
+
+            .course-content h1 {
+                font-size: 26px;
+            }
+
+            .lesson-card {
+                padding: 18px;
+            }
+
+            .lesson-card pre {
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+
+        <div class="logo">
+            Learning<span>Path</span>
+        </div>
+
+        <button class="menu-btn" onclick="toggleMenu()">
+            ☰
+        </button>
+
+        <div class="nav-menu" id="navMenu">
+            <a href="../../index.html">Home</a>
+            <a href="../roadmap.html">Roadmap</a>
+            <a href="../continue-learning.html">
+                Continue Learning
+            </a>
+        </div>
+
+    </nav>
+
+
+    <!-- Course Page -->
+    <div class="course-page">
+
+        <!-- Sidebar -->
+        <aside class="course-sidebar">
+
+            <h3>Ruby Programming</h3>
+
+            <a href="#" class="active">
+                1. Introduction
+            </a>
+
+            <a href="#basics">
+                2. Ruby Basics
+            </a>
+
+            <a href="#variables">
+                3. Variables
+            </a>
+
+            <a href="#datatypes">
+                4. Data Types
+            </a>
+
+            <a href="#operators">
+                5. Operators
+            </a>
+
+            <a href="#conditions">
+                6. Conditions
+            </a>
+
+            <a href="#loops">
+                7. Loops
+            </a>
+
+            <a href="#methods">
+                8. Methods
+            </a>
+
+            <a href="#arrays">
+                9. Arrays
+            </a>
+
+            <a href="#hashes">
+                10. Hashes
+            </a>
+
+            <a href="#strings">
+                11. Strings
+            </a>
+
+            <a href="#classes">
+                12. Classes & Objects
+            </a>
+
+            <a href="#inheritance">
+                13. Inheritance
+            </a>
+
+            <a href="#practice">
+                14. Practice
+            </a>
+
+        </aside>
+
+
+        <!-- Main Content -->
+        <main class="course-content">
+
+            <span class="course-badge">
+                Ruby Programming
+            </span>
+
+            <h1>Learn Ruby Programming</h1>
+
+            <p>
+                Learn Ruby from basic programming concepts to
+                object-oriented programming and application development.
+            </p>
+
+
+            <!-- Progress -->
+            <div class="progress-container">
+
+                <div class="progress-text">
+                    <span>Course Progress</span>
+                    <strong>0%</strong>
+                </div>
+
+                <div class="progress-bar">
+                    <div class="progress"></div>
+                </div>
+
+            </div>
+
+
+            <!-- Introduction -->
+            <div class="lesson-card">
+
+                <h2>1. Introduction to Ruby</h2>
+
+                <p>
+                    Ruby is a high-level programming language designed
+                    to be simple and easy to read.
+                </p>
+
+                <pre><code>puts "Hello Ruby"</code></pre>
+
+            </div>
+
+
+            <!-- Basics -->
+            <div class="lesson-card" id="basics">
+
+                <h2>2. Ruby Basics</h2>
+
+                <p>
+                    Ruby programs can be written using simple statements.
+                </p>
+
+                <pre><code>puts "Welcome to Learning Path"
+
+puts "Learn Ruby Easily"</code></pre>
+
+            </div>
+
+
+            <!-- Variables -->
+            <div class="lesson-card" id="variables">
+
+                <h2>3. Variables</h2>
+
+                <p>
+                    Ruby variables do not require explicit type declarations.
+                </p>
+
+                <pre><code>name = "Mohan"
+age = 21
+marks = 85
+
+puts name
+puts age
+puts marks</code></pre>
+
+            </div>
+
+
+            <!-- Data Types -->
+            <div class="lesson-card" id="datatypes">
+
+                <h2>4. Data Types</h2>
+
+                <p>
+                    Ruby supports strings, integers, floats, booleans
+                    and arrays.
+                </p>
+
+                <pre><code>name = "Mohan"
+age = 21
+marks = 85.5
+student = true
+
+puts name
+puts age
+puts marks
+puts student</code></pre>
+
+            </div>
+
+
+            <!-- Operators -->
+            <div class="lesson-card" id="operators">
+
+                <h2>5. Operators</h2>
+
+                <p>
+                    Operators are used to perform calculations.
+                </p>
+
+                <pre><code>a = 10
+b = 5
+
+puts a + b
+puts a - b
+puts a * b
+puts a / b</code></pre>
+
+            </div>
+
+
+            <!-- Conditions -->
+            <div class="lesson-card" id="conditions">
+
+                <h2>6. Conditions</h2>
+
+                <p>
+                    if and else are used to make decisions.
+                </p>
+
+                <pre><code>age = 18
+
+if age >= 18
+    puts "Eligible"
+else
+    puts "Not Eligible"
+end</code></pre>
+
+            </div>
+
+
+            <!-- Loops -->
+            <div class="lesson-card" id="loops">
+
+                <h2>7. Loops</h2>
+
+                <p>
+                    Ruby provides several ways to repeat code.
+                </p>
+
+                <pre><code>for i in 1..5
+    puts i
+end</code></pre>
+
+            </div>
+
+
+            <!-- Methods -->
+            <div class="lesson-card" id="methods">
+
+                <h2>8. Methods</h2>
+
+                <p>
+                    Methods are reusable blocks of Ruby code.
+                </p>
+
+                <pre><code>def add(a, b)
+
+    return a + b
+
+end
+
+puts add(10, 20)</code></pre>
+
+            </div>
+
+
+            <!-- Arrays -->
+            <div class="lesson-card" id="arrays">
+
+                <h2>9. Arrays</h2>
+
+                <p>
+                    Arrays store multiple values.
+                </p>
+
+                <pre><code>languages = [
+    "C",
+    "C++",
+    "Python",
+    "Ruby"
+]
+
+puts languages[0]</code></pre>
+
+            </div>
+
+
+            <!-- Hashes -->
+            <div class="lesson-card" id="hashes">
+
+                <h2>10. Hashes</h2>
+
+                <p>
+                    Hashes store data using key-value pairs.
+                </p>
+
+                <pre><code>student = {
+    "name" => "Mohan",
+    "age" => 21
+}
+
+puts student["name"]</code></pre>
+
+            </div>
+
+
+            <!-- Strings -->
+            <div class="lesson-card" id="strings">
+
+                <h2>11. Strings</h2>
+
+                <p>
+                    Ruby provides many methods for working with strings.
+                </p>
+
+                <pre><code>message = "Learning Ruby"
+
+puts message
+puts message.length
+puts message.upcase</code></pre>
+
+            </div>
+
+
+            <!-- Classes -->
+            <div class="lesson-card" id="classes">
+
+                <h2>12. Classes & Objects</h2>
+
+                <p>
+                    Ruby supports object-oriented programming using classes.
+                </p>
+
+                <pre><code>class Student
+
+    def initialize(name)
+        @name = name
+    end
+
+    def display
+        puts @name
+    end
+
+end
+
+student = Student.new("Mohan")
+
+student.display</code></pre>
+
+            </div>
+
+
+            <!-- Inheritance -->
+            <div class="lesson-card" id="inheritance">
+
+                <h2>13. Inheritance</h2>
+
+                <p>
+                    A class can inherit methods from another class.
+                </p>
+
+                <pre><code>class Animal
+
+    def sound
+        puts "Animal sound"
+    end
+
+end
+
+
+class Dog < Animal
+
+    def bark
+        puts "Dog barks"
+    end
+
+end
+
+
+dog = Dog.new
+
+dog.sound
+dog.bark</code></pre>
+
+            </div>
+
+
+            <!-- Practice -->
+            <div class="lesson-card" id="practice">
+
+                <h2>14. Practice</h2>
+
+                <p>
+                    Create a Ruby student management program using
+                    classes, arrays and methods.
+                </p>
+
+                <pre><code>class Student
+
+    def initialize(name, age)
+        @name = name
+        @age = age
+    end
+
+    def display
+        puts @name
+        puts @age
+    end
+
+end
+
+student = Student.new("Mohan", 21)
+
+student.display</code></pre>
+
+            </div>
+
+
+            <!-- Buttons -->
+            <div class="action-buttons">
+
+                <a href="../quiz.html" class="action-btn">
+                    📝 Take Quiz
+                </a>
+
+                <a href="../projects.html" class="action-btn">
+                    🚀 Practice Projects
+                </a>
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 LearningPath. Learn Coding the Easy Way.
+        </p>
+
+    </footer>
+
+
+    <script src="../../script.js"></script>
+
+</body>
+</html>
