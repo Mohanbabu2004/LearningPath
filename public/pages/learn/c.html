@@ -1,858 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
-    <title>Learning Path - C Programming</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C Programming - Introduction | LearningPath</title>
     <link rel="stylesheet" href="../../style.css">
-
     <style>
-
         body {
-            background: #f7f8fc;
+            background: #050816;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
         }
 
-        .learn-page {
+        .learn-container {
             display: flex;
-            min-height: calc(100vh - 70px);
+            min-height: calc(100vh - 90px);
         }
 
-        /* Sidebar */
-
+        /* Sidebar - Screen 7 */
         .learn-sidebar {
-            width: 270px;
-            background: white;
-            border-right: 1px solid #e5e7eb;
-            padding: 25px 18px;
-            position: sticky;
-            top: 70px;
-            height: calc(100vh - 70px);
+            width: 280px;
+            background: #080d20;
+            border-right: 1px solid #1c244b;
+            padding: 25px 15px;
             overflow-y: auto;
         }
 
-        .learn-sidebar h3 {
-            margin-bottom: 20px;
-            font-size: 20px;
-        }
-
-        .topic-link {
-            display: block;
-            text-decoration: none;
-            color: #374151;
-            padding: 11px 13px;
-            border-radius: 8px;
-            margin-bottom: 5px;
-            font-size: 14px;
-        }
-
-        .topic-link:hover,
-        .topic-link.active {
-            background: #eef2ff;
-            color: #4f46e5;
-            font-weight: bold;
-        }
-
-        /* Main */
-
-        .learn-content {
-            flex: 1;
-            padding: 45px 6%;
-            max-width: 1100px;
-        }
-
-        .course-badge {
-            display: inline-block;
-            background: #e0e7ff;
-            color: #4338ca;
-            padding: 6px 12px;
-            border-radius: 20px;
-            font-size: 13px;
-            font-weight: bold;
-            margin-bottom: 12px;
-        }
-
-        .learn-content h1 {
-            font-size: 44px;
-            margin-bottom: 12px;
-        }
-
-        .learn-content h1 span {
-            color: #4f46e5;
-        }
-
-        .intro {
-            color: #6b7280;
+        .learn-sidebar h2 {
             font-size: 18px;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+
+        .level-header {
+            font-weight: bold;
+            font-size: 14px;
+            color: #94a3b8;
+            margin: 15px 0 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .topic-list {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .topic-item {
+            display: block;
+            padding: 10px 14px;
+            color: #cbd5e1;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 13px;
+            transition: 0.2s;
+        }
+
+        .topic-item:hover, .topic-item.active {
+            background: #6645ff;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        /* Main Content - Screen 7 */
+        .learn-main {
+            flex: 1;
+            padding: 35px 40px;
+            max-width: 950px;
+        }
+
+        .video-box {
+            width: 100%;
+            height: 380px;
+            background: #0b1126;
+            border: 1px solid #1c244b;
+            border-radius: 14px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 25px 0;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .c-logo-badge {
+            width: 110px;
+            height: 110px;
+            background: #2563eb;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 58px;
+            font-weight: 900;
+            color: white;
+            box-shadow: 0 0 30px rgba(37, 99, 235, 0.4);
+        }
+
+        .video-controls {
+            position: absolute;
+            bottom: 15px;
+            left: 20px;
+            right: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #94a3b8;
+            font-size: 12px;
+            background: rgba(8, 13, 32, 0.8);
+            padding: 8px 15px;
+            border-radius: 8px;
+        }
+
+        .lesson-description {
+            background: #0b1126;
+            border: 1px solid #1c244b;
+            border-radius: 12px;
+            padding: 25px;
+            line-height: 1.7;
+            font-size: 15px;
+            color: #cbd5e1;
             margin-bottom: 30px;
         }
 
-        /* Progress */
-
-        .learning-progress {
-            background: white;
-            padding: 20px;
-            border-radius: 12px;
-            margin-bottom: 35px;
-            border: 1px solid #e5e7eb;
-        }
-
-        .progress-top {
+        .nav-buttons {
             display: flex;
             justify-content: space-between;
-            margin-bottom: 8px;
+            gap: 15px;
         }
 
-        .learning-progress-bar {
-            width: 100%;
-            height: 9px;
-            background: #e5e7eb;
-            border-radius: 20px;
-            overflow: hidden;
-        }
-
-        .learning-progress-value {
-            width: 100%;
-            height: 100%;
-            background: #4f46e5;
-        }
-
-        /* Lesson */
-
-        .lesson-section {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            margin-bottom: 25px;
-            border: 1px solid #e5e7eb;
-        }
-
-        .lesson-section h2 {
-            font-size: 28px;
-            margin-bottom: 12px;
-        }
-
-        .lesson-section h3 {
-            margin-top: 22px;
-            margin-bottom: 8px;
-        }
-
-        .lesson-section p {
-            color: #4b5563;
-            margin-bottom: 12px;
-        }
-
-        .lesson-section ul {
-            padding-left: 25px;
-            color: #4b5563;
-        }
-
-        .lesson-section li {
-            margin-bottom: 6px;
-        }
-
-        /* Code */
-
-        .code-box {
-            background: #111827;
-            color: #e5e7eb;
-            padding: 20px;
-            border-radius: 10px;
-            overflow-x: auto;
-            margin: 15px 0;
-            font-family: Consolas, monospace;
-            font-size: 14px;
-            line-height: 1.6;
-        }
-
-        /* Buttons */
-
-        .lesson-buttons {
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
-            margin-top: 25px;
-        }
-
-        .lesson-btn {
-            display: inline-block;
-            text-decoration: none;
-            padding: 11px 18px;
+        .nav-btn {
+            padding: 12px 28px;
             border-radius: 8px;
+            text-decoration: none;
             font-weight: bold;
+            font-size: 14px;
+            transition: 0.2s;
         }
 
-        .primary-lesson {
-            background: #4f46e5;
-            color: white;
+        .btn-prev {
+            background: #1c244b;
+            color: #ffffff;
         }
 
-        .secondary-lesson {
-            border: 2px solid #4f46e5;
-            color: #4f46e5;
+        .btn-next {
+            background: #6645ff;
+            color: #ffffff;
         }
-
-        /* Mobile */
-
-        @media (max-width: 800px) {
-
-            .learn-page {
-                display: block;
-            }
-
-            .learn-sidebar {
-                width: 100%;
-                height: auto;
-                position: static;
-                border-right: none;
-                border-bottom: 1px solid #e5e7eb;
-            }
-
-            .learn-sidebar h3 {
-                text-align: center;
-            }
-
-            .topic-link {
-                display: inline-block;
-                margin: 3px;
-            }
-
-            .learn-content {
-                padding: 35px 5%;
-            }
-
-            .learn-content h1 {
-                font-size: 35px;
-            }
-
-            .lesson-section {
-                padding: 22px;
-            }
-
-        }
-
     </style>
-
 </head>
-
-
 <body>
 
-
-<!-- Navigation -->
-
-<header class="navbar">
-
-    <div class="logo">
-        Learning<span>Path</span>
-    </div>
-
-    <button class="menu-btn"
-            onclick="toggleMenu()">
-
-        ☰
-
-    </button>
-
-    <nav id="navMenu">
-
-        <a href="../home.html">
-            Home
-        </a>
-
-        <a href="../roadmap.html">
-            Roadmap
-        </a>
-
-        <a href="../continue-learning.html">
-            Continue
-        </a>
-
-        <a href="../quiz.html">
-            Quiz
-        </a>
-
-        <a href="../projects.html">
-            Projects
-        </a>
-
-    </nav>
-
-    <a href="../profile.html"
-       class="login-btn">
-
-        Profile
-
-    </a>
-
-</header>
-
-
-
-<div class="learn-page">
-
-
-    <!-- Sidebar -->
-
-    <aside class="learn-sidebar">
-
-        <h3>
-            📚 C Programming
-        </h3>
-
-        <a href="#intro"
-           class="topic-link active">
-
-            1. Introduction
-
-        </a>
-
-        <a href="#basics"
-           class="topic-link">
-
-            2. C Basics
-
-        </a>
-
-        <a href="#variables"
-           class="topic-link">
-
-            3. Variables & Data Types
-
-        </a>
-
-        <a href="#operators"
-           class="topic-link">
-
-            4. Operators
-
-        </a>
-
-        <a href="#conditions"
-           class="topic-link">
-
-            5. Conditions
-
-        </a>
-
-        <a href="#loops"
-           class="topic-link">
-
-            6. Loops
-
-        </a>
-
-        <a href="#functions"
-           class="topic-link">
-
-            7. Functions
-
-        </a>
-
-        <a href="#arrays"
-           class="topic-link">
-
-            8. Arrays
-
-        </a>
-
-        <a href="#strings"
-           class="topic-link">
-
-            9. Strings
-
-        </a>
-
-        <a href="#pointers"
-           class="topic-link">
-
-            10. Pointers
-
-        </a>
-
-        <a href="#structures"
-           class="topic-link">
-
-            11. Structures
-
-        </a>
-
-        <a href="#practice"
-           class="topic-link">
-
-            12. Practice
-
-        </a>
-
-    </aside>
-
-
-
-    <!-- Main Content -->
-
-    <main class="learn-content">
-
-
-        <span class="course-badge">
-            C PROGRAMMING
-        </span>
-
-        <h1>
-            Learn <span>C Programming</span>
-        </h1>
-
-        <p class="intro">
-            Learn C programming from the basics
-            and build a strong programming foundation.
-        </p>
-
-
-        <!-- Progress -->
-
-        <div class="learning-progress">
-
-            <div class="progress-top">
-
-                <strong>
-                    Course Progress
-                </strong>
-
-                <strong>
-                    100%
-                </strong>
-
-            </div>
-
-            <div class="learning-progress-bar">
-
-                <div class="learning-progress-value">
-                </div>
-
-            </div>
-
+    <!-- Header Navbar -->
+    <header class="navbar">
+        <div class="logo">
+            <div class="logo-bars"><span></span><span></span><span></span></div>
+            <span class="logo-white">Learning</span><span class="logo-purple">Path</span>
         </div>
+        <div class="user-name">Mohan</div>
+    </header>
 
+    <div class="learn-container">
 
+        <!-- Sidebar Topics (Screen 7) -->
+        <aside class="learn-sidebar">
+            <h2>C Programming</h2>
 
-        <!-- Introduction -->
-
-        <section class="lesson-section"
-                 id="intro">
-
-            <h2>
-                1. Introduction to C
-            </h2>
-
-            <p>
-                C is a general-purpose programming language
-                used to develop applications, operating systems,
-                embedded systems and many other software systems.
-            </p>
-
-            <h3>
-                Why Learn C?
-            </h3>
-
-            <ul>
-
-                <li>
-                    Easy to understand programming fundamentals
-                </li>
-
-                <li>
-                    Helps understand memory and pointers
-                </li>
-
-                <li>
-                    Useful for Data Structures and Algorithms
-                </li>
-
-                <li>
-                    Foundation for C++
-                </li>
-
-            </ul>
-
-        </section>
-
-
-
-        <!-- Basics -->
-
-        <section class="lesson-section"
-                 id="basics">
-
-            <h2>
-                2. C Programming Basics
-            </h2>
-
-            <p>
-                A simple C program starts with the
-                main() function.
-            </p>
-
-            <div class="code-box">
-<pre>
-#include &lt;stdio.h&gt;
-
-int main()
-{
-    printf("Hello World");
-
-    return 0;
-}
-</pre>
+            <div class="level-header">Beginner <span>▾</span></div>
+            <div class="topic-list">
+                <a href="#" class="topic-item active">1. Introduction</a>
+                <a href="#" class="topic-item">2. Variables</a>
+                <a href="#" class="topic-item">3. Data Types</a>
+                <a href="#" class="topic-item">4. Operators</a>
+                <a href="#" class="topic-item">5. Input / Output</a>
+                <a href="#" class="topic-item">6. Conditional</a>
+                <a href="#" class="topic-item">7. Loops</a>
+                <a href="#" class="topic-item">8. Functions</a>
+                <a href="#" class="topic-item">9. Arrays</a>
+                <a href="#" class="topic-item">10. Strings</a>
             </div>
 
-            <p>
-                The printf() function is used to display
-                output on the screen.
-            </p>
+            <div class="level-header" style="cursor:pointer;">Intermediate <span>+</span></div>
+            <div class="level-header" style="cursor:pointer;">Advanced <span>+</span></div>
+        </aside>
 
-        </section>
+        <!-- Main Content Area (Screen 7) -->
+        <main class="learn-main">
+            <h1 style="font-size: 30px;">Introduction to C</h1>
 
-
-
-        <!-- Variables -->
-
-        <section class="lesson-section"
-                 id="variables">
-
-            <h2>
-                3. Variables & Data Types
-            </h2>
-
-            <p>
-                Variables are used to store data in memory.
-            </p>
-
-            <div class="code-box">
-<pre>
-int age = 20;
-
-float marks = 85.5;
-
-char grade = 'A';
-</pre>
+            <!-- C Video Box -->
+            <div class="video-box">
+                <div class="c-logo-badge">C</div>
+                <div class="video-controls">
+                    <span>▶ 0:00 / 12:30</span>
+                    <span>⚙️ HD</span>
+                </div>
             </div>
 
-            <h3>
-                Common Data Types
-            </h3>
-
-            <ul>
-
-                <li>
-                    int
-                </li>
-
-                <li>
-                    float
-                </li>
-
-                <li>
-                    double
-                </li>
-
-                <li>
-                    char
-                </li>
-
-            </ul>
-
-        </section>
-
-
-
-        <!-- Operators -->
-
-        <section class="lesson-section"
-                 id="operators">
-
-            <h2>
-                4. Operators
-            </h2>
-
-            <p>
-                Operators are used to perform operations
-                on values.
-            </p>
-
-            <div class="code-box">
-<pre>
-int a = 10;
-int b = 5;
-
-printf("%d", a + b);
-</pre>
+            <!-- Description -->
+            <div class="lesson-description">
+                <p>C is a powerful general-purpose programming language developed by Dennis Ritchie at Bell Labs in 1972.</p>
+                <br>
+                <p>It is widely used for system programming, building operating systems (such as UNIX and Linux), game engines, compilers, and embedded devices due to its extreme performance and low-level memory control.</p>
             </div>
 
-            <p>
-                Common operators include +, -, *, / and %.
-            </p>
-
-        </section>
-
-
-
-        <!-- Conditions -->
-
-        <section class="lesson-section"
-                 id="conditions">
-
-            <h2>
-                5. Conditional Statements
-            </h2>
-
-            <p>
-                Conditions allow a program to make decisions.
-            </p>
-
-            <div class="code-box">
-<pre>
-int age = 20;
-
-if(age >= 18)
-{
-    printf("Adult");
-}
-else
-{
-    printf("Minor");
-}
-</pre>
+            <!-- Previous / Next Controls -->
+            <div class="nav-buttons">
+                <a href="../roadmap.html" class="nav-btn btn-prev">← Previous</a>
+                <a href="#" class="nav-btn btn-next">Next →</a>
             </div>
+        </main>
 
-        </section>
-
-
-
-        <!-- Loops -->
-
-        <section class="lesson-section"
-                 id="loops">
-
-            <h2>
-                6. Loops
-            </h2>
-
-            <p>
-                Loops are used to execute a block of code
-                repeatedly.
-            </p>
-
-            <div class="code-box">
-<pre>
-for(int i = 1; i <= 5; i++)
-{
-    printf("%d\n", i);
-}
-</pre>
-            </div>
-
-        </section>
-
-
-
-        <!-- Functions -->
-
-        <section class="lesson-section"
-                 id="functions">
-
-            <h2>
-                7. Functions
-            </h2>
-
-            <p>
-                Functions allow us to divide a program
-                into reusable blocks.
-            </p>
-
-            <div class="code-box">
-<pre>
-int add(int a, int b)
-{
-    return a + b;
-}
-</pre>
-            </div>
-
-        </section>
-
-
-
-        <!-- Arrays -->
-
-        <section class="lesson-section"
-                 id="arrays">
-
-            <h2>
-                8. Arrays
-            </h2>
-
-            <p>
-                Arrays store multiple values of the same
-                data type.
-            </p>
-
-            <div class="code-box">
-<pre>
-int numbers[5] = {
-    10, 20, 30, 40, 50
-};
-</pre>
-            </div>
-
-        </section>
-
-
-
-        <!-- Strings -->
-
-        <section class="lesson-section"
-                 id="strings">
-
-            <h2>
-                9. Strings
-            </h2>
-
-            <p>
-                A string is a sequence of characters.
-            </p>
-
-            <div class="code-box">
-<pre>
-char name[] = "Learning Path";
-
-printf("%s", name);
-</pre>
-            </div>
-
-        </section>
-
-
-
-        <!-- Pointers -->
-
-        <section class="lesson-section"
-                 id="pointers">
-
-            <h2>
-                10. Pointers
-            </h2>
-
-            <p>
-                A pointer stores the memory address
-                of another variable.
-            </p>
-
-            <div class="code-box">
-<pre>
-int x = 10;
-
-int *p = &x;
-
-printf("%d", *p);
-</pre>
-            </div>
-
-        </section>
-
-
-
-        <!-- Structures -->
-
-        <section class="lesson-section"
-                 id="structures">
-
-            <h2>
-                11. Structures
-            </h2>
-
-            <p>
-                Structures allow us to group different
-                data types together.
-            </p>
-
-            <div class="code-box">
-<pre>
-struct Student
-{
-    int age;
-    char grade;
-};
-</pre>
-            </div>
-
-        </section>
-
-
-
-        <!-- Practice -->
-
-        <section class="lesson-section"
-                 id="practice">
-
-            <h2>
-                12. Practice
-            </h2>
-
-            <p>
-                Now test your C programming knowledge
-                with quizzes and coding exercises.
-            </p>
-
-            <div class="lesson-buttons">
-
-                <a href="../quiz.html"
-                   class="lesson-btn primary-lesson">
-
-                    Take C Quiz →
-
-                </a>
-
-                <a href="../projects.html"
-                   class="lesson-btn secondary-lesson">
-
-                    C Projects →
-
-                </a>
-
-            </div>
-
-        </section>
-
-
-    </main>
-
-</div>
-
-
-
-<footer>
-
-    <div class="footer-logo">
-        Learning<span>Path</span>
     </div>
-
-    <p>
-        Learn Coding the Easy Way.
-    </p>
-
-    <p class="copyright">
-        © 2026 Learning Path. All Rights Reserved.
-    </p>
-
-</footer>
-
-
-<script src="../../script.js"></script>
 
 </body>
-
 </html>
