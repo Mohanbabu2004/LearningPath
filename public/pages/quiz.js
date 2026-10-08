@@ -427,8 +427,11 @@ function showResult(result) {
 
 
 /* =====================================
-   VIEW ALL 100 ANSWERS
+   VIEW ALL 100 ANSWERS (SCREEN 13 TABLE + PAGINATION)
 ===================================== */
+
+let currentPage = 1;
+const questionsPerPage = 10;
 
 document
     .getElementById("answersBtn")
@@ -444,6 +447,8 @@ function showAllAnswers() {
             )
         );
 
+    if (!result) return;
+
     document
         .getElementById("resultScreen")
         .classList.add("hidden");
@@ -453,71 +458,94 @@ function showAllAnswers() {
         .classList.remove("hidden");
 
 
-    document.getElementById("answerSummary")
-        .textContent =
-        `${result.correct} Correct • ${result.incorrect} Incorrect • ${result.score}/100`;
+    document.getElementById("answerSummary").innerHTML = `
+        <span style="color:#20d99a; font-weight:bold;">Correct (${result.correct})</span> &nbsp;•&nbsp;
+        <span style="color:#ff3e57; font-weight:bold;">Incorrect (${result.incorrect})</span> &nbsp;•&nbsp;
+        <strong>Not Answered (0)</strong>
+    `;
 
-
-    const container =
-        document.getElementById("answersList");
-
-    container.innerHTML = "";
-
-
-    result.answers.forEach((item, index) => {
-
-        const card =
-            document.createElement("div");
-
-        card.className =
-            `answer-card ${
-                item.status === "Correct"
-                    ? "correct"
-                    : "incorrect"
-            }`;
-
-        card.innerHTML = `
-            <h3>Question ${index + 1}</h3>
-
-            <p>
-                <strong>Question:</strong>
-                ${item.question}
-            </p>
-
-            <p>
-                <strong>Your Answer:</strong>
-                ${item.yourAnswer || "Not Answered"}
-            </p>
-
-            <p>
-                <strong>Correct Answer:</strong>
-                ${item.correctAnswer}
-            </p>
-
-            <p>
-                <strong>Status:</strong>
-                <span class="${
-                    item.status === "Correct"
-                        ? "correct-text"
-                        : "incorrect-text"
-                }">
-                    ${
-                        item.status === "Correct"
-                            ? "✅ Correct"
-                            : "❌ Incorrect"
-                    }
-                </span>
-            </p>
-
-            <p>
-                <strong>Marks:</strong>
-                ${item.marks}
-            </p>
-        `;
-
-        container.appendChild(card);
-    });
+    renderAnswersTablePage(result, 1);
 }
+
+function renderAnswersTablePage(result, page) {
+    currentPage = page;
+    const container = document.getElementById("answersList");
+    const totalPages = Math.ceil(result.answers.length / questionsPerPage);
+
+    const startIndex = (page - 1) * questionsPerPage;
+    const endIndex = Math.min(startIndex + questionsPerPage, result.answers.length);
+    const pageAnswers = result.answers.slice(startIndex, endIndex);
+
+    let html = `
+        <div style="overflow-x: auto; margin-top: 20px;">
+            <table style="width: 100%; border-collapse: collapse; text-align: left; background: #0b1126; border-radius: 10px; overflow: hidden; border: 1px solid #20284b;">
+                <thead>
+                    <tr style="background: #101936; border-bottom: 1px solid #20284b; color: #94a3b8; font-size: 13px;">
+                        <th style="padding: 14px 18px;">Q.No</th>
+                        <th style="padding: 14px 18px;">Question</th>
+                        <th style="padding: 14px 18px;">Your Answer</th>
+                        <th style="padding: 14px 18px;">Correct Answer</th>
+                        <th style="padding: 14px 18px; text-align: center;">Status</th>
+                        <th style="padding: 14px 18px; text-align: center;">Marks</th>
+                    </tr>
+                </thead>
+                <tbody>
+    `;
+
+    pageAnswers.forEach((item, idx) => {
+        const qNo = startIndex + idx + 1;
+        const isCorrect = item.status === "Correct";
+
+        html += `
+            <tr style="border-bottom: 1px solid #162040; font-size: 14px;">
+                <td style="padding: 14px 18px; color: #94a3b8; font-weight: bold;">${qNo}</td>
+                <td style="padding: 14px 18px; max-width: 350px;">${item.question}</td>
+                <td style="padding: 14px 18px; color: ${isCorrect ? '#20d99a' : '#ff3e57'}; font-weight: bold;">${item.yourAnswer || 'Not Answered'}</td>
+                <td style="padding: 14px 18px; color: #20d99a; font-weight: bold;">${item.correctAnswer}</td>
+                <td style="padding: 14px 18px; text-align: center;">
+                    <span style="display:inline-block; padding: 4px 10px; border-radius: 20px; font-size: 12px; font-weight: bold; background: ${isCorrect ? '#103f35' : '#451727'}; color: ${isCorrect ? '#20d99a' : '#ff5268'};">
+                        ${isCorrect ? '✓ Correct' : '✗ Incorrect'}
+                    </span>
+                </td>
+                <td style="padding: 14px 18px; text-align: center; font-weight: bold;">${item.marks}</td>
+            </tr>
+        `;
+    });
+
+    html += `
+                </tbody>
+            </table>
+        </div>
+    `;
+
+    // Render Pagination Controls: << < 1 2 3 4 5 ... 10 > >>
+    html += `
+        <div style="display: flex; justify-content: center; align-items: center; gap: 8px; margin-top: 25px; flex-wrap: wrap;">
+            <button onclick="changeAnswersPage(1)" ${page === 1 ? 'disabled style="opacity:0.4;"' : ''} class="primary" style="padding: 8px 14px; font-size: 13px;">&lt;&lt;</button>
+            <button onclick="changeAnswersPage(${page - 1})" ${page === 1 ? 'disabled style="opacity:0.4;"' : ''} class="primary" style="padding: 8px 14px; font-size: 13px;">&lt;</button>
+    `;
+
+    for (let i = 1; i <= totalPages; i++) {
+        html += `
+            <button onclick="changeAnswersPage(${i})" class="${i === page ? 'submit' : 'primary'}" style="padding: 8px 14px; font-size: 13px;">${i}</button>
+        `;
+    }
+
+    html += `
+            <button onclick="changeAnswersPage(${page + 1})" ${page === totalPages ? 'disabled style="opacity:0.4;"' : ''} class="primary" style="padding: 8px 14px; font-size: 13px;">&gt;</button>
+            <button onclick="changeAnswersPage(${totalPages})" ${page === totalPages ? 'disabled style="opacity:0.4;"' : ''} class="primary" style="padding: 8px 14px; font-size: 13px;">&gt;&gt;</button>
+        </div>
+    `;
+
+    container.innerHTML = html;
+}
+
+window.changeAnswersPage = function(page) {
+    const result = JSON.parse(localStorage.getItem("learningPathQuizResult"));
+    if (result) {
+        renderAnswersTablePage(result, page);
+    }
+};
 
 
 /* =====================================

@@ -6,3 +6,4 @@ router.post("/submit", quizController.submitQuiz);
 router.get("/submissions", quizController.getQuizSubmissions);
 
 module.exports = router;
+

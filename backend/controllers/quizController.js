@@ -68,3 +68,4 @@ exports.getQuizSubmissions = (req, res) => {
         data: quizSubmissions
     });
 };
+
