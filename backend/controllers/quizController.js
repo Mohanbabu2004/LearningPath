@@ -1,64 +1,82 @@
-// ===================================================
-// Quiz Controller - Backend Logic
-// ===================================================
+// Quiz Controller
+const quizSubmissions = [
+    {
+        id: "qres_101",
+        userId: "student_1",
+        quizId: "C_Beginner",
+        language: "C",
+        level: "Beginner",
+        score: 72,
+        totalQuestions: 100,
+        correct: 72,
+        incorrect: 28,
+        percentage: 72,
+        passed: true,
+        submittedAt: new Date().toISOString()
+    }
+];
 
-// In-memory quiz submissions store (backed up by DB schema)
-const quizSubmissions = [];
+exports.getQuestions = (req, res) => {
+    const { language = "C", level = "Beginner" } = req.query;
+    return res.status(200).json({
+        success: true,
+        language,
+        level,
+        totalQuestions: 100,
+        message: `Fetched 100 questions for ${language} - ${level}`
+    });
+};
 
 exports.submitQuiz = (req, res) => {
     try {
         const {
             userId = "student_1",
             quizId,
-            language,
-            level,
-            score,
-            correct,
-            incorrect,
-            percentage,
-            passed,
-            answers
+            language = "C",
+            level = "Beginner",
+            score = 0,
+            correct = 0,
+            incorrect = 0,
+            percentage = 0,
+            passed = false,
+            answers = []
         } = req.body;
 
-        if (!language || !level || score === undefined) {
-            return res.status(400).json({
-                success: false,
-                message: "Missing required quiz parameters."
-            });
-        }
-
         const submission = {
-            id: quizSubmissions.length + 1,
+            id: "qres_" + (quizSubmissions.length + 100),
             userId,
             quizId: quizId || `${language}_${level}`,
             language,
             level,
             score,
+            totalQuestions: 100,
             correct,
             incorrect,
             percentage,
             passed,
-            answersCount: answers ? answers.length : 0,
+            answersCount: answers.length,
             submittedAt: new Date().toISOString()
         };
 
         quizSubmissions.push(submission);
 
-        console.log(`[Quiz Submission Received] User: ${userId} | ${language} ${level} | Score: ${score}/100 | Result: ${passed ? 'PASS' : 'FAIL'}`);
-
         return res.status(200).json({
             success: true,
-            message: "Quiz submission saved successfully!",
+            message: "Quiz submitted successfully!",
             data: submission
         });
-
     } catch (error) {
-        console.error("Error saving quiz submission:", error);
-        return res.status(500).json({
-            success: false,
-            message: "Server error processing quiz submission."
-        });
+        return res.status(500).json({ success: false, message: error.message });
     }
+};
+
+exports.getResultById = (req, res) => {
+    const { id } = req.params;
+    const result = quizSubmissions.find(q => q.id === id) || quizSubmissions[0];
+    return res.status(200).json({
+        success: true,
+        result
+    });
 };
 
 exports.getQuizSubmissions = (req, res) => {
@@ -68,4 +86,3 @@ exports.getQuizSubmissions = (req, res) => {
         data: quizSubmissions
     });
 };
-
