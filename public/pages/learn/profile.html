@@ -437,6 +437,37 @@
         </section>
 
 
+        <!-- Quiz Progress -->
+
+        <section class="profile-card" style="margin-top: 30px;" id="quizProgressSection">
+
+            <h2>📝 Quiz Progress</h2>
+
+            <div id="cProgressContainer" style="margin-top: 15px;">
+
+                <h3>C Programming</h3>
+                <p><strong>Beginner</strong></p>
+
+                <div style="background: #e2e8f0; border-radius: 10px; height: 16px; margin: 12px 0; overflow: hidden;">
+
+                    <div id="profileProgressBar" style="width: 0%; background: linear-gradient(90deg, #6645ff, #20d99a); height: 100%; transition: width 0.4s ease;"></div>
+
+                </div>
+
+                <p id="profileScoreText">Complete a quiz to see your progress here.</p>
+
+                <div id="profileLevelBadges" style="margin-top: 10px; display: flex; gap: 15px;">
+
+                    <span>Intermediate: 🔒 LOCKED</span>
+                    <span>Advanced: 🔒 LOCKED</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
         <!-- Statistics -->
 
         <section class="stats-grid">
@@ -672,17 +703,47 @@
                     newName.trim();
 
                 document.getElementById(
-                    "profileName"
-                ).textContent = name;
-
-                document.getElementById(
                     "nameDetail"
                 ).textContent = name;
-
             }
-
         }
 
+        function loadQuizProgress() {
+            const quizResult = JSON.parse(localStorage.getItem("learningPathQuizResult"));
+            const quizProgress = JSON.parse(localStorage.getItem("learningPathProgress"));
+
+            if (quizResult && quizResult.language === "C") {
+                const isPass = quizResult.passed;
+                const percentage = quizResult.percentage;
+
+                const progressBar = document.getElementById("profileProgressBar");
+                const scoreText = document.getElementById("profileScoreText");
+                const levelBadges = document.getElementById("profileLevelBadges");
+
+                if (progressBar) {
+                    progressBar.style.width = `${percentage}%`;
+                    progressBar.style.background = isPass ? "linear-gradient(90deg, #6645ff, #20d99a)" : "#ff3e57";
+                }
+
+                if (scoreText) {
+                    scoreText.innerHTML = `
+                        <strong>Score:</strong> ${quizResult.score}/100 &nbsp;|&nbsp;
+                        <strong>Correct:</strong> ${quizResult.correct} &nbsp;|&nbsp;
+                        <strong>Incorrect:</strong> ${quizResult.incorrect} &nbsp;|&nbsp;
+                        <strong>Result:</strong> <span style="color:${isPass ? '#20d99a' : '#ff3e57'}; font-weight:bold;">${isPass ? 'PASS ✅' : 'FAIL ❌'}</span>
+                    `;
+                }
+
+                if (levelBadges) {
+                    levelBadges.innerHTML = `
+                        <span><strong>Intermediate:</strong> ${isPass ? '🔓 UNLOCKED' : '🔒 LOCKED'}</span>
+                        <span><strong>Advanced:</strong> 🔒 LOCKED</span>
+                    `;
+                }
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", loadQuizProgress);
     </script>
 
 

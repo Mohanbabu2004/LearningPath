@@ -1,80 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Practice Lab | LearningPath</title>
-    <link rel="stylesheet" href="../style.css">
-    <style>
-        .practice-page{max-width:1120px;margin:auto;padding:70px 6.5% 120px}.practice-hero{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:40px}.practice-hero h1{font-size:clamp(42px,6vw,70px);margin-top:12px}.practice-hero p{max-width:440px;color:var(--muted);font-size:14px}.practice-card{background:linear-gradient(145deg,#171724,#101019);border:1px solid var(--line);border-radius:9px;padding:28px}.practice-tools{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:14px;margin-bottom:30px}.field label{display:block;color:var(--muted);font:10px 'DM Mono',monospace;letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px}.field select{width:100%;padding:13px;background:#0c0c15;color:var(--ink);border:1px solid var(--line);border-radius:5px;font:12px Manrope,sans-serif}.mode-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:28px}.mode{border:1px solid var(--line);background:#11111b;color:var(--muted);border-radius:6px;padding:17px 13px;text-align:left;cursor:pointer;transition:.2s}.mode strong,.mode small{display:block}.mode strong{font-size:20px;color:var(--violet);margin-bottom:8px}.mode small{font-size:11px}.mode.active,.mode:hover{border-color:var(--violet);background:rgba(145,117,255,.12);color:var(--ink)}.mode:nth-child(2) strong{color:var(--cyan)}.mode:nth-child(3) strong{color:var(--orange)}.mode:nth-child(4) strong{color:#d5a5ff}.practice-start{width:100%;border:0;cursor:pointer;justify-content:center}.question-area{display:none}.practice-meta{display:flex;justify-content:space-between;color:var(--muted);font:11px 'DM Mono',monospace;margin-bottom:10px}.practice-progress{height:5px;background:#272633;border-radius:4px;margin-bottom:26px}.practice-progress span{display:block;width:0;height:100%;background:linear-gradient(90deg,var(--violet),var(--cyan));border-radius:4px;transition:.25s}.question-card{background:#0d0d16;border:1px solid var(--line);border-radius:7px;padding:25px}.question-card h2{font-size:22px;line-height:1.35;margin-bottom:20px}.topic-chip{display:inline-block;color:var(--cyan);font:10px 'DM Mono',monospace;border:1px solid rgba(96,230,209,.3);padding:5px 8px;border-radius:3px;margin-bottom:15px}.answers{display:grid;gap:10px}.answer{display:block;padding:14px;border:1px solid var(--line);background:#171722;color:var(--ink);border-radius:5px;text-align:left;cursor:pointer;font:12px Manrope,sans-serif}.answer:hover{border-color:var(--cyan)}.answer.correct{border-color:var(--cyan);background:rgba(96,230,209,.12)}.answer.wrong{border-color:#ff7777;background:rgba(255,70,70,.1)}.code-answer{width:100%;min-height:145px;resize:vertical;background:#090910;color:#dcd7ff;border:1px solid var(--line);border-radius:5px;padding:14px;font:12px 'DM Mono',monospace;line-height:1.6}.feedback{min-height:25px;margin:15px 0 3px;color:var(--cyan);font-size:12px}.next-question{display:none;margin-top:12px;border:0;cursor:pointer}.result{text-align:center;display:none}.result h2{font-size:30px}.result-score{font-size:62px;color:var(--violet);font-weight:800;margin:12px}.reset-btn{border:1px solid var(--line);background:transparent;color:var(--ink);cursor:pointer}.practice-note{color:var(--muted);font-size:11px;text-align:center;margin-top:18px}@media(max-width:760px){.practice-page{padding:50px 5% 90px}.practice-hero{display:block}.practice-hero p{margin-top:18px}.practice-tools,.mode-grid{grid-template-columns:1fr 1fr}.mode-grid .mode:last-child{grid-column:span 2}}@media(max-width:480px){.practice-tools{grid-template-columns:1fr}.mode-grid{grid-template-columns:1fr 1fr}.mode-grid .mode:last-child{grid-column:span 1}}
-    </style>
+    <title>LearningPath - Quiz</title>
+    <link rel="stylesheet" href="quiz.css">
 </head>
 
 <body>
-    <header class="navbar">
-        <a class="logo" href="../index.html" aria-label="LearningPath home"><span class="logo-mark"><i></i><i></i><i></i></span>Learning<span>Path</span></a>
-        <button class="menu-btn" type="button" onclick="toggleMenu()" aria-label="Toggle navigation" aria-controls="navMenu" aria-expanded="false">☰</button>
-        <nav id="navMenu">
-            <a href="../index.html">Home</a><a href="roadmap.html">Roadmap</a><a href="continue-learning.html">Continue</a><a class="active" href="quiz.html">Quiz</a><a href="projects.html">Projects</a>
-        </nav>
-        <a href="learn/profile.html" class="login-btn">Profile <span>↗</span></a>
-    </header>
 
-    <main class="practice-page">
-        <section class="practice-hero">
-            <div><span class="kicker">THE PRACTICE LAB</span><h1>Sharpen the skill.<br><em>Ship the idea.</em></h1></div>
-            <p>Choose a language, pick a topic, and practice the way that works for you. Every session is a small step toward fluency.</p>
+<div class="app">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <h2>📚 LearningPath</h2>
+
+        <a href="home.html">🏠 Home</a>
+        <a href="roadmap.html">🗺️ Roadmap</a>
+        <a href="continue-learning.html">▶ Continue Learning</a>
+        <a class="active" href="quiz.html">📝 Quiz</a>
+        <a href="practice.html">💻 Practice Coding</a>
+        <a href="projects.html">🚀 Projects</a>
+        <a href="settings.html">⚙ Settings</a>
+    </aside>
+
+    <main class="main">
+
+        <header>
+            <h1>Quiz</h1>
+            <span id="userName">Student</span>
+        </header>
+
+        <!-- ================= SELECT SCREEN ================= -->
+
+        <section id="selectScreen" class="screen">
+
+            <h2>Select Language & Level</h2>
+            <p>Complete 100 questions to finish the quiz.</p>
+
+            <div class="language-grid">
+
+                <button class="language selected" data-language="C">C</button>
+                <button class="language locked" data-language="C++">C++ 🔒</button>
+                <button class="language locked" data-language="Python">Python 🔒</button>
+                <button class="language locked" data-language="TypeScript">TypeScript 🔒</button>
+
+                <button class="language locked" data-language="JavaScript">JavaScript 🔒</button>
+                <button class="language locked" data-language="Java">Java 🔒</button>
+                <button class="language locked" data-language="R">R 🔒</button>
+                <button class="language locked" data-language="CUDA">CUDA 🔒</button>
+
+                <button class="language locked" data-language="Ruby">Ruby 🔒</button>
+                <button class="language locked" data-language="PHP">PHP 🔒</button>
+                <button class="language locked" data-language="HTML">HTML 🔒</button>
+                <button class="language locked" data-language="CSS">CSS 🔒</button>
+
+            </div>
+
+            <h3>Select Level</h3>
+
+            <div class="levels">
+                <button class="level selected" data-level="Beginner">
+                    Beginner
+                </button>
+
+                <button class="level locked" data-level="Intermediate">
+                    🔒 Intermediate
+                </button>
+
+                <button class="level locked" data-level="Advanced">
+                    🔒 Advanced
+                </button>
+            </div>
+
+            <button id="startQuizBtn" class="primary">
+                Start Quiz – 100 Questions →
+            </button>
+
         </section>
-        <section class="practice-card">
-            <div class="practice-tools">
-                <div class="field"><label for="language">Language</label><select id="language"></select></div>
-                <div class="field"><label for="topic">Topic</label><select id="topic"></select></div>
-                <div class="field"><label for="difficulty">Level</label><select id="difficulty"><option>Beginner</option><option>Intermediate</option><option>Advanced</option></select></div>
-            </div>
-            <div class="mode-grid" role="tablist" aria-label="Practice mode">
-                <button class="mode active" data-mode="knowledge" type="button"><strong>?</strong><small>Coding knowledge</small></button>
-                <button class="mode" data-mode="fill" type="button"><strong>⌁</strong><small>Fill missing code</small></button>
-                <button class="mode" data-mode="correct" type="button"><strong>✓</strong><small>Correct the code</small></button>
-                <button class="mode" data-mode="convert" type="button"><strong>↔</strong><small>Convert code</small></button>
-            </div>
-            <button class="primary-btn practice-start" id="startPractice" type="button">Start practice <span>↗</span></button>
-            <div class="question-area" id="questionArea">
-                <div class="practice-meta"><span id="questionCount">Question 1 / 3</span><span id="score">Score 0</span></div>
-                <div class="practice-progress"><span id="progress"></span></div>
-                <div class="question-card">
-                    <span class="topic-chip" id="questionTopic">Topic</span>
-                    <h2 id="questionText"></h2>
-                    <div class="answers" id="answers"></div>
-                    <div class="feedback" id="feedback" aria-live="polite"></div>
-                    <button class="primary-btn next-question" id="nextQuestion" type="button">Next challenge <span>→</span></button>
+
+
+        <!-- ================= QUIZ SCREEN ================= -->
+
+        <section id="quizScreen" class="screen hidden">
+
+            <div class="quiz-header">
+
+                <div>
+                    <h2 id="quizTitle">C Programming – Beginner</h2>
+                    <p>
+                        Question
+                        <span id="currentNumber">1</span>
+                        / 100
+                    </p>
                 </div>
+
+                <div class="marks">
+                    <span>1 Mark</span>
+                </div>
+
             </div>
-            <div class="result" id="result">
-                <span class="kicker">SESSION COMPLETE</span><h2>Nice work. Keep the signal growing.</h2><div class="result-score" id="resultScore"></div><p id="resultMessage"></p><button class="primary-btn reset-btn" id="resetPractice" type="button">Practice again ↻</button>
+
+            <div class="progress-bar">
+                <div id="questionProgress"></div>
             </div>
-            <p class="practice-note">Questions are selected by language and topic so you can focus on exactly what you want to improve.</p>
+
+            <div class="question-card">
+
+                <h2 id="questionText"></h2>
+
+                <div id="options"></div>
+
+            </div>
+
+            <div class="quiz-buttons">
+
+                <button id="previousBtn">
+                    ← Previous
+                </button>
+
+                <button id="nextBtn" class="primary">
+                    Next →
+                </button>
+
+                <button id="submitBtn" class="submit hidden">
+                    Submit Quiz ✓
+                </button>
+
+            </div>
+
         </section>
+
+
+        <!-- ================= RESULT SCREEN ================= -->
+
+        <section id="resultScreen" class="screen hidden">
+
+            <div id="resultIcon">🏆</div>
+
+            <h1>QUIZ COMPLETED!</h1>
+
+            <h2 id="resultTitle"></h2>
+
+            <div class="result-grid">
+
+                <div>
+                    <span>Total Questions</span>
+                    <strong>100</strong>
+                </div>
+
+                <div>
+                    <span>Total Marks</span>
+                    <strong>100</strong>
+                </div>
+
+                <div>
+                    <span>Pass Marks</span>
+                    <strong>35</strong>
+                </div>
+
+                <div>
+                    <span>Your Score</span>
+                    <strong id="score"></strong>
+                </div>
+
+                <div class="correct-box">
+                    <span>Correct</span>
+                    <strong id="correct"></strong>
+                </div>
+
+                <div class="wrong-box">
+                    <span>Incorrect</span>
+                    <strong id="incorrect"></strong>
+                </div>
+
+                <div>
+                    <span>Percentage</span>
+                    <strong id="percentage"></strong>
+                </div>
+
+            </div>
+
+            <div id="passFail"></div>
+
+            <div class="progress-section">
+
+                <h3>Your Progress</h3>
+
+                <div class="big-progress">
+                    <div id="finalProgress"></div>
+                </div>
+
+                <strong id="progressText"></strong>
+
+            </div>
+
+            <div id="nextLevel"></div>
+
+            <div class="result-buttons">
+
+                <button id="answersBtn" class="primary">
+                    View All 100 Answers
+                </button>
+
+                <button id="retryBtn">
+                    Retry Quiz
+                </button>
+
+                <button id="nextLevelBtn" class="primary">
+                    Next Level →
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= ANSWERS SCREEN ================= -->
+
+        <section id="answersScreen" class="screen hidden">
+
+            <h1>All Answers</h1>
+
+            <p id="answerSummary"></p>
+
+            <div id="answersList"></div>
+
+            <button id="backResultBtn" class="primary">
+                ← Back to Result
+            </button>
+
+        </section>
+
     </main>
-    <script src="../script.js"></script>
-    <script>
-        const questions = {
-            Python:{Basics:{knowledge:[["What keyword defines a function?",["func","def","function","fn"],1]],fill:[["Complete the loop:\\nfor item ___ items:",["in","of","to","with"],0]],correct:[["Fix the syntax:\\nprint(\"Hello\"",["print(\"Hello\")","print[\"Hello\"]","echo(\"Hello\")"],0]],convert:[["Convert to a list comprehension:\\nresult = []\\nfor x in values: result.append(x * 2)",["result = [x * 2 for x in values]","result = (x * 2 in values)"],0]]},Loops:{knowledge:[["Which loop is best when iterating over a sequence?",["for","switch","try","class"],0]],fill:[["Complete:\\nwhile count ___ 5:",["<",">","=","!="],0]],correct:[["Fix the loop:\\nfor i in range(3)\\n  print(i)",["for i in range(3):\\n  print(i)","for (i in range(3)):\\n  print(i)"],0]],convert:[["Convert the loop to a while loop:\\nfor i in range(3): print(i)",["i=0\\nwhile i < 3: print(i); i += 1","while (i=3)"],0]]}},JavaScript:{Basics:{knowledge:[["Which keyword creates a block-scoped variable?",["var","let","define","new"],1]],fill:[["Complete:\\nconst total = numbers.___(sum, 0)",["reduce","fold","collect","join"],0]],correct:[["Fix the equality check:\\nif (value = 10) { ... }",["if (value === 10) { ... }","if (value := 10) { ... }"],0]],convert:[["Convert this function to an arrow function:\\nfunction add(a,b){ return a+b; }",["const add = (a,b) => a + b;","arrow add(a,b) => a+b;"],0]]},DOM:{knowledge:[["Which method selects the first matching element?",["query()","querySelector()","selectFirst()","find()"],1]],fill:[["Complete:\\ndocument.___(\"title\")",["querySelector","getElement","select","findOne"],0]],correct:[["Fix the event listener:\\nbutton.addEvent('click', fn)",["button.addEventListener('click', fn)","button.on('click', fn)"],0]],convert:[["Convert to a template literal:\\n'Hello, ' + name",["`Hello, ${name}`","template('Hello, name')"],0]]}},C:{Basics:{knowledge:[["Which symbol ends a C statement?",[".",";",":","!"],1]],fill:[["Complete:\\nint total = 2 ___ 3;",["+","and","plus","*="],0]],correct:[["Fix the declaration:\\nint number",["int number;","integer number;"],0]],convert:[["Convert the array access to a pointer expression:\\nvalue = numbers[2];",["value = *(numbers + 2);","value = numbers->2;"],0]]}},Java:{Basics:{knowledge:[["Which keyword creates a class?",["object","class","struct","type"],1]],fill:[["Complete:\\npublic ___ main(String[] args)",["static","const","define","final"],0]],correct:[["Fix the method declaration:\\npublic void greet() {",["public void greet() { }","public function greet() { }"],0]],convert:[["Convert the loop to enhanced for syntax:\\nfor(int i=0;i<a.length;i++) use(a[i]);",["for(int item : a) use(item);","foreach(int item in a)"],0]]}},["C++"]:{Basics:{knowledge:[["Which stream prints to the console?",["printf","cout","console.log","System.out"],1]],fill:[["Complete:\\nstd::___ << \"Ready\";",["cout","print","out","write"],0]],correct:[["Fix the include:\\ninclude <iostream>",["#include <iostream>","import <iostream>"],0]],convert:[["Convert a raw pointer declaration to auto:\\nint* value = &number;",["auto value = &number;","let value = &number;"],0]]}},SQL:{Queries:{knowledge:[["Which clause filters rows?",["ORDER BY","WHERE","GROUP BY","JOIN"],1]],fill:[["Complete:\\nSELECT * FROM users ___ active = 1;",["WHERE","WHEN","FILTER","HAVING"],0]],correct:[["Fix the query:\\nSELECT name users;",["SELECT name FROM users;","GET name IN users;"],0]],convert:[["Convert this filter to a parameterized query:",["SELECT * FROM users WHERE id = ?","SELECT * FROM users WHERE id = {id}"],0]]}},            HTML:{Basics:{knowledge:[["Which element creates a hyperlink?",["<link>","<a>","<href>","<url>"],1]],fill:[["Complete:\\n___ href=\"/home\">Home</a>",["<a","<link","<url","<button"],0]],correct:[["Fix the heading:\\n<h1>Welcome<h2>",["<h1>Welcome</h1>","<h1>Welcome</h2>"],0]],convert:[["Convert the inline style to a class:",["<p class=\"lead\">Text</p>","<p style=\"lead\">Text</p>"],0]]}},
-            CUDA:{Kernels:{knowledge:[["Which keyword marks a CUDA kernel callable from the host?",["__global__","__kernel__","host_call","cuda_fn"],0]],fill:[["Complete:\\n___ void add(int *a) { }",["__global__","__device__","kernel","host"],0]],correct:[["Fix the CUDA launch:\\nadd<<<1, 32>>>();",["add<<<1, 32>>>();","add<<1, 32>();"],0]],convert:[["Convert a CPU loop launch to a CUDA grid launch:",["add<<<blocks, threads>>>(data);","cuda.launch(add, data);"],0]]}},PHP:{Basics:{knowledge:[["Which tag starts a PHP block?",["<?php","<php>","<?","<script php>"],0]],fill:[["Complete:\\n___name = \"LearningPath\";",["$","var","let","@"],0]],correct:[["Fix the PHP output:\\necho \"Hello\"",["echo \"Hello\";","print(\"Hello\");"],0]],convert:[["Convert string concatenation to interpolation:",["\"Hello {$name}\"","`Hello ${name}`"],0]]}},R:{Data:{knowledge:[["Which function displays the structure of an R object?",["str()","shape()","inspect()","typeofObject()"],0]],fill:[["Complete:\\nvalues ___ c(1, 2, 3)",["<-","=","is","::"],0]],correct:[["Fix the vector assignment:\\nvalues <- c(1, 2, 3",["values <- c(1, 2, 3)","values = [1, 2, 3]"],0]],convert:[["Convert a base R filter to a subset call:",["subset(data, score > 80)","data.where(score > 80)"],0]]}},Ruby:{Basics:{knowledge:[["Which keyword begins a Ruby method?",["def","function","method","fn"],0]],fill:[["Complete:\\n___ greeting = \"Hello\"",["greeting","let greeting","var greeting","const greeting"],0]],correct:[["Fix the Ruby output:\\nputs \"Hello\"",["puts \"Hello\"","print(\"Hello\");"],0]],convert:[["Convert a Ruby block to each syntax:",["items.each { |item| puts item }","each(items): puts item"],0]]}},TypeScript:{Types:{knowledge:[["Which syntax declares a variable as a string?",["let name: string","let name -> string","string name","let<string> name"],0]],fill:[["Complete:\\nfunction add(a: number, b: number): ___",["number","int","numeric","float"],0]],correct:[["Fix the type assignment:\\nlet count: number = \"1\";",["let count: number = 1;","let count = number(\"1\");"],0]],convert:[["Convert JavaScript data to a typed interface:",["interface User { name: string }","type User = dynamic { name }"],0]]}}
-        };
-        const language = document.getElementById("language"), topic = document.getElementById("topic"), modeButtons = document.querySelectorAll(".mode");
-        let mode = "knowledge", current = 0, score = 0, session = [];
-        const allLanguages = Object.keys(questions);
-        allLanguages.forEach((item) => language.add(new Option(item, item)));
-        function updateTopics(){ topic.replaceChildren(...Object.keys(questions[language.value]).map((item) => new Option(item,item))); }
-        function activeQuestions(){ const bank = questions[language.value][topic.value][mode] || questions[language.value][topic.value].knowledge; return [...bank,...bank,...bank].slice(0,3); }
-        function renderQuestion(){ const item=session[current]; document.getElementById("questionCount").textContent=`Question ${current+1} / ${session.length}`; document.getElementById("score").textContent=`Score ${score}`; document.getElementById("progress").style.width=`${current/session.length*100}%`; document.getElementById("questionTopic").textContent=`${language.value} · ${topic.value} · ${mode}`; document.getElementById("questionText").textContent=item[0]; const answers=document.getElementById("answers"); answers.replaceChildren(); item[1].forEach((answer,index)=>{ const button=document.createElement("button"); button.className="answer"; button.type="button"; button.textContent=answer; button.onclick=()=>checkAnswer(button,index,item[2]); answers.append(button); }); document.getElementById("feedback").textContent=""; document.getElementById("nextQuestion").style.display="none"; }
-        function checkAnswer(button,index,correct){ document.querySelectorAll(".answer").forEach((item)=>item.disabled=true); const right=index===correct; button.classList.add(right?"correct":"wrong"); if(!right) document.querySelectorAll(".answer")[correct].classList.add("correct"); if(right) score++; document.getElementById("score").textContent=`Score ${score}`; document.getElementById("feedback").textContent=right?"Correct — keep going.":"Not quite. The highlighted answer is the one to remember."; document.getElementById("nextQuestion").style.display="inline-flex"; }
-        function finish(){ document.getElementById("questionArea").style.display="none"; document.getElementById("result").style.display="block"; document.getElementById("resultScore").textContent=`${score} / ${session.length}`; document.getElementById("resultMessage").textContent=score===session.length?"Perfect session.":"Review the highlighted concepts and try another round."; }
-        language.onchange=updateTopics; updateTopics(); modeButtons.forEach((button)=>button.onclick=()=>{modeButtons.forEach((item)=>item.classList.remove("active"));button.classList.add("active");mode=button.dataset.mode;});
-        document.getElementById("startPractice").onclick=()=>{current=0;score=0;session=activeQuestions();document.getElementById("startPractice").style.display="none";document.getElementById("result").style.display="none";document.getElementById("questionArea").style.display="block";renderQuestion();};
-        document.getElementById("nextQuestion").onclick=()=>{current++;current<session.length?renderQuestion():finish();};
-        document.getElementById("resetPractice").onclick=()=>{document.getElementById("startPractice").style.display="inline-flex";document.getElementById("result").style.display="none";};
-    </script>
+
+</div>
+
+<script src="c_beginner_100_questions.js"></script>
+<script src="c_intermediate_100_questions.js"></script>
+<script src="c_advanced_100_questions.js"></script>
+<script src="quiz.js"></script>
+
 </body>
 </html>

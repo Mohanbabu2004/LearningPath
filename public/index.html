@@ -1,135 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="LearningPath is an AI-powered space to learn, practice, and build with code.">
-    <title>LearningPath | Build what is next</title>
-    <link rel="preconnect" href="https://images.unsplash.com">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>LearningPath - Learn Code the Intelligent Way</title>
+
+    <meta name="description"
+          content="LearningPath is an intelligent learning platform to learn programming, AI and technology step by step.">
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="page-glow page-glow-one"></div>
-    <div class="page-glow page-glow-two"></div>
 
+    <!-- NAVBAR -->
     <header class="navbar">
-        <a class="logo" href="index.html" aria-label="LearningPath home">
-            <span class="logo-mark"><i></i><i></i><i></i></span>
-            Learning<span>Path</span>
-        </a>
-        <span class="creator-name-top">R . MOHAN BABU</span>
 
-        <button class="menu-btn" type="button" onclick="toggleMenu()" aria-label="Toggle navigation"
-            aria-controls="navMenu" aria-expanded="false">☰</button>
-
-        <nav id="navMenu">
-            <a class="active" href="index.html">Home</a>
-            <a href="pages/roadmap.html">Roadmap</a>
-            <a href="pages/continue-learning.html">Continue</a>
-            <a href="pages/quiz.html">Quiz</a>
-            <a href="pages/projects.html">Projects</a>
-            <div class="settings-menu">
-                <button class="settings-toggle" type="button" onclick="toggleSettingsMenu()" aria-expanded="false"
-                    aria-controls="settingsSubmenu">⚙ Settings <span>⌄</span></button>
-                <div id="settingsSubmenu" class="settings-submenu">
-                    <a href="pages/learn/profile.html">◉ Profile</a>
-                    <a href="pages/learn/settings.html">⚙ Settings</a>
-                    <a href="pages/login.html" class="logout-link">↪ Logout</a>
-                </div>
+        <div class="logo">
+            <div class="logo-bars">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-        </nav>
 
-        <a href="pages/login.html" class="login-btn">Sign in <span>↗</span></a>
+            <span class="logo-white">Learning</span>
+            <span class="logo-purple">Path</span>
+        </div>
+
+        <div class="user-name">
+            R. MOHAN BABU
+        </div>
+
+        <button class="menu-btn" onclick="toggleMenu()">
+            ☰
+        </button>
+
     </header>
 
-    <main>
-        <section class="hero">
-            <div class="hero-content">
-                <div class="eyebrow"><span class="pulse"></span> The intelligent way to learn code</div>
-                <h1>Turn curiosity into <em>capability.</em></h1>
-                <p class="hero-copy">A guided learning studio where human creativity meets AI. Follow a path, ask
-                    better questions, and build skills that move with the world.</p>
-                <div class="hero-buttons">
-                    <a href="pages/home.html" class="primary-btn">Start your path <span>↗</span></a>
-                    <a href="pages/roadmap.html" class="text-btn">Explore the roadmap <span>→</span></a>
-                </div>
-                <div class="hero-proof">
-                    <div class="avatar-stack" aria-hidden="true"><span>AK</span><span>MR</span><span>+</span></div>
-                    <div><strong>12,000+</strong><small>curious minds learning daily</small></div>
-                </div>
+
+    <!-- MOBILE MENU -->
+    <nav id="mobileMenu" class="mobile-menu">
+
+        <a href="index.html">Home</a>
+        <a href="pages/roadmap.html">Roadmap</a>
+        <a href="pages/continue-learning.html">
+            Continue Learning
+        </a>
+
+        <a href="pages/learn/c.html">C Programming</a>
+        <a href="pages/learn/python.html">Python</a>
+        <a href="pages/learn/java.html">Java</a>
+
+    </nav>
+
+
+    <!-- HERO SECTION -->
+    <main class="hero">
+
+        <div class="glow glow-one"></div>
+        <div class="glow glow-two"></div>
+
+        <section class="hero-content">
+
+            <div class="eyebrow">
+                <span class="dot"></span>
+                THE INTELLIGENT WAY TO LEARN CODE
             </div>
 
-            <div class="hero-art" aria-label="Abstract 3D AI learning companion">
-                <div class="art-label label-top"><span class="label-dot"></span> AI companion <strong>online</strong></div>
-                <div class="orbital orbital-one"></div>
-                <div class="orbital orbital-two"></div>
-                <div class="orbital orbital-three"></div>
-                <div class="ai-orb"><div class="orb-core"></div><span class="orb-shine"></span></div>
-                <div class="code-float card-float">
-                    <span class="window-dots">•••</span>
-                    <code><b>const</b> future = <i>await</i><br>&nbsp;&nbsp;learn(<strong>“anything”</strong>);</code>
-                    <small>● running your next idea</small>
-                </div>
-                <div class="spark spark-one">✦</div><div class="spark spark-two">✧</div>
-                <div class="art-label label-bottom">LEARNING PATH <strong>01 / 08</strong></div>
-            </div>
-        </section>
 
-        <section class="signal-strip">
-            <span>Curated for the way you learn</span>
-            <div><b>01</b> Learn by doing</div><div><b>02</b> AI when you're stuck</div><div><b>03</b> Progress that feels real</div>
-        </section>
+            <h1>
+                Turn curiosity
+                <br>
+                into <span>capability.</span>
+            </h1>
 
-        <section class="features section">
-            <div class="section-heading">
-                <div><span class="kicker">YOUR CREATIVE ADVANTAGE</span><h2>More than lessons.<br><em>A launchpad.</em></h2></div>
-                <p>Everything is designed to keep your momentum alive, from your first line of code to your most
-                    ambitious build.</p>
-            </div>
-            <div class="feature-grid">
-                <article class="feature-card feature-main"><span class="feature-icon">✦</span><span class="card-index">01</span>
-                    <h3>Learn in your language</h3><p>Clear, human explanations across the tools that shape the modern web.</p>
-                    <a href="pages/home.html">Meet your curriculum <span>↗</span></a></article>
-                <article class="feature-card"><span class="feature-icon cyan">◒</span><span class="card-index">02</span>
-                    <h3>An AI that gets you</h3><p>Untangle a bug, simplify a concept, or find your next idea without losing your flow.</p>
-                    <a href="pages/learn/ai-tutor.html">Talk to your tutor <span>↗</span></a></article>
-                <article class="feature-card"><span class="feature-icon orange">⌁</span><span class="card-index">03</span>
-                    <h3>Build your proof</h3><p>Turn practice into projects you can show, share, and be proud of.</p>
-                    <a href="pages/projects.html">See project ideas <span>↗</span></a></article>
-            </div>
-        </section>
 
-        <section class="inspiration section">
-            <div class="section-heading compact"><div><span class="kicker">THE DISCOVERY DESK</span><h2>Ideas worth <em>following.</em></h2></div>
-                <a href="pages/home.html" class="text-btn">See all collections <span>→</span></a></div>
-            <div class="inspiration-grid">
-                <a href="pages/learn/html-css.html" class="inspiration-card tradition-card">
-                    <div class="image-wrap"><img src="https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Traditional art installation" loading="lazy"><span class="image-tag">TRADITIONS</span></div>
-                    <div class="inspiration-copy"><span>01 / CULTURE × CODE</span><h3>Old worlds, new interfaces</h3><p>Find the patterns that connect craft, architecture, and digital design.</p><b>Explore the collection →</b></div>
+            <p class="hero-description">
+                A guided learning studio where human creativity
+                meets AI. Follow a path, ask better questions,
+                and build skills that move with the world.
+            </p>
+
+
+            <div class="hero-buttons">
+
+                <a href="pages/roadmap.html"
+                   class="primary-btn">
+                    Start your path
+                    <span>↗</span>
                 </a>
-                <a href="pages/learn/python.html" class="inspiration-card trend-card">
-                    <div class="image-wrap"><img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Glowing artificial intelligence sculpture" loading="lazy"><span class="image-tag">TRENDING NOW</span></div>
-                    <div class="inspiration-copy"><span>02 / FRONTIER SKILLS</span><h3>Make friends with AI</h3><p>The practical foundations behind prompts, models, and intelligent products.</p><b>Start the AI track →</b></div>
+
+                <a href="pages/roadmap.html"
+                   class="secondary-btn">
+                    Explore the roadmap
+                    <span>→</span>
                 </a>
+
             </div>
+
+
+            <!-- LEARNERS -->
+            <div class="learners">
+
+                <div class="avatars">
+
+                    <div class="avatar avatar-one">
+                        AK
+                    </div>
+
+                    <div class="avatar avatar-two">
+                        MR
+                    </div>
+
+                    <div class="avatar avatar-three">
+                        +
+                    </div>
+
+                </div>
+
+                <div class="learner-text">
+                    <strong>12,000+</strong>
+                    <small>curious minds learning daily</small>
+                </div>
+
+            </div>
+
+
+            <!-- AI STATUS -->
+            <div class="ai-status">
+
+                <span class="status-dot"></span>
+
+                <span>AI companion</span>
+
+                <strong>online</strong>
+
+            </div>
+
+
+            <!-- DECORATIVE ORB -->
+            <div class="orb-area">
+
+                <div class="orb"></div>
+
+                <div class="orbit orbit-one"></div>
+                <div class="orbit orbit-two"></div>
+                <div class="orbit orbit-three"></div>
+
+            </div>
+
         </section>
 
-        <section class="languages section">
-            <div class="section-heading compact"><div><span class="kicker">CHOOSE YOUR MEDIUM</span><h2>Start anywhere.<br><em>Go everywhere.</em></h2></div><a href="pages/roadmap.html" class="text-btn">View full roadmap <span>→</span></a></div>
-            <div class="language-grid">
-                <a href="pages/learn/python.html" class="language-card hot"><strong>Py</strong><span>Python</span><small>Beginner friendly <b>↗</b></small></a>
-                <a href="pages/learn/javascript.html" class="language-card"><strong>JS</strong><span>JavaScript</span><small>Build for the web <b>↗</b></small></a>
-                <a href="pages/learn/cpp.html" class="language-card"><strong>C+</strong><span>C++</span><small>Think deeper <b>↗</b></small></a>
-                <a href="pages/learn/sql.html" class="language-card"><strong>⌘</strong><span>SQL</span><small>Make data speak <b>↗</b></small></a>
-            </div>
-        </section>
-
-        <section class="cta section"><div><span class="kicker">YOUR NEXT CHAPTER</span><h2>Small steps.<br><em>Big signal.</em></h2></div><div><p>Show up for your curiosity. We'll take care of the path.</p><a href="pages/signup.html" class="primary-btn">Create free account <span>↗</span></a></div></section>
     </main>
 
-    <footer><a class="logo" href="index.html"><span class="logo-mark"><i></i><i></i><i></i></span> Learning<span>Path</span></a><p>Designed for curious minds. Built for what is next.</p><span>© 2026 LearningPath</span></footer>
+
     <script src="script.js"></script>
+
 </body>
 </html>

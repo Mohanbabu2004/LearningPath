@@ -1,8 +1,7 @@
 function toggleMenu() {
-    const navMenu = document.getElementById("navMenu");
-    navMenu.classList.toggle("active");
-    const menuButton = document.querySelector(".menu-btn");
-    menuButton.setAttribute("aria-expanded", navMenu.classList.contains("active"));
+    const menu = document.getElementById("mobileMenu");
+
+    menu.classList.toggle("active");
 }
 
 function toggleSettingsMenu() {

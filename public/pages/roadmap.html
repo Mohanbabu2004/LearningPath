@@ -380,7 +380,7 @@
 
         <!-- Step 2 -->
 
-        <div class="roadmap-item">
+        <div class="roadmap-item" id="cRoadmapItem">
 
             <div class="roadmap-number">
                 2
@@ -425,17 +425,28 @@
 
                 </div>
 
-                <span class="roadmap-status completed-status">
-                    ✓ Completed
-                </span>
+                <!-- Dynamic C Level Progress Badges -->
+                <div id="cRoadmapLevels" style="margin-top: 18px; padding-top: 15px; border-top: 1px dashed #cbd5e1; display: grid; gap: 10px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; background: #f8fafc; padding: 10px 14px; border-radius: 8px;">
+                        <span><strong>Beginner</strong></span>
+                        <span id="cBeginnerBadge" class="roadmap-status locked-status" style="margin-top: 0;">Not Started</span>
+                    </div>
+
+                    <div style="display: flex; justify-content: space-between; align-items: center; background: #f8fafc; padding: 10px 14px; border-radius: 8px;">
+                        <span><strong>Intermediate</strong></span>
+                        <span id="cIntermediateBadge" class="roadmap-status locked-status" style="margin-top: 0;">🔒 Locked</span>
+                    </div>
+
+                    <div style="display: flex; justify-content: space-between; align-items: center; background: #f8fafc; padding: 10px 14px; border-radius: 8px;">
+                        <span><strong>Advanced</strong></span>
+                        <span id="cAdvancedBadge" class="roadmap-status locked-status" style="margin-top: 0;">🔒 Locked</span>
+                    </div>
+                </div>
 
                 <br>
 
-                <a href="learn/c.html"
-                   class="roadmap-action">
-
-                    Start C →
-                    
+                <a href="quiz.html" class="roadmap-action">
+                    Take C Quiz →
                 </a>
 
             </div>
@@ -952,6 +963,60 @@
 
 
 <script src="../script.js"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const quizResult = JSON.parse(localStorage.getItem("learningPathQuizResult"));
+        const quizProgress = JSON.parse(localStorage.getItem("learningPathProgress"));
+
+        const begBadge = document.getElementById("cBeginnerBadge");
+        const intBadge = document.getElementById("cIntermediateBadge");
+        const advBadge = document.getElementById("cAdvancedBadge");
+
+        if (quizResult && quizResult.language === "C") {
+            if (begBadge) {
+                begBadge.innerHTML = `${quizResult.score} / 100 &nbsp; ${quizResult.passed ? '✅ PASS' : '❌ FAIL'}`;
+                begBadge.className = quizResult.passed ? 'roadmap-status completed-status' : 'roadmap-status locked-status';
+            }
+
+            if (intBadge) {
+                if (quizResult.passed) {
+                    intBadge.innerHTML = '🔓 Unlocked';
+                    intBadge.className = 'roadmap-status current-status';
+                } else {
+                    intBadge.innerHTML = '🔒 Locked';
+                    intBadge.className = 'roadmap-status locked-status';
+                }
+            }
+        }
+
+        if (quizProgress && quizProgress.C) {
+            const cProg = quizProgress.C;
+            if (cProg.result) {
+                if (cProg.result.Beginner === "PASS" && begBadge) {
+                    begBadge.innerHTML = `Beginner: ✅ Completed (${cProg.Beginner || 100}%)`;
+                    begBadge.className = 'roadmap-status completed-status';
+                    if (intBadge) {
+                        intBadge.innerHTML = '🔓 Unlocked';
+                        intBadge.className = 'roadmap-status current-status';
+                    }
+                }
+                if (cProg.result.Intermediate === "PASS" && intBadge) {
+                    intBadge.innerHTML = `Intermediate: ✅ Completed (${cProg.Intermediate || 100}%)`;
+                    intBadge.className = 'roadmap-status completed-status';
+                    if (advBadge) {
+                        advBadge.innerHTML = '🔓 Unlocked';
+                        advBadge.className = 'roadmap-status current-status';
+                    }
+                }
+                if (cProg.result.Advanced === "PASS" && advBadge) {
+                    advBadge.innerHTML = `Advanced: ✅ Completed (${cProg.Advanced || 100}%)`;
+                    advBadge.className = 'roadmap-status completed-status';
+                }
+            }
+        }
+    });
+</script>
 
 </body>
 
