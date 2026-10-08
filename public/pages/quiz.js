@@ -285,9 +285,25 @@ function finishQuiz() {
     );
 
     saveQuizProgress(result);
+    sendQuizToBackend(result);
 
 
     showResult(result);
+}
+
+function sendQuizToBackend(result) {
+    fetch("/api/quiz/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+            userId: "student_1",
+            quizId: `${result.language}_${result.level}`,
+            ...result
+        })
+    })
+    .then(res => res.json())
+    .then(data => console.log("Backend Quiz API Response:", data))
+    .catch(err => console.warn("Backend Quiz Sync (Offline Mode):", err));
 }
 
 

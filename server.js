@@ -20,6 +20,9 @@ app.get("/api/status", (req, res) => {
   });
 });
 
+const quizRoutes = require("./backend/routes/quizRoutes");
+app.use("/api/quiz", quizRoutes);
+
 const server = app.listen(PORT, () => {
   console.log(`LearningPath running on http://localhost:${PORT}`);
 });
