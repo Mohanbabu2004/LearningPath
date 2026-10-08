@@ -26,3 +26,4 @@ VALUES
 ('C', 'Intermediate', 100, 35),
 ('C', 'Advanced', 100, 35)
 ON CONFLICT DO NOTHING;
+

@@ -1,513 +1,321 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Learning Path - Home</title>
-
+    <title>Home Dashboard - LearningPath</title>
     <link rel="stylesheet" href="../style.css">
-</head>
+    <style>
+        body {
+            background: #050816;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+        }
 
+        .dashboard-container {
+            display: flex;
+            min-height: calc(100vh - 90px);
+        }
+
+        /* Sidebar Navigation Menu (Screen 5) */
+        .sidebar {
+            width: 250px;
+            background: #080d20;
+            border-right: 1px solid #1c244b;
+            padding: 25px 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .sidebar a {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 16px;
+            color: #a0aec0;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: 0.2s;
+        }
+
+        .sidebar a:hover, .sidebar a.active {
+            background: #6645ff;
+            color: #ffffff;
+        }
+
+        .sidebar-section-title {
+            color: #64748b;
+            font-size: 11px;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+            margin: 20px 0 5px 12px;
+            text-transform: uppercase;
+        }
+
+        /* Main Content (Screen 4) */
+        .main-dashboard {
+            flex: 1;
+            padding: 35px 40px;
+            max-width: 1100px;
+        }
+
+        .welcome-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .welcome-header h1 {
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        .welcome-header p {
+            color: #94a3b8;
+            font-size: 14px;
+            margin-top: 4px;
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-bottom: 35px;
+        }
+
+        .stat-card {
+            background: #0b1126;
+            border: 1px solid #1c244b;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .stat-card span {
+            color: #94a3b8;
+            font-size: 12px;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .stat-card strong {
+            font-size: 26px;
+            color: #6645ff;
+        }
+
+        /* Continue Learning Box */
+        .continue-card {
+            background: #0b1126;
+            border: 1px solid #1c244b;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 35px;
+        }
+
+        .continue-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .continue-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .course-badge {
+            width: 44px;
+            height: 44px;
+            background: #6645ff;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .progress-bar-bg {
+            height: 10px;
+            background: #1b2547;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 15px 0 8px;
+        }
+
+        .progress-bar-fill {
+            height: 100%;
+            width: 72%;
+            background: linear-gradient(90deg, #6645ff, #20d99a);
+        }
+
+        /* Learning Path Cards */
+        .path-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+
+        .path-card {
+            background: #0b1126;
+            border: 1px solid #1c244b;
+            border-radius: 10px;
+            padding: 18px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .path-card.open {
+            border-color: #20d99a;
+        }
+
+        .status-pill {
+            font-size: 11px;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        .status-pill.open {
+            background: #103f35;
+            color: #20d99a;
+        }
+
+        .status-pill.locked {
+            background: #1e293b;
+            color: #64748b;
+        }
+
+        @media (max-width: 900px) {
+            .dashboard-container { flex-direction: column; }
+            .sidebar { width: 100%; }
+            .stats-grid, .path-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+    </style>
+</head>
 <body>
 
-<header class="navbar">
+    <!-- Header Navbar -->
+    <header class="navbar">
+        <div class="logo">
+            <div class="logo-bars"><span></span><span></span><span></span></div>
+            <span class="logo-white">Learning</span><span class="logo-purple">Path</span>
+        </div>
+        <div class="user-name">Welcome, Mohan!</div>
+    </header>
 
-    <div class="logo">
-        Learning<span>Path</span>
+    <div class="dashboard-container">
+
+        <!-- Navigation Sidebar (Screen 5) -->
+        <aside class="sidebar">
+            <a href="home.html" class="active">🏠 Home</a>
+            <a href="roadmap.html">🗺️ Roadmap</a>
+            <a href="continue-learning.html">▶ Continue Learning</a>
+            <a href="quiz.html">📝 Quiz</a>
+            <a href="learn/code-error-fixer.html">💻 Practice Coding</a>
+            <a href="learn/projects.html">🚀 Projects</a>
+
+            <div class="sidebar-section-title">Settings</div>
+            <a href="learn/profile.html">👤 Profile</a>
+            <a href="settings.html">🎨 Appearance</a>
+            <a href="settings.html">🔔 Notifications</a>
+            <a href="learn/login.html" style="color: #ff5268;">🚪 Logout</a>
+        </aside>
+
+        <!-- Main Dashboard (Screen 4) -->
+        <main class="main-dashboard">
+
+            <div class="welcome-header">
+                <div>
+                    <h1>Welcome, Mohan!</h1>
+                    <p>Continue your learning journey</p>
+                </div>
+            </div>
+
+            <!-- Stats Grid -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span>Overall Progress</span>
+                    <strong>18%</strong>
+                </div>
+                <div class="stat-card">
+                    <span>Courses</span>
+                    <strong>12</strong>
+                </div>
+                <div class="stat-card">
+                    <span>Quiz Completed</span>
+                    <strong>1 / 36</strong>
+                </div>
+                <div class="stat-card">
+                    <span>Projects</span>
+                    <strong>0</strong>
+                </div>
+            </div>
+
+            <!-- Continue Learning -->
+            <div class="continue-card">
+                <span style="color:#64748b; font-size:12px; font-weight:bold; letter-spacing:0.05em;">CONTINUE LEARNING</span>
+                <div class="continue-header" style="margin-top: 15px;">
+                    <div class="continue-info">
+                        <div class="course-badge">C</div>
+                        <div>
+                            <h3 style="font-size:18px;">C Programming</h3>
+                            <p style="color:#94a3b8; font-size:13px;">Beginner - Introduction</p>
+                        </div>
+                    </div>
+                    <a href="learn/c.html" class="primary-btn" style="padding:10px 20px; font-size:13px; text-decoration:none;">Continue →</a>
+                </div>
+
+                <div class="progress-bar-bg">
+                    <div class="progress-bar-fill" id="homeProgressFill"></div>
+                </div>
+                <span style="color:#20d99a; font-size:12px; font-weight:bold;" id="homeProgressText">72%</span>
+            </div>
+
+            <!-- Learning Path Language Cards -->
+            <h2 style="font-size:18px; margin-bottom:15px;">Learning Path</h2>
+            <div class="path-grid">
+                <div class="path-card open">
+                    <strong>C</strong>
+                    <span class="status-pill open">🟢 Open</span>
+                </div>
+                <div class="path-card">
+                    <strong>C++</strong>
+                    <span class="status-pill locked">🔒 Locked</span>
+                </div>
+                <div class="path-card">
+                    <strong>Python</strong>
+                    <span class="status-pill locked">🔒 Locked</span>
+                </div>
+                <div class="path-card">
+                    <strong>JavaScript</strong>
+                    <span class="status-pill locked">🔒 Locked</span>
+                </div>
+            </div>
+
+        </main>
+
     </div>
 
-    <button class="menu-btn" onclick="toggleMenu()">
-        ☰
-    </button>
-
-    <nav id="navMenu">
-
-        <a href="home.html">Home</a>
-
-        <a href="roadmap.html">
-            Roadmap
-        </a>
-
-        <a href="continue-learning.html">
-            Continue
-        </a>
-
-        <a href="quiz.html">
-            Quiz
-        </a>
-
-        <a href="learn/projects.html">
-            Projects
-        </a>
-
-    </nav>
-
-    <a href="learn/profile.html" class="login-btn">
-        Profile
-    </a>
-
-</header>
-
-
-<main>
-
-    <!-- Welcome -->
-
-    <section class="hero">
-
-        <div class="hero-content">
-
-            <div class="badge">
-                👋 Welcome Back
-            </div>
-
-            <h1>
-                Continue Your
-                <span>Learning Journey</span>
-            </h1>
-
-            <p>
-                Learn programming step by step,
-                practice your skills and build projects.
-            </p>
-
-            <div class="hero-buttons">
-
-                <a href="continue-learning.html"
-                   class="primary-btn">
-                    Continue Learning →
-                </a>
-
-                <a href="roadmap.html"
-                   class="secondary-btn">
-                    View Roadmap
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <div class="learning-card">
-
-            <div class="card-header">
-
-                <span>🎯</span>
-
-                <h3>
-                    Your Learning Progress
-                </h3>
-
-            </div>
-
-            <div class="progress-info">
-
-                <span>Overall Progress</span>
-
-                <span>18%</span>
-
-            </div>
-
-            <div class="progress-bar">
-
-                <div class="progress"></div>
-
-            </div>
-
-            <div class="course-list">
-
-                <div class="course completed">
-
-                    <span>✓</span>
-
-                    <div>
-
-                        <strong>
-                            Programming Basics
-                        </strong>
-
-                        <small>
-                            100% Completed
-                        </small>
-
-                    </div>
-
-                </div>
-
-
-                <div class="course completed">
-
-                    <span>✓</span>
-
-                    <div>
-
-                        <strong>
-                            C Programming
-                        </strong>
-
-                        <small>
-                            100% Completed
-                        </small>
-
-                    </div>
-
-                </div>
-
-
-                <div class="course">
-
-                    <span>→</span>
-
-                    <div>
-
-                        <strong>
-                            C++ Programming
-                        </strong>
-
-                        <small>
-                            30% Completed
-                        </small>
-
-                    </div>
-
-                </div>
-
-
-                <div class="course locked">
-
-                    <span>🔒</span>
-
-                    <div>
-
-                        <strong>
-                            Python
-                        </strong>
-
-                        <small>
-                            Not Started
-                        </small>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- Quick Actions -->
-
-    <section class="features">
-
-        <div class="section-title">
-
-            <span>QUICK ACTIONS</span>
-
-            <h2>
-                What Do You Want to Do?
-            </h2>
-
-            <p>
-                Choose your next learning activity.
-            </p>
-
-        </div>
-
-
-        <div class="feature-grid">
-
-
-            <a href="continue-learning.html"
-               class="feature-card">
-
-                <div class="icon">
-                    📖
-                </div>
-
-                <h3>
-                    Continue Learning
-                </h3>
-
-                <p>
-                    Continue your current
-                    programming course.
-                </p>
-
-            </a>
-
-
-            <a href="roadmap.html"
-               class="feature-card">
-
-                <div class="icon">
-                    🗺️
-                </div>
-
-                <h3>
-                    Learning Roadmap
-                </h3>
-
-                <p>
-                    Follow a structured
-                    programming roadmap.
-                </p>
-
-            </a>
-
-
-            <a href="quiz.html"
-               class="feature-card">
-
-                <div class="icon">
-                    📝
-                </div>
-
-                <h3>
-                    Take a Quiz
-                </h3>
-
-                <p>
-                    Test your programming
-                    knowledge.
-                </p>
-
-            </a>
-
-
-            <a href="learn/projects.html"
-               class="feature-card">
-
-                <div class="icon">
-                    🚀
-                </div>
-
-                <h3>
-                    Build Projects
-                </h3>
-
-                <p>
-                    Practice by building
-                    real projects.
-                </p>
-
-            </a>
-
-
-            <a href="learn/ai-tutor.html"
-               class="feature-card">
-
-                <div class="icon">
-                    🤖
-                </div>
-
-                <h3>
-                    AI Tutor
-                </h3>
-
-                <p>
-                    Ask questions and
-                    learn with AI.
-                </p>
-
-            </a>
-
-
-            <a href="learn/progress.html"
-               class="feature-card">
-
-                <div class="icon">
-                    📊
-                </div>
-
-                <h3>
-                    My Progress
-                </h3>
-
-                <p>
-                    Check your complete
-                    learning progress.
-                </p>
-
-            </a>
-
-        </div>
-
-    </section>
-
-
-    <!-- Programming Languages -->
-
-    <section class="languages">
-
-        <div class="section-title">
-
-            <span>LEARN PROGRAMMING</span>
-
-            <h2>
-                Choose a Language
-            </h2>
-
-            <p>
-                Start learning from beginner level.
-            </p>
-
-        </div>
-
-
-        <div class="language-grid">
-
-
-            <a href="learn/c.html"
-               class="language-card">
-
-                <strong>C</strong>
-
-                <span>
-                    Beginner
-                </span>
-
-            </a>
-
-
-            <a href="learn/cpp.html"
-               class="language-card">
-
-                <strong>C++</strong>
-
-                <span>
-                    Beginner
-                </span>
-
-            </a>
-
-
-            <a href="learn/python.html"
-               class="language-card">
-
-                <strong>Python</strong>
-
-                <span>
-                    Beginner
-                </span>
-
-            </a>
-
-
-            <a href="learn/java.html"
-               class="language-card">
-
-                <strong>Java</strong>
-
-                <span>
-                    Intermediate
-                </span>
-
-            </a>
-
-
-            <a href="learn/javascript.html"
-               class="language-card">
-
-                <strong>JavaScript</strong>
-
-                <span>
-                    Intermediate
-                </span>
-
-            </a>
-
-
-            <a href="learn/html-css.html"
-               class="language-card">
-
-                <strong>
-                    HTML / CSS
-                </strong>
-
-                <span>
-                    Beginner
-                </span>
-
-            </a>
-
-
-            <a href="learn/sql.html"
-               class="language-card">
-
-                <strong>SQL</strong>
-
-                <span>
-                    Beginner
-                </span>
-
-            </a>
-
-
-            <a href="learn/php.html"
-               class="language-card">
-
-                <strong>PHP</strong>
-
-                <span>
-                    Intermediate
-                </span>
-
-            </a>
-
-        </div>
-
-    </section>
-
-
-    <!-- AI Section -->
-
-    <section class="cta">
-
-        <h2>
-            🤖 Learn With AI
-        </h2>
-
-        <p>
-            Get help understanding code,
-            fixing errors and generating programs.
-        </p>
-
-        <a href="learn/ai-tutor.html"
-           class="primary-btn">
-
-            Open AI Tutor →
-
-        </a>
-
-    </section>
-
-</main>
-
-
-<footer>
-
-    <div class="footer-logo">
-        Learning<span>Path</span>
-    </div>
-
-    <p>
-        Learn Coding the Easy Way.
-    </p>
-
-    <p class="copyright">
-        © 2026 Learning Path. All Rights Reserved.
-    </p>
-
-</footer>
-
-
-<script src="../script.js"></script>
-
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const quizResult = JSON.parse(localStorage.getItem("learningPathQuizResult"));
+            if (quizResult && quizResult.language === "C") {
+                const fill = document.getElementById("homeProgressFill");
+                const text = document.getElementById("homeProgressText");
+                if (fill && text) {
+                    fill.style.width = `${quizResult.percentage}%`;
+                    text.textContent = `${quizResult.percentage}%`;
+                }
+            }
+        });
+    </script>
 </body>
-
 </html>
