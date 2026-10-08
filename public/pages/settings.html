@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Settings - LearningPath</title>
-    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../style.css">
     <style>
         :root {
             --bg-color: #0b0f19;
@@ -345,11 +345,11 @@
 
     <!-- Top Navigation Header -->
     <header class="top-nav">
-        <a href="../home.html" class="logo">
+        <a href="home.html" class="logo">
             🚀 LearningPath
         </a>
         <div class="user-nav-info">
-            <a href="profile.html" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 10px;">
+            <a href="learn/profile.html" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 10px;">
                 <div class="user-avatar">M</div>
                 <span style="font-weight: 500;">Mohan</span>
             </a>
@@ -542,7 +542,7 @@
         function confirmLogout() {
             if (confirm('Are you sure you want to logout?')) {
                 localStorage.removeItem('learningPathUser');
-                window.location.href = 'login.html';
+                window.location.href = 'learn/login.html';
             }
         }
 
