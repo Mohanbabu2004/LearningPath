@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - LearningPath</title>
+    <link rel="stylesheet" href="../../style.css">
+    <style>
+        :root {
+            --bg-dark: #0b0f19;
+            --card-bg: rgba(22, 28, 45, 0.85);
+            --border-color: rgba(255, 255, 255, 0.1);
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --accent-primary: #6366f1;
+            --accent-green: #10b981;
+            --accent-red: #ef4444;
+            --accent-amber: #f59e0b;
+            --sidebar-width: 250px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Top Header */
+        .admin-header {
+            background: rgba(17, 24, 39, 0.95);
+            backdrop-filter: blur(12px);
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 20px;
+            font-weight: bold;
+            color: var(--accent-primary);
+        }
+
+        .admin-profile {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .admin-avatar {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #6366f1, #a855f7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: white;
+        }
+
+        /* Dashboard Layout */
+        .admin-container {
+            display: flex;
+            flex: 1;
+        }
+
+        /* Sidebar Navigation */
+        .admin-sidebar {
+            width: var(--sidebar-width);
+            background: rgba(17, 24, 39, 0.8);
+            border-right: 1px solid var(--border-color);
+            padding: 20px 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .sidebar-section-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-muted);
+            margin: 15px 10px 5px;
+            font-weight: bold;
+        }
+
+        .nav-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 15px;
+            border-radius: 10px;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .nav-item:hover, .nav-item.active {
+            background: rgba(99, 102, 241, 0.15);
+            color: #818cf8;
+            border-left: 3px solid var(--accent-primary);
+        }
+
+        /* Main Content */
+        .admin-main {
+            flex: 1;
+            padding: 30px;
+            overflow-y: auto;
+        }
+
+        .page-title-box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .page-title-box h1 {
+            font-size: 26px;
+            font-weight: 700;
+        }
+
+        /* Metrics Cards */
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .metric-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 24px;
+            backdrop-filter: blur(10px);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .metric-info h3 {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .metric-info .value {
+            font-size: 30px;
+            font-weight: 800;
+            color: var(--text-main);
+        }
+
+        .metric-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+
+        .icon-users { background: rgba(99, 102, 241, 0.15); color: #818cf8; }
+        .icon-completed { background: rgba(16, 185, 129, 0.15); color: #34d399; }
+        .icon-progress { background: rgba(245, 158, 11, 0.15); color: #fbbf24; }
+        .icon-notstarted { background: rgba(239, 68, 68, 0.15); color: #f87171; }
+
+        /* Tables & Cards */
+        .content-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 24px;
+            backdrop-filter: blur(10px);
+            margin-bottom: 30px;
+        }
+
+        .card-title-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .card-title-bar h2 {
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        /* Search input */
+        .search-box {
+            padding: 8px 14px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            background: rgba(0, 0, 0, 0.2);
+            color: white;
+            outline: none;
+            width: 250px;
+        }
+
+        /* Table Design */
+        .table-responsive {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        .data-table th, .data-table td {
+            padding: 14px 18px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .data-table th {
+            color: var(--text-muted);
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-weight: 600;
+        }
+
+        .data-table tbody tr:hover {
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        /* Status Badges */
+        .badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .badge-pass { background: rgba(16, 185, 129, 0.2); color: #34d399; }
+        .badge-fail { background: rgba(239, 68, 68, 0.2); color: #f87171; }
+        .badge-active { background: rgba(99, 102, 241, 0.2); color: #818cf8; }
+        .badge-inactive { background: rgba(156, 163, 175, 0.2); color: #9ca3af; }
+
+        /* Action Buttons */
+        .btn {
+            padding: 8px 16px;
+            border-radius: 8px;
+            border: none;
+            font-weight: 600;
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .btn-primary { background: #6366f1; color: white; }
+        .btn-primary:hover { background: #4f46e5; }
+        .btn-sm { padding: 4px 10px; font-size: 12px; }
+
+        /* Tab panels */
+        .tab-panel {
+            display: none;
+        }
+        .tab-panel.active {
+            display: block;
+        }
+
+        /* Grid for Modules */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .module-item-card {
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        @media (max-width: 900px) {
+            .metrics-grid { grid-template-columns: repeat(2, 1fr); }
+            .admin-sidebar { width: 70px; }
+            .sidebar-text, .sidebar-section-label { display: none; }
+        }
+        @media (max-width: 600px) {
+            .metrics-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="admin-header">
+        <div class="header-title">
+            <span>🛡️</span> LearningPath Admin Portal
+        </div>
+        <div class="admin-profile">
+            <div class="admin-avatar">A</div>
+            <div>
+                <div style="font-weight: 600; font-size: 14px;">Administrator</div>
+                <div style="font-size: 12px; color: var(--text-muted);">admin@learningpath.com</div>
+            </div>
+            <a href="../home.html" style="margin-left: 20px; color: #ef4444; text-decoration: none; font-size: 13px; font-weight: 600;">Exit Portal</a>
+        </div>
+    </header>
+
+    <div class="admin-container">
+
+        <!-- Sidebar Navigation -->
+        <aside class="admin-sidebar">
+            <div class="sidebar-section-label">Overview</div>
+            <a href="#" class="nav-item active" onclick="switchTab('dashboardTab', this)">
+                <span>📊</span> <span class="sidebar-text">Dashboard</span>
+            </a>
+
+            <div class="sidebar-section-label">Management</div>
+            <a href="#" class="nav-item" onclick="switchTab('usersTab', this)">
+                <span>👥</span> <span class="sidebar-text">Users</span>
+            </a>
+            <a href="#" class="nav-item" onclick="switchTab('coursesTab', this)">
+                <span>📚</span> <span class="sidebar-text">Courses</span>
+            </a>
+            <a href="#" class="nav-item" onclick="switchTab('lessonsTab', this)">
+                <span>📖</span> <span class="sidebar-text">Lessons</span>
+            </a>
+            <a href="#" class="nav-item" onclick="switchTab('questionsTab', this)">
+                <span>❓</span> <span class="sidebar-text">Questions</span>
+            </a>
+            <a href="#" class="nav-item" onclick="switchTab('quizzesTab', this)">
+                <span>📝</span> <span class="sidebar-text">Quizzes</span>
+            </a>
+            <a href="#" class="nav-item" onclick="switchTab('projectsTab', this)">
+                <span>🚀</span> <span class="sidebar-text">Projects</span>
+            </a>
+
+            <div class="sidebar-section-label">Insights</div>
+            <a href="#" class="nav-item" onclick="switchTab('progressTab', this)">
+                <span>📈</span> <span class="sidebar-text">Progress</span>
+            </a>
+            <a href="#" class="nav-item" onclick="switchTab('analyticsTab', this)">
+                <span>📉</span> <span class="sidebar-text">Analytics</span>
+            </a>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="admin-main">
+
+            <!-- TAB 1: Dashboard Overview -->
+            <div id="dashboardTab" class="tab-panel active">
+                <div class="page-title-box">
+                    <div>
+                        <h1>Admin Dashboard</h1>
+                        <p style="color: var(--text-muted); font-size: 14px;">Real-time system overview and student statistics</p>
+                    </div>
+                    <button class="btn btn-primary" onclick="alert('Exporting Report...')">📥 Export Report</button>
+                </div>
+
+                <!-- Metrics Grid (As specified) -->
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-info">
+                            <h3>Total Users</h3>
+                            <div class="value">125</div>
+                        </div>
+                        <div class="metric-icon icon-users">👥</div>
+                    </div>
+
+                    <div class="metric-card">
+                        <div class="metric-info">
+                            <h3>Completed</h3>
+                            <div class="value">24</div>
+                        </div>
+                        <div class="metric-icon icon-completed">✅</div>
+                    </div>
+
+                    <div class="metric-card">
+                        <div class="metric-info">
+                            <h3>In Progress</h3>
+                            <div class="value">61</div>
+                        </div>
+                        <div class="metric-icon icon-progress">⏳</div>
+                    </div>
+
+                    <div class="metric-card">
+                        <div class="metric-info">
+                            <h3>Not Started</h3>
+                            <div class="value">40</div>
+                        </div>
+                        <div class="metric-icon icon-notstarted">💤</div>
+                    </div>
+                </div>
+
+                <!-- Users Table (As specified) -->
+                <div class="content-card">
+                    <div class="card-title-bar">
+                        <h2>Recent User Performances</h2>
+                        <input type="text" class="search-box" placeholder="Search user..." onkeyup="filterUserTable(this.value)">
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="data-table" id="usersTable">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Gender</th>
+                                    <th>Quiz Score</th>
+                                    <th>Result</th>
+                                    <th>Status</th>
+                                    <th>Joined Date</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="font-weight: 600;">Mohan</td>
+                                    <td>Male</td>
+                                    <td><strong>72/100</strong></td>
+                                    <td><span class="badge badge-pass">PASS</span></td>
+                                    <td><span class="badge badge-active">Active</span></td>
+                                    <td>08 Oct 2026</td>
+                                    <td><button class="btn btn-sm btn-primary" onclick="alert('Viewing Mohan Profile')">View</button></td>
+                                </tr>
+                                <tr>
+                                    <td style="font-weight: 600;">Ravi</td>
+                                    <td>Male</td>
+                                    <td><strong>28/100</strong></td>
+                                    <td><span class="badge badge-fail">FAIL</span></td>
+                                    <td><span class="badge badge-active">Active</span></td>
+                                    <td>08 Oct 2026</td>
+                                    <td><button class="btn btn-sm btn-primary" onclick="alert('Viewing Ravi Profile')">View</button></td>
+                                </tr>
+                                <tr>
+                                    <td style="font-weight: 600;">Anil</td>
+                                    <td>Male</td>
+                                    <td><strong>100/100</strong></td>
+                                    <td><span class="badge badge-pass">PASS</span></td>
+                                    <td><span class="badge badge-active">Active</span></td>
+                                    <td>07 Oct 2026</td>
+                                    <td><button class="btn btn-sm btn-primary" onclick="alert('Viewing Anil Profile')">View</button></td>
+                                </tr>
+                                <tr>
+                                    <td style="font-weight: 600;">Priya</td>
+                                    <td>Female</td>
+                                    <td><strong>85/100</strong></td>
+                                    <td><span class="badge badge-pass">PASS</span></td>
+                                    <td><span class="badge badge-active">Active</span></td>
+                                    <td>06 Oct 2026</td>
+                                    <td><button class="btn btn-sm btn-primary" onclick="alert('Viewing Priya Profile')">View</button></td>
+                                </tr>
+                                <tr>
+                                    <td style="font-weight: 600;">Suresh</td>
+                                    <td>Male</td>
+                                    <td><strong>45/100</strong></td>
+                                    <td><span class="badge badge-pass">PASS</span></td>
+                                    <td><span class="badge badge-inactive">Inactive</span></td>
+                                    <td>05 Oct 2026</td>
+                                    <td><button class="btn btn-sm btn-primary" onclick="alert('Viewing Suresh Profile')">View</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 2: Users Management -->
+            <div id="usersTab" class="tab-panel">
+                <div class="page-title-box">
+                    <h1>User Management</h1>
+                    <button class="btn btn-primary" onclick="alert('Add New User modal')">➕ Add User</button>
+                </div>
+                <div class="content-card">
+                    <p style="color: var(--text-muted); margin-bottom: 15px;">Manage 125 registered platform learners, roles, and account permissions.</p>
+                    <table class="data-table">
+                        <thead>
+                            <tr><th>ID</th><th>User</th><th>Email</th><th>Role</th><th>Status</th><th>Actions</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>USR-101</td><td>Mohan</td><td>mohan@example.com</td><td>Student</td><td><span class="badge badge-active">Active</span></td><td><button class="btn btn-sm btn-primary">Edit</button></td></tr>
+                            <tr><td>USR-102</td><td>Ravi</td><td>ravi@example.com</td><td>Student</td><td><span class="badge badge-active">Active</span></td><td><button class="btn btn-sm btn-primary">Edit</button></td></tr>
+                            <tr><td>USR-103</td><td>Anil</td><td>anil@example.com</td><td>Student</td><td><span class="badge badge-active">Active</span></td><td><button class="btn btn-sm btn-primary">Edit</button></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- TAB 3: Courses Management -->
+            <div id="coursesTab" class="tab-panel">
+                <div class="page-title-box">
+                    <h1>Courses Management</h1>
+                    <button class="btn btn-primary" onclick="alert('Add New Course modal')">➕ Add Course</button>
+                </div>
+                <div class="grid-2">
+                    <div class="module-item-card"><div><strong>C Programming</strong><br><small style="color:var(--text-muted);">10 Lessons • 300 Questions</small></div><span class="badge badge-pass">Open</span></div>
+                    <div class="module-item-card"><div><strong>C++ Programming</strong><br><small style="color:var(--text-muted);">10 Lessons • Locked</small></div><span class="badge badge-inactive">Locked</span></div>
+                    <div class="module-item-card"><div><strong>Python</strong><br><small style="color:var(--text-muted);">10 Lessons • Locked</small></div><span class="badge badge-inactive">Locked</span></div>
+                    <div class="module-item-card"><div><strong>TypeScript</strong><br><small style="color:var(--text-muted);">10 Lessons • Locked</small></div><span class="badge badge-inactive">Locked</span></div>
+                    <div class="module-item-card"><div><strong>JavaScript</strong><br><small style="color:var(--text-muted);">10 Lessons • Locked</small></div><span class="badge badge-inactive">Locked</span></div>
+                    <div class="module-item-card"><div><strong>Java</strong><br><small style="color:var(--text-muted);">10 Lessons • Locked</small></div><span class="badge badge-inactive">Locked</span></div>
+                </div>
+            </div>
+
+            <!-- TAB 4: Lessons Management -->
+            <div id="lessonsTab" class="tab-panel">
+                <div class="page-title-box">
+                    <h1>Lessons Management</h1>
+                    <button class="btn btn-primary" onclick="alert('Create Lesson modal')">➕ Create Lesson</button>
+                </div>
+                <div class="content-card">
+                    <h3>C Beginner Modules (1 - 10)</h3>
+                    <ul style="list-style: none; margin-top: 15px; display: grid; gap: 10px;">
+                        <li style="padding: 10px; background: rgba(0,0,0,0.2); border-radius: 8px;">1. Introduction to C</li>
+                        <li style="padding: 10px; background: rgba(0,0,0,0.2); border-radius: 8px;">2. Variables & Declarations</li>
+                        <li style="padding: 10px; background: rgba(0,0,0,0.2); border-radius: 8px;">3. Data Types</li>
+                        <li style="padding: 10px; background: rgba(0,0,0,0.2); border-radius: 8px;">4. Operators & Expressions</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- TAB 5: Questions Management -->
+            <div id="questionsTab" class="tab-panel">
+                <div class="page-title-box">
+                    <h1>Questions Database</h1>
+                    <button class="btn btn-primary" onclick="alert('Add Question modal')">➕ Add Question</button>
+                </div>
+                <div class="content-card">
+                    <p style="color: var(--text-muted); margin-bottom: 15px;">Total 300 Unique C Questions configured across Beginner, Intermediate, and Advanced levels.</p>
+                    <table class="data-table">
+                        <thead><tr><th>Q.ID</th><th>Language</th><th>Level</th><th>Question Preview</th><th>Answer</th></tr></thead>
+                        <tbody>
+                            <tr><td>Q-101</td><td>C</td><td>Beginner</td><td>Which keyword declares an integer in C?</td><td>int</td></tr>
+                            <tr><td>Q-102</td><td>C</td><td>Beginner</td><td>What is the format specifier for float?</td><td>%f</td></tr>
+                            <tr><td>Q-103</td><td>C</td><td>Intermediate</td><td>What does malloc() return on failure?</td><td>NULL</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- TAB 6: Quizzes Management -->
+            <div id="quizzesTab" class="tab-panel">
+                <div class="page-title-box">
+                    <h1>Quiz Engine Settings</h1>
+                </div>
+                <div class="content-card">
+                    <h3>Passing Rules</h3>
+                    <div style="margin-top: 15px; display: grid; gap: 15px; max-width: 400px;">
+                        <div>
+                            <label style="display:block; margin-bottom: 5px; color: var(--text-muted);">Pass Score Threshold</label>
+                            <input type="number" class="search-box" value="35" style="width: 100%;">
+                        </div>
+                        <div>
+                            <label style="display:block; margin-bottom: 5px; color: var(--text-muted);">Total Questions Per Quiz</label>
+                            <input type="number" class="search-box" value="100" style="width: 100%;">
+                        </div>
+                        <button class="btn btn-primary">Save Rules</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 7: Projects Management -->
+            <div id="projectsTab" class="tab-panel">
+                <div class="page-title-box">
+                    <h1>Projects Management</h1>
+                    <button class="btn btn-primary">➕ New Project</button>
+                </div>
+                <div class="grid-2">
+                    <div class="module-item-card"><div><strong>Simple Calculator</strong><br><small style="color:var(--text-muted);">Easy • C Language</small></div><span class="badge badge-pass">Active</span></div>
+                    <div class="module-item-card"><div><strong>Student Grade System</strong><br><small style="color:var(--text-muted);">Medium • C Language</small></div><span class="badge badge-pass">Active</span></div>
+                </div>
+            </div>
+
+            <!-- TAB 8: Progress Management -->
+            <div id="progressTab" class="tab-panel">
+                <div class="page-title-box">
+                    <h1>Student Progress Tracker</h1>
+                </div>
+                <div class="content-card">
+                    <p style="color: var(--text-muted);">Overall platform completion rate: <strong>18% Average Progress</strong>.</p>
+                </div>
+            </div>
+
+            <!-- TAB 9: Analytics -->
+            <div id="analyticsTab" class="tab-panel">
+                <div class="page-title-box">
+                    <h1>Platform Analytics</h1>
+                </div>
+                <div class="content-card">
+                    <h3>Quiz Pass vs Fail Ratio</h3>
+                    <div style="display: flex; gap: 20px; margin-top: 20px; align-items: center;">
+                        <div style="flex:1; height: 20px; background: rgba(255,255,255,0.1); border-radius: 10px; overflow: hidden; display: flex;">
+                            <div style="width: 72%; background: #10b981;" title="72% Passed"></div>
+                            <div style="width: 28%; background: #ef4444;" title="28% Failed"></div>
+                        </div>
+                        <div><span style="color:#10b981; font-weight:bold;">72% Pass</span> | <span style="color:#ef4444; font-weight:bold;">28% Fail</span></div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <script>
+        function switchTab(tabId, element) {
+            document.querySelectorAll('.tab-panel').forEach(panel => panel.classList.remove('active'));
+            document.querySelectorAll('.nav-item').forEach(item => item.classList.remove('active'));
+            
+            document.getElementById(tabId).classList.add('active');
+            element.classList.add('active');
+        }
+
+        function filterUserTable(query) {
+            const trs = document.querySelectorAll('#usersTable tbody tr');
+            query = query.toLowerCase();
+            trs.forEach(tr => {
+                const text = tr.innerText.toLowerCase();
+                tr.style.display = text.includes(query) ? '' : 'none';
+            });
+        }
+    </script>
+</body>
+</html>
