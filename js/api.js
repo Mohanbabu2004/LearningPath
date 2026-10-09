@@ -13,3 +13,4 @@ async function fetchAPI(endpoint, options = {}) {
         return { success: false, message: error.message };
     }
 }
+

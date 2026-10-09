@@ -2,162 +2,484 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
-    <title>LearningPath - Learn Code the Intelligent Way</title>
-
-    <meta name="description"
-          content="LearningPath is an intelligent learning platform to learn programming, AI and technology step by step.">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearningPath - Learn Programming the Easy Way</title>
+    <meta name="description" content="Interactive lessons, AI-powered tools, quizzes and real projects to help you become a skilled developer.">
     <link rel="stylesheet" href="style.css">
-</head>
+    <style>
+        /* Exact Landing Page Styles matching media_1791552973045_d62bc1aa.jpg */
+        :root {
+            --bg-dark: #070913;
+            --navbar-bg: rgba(9, 12, 26, 0.95);
+            --pink-gradient: linear-gradient(135deg, #d946ef, #8b5cf6);
+            --cyan-purple-gradient: linear-gradient(135deg, #38bdf8, #c084fc);
+            --glass-bg: rgba(18, 24, 48, 0.7);
+            --glass-border: rgba(99, 102, 241, 0.3);
+            --text-main: #ffffff;
+            --text-sub: #94a3b8;
+        }
 
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(217, 70, 239, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(56, 189, 248, 0.15) 0%, transparent 40%);
+        }
+
+        /* Top Navbar */
+        .navbar-main {
+            height: 80px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 4%;
+            background: var(--navbar-bg);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(12px);
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .logo-bars {
+            display: flex;
+            align-items: flex-end;
+            gap: 3px;
+            height: 28px;
+        }
+
+        .logo-bar {
+            width: 6px;
+            border-radius: 4px;
+        }
+
+        .bar-1 { height: 16px; background: #38bdf8; }
+        .bar-2 { height: 22px; background: #fb923c; }
+        .bar-3 { height: 28px; background: #facc15; }
+
+        .logo-text-white {
+            font-size: 26px;
+            font-weight: 800;
+            color: #ffffff;
+            letter-spacing: -0.5px;
+        }
+
+        .logo-text-gradient {
+            font-size: 26px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #ec4899, #a855f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Nav Links */
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-sub);
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+            transition: color 0.2s ease;
+            position: relative;
+            padding: 8px 0;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: #ffffff;
+        }
+
+        .nav-links a.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: #38bdf8;
+            border-radius: 2px;
+        }
+
+        /* Nav Action Buttons */
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .btn-login {
+            padding: 10px 22px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.05);
+            color: #ffffff;
+            font-weight: 600;
+            font-size: 14px;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .btn-login:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.4);
+        }
+
+        .btn-create-account {
+            padding: 11px 24px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #d946ef, #8b5cf6);
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 14px;
+            text-decoration: none;
+            box-shadow: 0 4px 20px rgba(217, 70, 239, 0.4);
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-create-account:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(217, 70, 239, 0.6);
+        }
+
+        /* Mobile Hamburger */
+        .mobile-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        /* Hero Main Section */
+        .hero-container {
+            max-width: 1300px;
+            margin: 40px auto;
+            width: 92%;
+            display: grid;
+            grid-template-columns: 1.1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        /* Left Hero Content */
+        .hero-left {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .eyebrow-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 18px;
+            border-radius: 30px;
+            background: rgba(30, 41, 59, 0.8);
+            border: 1px solid rgba(99, 102, 241, 0.4);
+            color: #38bdf8;
+            font-size: 14px;
+            font-weight: 600;
+            width: fit-content;
+        }
+
+        .hero-headline {
+            font-size: 54px;
+            font-weight: 800;
+            line-height: 1.15;
+            color: #ffffff;
+            letter-spacing: -1px;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #38bdf8, #d946ef);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-subtitle {
+            font-size: 18px;
+            color: var(--text-sub);
+            line-height: 1.6;
+            max-width: 540px;
+        }
+
+        /* Feature bullets */
+        .features-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-top: 10px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            color: #e2e8f0;
+        }
+
+        .feature-icon {
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            background: rgba(99, 102, 241, 0.15);
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            color: #38bdf8;
+        }
+
+        /* Right Hero Graphic */
+        .hero-right {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-img {
+            width: 100%;
+            max-width: 580px;
+            border-radius: 20px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+            object-fit: contain;
+        }
+
+        /* Bottom Stats Glass Banner */
+        .stats-banner {
+            max-width: 1300px;
+            margin: 20px auto 50px;
+            width: 92%;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 24px 35px;
+            backdrop-filter: blur(16px);
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .stat-box {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .stat-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 14px;
+            background: rgba(217, 70, 239, 0.15);
+            border: 1px solid rgba(217, 70, 239, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+
+        .stat-info .stat-number {
+            font-size: 22px;
+            font-weight: 800;
+            color: #ffffff;
+        }
+
+        .stat-info .stat-label {
+            font-size: 13px;
+            color: var(--text-sub);
+            font-weight: 500;
+        }
+
+        @media (max-width: 1024px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .eyebrow-badge, .features-list {
+                margin: auto;
+            }
+            .hero-subtitle {
+                margin: auto;
+            }
+            .stats-banner {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .nav-links {
+                display: none;
+            }
+            .mobile-btn {
+                display: block;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .hero-headline { font-size: 38px; }
+            .features-list { grid-template-columns: 1fr; }
+            .stats-banner { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
 <body>
 
-    <!-- NAVBAR -->
-    <header class="navbar">
-
-        <div class="logo">
+    <!-- TOP NAVIGATION NAVBAR -->
+    <header class="navbar-main">
+        <a href="index.html" class="logo-container">
             <div class="logo-bars">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span class="logo-bar bar-1"></span>
+                <span class="logo-bar bar-2"></span>
+                <span class="logo-bar bar-3"></span>
             </div>
-
-            <span class="logo-white">Learning</span>
-            <span class="logo-purple">Path</span>
-        </div>
-
-        <div class="user-name">
-            R. MOHAN BABU
-        </div>
-
-        <button class="menu-btn" onclick="toggleMenu()">
-            ☰
-        </button>
-
-    </header>
-
-
-    <!-- MOBILE MENU -->
-    <nav id="mobileMenu" class="mobile-menu">
-
-        <a href="index.html">Home</a>
-        <a href="pages/roadmap.html">Roadmap</a>
-        <a href="pages/continue-learning.html">
-            Continue Learning
+            <span class="logo-text-white">Learning</span>
+            <span class="logo-text-gradient">Path</span>
         </a>
 
-        <a href="pages/learn/c.html">C Programming</a>
-        <a href="pages/learn/python.html">Python</a>
-        <a href="pages/learn/java.html">Java</a>
+        <!-- Center Links -->
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="pages/courses.html">Courses</a></li>
+            <li><a href="pages/ai-tools.html">AI Tools</a></li>
+            <li><a href="pages/projects.html">Projects</a></li>
+            <li><a href="pages/quiz.html">Quiz</a></li>
+            <li><a href="pages/roadmap.html">Roadmap</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
 
-    </nav>
+        <!-- Right Action Buttons -->
+        <div class="nav-actions">
+            <a href="pages/login.html" class="btn-login">Login</a>
+            <a href="pages/signup.html" class="btn-create-account">Create Account</a>
+        </div>
 
+        <button class="mobile-btn" onclick="toggleMobileMenu()">☰</button>
+    </header>
 
-    <!-- HERO SECTION -->
-    <main class="hero">
-
-        <div class="glow glow-one"></div>
-        <div class="glow glow-two"></div>
-
-        <section class="hero-content">
-
-            <div class="eyebrow">
-                <span class="dot"></span>
-                THE INTELLIGENT WAY TO LEARN CODE
+    <!-- MAIN HERO SECTION -->
+    <main class="hero-container">
+        <!-- Left Content -->
+        <section class="hero-left">
+            <div class="eyebrow-badge">
+                🎓 Learn • Practice • Build • Grow
             </div>
 
-
-            <h1>
-                Turn curiosity
-                <br>
-                into <span>capability.</span>
+            <h1 class="hero-headline">
+                Learn<br>
+                Programming<br>
+                <span class="gradient-text">the Easy Way</span>
             </h1>
 
-
-            <p class="hero-description">
-                A guided learning studio where human creativity
-                meets AI. Follow a path, ask better questions,
-                and build skills that move with the world.
+            <p class="hero-subtitle">
+                Interactive lessons, AI-powered tools, quizzes and real projects to help you become a skilled developer.
             </p>
 
-
-            <div class="hero-buttons">
-
-                <a href="pages/roadmap.html"
-                   class="primary-btn">
-                    Start your path
-                    <span>↗</span>
-                </a>
-
-                <a href="pages/roadmap.html"
-                   class="secondary-btn">
-                    Explore the roadmap
-                    <span>→</span>
-                </a>
-
-            </div>
-
-
-            <!-- LEARNERS -->
-            <div class="learners">
-
-                <div class="avatars">
-
-                    <div class="avatar avatar-one">
-                        AK
-                    </div>
-
-                    <div class="avatar avatar-two">
-                        MR
-                    </div>
-
-                    <div class="avatar avatar-three">
-                        +
-                    </div>
-
+            <div class="features-list">
+                <div class="feature-item">
+                    <div class="feature-icon">📖</div>
+                    <span>Step-by-step Learning</span>
                 </div>
-
-                <div class="learner-text">
-                    <strong>12,000+</strong>
-                    <small>curious minds learning daily</small>
+                <div class="feature-item">
+                    <div class="feature-icon">🧠</div>
+                    <span>AI Tutor & Code Helper</span>
                 </div>
-
+                <div class="feature-item">
+                    <div class="feature-icon">&lt;/&gt;</div>
+                    <span>Practice & Quizzes</span>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🚀</div>
+                    <span>Build Real Projects</span>
+                </div>
             </div>
-
-
-            <!-- AI STATUS -->
-            <div class="ai-status">
-
-                <span class="status-dot"></span>
-
-                <span>AI companion</span>
-
-                <strong>online</strong>
-
-            </div>
-
-
-            <!-- DECORATIVE ORB -->
-            <div class="orb-area">
-
-                <div class="orb"></div>
-
-                <div class="orbit orbit-one"></div>
-                <div class="orbit orbit-two"></div>
-                <div class="orbit orbit-three"></div>
-
-            </div>
-
         </section>
 
+        <!-- Right Hero Graphic -->
+        <section class="hero-right">
+            <img src="assets/images/learning-hero.png" alt="LearningPath 3D Character Illustration" class="hero-img">
+        </section>
     </main>
 
+    <!-- BOTTOM STATS BANNER -->
+    <section class="stats-banner">
+        <div class="stat-box">
+            <div class="stat-icon" style="background: rgba(168, 85, 247, 0.15); border-color: rgba(168, 85, 247, 0.3);">👥</div>
+            <div class="stat-info">
+                <div class="stat-number">50K+</div>
+                <div class="stat-label">Happy Learners</div>
+            </div>
+        </div>
+
+        <div class="stat-box">
+            <div class="stat-icon" style="background: rgba(56, 189, 248, 0.15); border-color: rgba(56, 189, 248, 0.3);">📖</div>
+            <div class="stat-info">
+                <div class="stat-number">100+</div>
+                <div class="stat-label">Interactive Lessons</div>
+            </div>
+        </div>
+
+        <div class="stat-box">
+            <div class="stat-icon" style="background: rgba(236, 72, 153, 0.15); border-color: rgba(236, 72, 153, 0.3);">&lt;/&gt;</div>
+            <div class="stat-info">
+                <div class="stat-number">AI Powered</div>
+                <div class="stat-label">Code Tools</div>
+            </div>
+        </div>
+
+        <div class="stat-box">
+            <div class="stat-icon" style="background: rgba(250, 204, 21, 0.15); border-color: rgba(250, 204, 21, 0.3);">🏆</div>
+            <div class="stat-info">
+                <div class="stat-number">500+</div>
+                <div class="stat-label">Practice Questions</div>
+            </div>
+        </div>
+    </section>
 
     <script src="script.js"></script>
-
+    <script>
+        function toggleMobileMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            if (navLinks) {
+                navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+                navLinks.style.flexDirection = 'column';
+                navLinks.style.position = 'absolute';
+                navLinks.style.top = '80px';
+                navLinks.style.left = '0';
+                navLinks.style.width = '100%';
+                navLinks.style.background = '#090c1a';
+                navLinks.style.padding = '20px';
+            }
+        }
+    </script>
 </body>
 </html>
