@@ -143,7 +143,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     message.style.color = "#00e6a0";
-    message.textContent =
-      "Form validated successfully! Connect the backend to create your account.";
+    message.textContent = "Account created successfully!";
+
+    window.location.href = "account-success.html";
   });
 });
