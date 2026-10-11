@@ -487,3 +487,473 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
+
+/* ===== LearningPath Create Account Page ===== */
+
+.account-page {
+  margin: 0;
+  min-height: 100vh;
+  color: #f6f7ff;
+  font-family: Arial, Helvetica, sans-serif;
+  background:
+    radial-gradient(ellipse at 50% 70%, #071e68 0%, transparent 55%),
+    radial-gradient(ellipse at 90% 90%, #170b70 0%, transparent 40%),
+    linear-gradient(135deg, #020b28, #04123d 55%, #020824);
+}
+
+.account-page * {
+  box-sizing: border-box;
+}
+
+.account-page a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Header */
+
+.account-page .navbar {
+  min-height: 92px;
+  padding: 15px 3%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px;
+  border: 1px solid #493aff;
+  border-radius: 20px;
+  margin: 24px auto;
+  width: 94%;
+  background: rgba(3, 12, 39, 0.88);
+  box-shadow: 0 0 12px #173fff, inset 0 0 12px #071c58;
+}
+
+.brand,
+.account-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 27px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.brand-icon {
+  color: #12d8ff;
+  font-size: 27px;
+  letter-spacing: -7px;
+  padding-right: 7px;
+  text-shadow: 0 0 14px #00d9ff;
+}
+
+.pink {
+  color: #ef32fa;
+  text-shadow: 0 0 12px #b91aff;
+}
+
+.account-page .nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.account-page .nav-links a {
+  font-size: 14px;
+  color: #e1e7ff;
+  padding: 10px 0;
+  transition: color 0.2s;
+}
+
+.account-page .nav-links a:hover,
+.account-page .nav-links a:first-child {
+  color: #08e6ff;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.login-btn,
+.nav-create {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 20px;
+  border-radius: 11px;
+  white-space: nowrap;
+}
+
+.login-btn {
+  border: 1px solid #087dff;
+  background: #07183c;
+}
+
+.nav-create {
+  border: 1px solid #ff6bff;
+  background: linear-gradient(110deg, #ec00e9, #602dff);
+  box-shadow: 0 0 12px #a000ff;
+}
+
+.account-page .menu-toggle {
+  display: none;
+  color: white;
+  background: #101e50;
+  border: 1px solid #225bff;
+  border-radius: 8px;
+  font-size: 25px;
+  padding: 7px 12px;
+}
+
+/* Account form */
+
+.account-main {
+  width: 100%;
+  padding: 0 18px 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.account-card {
+  width: min(100%, 625px);
+  padding: 30px 34px 25px;
+  text-align: center;
+  border: 2px solid #6677ff;
+  border-radius: 27px;
+  background: linear-gradient(
+    145deg,
+    rgba(5, 22, 73, 0.98),
+    rgba(2, 11, 39, 0.97)
+  );
+  box-shadow:
+    0 0 10px #176dff,
+    0 0 28px rgba(28, 70, 255, 0.65),
+    inset 0 0 20px rgba(0, 62, 255, 0.12);
+}
+
+.account-brand {
+  justify-content: center;
+  font-size: clamp(26px, 4vw, 39px);
+  margin-bottom: 10px;
+}
+
+.account-brand .brand-icon {
+  font-size: 32px;
+}
+
+.account-card h1 {
+  font-size: clamp(29px, 5vw, 42px);
+  margin: 8px 0 5px;
+  font-weight: 800;
+}
+
+.subtitle {
+  font-size: clamp(16px, 2.5vw, 23px);
+  color: #d5defd;
+  margin: 0 0 24px;
+}
+
+#signupForm {
+  text-align: left;
+}
+
+.form-field {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 11px;
+  padding: 11px 15px;
+  border: 1px solid #145fbd;
+  border-radius: 15px;
+  background: rgba(3, 24, 65, 0.94);
+  box-shadow: inset 0 0 10px rgba(0, 100, 255, 0.08);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-field:focus-within {
+  border-color: #00d9ff;
+  box-shadow: 0 0 12px rgba(0, 195, 255, 0.3);
+}
+
+.field-icon {
+  width: 42px;
+  flex-shrink: 0;
+  text-align: center;
+  font-size: 27px;
+}
+
+.field-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.field-content label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 4px;
+  color: #f6f7ff;
+}
+
+.field-content input {
+  width: 100%;
+  border: none;
+  outline: none;
+  color: white;
+  font: inherit;
+  font-size: 16px;
+  background: transparent;
+}
+
+.field-content input::placeholder {
+  color: #c0cbe9;
+  opacity: 1;
+}
+
+.show-password {
+  color: #b8d4ff;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 21px;
+  padding: 6px;
+}
+
+/* Password checklist */
+
+.password-rules {
+  padding: 8px 8px 7px 47px;
+  margin: 3px 0 8px;
+}
+
+.password-rules p {
+  margin: 8px 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #e0e6ff;
+  font-size: 15px;
+}
+
+.password-rules p span {
+  width: 24px;
+  height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 50%;
+  color: white;
+  background: #60708f;
+  font-weight: bold;
+}
+
+.password-rules p.valid span {
+  background: #00d99b;
+  box-shadow: 0 0 8px rgba(0, 255, 160, 0.25);
+}
+
+.form-message {
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 8px 0;
+  color: #ff9cae;
+}
+
+.form-message:empty {
+  display: none;
+}
+
+/* Main gradient button */
+
+.account-card .create-btn {
+  width: 100%;
+  min-height: 65px;
+  border: 2px solid #ff7dff;
+  border-radius: 15px;
+  cursor: pointer;
+  color: white;
+  font-size: clamp(18px, 3vw, 24px);
+  font-weight: 800;
+  background: linear-gradient(
+    105deg,
+    #ed00ed 0%,
+    #a900ff 52%,
+    #5141ff 100%
+  );
+  box-shadow:
+    0 0 13px #a600ff,
+    inset 0 0 9px rgba(255, 255, 255, 0.25);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.account-card .create-btn span {
+  margin-left: 8px;
+  font-size: 27px;
+}
+
+.account-card .create-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 23px #c000ff;
+}
+
+.account-card .create-btn:active {
+  transform: scale(0.99);
+}
+
+.account-footer {
+  font-size: 16px;
+  color: #d5defd;
+  margin: 20px 0 15px;
+}
+
+.account-footer a {
+  color: #00e5ff;
+  font-weight: 700;
+}
+
+.back-home {
+  color: #9ebcff !important;
+  font-size: 14px;
+}
+
+.back-home:hover {
+  color: #00e5ff !important;
+}
+
+/* Mobile responsive */
+
+@media (max-width: 1000px) {
+  .account-page .navbar {
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  .account-page .nav-links {
+    display: none;
+    order: 4;
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .account-page .nav-links.open {
+    display: flex;
+  }
+
+  .account-page .nav-links a {
+    padding: 12px;
+    border-top: 1px solid #142b65;
+  }
+
+  .account-page .nav-actions {
+    margin-left: auto;
+  }
+
+  .account-page .menu-toggle {
+    display: block;
+  }
+}
+
+@media (max-width: 600px) {
+  .account-page .navbar {
+    width: calc(100% - 20px);
+    margin: 10px auto 22px;
+    padding: 12px;
+    border-radius: 14px;
+    gap: 10px;
+  }
+
+  .account-page .brand {
+    font-size: 21px;
+  }
+
+  .account-page .brand-icon {
+    font-size: 22px;
+  }
+
+  .account-page .nav-actions {
+    width: 100%;
+    order: 3;
+  }
+
+  .account-page .nav-actions a {
+    flex: 1;
+    min-height: 42px;
+    padding: 0 8px;
+    font-size: 13px;
+  }
+
+  .account-page .menu-toggle {
+    font-size: 21px;
+    padding: 5px 9px;
+  }
+
+  .account-main {
+    padding: 0 12px 30px;
+  }
+
+  .account-card {
+    padding: 24px 16px 22px;
+    border-radius: 20px;
+  }
+
+  .account-brand {
+    font-size: 27px;
+  }
+
+  .account-card h1 {
+    font-size: 29px;
+  }
+
+  .subtitle {
+    margin-bottom: 21px;
+  }
+
+  .form-field {
+    min-height: 70px;
+    padding: 10px;
+    gap: 9px;
+    border-radius: 12px;
+  }
+
+  .field-icon {
+    width: 31px;
+    font-size: 23px;
+  }
+
+  .field-content label {
+    font-size: 14px;
+  }
+
+  .field-content input {
+    font-size: 14px;
+  }
+
+  .password-rules {
+    padding-left: 8px;
+  }
+
+  .password-rules p {
+    font-size: 13px;
+    gap: 10px;
+  }
+
+  .password-rules p span {
+    width: 22px;
+    height: 22px;
+  }
+
+  .account-card .create-btn {
+    min-height: 57px;
+    border-radius: 12px;
+  }
+
+  .account-footer {
+    font-size: 14px;
+  }
+}
