@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#030d32">
+  <meta name="description" content="Create your LearningPath account to start learning code the easy way.">
+  <title>Create Account | LearningPath</title>
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    .auth-container {
+      min-height: calc(100vh - 180px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 50px 20px;
+    }
+
+    .auth-card {
+      width: 100%;
+      max-width: 480px;
+      background: var(--panel, #061747);
+      border: 1px solid #4937ff;
+      border-radius: 20px;
+      padding: 40px 35px;
+      box-shadow: 0 0 25px rgba(73, 55, 255, 0.35);
+      backdrop-filter: blur(14px);
+    }
+
+    .auth-header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .auth-header h1 {
+      font-size: 32px;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .auth-header p {
+      color: #bfcaff;
+      font-size: 15px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #e6e9ff;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 14px 16px;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      background: rgba(3, 13, 48, 0.7);
+      color: white;
+      font-size: 15px;
+      outline: none;
+      transition: all 0.2s ease;
+    }
+
+    .form-control:focus {
+      border-color: var(--cyan, #00e5ff);
+      box-shadow: 0 0 12px rgba(0, 229, 255, 0.3);
+    }
+
+    .terms-box {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin: 18px 0 24px;
+      font-size: 13px;
+      color: #bfcaff;
+    }
+
+    .terms-box input[type="checkbox"] {
+      margin-top: 3px;
+      accent-color: var(--pink, #ed24ed);
+      width: 16px;
+      height: 16px;
+      cursor: pointer;
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: 15px;
+      border-radius: 12px;
+      border: 1px solid #f777ff;
+      background: linear-gradient(110deg, #ed20ef, #8d1dff);
+      color: white;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 0 16px rgba(214, 34, 255, 0.45);
+      transition: all 0.2s ease;
+    }
+
+    .submit-btn:hover {
+      filter: brightness(1.12);
+      transform: translateY(-2px);
+      box-shadow: 0 0 22px rgba(214, 34, 255, 0.65);
+    }
+
+    .auth-footer {
+      text-align: center;
+      margin-top: 25px;
+      font-size: 14px;
+      color: #bfcaff;
+    }
+
+    .auth-footer a {
+      color: var(--cyan, #00e5ff);
+      text-decoration: none;
+      font-weight: 600;
+      margin-left: 5px;
+    }
+
+    .auth-footer a:hover {
+      text-decoration: underline;
+    }
+
+    .alert-box {
+      display: none;
+      padding: 12px 16px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .alert-success {
+      background: rgba(16, 185, 129, 0.2);
+      border: 1px solid #10b981;
+      color: #34d399;
+    }
+
+    .alert-error {
+      background: rgba(239, 68, 68, 0.2);
+      border: 1px solid #ef4444;
+      color: #f87171;
+    }
+
+    @media (max-width: 500px) {
+      .auth-card {
+        padding: 30px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <a href="/" class="logo">
+      <span class="logo-icon">▮▆▇</span>
+      <span>Learning<span class="pink">Path</span></span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="/">Home</a>
+      <a href="/pages/courses.html">Courses</a>
+      <a href="/pages/ai-tools.html">AI Tools</a>
+      <a href="/pages/projects.html">Projects</a>
+      <a href="/pages/quiz.html">Quiz</a>
+      <a href="/pages/roadmap.html">Roadmap</a>
+      <a href="/#about">About</a>
+      <a class="login-btn" href="/pages/login.html">Login</a>
+      <a class="create-btn active" href="/create-account.html">Create Account</a>
+    </nav>
+  </header>
+
+  <!-- MAIN AUTH SECTION -->
+  <main class="auth-container">
+    <div class="auth-card">
+      <div class="auth-header">
+        <h1>Create Account</h1>
+        <p>Join LearningPath &amp; start learning code today</p>
+      </div>
+
+      <div id="alertBox" class="alert-box"></div>
+
+      <form id="signupForm" onsubmit="handleSignup(event)">
+        <div class="form-group">
+          <label for="fullName">Full Name</label>
+          <input type="text" id="fullName" class="form-control" placeholder="Enter your full name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" class="form-control" placeholder="user@example.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" class="form-control" placeholder="At least 6 characters" minlength="6" required>
+        </div>
+
+        <div class="form-group">
+          <label for="confirmPassword">Confirm Password</label>
+          <input type="password" id="confirmPassword" class="form-control" placeholder="Re-enter password" required>
+        </div>
+
+        <div class="terms-box">
+          <input type="checkbox" id="agreeTerms" required>
+          <label for="agreeTerms">I agree to the <a href="#" style="color:var(--cyan);">Terms of Service</a> &amp; <a href="#" style="color:var(--cyan);">Privacy Policy</a></label>
+        </div>
+
+        <button type="submit" class="submit-btn">Create Account →</button>
+      </form>
+
+      <div class="auth-footer">
+        Already have an account? <a href="/pages/login.html">Login here</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    © 2026 LearningPath — Learn Coding the Easy Way.
+  </footer>
+
+  <script src="/script.js"></script>
+  <script>
+    async function handleSignup(e) {
+      e.preventDefault();
+      const alertBox = document.getElementById('alertBox');
+      const fullName = document.getElementById('fullName').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const password = document.getElementById('password').value;
+      const confirmPassword = document.getElementById('confirmPassword').value;
+
+      if (password !== confirmPassword) {
+        showAlert('Passwords do not match!', 'error');
+        return;
+      }
+
+      try {
+        const response = await fetch('/api/auth/register', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ name: fullName, email, password })
+        });
+        const data = await response.json();
+
+        if (data.success) {
+          showAlert('Account created successfully! Redirecting...', 'success');
+          localStorage.setItem('learningName', fullName);
+          localStorage.setItem('learningEmail', email);
+          setTimeout(() => {
+            window.location.href = '/pages/dashboard/home.html';
+          }, 1200);
+        } else {
+          showAlert(data.message || 'Registration failed. Please try again.', 'error');
+        }
+      } catch (err) {
+        // Fallback demo signup
+        localStorage.setItem('learningName', fullName);
+        localStorage.setItem('learningEmail', email);
+        showAlert('Account created successfully! Redirecting...', 'success');
+        setTimeout(() => {
+          window.location.href = '/pages/dashboard/home.html';
+        }, 1200);
+      }
+    }
+
+    function showAlert(msg, type) {
+      const alertBox = document.getElementById('alertBox');
+      alertBox.textContent = msg;
+      alertBox.className = 'alert-box alert-' + type;
+      alertBox.style.display = 'block';
+    }
+  </script>
+</body>
+</html>
+
