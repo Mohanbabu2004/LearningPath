@@ -38,27 +38,15 @@ async function checkBackend() {
 checkBackend();
 
 
-/* ===== LearningPath Create Account ===== */
+/* ===== LearningPath Create Account & Form Logic ===== */
 
-document.addEventListener("DOMContentLoaded", function () {
+function initSignup() {
   const form = document.getElementById("signupForm");
 
-  // Home page navigation menu
-  const menuToggle = document.getElementById("menuToggle");
-  const navLinks = document.getElementById("navLinks");
-
-  if (menuToggle && navLinks) {
-    menuToggle.addEventListener("click", function () {
-      const isOpen = navLinks.classList.toggle("open");
-      menuToggle.setAttribute("aria-expanded", String(isOpen));
-    });
-  }
-
-  // Show/hide password
+  // Show/hide password buttons
   document.querySelectorAll(".show-password").forEach(function (button) {
     button.addEventListener("click", function () {
       const input = document.getElementById(button.dataset.target);
-
       if (!input) return;
 
       const showing = input.type === "text";
@@ -73,13 +61,14 @@ document.addEventListener("DOMContentLoaded", function () {
   // Stop if this is a page without the signup form
   if (!form) return;
 
-  const fullName = document.getElementById("fullName");
+  const fullName = document.getElementById("fullName") || document.getElementById("name");
   const email = document.getElementById("email");
   const password = document.getElementById("password");
   const confirmPassword = document.getElementById("confirmPassword");
   const genderSelect = document.getElementById("gender");
   const genderDisplay = document.getElementById("genderDisplay");
   const genderCard = document.getElementById("genderCard");
+  const message = document.getElementById("formMessage") || document.getElementById("message");
 
   if (genderSelect && genderDisplay) {
     genderSelect.addEventListener("change", function () {
@@ -110,117 +99,150 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 
   function checkPasswordRules(value) {
+    const val = value || "";
     return {
-      length: value.length >= 8,
-      number: /[0-9]/.test(value),
-      special: /[^A-Za-z0-9\s]/.test(value),
-      upper: /[A-Z]/.test(value)
+      length: val.length >= 8,
+      number: /[0-9]/.test(val),
+      special: /[^A-Za-z0-9\s]/.test(val),
+      upper: /[A-Z]/.test(val)
     };
   }
 
-    function updatePasswordRules() {
-      const result = checkPasswordRules(password.value);
+  function updatePasswordRules() {
+    if (!password) return true;
+    const result = checkPasswordRules(password.value);
 
-      Object.keys(result).forEach(function (key) {
-        if (rules[key]) {
-          rules[key].classList.toggle("valid", result[key]);
-          rules[key].classList.toggle("invalid", !result[key]);
-        }
-      });
+    Object.keys(result).forEach(function (key) {
+      if (rules[key]) {
+        rules[key].classList.toggle("valid", result[key]);
+        rules[key].classList.toggle("invalid", !result[key]);
+      }
+    });
 
-      return Object.values(result).every(Boolean);
-    }
+    return Object.values(result).every(Boolean);
+  }
 
+  if (password) {
     password.addEventListener("input", updatePasswordRules);
+    updatePasswordRules();
+  }
 
+  if (confirmPassword) {
     confirmPassword.addEventListener("input", function () {
-      if (message.textContent.includes("match")) {
+      if (message && message.textContent && message.textContent.includes("match")) {
         message.textContent = "";
       }
     });
+  }
 
-    form.addEventListener("submit", async function (event) {
-      event.preventDefault();
+  form.addEventListener("submit", async function (event) {
+    event.preventDefault();
+    if (message) {
       message.textContent = "";
+      message.style.display = "block";
+    }
 
-      if (fullName.value.trim().length < 3) {
+    const nameVal = fullName ? fullName.value.trim() : "";
+    const emailVal = email ? email.value.trim().toLowerCase() : "";
+    const passVal = password ? password.value : "";
+    const confirmVal = confirmPassword ? confirmPassword.value : "";
+
+    if (nameVal.length < 2) {
+      if (message) {
         message.style.color = "#ef4444";
-        message.textContent = "Please enter your full name (at least 3 characters).";
-        fullName.focus();
-        return;
+        message.textContent = "Please enter your full name (at least 2 characters).";
       }
+      if (fullName) fullName.focus();
+      return;
+    }
 
-      if (!email.validity.valid || !email.value.trim()) {
+    if (!emailVal || !emailVal.includes("@") || !emailVal.includes(".")) {
+      if (message) {
         message.style.color = "#ef4444";
         message.textContent = "Please enter a valid email address.";
-        email.focus();
-        return;
       }
+      if (email) email.focus();
+      return;
+    }
 
-      if (!updatePasswordRules()) {
+    if (passVal.length < 6) {
+      if (message) {
         message.style.color = "#ef4444";
-        message.textContent = "Please satisfy all four password requirements.";
-        password.focus();
-        return;
+        message.textContent = "Password must be at least 6 characters long.";
       }
+      if (password) password.focus();
+      return;
+    }
 
-      if (password.value !== confirmPassword.value) {
+    if (passVal !== confirmVal) {
+      if (message) {
         message.style.color = "#ef4444";
         message.textContent = "Passwords do not match. Please try again.";
-        confirmPassword.focus();
-        return;
       }
+      if (confirmPassword) confirmPassword.focus();
+      return;
+    }
 
-      const genderEl = document.getElementById("gender");
-      const selectedGender = genderEl ? genderEl.value : "Male";
+    const genderEl = document.getElementById("gender");
+    const selectedGender = genderEl ? genderEl.value : "Male";
 
-      const userData = {
-        id: "user_" + Date.now(),
-        name: fullName.value.trim(),
-        email: email.value.trim().toLowerCase(),
-        gender: selectedGender,
-        password: password.value,
-        role: "student",
-        joinedDate: new Date().toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' }),
-        quizScore: "0/100",
-        status: "Active"
-      };
+    const userData = {
+      id: "user_" + Date.now(),
+      name: nameVal,
+      email: emailVal,
+      gender: selectedGender,
+      password: passVal,
+      role: "student",
+      joinedDate: new Date().toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' }),
+      quizScore: "0/100",
+      status: "Active"
+    };
 
-      // Check existing accounts in localStorage
-      let localUsers = [];
-      try {
-        localUsers = JSON.parse(localStorage.getItem('learningPathRegisteredUsers') || '[]');
-      } catch (e) {
-        localUsers = [];
-      }
+    // Save or update user in localStorage
+    let localUsers = [];
+    try {
+      localUsers = JSON.parse(localStorage.getItem('learningPathRegisteredUsers') || '[]');
+    } catch (e) {
+      localUsers = [];
+    }
 
-      const duplicate = localUsers.find(u => u.email === userData.email);
-      if (duplicate) {
-        message.style.color = "#ef4444";
-        message.innerHTML = `An account with this email already exists! <a href="login.html" style="color:#1d4ed8; font-weight:bold; text-decoration:underline;">Please log in →</a>`;
-        return;
-      }
-
+    const existingIndex = localUsers.findIndex(u => u.email === userData.email);
+    if (existingIndex >= 0) {
+      localUsers[existingIndex] = { ...localUsers[existingIndex], ...userData };
+    } else {
       localUsers.push(userData);
-      localStorage.setItem('learningPathRegisteredUsers', JSON.stringify(localUsers));
-      localStorage.setItem('lastCreatedUser', JSON.stringify({ name: userData.name, email: userData.email, gender: userData.gender }));
+    }
 
-      // Send to backend API
-      try {
-        await fetch('/api/auth/register', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(userData)
-        });
-      } catch (err) {
-        console.warn('Backend register offline/error:', err);
-      }
+    localStorage.setItem('learningPathRegisteredUsers', JSON.stringify(localUsers));
+    localStorage.setItem('lastCreatedUser', JSON.stringify({ name: userData.name, email: userData.email, gender: userData.gender }));
 
+    // Send to backend API
+    try {
+      fetch('/api/auth/register', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(userData)
+      }).catch(err => console.warn('Backend register non-blocking:', err));
+    } catch (err) {
+      console.warn('Backend API error:', err);
+    }
+
+    if (message) {
       message.style.color = "#10b981";
       message.textContent = "Account created successfully! Redirecting...";
+    }
 
-      setTimeout(() => {
-        window.location.href = "account-success.html";
-      }, 500);
-    });
-});
+    // Determine target redirect path based on current folder
+    const targetUrl = window.location.pathname.includes('/pages/') ? '../account-success.html' : 'account-success.html';
+
+    setTimeout(() => {
+      window.location.href = targetUrl;
+    }, 400);
+  });
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initSignup);
+} else {
+  initSignup();
+}

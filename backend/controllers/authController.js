@@ -14,9 +14,20 @@ exports.register = async (req, res) => {
         const normalizedEmail = email.trim().toLowerCase();
         const existing = registeredUsers.find(u => u.email === normalizedEmail);
         if (existing) {
-            return res.status(400).json({
-                success: false,
-                message: "An account with this email already exists! Please log in."
+            existing.name = name.trim();
+            existing.password = password;
+            existing.gender = gender || "Male";
+            return res.status(200).json({
+                success: true,
+                message: "User account updated successfully",
+                user: {
+                    id: existing.id,
+                    name: existing.name,
+                    email: existing.email,
+                    gender: existing.gender,
+                    role: existing.role
+                },
+                token: "jwt_token_" + Date.now()
             });
         }
 
