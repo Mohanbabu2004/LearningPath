@@ -6,7 +6,7 @@ const registeredUsers = [
         email: "mohan@example.com",
         gender: "Male",
         password: "Password123!",
-        role: "student",
+        role: "admin",
         coursesCount: 12,
         completedCount: 4,
         quizScore: "72/100",

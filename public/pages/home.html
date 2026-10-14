@@ -56,6 +56,56 @@
       border-bottom: 1px solid #f1f5f9;
     }
 
+    /* Topbar Left Group */
+    .topbar-left-group {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-shrink: 0;
+    }
+
+    /* Three Lines (☰ Hamburger Button) */
+    .three-lines-menu-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: #f8fafc;
+      border: 1.5px solid #e2e8f0;
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 4.5px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      padding: 0;
+      flex-shrink: 0;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    }
+
+    .three-lines-menu-btn:hover {
+      background: #eff6ff;
+      border-color: #3b82f6;
+      transform: translateY(-1px);
+      box-shadow: 0 3px 8px rgba(59, 130, 246, 0.2);
+    }
+
+    .three-lines-menu-btn:active {
+      transform: translateY(0);
+    }
+
+    .three-lines-menu-btn .hamburger-bar {
+      width: 20px;
+      height: 2.5px;
+      background: #1e293b;
+      border-radius: 3px;
+      transition: all 0.25s ease;
+    }
+
+    .three-lines-menu-btn:hover .hamburger-bar {
+      background: #1d4ed8;
+    }
+
     /* Brand Logo */
     .topbar-brand {
       display: inline-flex;
@@ -347,6 +397,43 @@
       flex-direction: column;
       gap: 6px;
       flex-shrink: 0;
+      transition: width 0.28s cubic-bezier(0.4, 0, 0.2, 1), 
+                  padding 0.28s ease, 
+                  opacity 0.2s ease;
+      overflow-x: hidden;
+    }
+
+    .dashboard-sidebar.sidebar-collapsed {
+      width: 0 !important;
+      padding: 20px 0 !important;
+      opacity: 0;
+      pointer-events: none;
+      border-right: none !important;
+    }
+
+    .admin-only-item {
+      background: #eff6ff !important;
+      border: 1.5px dashed #3b82f6 !important;
+      color: #1d4ed8 !important;
+      margin-top: 8px;
+    }
+
+    .admin-only-item:hover {
+      background: #dbeafe !important;
+      border-style: solid !important;
+      color: #1e40af !important;
+    }
+
+    .creator-pill-tag {
+      margin-left: auto;
+      font-size: 10px;
+      font-weight: 800;
+      text-transform: uppercase;
+      padding: 2px 7px;
+      border-radius: 10px;
+      background: #1d4ed8;
+      color: #ffffff;
+      letter-spacing: 0.5px;
     }
 
     .sidebar-nav-link {
@@ -858,14 +945,24 @@
     <!-- Top Navigation Bar -->
     <header class="dashboard-topbar">
 
-      <!-- Brand Logo -->
-      <a href="../index.html" class="topbar-brand" title="LearningPath Home">
-        <svg class="brand-cap-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M12 3L1 9L12 15L21 10.09V17H23V9L12 3Z" fill="#2563eb"/>
-          <path d="M5 13.18V17.18C5 19.39 8.13 21.18 12 21.18C15.87 21.18 19 19.39 19 17.18V13.18L12 17L5 13.18Z" fill="#1d4ed8"/>
-        </svg>
-        <span class="brand-title">Learning<span class="purple-text">Path</span></span>
-      </a>
+      <!-- Left Group: Three Lines Toggle + Brand Logo -->
+      <div class="topbar-left-group">
+        <!-- Three Lines (☰ Hamburger Button) -->
+        <button type="button" class="three-lines-menu-btn" id="threeLinesMenuBtn" aria-label="Toggle navigation menu" title="Toggle Navigation Menu">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+
+        <!-- Brand Logo -->
+        <a href="../index.html" class="topbar-brand" title="LearningPath Home">
+          <svg class="brand-cap-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 3L1 9L12 15L21 10.09V17H23V9L12 3Z" fill="#2563eb"/>
+            <path d="M5 13.18V17.18C5 19.39 8.13 21.18 12 21.18C15.87 21.18 19 19.39 19 17.18V13.18L12 17L5 13.18Z" fill="#1d4ed8"/>
+          </svg>
+          <span class="brand-title">Learning<span class="purple-text">Path</span></span>
+        </a>
+      </div>
 
       <!-- Search Input with Auto-Filter -->
       <div class="topbar-search-box">
@@ -926,8 +1023,8 @@
     <!-- Main Grid: Sidebar + Content -->
     <div class="dashboard-layout-body">
 
-      <!-- Left Sidebar Navigation -->
-      <aside class="dashboard-sidebar" aria-label="Sidebar Navigation">
+      <!-- Left Sidebar Navigation (Controlled by Three Lines Menu) -->
+      <aside class="dashboard-sidebar" id="dashboardSidebar" aria-label="Sidebar Navigation">
         <a href="home.html" class="sidebar-nav-link active">
           <span class="nav-glyph">🏠</span>
           <span>Home</span>
@@ -959,6 +1056,13 @@
         <a href="settings.html" class="sidebar-nav-link">
           <span class="nav-glyph">⚙</span>
           <span>Settings</span>
+        </a>
+
+        <!-- Admission Dashboard (Visible ONLY to Website Creator) -->
+        <a href="admin.html" class="sidebar-nav-link admin-only-item" id="admissionSidebarLink" style="display: none;" title="Admission & Multi-Platform Management">
+          <span class="nav-glyph">🎓</span>
+          <span>Admission</span>
+          <span class="creator-pill-tag">Creator</span>
         </a>
       </aside>
 
@@ -1351,6 +1455,40 @@
         fill.style.width = `${continueProgress}%`;
         text.textContent = `${continueProgress}%`;
       }
+
+      // Multi-User Platform Bar & Admission Access: ONLY visible to the website creator (Mohan Babu)
+      const isCreator = isWebsiteCreator(user);
+      const multiUserBar = document.getElementById("multiUserPlatformBar");
+      if (multiUserBar) {
+        multiUserBar.style.display = isCreator ? "flex" : "none";
+      }
+
+      // Admission Dashboard in Sidebar (First image): ONLY visible to the website creator
+      const admissionSidebarLink = document.getElementById("admissionSidebarLink");
+      if (admissionSidebarLink) {
+        admissionSidebarLink.style.display = isCreator ? "flex" : "none";
+      }
+
+      // In Profile Dropdown: Switch user list ONLY visible to the website creator
+      const switchSection = document.querySelector(".panel-section-title");
+      const switchList = document.getElementById("switchUserList");
+      if (switchSection && switchList) {
+        switchSection.style.display = isCreator ? "block" : "none";
+        switchList.style.display = isCreator ? "flex" : "none";
+      }
+    }
+
+    // Check if the current user is the website creator / admin
+    function isWebsiteCreator(user) {
+      if (!user) return false;
+      const email = (user.email || "").toLowerCase();
+      const name = (user.name || "").toLowerCase();
+      const role = (user.role || "").toLowerCase();
+      return email === "mohan@example.com" || 
+             email.includes("mohan") || 
+             name.includes("mohan") || 
+             role === "admin" || 
+             role === "creator";
     }
 
     // Switch active user and synchronize across the dashboard
@@ -1496,6 +1634,15 @@
               card.style.display = "none";
             }
           });
+        });
+      }
+
+      // 8. Three Lines (☰ Hamburger) Menu Toggle for Navigation Sidebar
+      const threeLinesBtn = document.getElementById("threeLinesMenuBtn");
+      const sidebar = document.getElementById("dashboardSidebar");
+      if (threeLinesBtn && sidebar) {
+        threeLinesBtn.addEventListener("click", () => {
+          sidebar.classList.toggle("sidebar-collapsed");
         });
       }
     });

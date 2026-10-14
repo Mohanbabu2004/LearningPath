@@ -310,6 +310,140 @@
         @media (max-width: 600px) {
             .metrics-grid { grid-template-columns: 1fr; }
         }
+
+        /* Multi-User Platform Switcher Bar (Image 2) */
+        .multi-user-platform-bar {
+            background: rgba(30, 41, 59, 0.7);
+            border: 1.5px solid rgba(59, 130, 246, 0.35);
+            border-radius: 18px;
+            padding: 14px 20px;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 14px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+        }
+
+        .platform-bar-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .platform-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 5px 12px;
+            background: linear-gradient(135deg, #1d4ed8, #2563eb);
+            color: #ffffff;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            box-shadow: 0 2px 6px rgba(29, 78, 216, 0.3);
+        }
+
+        .platform-active-info {
+            font-size: 13.5px;
+            color: #e2e8f0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .active-gender-chip {
+            padding: 2px 8px;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            font-size: 11.5px;
+            font-weight: 600;
+            color: #f1f5f9;
+        }
+
+        .active-status-dot {
+            font-size: 12px;
+            color: #22c55e;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .platform-bar-right {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .switch-label {
+            font-size: 12.5px;
+            font-weight: 700;
+            color: #94a3b8;
+        }
+
+        .user-pill-selector {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .user-select-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 5px 12px;
+            border-radius: 18px;
+            background: rgba(15, 23, 42, 0.8);
+            border: 1.5px solid rgba(255, 255, 255, 0.2);
+            color: #cbd5e1;
+            font-size: 12.5px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            user-select: none;
+        }
+
+        .user-select-pill:hover {
+            border-color: #60a5fa;
+            background: rgba(30, 58, 138, 0.6);
+            color: #ffffff;
+            transform: translateY(-1px);
+        }
+
+        .user-select-pill.active {
+            background: #1d4ed8;
+            border-color: #60a5fa;
+            color: #ffffff;
+            box-shadow: 0 2px 10px rgba(37, 99, 235, 0.5);
+        }
+
+        .btn-add-student {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 6px 14px;
+            border-radius: 18px;
+            background: rgba(37, 99, 235, 0.15);
+            border: 1.5px dashed #3b82f6;
+            color: #60a5fa;
+            font-size: 12.5px;
+            font-weight: 700;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .btn-add-student:hover {
+            background: #1d4ed8;
+            color: #ffffff;
+            border-style: solid;
+        }
     </style>
 </head>
 <body>
@@ -317,15 +451,18 @@
     <!-- Header -->
     <header class="admin-header">
         <div class="header-title">
-            <span>🛡️</span> LearningPath Admin Portal
+            <span>🎓</span> Admission Dashboard
+            <span style="font-size: 11px; font-weight: 800; background: #2563eb; color: #fff; padding: 3px 9px; border-radius: 12px; text-transform: uppercase;">Creator Only</span>
         </div>
         <div class="admin-profile">
-            <div class="admin-avatar">A</div>
+            <div class="admin-avatar" id="adminAvatar">M</div>
             <div>
-                <div style="font-weight: 600; font-size: 14px;">Administrator</div>
-                <div style="font-size: 12px; color: var(--text-muted);">admin@learningpath.com</div>
+                <div style="font-weight: 600; font-size: 14px;" id="adminProfileName">Mohan Babu</div>
+                <div style="font-size: 12px; color: var(--text-muted);" id="adminProfileEmail">mohan@example.com (Creator)</div>
             </div>
-            <a href="home.html" style="margin-left: 20px; color: #ef4444; text-decoration: none; font-size: 13px; font-weight: 600;">Exit Portal</a>
+            <a href="home.html" style="margin-left: 20px; color: #60a5fa; text-decoration: none; font-size: 13.5px; font-weight: 600; display: inline-flex; align-items: center; gap: 5px;">
+              <span>←</span> Back to Home
+            </a>
         </div>
     </header>
 
@@ -374,10 +511,32 @@
             <div id="dashboardTab" class="tab-panel active">
                 <div class="page-title-box">
                     <div>
-                        <h1>Admin Dashboard</h1>
-                        <p style="color: var(--text-muted); font-size: 14px;">Real-time system overview and student statistics</p>
+                        <h1>Admission & Student Management</h1>
+                        <p style="color: var(--text-muted); font-size: 14px;">Multi-platform registered users overview (Creator Only)</p>
                     </div>
                     <button class="btn btn-primary" onclick="alert('Exporting Report...')">📥 Export Report</button>
+                </div>
+
+                <!-- Multi-User Platform Switcher Bar (Admission Overview - Image 2) -->
+                <div class="multi-user-platform-bar" id="multiUserPlatformBar">
+                  <div class="platform-bar-left">
+                    <span class="platform-badge">👥 Multi-User Platform</span>
+                    <div class="platform-active-info">
+                      <span>Active:</span>
+                      <strong id="activeUserBadgeName">Mohan Babu</strong>
+                      <span class="active-gender-chip" id="activeUserGenderChip">👦 Male</span>
+                      <span class="active-status-dot">● Online</span>
+                    </div>
+                  </div>
+                  <div class="platform-bar-right">
+                    <span class="switch-label">Switch Student:</span>
+                    <div class="user-pill-selector" id="userPillSelector">
+                      <!-- Dynamically populated from all registered students: R.Mohan, ramesh, Ganesh, Mohan, Ravi, Ananya, mohan -->
+                    </div>
+                    <a href="../create-account.html" class="btn-add-student" title="Create another account">
+                      <span>➕ Add User</span>
+                    </a>
+                  </div>
                 </div>
 
                 <!-- Metrics Grid (As specified) -->
@@ -641,8 +800,69 @@
             });
         }
 
-        // Real-time dynamic multi-user platform registry
+        function isWebsiteCreator(user) {
+            if (!user) return false;
+            const email = (user.email || '').toLowerCase();
+            const name = (user.name || '').toLowerCase();
+            const role = (user.role || '').toLowerCase();
+            return email === 'mohan@example.com' || 
+                   email.includes('mohan') || 
+                   name.includes('mohan') || 
+                   role === 'admin' || 
+                   role === 'creator';
+        }
+
+        // Security Guard: ONLY the website creator can access the Admission Dashboard
+        const activeCreator = JSON.parse(localStorage.getItem('learningUser') || 'null');
+        if (!isWebsiteCreator(activeCreator)) {
+            alert('Access Restricted!\n\nThe Admission Dashboard with multi-platform users can ONLY be viewed by the website creator.');
+            window.location.href = 'home.html';
+        }
+
+        // Render platform user pills for the creator
+        function renderAdminPlatformPills(currentActive, allUsers) {
+            const pillContainer = document.getElementById('userPillSelector');
+            if (!pillContainer) return;
+            pillContainer.innerHTML = '';
+
+            allUsers.forEach((u) => {
+                const isActive = currentActive && (currentActive.email || '').toLowerCase() === (u.email || '').toLowerCase();
+                const uGender = u.gender || 'Male';
+                const uAvatar = uGender === 'Female' ? '👧' : (uGender === 'Other' ? '🧑' : '👦');
+                const uShortName = (u.name || 'Student').split(' ')[0];
+
+                const pill = document.createElement('button');
+                pill.type = 'button';
+                pill.className = 'user-select-pill' + (isActive ? ' active' : '');
+                pill.title = `Student: ${u.name} (${u.email})`;
+                pill.innerHTML = `<span>${uAvatar}</span><span>${uShortName}</span>`;
+
+                pill.addEventListener('click', () => {
+                    const badgeName = document.getElementById('activeUserBadgeName');
+                    if (badgeName) badgeName.textContent = u.name;
+                    const genderChip = document.getElementById('activeUserGenderChip');
+                    if (genderChip) genderChip.textContent = `${uAvatar} ${uGender}`;
+
+                    document.querySelectorAll('#userPillSelector .user-select-pill').forEach(p => p.classList.remove('active'));
+                    pill.classList.add('active');
+                });
+
+                pillContainer.appendChild(pill);
+            });
+        }
+
+        // Real-time dynamic multi-user platform registry for Admission Dashboard
         document.addEventListener('DOMContentLoaded', async () => {
+            // Update creator profile banner
+            if (activeCreator) {
+                const pName = document.getElementById('adminProfileName');
+                if (pName) pName.textContent = activeCreator.name || 'Mohan Babu';
+                const pEmail = document.getElementById('adminProfileEmail');
+                if (pEmail) pEmail.textContent = `${activeCreator.email || 'mohan@example.com'} (Creator)`;
+                const badge = document.getElementById('activeUserBadgeName');
+                if (badge) badge.textContent = activeCreator.name || 'Mohan Babu';
+            }
+
             let users = [];
             try {
                 const res = await fetch('/api/admin/users');
@@ -661,7 +881,7 @@
             } catch (e) {}
 
             localUsers.forEach(lu => {
-                if (!users.some(u => u.email === lu.email)) {
+                if (!users.some(u => (u.email || '').toLowerCase() === (lu.email || '').toLowerCase())) {
                     users.push({
                         name: lu.name,
                         gender: lu.gender || 'Male',
@@ -694,6 +914,9 @@
                         </tr>
                     `).join('');
                 }
+
+                // Render Multi-User Platform switcher pills for creator
+                renderAdminPlatformPills(activeCreator, users);
             }
         });
     </script>
