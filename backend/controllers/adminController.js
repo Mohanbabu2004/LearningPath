@@ -1,12 +1,14 @@
-// Admin Controller
+// Admin Controller using shared userStore
+const registeredUsers = require("../models/userStore");
+
 exports.getDashboard = async (req, res) => {
     return res.status(200).json({
         success: true,
         metrics: {
-            totalUsers: 125,
-            completed: 24,
-            inProgress: 61,
-            notStarted: 40
+            totalUsers: registeredUsers.length,
+            completed: registeredUsers.filter(u => u.completedCount > 0).length,
+            inProgress: registeredUsers.filter(u => u.coursesCount > 0 && u.completedCount === 0).length,
+            notStarted: registeredUsers.filter(u => u.coursesCount === 0).length
         }
     });
 };
@@ -14,11 +16,16 @@ exports.getDashboard = async (req, res) => {
 exports.getUsers = async (req, res) => {
     return res.status(200).json({
         success: true,
-        users: [
-            { name: "Mohan", gender: "Male", quizScore: "72/100", result: "PASS", status: "Active", joinedDate: "08 Oct 2026" },
-            { name: "Ravi", gender: "Male", quizScore: "28/100", result: "FAIL", status: "Active", joinedDate: "08 Oct 2026" },
-            { name: "Anil", gender: "Male", quizScore: "100/100", result: "PASS", status: "Active", joinedDate: "07 Oct 2026" }
-        ]
+        users: registeredUsers.map(u => ({
+            id: u.id,
+            name: u.name,
+            email: u.email,
+            gender: u.gender || "Male",
+            quizScore: u.quizScore || "0/100",
+            result: (parseInt(u.quizScore) >= 70) ? "PASS" : "IN_PROGRESS",
+            status: u.status || "Active",
+            joinedDate: u.joinedDate || "Today"
+        }))
     });
 };
 

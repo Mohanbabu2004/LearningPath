@@ -640,6 +640,62 @@
                 tr.style.display = text.includes(query) ? '' : 'none';
             });
         }
+
+        // Real-time dynamic multi-user platform registry
+        document.addEventListener('DOMContentLoaded', async () => {
+            let users = [];
+            try {
+                const res = await fetch('/api/admin/users');
+                const data = await res.json();
+                if (data.success && data.users) {
+                    users = data.users;
+                }
+            } catch (e) {
+                console.warn('Backend admin fetch error:', e);
+            }
+
+            // Merge with client-side registered users
+            let localUsers = [];
+            try {
+                localUsers = JSON.parse(localStorage.getItem('learningPathRegisteredUsers') || '[]');
+            } catch (e) {}
+
+            localUsers.forEach(lu => {
+                if (!users.some(u => u.email === lu.email)) {
+                    users.push({
+                        name: lu.name,
+                        gender: lu.gender || 'Male',
+                        email: lu.email,
+                        quizScore: lu.quizScore || '0/100',
+                        result: (parseInt(lu.quizScore) >= 70) ? 'PASS' : 'IN_PROGRESS',
+                        status: lu.status || 'Active',
+                        joinedDate: lu.joinedDate || 'Recently'
+                    });
+                }
+            });
+
+            if (users.length > 0) {
+                // Update total users metric
+                const totalVal = document.querySelector('.metric-card .value');
+                if (totalVal) totalVal.textContent = users.length;
+
+                // Render dynamic table rows
+                const tbody = document.querySelector('#usersTable tbody');
+                if (tbody) {
+                    tbody.innerHTML = users.map(u => `
+                        <tr>
+                            <td style="font-weight: 600;">${u.name}</td>
+                            <td>${u.gender || 'Male'}</td>
+                            <td><strong>${u.quizScore || '0/100'}</strong></td>
+                            <td><span class="badge ${u.result === 'PASS' ? 'badge-pass' : (u.result === 'FAIL' ? 'badge-fail' : 'badge-active')}">${u.result}</span></td>
+                            <td><span class="badge badge-active">${u.status || 'Active'}</span></td>
+                            <td>${u.joinedDate || 'Recently'}</td>
+                            <td><button class="btn btn-sm btn-primary" onclick="alert('Viewing user: ${u.name} (${u.email})')">View</button></td>
+                        </tr>
+                    `).join('');
+                }
+            }
+        });
     </script>
 </body>
 </html>

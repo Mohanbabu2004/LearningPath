@@ -1,19 +1,5 @@
-// Auth Controller with in-memory user registry
-const registeredUsers = [
-    {
-        id: "user_default_1",
-        name: "Mohan",
-        email: "mohan@example.com",
-        password: "Password123!",
-        gender: "Male",
-        role: "student",
-        coursesCount: 12,
-        completedCount: 4,
-        quizScore: "72%",
-        learningProgress: "18%",
-        joinedDate: "2026-01-01"
-    }
-];
+// Auth Controller with shared userStore registry
+const registeredUsers = require("../models/userStore");
 
 exports.register = async (req, res) => {
     try {
@@ -43,9 +29,10 @@ exports.register = async (req, res) => {
             role: "student",
             coursesCount: 0,
             completedCount: 0,
-            quizScore: "0%",
+            quizScore: "0/100",
             learningProgress: "0%",
-            joinedDate: new Date().toISOString().split("T")[0]
+            status: "Active",
+            joinedDate: new Date().toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' })
         };
 
         registeredUsers.push(newUser);
@@ -57,6 +44,7 @@ exports.register = async (req, res) => {
                 id: newUser.id,
                 name: newUser.name,
                 email: newUser.email,
+                gender: newUser.gender,
                 role: newUser.role
             },
             token: "jwt_token_" + Date.now()
@@ -100,6 +88,7 @@ exports.login = async (req, res) => {
                 id: user.id,
                 name: user.name,
                 email: user.email,
+                gender: user.gender || "Male",
                 role: user.role,
                 coursesCount: user.coursesCount,
                 completedCount: user.completedCount,

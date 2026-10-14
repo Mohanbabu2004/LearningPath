@@ -95,88 +95,109 @@ document.addEventListener("DOMContentLoaded", function () {
     };
   }
 
-  function updatePasswordRules() {
-    const result = checkPasswordRules(password.value);
+    function updatePasswordRules() {
+      const result = checkPasswordRules(password.value);
 
-    Object.keys(result).forEach(function (key) {
-      rules[key].classList.toggle("valid", result[key]);
+      Object.keys(result).forEach(function (key) {
+        if (rules[key]) {
+          rules[key].classList.toggle("valid", result[key]);
+          rules[key].classList.toggle("invalid", !result[key]);
+        }
+      });
+
+      return Object.values(result).every(Boolean);
+    }
+
+    password.addEventListener("input", updatePasswordRules);
+
+    confirmPassword.addEventListener("input", function () {
+      if (message.textContent.includes("match")) {
+        message.textContent = "";
+      }
     });
 
-    return Object.values(result).every(Boolean);
-  }
-
-  password.addEventListener("input", updatePasswordRules);
-
-  confirmPassword.addEventListener("input", function () {
-    if (message.textContent.includes("match")) {
+    form.addEventListener("submit", async function (event) {
+      event.preventDefault();
       message.textContent = "";
-    }
-  });
 
-  form.addEventListener("submit", function (event) {
-    event.preventDefault();
-    message.textContent = "";
+      if (fullName.value.trim().length < 3) {
+        message.style.color = "#ef4444";
+        message.textContent = "Please enter your full name (at least 3 characters).";
+        fullName.focus();
+        return;
+      }
 
-    if (fullName.value.trim().length < 3) {
-      message.textContent = "Please enter your full name (at least 3 characters).";
-      fullName.focus();
-      return;
-    }
+      if (!email.validity.valid || !email.value.trim()) {
+        message.style.color = "#ef4444";
+        message.textContent = "Please enter a valid email address.";
+        email.focus();
+        return;
+      }
 
-    if (!email.validity.valid || !email.value.trim()) {
-      message.textContent = "Please enter a valid email address.";
-      email.focus();
-      return;
-    }
+      if (!updatePasswordRules()) {
+        message.style.color = "#ef4444";
+        message.textContent = "Please satisfy all four password requirements.";
+        password.focus();
+        return;
+      }
 
-    if (!updatePasswordRules()) {
-      message.textContent =
-        "Please satisfy all four password requirements.";
-      password.focus();
-      return;
-    }
+      if (password.value !== confirmPassword.value) {
+        message.style.color = "#ef4444";
+        message.textContent = "Passwords do not match. Please try again.";
+        confirmPassword.focus();
+        return;
+      }
 
-    if (password.value !== confirmPassword.value) {
-      message.textContent = "Passwords do not match. Please try again.";
-      confirmPassword.focus();
-      return;
-    }
+      const genderEl = document.getElementById("gender");
+      const selectedGender = genderEl ? genderEl.value : "Male";
 
-    const userData = {
-      name: fullName.value.trim(),
-      email: email.value.trim().toLowerCase(),
-      password: password.value
-    };
+      const userData = {
+        id: "user_" + Date.now(),
+        name: fullName.value.trim(),
+        email: email.value.trim().toLowerCase(),
+        gender: selectedGender,
+        password: password.value,
+        role: "student",
+        joinedDate: new Date().toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' }),
+        quizScore: "0/100",
+        status: "Active"
+      };
 
-    // Save to localStorage for client-side persistence
-    let localUsers = [];
-    try {
-      localUsers = JSON.parse(localStorage.getItem('learningPathRegisteredUsers') || '[]');
-    } catch (e) {
-      localUsers = [];
-    }
+      // Check existing accounts in localStorage
+      let localUsers = [];
+      try {
+        localUsers = JSON.parse(localStorage.getItem('learningPathRegisteredUsers') || '[]');
+      } catch (e) {
+        localUsers = [];
+      }
 
-    const existingIndex = localUsers.findIndex(u => u.email === userData.email);
-    if (existingIndex >= 0) {
-      localUsers[existingIndex] = userData;
-    } else {
+      const duplicate = localUsers.find(u => u.email === userData.email);
+      if (duplicate) {
+        message.style.color = "#ef4444";
+        message.innerHTML = `An account with this email already exists! <a href="login.html" style="color:#1d4ed8; font-weight:bold; text-decoration:underline;">Please log in →</a>`;
+        return;
+      }
+
       localUsers.push(userData);
-    }
-    localStorage.setItem('learningPathRegisteredUsers', JSON.stringify(localUsers));
-    localStorage.setItem('lastCreatedUser', JSON.stringify({ name: userData.name, email: userData.email }));
+      localStorage.setItem('learningPathRegisteredUsers', JSON.stringify(localUsers));
+      localStorage.setItem('lastCreatedUser', JSON.stringify({ name: userData.name, email: userData.email, gender: userData.gender }));
 
-    // Send to backend API
-    fetch('/api/auth/register', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(userData)
-    }).catch(err => console.warn('Backend register status:', err));
+      // Send to backend API
+      try {
+        await fetch('/api/auth/register', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(userData)
+        });
+      } catch (err) {
+        console.warn('Backend register offline/error:', err);
+      }
 
-    message.style.color = "#00e6a0";
-    message.textContent = "Account created successfully! Redirecting...";
+      message.style.color = "#10b981";
+      message.textContent = "Account created successfully! Redirecting...";
 
-    setTimeout(() => {
-      window.location.href = "account-success.html";
-    }, 500);
-  });
+      setTimeout(() => {
+        window.location.href = "account-success.html";
+      }, 500);
+    });
 });

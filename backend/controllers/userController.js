@@ -1,9 +1,5 @@
-// User Controller
-const mockUsers = [
-    { id: "101", name: "Mohan", email: "user@example.com", gender: "Male", quizScore: "72/100", result: "PASS", status: "Active", joinedDate: "08 Oct 2026" },
-    { id: "102", name: "Ravi", email: "ravi@example.com", gender: "Male", quizScore: "28/100", result: "FAIL", status: "Active", joinedDate: "08 Oct 2026" },
-    { id: "103", name: "Anil", email: "anil@example.com", gender: "Male", quizScore: "100/100", result: "PASS", status: "Active", joinedDate: "07 Oct 2026" }
-];
+// User Controller using shared userStore
+const mockUsers = require("../models/userStore");
 
 exports.getAllUsers = async (req, res) => {
     return res.status(200).json({

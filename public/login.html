@@ -258,11 +258,12 @@
           id: 'user_' + Date.now(),
           name: foundUser.name,
           email: foundUser.email,
-          role: 'student',
-          coursesCount: 12,
-          completedCount: 4,
-          quizScore: '72%',
-          learningProgress: '18%'
+          gender: foundUser.gender || 'Male',
+          role: foundUser.role || 'student',
+          coursesCount: foundUser.coursesCount || 12,
+          completedCount: foundUser.completedCount || 4,
+          quizScore: foundUser.quizScore || '72%',
+          learningProgress: foundUser.learningProgress || '18%'
         };
       }
 

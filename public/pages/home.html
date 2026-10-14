@@ -324,16 +324,19 @@
         document.addEventListener("DOMContentLoaded", () => {
             // Retrieve logged in user
             let userName = "Mohan";
+            let userGender = "Male";
             try {
                 const userStr = localStorage.getItem("learningUser");
                 if (userStr) {
                     const u = JSON.parse(userStr);
                     if (u.name) userName = u.name;
+                    if (u.gender) userGender = u.gender;
                 }
             } catch (e) {}
 
+            const genderAvatar = userGender === "Female" ? "👩‍🎓" : (userGender === "Other" ? "🧑‍🎓" : "👨‍🎓");
             const navUserName = document.getElementById("displayUserName");
-            if (navUserName) navUserName.textContent = `Welcome, ${userName}!`;
+            if (navUserName) navUserName.innerHTML = `${genderAvatar} Welcome, <strong>${userName}</strong>!`;
 
             const welcomeHeaderTitle = document.getElementById("welcomeHeaderTitle");
             if (welcomeHeaderTitle) welcomeHeaderTitle.textContent = `Welcome, ${userName}!`;
