@@ -198,7 +198,8 @@ function initSignup() {
       status: "Active"
     };
 
-    // Save or update user in localStorage
+    // Save or update user in localStorage (Purging dummy mock accounts)
+    const dummyEmailsToPurge = ["ravi@example.com", "ananya@example.com", "test@example.com", "demo@example.com"];
     let localUsers = [];
     try {
       localUsers = JSON.parse(localStorage.getItem('learningPathRegisteredUsers') || '[]');
@@ -206,7 +207,16 @@ function initSignup() {
       localUsers = [];
     }
 
-    const existingIndex = localUsers.findIndex(u => u.email === userData.email);
+    localUsers = localUsers.filter(u => {
+      if (!u || !u.email) return false;
+      const norm = (u.email || '').trim().toLowerCase();
+      if (dummyEmailsToPurge.includes(norm)) return false;
+      if (u.name === 'R.Mohan' || u.name === 'ramesh' || (u.name === 'mohan' && norm !== 'mohan@example.com')) return false;
+      return true;
+    });
+
+    const normEmail = (userData.email || '').trim().toLowerCase();
+    const existingIndex = localUsers.findIndex(u => (u.email || '').trim().toLowerCase() === normEmail);
     if (existingIndex >= 0) {
       localUsers[existingIndex] = { ...localUsers[existingIndex], ...userData };
     } else {

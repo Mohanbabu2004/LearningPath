@@ -1279,44 +1279,25 @@
   </nav>
 
   <script>
-    // Default seed users for multi-user platform
+    // Default seed users for multi-user platform (Only Mohan Babu creator)
     const defaultSeedUsers = [
       {
         id: "user_101",
         name: "Mohan Babu",
         email: "mohan@example.com",
         gender: "Male",
-        role: "Student",
+        role: "admin",
         coursesCount: 12,
         completedCount: 4,
         quizScore: "72/100",
         learningProgress: "18%"
-      },
-      {
-        id: "user_102",
-        name: "Ravi",
-        email: "ravi@example.com",
-        gender: "Male",
-        role: "Student",
-        coursesCount: 8,
-        completedCount: 2,
-        quizScore: "28/100",
-        learningProgress: "10%"
-      },
-      {
-        id: "user_103",
-        name: "Ananya",
-        email: "ananya@example.com",
-        gender: "Female",
-        role: "Student",
-        coursesCount: 15,
-        completedCount: 9,
-        quizScore: "100/100",
-        learningProgress: "60%"
       }
     ];
 
-    // Synchronize users across backend API & localStorage
+    // Dummy / mock emails to purge completely
+    const dummyEmailsToPurge = ["ravi@example.com", "ananya@example.com", "test@example.com", "demo@example.com"];
+
+    // Synchronize users across backend API & localStorage (Only real registered / login users)
     async function syncRegisteredUsers() {
       let localList = [];
       try {
@@ -1325,6 +1306,17 @@
         localList = [];
       }
 
+      // Purge dummy emails and invalid test duplicate names
+      localList = localList.filter(u => {
+        if (!u || !u.email) return false;
+        const normEmail = (u.email || "").trim().toLowerCase();
+        if (dummyEmailsToPurge.includes(normEmail)) return false;
+        if (u.name === "R.Mohan" || u.name === "ramesh" || (u.name === "mohan" && normEmail !== "mohan@example.com")) {
+          return false;
+        }
+        return true;
+      });
+
       // 1. Attempt to fetch backend users
       try {
         const res = await fetch("/api/users");
@@ -1332,8 +1324,12 @@
           const data = await res.json();
           if (data && data.users && Array.isArray(data.users)) {
             data.users.forEach((apiUser) => {
+              const normEmail = (apiUser.email || "").trim().toLowerCase();
+              if (dummyEmailsToPurge.includes(normEmail)) return;
+              if (apiUser.name === "R.Mohan" || apiUser.name === "ramesh") return;
+
               const idx = localList.findIndex(
-                u => (u.email || "").toLowerCase() === (apiUser.email || "").toLowerCase()
+                u => (u.email || "").trim().toLowerCase() === normEmail
               );
               if (idx >= 0) {
                 localList[idx] = { ...apiUser, ...localList[idx] };
@@ -1347,15 +1343,23 @@
         // Backend offline or local static view
       }
 
-      // 2. Add default seeds if not present
-      defaultSeedUsers.forEach((seed) => {
-        if (!localList.some(u => (u.email || "").toLowerCase() === seed.email.toLowerCase())) {
-          localList.push(seed);
+      // 2. Deduplicate strictly by lowercase email
+      const uniqueMap = new Map();
+      localList.forEach((u) => {
+        const key = (u.email || "").trim().toLowerCase();
+        if (key && !dummyEmailsToPurge.includes(key) && !uniqueMap.has(key)) {
+          uniqueMap.set(key, u);
         }
       });
 
-      localStorage.setItem("learningPathRegisteredUsers", JSON.stringify(localList));
-      return localList;
+      // Always ensure Mohan Babu (creator) is present
+      if (!uniqueMap.has("mohan@example.com")) {
+        uniqueMap.set("mohan@example.com", defaultSeedUsers[0]);
+      }
+
+      const finalList = Array.from(uniqueMap.values());
+      localStorage.setItem("learningPathRegisteredUsers", JSON.stringify(finalList));
+      return finalList;
     }
 
     // Get current active user with safe fallbacks
@@ -1517,7 +1521,19 @@
       if (!pillContainer) return;
       pillContainer.innerHTML = "";
 
-      allUsers.forEach((u) => {
+      const uniqueUsers = [];
+      const seenEmails = new Set();
+      (allUsers || []).forEach(u => {
+        if (!u || !u.email) return;
+        const norm = u.email.trim().toLowerCase();
+        if (dummyEmailsToPurge.includes(norm)) return;
+        if (!seenEmails.has(norm)) {
+          seenEmails.add(norm);
+          uniqueUsers.push(u);
+        }
+      });
+
+      uniqueUsers.forEach((u) => {
         const isActive = currentUser && (currentUser.email || "").toLowerCase() === (u.email || "").toLowerCase();
         const uGender = u.gender || "Male";
         const uAvatar = uGender === "Female" ? "👧" : (uGender === "Other" ? "🧑" : "👦");
@@ -1543,7 +1559,19 @@
       if (!listContainer) return;
       listContainer.innerHTML = "";
 
-      allUsers.forEach((u) => {
+      const uniqueUsers = [];
+      const seenEmails = new Set();
+      (allUsers || []).forEach(u => {
+        if (!u || !u.email) return;
+        const norm = u.email.trim().toLowerCase();
+        if (dummyEmailsToPurge.includes(norm)) return;
+        if (!seenEmails.has(norm)) {
+          seenEmails.add(norm);
+          uniqueUsers.push(u);
+        }
+      });
+
+      uniqueUsers.forEach((u) => {
         const isActive = currentUser && (currentUser.email || "").toLowerCase() === (u.email || "").toLowerCase();
         const uGender = u.gender || "Male";
         const uAvatar = uGender === "Female" ? "👧" : (uGender === "Other" ? "🧑" : "👦");

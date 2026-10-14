@@ -540,10 +540,10 @@
             email: found.email,
             gender: found.gender || 'Male',
             role: found.role || 'student',
-            coursesCount: found.coursesCount != null ? found.coursesCount : 12,
-            completedCount: found.completedCount != null ? found.completedCount : 1,
-            quizScore: found.quizScore || '1/36',
-            learningProgress: found.learningProgress || '18%'
+            coursesCount: found.coursesCount != null ? found.coursesCount : 0,
+            completedCount: found.completedCount != null ? found.completedCount : 0,
+            quizScore: found.quizScore || '0/100',
+            learningProgress: found.learningProgress || '0%'
           };
         }
       }
@@ -558,10 +558,10 @@
           email: email,
           gender: 'Male',
           role: 'student',
-          coursesCount: 12,
-          completedCount: 1,
-          quizScore: '1/36',
-          learningProgress: '18%'
+          coursesCount: 0,
+          completedCount: 0,
+          quizScore: '0/100',
+          learningProgress: '0%'
         };
 
         // Also register in backend in background
@@ -589,7 +589,17 @@
 
       try {
         let regUsers = JSON.parse(localStorage.getItem('learningPathRegisteredUsers') || '[]');
-        const existingIdx = regUsers.findIndex(u => (u.email || '').toLowerCase() === email);
+        const dummyEmailsToPurge = ["ravi@example.com", "ananya@example.com", "test@example.com", "demo@example.com"];
+        regUsers = regUsers.filter(u => {
+          if (!u || !u.email) return false;
+          const norm = (u.email || '').trim().toLowerCase();
+          if (dummyEmailsToPurge.includes(norm)) return false;
+          if (u.name === 'R.Mohan' || u.name === 'ramesh' || (u.name === 'mohan' && norm !== 'mohan@example.com')) return false;
+          return true;
+        });
+
+        const normEmail = (email || '').trim().toLowerCase();
+        const existingIdx = regUsers.findIndex(u => (u.email || '').trim().toLowerCase() === normEmail);
         if (existingIdx >= 0) {
           regUsers[existingIdx] = { ...regUsers[existingIdx], ...loggedInUser };
         } else {

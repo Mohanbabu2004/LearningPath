@@ -89,10 +89,10 @@ exports.login = async (req, res) => {
                 password: password,
                 gender: "Male",
                 role: "student",
-                coursesCount: 12,
-                completedCount: 1,
-                quizScore: "1/36",
-                learningProgress: "18%",
+                coursesCount: 0,
+                completedCount: 0,
+                quizScore: "0/100",
+                learningProgress: "0%",
                 status: "Active",
                 joinedDate: new Date().toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' })
             };
@@ -111,10 +111,10 @@ exports.login = async (req, res) => {
                 email: user.email,
                 gender: user.gender || "Male",
                 role: user.role || "student",
-                coursesCount: user.coursesCount != null ? user.coursesCount : 12,
-                completedCount: user.completedCount != null ? user.completedCount : 1,
-                quizScore: user.quizScore || "1/36",
-                learningProgress: user.learningProgress || "18%"
+                coursesCount: user.coursesCount != null ? user.coursesCount : 0,
+                completedCount: user.completedCount != null ? user.completedCount : 0,
+                quizScore: user.quizScore || "0/100",
+                learningProgress: user.learningProgress || "0%"
             },
             token: "jwt_token_" + Date.now()
         });
