@@ -3,269 +3,215 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#0a0f29">
+  <meta name="theme-color" content="#ffffff">
   <meta name="description" content="LearningPath - Learn Coding the Easy Way. Step by step tutorials, quizzes, practice problems and real projects.">
   <title>LearningPath | Learn Coding the Easy Way</title>
   <link rel="stylesheet" href="style.css">
   <style>
     /* ===================================================
-       Home Page (Landing) - Specific Exact Visual Styling
-       Matching Screen 1 (media_1791952447889_9d33561b.png)
+       LearningPath - Clean Modern Landing Page
+       Top: Left (Website Name), Right (Searching Bar Symbol)
+       No outer frame / bezel
        =================================================== */
 
     :root {
-      --bezel-bg: #090e29;
-      --card-bg: #ffffff;
       --primary-blue: #2563eb;
       --primary-blue-hover: #1d4ed8;
       --text-dark: #0f172a;
       --text-muted: #64748b;
       --brand-purple: #8b5cf6;
-      --brand-indigo: #4338ca;
+      --bg-page: #ffffff;
     }
 
-    body.landing-body {
-      margin: 0;
-      padding: 20px 10px;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      background: radial-gradient(circle at 50% 10%, #151d4a 0%, #090e29 70%, #040714 100%);
-      color: var(--text-dark);
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+    * {
       box-sizing: border-box;
-    }
-
-    /* Outer glowing neon frame as seen in screenshot */
-    .landing-bezel-frame {
-      width: 100%;
-      max-width: 1200px;
-      margin: 0 auto;
-      border: 2.5px solid #3b82f6;
-      border-radius: 26px;
-      background: rgba(9, 14, 41, 0.95);
-      box-shadow: 
-        0 0 25px rgba(59, 130, 246, 0.5),
-        0 0 60px rgba(139, 92, 246, 0.25),
-        inset 0 0 15px rgba(59, 130, 246, 0.2);
-      padding: 14px 18px 24px;
-      box-sizing: border-box;
-      position: relative;
-    }
-
-    /* Bezel Header Bar */
-    .bezel-header {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      padding: 4px 10px 14px;
-    }
-
-    .step-pill-badge {
-      position: absolute;
-      left: 6px;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #d946ef 0%, #a855f7 50%, #ec4899 100%);
-      color: #ffffff;
-      font-size: 24px;
-      font-weight: 800;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 0 14px rgba(217, 70, 239, 0.7);
-    }
-
-    .bezel-screen-title {
-      color: #ffffff;
-      font-size: clamp(18px, 3.2vw, 26px);
-      font-weight: 800;
-      letter-spacing: 0.3px;
-      text-shadow: 0 0 12px rgba(255, 255, 255, 0.4);
-      margin: 0;
-    }
-
-    /* Inner Crisp White Application Card */
-    .landing-card-main {
-      background: #ffffff;
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.3);
-      padding: 0 0 24px;
-      width: 100%;
-      box-sizing: border-box;
-    }
-
-    /* Header Navbar */
-    .site-nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 16px 28px;
-      border-bottom: 1px solid #f1f5f9;
-      background: #ffffff;
-      gap: 16px;
-    }
-
-    .site-logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      text-decoration: none;
-      font-size: 24px;
-      font-weight: 800;
-      white-space: nowrap;
-    }
-
-    .logo-cap-icon {
-      width: 32px;
-      height: 32px;
-      background: #2563eb;
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 18px;
-      box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
-    }
-
-    .logo-text-learn {
-      color: #1e293b;
-    }
-
-    .logo-text-path {
-      color: #8b5cf6;
-    }
-
-    /* Center Navigation Links */
-    .nav-menu-links {
-      display: flex;
-      align-items: center;
-      gap: 18px;
-      list-style: none;
       margin: 0;
       padding: 0;
     }
 
-    .nav-menu-links a {
-      text-decoration: none;
-      color: #475569;
-      font-size: 14.5px;
-      font-weight: 600;
-      transition: all 0.2s ease;
-      padding: 6px 10px;
+    body.landing-page {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background: #ffffff;
+      color: var(--text-dark);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
     }
 
-    .nav-menu-links a:hover {
-      color: var(--primary-blue);
+    /* TOP NAVBAR: Left (Website Name), Right (Searching Bar Symbol) */
+    .top-header-navbar {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid #edf2f7;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
     }
 
-    .nav-menu-links a.active-link {
-      background: #e0e7ff;
-      color: #2563eb;
-      border-radius: 20px;
-      padding: 6px 16px;
-    }
-
-    /* Navbar Right Actions */
-    .nav-right-actions {
+    .navbar-inner-wrap {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 14px 28px;
       display: flex;
       align-items: center;
-      gap: 12px;
+      justify-content: space-between;
+      gap: 20px;
     }
 
-    .search-btn {
-      background: none;
-      border: none;
-      color: #64748b;
-      font-size: 17px;
-      cursor: pointer;
-      padding: 6px 8px;
-      border-radius: 50%;
-      transition: background 0.2s;
+    /* Left: Website Name */
+    .brand-logo-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      font-size: 26px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      user-select: none;
+    }
+
+    .logo-cap-badge {
+      width: 36px;
+      height: 36px;
+      background: #2563eb;
+      border-radius: 9px;
       display: flex;
       align-items: center;
       justify-content: center;
+      font-size: 20px;
+      box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
     }
 
-    .search-btn:hover {
-      background: #f1f5f9;
+    .brand-name-learn {
       color: #1e293b;
     }
 
-    .btn-login-outline {
-      padding: 7px 18px;
-      border-radius: 8px;
-      border: 1.5px solid #bfdbfe;
+    .brand-name-path {
+      color: #8b5cf6;
+    }
+
+    /* Right: Searching Bar Symbol */
+    .search-bar-right {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .search-input-box {
+      display: flex;
+      align-items: center;
+      background: #f8fafc;
+      border: 1.5px solid #e2e8f0;
+      border-radius: 25px;
+      padding: 4px 8px 4px 18px;
+      transition: all 0.25s ease;
+      width: 310px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+    }
+
+    .search-input-box:focus-within {
       background: #ffffff;
-      color: #1e40af;
-      font-size: 14px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: all 0.2s ease;
-      display: inline-block;
+      border-color: #3b82f6;
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+      width: 340px;
     }
 
-    .btn-login-outline:hover {
-      border-color: #2563eb;
-      background: #eff6ff;
-    }
-
-    .btn-create-solid {
-      padding: 8px 18px;
-      border-radius: 8px;
-      background: var(--primary-blue);
-      color: #ffffff;
-      font-size: 14px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: all 0.2s ease;
-      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
-      white-space: nowrap;
-      display: inline-block;
-    }
-
-    .btn-create-solid:hover {
-      background: var(--primary-blue-hover);
-      transform: translateY(-1px);
-      box-shadow: 0 6px 16px rgba(37, 99, 235, 0.35);
-    }
-
-    /* Mobile toggle button */
-    .mobile-hamburger {
-      display: none;
-      background: none;
+    .search-input-box input {
       border: none;
-      font-size: 26px;
+      outline: none;
+      background: transparent;
+      font-size: 14px;
       color: #1e293b;
+      width: 100%;
+      font-family: inherit;
+    }
+
+    .search-input-box input::placeholder {
+      color: #94a3b8;
+    }
+
+    .search-symbol-btn {
+      background: #2563eb;
+      border: none;
+      color: #ffffff;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 15px;
       cursor: pointer;
-      padding: 4px;
+      transition: all 0.2s ease;
+      flex-shrink: 0;
+      margin-left: 6px;
+    }
+
+    .search-symbol-btn:hover {
+      background: #1d4ed8;
+      transform: scale(1.05);
+    }
+
+    /* Quick Search Dropdown */
+    .search-dropdown-menu {
+      position: absolute;
+      top: calc(100% + 8px);
+      right: 0;
+      width: 320px;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 14px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+      padding: 8px 0;
+      display: none;
+      z-index: 1000;
+    }
+
+    .search-dropdown-menu a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 16px;
+      color: #1e293b;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      transition: background 0.15s;
+    }
+
+    .search-dropdown-menu a:hover {
+      background: #f1f5f9;
+      color: #2563eb;
+    }
+
+    /* MAIN CONTAINER */
+    main.landing-main-content {
+      flex: 1;
+      width: 100%;
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 20px 24px 60px;
     }
 
     /* HERO SECTION */
-    .hero-split-section {
+    .hero-split-grid {
       display: grid;
       grid-template-columns: 1.15fr 0.95fr;
       align-items: center;
-      gap: 30px;
-      padding: 36px 36px 20px;
-      background: radial-gradient(circle at 80% 30%, #f3f0ff 0%, #ffffff 60%);
+      gap: 36px;
+      padding: 40px 10px 20px;
     }
 
-    .hero-text-block {
+    .hero-left-col {
       display: flex;
       flex-direction: column;
-      gap: 16px;
-      z-index: 2;
+      gap: 18px;
     }
 
-    .pill-badge {
+    .hero-pill-tag {
       display: inline-flex;
       align-items: center;
       gap: 6px;
@@ -273,46 +219,45 @@
       border-radius: 20px;
       background: #f3e8ff;
       color: #7c3aed;
-      font-size: 13px;
+      font-size: 13.5px;
       font-weight: 700;
       width: fit-content;
-      box-shadow: 0 2px 6px rgba(124, 58, 237, 0.1);
+      box-shadow: 0 2px 6px rgba(124, 58, 237, 0.08);
     }
 
-    .hero-heading {
-      margin: 0;
+    .hero-title-group {
       line-height: 1.15;
     }
 
-    .brand-large-title {
+    .hero-main-brand {
       display: block;
-      font-size: clamp(34px, 4.4vw, 52px);
+      font-size: clamp(38px, 4.6vw, 56px);
       font-weight: 900;
-      background: linear-gradient(135deg, #1e1b4b 0%, #4338ca 50%, #9333ea 100%);
+      background: linear-gradient(135deg, #1e1b4b 0%, #3730a3 45%, #8b5cf6 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      letter-spacing: -1px;
+      letter-spacing: -1.2px;
     }
 
-    .sub-headline-text {
+    .hero-sub-headline {
       display: block;
-      font-size: clamp(22px, 2.7vw, 32px);
+      font-size: clamp(23px, 2.8vw, 34px);
       font-weight: 800;
       color: #0f172a;
-      margin-top: 4px;
+      margin-top: 6px;
       letter-spacing: -0.5px;
     }
 
-    .hero-summary-desc {
+    .hero-desc-text {
       color: #475569;
-      font-size: clamp(14px, 1.3vw, 16px);
+      font-size: clamp(15px, 1.3vw, 16.5px);
       line-height: 1.6;
+      max-width: 500px;
       margin: 0;
-      max-width: 490px;
     }
 
-    /* Buttons Row */
-    .hero-cta-group {
+    /* Action Buttons Row */
+    .hero-buttons-row {
       display: flex;
       align-items: center;
       gap: 14px;
@@ -320,12 +265,12 @@
       flex-wrap: wrap;
     }
 
-    .btn-cta-primary {
-      padding: 12px 24px;
-      border-radius: 9px;
+    .btn-create-acc {
+      padding: 13px 26px;
+      border-radius: 10px;
       background: var(--primary-blue);
       color: #ffffff;
-      font-size: 15px;
+      font-size: 15.5px;
       font-weight: 700;
       text-decoration: none;
       display: inline-flex;
@@ -335,41 +280,41 @@
       transition: all 0.2s ease;
     }
 
-    .btn-cta-primary:hover {
+    .btn-create-acc:hover {
       background: var(--primary-blue-hover);
       transform: translateY(-2px);
       box-shadow: 0 6px 20px rgba(37, 99, 235, 0.45);
     }
 
-    .btn-cta-secondary {
-      padding: 11px 26px;
-      border-radius: 9px;
+    .btn-login-white {
+      padding: 12px 28px;
+      border-radius: 10px;
       border: 2px solid var(--primary-blue);
       background: #ffffff;
       color: var(--primary-blue);
-      font-size: 15px;
+      font-size: 15.5px;
       font-weight: 700;
       text-decoration: none;
       transition: all 0.2s ease;
       display: inline-block;
     }
 
-    .btn-cta-secondary:hover {
+    .btn-login-white:hover {
       background: #eff6ff;
       transform: translateY(-2px);
     }
 
-    /* Highlights Checkmarks Bar */
-    .highlights-bar {
+    /* Feature Highlights */
+    .feature-highlights-row {
       display: flex;
       align-items: center;
-      gap: 24px;
-      margin-top: 10px;
+      gap: 26px;
+      margin-top: 14px;
       flex-wrap: wrap;
-      padding-top: 14px;
+      padding-top: 12px;
     }
 
-    .highlight-pill {
+    .feat-item {
       display: flex;
       align-items: center;
       gap: 8px;
@@ -378,7 +323,7 @@
       color: #334155;
     }
 
-    .check-circle-green {
+    .circle-check-green {
       width: 22px;
       height: 22px;
       border-radius: 50%;
@@ -391,67 +336,64 @@
       font-weight: bold;
     }
 
-    .trophy-gold {
+    .trophy-badge-icon {
       font-size: 19px;
     }
 
-    .chart-icon-purple {
-      width: 22px;
-      height: 22px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    .chart-badge-icon {
       color: #8b5cf6;
       font-size: 18px;
-    }
-
-    /* Right Illustration Card */
-    .hero-graphic-wrap {
-      position: relative;
       display: flex;
-      justify-content: center;
       align-items: center;
     }
 
-    .hero-illustration-img {
+    /* Right Hero Illustration */
+    .hero-right-col {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .hero-illustration-banner {
       width: 100%;
-      max-width: 480px;
+      max-width: 500px;
       height: auto;
-      border-radius: 16px;
+      border-radius: 20px;
       object-fit: cover;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.08);
       transition: transform 0.3s ease;
     }
 
-    .hero-illustration-img:hover {
+    .hero-illustration-banner:hover {
       transform: scale(1.02);
     }
 
     /* POPULAR COURSES SECTION */
-    .courses-strip-section {
-      padding: 24px 36px 10px;
+    .popular-courses-block {
+      margin-top: 45px;
+      padding-top: 30px;
       border-top: 1px solid #f1f5f9;
-      background: #ffffff;
     }
 
-    .courses-header-row {
+    .popular-header-flex {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-bottom: 18px;
+      margin-bottom: 22px;
     }
 
-    .courses-header-row h2 {
-      margin: 0;
-      font-size: clamp(20px, 2.5vw, 24px);
+    .popular-header-flex h2 {
+      font-size: clamp(21px, 2.5vw, 26px);
       font-weight: 800;
       color: #0f172a;
+      letter-spacing: -0.3px;
     }
 
-    .view-all-link {
+    .view-all-roadmap {
       color: var(--primary-blue);
       text-decoration: none;
-      font-size: 14.5px;
+      font-size: 15px;
       font-weight: 700;
       display: inline-flex;
       align-items: center;
@@ -459,424 +401,482 @@
       transition: gap 0.2s ease;
     }
 
-    .view-all-link:hover {
+    .view-all-roadmap:hover {
       gap: 8px;
       text-decoration: underline;
     }
 
     /* 7 Course Cards Grid */
-    .courses-card-grid {
+    .course-cards-row {
       display: grid;
       grid-template-columns: repeat(7, 1fr);
-      gap: 14px;
-      overflow-x: auto;
-      padding-bottom: 8px;
+      gap: 16px;
     }
 
-    .course-card-tile {
-      border-radius: 14px;
-      padding: 16px 10px 14px;
+    .course-tile-card {
+      border-radius: 16px;
+      padding: 18px 10px 16px;
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
       text-decoration: none;
-      border: 1px solid transparent;
+      border: 1.5px solid transparent;
       transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-      position: relative;
     }
 
-    .course-card-tile:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
+    .course-tile-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
     }
 
-    .card-icon-area {
-      height: 48px;
+    .course-icon-holder {
+      height: 50px;
       display: flex;
       align-items: center;
       justify-content: center;
       margin-bottom: 10px;
     }
 
-    .course-title {
-      font-size: 15px;
+    .course-card-name {
+      font-size: 15.5px;
       font-weight: 800;
       color: #0f172a;
       margin-bottom: 4px;
       white-space: nowrap;
     }
 
-    .course-level {
+    .course-card-sub {
       font-size: 11.5px;
       font-weight: 500;
       color: #64748b;
-      line-height: 1.3;
+      line-height: 1.35;
     }
 
-    /* Specific pastel card themes matching screenshot */
-    .card-c {
+    /* Course Card Tint Colors */
+    .card-tint-c {
       background: #eff6ff;
       border-color: #dbeafe;
     }
-    .card-cpp {
+    .card-tint-cpp {
       background: #eff6ff;
       border-color: #dbeafe;
     }
-    .card-python {
+    .card-tint-python {
       background: #fefce8;
       border-color: #fef08a;
     }
-    .card-java {
+    .card-tint-java {
       background: #fef2f2;
       border-color: #fee2e2;
     }
-    .card-javascript {
+    .card-tint-js {
       background: #fffbeb;
       border-color: #fef3c7;
     }
-    .card-htmlcss {
+    .card-tint-htmlcss {
       background: #ecfeff;
       border-color: #cffafe;
     }
-    .card-sql {
+    .card-tint-sql {
       background: #f0f9ff;
       border-color: #e0f2fe;
     }
 
-    /* Responsive media queries */
+    /* FOOTER */
+    footer.site-footer {
+      border-top: 1px solid #f1f5f9;
+      background: #f8fafc;
+      padding: 24px 20px;
+      text-align: center;
+      color: #64748b;
+      font-size: 14px;
+      margin-top: auto;
+    }
+
+    .footer-links-quick {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links-quick a {
+      color: #475569;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 13.5px;
+    }
+
+    .footer-links-quick a:hover {
+      color: #2563eb;
+    }
+
+    /* Responsive adjustments */
     @media (max-width: 1050px) {
-      .courses-card-grid {
+      .course-cards-row {
         grid-template-columns: repeat(4, 1fr);
       }
-      .hero-split-section {
+      .hero-split-grid {
         grid-template-columns: 1fr;
         text-align: center;
       }
-      .pill-badge, .hero-cta-group, .highlights-bar {
+      .hero-pill-tag, .hero-buttons-row, .feature-highlights-row {
         justify-content: center;
         margin-left: auto;
         margin-right: auto;
       }
-      .hero-summary-desc {
+      .hero-desc-text {
         margin-left: auto;
         margin-right: auto;
       }
     }
 
-    @media (max-width: 768px) {
-      .landing-bezel-frame {
-        padding: 10px 10px 18px;
-        border-radius: 18px;
+    @media (max-width: 640px) {
+      .navbar-inner-wrap {
+        padding: 12px 16px;
       }
-      .site-nav {
-        padding: 14px 18px;
+      .brand-logo-left {
+        font-size: 21px;
       }
-      .nav-menu-links {
-        display: none;
+      .logo-cap-badge {
+        width: 30px;
+        height: 30px;
+        font-size: 16px;
       }
-      .nav-menu-links.mobile-open {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 65px;
-        left: 0;
-        right: 0;
-        background: #ffffff;
-        padding: 18px;
-        box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-        z-index: 50;
+      .search-input-box {
+        width: 180px;
+        padding-left: 12px;
       }
-      .mobile-hamburger {
-        display: block;
+      .search-input-box:focus-within {
+        width: 200px;
       }
-      .hero-split-section {
-        padding: 24px 18px;
+      .search-input-box input {
+        font-size: 13px;
       }
-      .courses-strip-section {
-        padding: 20px 18px;
+      .search-symbol-btn {
+        width: 28px;
+        height: 28px;
+        font-size: 13px;
       }
-      .courses-card-grid {
+      .course-cards-row {
         grid-template-columns: repeat(2, 1fr);
       }
-      .highlights-bar {
+      .feature-highlights-row {
         flex-direction: column;
         gap: 12px;
       }
-    }
-
-    @media (max-width: 480px) {
-      .courses-card-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-      .hero-cta-group {
+      .hero-buttons-row {
         flex-direction: column;
         width: 100%;
       }
-      .btn-cta-primary, .btn-cta-secondary {
+      .btn-create-acc, .btn-login-white {
         width: 100%;
         text-align: center;
         justify-content: center;
-      }
-      .nav-right-actions {
-        display: none;
       }
     }
   </style>
 </head>
 
-<body class="landing-body">
+<body class="landing-page">
 
-  <!-- Outer Neon Glowing Frame Matching Screenshot "1 Home Page (Landing)" -->
-  <div class="landing-bezel-frame">
+  <!-- TOP HEADER NAVBAR: Left (Website Name) & Right (Searching Bar Symbol) -->
+  <header class="top-header-navbar">
+    <div class="navbar-inner-wrap">
 
-    <!-- Screen Identifier Bezel Header -->
-    <header class="bezel-header">
-      <div class="step-pill-badge">1</div>
-      <h1 class="bezel-screen-title">Home Page (Landing)</h1>
-    </header>
+      <!-- Left: Website Name & Logo -->
+      <a href="/" class="brand-logo-left">
+        <div class="logo-cap-badge" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="#ffffff">
+            <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3z M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/>
+          </svg>
+        </div>
+        <span><span class="brand-name-learn">Learning</span><span class="brand-name-path">Path</span></span>
+      </a>
 
-    <!-- Main White Application Container -->
-    <main class="landing-card-main">
+      <!-- Right: Searching Bar with Searching Symbol -->
+      <div class="search-bar-right">
+        <div class="search-input-box">
+          <input type="text" id="courseSearchInput" placeholder="Search courses (C, Python, Java...)" autocomplete="off">
+          <button class="search-symbol-btn" id="searchSubmitBtn" aria-label="Search">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="7"/>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+          </button>
+        </div>
 
-      <!-- Navigation Bar -->
-      <nav class="site-nav">
-        <!-- Logo -->
-        <a href="/" class="site-logo">
-          <div class="logo-cap-icon">🎓</div>
-          <span><span class="logo-text-learn">Learning</span><span class="logo-text-path">Path</span></span>
+        <!-- Interactive Search Auto-complete Dropdown -->
+        <div id="searchDropdown" class="search-dropdown-menu">
+          <a href="pages/learn/c.html">⚡ C Programming</a>
+          <a href="pages/learn/cpp.html">⚙️ C++ Programming</a>
+          <a href="pages/learn/python.html">🐍 Python</a>
+          <a href="pages/learn/java.html">☕ Java</a>
+          <a href="pages/learn/javascript.html">🟨 JavaScript</a>
+          <a href="pages/learn/html-css.html">🌐 HTML &amp; CSS</a>
+          <a href="pages/learn/sql.html">🗄️ SQL Database</a>
+          <a href="pages/roadmap.html" style="font-weight: 700; color: #2563eb;">🗺️ View Complete Roadmap →</a>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- MAIN LANDING CONTENT -->
+  <main class="landing-main-content">
+
+    <!-- HERO SECTION -->
+    <section class="hero-split-grid">
+      <!-- Left Column: Text, Buttons & Highlights -->
+      <div class="hero-left-col">
+        <div class="hero-pill-tag">
+          🚀 Learn • Practice • Build • Grow
+        </div>
+
+        <div class="hero-title-group">
+          <span class="hero-main-brand">LearningPath</span>
+          <span class="hero-sub-headline">Learn Coding the Easy Way.</span>
+        </div>
+
+        <p class="hero-desc-text">
+          Step by step tutorials, quizzes, practice problems and real projects to help you master programming skills.
+        </p>
+
+        <div class="hero-buttons-row">
+          <a href="create-account.html" class="btn-create-acc">
+            Create an Account →
+          </a>
+          <a href="login.html" class="btn-login-white">
+            Login
+          </a>
+        </div>
+
+        <!-- 3 Feature Highlights Under Buttons -->
+        <div class="feature-highlights-row">
+          <div class="feat-item">
+            <span class="circle-check-green">✓</span>
+            <span>Free Learning</span>
+          </div>
+
+          <div class="feat-item">
+            <span class="trophy-badge-icon">🏆</span>
+            <span>Quizzes &amp; Certificates</span>
+          </div>
+
+          <div class="feat-item">
+            <span class="chart-badge-icon">📊</span>
+            <span>Track Your Progress</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: 3D Illustration -->
+      <div class="hero-right-col">
+        <img src="assets/images/home-hero-illustration.png"
+             alt="Student learning coding on laptop with books and ideas"
+             class="hero-illustration-banner"
+             onerror="this.src='assets/images/learning-hero.png'">
+      </div>
+    </section>
+
+    <!-- POPULAR COURSES SECTION -->
+    <section class="popular-courses-block">
+      <div class="popular-header-flex">
+        <h2>Popular Courses</h2>
+        <a href="pages/roadmap.html" class="view-all-roadmap">View All →</a>
+      </div>
+
+      <!-- 7 Course Cards -->
+      <div class="course-cards-row">
+
+        <!-- 1. C -->
+        <a href="pages/learn/c.html" class="course-tile-card card-tint-c">
+          <div class="course-icon-holder">
+            <svg viewBox="0 0 64 64" width="44" height="44">
+              <defs>
+                <linearGradient id="cGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#0284c7"/>
+                  <stop offset="100%" stop-color="#0369a1"/>
+                </linearGradient>
+              </defs>
+              <path d="M32 4 L58 19 L58 45 L32 60 L6 45 L6 19 Z" fill="url(#cGrad)"/>
+              <text x="32" y="41" font-family="'Segoe UI', Arial, sans-serif" font-size="28" font-weight="900" fill="#ffffff" text-anchor="middle">C</text>
+            </svg>
+          </div>
+          <div class="course-card-name">C</div>
+          <div class="course-card-sub">Beginner to<br>Advanced</div>
         </a>
 
-        <!-- Center Menu Links -->
-        <ul class="nav-menu-links" id="mainNavMenu">
-          <li><a href="/" class="active-link">Home</a></li>
-          <li><a href="pages/roadmap.html">Roadmap</a></li>
-          <li><a href="pages/learn/c.html">Learn</a></li>
-          <li><a href="pages/quiz.html">Quiz</a></li>
-          <li><a href="pages/projects.html">Projects</a></li>
-        </ul>
-
-        <!-- Right Buttons & Search -->
-        <div class="nav-right-actions">
-          <button class="search-btn" title="Search" onclick="handleSearchPrompt()">🔍</button>
-          <a href="login.html" class="btn-login-outline">Login</a>
-          <a href="create-account.html" class="btn-create-solid">Create an Account</a>
-        </div>
-
-        <!-- Mobile Menu Toggle -->
-        <button class="mobile-hamburger" id="navToggleBtn" aria-label="Toggle navigation">☰</button>
-      </nav>
-
-      <!-- Hero Main Section -->
-      <section class="hero-split-section">
-        <!-- Left Text & Actions -->
-        <div class="hero-text-block">
-          <div class="pill-badge">
-            🚀 Learn • Practice • Build • Grow
+        <!-- 2. C++ -->
+        <a href="pages/learn/cpp.html" class="course-tile-card card-tint-cpp">
+          <div class="course-icon-holder">
+            <svg viewBox="0 0 64 64" width="44" height="44">
+              <defs>
+                <linearGradient id="cppGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#2563eb"/>
+                  <stop offset="100%" stop-color="#1d4ed8"/>
+                </linearGradient>
+              </defs>
+              <path d="M32 4 L58 19 L58 45 L32 60 L6 45 L6 19 Z" fill="url(#cppGrad)"/>
+              <text x="32" y="39" font-family="'Segoe UI', Arial, sans-serif" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle">C++</text>
+            </svg>
           </div>
+          <div class="course-card-name">C++</div>
+          <div class="course-card-sub">Beginner to<br>Advanced</div>
+        </a>
 
-          <div class="hero-heading">
-            <span class="brand-large-title">LearningPath</span>
-            <span class="sub-headline-text">Learn Coding the Easy Way.</span>
+        <!-- 3. Python -->
+        <a href="pages/learn/python.html" class="course-tile-card card-tint-python">
+          <div class="course-icon-holder">
+            <svg viewBox="0 0 64 64" width="44" height="44">
+              <path d="M31.2 6c-13.6 0-12.7 5.9-12.7 5.9l.01 6.1h13v1.8H13.2c-5.9 0-10.4 3.5-10.4 10.3 0 6.7 4.1 10.4 10.4 10.4h3.6v-5.2c0-5.8 4.8-10.5 10.6-10.5h13v-8.4c0-4.9-4.2-10.4-9.2-10.4zm-4.7 3.3c1.2 0 2.2 1 2.2 2.2 0 1.2-1 2.2-2.2 2.2-1.2 0-2.2-1-2.2-2.2 0-1.2 1-2.2 2.2-2.2z" fill="#387eb8"/>
+              <path d="M32.8 58c13.6 0 12.7-5.9 12.7-5.9l-.01-6.1h-13v-1.8h18.3c5.9 0 10.4-3.5 10.4-10.3 0-6.7-4.1-10.4-10.4-10.4h-3.6v5.2c0 5.8-4.8 10.5-10.6 10.5h-13v8.4c0 4.9 4.2 10.4 9.2 10.4zm4.7-3.3c-1.2 0-2.2-1-2.2-2.2 0-1.2 1-2.2 2.2-2.2 1.2 0 2.2 1 2.2 2.2 0 1.2-1 2.2-2.2 2.2z" fill="#f59e0b"/>
+            </svg>
           </div>
+          <div class="course-card-name">Python</div>
+          <div class="course-card-sub">Beginner to<br>Advanced</div>
+        </a>
 
-          <p class="hero-summary-desc">
-            Step by step tutorials, quizzes, practice problems and real projects to help you master programming skills.
-          </p>
-
-          <div class="hero-cta-group">
-            <a href="create-account.html" class="btn-cta-primary">
-              Create an Account →
-            </a>
-            <a href="login.html" class="btn-cta-secondary">
-              Login
-            </a>
+        <!-- 4. Java -->
+        <a href="pages/learn/java.html" class="course-tile-card card-tint-java">
+          <div class="course-icon-holder">
+            <svg viewBox="0 0 64 64" width="44" height="44">
+              <path d="M22 10 C26 14, 20 18, 24 22 C22 18, 28 14, 22 10 Z" fill="#ef4444"/>
+              <path d="M32 6 C37 12, 29 17, 34 22 C32 17, 39 12, 32 6 Z" fill="#dc2626"/>
+              <path d="M40 12 C44 15, 38 18, 42 22 C40 18, 46 15, 40 12 Z" fill="#ef4444"/>
+              <path d="M14 28 L18 46 C19 50, 45 50, 46 46 L50 28 Z" fill="#0284c7"/>
+              <path d="M46 32 C52 32, 54 40, 46 42" fill="none" stroke="#0284c7" stroke-width="4" stroke-linecap="round"/>
+              <ellipse cx="32" cy="54" rx="22" ry="4" fill="#0369a1"/>
+            </svg>
           </div>
+          <div class="course-card-name">Java</div>
+          <div class="course-card-sub">Beginner to<br>Advanced</div>
+        </a>
 
-          <!-- Feature Highlights Under Buttons -->
-          <div class="highlights-bar">
-            <div class="highlight-pill">
-              <span class="check-circle-green">✓</span>
-              <span>Free Learning</span>
-            </div>
-
-            <div class="highlight-pill">
-              <span class="trophy-gold">🏆</span>
-              <span>Quizzes &amp; Certificates</span>
-            </div>
-
-            <div class="highlight-pill">
-              <span class="chart-icon-purple">📊</span>
-              <span>Track Your Progress</span>
-            </div>
+        <!-- 5. JavaScript -->
+        <a href="pages/learn/javascript.html" class="course-tile-card card-tint-js">
+          <div class="course-icon-holder">
+            <svg viewBox="0 0 64 64" width="44" height="44">
+              <rect x="4" y="4" width="56" height="56" rx="10" fill="#facc15"/>
+              <text x="34" y="44" font-family="'Segoe UI', Arial, sans-serif" font-size="28" font-weight="900" fill="#000000" text-anchor="middle">JS</text>
+            </svg>
           </div>
-        </div>
+          <div class="course-card-name">JavaScript</div>
+          <div class="course-card-sub">Beginner to<br>Advanced</div>
+        </a>
 
-        <!-- Right 3D Character Illustration -->
-        <div class="hero-graphic-wrap">
-          <img src="assets/images/home-hero-illustration.png"
-               alt="Student learning coding on laptop with books and ideas"
-               class="hero-illustration-img"
-               onerror="this.src='assets/images/learning-hero.png'">
-        </div>
-      </section>
+        <!-- 6. HTML & CSS -->
+        <a href="pages/learn/html-css.html" class="course-tile-card card-tint-htmlcss">
+          <div class="course-icon-holder">
+            <svg viewBox="0 0 64 64" width="48" height="44">
+              <g transform="translate(2, 4) scale(0.46)">
+                <polygon points="0,0 60,0 54,64 30,72 6,64" fill="#e44d26"/>
+                <polygon points="30,6 54,6 49,58 30,65" fill="#f16529"/>
+                <text x="30" y="52" font-family="'Segoe UI', Arial, sans-serif" font-size="44" font-weight="900" fill="#ffffff" text-anchor="middle">5</text>
+              </g>
+              <g transform="translate(30, 4) scale(0.46)">
+                <polygon points="0,0 60,0 54,64 30,72 6,64" fill="#1572b6"/>
+                <polygon points="30,6 54,6 49,58 30,65" fill="#33a9dc"/>
+                <text x="30" y="52" font-family="'Segoe UI', Arial, sans-serif" font-size="44" font-weight="900" fill="#ffffff" text-anchor="middle">3</text>
+              </g>
+            </svg>
+          </div>
+          <div class="course-card-name">HTML &amp; CSS</div>
+          <div class="course-card-sub">Beginner to<br>Advanced</div>
+        </a>
 
-      <!-- Popular Courses Section -->
-      <section class="courses-strip-section">
-        <div class="courses-header-row">
-          <h2>Popular Courses</h2>
-          <a href="pages/roadmap.html" class="view-all-link">View All →</a>
-        </div>
+        <!-- 7. SQL -->
+        <a href="pages/learn/sql.html" class="course-tile-card card-tint-sql">
+          <div class="course-icon-holder">
+            <svg viewBox="0 0 64 64" width="44" height="44">
+              <ellipse cx="32" cy="14" rx="20" ry="7" fill="#0284c7"/>
+              <path d="M12 14 V26 C12 30 21 34 32 34 C43 34 52 30 52 26 V14" fill="#0369a1"/>
+              <ellipse cx="32" cy="26" rx="20" ry="6" fill="#0ea5e9"/>
+              <path d="M12 26 V38 C12 42 21 46 32 46 C43 46 52 42 52 38 V26" fill="#0284c7"/>
+              <ellipse cx="32" cy="38" rx="20" ry="6" fill="#38bdf8"/>
+              <path d="M12 38 V50 C12 54 21 58 32 58 C43 58 52 54 52 50 V38" fill="#0369a1"/>
+              <ellipse cx="32" cy="50" rx="20" ry="6" fill="#0284c7"/>
+            </svg>
+          </div>
+          <div class="course-card-name">SQL</div>
+          <div class="course-card-sub">Beginner to<br>Advanced</div>
+        </a>
 
-        <!-- 7 Course Cards -->
-        <div class="courses-card-grid">
+      </div>
+    </section>
 
-          <!-- 1. C -->
-          <a href="pages/learn/c.html" class="course-card-tile card-c">
-            <div class="card-icon-area">
-              <svg viewBox="0 0 64 64" width="44" height="44">
-                <defs>
-                  <linearGradient id="cGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stop-color="#0284c7"/>
-                    <stop offset="100%" stop-color="#0369a1"/>
-                  </linearGradient>
-                </defs>
-                <path d="M32 4 L58 19 L58 45 L32 60 L6 45 L6 19 Z" fill="url(#cGrad)"/>
-                <text x="32" y="41" font-family="'Segoe UI', Arial, sans-serif" font-size="28" font-weight="900" fill="#ffffff" text-anchor="middle">C</text>
-              </svg>
-            </div>
-            <div class="course-title">C</div>
-            <div class="course-level">Beginner to<br>Advanced</div>
-          </a>
+  </main>
 
-          <!-- 2. C++ -->
-          <a href="pages/learn/cpp.html" class="course-card-tile card-cpp">
-            <div class="card-icon-area">
-              <svg viewBox="0 0 64 64" width="44" height="44">
-                <defs>
-                  <linearGradient id="cppGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stop-color="#2563eb"/>
-                    <stop offset="100%" stop-color="#1d4ed8"/>
-                  </linearGradient>
-                </defs>
-                <path d="M32 4 L58 19 L58 45 L32 60 L6 45 L6 19 Z" fill="url(#cppGrad)"/>
-                <text x="32" y="39" font-family="'Segoe UI', Arial, sans-serif" font-size="20" font-weight="900" fill="#ffffff" text-anchor="middle">C++</text>
-              </svg>
-            </div>
-            <div class="course-title">C++</div>
-            <div class="course-level">Beginner to<br>Advanced</div>
-          </a>
-
-          <!-- 3. Python -->
-          <a href="pages/learn/python.html" class="course-card-tile card-python">
-            <div class="card-icon-area">
-              <svg viewBox="0 0 64 64" width="44" height="44">
-                <path d="M31.2 6c-13.6 0-12.7 5.9-12.7 5.9l.01 6.1h13v1.8H13.2c-5.9 0-10.4 3.5-10.4 10.3 0 6.7 4.1 10.4 10.4 10.4h3.6v-5.2c0-5.8 4.8-10.5 10.6-10.5h13v-8.4c0-4.9-4.2-10.4-9.2-10.4zm-4.7 3.3c1.2 0 2.2 1 2.2 2.2 0 1.2-1 2.2-2.2 2.2-1.2 0-2.2-1-2.2-2.2 0-1.2 1-2.2 2.2-2.2z" fill="#387eb8"/>
-                <path d="M32.8 58c13.6 0 12.7-5.9 12.7-5.9l-.01-6.1h-13v-1.8h18.3c5.9 0 10.4-3.5 10.4-10.3 0-6.7-4.1-10.4-10.4-10.4h-3.6v5.2c0 5.8-4.8 10.5-10.6 10.5h-13v8.4c0 4.9 4.2 10.4 9.2 10.4zm4.7-3.3c-1.2 0-2.2-1-2.2-2.2 0-1.2 1-2.2 2.2-2.2 1.2 0 2.2 1 2.2 2.2 0 1.2-1 2.2-2.2 2.2z" fill="#f59e0b"/>
-              </svg>
-            </div>
-            <div class="course-title">Python</div>
-            <div class="course-level">Beginner to<br>Advanced</div>
-          </a>
-
-          <!-- 4. Java -->
-          <a href="pages/learn/java.html" class="course-card-tile card-java">
-            <div class="card-icon-area">
-              <svg viewBox="0 0 64 64" width="44" height="44">
-                <path d="M22 10 C26 14, 20 18, 24 22 C22 18, 28 14, 22 10 Z" fill="#ef4444"/>
-                <path d="M32 6 C37 12, 29 17, 34 22 C32 17, 39 12, 32 6 Z" fill="#dc2626"/>
-                <path d="M40 12 C44 15, 38 18, 42 22 C40 18, 46 15, 40 12 Z" fill="#ef4444"/>
-                <path d="M14 28 L18 46 C19 50, 45 50, 46 46 L50 28 Z" fill="#0284c7"/>
-                <path d="M46 32 C52 32, 54 40, 46 42" fill="none" stroke="#0284c7" stroke-width="4" stroke-linecap="round"/>
-                <ellipse cx="32" cy="54" rx="22" ry="4" fill="#0369a1"/>
-              </svg>
-            </div>
-            <div class="course-title">Java</div>
-            <div class="course-level">Beginner to<br>Advanced</div>
-          </a>
-
-          <!-- 5. JavaScript -->
-          <a href="pages/learn/javascript.html" class="course-card-tile card-javascript">
-            <div class="card-icon-area">
-              <svg viewBox="0 0 64 64" width="44" height="44">
-                <rect x="4" y="4" width="56" height="56" rx="10" fill="#facc15"/>
-                <text x="34" y="44" font-family="'Segoe UI', Arial, sans-serif" font-size="28" font-weight="900" fill="#000000" text-anchor="middle">JS</text>
-              </svg>
-            </div>
-            <div class="course-title">JavaScript</div>
-            <div class="course-level">Beginner to<br>Advanced</div>
-          </a>
-
-          <!-- 6. HTML & CSS -->
-          <a href="pages/learn/html-css.html" class="course-card-tile card-htmlcss">
-            <div class="card-icon-area">
-              <svg viewBox="0 0 64 64" width="48" height="44">
-                <g transform="translate(2, 4) scale(0.46)">
-                  <polygon points="0,0 60,0 54,64 30,72 6,64" fill="#e44d26"/>
-                  <polygon points="30,6 54,6 49,58 30,65" fill="#f16529"/>
-                  <text x="30" y="52" font-family="'Segoe UI', Arial, sans-serif" font-size="44" font-weight="900" fill="#ffffff" text-anchor="middle">5</text>
-                </g>
-                <g transform="translate(30, 4) scale(0.46)">
-                  <polygon points="0,0 60,0 54,64 30,72 6,64" fill="#1572b6"/>
-                  <polygon points="30,6 54,6 49,58 30,65" fill="#33a9dc"/>
-                  <text x="30" y="52" font-family="'Segoe UI', Arial, sans-serif" font-size="44" font-weight="900" fill="#ffffff" text-anchor="middle">3</text>
-                </g>
-              </svg>
-            </div>
-            <div class="course-title">HTML &amp; CSS</div>
-            <div class="course-level">Beginner to<br>Advanced</div>
-          </a>
-
-          <!-- 7. SQL -->
-          <a href="pages/learn/sql.html" class="course-card-tile card-sql">
-            <div class="card-icon-area">
-              <svg viewBox="0 0 64 64" width="44" height="44">
-                <ellipse cx="32" cy="14" rx="20" ry="7" fill="#0284c7"/>
-                <path d="M12 14 V26 C12 30 21 34 32 34 C43 34 52 30 52 26 V14" fill="#0369a1"/>
-                <ellipse cx="32" cy="26" rx="20" ry="6" fill="#0ea5e9"/>
-                <path d="M12 26 V38 C12 42 21 46 32 46 C43 46 52 42 52 38 V26" fill="#0284c7"/>
-                <ellipse cx="32" cy="38" rx="20" ry="6" fill="#38bdf8"/>
-                <path d="M12 38 V50 C12 54 21 58 32 58 C43 58 52 54 52 50 V38" fill="#0369a1"/>
-                <ellipse cx="32" cy="50" rx="20" ry="6" fill="#0284c7"/>
-              </svg>
-            </div>
-            <div class="course-title">SQL</div>
-            <div class="course-level">Beginner to<br>Advanced</div>
-          </a>
-
-        </div>
-      </section>
-
-    </main>
-
-  </div>
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-links-quick">
+      <a href="/">Home</a>
+      <a href="pages/roadmap.html">Roadmap</a>
+      <a href="pages/quiz.html">Quiz</a>
+      <a href="pages/projects.html">Projects</a>
+      <a href="login.html">Login</a>
+      <a href="create-account.html">Create Account</a>
+    </div>
+    <p>© 2026 LearningPath — Learn Coding the Easy Way.</p>
+  </footer>
 
   <script src="script.js"></script>
   <script>
-    // Search course prompt
-    function handleSearchPrompt() {
-      const q = prompt("Search for a course (e.g. C, Python, Java, JavaScript, SQL):");
-      if (q) {
-        const query = q.trim().toLowerCase();
-        if (query.includes('c++')) window.location.href = 'pages/learn/cpp.html';
-        else if (query.includes('c')) window.location.href = 'pages/learn/c.html';
-        else if (query.includes('py')) window.location.href = 'pages/learn/python.html';
-        else if (query.includes('java') && !query.includes('script')) window.location.href = 'pages/learn/java.html';
-        else if (query.includes('js') || query.includes('script')) window.location.href = 'pages/learn/javascript.html';
-        else if (query.includes('html') || query.includes('css')) window.location.href = 'pages/learn/html-css.html';
-        else if (query.includes('sql')) window.location.href = 'pages/learn/sql.html';
-        else window.location.href = 'pages/roadmap.html';
+    // Live Search Functionality
+    const searchInput = document.getElementById('courseSearchInput');
+    const searchBtn = document.getElementById('searchSubmitBtn');
+    const searchDropdown = document.getElementById('searchDropdown');
+
+    const courseRoutes = {
+      'c': 'pages/learn/c.html',
+      'c++': 'pages/learn/cpp.html',
+      'cpp': 'pages/learn/cpp.html',
+      'python': 'pages/learn/python.html',
+      'py': 'pages/learn/python.html',
+      'java': 'pages/learn/java.html',
+      'javascript': 'pages/learn/javascript.html',
+      'js': 'pages/learn/javascript.html',
+      'html': 'pages/learn/html-css.html',
+      'css': 'pages/learn/html-css.html',
+      'sql': 'pages/learn/sql.html'
+    };
+
+    function performSearch() {
+      const q = searchInput.value.trim().toLowerCase();
+      if (!q) return;
+
+      for (const [key, url] of Object.entries(courseRoutes)) {
+        if (q.includes(key)) {
+          window.location.href = url;
+          return;
+        }
       }
+      window.location.href = 'pages/roadmap.html';
     }
 
-    // Mobile nav toggle
-    const navToggle = document.getElementById('navToggleBtn');
-    const navMenu = document.getElementById('mainNavMenu');
-    if (navToggle && navMenu) {
-      navToggle.addEventListener('click', () => {
-        navMenu.classList.toggle('mobile-open');
+    if (searchInput) {
+      searchInput.addEventListener('focus', () => {
+        searchDropdown.style.display = 'block';
+      });
+
+      searchInput.addEventListener('keyup', (e) => {
+        if (e.key === 'Enter') {
+          performSearch();
+        }
       });
     }
+
+    if (searchBtn) {
+      searchBtn.addEventListener('click', performSearch);
+    }
+
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.search-bar-right')) {
+        searchDropdown.style.display = 'none';
+      }
+    });
   </script>
 </body>
 </html>
