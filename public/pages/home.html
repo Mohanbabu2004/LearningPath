@@ -1021,9 +1021,9 @@
               <div class="continue-course-sub">Beginner - Introduction</div>
               <div class="progress-track-wrapper">
                 <div class="progress-bar-rail">
-                  <div class="progress-bar-fill-emerald" id="continueProgressFill" style="width: 72%;"></div>
+                  <div class="progress-bar-fill-emerald" id="continueProgressFill" style="width: 0%;"></div>
                 </div>
-                <span class="progress-percent-label" id="continueProgressText">72%</span>
+                <span class="progress-percent-label" id="continueProgressText">0%</span>
               </div>
             </div>
           </div>
@@ -1341,13 +1341,15 @@
       const statProjects = document.getElementById("statProjectsCount");
       if (statProjects) statProjects.textContent = user.completedCount != null ? user.completedCount : "0";
 
-      // Continue learning progress fill
-      const progressNum = parseInt(user.learningProgress || "72", 10) || 72;
+      // Continue learning progress fill (Default zero percentage: 0%)
+      const continueProgress = user.continueLearningProgress !== undefined 
+        ? user.continueLearningProgress 
+        : 0;
       const fill = document.getElementById("continueProgressFill");
       const text = document.getElementById("continueProgressText");
       if (fill && text) {
-        fill.style.width = `${progressNum}%`;
-        text.textContent = `${progressNum}%`;
+        fill.style.width = `${continueProgress}%`;
+        text.textContent = `${continueProgress}%`;
       }
     }
 
