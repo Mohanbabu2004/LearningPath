@@ -239,6 +239,17 @@ function initSignup() {
       window.location.href = targetUrl;
     }, 400);
   });
+  const bottomBackBtn = document.getElementById("bottomBackBtn");
+  if (bottomBackBtn) {
+    bottomBackBtn.addEventListener("click", function () {
+      if (window.history.length > 1 && document.referrer) {
+        window.history.back();
+      } else {
+        const homeUrl = window.location.pathname.includes('/pages/') ? '../index.html' : 'index.html';
+        window.location.href = homeUrl;
+      }
+    });
+  }
 }
 
 if (document.readyState === "loading") {

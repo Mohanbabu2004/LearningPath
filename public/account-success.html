@@ -265,19 +265,44 @@
       user-select: none;
     }
 
-    /* Bottom Back to Home Link */
-    .bottom-back-home {
-      margin-top: 18px;
-      color: #93c5fd;
+    /* Bottom Navigation Buttons (Back & Home) */
+    .bottom-nav-buttons {
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .btn-bottom-pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      padding: 9px 20px;
+      border-radius: 20px;
       font-size: 14px;
       font-weight: 600;
       text-decoration: none;
-      transition: color 0.15s;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      background: rgba(15, 23, 42, 0.75);
+      border: 1px solid rgba(59, 130, 246, 0.45);
+      color: #cbd5e1;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
     }
 
-    .bottom-back-home:hover {
+    .btn-bottom-pill:hover {
+      background: rgba(30, 58, 138, 0.9);
+      border-color: #60a5fa;
       color: #ffffff;
-      text-decoration: underline;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(59, 130, 246, 0.4);
+    }
+
+    .btn-bottom-pill:active {
+      transform: translateY(0);
     }
 
     @media (max-width: 480px) {
@@ -364,7 +389,17 @@
 
   </main>
 
-  <a href="index.html" class="bottom-back-home">← Back to Home</a>
+  <!-- Bottom Back and Home Buttons -->
+  <nav class="bottom-nav-buttons" aria-label="Page navigation">
+    <button type="button" class="btn-bottom-pill btn-nav-back" id="bottomBackBtn" title="Go back to Create Account">
+      <span class="nav-arrow">←</span>
+      <span>Back</span>
+    </button>
+    <a href="index.html" class="btn-bottom-pill btn-nav-home" id="bottomHomeBtn" title="Go to Home page">
+      <span class="nav-icon">🏠</span>
+      <span>Home</span>
+    </a>
+  </nav>
 
   <script>
     // Personalize with newly created user's name if available in localStorage
@@ -379,6 +414,17 @@
       }
     } catch (e) {
       console.warn('LocalStorage error:', e);
+    }
+
+    const backBtn = document.getElementById('bottomBackBtn');
+    if (backBtn) {
+      backBtn.addEventListener('click', () => {
+        if (window.history.length > 1 && document.referrer) {
+          window.history.back();
+        } else {
+          window.location.href = 'create-account.html';
+        }
+      });
     }
   </script>
 
