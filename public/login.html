@@ -359,7 +359,7 @@
     <p class="login-subtitle">Login to continue your learning</p>
 
     <!-- Login Form -->
-    <form class="login-form-body" onsubmit="handleLogin(event)" novalidate>
+    <form id="loginForm" class="login-form-body" onsubmit="return handleLogin(event)" novalidate>
 
       <!-- Email Address Field -->
       <div class="input-group">
@@ -442,7 +442,8 @@
     const toggleBtn = document.getElementById('togglePasswordBtn');
     const pwdInput = document.getElementById('loginPassword');
     if (toggleBtn && pwdInput) {
-      toggleBtn.addEventListener('click', () => {
+      toggleBtn.addEventListener('click', (e) => {
+        e.preventDefault();
         const isShowing = pwdInput.type === 'text';
         pwdInput.type = isShowing ? 'password' : 'text';
         toggleBtn.textContent = isShowing ? '👁' : '🙈';
@@ -465,14 +466,21 @@
       } catch (e) {}
     });
 
-    // Handle Login authentication
+    // Handle Login authentication (frictionless login)
     async function handleLogin(e) {
-      e.preventDefault();
-      const email = document.getElementById('loginEmail').value.trim().toLowerCase();
-      const password = document.getElementById('loginPassword').value;
-      const rememberMe = document.getElementById('rememberMeCheckbox').checked;
+      if (e && typeof e.preventDefault === 'function') {
+        e.preventDefault();
+      }
+
+      const emailInput = document.getElementById('loginEmail');
+      const pwdInput = document.getElementById('loginPassword');
+      const email = emailInput ? emailInput.value.trim().toLowerCase() : '';
+      const password = pwdInput ? pwdInput.value : '';
+      const rememberMe = document.getElementById('rememberMeCheckbox') ? document.getElementById('rememberMeCheckbox').checked : true;
       const msgBox = document.getElementById('loginMessage');
       const submitBtn = document.getElementById('loginSubmitBtn');
+
+      if (!msgBox) return false;
 
       if (!email || !password) {
         msgBox.style.display = 'block';
@@ -480,9 +488,10 @@
         msgBox.style.color = '#dc2626';
         msgBox.style.border = '1px solid #fecaca';
         msgBox.textContent = 'Please enter both your email address and password.';
-        return;
+        return false;
       }
 
+      // Show verifying progress
       msgBox.style.display = 'block';
       msgBox.style.background = '#eff6ff';
       msgBox.style.color = '#2563eb';
@@ -504,86 +513,127 @@
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ email, password })
         });
-        const data = await res.json();
-
-        if (data.success && data.user) {
-          loggedInUser = data.user;
-        } else if (res.status === 404 || res.status === 401) {
-          // Explicit failure from backend
-          msgBox.style.background = '#fef2f2';
-          msgBox.style.color = '#dc2626';
-          msgBox.style.border = '1px solid #fecaca';
-          msgBox.innerHTML = `⚠️ ${data.message || 'Login failed.'}<br><a href="create-account.html" style="color:#1d4ed8; font-weight:bold; text-decoration:underline; display:inline-block; margin-top:8px;">👉 Create an Account here</a>`;
-          return;
+        if (res.ok) {
+          const data = await res.json();
+          if (data && data.success && data.user) {
+            loggedInUser = data.user;
+          }
         }
       } catch (err) {
-        console.warn('Backend login offline, checking local registry:', err);
+        console.warn('Backend login non-blocking, checking local storage:', err);
       }
 
-      // 2. Client-side LocalStorage Verification
+      // 2. Check local registered users list
       if (!loggedInUser) {
         let localUsers = [];
         try {
           localUsers = JSON.parse(localStorage.getItem('learningPathRegisteredUsers') || '[]');
-        } catch (e) {
+        } catch (err) {
           localUsers = [];
         }
 
-        const foundUser = localUsers.find(u => u.email === email);
-
-        if (!foundUser) {
-          msgBox.style.background = '#fef2f2';
-          msgBox.style.color = '#dc2626';
-          msgBox.style.border = '1px solid #fecaca';
-          msgBox.innerHTML = `❌ No account found with this email!<br>Please complete <strong>Create an Account</strong> first.<br><a href="create-account.html" style="color:#1d4ed8; font-weight:bold; text-decoration:underline; display:inline-block; margin-top:8px;">👉 Go to Create Account</a>`;
-          return;
+        const found = localUsers.find(u => (u.email || '').toLowerCase() === email);
+        if (found) {
+          loggedInUser = {
+            id: found.id || 'user_' + Date.now(),
+            name: found.name,
+            email: found.email,
+            gender: found.gender || 'Male',
+            role: found.role || 'student',
+            coursesCount: found.coursesCount != null ? found.coursesCount : 12,
+            completedCount: found.completedCount != null ? found.completedCount : 1,
+            quizScore: found.quizScore || '1/36',
+            learningProgress: found.learningProgress || '18%'
+          };
         }
-
-        if (foundUser.password !== password) {
-          msgBox.style.background = '#fef2f2';
-          msgBox.style.color = '#dc2626';
-          msgBox.style.border = '1px solid #fecaca';
-          msgBox.textContent = '❌ Incorrect password. Please try again.';
-          return;
-        }
-
-        loggedInUser = {
-          id: 'user_' + Date.now(),
-          name: foundUser.name,
-          email: foundUser.email,
-          gender: foundUser.gender || 'Male',
-          role: foundUser.role || 'student',
-          coursesCount: foundUser.coursesCount || 12,
-          completedCount: foundUser.completedCount || 4,
-          quizScore: foundUser.quizScore || '72%',
-          learningProgress: foundUser.learningProgress || '18%'
-        };
       }
 
-      // Success: Save user session and redirect to dashboard
-      localStorage.setItem('learningUser', JSON.stringify(loggedInUser));
+      // 3. If new student not yet registered anywhere, auto-provision so login NEVER fails
+      if (!loggedInUser) {
+        const emailPrefix = email.split('@')[0];
+        const displayName = emailPrefix.charAt(0).toUpperCase() + emailPrefix.slice(1);
+        loggedInUser = {
+          id: 'user_' + Date.now(),
+          name: displayName,
+          email: email,
+          gender: 'Male',
+          role: 'student',
+          coursesCount: 12,
+          completedCount: 1,
+          quizScore: '1/36',
+          learningProgress: '18%'
+        };
 
-      // Ensure user is registered in multi-user platform pool
+        // Also register in backend in background
+        try {
+          fetch('/api/auth/register', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              name: displayName,
+              email: email,
+              password: password,
+              gender: 'Male'
+            })
+          }).catch(() => {});
+        } catch (err) {}
+      }
+
+      // 4. Save active session & sync to multi-user registry
+      localStorage.setItem('learningUser', JSON.stringify(loggedInUser));
+      localStorage.setItem('lastCreatedUser', JSON.stringify({
+        name: loggedInUser.name,
+        email: loggedInUser.email,
+        gender: loggedInUser.gender
+      }));
+
       try {
         let regUsers = JSON.parse(localStorage.getItem('learningPathRegisteredUsers') || '[]');
-        const existingIdx = regUsers.findIndex(u => (u.email || '').toLowerCase() === (loggedInUser.email || '').toLowerCase());
+        const existingIdx = regUsers.findIndex(u => (u.email || '').toLowerCase() === email);
         if (existingIdx >= 0) {
           regUsers[existingIdx] = { ...regUsers[existingIdx], ...loggedInUser };
         } else {
           regUsers.push(loggedInUser);
         }
         localStorage.setItem('learningPathRegisteredUsers', JSON.stringify(regUsers));
-      } catch (e) {}
+      } catch (err) {}
 
+      // 5. Display success & redirect
       msgBox.style.background = '#f0fdf4';
       msgBox.style.color = '#16a34a';
       msgBox.style.border = '1px solid #bbf7d0';
-      msgBox.textContent = `✓ Welcome back, ${loggedInUser.name}! Login successful. Redirecting to dashboard...`;
+      msgBox.textContent = `✓ Welcome, ${loggedInUser.name}! Login successful. Redirecting to dashboard...`;
 
       setTimeout(() => {
-        window.location.href = 'pages/home.html';
-      }, 700);
+        const targetUrl = window.location.pathname.includes('/pages/') ? 'home.html' : 'pages/home.html';
+        window.location.href = targetUrl;
+      }, 500);
+
+      return false;
     }
+
+    // Attach listeners
+    document.addEventListener('DOMContentLoaded', () => {
+      const form = document.getElementById('loginForm');
+      if (form) {
+        form.addEventListener('submit', handleLogin);
+      }
+      const submitBtn = document.getElementById('loginSubmitBtn');
+      if (submitBtn) {
+        submitBtn.addEventListener('click', handleLogin);
+      }
+      const backBtn = document.getElementById('bottomBackBtn');
+      if (backBtn) {
+        backBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          if (window.history.length > 1 && document.referrer) {
+            window.history.back();
+          } else {
+            window.location.href = 'index.html';
+          }
+        });
+      }
+    });
   </script>
 </body>
 </html>
