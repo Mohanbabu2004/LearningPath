@@ -142,9 +142,41 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
-    message.style.color = "#00e6a0";
-    message.textContent = "Account created successfully!";
+    const userData = {
+      name: fullName.value.trim(),
+      email: email.value.trim().toLowerCase(),
+      password: password.value
+    };
 
-    window.location.href = "account-success.html";
+    // Save to localStorage for client-side persistence
+    let localUsers = [];
+    try {
+      localUsers = JSON.parse(localStorage.getItem('learningPathRegisteredUsers') || '[]');
+    } catch (e) {
+      localUsers = [];
+    }
+
+    const existingIndex = localUsers.findIndex(u => u.email === userData.email);
+    if (existingIndex >= 0) {
+      localUsers[existingIndex] = userData;
+    } else {
+      localUsers.push(userData);
+    }
+    localStorage.setItem('learningPathRegisteredUsers', JSON.stringify(localUsers));
+    localStorage.setItem('lastCreatedUser', JSON.stringify({ name: userData.name, email: userData.email }));
+
+    // Send to backend API
+    fetch('/api/auth/register', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(userData)
+    }).catch(err => console.warn('Backend register status:', err));
+
+    message.style.color = "#00e6a0";
+    message.textContent = "Account created successfully! Redirecting...";
+
+    setTimeout(() => {
+      window.location.href = "account-success.html";
+    }, 500);
   });
 });

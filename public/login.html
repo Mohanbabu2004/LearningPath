@@ -181,12 +181,33 @@
 
   <script src="script.js"></script>
   <script>
+    // Prefill email if coming from create-account
+    document.addEventListener('DOMContentLoaded', () => {
+      try {
+        const lastCreated = JSON.parse(localStorage.getItem('lastCreatedUser') || 'null');
+        if (lastCreated && lastCreated.email) {
+          const emailInput = document.getElementById('loginEmail');
+          if (emailInput && !emailInput.value) {
+            emailInput.value = lastCreated.email;
+          }
+        }
+      } catch (e) {}
+    });
+
     async function handleLogin(e) {
       e.preventDefault();
-      const email = document.getElementById('loginEmail').value.trim();
+      const email = document.getElementById('loginEmail').value.trim().toLowerCase();
       const password = document.getElementById('loginPassword').value;
       const msgBox = document.getElementById('loginMessage');
 
+      msgBox.style.display = 'block';
+      msgBox.style.background = 'rgba(37, 99, 235, 0.2)';
+      msgBox.style.color = '#60a5fa';
+      msgBox.textContent = 'Verifying your account...';
+
+      let loggedInUser = null;
+
+      // 1. Attempt Backend API Login
       try {
         const res = await fetch('/api/auth/login', {
           method: 'POST',
@@ -195,30 +216,65 @@
         });
         const data = await res.json();
 
-        if (data.success) {
-          msgBox.style.display = 'block';
-          msgBox.style.background = 'rgba(16, 185, 129, 0.2)';
-          msgBox.style.color = '#34d399';
-          msgBox.textContent = 'Login successful! Redirecting to dashboard...';
-          localStorage.setItem('learningUser', JSON.stringify(data.user));
-          setTimeout(() => {
-            window.location.href = 'pages/home.html';
-          }, 1000);
-        } else {
-          msgBox.style.display = 'block';
+        if (data.success && data.user) {
+          loggedInUser = data.user;
+        } else if (res.status === 404 || res.status === 401) {
+          // Explicit failure from backend
           msgBox.style.background = 'rgba(239, 68, 68, 0.2)';
           msgBox.style.color = '#f87171';
-          msgBox.textContent = data.message || 'Login failed.';
+          msgBox.innerHTML = `⚠️ ${data.message || 'Login failed.'}<br><a href="create-account.html" style="color:#00e5ff; font-weight:bold; text-decoration:underline; display:inline-block; margin-top:8px;">👉 Create an Account here</a>`;
+          return;
         }
       } catch (err) {
-        msgBox.style.display = 'block';
-        msgBox.style.background = 'rgba(16, 185, 129, 0.2)';
-        msgBox.style.color = '#34d399';
-        msgBox.textContent = 'Login successful! Redirecting to dashboard...';
-        setTimeout(() => {
-          window.location.href = 'pages/home.html';
-        }, 1000);
+        console.warn('Backend login error, checking local registry:', err);
       }
+
+      // 2. Client-side LocalStorage Verification
+      if (!loggedInUser) {
+        let localUsers = [];
+        try {
+          localUsers = JSON.parse(localStorage.getItem('learningPathRegisteredUsers') || '[]');
+        } catch (e) {
+          localUsers = [];
+        }
+
+        const foundUser = localUsers.find(u => u.email === email);
+
+        if (!foundUser) {
+          msgBox.style.background = 'rgba(239, 68, 68, 0.2)';
+          msgBox.style.color = '#f87171';
+          msgBox.innerHTML = `❌ No account found with this email!<br>Please complete <strong>Create an Account</strong> first.<br><a href="create-account.html" style="color:#00e5ff; font-weight:bold; text-decoration:underline; display:inline-block; margin-top:8px;">👉 Go to Create Account</a>`;
+          return;
+        }
+
+        if (foundUser.password !== password) {
+          msgBox.style.background = 'rgba(239, 68, 68, 0.2)';
+          msgBox.style.color = '#f87171';
+          msgBox.textContent = '❌ Incorrect password. Please try again.';
+          return;
+        }
+
+        loggedInUser = {
+          id: 'user_' + Date.now(),
+          name: foundUser.name,
+          email: foundUser.email,
+          role: 'student',
+          coursesCount: 12,
+          completedCount: 4,
+          quizScore: '72%',
+          learningProgress: '18%'
+        };
+      }
+
+      // Success: Save user session and redirect to dashboard
+      localStorage.setItem('learningUser', JSON.stringify(loggedInUser));
+      msgBox.style.background = 'rgba(16, 185, 129, 0.2)';
+      msgBox.style.color = '#34d399';
+      msgBox.textContent = `✓ Welcome back, ${loggedInUser.name}! Login successful. Redirecting to dashboard...`;
+
+      setTimeout(() => {
+        window.location.href = 'pages/home.html';
+      }, 900);
     }
   </script>
 </body>

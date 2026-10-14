@@ -204,11 +204,11 @@
 
     <!-- Header Navbar -->
     <header class="navbar">
-        <div class="logo">
+        <a href="../index.html" class="logo" style="text-decoration:none;">
             <div class="logo-bars"><span></span><span></span><span></span></div>
             <span class="logo-white">Learning</span><span class="logo-purple">Path</span>
-        </div>
-        <div class="user-name">Welcome, Mohan!</div>
+        </a>
+        <div class="user-name" id="displayUserName">Welcome, Student!</div>
     </header>
 
     <div class="dashboard-container">
@@ -220,14 +220,13 @@
             <a href="continue-learning.html">▶ Continue Learning</a>
             <a href="quiz.html">📝 Quiz</a>
             <a href="learn/code-error-fixer.html">💻 Practice Coding</a>
-            <a href="learn/projects.html">🚀 Projects</a>
+            <a href="projects.html">🚀 Projects</a>
 
-            <div class="sidebar-section-title">Settings</div>
+            <div class="sidebar-section-title">Settings &amp; Account</div>
             <a href="learn/profile.html">👤 Profile</a>
             <a href="settings.html">🎨 Appearance</a>
-            <a href="settings.html">🔔 Notifications</a>
             <a href="admin.html">🛡️ Admin Portal</a>
-            <a href="learn/login.html" style="color: #ff5268;">🚪 Logout</a>
+            <a href="../login.html" id="logoutBtn" style="color: #ff5268;">🚪 Logout</a>
         </aside>
 
         <!-- Main Dashboard (Screen 4) -->
@@ -235,7 +234,7 @@
 
             <div class="welcome-header">
                 <div>
-                    <h1>Welcome, Mohan!</h1>
+                    <h1 id="welcomeHeaderTitle">Welcome, Student!</h1>
                     <p>Continue your learning journey</p>
                 </div>
             </div>
@@ -271,7 +270,7 @@
                             <p style="color:#94a3b8; font-size:13px;">Beginner - Introduction</p>
                         </div>
                     </div>
-                    <a href="learn/c.html" class="primary-btn" style="padding:10px 20px; font-size:13px; text-decoration:none;">Continue →</a>
+                    <a href="learn/c.html" class="primary-btn" style="padding:10px 20px; font-size:13px; text-decoration:none; background:#6645ff; color:#fff; border-radius:8px;">Continue →</a>
                 </div>
 
                 <div class="progress-bar-bg">
@@ -283,22 +282,38 @@
             <!-- Learning Path Language Cards -->
             <h2 style="font-size:18px; margin-bottom:15px;">Learning Path</h2>
             <div class="path-grid">
-                <div class="path-card open">
+                <a href="learn/c.html" class="path-card open" style="text-decoration:none; color:inherit;">
                     <strong>C</strong>
                     <span class="status-pill open">🟢 Open</span>
-                </div>
-                <div class="path-card">
+                </a>
+                <a href="learn/cpp.html" class="path-card open" style="text-decoration:none; color:inherit;">
                     <strong>C++</strong>
-                    <span class="status-pill locked">🔒 Locked</span>
-                </div>
-                <div class="path-card">
+                    <span class="status-pill open">🟢 Open</span>
+                </a>
+                <a href="learn/python.html" class="path-card open" style="text-decoration:none; color:inherit;">
                     <strong>Python</strong>
-                    <span class="status-pill locked">🔒 Locked</span>
-                </div>
-                <div class="path-card">
+                    <span class="status-pill open">🟢 Open</span>
+                </a>
+                <a href="learn/java.html" class="path-card open" style="text-decoration:none; color:inherit;">
+                    <strong>Java</strong>
+                    <span class="status-pill open">🟢 Open</span>
+                </a>
+                <a href="learn/javascript.html" class="path-card open" style="text-decoration:none; color:inherit;">
                     <strong>JavaScript</strong>
-                    <span class="status-pill locked">🔒 Locked</span>
-                </div>
+                    <span class="status-pill open">🟢 Open</span>
+                </a>
+                <a href="learn/html-css.html" class="path-card open" style="text-decoration:none; color:inherit;">
+                    <strong>HTML &amp; CSS</strong>
+                    <span class="status-pill open">🟢 Open</span>
+                </a>
+                <a href="learn/sql.html" class="path-card open" style="text-decoration:none; color:inherit;">
+                    <strong>SQL</strong>
+                    <span class="status-pill open">🟢 Open</span>
+                </a>
+                <a href="roadmap.html" class="path-card" style="text-decoration:none; color:inherit; border-color:#6645ff;">
+                    <strong style="color:#a78bfa;">Roadmap</strong>
+                    <span class="status-pill open" style="background:#241468; color:#a78bfa;">View All →</span>
+                </a>
             </div>
 
         </main>
@@ -307,7 +322,24 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            const quizResult = JSON.parse(localStorage.getItem("learningPathQuizResult"));
+            // Retrieve logged in user
+            let userName = "Mohan";
+            try {
+                const userStr = localStorage.getItem("learningUser");
+                if (userStr) {
+                    const u = JSON.parse(userStr);
+                    if (u.name) userName = u.name;
+                }
+            } catch (e) {}
+
+            const navUserName = document.getElementById("displayUserName");
+            if (navUserName) navUserName.textContent = `Welcome, ${userName}!`;
+
+            const welcomeHeaderTitle = document.getElementById("welcomeHeaderTitle");
+            if (welcomeHeaderTitle) welcomeHeaderTitle.textContent = `Welcome, ${userName}!`;
+
+            // Quiz progress update
+            const quizResult = JSON.parse(localStorage.getItem("learningPathQuizResult") || "null");
             if (quizResult && quizResult.language === "C") {
                 const fill = document.getElementById("homeProgressFill");
                 const text = document.getElementById("homeProgressText");
@@ -315,6 +347,16 @@
                     fill.style.width = `${quizResult.percentage}%`;
                     text.textContent = `${quizResult.percentage}%`;
                 }
+            }
+
+            // Logout handler
+            const logoutBtn = document.getElementById("logoutBtn");
+            if (logoutBtn) {
+                logoutBtn.addEventListener("click", (e) => {
+                    e.preventDefault();
+                    localStorage.removeItem("learningUser");
+                    window.location.href = "../login.html";
+                });
             }
         });
     </script>
