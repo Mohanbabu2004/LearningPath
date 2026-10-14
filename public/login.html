@@ -562,6 +562,19 @@
 
       // Success: Save user session and redirect to dashboard
       localStorage.setItem('learningUser', JSON.stringify(loggedInUser));
+
+      // Ensure user is registered in multi-user platform pool
+      try {
+        let regUsers = JSON.parse(localStorage.getItem('learningPathRegisteredUsers') || '[]');
+        const existingIdx = regUsers.findIndex(u => (u.email || '').toLowerCase() === (loggedInUser.email || '').toLowerCase());
+        if (existingIdx >= 0) {
+          regUsers[existingIdx] = { ...regUsers[existingIdx], ...loggedInUser };
+        } else {
+          regUsers.push(loggedInUser);
+        }
+        localStorage.setItem('learningPathRegisteredUsers', JSON.stringify(regUsers));
+      } catch (e) {}
+
       msgBox.style.background = '#f0fdf4';
       msgBox.style.color = '#16a34a';
       msgBox.style.border = '1px solid #bbf7d0';

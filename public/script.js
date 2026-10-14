@@ -215,6 +215,17 @@ function initSignup() {
 
     localStorage.setItem('learningPathRegisteredUsers', JSON.stringify(localUsers));
     localStorage.setItem('lastCreatedUser', JSON.stringify({ name: userData.name, email: userData.email, gender: userData.gender }));
+    localStorage.setItem('learningUser', JSON.stringify({
+      id: userData.id,
+      name: userData.name,
+      email: userData.email,
+      gender: userData.gender,
+      role: userData.role,
+      coursesCount: 0,
+      completedCount: 0,
+      quizScore: "0/100",
+      learningProgress: "0%"
+    }));
 
     // Send to backend API
     try {
