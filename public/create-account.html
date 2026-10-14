@@ -8,8 +8,8 @@
   <link rel="stylesheet" href="style.css">
   <style>
     /* ========================================================
-       Create Account - Exact Match to Reference Design
-       (media_1791956006373_89656fc6.png)
+       Create Account - Clean Modern Design Matching User Spec
+       (Top bezel removed, fully working interactive gender selector)
        ======================================================== */
     * {
       box-sizing: border-box;
@@ -26,65 +26,23 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 24px 14px;
+      padding: 30px 14px;
     }
 
-    /* Outer Glow Frame Bezel */
-    .create-acc-bezel-frame {
+    /* Crisp White Standalone Card with subtle neon glow */
+    .create-card-white {
       width: 100%;
       max-width: 430px;
+      background: #ffffff;
       border: 2px solid #3b82f6;
-      border-radius: 28px;
-      background: #090e29;
+      border-radius: 26px;
+      padding: 28px 24px 24px;
+      text-align: center;
       box-shadow: 
-        0 0 25px rgba(59, 130, 246, 0.45),
-        0 0 60px rgba(139, 92, 246, 0.25),
-        inset 0 0 15px rgba(59, 130, 246, 0.2);
-      overflow: hidden;
+        0 10px 40px rgba(0, 0, 0, 0.3),
+        0 0 25px rgba(59, 130, 246, 0.35);
       position: relative;
       margin: 0 auto;
-    }
-
-    /* Top Step 2 Bezel Header */
-    .bezel-top-banner {
-      background: linear-gradient(90deg, #1e40af 0%, #2563eb 50%, #1d4ed8 100%);
-      padding: 13px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      border-bottom: 1.5px solid rgba(255, 255, 255, 0.15);
-    }
-
-    .step-circle-badge {
-      position: absolute;
-      left: 16px;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #d946ef 0%, #a855f7 50%, #7c3aed 100%);
-      color: #ffffff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 21px;
-      font-weight: 800;
-      border: 2.5px solid #ffffff;
-      box-shadow: 0 0 12px rgba(217, 70, 239, 0.6);
-    }
-
-    .bezel-title-text {
-      color: #ffffff;
-      font-size: 21px;
-      font-weight: 800;
-      letter-spacing: -0.3px;
-    }
-
-    /* Inner Crisp White Card */
-    .create-card-white {
-      background: #ffffff;
-      padding: 24px 24px 22px;
-      text-align: center;
     }
 
     /* Brand Logo */
@@ -150,6 +108,7 @@
       gap: 12px;
       transition: all 0.2s ease;
       box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+      position: relative;
     }
 
     .form-input-card:focus-within {
@@ -184,8 +143,7 @@
       line-height: 1.2;
     }
 
-    .form-input-card input,
-    .form-input-card select {
+    .form-input-card input {
       border: none;
       outline: none;
       background: transparent;
@@ -203,17 +161,31 @@
       font-weight: 500;
     }
 
-    /* Custom Gender Select */
-    .field-select {
+    /* Working Interactive Gender Selector */
+    .gender-card {
       cursor: pointer;
-      appearance: none;
-      -webkit-appearance: none;
-      background: transparent;
+    }
+
+    .field-display-val {
+      font-size: 14.5px;
+      font-weight: 600;
+      color: #0f172a;
+      line-height: 1.2;
+    }
+
+    .gender-native-select {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      cursor: pointer;
+      z-index: 10;
     }
 
     .select-chevron-icon {
       color: #64748b;
-      font-size: 13px;
+      font-size: 11px;
       font-weight: bold;
       pointer-events: none;
       margin-left: auto;
@@ -231,6 +203,7 @@
       align-items: center;
       justify-content: center;
       transition: color 0.15s;
+      z-index: 2;
     }
 
     .eye-toggle-btn:hover {
@@ -332,7 +305,7 @@
 
     .bottom-back-home {
       display: inline-block;
-      margin-top: 16px;
+      margin-top: 18px;
       color: #cbd5e1;
       text-decoration: none;
       font-size: 13.5px;
@@ -348,125 +321,116 @@
 
 <body class="create-acc-page">
 
-  <!-- Outer Neon Glow Frame Bezel -->
-  <div class="create-acc-bezel-frame">
+  <!-- Crisp White Card Matching Reference Design (Top Bezel Removed) -->
+  <div class="create-card-white">
 
-    <!-- Top Bezel Banner: (2) Create Account -->
-    <div class="bezel-top-banner">
-      <div class="step-circle-badge">2</div>
-      <span class="bezel-title-text">Create Account</span>
-    </div>
+    <!-- Logo: Blue Cap 🎓 + LearningPath -->
+    <a href="index.html" class="card-brand-logo">
+      <svg class="cap-svg-icon" viewBox="0 0 24 24" fill="#2563eb">
+        <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3z M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/>
+      </svg>
+      <span class="brand-text-label">
+        <span class="part-learn">Learning</span><span class="part-path">Path</span>
+      </span>
+    </a>
 
-    <!-- Inner White Card Matching Screenshot -->
-    <div class="create-card-white">
+    <!-- Heading -->
+    <h2 class="card-heading-title">Create Your Account</h2>
+    <p class="card-subtitle-desc">Start your learning journey</p>
 
-      <!-- Logo: Blue Cap 🎓 + LearningPath -->
-      <a href="index.html" class="card-brand-logo">
-        <svg class="cap-svg-icon" viewBox="0 0 24 24" fill="#2563eb">
-          <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3z M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/>
-        </svg>
-        <span class="brand-text-label">
-          <span class="part-learn">Learning</span><span class="part-path">Path</span>
-        </span>
-      </a>
+    <!-- Form -->
+    <form id="signupForm" novalidate>
+      <div class="form-fields-stack">
 
-      <!-- Heading -->
-      <h2 class="card-heading-title">Create Your Account</h2>
-      <p class="card-subtitle-desc">Start your learning journey</p>
-
-      <!-- Form -->
-      <form id="signupForm" novalidate>
-        <div class="form-fields-stack">
-
-          <!-- 1. Full Name -->
-          <div class="form-input-card">
-            <span class="input-icon-glyph">👤</span>
-            <div class="input-field-body">
-              <label for="fullName" class="field-tag-label">Full Name</label>
-              <input id="fullName" name="fullName" type="text" placeholder="Mohan Babu" autocomplete="name" required minlength="3">
-            </div>
-          </div>
-
-          <!-- 2. Email Address -->
-          <div class="form-input-card">
-            <span class="input-icon-glyph">✉</span>
-            <div class="input-field-body">
-              <label for="email" class="field-tag-label">Email Address</label>
-              <input id="email" name="email" type="email" placeholder="mohan@example.com" autocomplete="email" required>
-            </div>
-          </div>
-
-          <!-- 3. Gender Dropdown -->
-          <div class="form-input-card">
-            <span class="input-icon-glyph">👤</span>
-            <div class="input-field-body">
-              <label for="gender" class="field-tag-label">Gender</label>
-              <select id="gender" name="gender" class="field-select" required>
-                <option value="Male" selected>Male</option>
-                <option value="Female">Female</option>
-                <option value="Other">Other</option>
-              </select>
-            </div>
-            <span class="select-chevron-icon">▼</span>
-          </div>
-
-          <!-- 4. Password -->
-          <div class="form-input-card">
-            <span class="input-icon-glyph">🔒</span>
-            <div class="input-field-body">
-              <label for="password" class="field-tag-label">Password</label>
-              <input id="password" name="password" type="password" placeholder="••••••••••••" autocomplete="new-password" required>
-            </div>
-            <button type="button" class="eye-toggle-btn show-password" data-target="password" aria-label="Show password">👁</button>
-          </div>
-
-          <!-- 5. Confirm Password -->
-          <div class="form-input-card">
-            <span class="input-icon-glyph">🔒</span>
-            <div class="input-field-body">
-              <label for="confirmPassword" class="field-tag-label">Confirm Password</label>
-              <input id="confirmPassword" name="confirmPassword" type="password" placeholder="••••••••••••" autocomplete="new-password" required>
-            </div>
-            <button type="button" class="eye-toggle-btn show-password" data-target="confirmPassword" aria-label="Show confirm password">👁</button>
-          </div>
-
-        </div>
-
-        <!-- Password Requirements with 4 Green Checkmarks -->
-        <div class="password-rules-box" aria-live="polite">
-          <div class="rule-item-row" id="ruleLength">
-            <span class="rule-check-circle">✔</span>
-            <span>At least 8 characters</span>
-          </div>
-          <div class="rule-item-row" id="ruleNumber">
-            <span class="rule-check-circle">✔</span>
-            <span>Include a number</span>
-          </div>
-          <div class="rule-item-row" id="ruleSpecial">
-            <span class="rule-check-circle">✔</span>
-            <span>Include a special character</span>
-          </div>
-          <div class="rule-item-row" id="ruleUpper">
-            <span class="rule-check-circle">✔</span>
-            <span>Include one capital letter</span>
+        <!-- 1. Full Name -->
+        <div class="form-input-card">
+          <span class="input-icon-glyph">👤</span>
+          <div class="input-field-body">
+            <label for="fullName" class="field-tag-label">Full Name</label>
+            <input id="fullName" name="fullName" type="text" placeholder="Mohan Babu" autocomplete="name" required minlength="3">
           </div>
         </div>
 
-        <!-- Form Status Message -->
-        <p id="formMessage" class="form-message-alert" role="status" aria-live="polite"></p>
+        <!-- 2. Email Address -->
+        <div class="form-input-card">
+          <span class="input-icon-glyph">✉</span>
+          <div class="input-field-body">
+            <label for="email" class="field-tag-label">Email Address</label>
+            <input id="email" name="email" type="email" placeholder="mohan@example.com" autocomplete="email" required>
+          </div>
+        </div>
 
-        <!-- Big Blue Create an Account Button -->
-        <button type="submit" class="btn-create-account-blue">
-          Create an Account →
-        </button>
-      </form>
+        <!-- 3. Working Interactive Gender Selector -->
+        <div class="form-input-card gender-card" id="genderCard" tabindex="0">
+          <span class="input-icon-glyph">👤</span>
+          <div class="input-field-body">
+            <label for="gender" class="field-tag-label">Gender</label>
+            <div id="genderDisplay" class="field-display-val">Male</div>
+          </div>
+          <span class="select-chevron-icon">▼</span>
+          <select id="gender" name="gender" class="gender-native-select" aria-label="Gender" required>
+            <option value="Male" selected>Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
 
-      <!-- Bottom Login Link -->
-      <p class="bottom-login-prompt">
-        Already have an account? <a href="login.html">Login</a>
-      </p>
+        <!-- 4. Password -->
+        <div class="form-input-card">
+          <span class="input-icon-glyph">🔒</span>
+          <div class="input-field-body">
+            <label for="password" class="field-tag-label">Password</label>
+            <input id="password" name="password" type="password" placeholder="••••••••••••" autocomplete="new-password" required>
+          </div>
+          <button type="button" class="eye-toggle-btn show-password" data-target="password" aria-label="Show password">👁</button>
+        </div>
 
-    </div>
+        <!-- 5. Confirm Password -->
+        <div class="form-input-card">
+          <span class="input-icon-glyph">🔒</span>
+          <div class="input-field-body">
+            <label for="confirmPassword" class="field-tag-label">Confirm Password</label>
+            <input id="confirmPassword" name="confirmPassword" type="password" placeholder="••••••••••••" autocomplete="new-password" required>
+          </div>
+          <button type="button" class="eye-toggle-btn show-password" data-target="confirmPassword" aria-label="Show confirm password">👁</button>
+        </div>
+
+      </div>
+
+      <!-- Password Requirements with 4 Green Checkmarks -->
+      <div class="password-rules-box" aria-live="polite">
+        <div class="rule-item-row" id="ruleLength">
+          <span class="rule-check-circle">✔</span>
+          <span>At least 8 characters</span>
+        </div>
+        <div class="rule-item-row" id="ruleNumber">
+          <span class="rule-check-circle">✔</span>
+          <span>Include a number</span>
+        </div>
+        <div class="rule-item-row" id="ruleSpecial">
+          <span class="rule-check-circle">✔</span>
+          <span>Include a special character</span>
+        </div>
+        <div class="rule-item-row" id="ruleUpper">
+          <span class="rule-check-circle">✔</span>
+          <span>Include one capital letter</span>
+        </div>
+      </div>
+
+      <!-- Form Status Message -->
+      <p id="formMessage" class="form-message-alert" role="status" aria-live="polite"></p>
+
+      <!-- Big Blue Create an Account Button -->
+      <button type="submit" class="btn-create-account-blue">
+        Create an Account →
+      </button>
+    </form>
+
+    <!-- Bottom Login Link -->
+    <p class="bottom-login-prompt">
+      Already have an account? <a href="login.html">Login</a>
+    </p>
+
   </div>
 
   <a href="index.html" class="bottom-back-home">← Back to Home</a>

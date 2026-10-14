@@ -77,7 +77,30 @@ document.addEventListener("DOMContentLoaded", function () {
   const email = document.getElementById("email");
   const password = document.getElementById("password");
   const confirmPassword = document.getElementById("confirmPassword");
-  const message = document.getElementById("formMessage");
+  const genderSelect = document.getElementById("gender");
+  const genderDisplay = document.getElementById("genderDisplay");
+  const genderCard = document.getElementById("genderCard");
+
+  if (genderSelect && genderDisplay) {
+    genderSelect.addEventListener("change", function () {
+      genderDisplay.textContent = genderSelect.value;
+    });
+    genderSelect.addEventListener("input", function () {
+      genderDisplay.textContent = genderSelect.value;
+    });
+  }
+
+  if (genderCard && genderSelect) {
+    genderCard.addEventListener("click", function (e) {
+      if (e.target !== genderSelect) {
+        if (typeof genderSelect.showPicker === "function") {
+          try {
+            genderSelect.showPicker();
+          } catch (err) {}
+        }
+      }
+    });
+  }
 
   const rules = {
     length: document.getElementById("ruleLength"),
