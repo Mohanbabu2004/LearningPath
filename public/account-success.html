@@ -3,99 +3,412 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#030821">
+  <meta name="theme-color" content="#0a0f29">
   <title>Account Created Successfully | LearningPath</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* ========================================================
+       Account Created Successfully (Screen 3)
+       Matches User Reference Image (media_1791958721194_ceebbc60)
+       ======================================================== */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body.success-screen-body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      min-height: 100vh;
+      background: radial-gradient(ellipse at 50% 20%, #172554 0%, #0a0f29 60%, #030712 100%);
+      color: #0f172a;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 14px;
+      overflow-x: hidden;
+    }
+
+    /* Outer Device / App Frame with Neon Border Glow */
+    .success-phone-frame {
+      width: 100%;
+      max-width: 380px;
+      border: 2px solid #3b82f6;
+      border-radius: 28px;
+      background: #ffffff;
+      box-shadow: 
+        0 15px 45px rgba(0, 0, 0, 0.45),
+        0 0 25px rgba(59, 130, 246, 0.45),
+        0 0 50px rgba(139, 92, 246, 0.25);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      animation: frame-appear 0.45s ease-out both;
+    }
+
+    @keyframes frame-appear {
+      from {
+        opacity: 0;
+        transform: translateY(18px) scale(0.98);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    /* Top Bezel / Header Banner with Step (3) */
+    .success-top-bezel {
+      background: linear-gradient(90deg, #0e1638 0%, #1e3a8a 50%, #0e1638 100%);
+      border-bottom: 2px solid #2563eb;
+      height: 52px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 15px rgba(30, 58, 138, 0.4);
+    }
+
+    /* Step 3 Circle Badge on Left */
+    .step-3-badge {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #d946ef 0%, #9333ea 100%);
+      border: 2px solid #f472b6;
+      box-shadow: 0 0 10px rgba(217, 70, 239, 0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      font-weight: 800;
+      font-size: 18px;
+    }
+
+    .success-top-title {
+      color: #ffffff;
+      font-size: 17px;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Card Interior (White) */
+    .success-card-content {
+      background: #ffffff;
+      padding: 18px 20px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      position: relative;
+    }
+
+    /* Brand Logo */
+    .success-brand-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      margin-bottom: 12px;
+      transition: transform 0.2s;
+    }
+
+    .success-brand-link:hover {
+      transform: scale(1.03);
+    }
+
+    .cap-icon-svg {
+      width: 28px;
+      height: 28px;
+      flex-shrink: 0;
+    }
+
+    .brand-text {
+      font-size: 21px;
+      font-weight: 800;
+      color: #0f172a;
+      letter-spacing: -0.3px;
+    }
+
+    .brand-text .brand-purple {
+      color: #7c3aed;
+    }
+
+    /* Celebration & Confetti Wrapper */
+    .celebration-container {
+      position: relative;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 4px 0 10px;
+    }
+
+    /* Vibrant 3D Green Checkmark Badge */
+    .green-check-badge {
+      width: 82px;
+      height: 82px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 30%, #34d399 0%, #10b981 50%, #059669 100%);
+      box-shadow: 
+        0 8px 22px rgba(16, 185, 129, 0.42),
+        inset 0 2px 4px rgba(255, 255, 255, 0.5),
+        inset 0 -3px 6px rgba(0, 0, 0, 0.18);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 2;
+      animation: check-pop 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+    }
+
+    @keyframes check-pop {
+      0% {
+        opacity: 0;
+        transform: scale(0.4) rotate(-15deg);
+      }
+      70% {
+        transform: scale(1.12) rotate(4deg);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+      }
+    }
+
+    .check-svg {
+      width: 44px;
+      height: 44px;
+      stroke: #ffffff;
+      stroke-width: 4.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      fill: none;
+      filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.15));
+    }
+
+    /* Festive Confetti particles scattered around the checkmark */
+    .confetti-spark {
+      position: absolute;
+      pointer-events: none;
+      user-select: none;
+      font-weight: bold;
+      animation: sparkle-float 2.2s ease-in-out infinite alternate;
+    }
+
+    @keyframes sparkle-float {
+      from { transform: translateY(0) scale(0.9); opacity: 0.75; }
+      to { transform: translateY(-4px) scale(1.15); opacity: 1; }
+    }
+
+    .cf-1 { top: 5%; left: 16%; color: #ef4444; font-size: 15px; }
+    .cf-2 { top: 12%; left: 28%; color: #f59e0b; font-size: 14px; }
+    .cf-3 { top: 4%; right: 18%; color: #ec4899; font-size: 16px; }
+    .cf-4 { top: 14%; right: 30%; color: #10b981; font-size: 13px; }
+    .cf-5 { bottom: 8%; left: 18%; color: #8b5cf6; font-size: 16px; }
+    .cf-6 { bottom: 12%; left: 32%; color: #06b6d4; font-size: 12px; }
+    .cf-7 { bottom: 10%; right: 19%; color: #f97316; font-size: 15px; }
+    .cf-8 { bottom: 2%; right: 32%; color: #ef4444; font-size: 13px; }
+    .cf-9 { top: 40%; left: 10%; color: #a855f7; font-size: 17px; }
+    .cf-10 { top: 38%; right: 11%; color: #10b981; font-size: 14px; }
+
+    /* Headline & Subtitle */
+    .success-heading {
+      font-size: 20px;
+      font-weight: 800;
+      color: #0f172a;
+      margin: 8px 0 6px;
+      line-height: 1.25;
+      letter-spacing: -0.2px;
+    }
+
+    .success-subtitle {
+      font-size: 13.5px;
+      color: #475467;
+      line-height: 1.45;
+      margin: 0 auto 16px;
+      max-width: 290px;
+    }
+
+    .user-welcome-chip {
+      display: inline-block;
+      margin-top: -8px;
+      margin-bottom: 12px;
+      padding: 3px 12px;
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      border-radius: 20px;
+      color: #1d4ed8;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    /* Go to Login Button */
+    .btn-go-to-login {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: min(100%, 230px);
+      min-height: 44px;
+      padding: 10px 24px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #1d4ed8 0%, #2563eb 60%, #1e40af 100%);
+      color: #ffffff;
+      font-size: 15px;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4);
+      transition: transform 0.2s, box-shadow 0.2s, filter 0.2s;
+      z-index: 3;
+    }
+
+    .btn-go-to-login:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(37, 99, 235, 0.55);
+      filter: brightness(1.05);
+    }
+
+    .btn-go-to-login .btn-arrow {
+      font-size: 17px;
+      line-height: 1;
+      transition: transform 0.2s;
+    }
+
+    .btn-go-to-login:hover .btn-arrow {
+      transform: translateX(3px);
+    }
+
+    /* Bottom 3D Student Illustration with Desk, Laptop & Plant */
+    .student-illustration-section {
+      width: 100%;
+      margin-top: -6px;
+      position: relative;
+      overflow: hidden;
+      line-height: 0;
+    }
+
+    .student-illustration-img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    @media (max-width: 480px) {
+      .success-phone-frame {
+        max-width: 100%;
+        border-radius: 22px;
+      }
+
+      .success-heading {
+        font-size: 19px;
+      }
+
+      .green-check-badge {
+        width: 76px;
+        height: 76px;
+      }
+    }
+  </style>
 </head>
-<body class="account-page success-page">
+<body class="success-screen-body">
 
-  <main class="success-wrapper">
-    <section class="success-card">
+  <!-- Outer Phone / App Frame -->
+  <main class="success-phone-frame">
 
-      <div class="success-step">
-        <span class="step-number">2</span>
-        <h1>2. Account Created</h1>
-      </div>
+    <!-- Top Bezel Banner with Step (3) and Title -->
+    <header class="success-top-bezel">
+      <div class="step-3-badge" aria-label="Step 3">3</div>
+      <h1 class="success-top-title">Account Created</h1>
+    </header>
 
-      <a href="index.html" class="success-brand">
-        <span class="success-logo" aria-hidden="true">
-          <i></i><i></i><i></i>
-        </span>
-        <span>Learning<span class="pink">Path</span></span>
+    <!-- Card Interior -->
+    <section class="success-card-content">
+
+      <!-- LearningPath Brand Logo -->
+      <a href="index.html" class="success-brand-link" title="LearningPath Home">
+        <svg class="cap-icon-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 3L1 9L12 15L21 10.09V17H23V9L12 3Z" fill="#2563eb"/>
+          <path d="M5 13.18V17.18C5 19.39 8.13 21.18 12 21.18C15.87 21.18 19 19.39 19 17.18V13.18L12 17L5 13.18Z" fill="#1d4ed8"/>
+        </svg>
+        <span class="brand-text">Learning<span class="brand-purple">Path</span></span>
       </a>
 
-      <div class="celebration" aria-hidden="true">
-        <span class="spark spark-1">✦</span>
-        <span class="spark spark-2">✧</span>
-        <span class="spark spark-3">✦</span>
-        <span class="spark spark-4">✳</span>
-        <span class="spark spark-5">✦</span>
-        <span class="spark spark-6">✧</span>
-        <span class="spark spark-7">✦</span>
-        <span class="spark spark-8">✳</span>
-        <span class="spark spark-9">✦</span>
-        <span class="spark spark-10">✧</span>
-      </div>
+      <!-- Celebration Confetti & Vibrant Green Checkmark -->
+      <div class="celebration-container" aria-hidden="true">
+        <span class="confetti-spark cf-1">✦</span>
+        <span class="confetti-spark cf-2">★</span>
+        <span class="confetti-spark cf-3">✦</span>
+        <span class="confetti-spark cf-4">■</span>
+        <span class="confetti-spark cf-5">◆</span>
+        <span class="confetti-spark cf-6">★</span>
+        <span class="confetti-spark cf-7">✦</span>
+        <span class="confetti-spark cf-8">◆</span>
+        <span class="confetti-spark cf-9">■</span>
+        <span class="confetti-spark cf-10">●</span>
 
-      <div class="success-content">
-        <div class="success-check" aria-label="Success">
-          <svg viewBox="0 0 100 100" role="img"
-            aria-label="Check mark">
-            <path d="M23 51 L42 70 L78 31"
-              fill="none" stroke="white"
-              stroke-width="10"
-              stroke-linecap="round"
-              stroke-linejoin="round"/>
+        <div class="green-check-badge" role="img" aria-label="Account Created Successfully Checkmark">
+          <svg class="check-svg" viewBox="0 0 32 32">
+            <polyline points="7 17 13 23 25 9"></polyline>
           </svg>
         </div>
-
-        <h2>Account Created Successfully!</h2>
-
-        <p class="success-description">
-          You can now login to continue<br class="desktop-break">
-          your learning journey.
-        </p>
-
-        <a href="login.html" class="success-login-btn">
-          Go to Login <span>→</span>
-        </a>
       </div>
 
-      <div class="success-decoration" aria-hidden="true">
-        <div class="plant">
-          <span></span><span></span><span></span>
-          <span></span><span></span><span></span>
-          <div class="plant-pot"></div>
-        </div>
+      <!-- Heading -->
+      <h2 class="success-heading">Account Created Successfully!</h2>
 
-        <div class="student-scene">
-          <div class="student-head">
-            <div class="student-hair"></div>
-            <div class="student-face">
-              <span class="eye eye-left"></span>
-              <span class="eye eye-right"></span>
-              <span class="smile"></span>
-            </div>
-          </div>
+      <!-- Personalized Chip if available -->
+      <div id="userWelcomeChip" class="user-welcome-chip" style="display: none;"></div>
 
-          <div class="student-body">
-            <span class="hood-string hood-string-left"></span>
-            <span class="hood-string hood-string-right"></span>
-          </div>
-
-          <div class="laptop">
-            <span>✓</span>
-          </div>
-        </div>
-      </div>
-
-      <p class="success-bottom">
-        Keep learning. Keep growing. 🚀
+      <!-- Subtitle -->
+      <p class="success-subtitle">
+        You can now login to continue<br>
+        your learning journey.
       </p>
 
+      <!-- Go to Login Button -->
+      <a href="login.html" class="btn-go-to-login">
+        Go to Login <span class="btn-arrow">→</span>
+      </a>
+
+      <!-- 3D Student Illustration with Desk, Laptop, Thumbs Up & Plant -->
+      <div class="student-illustration-section">
+        <img 
+          src="assets/images/account-success-student.png" 
+          alt="LearningPath Student with Laptop and Plant giving Thumbs Up" 
+          class="student-illustration-img"
+        >
+      </div>
+
     </section>
+
   </main>
+
+  <script>
+    // Personalize with newly created user's name if available in localStorage
+    try {
+      const lastUser = JSON.parse(localStorage.getItem('lastCreatedUser') || 'null');
+      if (lastUser && lastUser.name) {
+        const chip = document.getElementById('userWelcomeChip');
+        if (chip) {
+          chip.textContent = `Welcome, ${lastUser.name}! 🎉`;
+          chip.style.display = 'inline-block';
+        }
+      }
+    } catch (e) {
+      console.warn('LocalStorage error:', e);
+    }
+  </script>
 
 </body>
 </html>
-
