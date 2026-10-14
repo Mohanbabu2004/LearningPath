@@ -3,112 +3,293 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#030821">
+  <meta name="theme-color" content="#0a0f29">
   <title>Login | LearningPath</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    .login-wrapper {
-      min-height: calc(100vh - 180px);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 40px 18px;
+    /* ========================================================
+       Login / Welcome Page (Screen 4)
+       Matches User Reference Image (media_1791963138327_2d70a2ff)
+       ======================================================== */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
-    .login-card-glass {
-      width: min(100%, 480px);
-      padding: 38px 32px 30px;
-      border: 2px solid #6677ff;
-      border-radius: 25px;
-      background: linear-gradient(145deg, rgba(5, 22, 73, 0.98), rgba(2, 11, 39, 0.97));
-      box-shadow: 0 0 10px #176dff, 0 0 28px rgba(28, 70, 255, 0.65);
+    body.login-screen-body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      min-height: 100vh;
+      background: radial-gradient(ellipse at 50% 20%, #172554 0%, #0a0f29 60%, #030712 100%);
+      color: #0f172a;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 30px 14px;
+      overflow-x: hidden;
+    }
+
+    /* Crisp White Standalone Card with Neon Border Glow */
+    .login-card-white {
+      width: 100%;
+      max-width: 410px;
+      border: 2px solid #3b82f6;
+      border-radius: 26px;
+      background: #ffffff;
+      padding: 32px 24px 26px;
+      box-shadow: 
+        0 12px 45px rgba(0, 0, 0, 0.35),
+        0 0 25px rgba(59, 130, 246, 0.4),
+        0 0 50px rgba(139, 92, 246, 0.2);
+      position: relative;
+      animation: frame-appear 0.45s ease-out both;
+      margin: 0 auto;
       text-align: center;
     }
 
-    .login-icon-badge {
-      font-size: 45px;
-      margin-bottom: 12px;
-      display: inline-block;
+    @keyframes frame-appear {
+      from {
+        opacity: 0;
+        transform: translateY(18px) scale(0.98);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
     }
 
-    .login-card-glass h1 {
-      font-size: clamp(26px, 4vw, 36px);
-      margin-bottom: 8px;
+    /* Brand Logo */
+    .login-brand-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      text-decoration: none;
+      margin-bottom: 12px;
+      transition: transform 0.2s;
+    }
+
+    .login-brand-link:hover {
+      transform: scale(1.03);
+    }
+
+    .cap-icon-svg {
+      width: 32px;
+      height: 32px;
+      flex-shrink: 0;
+    }
+
+    .brand-text {
+      font-size: 23px;
       font-weight: 800;
+      color: #0f172a;
+      letter-spacing: -0.3px;
+    }
+
+    .brand-text .brand-purple {
+      color: #7c3aed;
+    }
+
+    /* Heading & Subtitle */
+    .login-heading {
+      font-size: 26px;
+      font-weight: 800;
+      color: #0f172a;
+      margin-top: 6px;
+      margin-bottom: 4px;
+      letter-spacing: -0.3px;
     }
 
     .login-subtitle {
-      font-size: 15px;
-      color: #d5defd;
-      margin-bottom: 26px;
+      font-size: 14px;
+      color: #475467;
+      margin-bottom: 22px;
     }
 
-    .login-form {
+    /* Form Layout */
+    .login-form-body {
       text-align: left;
     }
 
-    .login-form .form-field {
-      min-height: 72px;
+    .input-group {
+      margin-bottom: 16px;
+    }
+
+    .input-label {
+      display: block;
+      font-size: 13.5px;
+      font-weight: 600;
+      color: #334155;
+      margin-bottom: 6px;
+    }
+
+    .input-box-wrapper {
       display: flex;
       align-items: center;
-      gap: 12px;
-      margin-bottom: 16px;
-      padding: 10px 14px;
-      border: 1px solid #145fbd;
-      border-radius: 14px;
-      background: rgba(3, 24, 65, 0.94);
+      gap: 10px;
+      border: 1.5px solid #cbd5e1;
+      border-radius: 12px;
+      padding: 11px 14px;
+      background: #ffffff;
       transition: border-color 0.2s, box-shadow 0.2s;
     }
 
-    .login-form .form-field:focus-within {
-      border-color: #00d9ff;
-      box-shadow: 0 0 12px rgba(0, 195, 255, 0.3);
+    .input-box-wrapper:focus-within {
+      border-color: #3b82f6;
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
     }
 
-    .login-btn-submit {
+    .input-icon {
+      font-size: 16px;
+      color: #64748b;
+      flex-shrink: 0;
+      user-select: none;
+    }
+
+    .native-input {
       width: 100%;
-      min-height: 58px;
-      border: 2px solid #ff7dff;
-      border-radius: 14px;
+      border: none;
+      outline: none;
+      background: transparent;
+      font-size: 14.5px;
+      color: #0f172a;
+      font-family: inherit;
+    }
+
+    .native-input::placeholder {
+      color: #94a3b8;
+    }
+
+    /* Password Eye Toggle */
+    .eye-btn-toggle {
+      background: transparent;
+      border: none;
       cursor: pointer;
-      color: white;
-      font-size: 19px;
-      font-weight: 800;
-      background: linear-gradient(105deg, #ed00ed 0%, #a900ff 52%, #5141ff 100%);
-      box-shadow: 0 0 13px #a600ff;
-      transition: transform 0.2s, box-shadow 0.2s;
-      margin-top: 8px;
+      color: #64748b;
+      font-size: 16px;
+      padding: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: color 0.15s;
     }
 
-    .login-btn-submit:hover {
+    .eye-btn-toggle:hover {
+      color: #2563eb;
+    }
+
+    /* Remember Me & Forgot Password Row */
+    .options-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 14px 0 20px;
+      font-size: 13.5px;
+    }
+
+    .remember-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      color: #475467;
+      font-weight: 500;
+      user-select: none;
+    }
+
+    .remember-checkbox {
+      width: 17px;
+      height: 17px;
+      accent-color: #1d4ed8;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    .forgot-link {
+      color: #1d4ed8;
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+
+    .forgot-link:hover {
+      text-decoration: underline;
+      color: #1e40af;
+    }
+
+    /* Big Blue Submit Button */
+    .btn-login-blue {
+      width: 100%;
+      min-height: 48px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #1d4ed8 0%, #2563eb 60%, #1e40af 100%);
+      color: #ffffff;
+      font-size: 16.5px;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      box-shadow: 0 4px 14px rgba(29, 78, 216, 0.35);
+      transition: all 0.2s ease;
+    }
+
+    .btn-login-blue:hover {
       transform: translateY(-2px);
-      box-shadow: 0 0 22px #c000ff;
+      box-shadow: 0 6px 18px rgba(29, 78, 216, 0.45);
+      filter: brightness(1.05);
     }
 
-    .login-footer-links {
-      margin-top: 22px;
-      font-size: 15px;
-      color: #d5defd;
+    .btn-login-blue:active {
+      transform: translateY(0);
     }
 
-    .login-footer-links a {
-      color: #00e5ff;
+    .btn-arrow {
+      font-size: 18px;
+      line-height: 1;
+      transition: transform 0.2s;
+    }
+
+    .btn-login-blue:hover .btn-arrow {
+      transform: translateX(3px);
+    }
+
+    /* Message Alert Box */
+    .login-message-alert {
+      margin-top: 14px;
+      padding: 10px 14px;
+      border-radius: 10px;
+      font-size: 13.5px;
+      font-weight: 600;
+      display: none;
+      text-align: center;
+      line-height: 1.45;
+    }
+
+    /* Bottom Prompt Link */
+    .bottom-signup-prompt {
+      margin-top: 18px;
+      font-size: 14px;
+      color: #475467;
+      text-align: center;
+    }
+
+    .bottom-signup-prompt a {
+      color: #1d4ed8;
       font-weight: 700;
       text-decoration: none;
+      margin-left: 3px;
     }
 
-    .login-message {
-      margin-top: 15px;
-      padding: 10px;
-      border-radius: 8px;
-      display: none;
-      font-size: 14px;
-      text-align: center;
+    .bottom-signup-prompt a:hover {
+      text-decoration: underline;
     }
 
     /* Bottom Navigation Buttons (Back & Home) */
     .bottom-nav-buttons {
-      margin-top: 18px;
+      margin-top: 20px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -145,113 +326,174 @@
     .btn-bottom-pill:active {
       transform: translateY(0);
     }
+
+    @media (max-width: 480px) {
+      .login-card-white {
+        max-width: 100%;
+        border-radius: 22px;
+        padding: 26px 18px 22px;
+      }
+
+      .login-heading {
+        font-size: 23px;
+      }
+    }
   </style>
 </head>
-<body class="account-page">
+<body class="login-screen-body">
 
-  <!-- NAVBAR -->
-  <header class="navbar">
-    <a href="index.html" class="brand">
-      <span class="brand-icon">▮▮▮</span>
-      <span>Learning<span class="pink">Path</span></span>
+  <!-- Crisp White Standalone Card -->
+  <main class="login-card-white">
+
+    <!-- Brand Logo: Blue Cap 🎓 + LearningPath -->
+    <a href="index.html" class="login-brand-link" title="LearningPath Home">
+      <svg class="cap-icon-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 3L1 9L12 15L21 10.09V17H23V9L12 3Z" fill="#2563eb"/>
+        <path d="M5 13.18V17.18C5 19.39 8.13 21.18 12 21.18C15.87 21.18 19 19.39 19 17.18V13.18L12 17L5 13.18Z" fill="#1d4ed8"/>
+      </svg>
+      <span class="brand-text">Learning<span class="brand-purple">Path</span></span>
     </a>
 
-    <nav class="nav-links" id="navLinks">
-      <a href="index.html">Home</a>
-      <a href="pages/courses.html">Courses</a>
-      <a href="pages/ai-tools.html">AI Tools</a>
-      <a href="pages/projects.html">Projects</a>
-      <a href="pages/quiz.html">Quiz</a>
-      <a href="pages/roadmap.html">Roadmap</a>
-      <a href="index.html#about">About</a>
-    </nav>
+    <!-- Heading & Subtitle -->
+    <h1 class="login-heading">Welcome Back!</h1>
+    <p class="login-subtitle">Login to continue your learning</p>
 
-    <div class="nav-actions">
-      <a href="login.html" class="login-btn">Login</a>
-      <a href="create-account.html" class="nav-create">Create Account</a>
-    </div>
+    <!-- Login Form -->
+    <form class="login-form-body" onsubmit="handleLogin(event)" novalidate>
 
-    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
-  </header>
-
-  <main class="login-wrapper">
-    <section class="login-card-glass">
-      <div class="login-icon-badge">🔐</div>
-      <h1>Welcome Back</h1>
-      <p class="login-subtitle">Login to continue your LearningPath journey</p>
-
-      <div id="loginMessage" class="login-message"></div>
-
-      <form id="loginForm" class="login-form" onsubmit="handleLogin(event)">
-        <div class="form-field">
-          <span class="field-icon">✉</span>
-          <div class="field-content">
-            <label for="loginEmail">Email Address</label>
-            <input type="email" id="loginEmail" placeholder="user@example.com" required>
-          </div>
+      <!-- Email Address Field -->
+      <div class="input-group">
+        <label for="loginEmail" class="input-label">Email Address</label>
+        <div class="input-box-wrapper">
+          <span class="input-icon">👤</span>
+          <input 
+            type="email" 
+            id="loginEmail" 
+            name="email" 
+            class="native-input" 
+            placeholder="mohan@example.com" 
+            autocomplete="email" 
+            required
+          >
         </div>
-
-        <div class="form-field">
-          <span class="field-icon">🔒</span>
-          <div class="field-content">
-            <label for="loginPassword">Password</label>
-            <input type="password" id="loginPassword" placeholder="Enter your password" required>
-          </div>
-          <button type="button" class="show-password" data-target="loginPassword" aria-label="Show password">◉</button>
-        </div>
-
-        <button type="submit" class="login-btn-submit">
-          Login <span>→</span>
-        </button>
-      </form>
-
-      <div class="login-footer-links">
-        Don't have an account? <a href="create-account.html">Create Account</a>
       </div>
 
-      <!-- Bottom Back and Home Buttons -->
-      <nav class="bottom-nav-buttons" aria-label="Page navigation">
-        <button type="button" class="btn-bottom-pill btn-nav-back" id="bottomBackBtn" title="Go back">
-          <span class="nav-arrow">←</span>
-          <span>Back</span>
-        </button>
-        <a href="index.html" class="btn-bottom-pill btn-nav-home" id="bottomHomeBtn" title="Go to Home page">
-          <span class="nav-icon">🏠</span>
-          <span>Home</span>
-        </a>
-      </nav>
-    </section>
+      <!-- Password Field -->
+      <div class="input-group">
+        <label for="loginPassword" class="input-label">Password</label>
+        <div class="input-box-wrapper">
+          <span class="input-icon">🔒</span>
+          <input 
+            type="password" 
+            id="loginPassword" 
+            name="password" 
+            class="native-input" 
+            placeholder="••••••••" 
+            autocomplete="current-password" 
+            required
+          >
+          <button type="button" class="eye-btn-toggle" id="togglePasswordBtn" aria-label="Toggle password visibility">
+            👁
+          </button>
+        </div>
+      </div>
+
+      <!-- Remember Me & Forgot Password Row -->
+      <div class="options-row">
+        <label class="remember-label">
+          <input type="checkbox" id="rememberMeCheckbox" class="remember-checkbox" checked>
+          <span>Remember me</span>
+        </label>
+        <a href="pages/auth/forgot-password.html" class="forgot-link">Forgot Password?</a>
+      </div>
+
+      <!-- Status Message Alert Box -->
+      <div id="loginMessage" class="login-message-alert" role="alert"></div>
+
+      <!-- Big Blue Login Button -->
+      <button type="submit" class="btn-login-blue" id="loginSubmitBtn">
+        Login <span class="btn-arrow">→</span>
+      </button>
+
+      <!-- Bottom Create Account Link -->
+      <p class="bottom-signup-prompt">
+        Don't have an account? <a href="create-account.html">Create Account</a>
+      </p>
+
+    </form>
+
   </main>
 
-  <footer>
-    © 2026 LearningPath — Learn Coding the Easy Way.
-  </footer>
+  <!-- Bottom Back and Home Navigation Buttons -->
+  <nav class="bottom-nav-buttons" aria-label="Page navigation">
+    <button type="button" class="btn-bottom-pill btn-nav-back" id="bottomBackBtn" title="Go back">
+      <span class="nav-arrow">←</span>
+      <span>Back</span>
+    </button>
+    <a href="index.html" class="btn-bottom-pill btn-nav-home" id="bottomHomeBtn" title="Go to Home page">
+      <span class="nav-icon">🏠</span>
+      <span>Home</span>
+    </a>
+  </nav>
 
   <script src="script.js"></script>
   <script>
-    // Prefill email if coming from create-account
+    // Password toggle
+    const toggleBtn = document.getElementById('togglePasswordBtn');
+    const pwdInput = document.getElementById('loginPassword');
+    if (toggleBtn && pwdInput) {
+      toggleBtn.addEventListener('click', () => {
+        const isShowing = pwdInput.type === 'text';
+        pwdInput.type = isShowing ? 'password' : 'text';
+        toggleBtn.textContent = isShowing ? '👁' : '🙈';
+      });
+    }
+
+    // Prefill email if coming from create-account or remembered
     document.addEventListener('DOMContentLoaded', () => {
       try {
+        const remembered = localStorage.getItem('rememberedLoginEmail');
         const lastCreated = JSON.parse(localStorage.getItem('lastCreatedUser') || 'null');
-        if (lastCreated && lastCreated.email) {
-          const emailInput = document.getElementById('loginEmail');
-          if (emailInput && !emailInput.value) {
+        const emailInput = document.getElementById('loginEmail');
+        if (emailInput && !emailInput.value) {
+          if (remembered) {
+            emailInput.value = remembered;
+          } else if (lastCreated && lastCreated.email) {
             emailInput.value = lastCreated.email;
           }
         }
       } catch (e) {}
     });
 
+    // Handle Login authentication
     async function handleLogin(e) {
       e.preventDefault();
       const email = document.getElementById('loginEmail').value.trim().toLowerCase();
       const password = document.getElementById('loginPassword').value;
+      const rememberMe = document.getElementById('rememberMeCheckbox').checked;
       const msgBox = document.getElementById('loginMessage');
+      const submitBtn = document.getElementById('loginSubmitBtn');
+
+      if (!email || !password) {
+        msgBox.style.display = 'block';
+        msgBox.style.background = '#fef2f2';
+        msgBox.style.color = '#dc2626';
+        msgBox.style.border = '1px solid #fecaca';
+        msgBox.textContent = 'Please enter both your email address and password.';
+        return;
+      }
 
       msgBox.style.display = 'block';
-      msgBox.style.background = 'rgba(37, 99, 235, 0.2)';
-      msgBox.style.color = '#60a5fa';
+      msgBox.style.background = '#eff6ff';
+      msgBox.style.color = '#2563eb';
+      msgBox.style.border = '1px solid #bfdbfe';
       msgBox.textContent = 'Verifying your account...';
+
+      if (rememberMe) {
+        localStorage.setItem('rememberedLoginEmail', email);
+      } else {
+        localStorage.removeItem('rememberedLoginEmail');
+      }
 
       let loggedInUser = null;
 
@@ -268,13 +510,14 @@
           loggedInUser = data.user;
         } else if (res.status === 404 || res.status === 401) {
           // Explicit failure from backend
-          msgBox.style.background = 'rgba(239, 68, 68, 0.2)';
-          msgBox.style.color = '#f87171';
-          msgBox.innerHTML = `⚠️ ${data.message || 'Login failed.'}<br><a href="create-account.html" style="color:#00e5ff; font-weight:bold; text-decoration:underline; display:inline-block; margin-top:8px;">👉 Create an Account here</a>`;
+          msgBox.style.background = '#fef2f2';
+          msgBox.style.color = '#dc2626';
+          msgBox.style.border = '1px solid #fecaca';
+          msgBox.innerHTML = `⚠️ ${data.message || 'Login failed.'}<br><a href="create-account.html" style="color:#1d4ed8; font-weight:bold; text-decoration:underline; display:inline-block; margin-top:8px;">👉 Create an Account here</a>`;
           return;
         }
       } catch (err) {
-        console.warn('Backend login error, checking local registry:', err);
+        console.warn('Backend login offline, checking local registry:', err);
       }
 
       // 2. Client-side LocalStorage Verification
@@ -289,15 +532,17 @@
         const foundUser = localUsers.find(u => u.email === email);
 
         if (!foundUser) {
-          msgBox.style.background = 'rgba(239, 68, 68, 0.2)';
-          msgBox.style.color = '#f87171';
-          msgBox.innerHTML = `❌ No account found with this email!<br>Please complete <strong>Create an Account</strong> first.<br><a href="create-account.html" style="color:#00e5ff; font-weight:bold; text-decoration:underline; display:inline-block; margin-top:8px;">👉 Go to Create Account</a>`;
+          msgBox.style.background = '#fef2f2';
+          msgBox.style.color = '#dc2626';
+          msgBox.style.border = '1px solid #fecaca';
+          msgBox.innerHTML = `❌ No account found with this email!<br>Please complete <strong>Create an Account</strong> first.<br><a href="create-account.html" style="color:#1d4ed8; font-weight:bold; text-decoration:underline; display:inline-block; margin-top:8px;">👉 Go to Create Account</a>`;
           return;
         }
 
         if (foundUser.password !== password) {
-          msgBox.style.background = 'rgba(239, 68, 68, 0.2)';
-          msgBox.style.color = '#f87171';
+          msgBox.style.background = '#fef2f2';
+          msgBox.style.color = '#dc2626';
+          msgBox.style.border = '1px solid #fecaca';
           msgBox.textContent = '❌ Incorrect password. Please try again.';
           return;
         }
@@ -317,13 +562,14 @@
 
       // Success: Save user session and redirect to dashboard
       localStorage.setItem('learningUser', JSON.stringify(loggedInUser));
-      msgBox.style.background = 'rgba(16, 185, 129, 0.2)';
-      msgBox.style.color = '#34d399';
+      msgBox.style.background = '#f0fdf4';
+      msgBox.style.color = '#16a34a';
+      msgBox.style.border = '1px solid #bbf7d0';
       msgBox.textContent = `✓ Welcome back, ${loggedInUser.name}! Login successful. Redirecting to dashboard...`;
 
       setTimeout(() => {
         window.location.href = 'pages/home.html';
-      }, 900);
+      }, 700);
     }
   </script>
 </body>
