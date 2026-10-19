@@ -14,6 +14,35 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
+// Friendly & backward-compatible redirects for direct browser hits
+app.get("/pages/home.html", (req, res) => {
+  res.redirect("/pages/dashboard/home.html");
+});
+
+app.get("/pages/login.html", (req, res) => {
+  res.redirect("/pages/auth/login.html");
+});
+
+app.get("/pages/roadmap.html", (req, res) => {
+  res.redirect("/pages/learning/roadmap.html");
+});
+
+app.get("/pages/quiz.html", (req, res) => {
+  res.redirect("/pages/quiz/select-language.html");
+});
+
+app.get("/pages/practice.html", (req, res) => {
+  res.redirect("/pages/practice/practice.html");
+});
+
+app.get("/pages/projects.html", (req, res) => {
+  res.redirect("/pages/projects/projects.html");
+});
+
+app.get("/pages/admin.html", (req, res) => {
+  res.redirect("/pages/admin/dashboard.html");
+});
+
 // API Status Route
 app.get("/api/status", (req, res) => {
   res.json({
@@ -41,8 +70,9 @@ app.use("/api/projects", projectRoutes);
 app.use("/api/admin", adminRoutes);
 
 // Server initialization & graceful port fallback handling
-const server = app.listen(PORT, () => {
-  console.log(`🚀 LearningPath running on http://localhost:${PORT}`);
+const HOST = process.env.HOST || "0.0.0.0";
+const server = app.listen(PORT, HOST, () => {
+  console.log(`🚀 LearningPath running on http://localhost:${PORT} and http://127.0.0.1:${PORT}`);
 });
 
 server.on("error", (error) => {

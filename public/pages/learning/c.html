@@ -1,9 +1,21 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>C Programming - Introduction | LearningPath</title>
+    <script>
+        (function() {
+            try {
+                var user = JSON.parse(localStorage.getItem('learningUser') || 'null');
+                var lastUser = JSON.parse(localStorage.getItem('lastCreatedUser') || 'null');
+                if (!user && !lastUser) {
+                    alert('Please create an account or login first to access this course.');
+                    window.location.href = '../../create-account.html';
+                }
+            } catch(e) {}
+        })();
+    </script>
     <link rel="stylesheet" href="../../style.css">
     <style>
         body {
@@ -169,7 +181,7 @@
         <aside class="learn-sidebar">
             <h2>C Programming</h2>
 
-            <div class="level-header">Beginner <span>▾</span></div>
+            <div class="level-header">Beginner <span>â–¾</span></div>
             <div class="topic-list">
                 <a href="#" class="topic-item active">1. Introduction</a>
                 <a href="#" class="topic-item">2. Variables</a>
@@ -195,8 +207,8 @@
             <div class="video-box">
                 <div class="c-logo-badge">C</div>
                 <div class="video-controls">
-                    <span>▶ 0:00 / 12:30</span>
-                    <span>⚙️ HD</span>
+                    <span>â–¶ 0:00 / 12:30</span>
+                    <span>âš™ï¸ HD</span>
                 </div>
             </div>
 
@@ -209,8 +221,8 @@
 
             <!-- Previous / Next Controls -->
             <div class="nav-buttons">
-                <a href="../roadmap.html" class="nav-btn btn-prev">← Previous</a>
-                <a href="#" class="nav-btn btn-next">Next →</a>
+                <a href="../roadmap.html" class="nav-btn btn-prev">â† Previous</a>
+                <a href="#" class="nav-btn btn-next">Next â†’</a>
             </div>
         </main>
 

@@ -1,400 +1,476 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="0; url=../../create-account.html">
-    <script>window.location.replace("../../create-account.html");</script>
-    <title>Sign Up - LearningPath</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0a0f29">
+  <title>Create Account | LearningPath</title>
+  <link rel="stylesheet" href="../../style.css">
+  <style>
+    /* ========================================================
+       Create Account - Clean Modern Design Matching User Spec
+       (Top bezel removed, fully working interactive gender selector)
+       ======================================================== */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-    <link rel="stylesheet" href="../style.css">
+    body.create-acc-page {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      min-height: 100vh;
+      background: radial-gradient(ellipse at 50% 20%, #172554 0%, #0a0f29 60%, #030712 100%);
+      color: #0f172a;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 30px 14px;
+    }
 
-    <style>
-        .signup-section {
-            min-height: 80vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 50px 20px;
-            background: #f5f7fb;
-        }
+    /* Crisp White Standalone Card with subtle neon glow */
+    .create-card-white {
+      width: 100%;
+      max-width: 430px;
+      background: #ffffff;
+      border: 2px solid #3b82f6;
+      border-radius: 26px;
+      padding: 28px 24px 24px;
+      text-align: center;
+      box-shadow: 
+        0 10px 40px rgba(0, 0, 0, 0.3),
+        0 0 25px rgba(59, 130, 246, 0.35);
+      position: relative;
+      margin: 0 auto;
+    }
 
-        .signup-card {
-            width: 100%;
-            max-width: 500px;
-            background: white;
-            padding: 35px;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-        }
+    /* Brand Logo */
+    .card-brand-logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      margin-bottom: 14px;
+    }
 
-        .signup-icon {
-            text-align: center;
-            font-size: 50px;
-            margin-bottom: 10px;
-        }
+    .cap-svg-icon {
+      width: 32px;
+      height: 32px;
+      flex-shrink: 0;
+    }
 
-        .signup-card h1 {
-            text-align: center;
-            margin-bottom: 10px;
-        }
+    .brand-text-label {
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
 
-        .signup-subtitle {
-            text-align: center;
-            color: #666;
-            margin-bottom: 30px;
-        }
+    .brand-text-label .part-learn {
+      color: #0f172a;
+    }
 
-        .form-group {
-            margin-bottom: 18px;
-        }
+    .brand-text-label .part-path {
+      color: #8b5cf6;
+    }
 
-        .form-group label {
-            display: block;
-            margin-bottom: 7px;
-            font-weight: bold;
-        }
+    /* Headings */
+    .card-heading-title {
+      font-size: 23px;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 4px;
+      letter-spacing: -0.4px;
+    }
 
-        .form-group input {
-            width: 100%;
-            padding: 13px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            font-size: 16px;
-            box-sizing: border-box;
-        }
+    .card-subtitle-desc {
+      font-size: 13.5px;
+      color: #64748b;
+      margin-bottom: 20px;
+      font-weight: 500;
+    }
 
-        .form-group input:focus {
-            outline: none;
-            border-color: #4f46e5;
-        }
+    /* Form Fields */
+    .form-fields-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+      text-align: left;
+    }
 
-        .terms {
-            display: flex;
-            align-items: flex-start;
-            gap: 8px;
-            margin: 15px 0 20px;
-            font-size: 14px;
-        }
+    .form-input-card {
+      background: #ffffff;
+      border: 1.5px solid #dbeafe;
+      border-radius: 12px;
+      padding: 7px 14px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      transition: all 0.2s ease;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+      position: relative;
+    }
 
-        .terms input {
-            margin-top: 3px;
-        }
+    .form-input-card:focus-within {
+      border-color: #2563eb;
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+      background: #ffffff;
+    }
 
-        .signup-btn {
-            width: 100%;
-            padding: 14px;
-            border: none;
-            border-radius: 8px;
-            background: #4f46e5;
-            color: white;
-            font-size: 17px;
-            font-weight: bold;
-            cursor: pointer;
-        }
+    .input-icon-glyph {
+      font-size: 17px;
+      color: #1e293b;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 20px;
+      flex-shrink: 0;
+      user-select: none;
+    }
 
-        .signup-btn:hover {
-            background: #3730a3;
-        }
+    .input-field-body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+    }
 
-        .message {
-            margin-top: 20px;
-            padding: 12px;
-            border-radius: 8px;
-            text-align: center;
-            display: none;
-        }
+    .field-tag-label {
+      font-size: 11px;
+      font-weight: 700;
+      color: #64748b;
+      margin-bottom: 1px;
+      line-height: 1.2;
+    }
 
-        .success {
-            background: #dcfce7;
-            color: #166534;
-        }
+    .form-input-card input {
+      border: none;
+      outline: none;
+      background: transparent;
+      font-size: 14.5px;
+      font-weight: 600;
+      color: #0f172a;
+      width: 100%;
+      font-family: inherit;
+      padding: 0;
+      margin: 0;
+    }
 
-        .error {
-            background: #fee2e2;
-            color: #991b1b;
-        }
+    .form-input-card input::placeholder {
+      color: #94a3b8;
+      font-weight: 500;
+    }
 
-        .login-link {
-            text-align: center;
-            margin-top: 20px;
-        }
+    /* Working Interactive Gender Selector */
+    .gender-card {
+      cursor: pointer;
+    }
 
-        .login-link a {
-            color: #4f46e5;
-            font-weight: bold;
-            text-decoration: none;
-        }
+    .field-display-val {
+      font-size: 14.5px;
+      font-weight: 600;
+      color: #0f172a;
+      line-height: 1.2;
+    }
 
-        .show-password {
-            margin-top: 8px;
-            font-size: 14px;
-        }
+    .gender-native-select {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      cursor: pointer;
+      z-index: 10;
+    }
 
-        @media (max-width: 600px) {
-            .signup-section {
-                padding: 30px 15px;
-            }
+    .select-chevron-icon {
+      color: #64748b;
+      font-size: 11px;
+      font-weight: bold;
+      pointer-events: none;
+      margin-left: auto;
+    }
 
-            .signup-card {
-                padding: 25px 20px;
-            }
+    /* Show password eye button */
+    .eye-toggle-btn {
+      background: transparent;
+      border: none;
+      color: #64748b;
+      font-size: 15px;
+      cursor: pointer;
+      padding: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: color 0.15s;
+      z-index: 2;
+    }
 
-            .signup-card h1 {
-                font-size: 26px;
-            }
-        }
-    </style>
+    .eye-toggle-btn:hover {
+      color: #2563eb;
+    }
+
+    /* Password Requirements - 4 Green Circles with checkmarks */
+    .password-rules-box {
+      margin-top: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      text-align: left;
+    }
+
+    .rule-item-row {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      font-size: 13px;
+      color: #475569;
+      font-weight: 600;
+    }
+
+    .rule-check-circle {
+      width: 19px;
+      height: 19px;
+      border-radius: 50%;
+      background: #10b981;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: 800;
+      flex-shrink: 0;
+      transition: all 0.2s ease;
+    }
+
+    .rule-item-row.invalid .rule-check-circle {
+      background: #e2e8f0;
+      color: #94a3b8;
+    }
+
+    /* Form Message Alert */
+    .form-message-alert {
+      margin-top: 12px;
+      font-size: 13px;
+      font-weight: 600;
+      text-align: center;
+      min-height: 18px;
+    }
+
+    /* Big Blue Submit Button */
+    .btn-create-account-blue {
+      width: 100%;
+      background: #1d4ed8;
+      color: #ffffff;
+      border: none;
+      border-radius: 14px;
+      padding: 13.5px 20px;
+      font-size: 17px;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      box-shadow: 0 4px 14px rgba(29, 78, 216, 0.35);
+      transition: all 0.2s ease;
+      margin-top: 14px;
+      margin-bottom: 14px;
+    }
+
+    .btn-create-account-blue:hover {
+      background: #1e40af;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(29, 78, 216, 0.45);
+    }
+
+    /* Bottom Link: Already have an account? Login */
+    .bottom-login-prompt {
+      font-size: 14px;
+      color: #1e293b;
+      font-weight: 500;
+      margin-bottom: 6px;
+    }
+
+    .bottom-login-prompt a {
+      color: #1d4ed8;
+      font-weight: 700;
+      text-decoration: underline;
+      transition: color 0.15s;
+    }
+
+    .bottom-login-prompt a:hover {
+      color: #1e40af;
+    }
+
+    /* Bottom Navigation Buttons (Back & Home) */
+    .bottom-nav-buttons {
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .btn-bottom-pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      padding: 9px 20px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      background: rgba(15, 23, 42, 0.75);
+      border: 1px solid rgba(59, 130, 246, 0.45);
+      color: #cbd5e1;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    }
+
+    .btn-bottom-pill:hover {
+      background: rgba(30, 58, 138, 0.9);
+      border-color: #60a5fa;
+      color: #ffffff;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(59, 130, 246, 0.4);
+    }
+
+    .btn-bottom-pill:active {
+      transform: translateY(0);
+    }
+  </style>
 </head>
 
-<body>
+<body class="create-acc-page">
 
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="logo">
-            LearningPath
+  <!-- Crisp White Card Matching Reference Design (Top Bezel Removed) -->
+  <div class="create-card-white">
+
+    <!-- Logo: Blue Cap 🎓 + LearningPath -->
+    <a href="index.html" class="card-brand-logo">
+      <svg class="cap-svg-icon" viewBox="0 0 24 24" fill="#2563eb">
+        <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3z M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/>
+      </svg>
+      <span class="brand-text-label">
+        <span class="part-learn">Learning</span><span class="part-path">Path</span>
+      </span>
+    </a>
+
+    <!-- Heading -->
+    <h2 class="card-heading-title">Create Your Account</h2>
+    <p class="card-subtitle-desc">Start your learning journey</p>
+
+    <!-- Form -->
+    <form id="signupForm" novalidate>
+      <div class="form-fields-stack">
+
+        <!-- 1. Full Name -->
+        <div class="form-input-card">
+          <span class="input-icon-glyph">👤</span>
+          <div class="input-field-body">
+            <label for="fullName" class="field-tag-label">Full Name</label>
+            <input id="fullName" name="fullName" type="text" placeholder="Mohan Babu" autocomplete="name" required minlength="3">
+          </div>
         </div>
 
-        <button class="menu-btn" onclick="toggleMenu()">
-            ☰
-        </button>
-
-        <div class="nav-menu" id="navMenu">
-            <a href="../index.html">Home</a>
-            <a href="roadmap.html">Roadmap</a>
-            <a href="continue-learning.html">Continue Learning</a>
-        </div>
-    </nav>
-
-    <!-- Signup Section -->
-    <section class="signup-section">
-
-        <div class="signup-card">
-
-            <div class="signup-icon">
-                👤
-            </div>
-
-            <h1>Create Your Account</h1>
-
-            <p class="signup-subtitle">
-                Start your programming learning journey today.
-            </p>
-
-            <form id="signupForm">
-
-                <!-- Full Name -->
-                <div class="form-group">
-                    <label for="name">Full Name</label>
-
-                    <input
-                        type="text"
-                        id="name"
-                        placeholder="Enter your full name"
-                        required
-                    >
-                </div>
-
-                <!-- Email -->
-                <div class="form-group">
-                    <label for="email">Email</label>
-
-                    <input
-                        type="email"
-                        id="email"
-                        placeholder="Enter your email"
-                        required
-                    >
-                </div>
-
-                <!-- Password -->
-                <div class="form-group">
-                    <label for="password">Password</label>
-
-                    <input
-                        type="password"
-                        id="password"
-                        placeholder="Create a password"
-                        required
-                    >
-
-                    <div class="show-password">
-                        <input type="checkbox" id="showPassword">
-                        <label for="showPassword">Show Password</label>
-                    </div>
-                </div>
-
-                <!-- Confirm Password -->
-                <div class="form-group">
-                    <label for="confirmPassword">
-                        Confirm Password
-                    </label>
-
-                    <input
-                        type="password"
-                        id="confirmPassword"
-                        placeholder="Confirm your password"
-                        required
-                    >
-                </div>
-
-                <!-- Terms -->
-                <div class="terms">
-                    <input type="checkbox" id="terms">
-
-                    <label for="terms">
-                        I agree to the Terms and Conditions.
-                    </label>
-                </div>
-
-                <!-- Button -->
-                <button type="submit" class="signup-btn">
-                    📝 Create Account
-                </button>
-
-            </form>
-
-            <!-- Message -->
-            <div id="message" class="message"></div>
-
-            <!-- Login -->
-            <div class="login-link">
-                Already have an account?
-                <a href="login.html">Login here</a>
-            </div>
-
+        <!-- 2. Email Address -->
+        <div class="form-input-card">
+          <span class="input-icon-glyph">✉</span>
+          <div class="input-field-body">
+            <label for="email" class="field-tag-label">Email Address</label>
+            <input id="email" name="email" type="email" placeholder="mohan@example.com" autocomplete="email" required>
+          </div>
         </div>
 
-    </section>
+        <!-- 3. Working Interactive Gender Selector -->
+        <div class="form-input-card gender-card" id="genderCard" tabindex="0">
+          <span class="input-icon-glyph">👤</span>
+          <div class="input-field-body">
+            <label for="gender" class="field-tag-label">Gender</label>
+            <div id="genderDisplay" class="field-display-val">Male</div>
+          </div>
+          <span class="select-chevron-icon">▼</span>
+          <select id="gender" name="gender" class="gender-native-select" aria-label="Gender" required>
+            <option value="Male" selected>Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
 
-    <!-- Footer -->
-    <footer>
-        <p>
-            © 2026 LearningPath | Learn Coding the Easy Way
-        </p>
-    </footer>
+        <!-- 4. Password -->
+        <div class="form-input-card">
+          <span class="input-icon-glyph">🔒</span>
+          <div class="input-field-body">
+            <label for="password" class="field-tag-label">Password</label>
+            <input id="password" name="password" type="password" placeholder="••••••••••••" autocomplete="new-password" required>
+          </div>
+          <button type="button" class="eye-toggle-btn show-password" data-target="password" aria-label="Show password">👁</button>
+        </div>
 
-    <script src="../script.js"></script>
+        <!-- 5. Confirm Password -->
+        <div class="form-input-card">
+          <span class="input-icon-glyph">🔒</span>
+          <div class="input-field-body">
+            <label for="confirmPassword" class="field-tag-label">Confirm Password</label>
+            <input id="confirmPassword" name="confirmPassword" type="password" placeholder="••••••••••••" autocomplete="new-password" required>
+          </div>
+          <button type="button" class="eye-toggle-btn show-password" data-target="confirmPassword" aria-label="Show confirm password">👁</button>
+        </div>
 
-    <script>
+      </div>
 
-        const signupForm = document.getElementById("signupForm");
+      <!-- Password Requirements with 4 Green Checkmarks -->
+      <div class="password-rules-box" aria-live="polite">
+        <div class="rule-item-row" id="ruleLength">
+          <span class="rule-check-circle">✔</span>
+          <span>At least 8 characters</span>
+        </div>
+        <div class="rule-item-row" id="ruleNumber">
+          <span class="rule-check-circle">✔</span>
+          <span>Include a number</span>
+        </div>
+        <div class="rule-item-row" id="ruleSpecial">
+          <span class="rule-check-circle">✔</span>
+          <span>Include a special character</span>
+        </div>
+        <div class="rule-item-row" id="ruleUpper">
+          <span class="rule-check-circle">✔</span>
+          <span>Include one capital letter</span>
+        </div>
+      </div>
 
-        const password = document.getElementById("password");
-        const confirmPassword =
-            document.getElementById("confirmPassword");
+      <!-- Form Status Message -->
+      <p id="formMessage" class="form-message-alert" role="status" aria-live="polite"></p>
 
-        const terms = document.getElementById("terms");
+      <!-- Big Blue Create an Account Button -->
+      <button type="submit" class="btn-create-account-blue">
+        Create an Account →
+      </button>
+    </form>
 
-        const message = document.getElementById("message");
+    <!-- Bottom Login Link -->
+    <p class="bottom-login-prompt">
+      Already have an account? <a href="login.html">Login</a>
+    </p>
 
-        const showPassword =
-            document.getElementById("showPassword");
+  </div>
 
+  <!-- Bottom Back and Home Buttons -->
+  <nav class="bottom-nav-buttons" aria-label="Page navigation">
+    <button type="button" class="btn-bottom-pill btn-nav-back" id="bottomBackBtn" title="Go back">
+      <span class="nav-arrow">←</span>
+      <span>Back</span>
+    </button>
+    <a href="../../index.html" class="btn-bottom-pill btn-nav-home" id="bottomHomeBtn" title="Go to Home page">
+      <span class="nav-icon">🏠</span>
+      <span>Home</span>
+    </a>
+  </nav>
 
-        // Show / Hide Password
-        showPassword.addEventListener("change", function () {
-
-            if (this.checked) {
-
-                password.type = "text";
-                confirmPassword.type = "text";
-
-            } else {
-
-                password.type = "password";
-                confirmPassword.type = "password";
-
-            }
-
-        });
-
-
-        // Signup Form
-        signupForm.addEventListener("submit", function(event) {
-
-            event.preventDefault();
-
-            const name =
-                document.getElementById("name").value.trim();
-
-            const email =
-                document.getElementById("email").value.trim();
-
-
-            // Check fields
-            if (name === "" || email === "" ||
-                password.value === "" ||
-                confirmPassword.value === "") {
-
-                showMessage(
-                    "Please fill all the fields.",
-                    "error"
-                );
-
-                return;
-            }
-
-
-            // Check password
-            if (password.value.length < 6) {
-
-                showMessage(
-                    "Password must contain at least 6 characters.",
-                    "error"
-                );
-
-                return;
-            }
-
-
-            // Check confirm password
-            if (password.value !== confirmPassword.value) {
-
-                showMessage(
-                    "Passwords do not match.",
-                    "error"
-                );
-
-                return;
-            }
-
-
-            // Check terms
-            if (!terms.checked) {
-
-                showMessage(
-                    "Please accept the Terms and Conditions.",
-                    "error"
-                );
-
-                return;
-            }
-
-
-            // Demo success
-            showMessage(
-                "Account created successfully! You can now login.",
-                "success"
-            );
-
-            signupForm.reset();
-
-        });
-
-
-        function showMessage(text, type) {
-
-            message.textContent = text;
-
-            message.className =
-                "message " + type;
-
-            message.style.display = "block";
-
-        }
-
-    </script>
-
+  <script src="../../script.js"></script>
 </body>
 </html>

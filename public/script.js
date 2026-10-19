@@ -254,7 +254,9 @@ function initSignup() {
     }
 
     // Determine target redirect path based on current folder
-    const targetUrl = window.location.pathname.includes('/pages/') ? '../account-success.html' : 'account-success.html';
+    const targetUrl = window.location.pathname.includes('/pages/auth/')
+      ? 'account-created.html'
+      : (window.location.pathname.includes('/pages/') ? '../account-success.html' : 'account-success.html');
 
     setTimeout(() => {
       window.location.href = targetUrl;

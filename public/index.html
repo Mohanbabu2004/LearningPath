@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#ffffff">
   <meta name="description" content="LearningPath - Learn Coding the Easy Way. Step by step tutorials, quizzes, practice problems and real projects.">
+  <meta name="google-site-verification" content="AROBIseTJXtLDKQj2cz5VRAk7FczspbHhmzBw72xfSE" />
   <title>LearningPath | Learn Coding the Easy Way</title>
   <link rel="stylesheet" href="style.css">
   <style>
@@ -525,6 +526,22 @@
       font-size: 19px;
     }
 
+    .fire-badge-icon {
+      font-size: 19px;
+      display: flex;
+      align-items: center;
+    }
+
+    .feat-link {
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .feat-link:hover {
+      color: var(--primary-blue);
+      transform: translateY(-2px);
+    }
+
     .chart-badge-icon {
       color: #8b5cf6;
       font-size: 18px;
@@ -763,6 +780,139 @@
         justify-content: center;
       }
     }
+
+    /* Auth Required Modal Popup */
+    .auth-modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(10, 15, 41, 0.75);
+      backdrop-filter: blur(8px);
+      z-index: 9999;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 18px;
+      animation: modalFadeIn 0.25s ease-out;
+    }
+
+    .auth-modal-overlay.is-active {
+      display: flex;
+    }
+
+    @keyframes modalFadeIn {
+      from { opacity: 0; transform: scale(0.96); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .auth-modal-card {
+      background: #ffffff;
+      border: 2px solid #3b82f6;
+      border-radius: 24px;
+      max-width: 440px;
+      width: 100%;
+      padding: 32px 26px 26px;
+      text-align: center;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4), 0 0 30px rgba(59, 130, 246, 0.35);
+      position: relative;
+    }
+
+    .auth-modal-close {
+      position: absolute;
+      top: 14px;
+      right: 16px;
+      background: #f1f5f9;
+      border: none;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      font-size: 18px;
+      color: #64748b;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s;
+    }
+
+    .auth-modal-close:hover {
+      background: #e2e8f0;
+      color: #0f172a;
+    }
+
+    .auth-modal-icon-badge {
+      width: 64px;
+      height: 64px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, #eff6ff, #dbeafe);
+      border: 2px solid #bfdbfe;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      margin-bottom: 16px;
+    }
+
+    .auth-modal-title {
+      font-size: 21px;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 8px;
+    }
+
+    .auth-modal-desc {
+      font-size: 14px;
+      color: #64748b;
+      line-height: 1.5;
+      margin-bottom: 22px;
+    }
+
+    .auth-modal-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .btn-modal-create {
+      background: linear-gradient(135deg, #2563eb, #1d4ed8);
+      color: #ffffff;
+      padding: 13px 20px;
+      border-radius: 12px;
+      font-size: 15px;
+      font-weight: 700;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
+      transition: all 0.2s;
+    }
+
+    .btn-modal-create:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(37, 99, 235, 0.45);
+    }
+
+    .btn-modal-login {
+      background: #f8fafc;
+      color: #1e293b;
+      border: 1.5px solid #cbd5e1;
+      padding: 11px 20px;
+      border-radius: 12px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s;
+    }
+
+    .btn-modal-login:hover {
+      background: #eff6ff;
+      border-color: #3b82f6;
+      color: #2563eb;
+    }
   </style>
 </head>
 
@@ -801,15 +951,15 @@
               <span class="drawer-link-icon">🏠</span>
               <span>Home</span>
             </a>
-            <a href="pages/roadmap.html" class="drawer-link" role="menuitem">
+            <a href="pages/learning/roadmap.html" class="drawer-link" role="menuitem">
               <span class="drawer-link-icon">🗺️</span>
               <span>Roadmap</span>
             </a>
-            <a href="pages/quiz.html" class="drawer-link" role="menuitem">
+            <a href="pages/quiz/select-language.html" class="drawer-link" role="menuitem">
               <span class="drawer-link-icon">📝</span>
               <span>Quiz</span>
             </a>
-            <a href="pages/projects.html" class="drawer-link" role="menuitem">
+            <a href="pages/projects/projects.html" class="drawer-link" role="menuitem">
               <span class="drawer-link-icon">💻</span>
               <span>Projects</span>
             </a>
@@ -840,14 +990,14 @@
 
         <!-- Interactive Search Auto-complete Dropdown -->
         <div id="searchDropdown" class="search-dropdown-menu">
-          <a href="pages/learn/c.html">⚡ C Programming</a>
-          <a href="pages/learn/cpp.html">⚙️ C++ Programming</a>
-          <a href="pages/learn/python.html">🐍 Python</a>
-          <a href="pages/learn/java.html">☕ Java</a>
-          <a href="pages/learn/javascript.html">🟨 JavaScript</a>
-          <a href="pages/learn/html-css.html">🌐 HTML &amp; CSS</a>
-          <a href="pages/learn/sql.html">🗄️ SQL Database</a>
-          <a href="pages/roadmap.html" style="font-weight: 700; color: #2563eb;">🗺️ View Complete Roadmap →</a>
+          <a href="pages/learning/c.html">⚡ C Programming</a>
+          <a href="pages/learning/cpp.html">⚙️ C++ Programming</a>
+          <a href="pages/learning/python.html">🐍 Python</a>
+          <a href="pages/learning/java.html">☕ Java</a>
+          <a href="pages/learning/javascript.html">🟨 JavaScript</a>
+          <a href="pages/learning/html.html">🌐 HTML</a>
+          <a href="pages/learning/css.html">🎨 CSS</a>
+          <a href="pages/learning/roadmap.html" style="font-weight: 700; color: #2563eb;">🗺️ View Complete Roadmap →</a>
         </div>
       </div>
 
@@ -883,12 +1033,17 @@
           </a>
         </div>
 
-        <!-- 3 Feature Highlights Under Buttons -->
+        <!-- 4 Feature Highlights Under Buttons -->
         <div class="feature-highlights-row">
           <div class="feat-item">
             <span class="circle-check-green">✓</span>
             <span>Free Learning</span>
           </div>
+
+          <a href="#popularCoursesSection" class="feat-item feat-link" style="text-decoration:none; color:inherit;">
+            <span class="fire-badge-icon">🔥</span>
+            <span>Popular Courses</span>
+          </a>
 
           <div class="feat-item">
             <span class="trophy-badge-icon">🏆</span>
@@ -912,17 +1067,17 @@
     </section>
 
     <!-- POPULAR COURSES SECTION -->
-    <section class="popular-courses-block">
+    <section class="popular-courses-block" id="popularCoursesSection">
       <div class="popular-header-flex">
         <h2>Popular Courses</h2>
-        <a href="pages/roadmap.html" class="view-all-roadmap">View All →</a>
+        <a href="pages/learning/roadmap.html" class="view-all-roadmap">View All →</a>
       </div>
 
       <!-- 7 Course Cards -->
       <div class="course-cards-row">
 
         <!-- 1. C -->
-        <a href="pages/learn/c.html" class="course-tile-card card-tint-c">
+        <a href="pages/learning/c.html" class="course-tile-card card-tint-c">
           <div class="course-icon-holder">
             <svg viewBox="0 0 64 64" width="44" height="44">
               <defs>
@@ -940,7 +1095,7 @@
         </a>
 
         <!-- 2. C++ -->
-        <a href="pages/learn/cpp.html" class="course-tile-card card-tint-cpp">
+        <a href="pages/learning/cpp.html" class="course-tile-card card-tint-cpp">
           <div class="course-icon-holder">
             <svg viewBox="0 0 64 64" width="44" height="44">
               <defs>
@@ -958,7 +1113,7 @@
         </a>
 
         <!-- 3. Python -->
-        <a href="pages/learn/python.html" class="course-tile-card card-tint-python">
+        <a href="pages/learning/python.html" class="course-tile-card card-tint-python">
           <div class="course-icon-holder">
             <svg viewBox="0 0 64 64" width="44" height="44">
               <path d="M31.2 6c-13.6 0-12.7 5.9-12.7 5.9l.01 6.1h13v1.8H13.2c-5.9 0-10.4 3.5-10.4 10.3 0 6.7 4.1 10.4 10.4 10.4h3.6v-5.2c0-5.8 4.8-10.5 10.6-10.5h13v-8.4c0-4.9-4.2-10.4-9.2-10.4zm-4.7 3.3c1.2 0 2.2 1 2.2 2.2 0 1.2-1 2.2-2.2 2.2-1.2 0-2.2-1-2.2-2.2 0-1.2 1-2.2 2.2-2.2z" fill="#387eb8"/>
@@ -970,7 +1125,7 @@
         </a>
 
         <!-- 4. Java -->
-        <a href="pages/learn/java.html" class="course-tile-card card-tint-java">
+        <a href="pages/learning/java.html" class="course-tile-card card-tint-java">
           <div class="course-icon-holder">
             <svg viewBox="0 0 64 64" width="44" height="44">
               <path d="M22 10 C26 14, 20 18, 24 22 C22 18, 28 14, 22 10 Z" fill="#ef4444"/>
@@ -986,7 +1141,7 @@
         </a>
 
         <!-- 5. JavaScript -->
-        <a href="pages/learn/javascript.html" class="course-tile-card card-tint-js">
+        <a href="pages/learning/javascript.html" class="course-tile-card card-tint-js">
           <div class="course-icon-holder">
             <svg viewBox="0 0 64 64" width="44" height="44">
               <rect x="4" y="4" width="56" height="56" rx="10" fill="#facc15"/>
@@ -998,7 +1153,7 @@
         </a>
 
         <!-- 6. HTML & CSS -->
-        <a href="pages/learn/html-css.html" class="course-tile-card card-tint-htmlcss">
+        <a href="pages/learning/html.html" class="course-tile-card card-tint-htmlcss">
           <div class="course-icon-holder">
             <svg viewBox="0 0 64 64" width="48" height="44">
               <g transform="translate(2, 4) scale(0.46)">
@@ -1017,27 +1172,40 @@
           <div class="course-card-sub">Beginner to<br>Advanced</div>
         </a>
 
-        <!-- 7. SQL -->
-        <a href="pages/learn/sql.html" class="course-tile-card card-tint-sql">
+        <!-- 7. TypeScript -->
+        <a href="pages/learning/typescript.html" class="course-tile-card card-tint-sql">
           <div class="course-icon-holder">
             <svg viewBox="0 0 64 64" width="44" height="44">
-              <ellipse cx="32" cy="14" rx="20" ry="7" fill="#0284c7"/>
-              <path d="M12 14 V26 C12 30 21 34 32 34 C43 34 52 30 52 26 V14" fill="#0369a1"/>
-              <ellipse cx="32" cy="26" rx="20" ry="6" fill="#0ea5e9"/>
-              <path d="M12 26 V38 C12 42 21 46 32 46 C43 46 52 42 52 38 V26" fill="#0284c7"/>
-              <ellipse cx="32" cy="38" rx="20" ry="6" fill="#38bdf8"/>
-              <path d="M12 38 V50 C12 54 21 58 32 58 C43 58 52 54 52 50 V38" fill="#0369a1"/>
-              <ellipse cx="32" cy="50" rx="20" ry="6" fill="#0284c7"/>
+              <rect x="4" y="4" width="56" height="56" rx="10" fill="#3178c6"/>
+              <text x="34" y="44" font-family="'Segoe UI', Arial, sans-serif" font-size="28" font-weight="900" fill="#ffffff" text-anchor="middle">TS</text>
             </svg>
           </div>
-          <div class="course-card-name">SQL</div>
+          <div class="course-card-name">TypeScript</div>
           <div class="course-card-sub">Beginner to<br>Advanced</div>
         </a>
 
       </div>
     </section>
 
-  </main>
+  <!-- Auth Required Modal (Screen lock for non-registered/new users) -->
+  <div id="authRequiredModal" class="auth-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="authModalTitle">
+    <div class="auth-modal-card">
+      <button type="button" class="auth-modal-close" id="authModalCloseBtn" aria-label="Close dialog">&times;</button>
+      <div class="auth-modal-icon-badge">🔒</div>
+      <h3 class="auth-modal-title" id="authModalTitle">Create an Account to Start</h3>
+      <p class="auth-modal-desc">
+        Before you can start learning, please create your free account or login. Complete your registration to unlock all 12 programming courses, interactive quizzes, and certificates!
+      </p>
+      <div class="auth-modal-buttons">
+        <a href="create-account.html" class="btn-modal-create" id="modalCreateAccountBtn">
+          <span>✨ Create an Account →</span>
+        </a>
+        <a href="login.html" class="btn-modal-login" id="modalLoginBtn">
+          <span>🔑 Already have an account? Login</span>
+        </a>
+      </div>
+    </div>
+  </div>
 
   <!-- FOOTER -->
   <footer class="site-footer">
@@ -1086,17 +1254,22 @@
     const searchDropdown = document.getElementById('searchDropdown');
 
     const courseRoutes = {
-      'c': 'pages/learn/c.html',
-      'c++': 'pages/learn/cpp.html',
-      'cpp': 'pages/learn/cpp.html',
-      'python': 'pages/learn/python.html',
-      'py': 'pages/learn/python.html',
-      'java': 'pages/learn/java.html',
-      'javascript': 'pages/learn/javascript.html',
-      'js': 'pages/learn/javascript.html',
-      'html': 'pages/learn/html-css.html',
-      'css': 'pages/learn/html-css.html',
-      'sql': 'pages/learn/sql.html'
+      'c': 'pages/learning/c.html',
+      'c++': 'pages/learning/cpp.html',
+      'cpp': 'pages/learning/cpp.html',
+      'python': 'pages/learning/python.html',
+      'py': 'pages/learning/python.html',
+      'java': 'pages/learning/java.html',
+      'javascript': 'pages/learning/javascript.html',
+      'js': 'pages/learning/javascript.html',
+      'html': 'pages/learning/html.html',
+      'css': 'pages/learning/css.html',
+      'typescript': 'pages/learning/typescript.html',
+      'ts': 'pages/learning/typescript.html',
+      'r': 'pages/learning/r.html',
+      'cuda': 'pages/learning/cuda.html',
+      'ruby': 'pages/learning/ruby.html',
+      'php': 'pages/learning/php.html'
     };
 
     function performSearch() {
@@ -1109,7 +1282,7 @@
           return;
         }
       }
-      window.location.href = 'pages/roadmap.html';
+      window.location.href = 'pages/learning/roadmap.html';
     }
 
     if (searchInput) {
@@ -1145,7 +1318,76 @@
       if (e.key === 'Escape') {
         toggleNavDrawer(true);
         if (searchDropdown) searchDropdown.style.display = 'none';
+        closeAuthModal();
       }
+    });
+
+    // Check if user is logged in or completed account creation
+    function isUserAuthenticated() {
+      try {
+        const user = JSON.parse(localStorage.getItem('learningUser') || 'null');
+        if (user && (user.email || user.name)) return true;
+        const lastCreated = JSON.parse(localStorage.getItem('lastCreatedUser') || 'null');
+        if (lastCreated && (lastCreated.email || lastCreated.name)) return true;
+      } catch (e) {}
+      return false;
+    }
+
+    const authModal = document.getElementById('authRequiredModal');
+    const authModalClose = document.getElementById('authModalCloseBtn');
+
+    function openAuthModal(targetCourseName) {
+      if (authModal) {
+        if (targetCourseName) {
+          const desc = authModal.querySelector('.auth-modal-desc');
+          if (desc) {
+            desc.textContent = `Before you can start learning ${targetCourseName}, please create your account or login. Complete your registration to unlock all 12 programming courses, quizzes, and certificates!`;
+          }
+        }
+        authModal.classList.add('is-active');
+      }
+    }
+
+    function closeAuthModal() {
+      if (authModal) {
+        authModal.classList.remove('is-active');
+      }
+    }
+
+    if (authModalClose) {
+      authModalClose.addEventListener('click', closeAuthModal);
+    }
+
+    if (authModal) {
+      authModal.addEventListener('click', (e) => {
+        if (e.target === authModal) {
+          closeAuthModal();
+        }
+      });
+    }
+
+    // Intercept course card clicks for new users who haven't completed registration
+    const courseCards = document.querySelectorAll('.course-tile-card');
+    courseCards.forEach(card => {
+      card.addEventListener('click', (e) => {
+        if (!isUserAuthenticated()) {
+          e.preventDefault();
+          const nameEl = card.querySelector('.course-card-name');
+          const courseName = nameEl ? nameEl.textContent.trim() : 'this course';
+          openAuthModal(courseName);
+        }
+      });
+    });
+
+    // Also guard the dropdown search links
+    const dropdownLinks = document.querySelectorAll('#searchDropdown a');
+    dropdownLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        if (!isUserAuthenticated()) {
+          e.preventDefault();
+          openAuthModal(link.textContent.replace(/[^\w\s\+\#]/g, '').trim());
+        }
+      });
     });
   </script>
 </body>

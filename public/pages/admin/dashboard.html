@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard - LearningPath</title>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../../style.css">
     <style>
         :root {
             --bg-dark: #0b0f19;
@@ -310,6 +310,8 @@
         @media (max-width: 600px) {
             .metrics-grid { grid-template-columns: 1fr; }
         }
+
+
     </style>
 </head>
 <body>
@@ -317,15 +319,18 @@
     <!-- Header -->
     <header class="admin-header">
         <div class="header-title">
-            <span>🛡️</span> LearningPath Admin Portal
+            <span>🎓</span> Admission Dashboard
+            <span style="font-size: 11px; font-weight: 800; background: #2563eb; color: #fff; padding: 3px 9px; border-radius: 12px; text-transform: uppercase;">Creator Only</span>
         </div>
         <div class="admin-profile">
-            <div class="admin-avatar">A</div>
+            <div class="admin-avatar" id="adminAvatar">M</div>
             <div>
-                <div style="font-weight: 600; font-size: 14px;">Administrator</div>
-                <div style="font-size: 12px; color: var(--text-muted);">admin@learningpath.com</div>
+                <div style="font-weight: 600; font-size: 14px;" id="adminProfileName">Mohan Babu</div>
+                <div style="font-size: 12px; color: var(--text-muted);" id="adminProfileEmail">mohan@example.com (Creator)</div>
             </div>
-            <a href="home.html" style="margin-left: 20px; color: #ef4444; text-decoration: none; font-size: 13px; font-weight: 600;">Exit Portal</a>
+            <a href="../dashboard/home.html" style="margin-left: 20px; color: #60a5fa; text-decoration: none; font-size: 13.5px; font-weight: 600; display: inline-flex; align-items: center; gap: 5px;">
+              <span>←</span> Back to Home
+            </a>
         </div>
     </header>
 
@@ -374,11 +379,12 @@
             <div id="dashboardTab" class="tab-panel active">
                 <div class="page-title-box">
                     <div>
-                        <h1>Admin Dashboard</h1>
-                        <p style="color: var(--text-muted); font-size: 14px;">Real-time system overview and student statistics</p>
+                        <h1>Admission & Student Management</h1>
+                        <p style="color: var(--text-muted); font-size: 14px;">Multi-platform registered users overview (Creator Only)</p>
                     </div>
                     <button class="btn btn-primary" onclick="alert('Exporting Report...')">📥 Export Report</button>
                 </div>
+
 
                 <!-- Metrics Grid (As specified) -->
                 <div class="metrics-grid">
@@ -435,51 +441,15 @@
                                     <th>Actions</th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody id="usersTableBody">
                                 <tr>
-                                    <td style="font-weight: 600;">Mohan</td>
+                                    <td style="font-weight: 600;">Mohan Babu</td>
                                     <td>Male</td>
                                     <td><strong>72/100</strong></td>
                                     <td><span class="badge badge-pass">PASS</span></td>
                                     <td><span class="badge badge-active">Active</span></td>
                                     <td>08 Oct 2026</td>
-                                    <td><button class="btn btn-sm btn-primary" onclick="alert('Viewing Mohan Profile')">View</button></td>
-                                </tr>
-                                <tr>
-                                    <td style="font-weight: 600;">Ravi</td>
-                                    <td>Male</td>
-                                    <td><strong>28/100</strong></td>
-                                    <td><span class="badge badge-fail">FAIL</span></td>
-                                    <td><span class="badge badge-active">Active</span></td>
-                                    <td>08 Oct 2026</td>
-                                    <td><button class="btn btn-sm btn-primary" onclick="alert('Viewing Ravi Profile')">View</button></td>
-                                </tr>
-                                <tr>
-                                    <td style="font-weight: 600;">Anil</td>
-                                    <td>Male</td>
-                                    <td><strong>100/100</strong></td>
-                                    <td><span class="badge badge-pass">PASS</span></td>
-                                    <td><span class="badge badge-active">Active</span></td>
-                                    <td>07 Oct 2026</td>
-                                    <td><button class="btn btn-sm btn-primary" onclick="alert('Viewing Anil Profile')">View</button></td>
-                                </tr>
-                                <tr>
-                                    <td style="font-weight: 600;">Priya</td>
-                                    <td>Female</td>
-                                    <td><strong>85/100</strong></td>
-                                    <td><span class="badge badge-pass">PASS</span></td>
-                                    <td><span class="badge badge-active">Active</span></td>
-                                    <td>06 Oct 2026</td>
-                                    <td><button class="btn btn-sm btn-primary" onclick="alert('Viewing Priya Profile')">View</button></td>
-                                </tr>
-                                <tr>
-                                    <td style="font-weight: 600;">Suresh</td>
-                                    <td>Male</td>
-                                    <td><strong>45/100</strong></td>
-                                    <td><span class="badge badge-pass">PASS</span></td>
-                                    <td><span class="badge badge-inactive">Inactive</span></td>
-                                    <td>05 Oct 2026</td>
-                                    <td><button class="btn btn-sm btn-primary" onclick="alert('Viewing Suresh Profile')">View</button></td>
+                                    <td><button class="btn btn-sm btn-primary" onclick="alert('Viewing Mohan Babu Profile')">View</button></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -494,15 +464,13 @@
                     <button class="btn btn-primary" onclick="alert('Add New User modal')">➕ Add User</button>
                 </div>
                 <div class="content-card">
-                    <p style="color: var(--text-muted); margin-bottom: 15px;">Manage 125 registered platform learners, roles, and account permissions.</p>
+                    <p id="usersMgmtSubtitle" style="color: var(--text-muted); margin-bottom: 15px;">Manage registered platform learners, roles, and account permissions.</p>
                     <table class="data-table">
                         <thead>
                             <tr><th>ID</th><th>User</th><th>Email</th><th>Role</th><th>Status</th><th>Actions</th></tr>
                         </thead>
-                        <tbody>
-                            <tr><td>USR-101</td><td>Mohan</td><td>mohan@example.com</td><td>Student</td><td><span class="badge badge-active">Active</span></td><td><button class="btn btn-sm btn-primary">Edit</button></td></tr>
-                            <tr><td>USR-102</td><td>Ravi</td><td>ravi@example.com</td><td>Student</td><td><span class="badge badge-active">Active</span></td><td><button class="btn btn-sm btn-primary">Edit</button></td></tr>
-                            <tr><td>USR-103</td><td>Anil</td><td>anil@example.com</td><td>Student</td><td><span class="badge badge-active">Active</span></td><td><button class="btn btn-sm btn-primary">Edit</button></td></tr>
+                        <tbody id="usersMgmtTbody">
+                            <tr><td>USR-101</td><td>Mohan Babu</td><td>mohan@example.com</td><td>Admin</td><td><span class="badge badge-active">Active</span></td><td><button class="btn btn-sm btn-primary">Edit</button></td></tr>
                         </tbody>
                     </table>
                 </div>
@@ -640,6 +608,147 @@
                 tr.style.display = text.includes(query) ? '' : 'none';
             });
         }
+
+        function isWebsiteCreator(user) {
+            if (!user) return false;
+            const email = (user.email || '').toLowerCase();
+            const name = (user.name || '').toLowerCase();
+            const role = (user.role || '').toLowerCase();
+            return email === 'mohan@example.com' || 
+                   email.includes('mohan') || 
+                   name.includes('mohan') || 
+                   role === 'admin' || 
+                   role === 'creator';
+        }
+
+        // Security Guard: ONLY the website creator can access the Admission Dashboard
+        const activeCreator = JSON.parse(localStorage.getItem('learningUser') || 'null');
+        if (!isWebsiteCreator(activeCreator)) {
+            alert('Access Restricted!\n\nThe Admission Dashboard with multi-platform users can ONLY be viewed by the website creator.');
+            window.location.href = 'home.html';
+        }
+
+
+        // Real-time dynamic multi-user platform registry for Admission Dashboard
+        document.addEventListener('DOMContentLoaded', async () => {
+            // Update creator profile banner
+            if (activeCreator) {
+                const pName = document.getElementById('adminProfileName');
+                if (pName) pName.textContent = activeCreator.name || 'Mohan Babu';
+                const pEmail = document.getElementById('adminProfileEmail');
+                if (pEmail) pEmail.textContent = `${activeCreator.email || 'mohan@example.com'} (Creator)`;
+                const badge = document.getElementById('activeUserBadgeName');
+                if (badge) badge.textContent = activeCreator.name || 'Mohan Babu';
+            }
+
+            let users = [];
+            try {
+                const res = await fetch('/api/admin/users');
+                const data = await res.json();
+                if (data.success && data.users) {
+                    users = data.users;
+                }
+            } catch (e) {
+                console.warn('Backend admin fetch error:', e);
+            }
+
+            // Merge with client-side registered users
+            let localUsers = [];
+            try {
+                localUsers = JSON.parse(localStorage.getItem('learningPathRegisteredUsers') || '[]');
+            } catch (e) {}
+
+            const dummyEmailsToPurge = ["ravi@example.com", "ananya@example.com", "test@example.com", "demo@example.com"];
+
+            localUsers.forEach(lu => {
+                if (!lu || !lu.email) return;
+                const normEmail = (lu.email || '').trim().toLowerCase();
+                if (dummyEmailsToPurge.includes(normEmail)) return;
+                if (lu.name === "R.Mohan" || lu.name === "ramesh" || (lu.name === "mohan" && normEmail !== "mohan@example.com")) return;
+
+                if (!users.some(u => (u.email || '').trim().toLowerCase() === normEmail)) {
+                    users.push({
+                        name: lu.name,
+                        gender: lu.gender || 'Male',
+                        email: lu.email,
+                        quizScore: lu.quizScore || '0/100',
+                        result: (parseInt(lu.quizScore) >= 70) ? 'PASS' : 'IN_PROGRESS',
+                        status: lu.status || 'Active',
+                        joinedDate: lu.joinedDate || 'Recently'
+                    });
+                }
+            });
+
+            // Clean users list and strictly deduplicate by email
+            const uniqueMap = new Map();
+            users.forEach(u => {
+                if (!u || !u.email) return;
+                const norm = (u.email || '').trim().toLowerCase();
+                if (dummyEmailsToPurge.includes(norm)) return;
+                if (u.name === 'R.Mohan' || u.name === 'ramesh' || (u.name === 'mohan' && norm !== 'mohan@example.com')) return;
+                if (!uniqueMap.has(norm)) {
+                    uniqueMap.set(norm, u);
+                }
+            });
+
+            // Always ensure Mohan Babu (creator) is present
+            if (!uniqueMap.has('mohan@example.com')) {
+                uniqueMap.set('mohan@example.com', {
+                    name: 'Mohan Babu',
+                    email: 'mohan@example.com',
+                    gender: 'Male',
+                    role: 'admin',
+                    quizScore: '72/100',
+                    result: 'PASS',
+                    status: 'Active',
+                    joinedDate: '08 Oct 2026'
+                });
+            }
+
+            users = Array.from(uniqueMap.values());
+
+            if (users.length > 0) {
+                // Update total users metric
+                const totalVal = document.querySelector('.metric-card .value');
+                if (totalVal) totalVal.textContent = users.length;
+
+                const mgmtSub = document.getElementById('usersMgmtSubtitle');
+                if (mgmtSub) mgmtSub.textContent = `Manage ${users.length} registered platform learners, roles, and account permissions.`;
+
+                // Render dynamic table rows in Tab 1 (Dashboard)
+                const tbody = document.querySelector('#usersTable tbody');
+                if (tbody) {
+                    tbody.innerHTML = users.map(u => `
+                        <tr>
+                            <td style="font-weight: 600;">${u.name}</td>
+                            <td>${u.gender || 'Male'}</td>
+                            <td><strong>${u.quizScore || '0/100'}</strong></td>
+                            <td><span class="badge ${u.result === 'PASS' ? 'badge-pass' : (u.result === 'FAIL' ? 'badge-fail' : 'badge-active')}">${u.result}</span></td>
+                            <td><span class="badge badge-active">${u.status || 'Active'}</span></td>
+                            <td>${u.joinedDate || 'Recently'}</td>
+                            <td><button class="btn btn-sm btn-primary" onclick="alert('Viewing user: ${u.name} (${u.email})')">View</button></td>
+                        </tr>
+                    `).join('');
+                }
+
+                // Render dynamic table rows in Tab 2 (User Management)
+                const mgmtTbody = document.getElementById('usersMgmtTbody');
+                if (mgmtTbody) {
+                    mgmtTbody.innerHTML = users.map((u, i) => `
+                        <tr>
+                            <td>USR-${101 + i}</td>
+                            <td style="font-weight: 600;">${u.name}</td>
+                            <td>${u.email || '-'}</td>
+                            <td>${(u.email === 'mohan@example.com' || (u.name && u.name.toLowerCase().includes('mohan'))) ? 'Admin' : (u.role || 'Student')}</td>
+                            <td><span class="badge badge-active">${u.status || 'Active'}</span></td>
+                            <td><button class="btn btn-sm btn-primary" onclick="alert('Manage user: ${u.name}')">Edit</button></td>
+                        </tr>
+                    `).join('');
+                }
+
+
+            }
+        });
     </script>
 </body>
 </html>

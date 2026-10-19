@@ -615,7 +615,9 @@
       msgBox.textContent = `✓ Welcome, ${loggedInUser.name}! Login successful. Redirecting to dashboard...`;
 
       setTimeout(() => {
-        const targetUrl = window.location.pathname.includes('/pages/') ? 'home.html' : 'pages/home.html';
+        const targetUrl = window.location.pathname.includes('/pages/auth/') 
+          ? '../dashboard/home.html' 
+          : (window.location.pathname.includes('/pages/') ? 'dashboard/home.html' : 'pages/dashboard/home.html');
         window.location.href = targetUrl;
       }, 500);
 

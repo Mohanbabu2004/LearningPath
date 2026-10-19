@@ -1,367 +1,432 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0a0f29">
+  <title>Account Created Successfully | LearningPath</title>
+  <link rel="stylesheet" href="../../style.css">
+  <style>
+    /* ========================================================
+       Account Created Successfully Page
+       Clean Standalone Card Design (Top Bezel Removed)
+       ======================================================== */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-    <meta charset="UTF-8">
+    body.success-screen-body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      min-height: 100vh;
+      background: radial-gradient(ellipse at 50% 20%, #172554 0%, #0a0f29 60%, #030712 100%);
+      color: #0f172a;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 30px 14px;
+      overflow-x: hidden;
+    }
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    /* Crisp White Standalone Card with Neon Border Glow */
+    .success-card-white {
+      width: 100%;
+      max-width: 410px;
+      border: 2px solid #3b82f6;
+      border-radius: 26px;
+      background: #ffffff;
+      box-shadow: 
+        0 12px 45px rgba(0, 0, 0, 0.35),
+        0 0 25px rgba(59, 130, 246, 0.4),
+        0 0 50px rgba(139, 92, 246, 0.2);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      animation: frame-appear 0.45s ease-out both;
+      margin: 0 auto;
+    }
 
-    <title>Login - LearningPath</title>
+    @keyframes frame-appear {
+      from {
+        opacity: 0;
+        transform: translateY(18px) scale(0.98);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
 
-    <link rel="stylesheet" href="../style.css">
+    /* Card Interior Content */
+    .success-card-content {
+      background: #ffffff;
+      padding: 28px 20px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      position: relative;
+    }
 
-    <style>
+    /* Brand Logo */
+    .success-brand-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      text-decoration: none;
+      margin-bottom: 14px;
+      transition: transform 0.2s;
+    }
 
-        .login-container {
-            max-width: 450px;
-            margin: 60px auto;
-            padding: 20px;
-        }
+    .success-brand-link:hover {
+      transform: scale(1.03);
+    }
 
-        .login-card {
-            background: white;
-            padding: 35px;
-            border-radius: 15px;
-            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
-        }
+    .cap-icon-svg {
+      width: 30px;
+      height: 30px;
+      flex-shrink: 0;
+    }
 
-        .login-header {
-            text-align: center;
-            margin-bottom: 30px;
-        }
+    .brand-text {
+      font-size: 22px;
+      font-weight: 800;
+      color: #0f172a;
+      letter-spacing: -0.3px;
+    }
 
-        .login-icon {
-            font-size: 55px;
-        }
+    .brand-text .brand-purple {
+      color: #7c3aed;
+    }
 
-        .login-header h1 {
-            margin: 10px 0;
-            font-size: 32px;
-        }
+    /* Celebration & Confetti Wrapper */
+    .celebration-container {
+      position: relative;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 6px 0 12px;
+    }
 
-        .login-header p {
-            color: #666;
-        }
+    /* Vibrant 3D Green Checkmark Badge */
+    .green-check-badge {
+      width: 86px;
+      height: 86px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 30%, #34d399 0%, #10b981 50%, #059669 100%);
+      box-shadow: 
+        0 8px 24px rgba(16, 185, 129, 0.45),
+        inset 0 2px 4px rgba(255, 255, 255, 0.5),
+        inset 0 -3px 6px rgba(0, 0, 0, 0.18);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 2;
+      animation: check-pop 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+    }
 
-        .form-group {
-            margin-bottom: 20px;
-        }
+    @keyframes check-pop {
+      0% {
+        opacity: 0;
+        transform: scale(0.4) rotate(-15deg);
+      }
+      70% {
+        transform: scale(1.12) rotate(4deg);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+      }
+    }
 
-        .form-group label {
-            display: block;
-            font-weight: bold;
-            margin-bottom: 8px;
-        }
+    .check-svg {
+      width: 46px;
+      height: 46px;
+      stroke: #ffffff;
+      stroke-width: 4.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      fill: none;
+      filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.15));
+    }
 
-        .form-group input {
-            width: 100%;
-            padding: 13px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            font-size: 15px;
-            box-sizing: border-box;
-        }
+    /* Festive Confetti particles scattered around the checkmark */
+    .confetti-spark {
+      position: absolute;
+      pointer-events: none;
+      user-select: none;
+      font-weight: bold;
+      animation: sparkle-float 2.2s ease-in-out infinite alternate;
+    }
 
-        .login-btn {
-            width: 100%;
-            padding: 14px;
-            border: none;
-            border-radius: 8px;
-            background: #2563eb;
-            color: white;
-            font-size: 17px;
-            font-weight: bold;
-            cursor: pointer;
-        }
+    @keyframes sparkle-float {
+      from { transform: translateY(0) scale(0.9); opacity: 0.75; }
+      to { transform: translateY(-4px) scale(1.15); opacity: 1; }
+    }
 
-        .login-btn:hover {
-            background: #1d4ed8;
-        }
+    .cf-1 { top: 5%; left: 16%; color: #ef4444; font-size: 15px; }
+    .cf-2 { top: 12%; left: 28%; color: #f59e0b; font-size: 14px; }
+    .cf-3 { top: 4%; right: 18%; color: #ec4899; font-size: 16px; }
+    .cf-4 { top: 14%; right: 30%; color: #10b981; font-size: 13px; }
+    .cf-5 { bottom: 8%; left: 18%; color: #8b5cf6; font-size: 16px; }
+    .cf-6 { bottom: 12%; left: 32%; color: #06b6d4; font-size: 12px; }
+    .cf-7 { bottom: 10%; right: 19%; color: #f97316; font-size: 15px; }
+    .cf-8 { bottom: 2%; right: 32%; color: #ef4444; font-size: 13px; }
+    .cf-9 { top: 40%; left: 10%; color: #a855f7; font-size: 17px; }
+    .cf-10 { top: 38%; right: 11%; color: #10b981; font-size: 14px; }
 
-        .message {
-            display: none;
-            margin-top: 20px;
-            padding: 12px;
-            border-radius: 8px;
-            text-align: center;
-        }
+    /* Headline & Subtitle */
+    .success-heading {
+      font-size: 21px;
+      font-weight: 800;
+      color: #0f172a;
+      margin: 10px 0 6px;
+      line-height: 1.25;
+      letter-spacing: -0.2px;
+    }
 
-        .signup-link {
-            text-align: center;
-            margin-top: 20px;
-        }
+    .success-subtitle {
+      font-size: 14px;
+      color: #475467;
+      line-height: 1.45;
+      margin: 0 auto 16px;
+      max-width: 300px;
+    }
 
-        .signup-link a {
-            color: #2563eb;
-            font-weight: bold;
-            text-decoration: none;
-        }
+    .user-welcome-chip {
+      display: inline-block;
+      margin-top: -6px;
+      margin-bottom: 12px;
+      padding: 4px 14px;
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      border-radius: 20px;
+      color: #1d4ed8;
+      font-size: 13px;
+      font-weight: 600;
+    }
 
-        .forgot-link {
-            text-align: right;
-            margin-bottom: 20px;
-        }
+    /* Go to Login Button */
+    .btn-go-to-login {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: min(100%, 240px);
+      min-height: 46px;
+      padding: 11px 24px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #1d4ed8 0%, #2563eb 60%, #1e40af 100%);
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4);
+      transition: transform 0.2s, box-shadow 0.2s, filter 0.2s;
+      z-index: 3;
+    }
 
-        .forgot-link a {
-            color: #2563eb;
-            text-decoration: none;
-            font-size: 14px;
-        }
+    .btn-go-to-login:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(37, 99, 235, 0.55);
+      filter: brightness(1.05);
+    }
 
-        @media (max-width: 500px) {
+    .btn-go-to-login .btn-arrow {
+      font-size: 18px;
+      line-height: 1;
+      transition: transform 0.2s;
+    }
 
-            .login-container {
-                margin: 30px auto;
-            }
+    .btn-go-to-login:hover .btn-arrow {
+      transform: translateX(3px);
+    }
 
-            .login-card {
-                padding: 25px;
-            }
+    /* Bottom 3D Student Illustration with Desk, Laptop & Plant */
+    .student-illustration-section {
+      width: 100%;
+      margin-top: -6px;
+      position: relative;
+      overflow: hidden;
+      line-height: 0;
+    }
 
-        }
+    .student-illustration-img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+      pointer-events: none;
+      user-select: none;
+    }
 
-    </style>
+    /* Bottom Navigation Buttons (Back & Home) */
+    .bottom-nav-buttons {
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+    }
 
+    .btn-bottom-pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      padding: 9px 20px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      background: rgba(15, 23, 42, 0.75);
+      border: 1px solid rgba(59, 130, 246, 0.45);
+      color: #cbd5e1;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    }
+
+    .btn-bottom-pill:hover {
+      background: rgba(30, 58, 138, 0.9);
+      border-color: #60a5fa;
+      color: #ffffff;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(59, 130, 246, 0.4);
+    }
+
+    .btn-bottom-pill:active {
+      transform: translateY(0);
+    }
+
+    @media (max-width: 480px) {
+      .success-card-white {
+        max-width: 100%;
+        border-radius: 22px;
+      }
+
+      .success-heading {
+        font-size: 19px;
+      }
+
+      .green-check-badge {
+        width: 76px;
+        height: 76px;
+      }
+    }
+  </style>
 </head>
-
-
-<body>
-
-
-    <!-- Navbar -->
-
-    <header>
-
-        <nav class="navbar">
-
-            <div class="logo">
-                🚀 LearningPath
-            </div>
-
-            <button
-                class="menu-btn"
-                onclick="toggleMenu()"
-            >
-                ☰
-            </button>
-
-            <ul
-                class="nav-menu"
-                id="navMenu"
-            >
-
-                <li>
-                    <a href="../index.html">
-                        Home
-                    </a>
-                </li>
-
-                <li>
-                    <a href="roadmap.html">
-                        Roadmap
-                    </a>
-                </li>
-
-                <li>
-                    <a href="continue-learning.html">
-                        Continue Learning
-                    </a>
-                </li>
-
-            </ul>
-
-        </nav>
-
-    </header>
-
-
-    <!-- Login -->
-
-    <main class="login-container">
-
-        <section class="login-card">
-
-
-            <div class="login-header">
-
-                <div class="login-icon">
-                    🔐
-                </div>
-
-                <h1>
-                    Welcome Back
-                </h1>
-
-                <p>
-                    Login to continue your LearningPath journey.
-                </p>
-
-            </div>
-
-
-            <form
-                id="loginForm"
-                onsubmit="loginUser(event)"
-            >
-
-
-                <div class="form-group">
-
-                    <label for="email">
-                        Email Address
-                    </label>
-
-                    <input
-                        type="email"
-                        id="email"
-                        placeholder="Enter your email"
-                        required
-                    >
-
-                </div>
-
-
-                <div class="form-group">
-
-                    <label for="password">
-                        Password
-                    </label>
-
-                    <input
-                        type="password"
-                        id="password"
-                        placeholder="Enter your password"
-                        required
-                    >
-
-                </div>
-
-
-                <div class="forgot-link">
-
-                    <a href="#">
-                        Forgot Password?
-                    </a>
-
-                </div>
-
-
-                <button
-                    type="submit"
-                    class="login-btn"
-                >
-                    🔐 Login
-                </button>
-
-
-                <div
-                    class="message"
-                    id="message"
-                ></div>
-
-
-            </form>
-
-
-            <div class="signup-link">
-
-                Don't have an account?
-
-                <a href="signup.html">
-                    Create Account
-                </a>
-
-            </div>
-
-
-        </section>
-
-    </main>
-
-
-    <!-- Footer -->
-
-    <footer>
-
-        <p>
-            © 2026 LearningPath | Learn Coding the Easy Way
-        </p>
-
-    </footer>
-
-
-    <script src="../script.js"></script>
-
-    <script>
-
-        function loginUser(event) {
-
-            event.preventDefault();
-
-
-            const email =
-                document.getElementById(
-                    "email"
-                ).value.trim();
-
-            const password =
-                document.getElementById(
-                    "password"
-                ).value;
-
-
-            const message =
-                document.getElementById(
-                    "message"
-                );
-
-
-            if (
-                email === ""
-                ||
-                password === ""
-            ) {
-
-                message.style.display = "block";
-
-                message.style.background = "#fee2e2";
-
-                message.style.color = "#991b1b";
-
-                message.textContent =
-                    "Please enter email and password.";
-
-                return;
-
-            }
-
-
-            /*
-             * Frontend demonstration only.
-             *
-             * Real authentication will be connected
-             * to the backend and database later.
-             */
-
-            message.style.display = "block";
-
-            message.style.background = "#dcfce7";
-
-            message.style.color = "#166534";
-
-            message.textContent =
-                "Login form submitted successfully. "
-                + "Real authentication will be connected later.";
-
+<body class="success-screen-body">
+
+  <!-- Crisp White Standalone Card -->
+  <main class="success-card-white">
+
+    <!-- Card Interior -->
+    <section class="success-card-content">
+
+      <!-- LearningPath Brand Logo -->
+      <a href="index.html" class="success-brand-link" title="LearningPath Home">
+        <svg class="cap-icon-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 3L1 9L12 15L21 10.09V17H23V9L12 3Z" fill="#2563eb"/>
+          <path d="M5 13.18V17.18C5 19.39 8.13 21.18 12 21.18C15.87 21.18 19 19.39 19 17.18V13.18L12 17L5 13.18Z" fill="#1d4ed8"/>
+        </svg>
+        <span class="brand-text">Learning<span class="brand-purple">Path</span></span>
+      </a>
+
+      <!-- Celebration Confetti & Vibrant Green Checkmark -->
+      <div class="celebration-container" aria-hidden="true">
+        <span class="confetti-spark cf-1">✦</span>
+        <span class="confetti-spark cf-2">★</span>
+        <span class="confetti-spark cf-3">✦</span>
+        <span class="confetti-spark cf-4">■</span>
+        <span class="confetti-spark cf-5">◆</span>
+        <span class="confetti-spark cf-6">★</span>
+        <span class="confetti-spark cf-7">✦</span>
+        <span class="confetti-spark cf-8">◆</span>
+        <span class="confetti-spark cf-9">■</span>
+        <span class="confetti-spark cf-10">●</span>
+
+        <div class="green-check-badge" role="img" aria-label="Account Created Successfully Checkmark">
+          <svg class="check-svg" viewBox="0 0 32 32">
+            <polyline points="7 17 13 23 25 9"></polyline>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Heading -->
+      <h2 class="success-heading">Account Created Successfully!</h2>
+
+      <!-- Personalized Chip if available -->
+      <div id="userWelcomeChip" class="user-welcome-chip" style="display: none;"></div>
+
+      <!-- Subtitle -->
+      <p class="success-subtitle">
+        You can now login to continue<br>
+        your learning journey.
+      </p>
+
+      <!-- Go to Login Button -->
+      <a href="login.html" class="btn-go-to-login">
+        Go to Login <span class="btn-arrow">→</span>
+      </a>
+
+      <!-- 3D Student Illustration with Desk, Laptop, Thumbs Up & Plant -->
+      <div class="student-illustration-section">
+        <img 
+          src="../../assets/images/account-success-student.png" 
+          alt="LearningPath Student with Laptop and Plant giving Thumbs Up" 
+          class="student-illustration-img"
+        >
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- Bottom Back and Home Buttons -->
+  <nav class="bottom-nav-buttons" aria-label="Page navigation">
+    <button type="button" class="btn-bottom-pill btn-nav-back" id="bottomBackBtn" title="Go back to Create Account">
+      <span class="nav-arrow">←</span>
+      <span>Back</span>
+    </button>
+    <a href="../../index.html" class="btn-bottom-pill btn-nav-home" id="bottomHomeBtn" title="Go to Home page">
+      <span class="nav-icon">🏠</span>
+      <span>Home</span>
+    </a>
+  </nav>
+
+  <script>
+    // Personalize with newly created user's name if available in localStorage
+    try {
+      const lastUser = JSON.parse(localStorage.getItem('lastCreatedUser') || 'null');
+      if (lastUser && lastUser.name) {
+        const chip = document.getElementById('userWelcomeChip');
+        if (chip) {
+          chip.textContent = `Welcome, ${lastUser.name}! 🎉`;
+          chip.style.display = 'inline-block';
         }
+      }
+    } catch (e) {
+      console.warn('LocalStorage error:', e);
+    }
 
-    </script>
-
+    const backBtn = document.getElementById('bottomBackBtn');
+    if (backBtn) {
+      backBtn.addEventListener('click', () => {
+        if (window.history.length > 1 && document.referrer) {
+          window.history.back();
+        } else {
+          window.location.href = 'create-account.html';
+        }
+      });
+    }
+  </script>
 
 </body>
-
 </html>
