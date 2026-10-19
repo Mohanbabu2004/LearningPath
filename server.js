@@ -14,6 +14,17 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
+// SEO Sitemap & Robots Routes
+app.get("/sitemap.xml", (req, res) => {
+  res.header("Content-Type", "application/xml");
+  res.sendFile(path.join(__dirname, "public", "sitemap.xml"));
+});
+
+app.get("/robots.txt", (req, res) => {
+  res.header("Content-Type", "text/plain");
+  res.sendFile(path.join(__dirname, "public", "robots.txt"));
+});
+
 // Friendly & backward-compatible redirects for direct browser hits
 app.get("/pages/home.html", (req, res) => {
   res.redirect("/pages/dashboard/home.html");
