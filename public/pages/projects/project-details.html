@@ -3,296 +3,1641 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects - LearningPath</title>
-  <link rel="icon" type="image/png" href="/favicon.png">
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-  <link rel="apple-touch-icon" href="/favicon.png">
+    <title>AI & Industry Projects - LearningPath</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/favicon.png">
     <link rel="stylesheet" href="../../style.css">
     <style>
         body {
             background: #050816;
             color: #ffffff;
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
         }
 
-        .projects-page {
-            max-width: 1200px;
-            margin: 35px auto;
-            padding: 0 20px;
+        /* Top Header Bar */
+        .dashboard-topbar {
+            height: 64px;
+            background: #080d20;
+            border-bottom: 1px solid #1c244b;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 24px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
 
-        .header-title h1 {
+        .topbar-left {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .hamburger-btn {
+            background: #080d20;
+            border: 1px solid #1e293b;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            padding: 0;
+            transition: all 0.2s ease;
+        }
+
+        .hamburger-btn:hover {
+            background: #111a3b;
+            border-color: #3b82f6;
+        }
+
+        .hamburger-btn span {
+            display: block;
+            width: 20px;
+            height: 2.2px;
+            background: #cbd5e1;
+            border-radius: 2px;
+            transition: all 0.2s ease;
+        }
+
+        .brand-link {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: 800;
+            font-size: 19px;
+        }
+
+        .brand-blue {
+            color: #3b82f6;
+        }
+
+        .topbar-search {
+            flex: 1;
+            max-width: 420px;
+            margin: 0 20px;
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .topbar-search .search-icon {
+            position: absolute;
+            left: 12px;
+            font-size: 14px;
+            color: #64748b;
+        }
+
+        .topbar-search-input {
+            width: 100%;
+            background: #0b1126;
+            border: 1px solid #1c244b;
+            border-radius: 20px;
+            padding: 9px 16px 9px 36px;
+            color: #ffffff;
+            font-size: 13.5px;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .topbar-search-input:focus {
+            border-color: #3b82f6;
+        }
+
+        .topbar-right {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .user-profile-badge {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            padding: 4px 10px;
+            border-radius: 20px;
+            background: #0b1126;
+            border: 1px solid #1c244b;
+        }
+
+        .avatar-circle {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .user-name-text {
+            font-size: 13.5px;
+            font-weight: 600;
+            color: #f1f5f9;
+        }
+
+        /* Slide-out Sidebar Menu (Matching Image 2) */
+        .sidebar-backdrop {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(2, 6, 23, 0.65);
+            backdrop-filter: blur(3px);
+            z-index: 998;
+        }
+
+        .sidebar-backdrop.active {
+            display: block;
+        }
+
+        .sidebar {
+            position: fixed;
+            top: 64px;
+            left: 0;
+            bottom: 0;
+            width: 255px;
+            background: #080d20;
+            border-right: 1px solid #1a2348;
+            padding: 20px 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            z-index: 999;
+            transform: translateX(-100%);
+            transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+            box-shadow: 10px 0 30px rgba(0, 0, 0, 0.5);
+            overflow-y: auto;
+        }
+
+        .sidebar.is-open {
+            transform: translateX(0);
+        }
+
+        .sidebar a {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 12px 18px;
+            color: #94a3b8;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 500;
+            transition: 0.15s ease;
+        }
+
+        .sidebar a:hover {
+            background: #111a3b;
+            color: #ffffff;
+        }
+
+        .sidebar a.active {
+            background: #2563eb;
+            color: #ffffff;
+            font-weight: 600;
+            box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
+        }
+
+        /* Main Projects Container */
+        .projects-main {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 35px 24px 60px;
+        }
+
+        .projects-header {
+            margin-bottom: 25px;
+        }
+
+        .projects-header h1 {
             font-size: 32px;
-            margin-bottom: 8px;
+            font-weight: 800;
+            margin: 0 0 8px 0;
+            display: flex;
+            align-items: center;
+            gap: 12px;
         }
 
-        .header-title p {
+        .projects-header p {
             color: #94a3b8;
             font-size: 15px;
+            margin: 0 0 20px 0;
+            line-height: 1.5;
+        }
+
+        /* Stats Bar */
+        .projects-stats-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
             margin-bottom: 30px;
         }
 
-        /* Difficulty Tabs */
-        .diff-tabs {
+        .stat-badge-box {
+            background: #0b1126;
+            border: 1px solid #1c244b;
+            border-radius: 12px;
+            padding: 16px 20px;
             display: flex;
-            gap: 12px;
-            margin-bottom: 30px;
+            align-items: center;
+            gap: 14px;
         }
 
-        .diff-tab {
-            padding: 10px 22px;
-            border-radius: 8px;
+        .stat-badge-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            flex-shrink: 0;
+        }
+
+        .stat-badge-info h4 {
+            margin: 0 0 4px 0;
+            font-size: 18px;
+            font-weight: 700;
+            color: #f8fafc;
+        }
+
+        .stat-badge-info span {
+            color: #94a3b8;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Category Filter Tabs */
+        .category-nav-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #1c244b;
+            padding-bottom: 16px;
+        }
+
+        .category-tabs {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .cat-tab-btn {
             background: #0b1126;
             border: 1px solid #1c244b;
             color: #94a3b8;
-            font-weight: bold;
-            font-size: 14px;
+            padding: 9px 18px;
+            border-radius: 8px;
+            font-size: 13.5px;
+            font-weight: 600;
             cursor: pointer;
-            transition: 0.2s;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
-        .diff-tab:hover, .diff-tab.active {
-            background: #6645ff;
+        .cat-tab-btn:hover {
+            background: #111a3b;
             color: #ffffff;
-            border-color: #6645ff;
+            border-color: #3b82f6;
         }
 
-        /* Project Card Layout */
-        .project-editor-container {
-            background: #0b1126;
+        .cat-tab-btn.active {
+            background: #2563eb;
+            color: #ffffff;
+            border-color: #2563eb;
+            box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
+        }
+
+        .filter-search-input {
+            background: #080d20;
             border: 1px solid #1c244b;
-            border-radius: 14px;
-            padding: 25px;
-            margin-bottom: 30px;
-            display: grid;
-            grid-template-columns: 1fr 1.2fr;
+            border-radius: 8px;
+            padding: 9px 16px;
+            color: #ffffff;
+            font-size: 13.5px;
+            outline: none;
+            width: 260px;
+            transition: border-color 0.2s;
+        }
+
+        .filter-search-input:focus {
+            border-color: #3b82f6;
+        }
+
+        /* Project Cards List */
+        .projects-grid {
+            display: flex;
+            flex-direction: column;
             gap: 25px;
         }
 
-        .project-meta {
+        .project-card {
+            background: #0b1126;
+            border: 1px solid #1c244b;
+            border-radius: 16px;
+            padding: 24px;
+            display: grid;
+            grid-template-columns: 1fr 1.15fr;
+            gap: 24px;
+            transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+        }
+
+        .project-card:hover {
+            border-color: #2563eb;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Left side of card */
+        .project-left {
             display: flex;
-            gap: 10px;
+            flex-direction: column;
+        }
+
+        .project-badges-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
             margin-bottom: 12px;
+            flex-wrap: wrap;
         }
 
-        .pill {
+        .badge-cat {
             padding: 4px 10px;
-            border-radius: 12px;
-            font-size: 12px;
-            font-weight: bold;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.4px;
+            text-transform: uppercase;
         }
 
-        .pill-lang {
+        .badge-popular-ai {
+            background: rgba(245, 158, 11, 0.15);
+            color: #f59e0b;
+            border: 1px solid rgba(245, 158, 11, 0.35);
+        }
+
+        .badge-trending-ai {
+            background: rgba(6, 182, 212, 0.15);
+            color: #06b6d4;
+            border: 1px solid rgba(6, 182, 212, 0.35);
+        }
+
+        .badge-company-hiring {
+            background: rgba(16, 185, 129, 0.15);
+            color: #10b981;
+            border: 1px solid rgba(16, 185, 129, 0.35);
+        }
+
+        .badge-featured {
+            background: rgba(168, 85, 247, 0.15);
+            color: #a855f7;
+            border: 1px solid rgba(168, 85, 247, 0.35);
+        }
+
+        .badge-diff {
             background: #1e293b;
-            color: #20d99a;
+            color: #cbd5e1;
+            padding: 3px 9px;
+            border-radius: 6px;
+            font-size: 11px;
+            font-weight: 600;
         }
 
-        .pill-diff {
-            background: #103f35;
-            color: #20d99a;
+        .project-title {
+            font-size: 21px;
+            font-weight: 700;
+            margin: 0 0 10px 0;
+            color: #ffffff;
+            line-height: 1.35;
         }
 
-        .code-box {
-            width: 100%;
-            height: 220px;
+        .project-desc {
+            color: #cbd5e1;
+            font-size: 14px;
+            line-height: 1.6;
+            margin: 0 0 16px 0;
+        }
+
+        .tech-tags-list {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+            margin-bottom: 18px;
+        }
+
+        .tech-tag {
+            background: #080d20;
+            border: 1px solid #1e293b;
+            color: #93c5fd;
+            font-size: 11.5px;
+            padding: 3px 8px;
+            border-radius: 6px;
+            font-family: monospace;
+        }
+
+        .io-spec-box {
             background: #070c1e;
-            border: 1px solid #20284b;
-            border-radius: 8px;
-            color: #20d99a;
-            font-family: 'Courier New', Courier, monospace;
+            border: 1px solid #1c244b;
+            border-radius: 10px;
+            padding: 12px 14px;
+            margin-top: auto;
+        }
+
+        .io-spec-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 12.5px;
+            line-height: 1.45;
+        }
+
+        .io-spec-row:not(:last-child) {
+            margin-bottom: 8px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #141b3a;
+        }
+
+        .io-spec-label {
+            color: #64748b;
+            font-weight: 700;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            min-width: 65px;
+        }
+
+        .io-spec-val {
+            color: #e2e8f0;
+            font-family: monospace;
+            text-align: right;
+            word-break: break-word;
+        }
+
+        /* Right side of card: Code Editor Sandbox */
+        .project-right {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .editor-top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #080d20;
+            border: 1px solid #1c244b;
+            border-radius: 8px 8px 0 0;
+            padding: 8px 14px;
+            font-size: 12px;
+            color: #94a3b8;
+        }
+
+        .editor-dots {
+            display: flex;
+            gap: 6px;
+        }
+
+        .editor-dot {
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+        }
+
+        .editor-code-area {
+            width: 100%;
+            height: 210px;
+            background: #050816;
+            border: 1px solid #1c244b;
+            border-top: none;
+            color: #7dd3fc;
+            font-family: 'Consolas', 'Courier New', monospace;
             font-size: 13px;
             padding: 14px;
             line-height: 1.5;
             outline: none;
             resize: vertical;
+            box-sizing: border-box;
+            border-radius: 0 0 8px 8px;
         }
 
-        .io-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-            margin: 12px 0;
+        .output-box {
             background: #070c1e;
-            padding: 12px;
+            border: 1px solid #1c244b;
             border-radius: 8px;
-            border: 1px solid #20284b;
-        }
-
-        .io-grid label {
-            font-size: 11px;
-            color: #64748b;
-            font-weight: bold;
-            display: block;
-            margin-bottom: 4px;
-        }
-
-        .io-val {
+            padding: 10px 14px;
             font-family: monospace;
-            font-size: 12px;
-            color: #ffffff;
+            font-size: 12.5px;
+            color: #34d399;
+            min-height: 38px;
+            display: flex;
+            align-items: center;
+            word-break: break-word;
         }
 
-        .btn-group {
+        .project-action-btns {
             display: flex;
             justify-content: flex-end;
             gap: 10px;
+            margin-top: 4px;
         }
 
-        .btn-run {
-            background: #20d99a;
-            color: #050816;
-            border: none;
-            padding: 9px 20px;
-            border-radius: 6px;
-            font-weight: bold;
-            font-size: 13px;
-            cursor: pointer;
-        }
-
-        .btn-submit {
-            background: #6645ff;
+        .btn-action-run {
+            background: #10b981;
             color: #ffffff;
             border: none;
-            padding: 9px 20px;
+            padding: 8px 18px;
             border-radius: 6px;
-            font-weight: bold;
-            font-size: 13px;
+            font-weight: 700;
+            font-size: 12.5px;
             cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 6px;
         }
 
-        @media (max-width: 900px) {
-            .project-editor-container { grid-template-columns: 1fr; }
+        .btn-action-run:hover {
+            background: #059669;
+        }
+
+        .btn-action-copy {
+            background: #080d20;
+            border: 1px solid #1c244b;
+            color: #cbd5e1;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 12.5px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .btn-action-copy:hover {
+            background: #111a3b;
+            color: #ffffff;
+            border-color: #3b82f6;
+        }
+
+        .btn-action-submit {
+            background: #2563eb;
+            color: #ffffff;
+            border: none;
+            padding: 8px 18px;
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 12.5px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .btn-action-submit:hover {
+            background: #1d4ed8;
+        }
+
+        @media (max-width: 950px) {
+            .project-card {
+                grid-template-columns: 1fr;
+            }
+            .projects-stats-row {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .category-nav-bar {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .filter-search-input {
+                width: 100%;
+            }
+            .topbar-search {
+                display: none;
+            }
         }
     </style>
 </head>
 <body>
 
-    <!-- Header Navbar -->
-    <header class="navbar">
-        <div class="logo">
-            <div class="logo-bars"><span></span><span></span><span></span></div>
-            <span class="logo-white">Learning</span><span class="logo-purple">Path</span>
+    <!-- Header Navbar with 3 Lines Hamburger Menu -->
+    <header class="dashboard-topbar">
+        <div class="topbar-left">
+            <button id="sidebarToggleBtn" class="hamburger-btn" aria-label="Toggle Menu (3 lines)" title="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <a href="/" class="brand-link">
+                <span style="font-size: 22px;">🎓</span>
+                <span><span class="brand-blue">Learning</span>Path</span>
+            </a>
         </div>
-        <div class="user-name">Mohan</div>
+        <div class="topbar-search">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="topbarSearch" placeholder="Search projects by tech, title, or category..." class="topbar-search-input">
+        </div>
+        <div class="topbar-right">
+            <div class="user-profile-badge" onclick="location.href='../dashboard/profile.html'">
+                <div class="avatar-circle" id="topbarAvatar">M</div>
+                <span class="user-name-text" id="topbarUserName">Mohan</span>
+            </div>
+        </div>
     </header>
 
-    <main class="projects-page">
+    <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
 
-        <div class="header-title">
-            <h1>🚀 Coding Projects</h1>
-            <p>Apply your learning path skills to build real-world software projects.</p>
+    <!-- Navigation Sidebar (Exact Matching Image 2) -->
+    <aside class="sidebar" id="dashboardSidebar">
+        <a href="../dashboard/home.html">🏠 Home</a>
+        <a href="../learning/roadmap.html">🗺️ Roadmap</a>
+        <a href="../learning/c.html">▶ Continue Learning</a>
+        <a href="../quiz/select-language.html">📝 Quiz</a>
+        <a href="../practice/practice.html">💻 Practice Coding</a>
+        <a href="projects.html" class="active">📁 Projects</a>
+        <a href="../dashboard/home.html#ai-tutor">🤖 AI Tutor</a>
+        <a href="../dashboard/settings.html">⚙️ Settings</a>
+        <a href="../auth/login.html" style="color: #ff5268; margin-top: auto;">🚪 Logout</a>
+    </aside>
+
+    <main class="projects-main">
+
+        <!-- Header Title -->
+        <div class="projects-header">
+            <h1>🚀 Production AI & Industry Projects</h1>
+            <p>Build enterprise-grade AI software, trending agentic systems, and hiring-demanded projects designed for modern software engineering portfolios.</p>
         </div>
 
-        <!-- Difficulty Tabs -->
-        <div class="diff-tabs">
-            <button class="diff-tab active" onclick="filterProjects('Easy')">Easy</button>
-            <button class="diff-tab" onclick="filterProjects('Medium')">Medium</button>
-            <button class="diff-tab" onclick="filterProjects('Hard')">Hard</button>
-        </div>
-
-        <!-- Project Item 1 -->
-        <div class="project-editor-container">
-            <div>
-                <div class="project-meta">
-                    <span class="pill pill-lang">C Language</span>
-                    <span class="pill pill-diff">Easy</span>
+        <!-- Stats Row -->
+        <div class="projects-stats-row">
+            <div class="stat-badge-box">
+                <div class="stat-badge-icon" style="background: rgba(245, 158, 11, 0.15); color: #f59e0b;">🔥</div>
+                <div class="stat-badge-info">
+                    <h4>3 Projects</h4>
+                    <span>Popular AI</span>
                 </div>
-                <h2 style="font-size:22px; margin-bottom:10px;">Calculator Application</h2>
-                <p style="color:#cbd5e1; font-size:14px; line-height:1.6;">
-                    Build a basic command-line calculator in C that takes two numbers and an operator (+, -, *, /) and computes the result.
-                </p>
-                <div class="io-grid">
-                    <div>
-                        <label>INPUT</label>
-                        <div class="io-val">10 + 20</div>
+            </div>
+            <div class="stat-badge-box">
+                <div class="stat-badge-icon" style="background: rgba(6, 182, 212, 0.15); color: #06b6d4;">⚡</div>
+                <div class="stat-badge-info">
+                    <h4>3 Projects</h4>
+                    <span>Trending AI</span>
+                </div>
+            </div>
+            <div class="stat-badge-box">
+                <div class="stat-badge-icon" style="background: rgba(16, 185, 129, 0.15); color: #10b981;">💼</div>
+                <div class="stat-badge-info">
+                    <h4>3 Projects</h4>
+                    <span>Company Hiring</span>
+                </div>
+            </div>
+            <div class="stat-badge-box">
+                <div class="stat-badge-icon" style="background: rgba(168, 85, 247, 0.15); color: #a855f7;">⭐</div>
+                <div class="stat-badge-info">
+                    <h4>3 Projects</h4>
+                    <span>Featured Trending</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Category Filter Tabs & Search -->
+        <div class="category-nav-bar">
+            <div class="category-tabs">
+                <button class="cat-tab-btn active" data-category="all">✨ All Projects (12)</button>
+                <button class="cat-tab-btn" data-category="popular-ai">🔥 Popular AI Projects</button>
+                <button class="cat-tab-btn" data-category="trending-ai">⚡ Trending AI Projects</button>
+                <button class="cat-tab-btn" data-category="company-hiring">💼 Company Hiring Projects</button>
+                <button class="cat-tab-btn" data-category="featured">⭐ Featured Projects</button>
+            </div>
+            <div>
+                <input type="text" id="projectFilterInput" placeholder="🔍 Filter by name, tech or keyword..." class="filter-search-input">
+            </div>
+        </div>
+
+        <!-- Projects List -->
+        <div class="projects-grid" id="projectsContainer">
+
+            <!-- 1. POPULAR AI PROJECT 1 -->
+            <div class="project-card" data-category="popular-ai" data-keywords="autonomous multi-agent ai workflow crewai autogpt python langchain">
+                <div class="project-left">
+                    <div class="project-badges-row">
+                        <span class="badge-cat badge-popular-ai">🔥 Popular AI</span>
+                        <span class="badge-diff">Advanced</span>
                     </div>
-                    <div>
-                        <label>EXPECTED OUTPUT</label>
-                        <div class="io-val" style="color:#20d99a;">Result: 30</div>
+                    <h2 class="project-title">Autonomous Multi-Agent AI Workflow (CrewAI / AutoGPT)</h2>
+                    <p class="project-desc">
+                        Build an orchestrated multi-agent AI system where specialized autonomous agents (Research Analyst, Technical Writer, Code Auditor) collaboratively break down goals, browse APIs, review outputs, and deliver verified production reports.
+                    </p>
+                    <div class="tech-tags-list">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">CrewAI</span>
+                        <span class="tech-tag">LangChain</span>
+                        <span class="tech-tag">OpenAI GPT-4o</span>
+                        <span class="tech-tag">Vector Memory</span>
+                    </div>
+                    <div class="io-spec-box">
+                        <div class="io-spec-row">
+                            <span class="io-spec-label">GOAL</span>
+                            <span class="io-spec-val">"Analyze Electric Vehicle battery thermal management patents"</span>
+                        </div>
+                        <div class="io-spec-row">
+                            <span class="io-spec-label">EXECUTION</span>
+                            <span class="io-spec-val" style="color: #34d399;">3 Agents Dispatched -> 14 Sources Verified -> Final Synthesis</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-right">
+                    <div class="editor-top-bar">
+                        <div class="editor-dots">
+                            <span class="editor-dot" style="background:#ef4444;"></span>
+                            <span class="editor-dot" style="background:#f59e0b;"></span>
+                            <span class="editor-dot" style="background:#10b981;"></span>
+                        </div>
+                        <span>agent_orchestrator.py</span>
+                    </div>
+                    <textarea class="editor-code-area" id="codeArea1">from crewai import Agent, Task, Crew, Process
+import os
+
+# Define Specialized Autonomous AI Agents
+researcher = Agent(
+    role='Lead AI Research Analyst',
+    goal='Uncover breakthrough EV battery patents and thermal benchmarks',
+    backstory='Ex-Tesla materials scientist specializing in solid-state cells.',
+    verbose=True
+)
+
+writer = Agent(
+    role='Technical Synthesis Lead',
+    goal='Compile findings into clean markdown report with actionable metrics',
+    backstory='Senior tech editor with 10+ years distilling complex AI data.'
+)
+
+crew = Crew(agents=[researcher, writer], process=Process.sequential)
+result = crew.kickoff(inputs={'topic': 'EV Solid-State Thermal Regulation'})
+print(result)</textarea>
+                    <div class="output-box" id="outputBox1">⚡ Ready: Click "Run Agent Simulation" to test output.</div>
+                    <div class="project-action-btns">
+                        <button class="btn-action-copy" onclick="copyCode('codeArea1')">📋 Copy</button>
+                        <button class="btn-action-run" onclick="runSim(1, 'Autonomous Crew completed! Generated 8-page verified EV thermal management report.')">▶ Run Simulation</button>
+                        <button class="btn-action-submit" onclick="submitProject('Autonomous Multi-Agent AI Workflow')">Submit Project</button>
                     </div>
                 </div>
             </div>
 
-            <div>
-                <textarea class="code-box" id="projCode1">#include <stdio.h>
+            <!-- 2. POPULAR AI PROJECT 2 -->
+            <div class="project-card" data-category="popular-ai" data-keywords="full-stack generative ai chatbot streaming fast api nextjs sse">
+                <div class="project-left">
+                    <div class="project-badges-row">
+                        <span class="badge-cat badge-popular-ai">🔥 Popular AI</span>
+                        <span class="badge-diff">Intermediate</span>
+                    </div>
+                    <h2 class="project-title">Enterprise Generative AI Chatbot with Token Streaming (SSE)</h2>
+                    <p class="project-desc">
+                        Full-stack conversational AI interface featuring ultra-fast Server-Sent Events (SSE) token streaming, chat session persistence in PostgreSQL, markdown syntax highlighting, and custom system prompt customization.
+                    </p>
+                    <div class="tech-tags-list">
+                        <span class="tech-tag">Next.js 14</span>
+                        <span class="tech-tag">FastAPI</span>
+                        <span class="tech-tag">SSE Streaming</span>
+                        <span class="tech-tag">Claude 3.5 / GPT-4o</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                    </div>
+                    <div class="io-spec-box">
+                        <div class="io-spec-row">
+                            <span class="io-spec-label">PROMPT</span>
+                            <span class="io-spec-val">"Explain React Server Components and code an async data component"</span>
+                        </div>
+                        <div class="io-spec-row">
+                            <span class="io-spec-label">LATENCY</span>
+                            <span class="io-spec-val" style="color: #34d399;">First Token: 24ms | Stream Rate: 85 tokens/sec</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-right">
+                    <div class="editor-top-bar">
+                        <div class="editor-dots">
+                            <span class="editor-dot" style="background:#ef4444;"></span>
+                            <span class="editor-dot" style="background:#f59e0b;"></span>
+                            <span class="editor-dot" style="background:#10b981;"></span>
+                        </div>
+                        <span>stream_service.py</span>
+                    </div>
+                    <textarea class="editor-code-area" id="codeArea2">from fastapi import FastAPI
+from fastapi.responses import StreamingResponse
+import openai, asyncio
 
-int main() {
-    int a = 10, b = 20;
-    char op = '+';
+app = FastAPI()
 
-    if (op == '+')
-        printf("Result: %d\n", a + b);
+async def generate_token_stream(prompt: str):
+    response = await openai.AsyncClient().chat.completions.create(
+        model="gpt-4o",
+        messages=[{"role": "user", "content": prompt}],
+        stream=True
+    )
+    async for chunk in response:
+        delta = chunk.choices[0].delta.content or ""
+        yield f"data: {delta}\n\n"
 
-    return 0;
+@app.post("/api/chat/stream")
+async def chat_endpoint(user_prompt: str):
+    return StreamingResponse(generate_token_stream(user_prompt), media_type="text/event-stream")</textarea>
+                    <div class="output-box" id="outputBox2">⚡ Ready: Click "Run Stream Simulation" to preview.</div>
+                    <div class="project-action-btns">
+                        <button class="btn-action-copy" onclick="copyCode('codeArea2')">📋 Copy</button>
+                        <button class="btn-action-run" onclick="runSim(2, 'Stream 200 OK: First token 18ms. Streaming 1,240 tokens smoothly...')">▶ Run Simulation</button>
+                        <button class="btn-action-submit" onclick="submitProject('Enterprise Generative AI Chatbot')">Submit Project</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. POPULAR AI PROJECT 3 -->
+            <div class="project-card" data-category="popular-ai" data-keywords="multi-modal ai image audio generator stable diffusion whisper python">
+                <div class="project-left">
+                    <div class="project-badges-row">
+                        <span class="badge-cat badge-popular-ai">🔥 Popular AI</span>
+                        <span class="badge-diff">Intermediate</span>
+                    </div>
+                    <h2 class="project-title">Multi-Modal AI Image & Speech Content Pipeline</h2>
+                    <p class="project-desc">
+                        A multi-modal creation suite combining OpenAI Whisper for automatic speech-to-text transcription, sentiment analysis, and Stable Diffusion XL for generating tailored promotional illustrations and social banners.
+                    </p>
+                    <div class="tech-tags-list">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Whisper AI</span>
+                        <span class="tech-tag">Stable Diffusion XL</span>
+                        <span class="tech-tag">PyTorch</span>
+                        <span class="tech-tag">Gradio</span>
+                    </div>
+                    <div class="io-spec-box">
+                        <div class="io-spec-row">
+                            <span class="io-spec-label">INPUT</span>
+                            <span class="io-spec-val">podcast_episode_08.mp3 (24 mins audio file)</span>
+                        </div>
+                        <div class="io-spec-row">
+                            <span class="io-spec-label">OUTPUT</span>
+                            <span class="io-spec-val" style="color: #34d399;">Transcript (99.2% accuracy) + 3 4K Banner Visuals</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-right">
+                    <div class="editor-top-bar">
+                        <div class="editor-dots">
+                            <span class="editor-dot" style="background:#ef4444;"></span>
+                            <span class="editor-dot" style="background:#f59e0b;"></span>
+                            <span class="editor-dot" style="background:#10b981;"></span>
+                        </div>
+                        <span>multimodal_pipeline.py</span>
+                    </div>
+                    <textarea class="editor-code-area" id="codeArea3">import whisper
+from diffusers import StableDiffusionXLPipeline
+import torch
+
+# 1. Speech Transcription with Whisper
+model = whisper.load_model("base")
+transcription = model.transcribe("audio_sample.mp3")
+print("Transcribed Keywords:", transcription["text"][:120])
+
+# 2. Text-to-Image Generation with SDXL
+pipe = StableDiffusionXLPipeline.from_pretrained(
+    "stabilityai/stable-diffusion-xl-base-1.0",
+    torch_dtype=torch.float16
+).to("cuda")
+
+image = pipe(prompt=f"Futuristic neon banner for: {transcription['text'][:60]}").images[0]
+image.save("ai_generated_banner.png")</textarea>
+                    <div class="output-box" id="outputBox3">⚡ Ready: Click "Run Pipeline" to simulate transcription & image render.</div>
+                    <div class="project-action-btns">
+                        <button class="btn-action-copy" onclick="copyCode('codeArea3')">📋 Copy</button>
+                        <button class="btn-action-run" onclick="runSim(3, 'Whisper transcribed 3,400 words | SDXL rendered 2048x1152 banner in 4.2s')">▶ Run Simulation</button>
+                        <button class="btn-action-submit" onclick="submitProject('Multi-Modal AI Pipeline')">Submit Project</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. TRENDING AI PROJECT 1 -->
+            <div class="project-card" data-category="trending-ai" data-keywords="rag enterprise knowledge base chromadb vector langchain embeddings">
+                <div class="project-left">
+                    <div class="project-badges-row">
+                        <span class="badge-cat badge-trending-ai">⚡ Trending AI</span>
+                        <span class="badge-diff">Advanced</span>
+                    </div>
+                    <h2 class="project-title">RAG Enterprise Knowledge Base (Retrieval-Augmented Generation)</h2>
+                    <p class="project-desc">
+                        Ingest company Notion docs, PDFs, and codebases into ChromaDB vector database. Uses semantic hybrid search (BM25 + Cosine Similarity) to eliminate hallucinations and give LLM precise enterprise grounding with citations.
+                    </p>
+                    <div class="tech-tags-list">
+                        <span class="tech-tag">ChromaDB</span>
+                        <span class="tech-tag">LangChain</span>
+                        <span class="tech-tag">OpenAI Embeddings</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Hybrid RAG</span>
+                    </div>
+                    <div class="io-spec-box">
+                        <div class="io-spec-row">
+                            <span class="io-spec-label">QUESTION</span>
+                            <span class="io-spec-val">"What is our refund escalation policy for Enterprise clients?"</span>
+                        </div>
+                        <div class="io-spec-row">
+                            <span class="io-spec-label">RETRIEVAL</span>
+                            <span class="io-spec-val" style="color: #34d399;">"Ref: HandBook_2026.pdf (Page 44) -> Zero Hallucinations"</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-right">
+                    <div class="editor-top-bar">
+                        <div class="editor-dots">
+                            <span class="editor-dot" style="background:#ef4444;"></span>
+                            <span class="editor-dot" style="background:#f59e0b;"></span>
+                            <span class="editor-dot" style="background:#10b981;"></span>
+                        </div>
+                        <span>rag_pipeline.py</span>
+                    </div>
+                    <textarea class="editor-code-area" id="codeArea4">from langchain_community.vectorstores import Chroma
+from langchain_openai import OpenAIEmbeddings, ChatOpenAI
+from langchain.chains import RetrievalQA
+
+embeddings = OpenAIEmbeddings(model="text-embedding-3-small")
+vectorstore = Chroma(persist_directory="./chroma_db", embedding_function=embeddings)
+
+retriever = vectorstore.as_retriever(search_type="similarity", search_kwargs={"k": 4})
+qa_chain = RetrievalQA.from_chain_type(
+    llm=ChatOpenAI(model="gpt-4o", temperature=0.1),
+    chain_type="stuff",
+    retriever=retriever,
+    return_source_documents=True
+)
+
+answer = qa_chain.invoke({"query": "What is our refund escalation policy?"})
+print("Answer:", answer["result"])
+print("Citations:", [doc.metadata["source"] for doc in answer["source_documents"]])</textarea>
+                    <div class="output-box" id="outputBox4">⚡ Ready: Click "Run RAG Query" to retrieve vector chunks.</div>
+                    <div class="project-action-btns">
+                        <button class="btn-action-copy" onclick="copyCode('codeArea4')">📋 Copy</button>
+                        <button class="btn-action-run" onclick="runSim(4, 'Vector search matched 4 chunks in 12ms. Answer generated with exact citations.')">▶ Run Simulation</button>
+                        <button class="btn-action-submit" onclick="submitProject('RAG Enterprise Knowledge Base')">Submit Project</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. TRENDING AI PROJECT 2 -->
+            <div class="project-card" data-category="trending-ai" data-keywords="local ai inference engine ollama deepseek llama3 privacy-first">
+                <div class="project-left">
+                    <div class="project-badges-row">
+                        <span class="badge-cat badge-trending-ai">⚡ Trending AI</span>
+                        <span class="badge-diff">Intermediate</span>
+                    </div>
+                    <h2 class="project-title">Private Local AI Inference Server (DeepSeek & Llama 3 via Ollama)</h2>
+                    <p class="project-desc">
+                        Deploy completely private, zero-cloud-cost AI inference using quantized DeepSeek-R1 and Llama 3 models on local GPUs. Includes a FastAPI proxy wrapper with authentication, rate limiting, and automated fallback logic.
+                    </p>
+                    <div class="tech-tags-list">
+                        <span class="tech-tag">Ollama API</span>
+                        <span class="tech-tag">DeepSeek-R1</span>
+                        <span class="tech-tag">Llama 3.2</span>
+                        <span class="tech-tag">FastAPI</span>
+                        <span class="tech-tag">100% Offline</span>
+                    </div>
+                    <div class="io-spec-box">
+                        <div class="io-spec-row">
+                            <span class="io-spec-label">PROMPT</span>
+                            <span class="io-spec-val">"Audit this SQL migration query for index bottlenecks"</span>
+                        </div>
+                        <div class="io-spec-row">
+                            <span class="io-spec-label">BENCHMARK</span>
+                            <span class="io-spec-val" style="color: #34d399;">$0 Cloud Cost | 65 Tokens/sec on local hardware</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-right">
+                    <div class="editor-top-bar">
+                        <div class="editor-dots">
+                            <span class="editor-dot" style="background:#ef4444;"></span>
+                            <span class="editor-dot" style="background:#f59e0b;"></span>
+                            <span class="editor-dot" style="background:#10b981;"></span>
+                        </div>
+                        <span>local_llm_proxy.py</span>
+                    </div>
+                    <textarea class="editor-code-area" id="codeArea5">import requests
+
+OLLAMA_ENDPOINT = "http://localhost:11434/api/generate"
+
+def query_local_deepseek(prompt: str, model: str = "deepseek-r1:8b"):
+    payload = {
+        "model": model,
+        "prompt": prompt,
+        "stream": False,
+        "options": {"temperature": 0.2, "num_ctx": 8192}
+    }
+    response = requests.post(OLLAMA_ENDPOINT, json=payload)
+    if response.status_code == 200:
+        return response.json().get("response")
+    raise Exception(f"Local AI Error: {response.text}")
+
+print(query_local_deepseek("Optimize: SELECT * FROM users WHERE status = 'active'"))</textarea>
+                    <div class="output-box" id="outputBox5">⚡ Ready: Click "Run Local Inference".</div>
+                    <div class="project-action-btns">
+                        <button class="btn-action-copy" onclick="copyCode('codeArea5')">📋 Copy</button>
+                        <button class="btn-action-run" onclick="runSim(5, 'Local DeepSeek responded in 180ms: Add composite index on (status, created_at)')">▶ Run Simulation</button>
+                        <button class="btn-action-submit" onclick="submitProject('Private Local AI Inference Server')">Submit Project</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6. TRENDING AI PROJECT 3 -->
+            <div class="project-card" data-category="trending-ai" data-keywords="real-time voice ai agent websockets elevenlabs whisper live nodejs">
+                <div class="project-left">
+                    <div class="project-badges-row">
+                        <span class="badge-cat badge-trending-ai">⚡ Trending AI</span>
+                        <span class="badge-diff">Advanced</span>
+                    </div>
+                    <h2 class="project-title">Real-Time Voice AI Agent with Bidirectional WebSockets</h2>
+                    <p class="project-desc">
+                        Sub-300ms latency conversational voice assistant capable of live audio streaming, barge-in / interruption detection, speech-to-text tokenization, and dynamic synthesized voice response generation.
+                    </p>
+                    <div class="tech-tags-list">
+                        <span class="tech-tag">WebSockets</span>
+                        <span class="tech-tag">ElevenLabs API</span>
+                        <span class="tech-tag">Whisper Live</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">WebRTC Audio</span>
+                    </div>
+                    <div class="io-spec-box">
+                        <div class="io-spec-row">
+                            <span class="io-spec-label">VOICE IN</span>
+                            <span class="io-spec-val">"Book an appointment with Dr. Rao for Friday 4pm"</span>
+                        </div>
+                        <div class="io-spec-row">
+                            <span class="io-spec-label">VOICE OUT</span>
+                            <span class="io-spec-val" style="color: #34d399;">"Done! Friday at 4pm is reserved. Anything else?"</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-right">
+                    <div class="editor-top-bar">
+                        <div class="editor-dots">
+                            <span class="editor-dot" style="background:#ef4444;"></span>
+                            <span class="editor-dot" style="background:#f59e0b;"></span>
+                            <span class="editor-dot" style="background:#10b981;"></span>
+                        </div>
+                        <span>voice_server.js</span>
+                    </div>
+                    <textarea class="editor-code-area" id="codeArea6">const WebSocket = require('ws');
+const wss = new WebSocket.Server({ port: 8080 });
+
+wss.on('connection', (ws) => {
+    console.log('Voice Client connected. Streaming binary audio PCM...');
+    
+    ws.on('message', async (pcmChunk) => {
+        // 1. Live Voice Activity Detection (VAD)
+        if (isUserSpeaking(pcmChunk)) {
+            // Cancel current AI playback immediately (Interruption handling)
+            ws.send(JSON.stringify({ type: 'INTERRUPT_AUDIO' }));
+        }
+        
+        // 2. Stream through fast speech synthesis pipeline
+        const audioReply = await processVoiceChunk(pcmChunk);
+        ws.send(audioReply);
+    });
+});</textarea>
+                    <div class="output-box" id="outputBox6">⚡ Ready: Click "Run Voice Stream".</div>
+                    <div class="project-action-btns">
+                        <button class="btn-action-copy" onclick="copyCode('codeArea6')">📋 Copy</button>
+                        <button class="btn-action-run" onclick="runSim(6, 'Audio PCM processed in 140ms. Interruption signal tested successfully.')">▶ Run Simulation</button>
+                        <button class="btn-action-submit" onclick="submitProject('Real-Time Voice AI Agent')">Submit Project</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 7. COMPANY HIRING PROJECT 1 -->
+            <div class="project-card" data-category="company-hiring" data-keywords="high throughput distributed microservices kafka redis docker nodejs architecture">
+                <div class="project-left">
+                    <div class="project-badges-row">
+                        <span class="badge-cat badge-company-hiring">💼 Company Hiring</span>
+                        <span class="badge-diff">Advanced</span>
+                    </div>
+                    <h2 class="project-title">High-Throughput Distributed Microservices Architecture</h2>
+                    <p class="project-desc">
+                        Event-driven financial transactions backend engineered to handle 50,000+ requests/sec. Features Apache Kafka message streaming, Redis sliding-window distributed rate limiting, and idempotency key safety. (Top Tier-1 Tech interview project).
+                    </p>
+                    <div class="tech-tags-list">
+                        <span class="tech-tag">Node.js / Go</span>
+                        <span class="tech-tag">Apache Kafka</span>
+                        <span class="tech-tag">Redis Cluster</span>
+                        <span class="tech-tag">Docker</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                    </div>
+                    <div class="io-spec-box">
+                        <div class="io-spec-row">
+                            <span class="io-spec-label">TRAFFIC</span>
+                            <span class="io-spec-val">POST /api/v1/transfer (50,000 req/sec peak)</span>
+                        </div>
+                        <div class="io-spec-row">
+                            <span class="io-spec-label">GUARANTEE</span>
+                            <span class="io-spec-val" style="color: #34d399;">Zero Double-Spends | Distributed Idempotency Key Lock</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-right">
+                    <div class="editor-top-bar">
+                        <div class="editor-dots">
+                            <span class="editor-dot" style="background:#ef4444;"></span>
+                            <span class="editor-dot" style="background:#f59e0b;"></span>
+                            <span class="editor-dot" style="background:#10b981;"></span>
+                        </div>
+                        <span>idempotency_service.js</span>
+                    </div>
+                    <textarea class="editor-code-area" id="codeArea7">const Redis = require('ioredis');
+const redis = new Redis(process.env.REDIS_URL);
+const { Kafka } = require('kafkajs');
+
+async function processOrderTransaction(req, res) {
+    const { idempotencyKey, amount, accountId } = req.body;
+    
+    // Acquire atomic distributed lock in Redis (5 min TTL)
+    const acquired = await redis.set(`lock:${idempotencyKey}`, 'PENDING', 'NX', 'EX', 300);
+    if (!acquired) {
+        return res.status(409).json({ error: "Duplicate transaction prevented." });
+    }
+    
+    // Publish to Kafka high-throughput ledger topic
+    await producer.send({
+        topic: 'financial_ledger',
+        messages: [{ key: accountId, value: JSON.stringify({ amount, date: Date.now() }) }]
+    });
+    
+    return res.status(202).json({ success: true, message: "Order enqueued into Kafka" });
 }</textarea>
-                <div style="background:#070c1e; padding:10px; border-radius:6px; border:1px solid #20284b; margin:10px 0; font-family:monospace; font-size:13px; color:#20d99a;" id="projOut1">Output: Result: 30</div>
-
-                <div class="btn-group">
-                    <button class="btn-run" onclick="runProject(1)">Run Code</button>
-                    <button class="btn-submit" onclick="submitProject(1)">Submit Project</button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Project Item 2 -->
-        <div class="project-editor-container">
-            <div>
-                <div class="project-meta">
-                    <span class="pill pill-lang">C Language</span>
-                    <span class="pill pill-diff">Medium</span>
-                </div>
-                <h2 style="font-size:22px; margin-bottom:10px;">Student Grade Management System</h2>
-                <p style="color:#cbd5e1; font-size:14px; line-height:1.6;">
-                    Implement a C program using structures to store student names, marks, and calculate average grades.
-                </p>
-                <div class="io-grid">
-                    <div>
-                        <label>INPUT</label>
-                        <div class="io-val">Marks: 85, 90, 80</div>
-                    </div>
-                    <div>
-                        <label>EXPECTED OUTPUT</label>
-                        <div class="io-val" style="color:#20d99a;">Grade: A (Avg: 85%)</div>
+                    <div class="output-box" id="outputBox7">⚡ Ready: Click "Run Benchmark".</div>
+                    <div class="project-action-btns">
+                        <button class="btn-action-copy" onclick="copyCode('codeArea7')">📋 Copy</button>
+                        <button class="btn-action-run" onclick="runSim(7, 'Benchmark passed: 52,000 req/sec | Redis lock prevented 100% of duplicate calls')">▶ Run Simulation</button>
+                        <button class="btn-action-submit" onclick="submitProject('High-Throughput Microservices')">Submit Project</button>
                     </div>
                 </div>
             </div>
 
-            <div>
-                <textarea class="code-box" id="projCode2">#include <stdio.h>
+            <!-- 8. COMPANY HIRING PROJECT 2 -->
+            <div class="project-card" data-category="company-hiring" data-keywords="full-stack saas stripe subscriptions nextjs prisma multi-tenant">
+                <div class="project-left">
+                    <div class="project-badges-row">
+                        <span class="badge-cat badge-company-hiring">💼 Company Hiring</span>
+                        <span class="badge-diff">Intermediate</span>
+                    </div>
+                    <h2 class="project-title">Full-Stack SaaS Platform with Stripe Billing & Multi-Tenancy</h2>
+                    <p class="project-desc">
+                        Production SaaS engine with automated multi-tenant database isolation, Stripe subscription webhooks (handling renewals, failed charges, prorated upgrades), team invitations, and role-based access control (RBAC).
+                    </p>
+                    <div class="tech-tags-list">
+                        <span class="tech-tag">Next.js 14 App Router</span>
+                        <span class="tech-tag">Stripe Billing API</span>
+                        <span class="tech-tag">Prisma ORM</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">TailwindCSS</span>
+                    </div>
+                    <div class="io-spec-box">
+                        <div class="io-spec-row">
+                            <span class="io-spec-label">EVENT</span>
+                            <span class="io-spec-val">stripe.webhooks: customer.subscription.updated</span>
+                        </div>
+                        <div class="io-spec-row">
+                            <span class="io-spec-label">ACTION</span>
+                            <span class="io-spec-val" style="color: #34d399;">Plan upgraded to Enterprise -> Seats unlocked instantly</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-right">
+                    <div class="editor-top-bar">
+                        <div class="editor-dots">
+                            <span class="editor-dot" style="background:#ef4444;"></span>
+                            <span class="editor-dot" style="background:#f59e0b;"></span>
+                            <span class="editor-dot" style="background:#10b981;"></span>
+                        </div>
+                        <span>stripe_webhook.ts</span>
+                    </div>
+                    <textarea class="editor-code-area" id="codeArea8">import Stripe from 'stripe';
+import { prisma } from '@/lib/db';
 
-struct Student {
-    char name[20];
-    int marks[3];
-};
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
 
-int main() {
-    int avg = (85 + 90 + 80) / 3;
-    printf("Grade: A (Avg: %d%%)\n", avg);
-    return 0;
+export async function handleStripeWebhook(event: Stripe.Event) {
+    switch (event.type) {
+        case 'customer.subscription.created':
+        case 'customer.subscription.updated': {
+            const subscription = event.data.object as Stripe.Subscription;
+            await prisma.organization.update({
+                where: { stripeCustomerId: subscription.customer as string },
+                data: {
+                    plan: subscription.items.data[0].price.lookup_key || 'PRO',
+                    status: subscription.status,
+                    currentPeriodEnd: new Date(subscription.current_period_end * 1000)
+                }
+            });
+            break;
+        }
+    }
 }</textarea>
-                <div style="background:#070c1e; padding:10px; border-radius:6px; border:1px solid #20284b; margin:10px 0; font-family:monospace; font-size:13px; color:#20d99a;" id="projOut2">Output: Grade: A (Avg: 85%)</div>
-
-                <div class="btn-group">
-                    <button class="btn-run" onclick="runProject(2)">Run Code</button>
-                    <button class="btn-submit" onclick="submitProject(2)">Submit Project</button>
+                    <div class="output-box" id="outputBox8">⚡ Ready: Click "Simulate Webhook".</div>
+                    <div class="project-action-btns">
+                        <button class="btn-action-copy" onclick="copyCode('codeArea8')">📋 Copy</button>
+                        <button class="btn-action-run" onclick="runSim(8, 'Stripe webhook verified! Organization plan updated to PRO successfully.')">▶ Run Simulation</button>
+                        <button class="btn-action-submit" onclick="submitProject('Full-Stack SaaS Platform')">Submit Project</button>
+                    </div>
                 </div>
             </div>
+
+            <!-- 9. COMPANY HIRING PROJECT 3 -->
+            <div class="project-card" data-category="company-hiring" data-keywords="enterprise cloud data pipeline spark clickhouse aws s3 etl python">
+                <div class="project-left">
+                    <div class="project-badges-row">
+                        <span class="badge-cat badge-company-hiring">💼 Company Hiring</span>
+                        <span class="badge-diff">Advanced</span>
+                    </div>
+                    <h2 class="project-title">Enterprise Cloud Data Pipeline & Real-Time Analytics</h2>
+                    <p class="project-desc">
+                        Automated big-data ETL pipeline that ingests gigabytes of real-time user event telemetry from AWS S3, aggregates churn predictors using PySpark, and loads columnar storage (ClickHouse) for sub-second business intelligence dashboards.
+                    </p>
+                    <div class="tech-tags-list">
+                        <span class="tech-tag">PySpark</span>
+                        <span class="tech-tag">ClickHouse</span>
+                        <span class="tech-tag">AWS S3 / GCP</span>
+                        <span class="tech-tag">Airflow DAGs</span>
+                        <span class="tech-tag">Parquet</span>
+                    </div>
+                    <div class="io-spec-box">
+                        <div class="io-spec-row">
+                            <span class="io-spec-label">INGESTION</span>
+                            <span class="io-spec-val">12,000,000 daily user telemetry event records</span>
+                        </div>
+                        <div class="io-spec-row">
+                            <span class="io-spec-label">QUERY TIME</span>
+                            <span class="io-spec-val" style="color: #34d399;">ClickHouse Aggregate Query: 42ms on 10M rows</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-right">
+                    <div class="editor-top-bar">
+                        <div class="editor-dots">
+                            <span class="editor-dot" style="background:#ef4444;"></span>
+                            <span class="editor-dot" style="background:#f59e0b;"></span>
+                            <span class="editor-dot" style="background:#10b981;"></span>
+                        </div>
+                        <span>spark_etl_pipeline.py</span>
+                    </div>
+                    <textarea class="editor-code-area" id="codeArea9">from pyspark.sql import SparkSession
+from pyspark.sql.functions import col, count, window
+
+spark = SparkSession.builder \
+    .appName("TelemetryEventAggregator") \
+    .config("spark.sql.streaming.schemaInference", "true") \
+    .getOrCreate()
+
+# Read raw telemetry parquet from S3
+df = spark.read.parquet("s3a://production-events-lake/2026/10/*")
+
+# Calculate rolling active sessions & conversion
+analytics_df = df.filter(col("event_type") == "PURCHASE") \
+    .groupBy(window(col("timestamp"), "1 hour"), col("country")) \
+    .agg(count("user_id").alias("total_purchases"))
+
+analytics_df.write.format("clickhouse").save()</textarea>
+                    <div class="output-box" id="outputBox9">⚡ Ready: Click "Run Spark Job".</div>
+                    <div class="project-action-btns">
+                        <button class="btn-action-copy" onclick="copyCode('codeArea9')">📋 Copy</button>
+                        <button class="btn-action-run" onclick="runSim(9, 'Spark DAG finished in 3.1s: 1.2M events partitioned into ClickHouse.')">▶ Run Simulation</button>
+                        <button class="btn-action-submit" onclick="submitProject('Enterprise Data Pipeline')">Submit Project</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 10. FEATURED PROJECT 1 -->
+            <div class="project-card" data-category="featured" data-keywords="ai resume ats analyzer mock interview coach gemini pro streamlit">
+                <div class="project-left">
+                    <div class="project-badges-row">
+                        <span class="badge-cat badge-featured">⭐ Featured</span>
+                        <span class="badge-diff">Intermediate</span>
+                    </div>
+                    <h2 class="project-title">AI Resume ATS Analyzer & Real-Time Mock Interviewer</h2>
+                    <p class="project-desc">
+                        Analyzes engineering resumes against job descriptions, identifies missing technical keywords, calculates Applicant Tracking System (ATS) compatibility percentage, and initiates interactive voice mock interview rounds with scoring.
+                    </p>
+                    <div class="tech-tags-list">
+                        <span class="tech-tag">Gemini Pro API</span>
+                        <span class="tech-tag">Python PDF Miner</span>
+                        <span class="tech-tag">Streamlit</span>
+                        <span class="tech-tag">Speech-to-Text</span>
+                        <span class="tech-tag">NLP Matching</span>
+                    </div>
+                    <div class="io-spec-box">
+                        <div class="io-spec-row">
+                            <span class="io-spec-label">JOB TITLE</span>
+                            <span class="io-spec-val">Senior Backend Engineer (Go / Distributed Systems)</span>
+                        </div>
+                        <div class="io-spec-row">
+                            <span class="io-spec-label">MATCH SCORE</span>
+                            <span class="io-spec-val" style="color: #34d399;">89% Match (Key Gaps: gRPC, Kubernetes Operator)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-right">
+                    <div class="editor-top-bar">
+                        <div class="editor-dots">
+                            <span class="editor-dot" style="background:#ef4444;"></span>
+                            <span class="editor-dot" style="background:#f59e0b;"></span>
+                            <span class="editor-dot" style="background:#10b981;"></span>
+                        </div>
+                        <span>resume_ats_evaluator.py</span>
+                    </div>
+                    <textarea class="editor-code-area" id="codeArea10">import google.generativeai as genai
+import json
+
+genai.configure(api_key="GEMINI_API_KEY")
+model = genai.GenerativeModel("gemini-1.5-pro")
+
+prompt = """
+Analyze the resume text against the target job requirements.
+Output JSON with:
+1. ats_score (0-100)
+2. missing_skills (list)
+3. recommended_revisions (bullet points)
+4. three_custom_technical_interview_questions
+"""
+
+response = model.generate_content([prompt, resume_text, job_desc])
+print(json.loads(response.text))</textarea>
+                    <div class="output-box" id="outputBox10">⚡ Ready: Click "Analyze Resume ATS".</div>
+                    <div class="project-action-btns">
+                        <button class="btn-action-copy" onclick="copyCode('codeArea10')">📋 Copy</button>
+                        <button class="btn-action-run" onclick="runSim(10, 'ATS Score: 89% | Missing: gRPC, Helm | Generated 3 tailored interview questions.')">▶ Run Simulation</button>
+                        <button class="btn-action-submit" onclick="submitProject('AI Resume ATS Analyzer')">Submit Project</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 11. FEATURED PROJECT 2 -->
+            <div class="project-card" data-category="featured" data-keywords="algorithmic crypto stock trading bot finbert sentiment python pandas">
+                <div class="project-left">
+                    <div class="project-badges-row">
+                        <span class="badge-cat badge-featured">⭐ Featured</span>
+                        <span class="badge-diff">Advanced</span>
+                    </div>
+                    <h2 class="project-title">Algorithmic Trading & FinBERT AI Sentiment Engine</h2>
+                    <p class="project-desc">
+                        A quantitative algorithmic trading bot fusing technical signals (MACD, RSI momentum, Bollinger Bands) with real-time financial news sentiment scoring via FinBERT transformer models to trigger automated risk-managed trades.
+                    </p>
+                    <div class="tech-tags-list">
+                        <span class="tech-tag">FinBERT NLP</span>
+                        <span class="tech-tag">Python Pandas</span>
+                        <span class="tech-tag">Alpaca Trading API</span>
+                        <span class="tech-tag">TA-Lib</span>
+                        <span class="tech-tag">Backtesting</span>
+                    </div>
+                    <div class="io-spec-box">
+                        <div class="io-spec-row">
+                            <span class="io-spec-label">HEADLINE</span>
+                            <span class="io-spec-val">"Tech giant beats Q3 cloud revenue expectations by 18%"</span>
+                        </div>
+                        <div class="io-spec-row">
+                            <span class="io-spec-label">SIGNAL</span>
+                            <span class="io-spec-val" style="color: #34d399;">Bullish Sentiment (+0.91) + MACD Crossover -> BUY ORDER</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-right">
+                    <div class="editor-top-bar">
+                        <div class="editor-dots">
+                            <span class="editor-dot" style="background:#ef4444;"></span>
+                            <span class="editor-dot" style="background:#f59e0b;"></span>
+                            <span class="editor-dot" style="background:#10b981;"></span>
+                        </div>
+                        <span>finbert_trading_bot.py</span>
+                    </div>
+                    <textarea class="editor-code-area" id="codeArea11">from transformers import BertTokenizer, BertForSequenceClassification
+import torch
+
+tokenizer = BertTokenizer.from_pretrained('yiyanghkust/finbert-tone')
+model = BertForSequenceClassification.from_pretrained('yiyanghkust/finbert-tone')
+
+def analyze_financial_sentiment(news_headline):
+    inputs = tokenizer(news_headline, return_tensors="pt", padding=True)
+    outputs = model(**inputs)
+    predictions = torch.nn.functional.softmax(outputs.logits, dim=-1)
+    labels = ['Neutral', 'Positive', 'Negative']
+    return labels[torch.argmax(predictions).item()]
+
+print(analyze_financial_sentiment("NVIDIA announces record AI chip revenue"))</textarea>
+                    <div class="output-box" id="outputBox11">⚡ Ready: Click "Run Sentiment Test".</div>
+                    <div class="project-action-btns">
+                        <button class="btn-action-copy" onclick="copyCode('codeArea11')">📋 Copy</button>
+                        <button class="btn-action-run" onclick="runSim(11, 'FinBERT classified: Positive (Confidence: 96.8%) -> Triggered buy order.')">▶ Run Simulation</button>
+                        <button class="btn-action-submit" onclick="submitProject('Algorithmic Trading Bot')">Submit Project</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 12. FEATURED PROJECT 3 -->
+            <div class="project-card" data-category="featured" data-keywords="real-time collaborative canvas document editor figma notion yjs crdt">
+                <div class="project-left">
+                    <div class="project-badges-row">
+                        <span class="badge-cat badge-featured">⭐ Featured</span>
+                        <span class="badge-diff">Advanced</span>
+                    </div>
+                    <h2 class="project-title">Real-Time Collaborative Workspace (Figma / Notion Clone)</h2>
+                    <p class="project-desc">
+                        Multiplayer collaborative workspace with conflict-free replicated data types (Yjs CRDTs), live multi-user cursor tracking, optimistic offline sync, and instant undo/redo history trees over WebSockets.
+                    </p>
+                    <div class="tech-tags-list">
+                        <span class="tech-tag">TypeScript</span>
+                        <span class="tech-tag">Yjs (CRDT)</span>
+                        <span class="tech-tag">WebSockets</span>
+                        <span class="tech-tag">HTML5 Canvas</span>
+                        <span class="tech-tag">React</span>
+                    </div>
+                    <div class="io-spec-box">
+                        <div class="io-spec-row">
+                            <span class="io-spec-label">COLLABORATORS</span>
+                            <span class="io-spec-val">12 Simultaneous Users on same canvas workspace</span>
+                        </div>
+                        <div class="io-spec-row">
+                            <span class="io-spec-label">SYNC LATENCY</span>
+                            <span class="io-spec-val" style="color: #34d399;">16ms P2P CRDT Convergence (Zero Conflicts)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-right">
+                    <div class="editor-top-bar">
+                        <div class="editor-dots">
+                            <span class="editor-dot" style="background:#ef4444;"></span>
+                            <span class="editor-dot" style="background:#f59e0b;"></span>
+                            <span class="editor-dot" style="background:#10b981;"></span>
+                        </div>
+                        <span>crdt_canvas_sync.ts</span>
+                    </div>
+                    <textarea class="editor-code-area" id="codeArea12">import * as Y from 'yjs';
+import { WebsocketProvider } from 'y-websocket';
+
+const ydoc = new Y.Doc();
+const provider = new WebsocketProvider('wss://collab.learningpath.io', 'canvas-room-4', ydoc);
+
+// Shared shape & block dictionary across all active browsers
+const yShapes = ydoc.getMap('canvas_elements');
+
+yShapes.observe((event) => {
+    event.changes.keys.forEach((change, key) => {
+        if (change.action === 'add' || change.action === 'update') {
+            renderCanvasShape(key, yShapes.get(key));
+        }
+    });
+});
+
+function moveShape(id: string, x: number, y: number) {
+    yShapes.set(id, { x, y, lastEditor: 'Mohan' });
+}</textarea>
+                    <div class="output-box" id="outputBox12">⚡ Ready: Click "Test Collaboration".</div>
+                    <div class="project-action-btns">
+                        <button class="btn-action-copy" onclick="copyCode('codeArea12')">📋 Copy</button>
+                        <button class="btn-action-run" onclick="runSim(12, 'CRDT state synchronized with 12 peer nodes in 14ms without conflicts.')">▶ Run Simulation</button>
+                        <button class="btn-action-submit" onclick="submitProject('Real-Time Collaborative Workspace')">Submit Project</button>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
     </main>
 
     <script>
-        function runProject(id) {
-            alert(`Running Project ${id} code... Execution successful!`);
+        // 1. Sidebar Toggle & Dynamic User Greeting
+        document.addEventListener("DOMContentLoaded", () => {
+            const toggleBtn = document.getElementById("sidebarToggleBtn");
+            const sidebar = document.getElementById("dashboardSidebar");
+            const backdrop = document.getElementById("sidebarBackdrop");
+
+            function toggleSidebar(open) {
+                const isOpen = open !== undefined ? open : !sidebar.classList.contains("is-open");
+                sidebar.classList.toggle("is-open", isOpen);
+                if (backdrop) backdrop.classList.toggle("active", isOpen);
+            }
+
+            if (toggleBtn) {
+                toggleBtn.addEventListener("click", (e) => {
+                    e.stopPropagation();
+                    toggleSidebar();
+                });
+            }
+
+            if (backdrop) {
+                backdrop.addEventListener("click", () => toggleSidebar(false));
+            }
+
+            document.addEventListener("keydown", (e) => {
+                if (e.key === "Escape") toggleSidebar(false);
+            });
+
+            // Read Dynamic User Name
+            try {
+                let user = JSON.parse(localStorage.getItem("learningUser") || "null");
+                if (!user) user = JSON.parse(localStorage.getItem("lastCreatedUser") || "null");
+                if (user && user.name) {
+                    const topName = document.getElementById("topbarUserName");
+                    const topAvatar = document.getElementById("topbarAvatar");
+                    if (topName) topName.textContent = user.name;
+                    if (topAvatar) topAvatar.textContent = user.name.charAt(0).toUpperCase();
+                }
+            } catch (e) {}
+        });
+
+        // 2. Category Tab Filtering & Live Search
+        const categoryBtns = document.querySelectorAll(".cat-tab-btn");
+        const projectCards = document.querySelectorAll(".project-card");
+        const searchInput = document.getElementById("projectFilterInput");
+        const topbarSearch = document.getElementById("topbarSearch");
+
+        let activeCategory = "all";
+        let searchQuery = "";
+
+        function filterProjects() {
+            projectCards.forEach(card => {
+                const cardCat = card.getAttribute("data-category");
+                const cardKeywords = (card.getAttribute("data-keywords") || "").toLowerCase();
+                const cardTitle = card.querySelector(".project-title").textContent.toLowerCase();
+                const cardDesc = card.querySelector(".project-desc").textContent.toLowerCase();
+                
+                const matchesCategory = (activeCategory === "all") || (cardCat === activeCategory);
+                const matchesSearch = !searchQuery || 
+                    cardKeywords.includes(searchQuery) || 
+                    cardTitle.includes(searchQuery) || 
+                    cardDesc.includes(searchQuery);
+
+                if (matchesCategory && matchesSearch) {
+                    card.style.display = "grid";
+                } else {
+                    card.style.display = "none";
+                }
+            });
         }
 
-        function submitProject(id) {
-            alert(`🎉 Project ${id} Submitted! All tests passed.`);
+        categoryBtns.forEach(btn => {
+            btn.addEventListener("click", () => {
+                categoryBtns.forEach(b => b.classList.remove("active"));
+                btn.classList.add("active");
+                activeCategory = btn.getAttribute("data-category");
+                filterProjects();
+            });
+        });
+
+        if (searchInput) {
+            searchInput.addEventListener("input", (e) => {
+                searchQuery = e.target.value.toLowerCase().trim();
+                filterProjects();
+            });
         }
 
-        function filterProjects(diff) {
-            document.querySelectorAll(".diff-tab").forEach(t => t.classList.remove("active"));
-            event.target.classList.add("active");
+        if (topbarSearch) {
+            topbarSearch.addEventListener("input", (e) => {
+                searchQuery = e.target.value.toLowerCase().trim();
+                if (searchInput) searchInput.value = searchQuery;
+                filterProjects();
+            });
+        }
+
+        // 3. Interactive Code Runner Simulation
+        function runSim(id, successMsg) {
+            const out = document.getElementById("outputBox" + id);
+            if (!out) return;
+            out.innerHTML = '<span style="color:#60a5fa;">⏳ Initializing environment and executing code...</span>';
+            setTimeout(() => {
+                out.innerHTML = `<span style="color:#34d399;">✓ Output:</span> ${successMsg}`;
+            }, 600);
+        }
+
+        // 4. Copy Code Area
+        function copyCode(textareaId) {
+            const area = document.getElementById(textareaId);
+            if (!area) return;
+            area.select();
+            navigator.clipboard.writeText(area.value);
+            alert("✓ Project code copied to clipboard!");
+        }
+
+        // 5. Submit Project
+        function submitProject(title) {
+            alert(`🎉 Success! Your implementation of "${title}" has been saved to your portfolio.`);
         }
     </script>
 </body>
