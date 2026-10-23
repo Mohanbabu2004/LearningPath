@@ -9,6 +9,40 @@ let userAnswers = [];
 
 let questions = [];
 
+/* =====================================
+   SCREEN 10 COUNTDOWN TIMER (60 MINUTES)
+===================================== */
+let timerInterval = null;
+let totalTimeSeconds = 60 * 60; // 60:00 = 3600 seconds
+let timeRemaining = totalTimeSeconds;
+
+function startTimer() {
+    clearInterval(timerInterval);
+    timeRemaining = totalTimeSeconds;
+    updateTimerDisplay();
+
+    timerInterval = setInterval(() => {
+        if (timeRemaining > 0) {
+            timeRemaining--;
+            updateTimerDisplay();
+        } else {
+            clearInterval(timerInterval);
+            finishQuiz();
+        }
+    }, 1000);
+}
+
+function updateTimerDisplay() {
+    const minutes = Math.floor(timeRemaining / 60);
+    const seconds = timeRemaining % 60;
+    const formatted = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+    const timerEl = document.getElementById("quizTimerDisplay");
+    if (timerEl) {
+        timerEl.textContent = formatted;
+    }
+}
+
+
 
 /* =====================================
    QUESTION BANK
@@ -78,6 +112,7 @@ document
             .getElementById("quizScreen")
             .classList.remove("hidden");
 
+        startTimer();
         showQuestion();
     });
 
@@ -89,53 +124,63 @@ document
 function showQuestion() {
 
     const q = questions[currentQuestion];
+    if (!q) return;
 
-    document.getElementById("quizTitle").textContent =
-        `${language} Programming – ${level}`;
+    const quizTitle = document.getElementById("quizTitle");
+    if (quizTitle) {
+        quizTitle.textContent = `${language} Programming – ${level}`;
+    }
 
-    document.getElementById("currentNumber").textContent =
-        currentQuestion + 1;
+    const currentNumber = document.getElementById("currentNumber");
+    if (currentNumber) {
+        currentNumber.textContent = currentQuestion + 1;
+    }
 
-    document.getElementById("questionText").textContent =
-        `${currentQuestion + 1}. ${q.question}`;
+    const headerNumber = document.getElementById("headerQuestionNum");
+    if (headerNumber) {
+        headerNumber.textContent = currentQuestion + 1;
+    }
 
-    const progress =
-        ((currentQuestion + 1) / TOTAL_QUESTIONS) * 100;
+    const questionText = document.getElementById("questionText");
+    if (questionText) {
+        questionText.textContent = q.question;
+    }
 
-    document.getElementById("questionProgress")
-        .style.width = `${progress}%`;
+    const progressEl = document.getElementById("questionProgress");
+    if (progressEl) {
+        const progress = ((currentQuestion + 1) / TOTAL_QUESTIONS) * 100;
+        progressEl.style.width = `${progress}%`;
+    }
 
-    const optionsContainer =
-        document.getElementById("options");
+    const optionsContainer = document.getElementById("options");
+    if (optionsContainer) {
+        optionsContainer.innerHTML = "";
 
-    optionsContainer.innerHTML = "";
+        q.options.forEach((option, idx) => {
+            const letter = String.fromCharCode(65 + idx); // 'A', 'B', 'C', 'D'
+            const optionBox = document.createElement("div");
+            const isSelected = userAnswers[currentQuestion] === option;
+            
+            optionBox.className = "quiz-radio-option" + (isSelected ? " selected" : "");
+            optionBox.innerHTML = `
+                <div class="radio-indicator">
+                    <div class="radio-dot"></div>
+                </div>
+                <div class="option-label-text">
+                    <span class="option-letter">${letter}.</span>
+                    <span class="option-val">${option}</span>
+                </div>
+            `;
 
-    q.options.forEach(option => {
+            optionBox.addEventListener("click", () => {
+                userAnswers[currentQuestion] = option;
+                document.querySelectorAll(".quiz-radio-option").forEach(b => b.classList.remove("selected"));
+                optionBox.classList.add("selected");
+            });
 
-        const button = document.createElement("button");
-
-        button.className = "option";
-        button.textContent = option;
-
-        if (userAnswers[currentQuestion] === option) {
-            button.classList.add("selected");
-        }
-
-        button.addEventListener("click", () => {
-
-            userAnswers[currentQuestion] = option;
-
-            document
-                .querySelectorAll(".option")
-                .forEach(btn =>
-                    btn.classList.remove("selected")
-                );
-
-            button.classList.add("selected");
+            optionsContainer.appendChild(optionBox);
         });
-
-        optionsContainer.appendChild(button);
-    });
+    }
 
     updateButtons();
 }

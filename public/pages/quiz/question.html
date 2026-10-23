@@ -81,59 +81,73 @@
         </section>
 
 
-        <!-- ================= QUIZ SCREEN ================= -->
+                <!-- ================= QUIZ SCREEN (SCREEN 10) ================= -->
 
-        <section id="quizScreen" class="screen hidden">
+        <section id="quizScreen" class="screen hidden quiz-screen-10-container">
 
-            <div class="quiz-header">
+            <!-- Screen 10 Header: 10 Badge & Quiz Question (1/100) -->
+            <div class="screen-10-topbar">
+                <div class="screen-10-badge">10</div>
+                <div class="screen-10-title">Quiz Question (<span id="headerQuestionNum">1</span>/100)</div>
+            </div>
 
-                <div>
-                    <h2 id="quizTitle">C Programming – Beginner</h2>
-                    <p>
-                        Question
-                        <span id="currentNumber">1</span>
-                        / 100
-                    </p>
+            <!-- Main White Card -->
+            <div class="screen-10-card">
+
+                <!-- Brand & Live Countdown Timer -->
+                <div class="card-brand-timer-row">
+                    <div class="card-brand">
+                        <span class="card-cap-icon">🎓</span>
+                        <span class="brand-learn">Learning</span><span class="brand-path">Path</span>
+                    </div>
+                    <div class="card-timer-badge">
+                        <span class="timer-icon">⏱</span>
+                        <span id="quizTimerDisplay">59:30</span>
+                    </div>
                 </div>
 
-                <div class="marks">
-                    <span>1 Mark</span>
+                <!-- Question Counter & 1 Mark Badge -->
+                <div class="card-meta-row">
+                    <div class="card-q-counter">
+                        Question <span id="currentNumber">1</span> / 100
+                    </div>
+                    <div class="card-mark-pill">
+                        1 Mark
+                    </div>
                 </div>
 
-            </div>
+                <!-- Question Text with ⓘ icon -->
+                <div class="card-q-body">
+                    <span class="info-icon">ⓘ</span>
+                    <div id="questionText" class="q-text-content">
+                        Loading question...
+                    </div>
+                </div>
 
-            <div class="progress-bar">
-                <div id="questionProgress"></div>
-            </div>
+                <!-- 4 Options Container with Radio Dots -->
+                <div id="options" class="card-options-list">
+                    <!-- Populated dynamically with A, B, C, D radio options -->
+                </div>
 
-            <div class="question-card">
-
-                <h2 id="questionText"></h2>
-
-                <div id="options"></div>
-
-            </div>
-
-            <div class="quiz-buttons">
-
-                <button id="previousBtn">
-                    ← Previous
-                </button>
-
-                <button id="nextBtn" class="primary">
-                    Next →
-                </button>
-
-                <button id="submitBtn" class="submit hidden">
-                    Submit Quiz ✓
-                </button>
+                <!-- Bottom Navigation Buttons -->
+                <div class="card-nav-buttons">
+                    <button id="previousBtn" type="button" class="btn-prev-pill">
+                        ← Previous
+                    </button>
+                    <button id="nextBtn" type="button" class="btn-next-pill">
+                        Next →
+                    </button>
+                    <button id="submitBtn" type="button" class="btn-submit-pill hidden">
+                        Submit Quiz ✓
+                    </button>
+                </div>
 
             </div>
 
         </section>
 
 
-        <!-- ================= RESULT SCREEN ================= -->
+<!-- ================= RESULT SCREEN ================= -->
 
         <section id="resultScreen" class="screen hidden">
 
@@ -237,9 +251,67 @@
 
 </div>
 
+<!-- 1. C Question Banks -->
 <script src="c_beginner_100_questions.js"></script>
 <script src="c_intermediate_100_questions.js"></script>
 <script src="c_advanced_100_questions.js"></script>
+
+<!-- 2. C++ Question Banks -->
+<script src="cpp_beginner_100_questions.js"></script>
+<script src="cpp_intermediate_100_questions.js"></script>
+<script src="cpp_advanced_100_questions.js"></script>
+
+<!-- 3. Python Question Banks -->
+<script src="python_beginner_100_questions.js"></script>
+<script src="python_intermediate_100_questions.js"></script>
+<script src="python_advanced_100_questions.js"></script>
+
+<!-- 4. TypeScript Question Banks -->
+<script src="typescript_beginner_100_questions.js"></script>
+<script src="typescript_intermediate_100_questions.js"></script>
+<script src="typescript_advanced_100_questions.js"></script>
+
+<!-- 5. JavaScript Question Banks -->
+<script src="javascript_beginner_100_questions.js"></script>
+<script src="javascript_intermediate_100_questions.js"></script>
+<script src="javascript_advanced_100_questions.js"></script>
+
+<!-- 6. Java Question Banks -->
+<script src="java_beginner_100_questions.js"></script>
+<script src="java_intermediate_100_questions.js"></script>
+<script src="java_advanced_100_questions.js"></script>
+
+<!-- 7. R Question Banks -->
+<script src="r_beginner_100_questions.js"></script>
+<script src="r_intermediate_100_questions.js"></script>
+<script src="r_advanced_100_questions.js"></script>
+
+<!-- 8. CUDA Question Banks -->
+<script src="cuda_beginner_100_questions.js"></script>
+<script src="cuda_intermediate_100_questions.js"></script>
+<script src="cuda_advanced_100_questions.js"></script>
+
+<!-- 9. Ruby Question Banks -->
+<script src="ruby_beginner_100_questions.js"></script>
+<script src="ruby_intermediate_100_questions.js"></script>
+<script src="ruby_advanced_100_questions.js"></script>
+
+<!-- 10. PHP Question Banks -->
+<script src="php_beginner_100_questions.js"></script>
+<script src="php_intermediate_100_questions.js"></script>
+<script src="php_advanced_100_questions.js"></script>
+
+<!-- 11. HTML Question Banks -->
+<script src="html_beginner_100_questions.js"></script>
+<script src="html_intermediate_100_questions.js"></script>
+<script src="html_advanced_100_questions.js"></script>
+
+<!-- 12. CSS Question Banks -->
+<script src="css_beginner_100_questions.js"></script>
+<script src="css_intermediate_100_questions.js"></script>
+<script src="css_advanced_100_questions.js"></script>
+
+<!-- Main Quiz Engine Script -->
 <script src="quiz.js"></script>
 
 </body>

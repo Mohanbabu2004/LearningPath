@@ -15,8 +15,8 @@ window.LEARNING_DATA = {
                 "title": "C Programming Tutorial (English)"
             },
             "te": {
-                "id": "uLfCFa1Vaj0",
-                "title": "C Language Full Course in Telugu (తెలుగు)"
+                "id": "AI4OXVsx2_Q",
+                "title": "C Language Full Course in Telugu (తెలుగు) - Complete Tutorial"
             },
             "ta": {
                 "id": "zesDNvqbNNo",
