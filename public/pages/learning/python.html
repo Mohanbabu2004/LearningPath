@@ -498,6 +498,55 @@
             background: #000;
         }
 
+        .video-fallback-help-bar {
+            position: absolute;
+            bottom: 10px;
+            right: 12px;
+            background: rgba(8, 13, 32, 0.92);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(59, 130, 246, 0.4);
+            border-radius: 8px;
+            padding: 5px 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 11px;
+            color: #cbd5e1;
+            z-index: 15;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+        }
+        .video-direct-btn {
+            background: #dc2626;
+            color: #ffffff !important;
+            font-weight: 700;
+            padding: 3px 10px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 11px;
+            transition: 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .video-direct-btn:hover {
+            background: #b91c1c;
+        }
+        .video-switch-inline-btn {
+            background: #1e293b;
+            border: 1px solid #334155;
+            color: #93c5fd;
+            font-size: 11px;
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .video-switch-inline-btn:hover {
+            background: #2563eb;
+            color: #ffffff;
+        }
+
         /* Section Cards */
         .section-card {
             background: #0b1126;
@@ -931,13 +980,18 @@
                                 <option value="ta">🇮🇳 தமிழ்</option>
                                 <option value="hi">🇮🇳 हिन्दी</option>
                             </select>
-                            <a id="videoExternalLink" href="https://www.youtube.com/watch?v=_uQrJ0TkZlc" target="_blank" class="video-control-btn" style="color: #93c5fd; text-decoration: none;" title="Open in YouTube">↗ YouTube</a>
+                            <a id="videoExternalLink" href="https://www.youtube.com/watch?v=_uQrJ0TkZlc" target="_blank" rel="noopener noreferrer" class="video-control-btn" style="background: #dc2626; color: #ffffff; font-weight: 700; border-color: #ef4444; text-decoration: none;" title="Open directly in YouTube">▶ YouTube ↗</a>
                             <button class="video-control-btn" type="button" onclick="restartLessonVideo()" title="Restart Video">⏮ Restart</button>
                             <button class="video-control-btn" type="button" onclick="toggleVideoSource()" title="Switch Video Mode">📺 Switch Mode</button>
                             <button class="video-control-btn" type="button" onclick="closeVideoPlayer()" title="Close Video" style="background: rgba(239, 68, 68, 0.2); border-color: rgba(239, 68, 68, 0.4); color: #fca5a5;">✕ Close</button>
                         </div>
                     </div>
-                    <iframe id="videoIframeEl" class="video-iframe-element" src="" title="Python Programming Video Player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe id="videoIframeEl" class="video-iframe-element" src="" title="Python Programming Video Player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <div id="videoFallbackHelp" class="video-fallback-help-bar">
+                        <span>💡 Video playback issue?</span>
+                        <a id="videoDirectWatchBtn" href="https://www.youtube.com/watch?v=_uQrJ0TkZlc" target="_blank" rel="noopener noreferrer" class="video-direct-btn">▶ Watch on YouTube ↗</a>
+                        <button type="button" onclick="toggleVideoSource()" class="video-switch-inline-btn">🔄 Switch Video Mode</button>
+                    </div>
                 </div>
             </div>
 
@@ -1212,14 +1266,20 @@
 
             activeTitle.innerHTML = `<span>▶</span> <span>${data.name} (${LANG_NAMES[selectedVideoLang]}) - ${lesson ? lesson.title : ''}</span>`;
 
+            const youtubeWatchUrl = "https://www.youtube.com/watch?v=" + videoId + (startTime ? "&t=" + startTime : "");
             if (extLink) {
-                extLink.href = "https://www.youtube.com/watch?v=" + videoId;
+                extLink.href = youtubeWatchUrl;
+            }
+            const directBtn = document.getElementById("videoDirectWatchBtn");
+            if (directBtn) {
+                directBtn.href = youtubeWatchUrl;
             }
 
             if (isHtml5Fallback) {
                 renderHtml5Player();
             } else {
-                const embedUrl = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&start=${startTime}&rel=0&modestbranding=1&enablejsapi=1`;
+                const originParam = encodeURIComponent(window.location.origin || 'https://learningpath-m83v.onrender.com');
+                const embedUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1&start=${startTime}&rel=0&modestbranding=1&enablejsapi=1&origin=${originParam}`;
                 iframe.src = embedUrl;
             }
         }

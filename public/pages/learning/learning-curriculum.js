@@ -1,6 +1,5 @@
 // Comprehensive 12-Language Learning Curriculum & Online Compiler Engine
-// 35 In-Depth Chapters per Language (Total 420 Chapters)
-// With Theory, Practical Code, Interactive Online Compiler, 5 Practice Questions per lesson,
+// Basics to Advanced with Theory, Practical Code, Interactive Online Compiler, 5 Practice Questions per lesson,
 // and 100% Embed-Verified Multi-Language Playable Video Tutorials (Telugu, Tamil, English, Hindi).
 
 window.LEARNING_DATA = {
@@ -16,8 +15,8 @@ window.LEARNING_DATA = {
                 "title": "C Programming Tutorial (English)"
             },
             "te": {
-                "id": "rukBywrtqII",
-                "title": "C Programming Full Course (తెలుగు)"
+                "id": "uLfCFa1Vaj0",
+                "title": "C Language Full Course in Telugu (తెలుగు)"
             },
             "ta": {
                 "id": "zesDNvqbNNo",
@@ -45,7 +44,7 @@ window.LEARNING_DATA = {
                         "start": 0
                     },
                     "te": {
-                        "id": "rukBywrtqII",
+                        "id": "uLfCFa1Vaj0",
                         "start": 0
                     },
                     "ta": {
@@ -124,14 +123,14 @@ window.LEARNING_DATA = {
                 "practical": "#include <stdio.h>\n\n// Chapter 2: Variables, Identifiers & Keywords\nint main() {\n    printf(\"=== Chapter 2: Variables, Identifiers & Keywords ===\\n\");\n    printf(\"Executing practical demonstration in C...\\n\");\n    int status = 1;\n    if (status) {\n        printf(\"Demonstration completed successfully.\\n\");\n    }\n    return 0;\n}",
                 "compilerCode": "#include <stdio.h>\n\nint main() {\n    printf(\"C Language - Chapter 2: Variables, Identifiers & Keywords\\n\");\n    printf(\"Status: Verified & Running on LearningPath Online Compiler!\\n\");\n    return 0;\n}",
                 "expectedOutput": "C Language - Chapter 2: Variables, Identifiers & Keywords\nStatus: Verified & Running on LearningPath Online Compiler!",
-                "videoStart": 360,
+                "videoStart": 780,
                 "videos": {
                     "en": {
                         "id": "KJgsSFOSQv0",
-                        "start": 360
+                        "start": 780
                     },
                     "te": {
-                        "id": "rukBywrtqII",
+                        "id": "uLfCFa1Vaj0",
                         "start": 0
                     },
                     "ta": {
@@ -210,14 +209,14 @@ window.LEARNING_DATA = {
                 "practical": "#include <stdio.h>\n\n// Chapter 3: Data Types & Memory Sizes\nint main() {\n    printf(\"=== Chapter 3: Data Types & Memory Sizes ===\\n\");\n    printf(\"Executing practical demonstration in C...\\n\");\n    int status = 1;\n    if (status) {\n        printf(\"Demonstration completed successfully.\\n\");\n    }\n    return 0;\n}",
                 "compilerCode": "#include <stdio.h>\n\nint main() {\n    printf(\"C Language - Chapter 3: Data Types & Memory Sizes\\n\");\n    printf(\"Status: Verified & Running on LearningPath Online Compiler!\\n\");\n    return 0;\n}",
                 "expectedOutput": "C Language - Chapter 3: Data Types & Memory Sizes\nStatus: Verified & Running on LearningPath Online Compiler!",
-                "videoStart": 720,
+                "videoStart": 1500,
                 "videos": {
                     "en": {
                         "id": "KJgsSFOSQv0",
-                        "start": 720
+                        "start": 1500
                     },
                     "te": {
-                        "id": "rukBywrtqII",
+                        "id": "uLfCFa1Vaj0",
                         "start": 0
                     },
                     "ta": {
@@ -296,14 +295,14 @@ window.LEARNING_DATA = {
                 "practical": "#include <stdio.h>\n\n// Chapter 4: Constants & Literals\nint main() {\n    printf(\"=== Chapter 4: Constants & Literals ===\\n\");\n    printf(\"Executing practical demonstration in C...\\n\");\n    int status = 1;\n    if (status) {\n        printf(\"Demonstration completed successfully.\\n\");\n    }\n    return 0;\n}",
                 "compilerCode": "#include <stdio.h>\n\nint main() {\n    printf(\"C Language - Chapter 4: Constants & Literals\\n\");\n    printf(\"Status: Verified & Running on LearningPath Online Compiler!\\n\");\n    return 0;\n}",
                 "expectedOutput": "C Language - Chapter 4: Constants & Literals\nStatus: Verified & Running on LearningPath Online Compiler!",
-                "videoStart": 1080,
+                "videoStart": 2400,
                 "videos": {
                     "en": {
                         "id": "KJgsSFOSQv0",
-                        "start": 1080
+                        "start": 2400
                     },
                     "te": {
-                        "id": "rukBywrtqII",
+                        "id": "uLfCFa1Vaj0",
                         "start": 0
                     },
                     "ta": {
@@ -382,14 +381,14 @@ window.LEARNING_DATA = {
                 "practical": "#include <stdio.h>\n\n// Chapter 5: Arithmetic & Assignment Operators\nint main() {\n    printf(\"=== Chapter 5: Arithmetic & Assignment Operators ===\\n\");\n    printf(\"Executing practical demonstration in C...\\n\");\n    int status = 1;\n    if (status) {\n        printf(\"Demonstration completed successfully.\\n\");\n    }\n    return 0;\n}",
                 "compilerCode": "#include <stdio.h>\n\nint main() {\n    printf(\"C Language - Chapter 5: Arithmetic & Assignment Operators\\n\");\n    printf(\"Status: Verified & Running on LearningPath Online Compiler!\\n\");\n    return 0;\n}",
                 "expectedOutput": "C Language - Chapter 5: Arithmetic & Assignment Operators\nStatus: Verified & Running on LearningPath Online Compiler!",
-                "videoStart": 1440,
+                "videoStart": 3600,
                 "videos": {
                     "en": {
                         "id": "KJgsSFOSQv0",
-                        "start": 1440
+                        "start": 3600
                     },
                     "te": {
-                        "id": "rukBywrtqII",
+                        "id": "uLfCFa1Vaj0",
                         "start": 0
                     },
                     "ta": {
@@ -468,14 +467,14 @@ window.LEARNING_DATA = {
                 "practical": "#include <stdio.h>\n\n// Chapter 6: Relational & Logical Operators\nint main() {\n    printf(\"=== Chapter 6: Relational & Logical Operators ===\\n\");\n    printf(\"Executing practical demonstration in C...\\n\");\n    int status = 1;\n    if (status) {\n        printf(\"Demonstration completed successfully.\\n\");\n    }\n    return 0;\n}",
                 "compilerCode": "#include <stdio.h>\n\nint main() {\n    printf(\"C Language - Chapter 6: Relational & Logical Operators\\n\");\n    printf(\"Status: Verified & Running on LearningPath Online Compiler!\\n\");\n    return 0;\n}",
                 "expectedOutput": "C Language - Chapter 6: Relational & Logical Operators\nStatus: Verified & Running on LearningPath Online Compiler!",
-                "videoStart": 1800,
+                "videoStart": 4800,
                 "videos": {
                     "en": {
                         "id": "KJgsSFOSQv0",
-                        "start": 1800
+                        "start": 4800
                     },
                     "te": {
-                        "id": "rukBywrtqII",
+                        "id": "uLfCFa1Vaj0",
                         "start": 0
                     },
                     "ta": {
@@ -554,14 +553,14 @@ window.LEARNING_DATA = {
                 "practical": "#include <stdio.h>\n\n// Chapter 7: Bitwise Operators & Expressions\nint main() {\n    printf(\"=== Chapter 7: Bitwise Operators & Expressions ===\\n\");\n    printf(\"Executing practical demonstration in C...\\n\");\n    int status = 1;\n    if (status) {\n        printf(\"Demonstration completed successfully.\\n\");\n    }\n    return 0;\n}",
                 "compilerCode": "#include <stdio.h>\n\nint main() {\n    printf(\"C Language - Chapter 7: Bitwise Operators & Expressions\\n\");\n    printf(\"Status: Verified & Running on LearningPath Online Compiler!\\n\");\n    return 0;\n}",
                 "expectedOutput": "C Language - Chapter 7: Bitwise Operators & Expressions\nStatus: Verified & Running on LearningPath Online Compiler!",
-                "videoStart": 2160,
+                "videoStart": 6300,
                 "videos": {
                     "en": {
                         "id": "KJgsSFOSQv0",
-                        "start": 2160
+                        "start": 6300
                     },
                     "te": {
-                        "id": "rukBywrtqII",
+                        "id": "uLfCFa1Vaj0",
                         "start": 0
                     },
                     "ta": {
@@ -640,14 +639,14 @@ window.LEARNING_DATA = {
                 "practical": "#include <stdio.h>\n\n// Chapter 8: Standard Input & Output (printf & scanf)\nint main() {\n    printf(\"=== Chapter 8: Standard Input & Output (printf & scanf) ===\\n\");\n    printf(\"Executing practical demonstration in C...\\n\");\n    int status = 1;\n    if (status) {\n        printf(\"Demonstration completed successfully.\\n\");\n    }\n    return 0;\n}",
                 "compilerCode": "#include <stdio.h>\n\nint main() {\n    printf(\"C Language - Chapter 8: Standard Input & Output (printf & scanf)\\n\");\n    printf(\"Status: Verified & Running on LearningPath Online Compiler!\\n\");\n    return 0;\n}",
                 "expectedOutput": "C Language - Chapter 8: Standard Input & Output (printf & scanf)\nStatus: Verified & Running on LearningPath Online Compiler!",
-                "videoStart": 2520,
+                "videoStart": 7800,
                 "videos": {
                     "en": {
                         "id": "KJgsSFOSQv0",
-                        "start": 2520
+                        "start": 7800
                     },
                     "te": {
-                        "id": "rukBywrtqII",
+                        "id": "uLfCFa1Vaj0",
                         "start": 0
                     },
                     "ta": {
@@ -726,14 +725,14 @@ window.LEARNING_DATA = {
                 "practical": "#include <stdio.h>\n\n// Chapter 9: Type Casting & Conversions\nint main() {\n    printf(\"=== Chapter 9: Type Casting & Conversions ===\\n\");\n    printf(\"Executing practical demonstration in C...\\n\");\n    int status = 1;\n    if (status) {\n        printf(\"Demonstration completed successfully.\\n\");\n    }\n    return 0;\n}",
                 "compilerCode": "#include <stdio.h>\n\nint main() {\n    printf(\"C Language - Chapter 9: Type Casting & Conversions\\n\");\n    printf(\"Status: Verified & Running on LearningPath Online Compiler!\\n\");\n    return 0;\n}",
                 "expectedOutput": "C Language - Chapter 9: Type Casting & Conversions\nStatus: Verified & Running on LearningPath Online Compiler!",
-                "videoStart": 2880,
+                "videoStart": 9600,
                 "videos": {
                     "en": {
                         "id": "KJgsSFOSQv0",
-                        "start": 2880
+                        "start": 9600
                     },
                     "te": {
-                        "id": "rukBywrtqII",
+                        "id": "uLfCFa1Vaj0",
                         "start": 0
                     },
                     "ta": {
@@ -812,14 +811,14 @@ window.LEARNING_DATA = {
                 "practical": "#include <stdio.h>\n\n// Chapter 10: Conditional Statements (if, if-else, nested if)\nint main() {\n    printf(\"=== Chapter 10: Conditional Statements (if, if-else, nested if) ===\\n\");\n    printf(\"Executing practical demonstration in C...\\n\");\n    int status = 1;\n    if (status) {\n        printf(\"Demonstration completed successfully.\\n\");\n    }\n    return 0;\n}",
                 "compilerCode": "#include <stdio.h>\n\nint main() {\n    printf(\"C Language - Chapter 10: Conditional Statements (if, if-else, nested if)\\n\");\n    printf(\"Status: Verified & Running on LearningPath Online Compiler!\\n\");\n    return 0;\n}",
                 "expectedOutput": "C Language - Chapter 10: Conditional Statements (if, if-else, nested if)\nStatus: Verified & Running on LearningPath Online Compiler!",
-                "videoStart": 3240,
+                "videoStart": 11400,
                 "videos": {
                     "en": {
                         "id": "KJgsSFOSQv0",
-                        "start": 3240
+                        "start": 11400
                     },
                     "te": {
-                        "id": "rukBywrtqII",
+                        "id": "uLfCFa1Vaj0",
                         "start": 0
                     },
                     "ta": {
@@ -898,14 +897,14 @@ window.LEARNING_DATA = {
                 "practical": "#include <stdio.h>\n\n// Chapter 11: Switch-Case Selection Control\nint main() {\n    printf(\"=== Chapter 11: Switch-Case Selection Control ===\\n\");\n    printf(\"Executing practical demonstration in C...\\n\");\n    int status = 1;\n    if (status) {\n        printf(\"Demonstration completed successfully.\\n\");\n    }\n    return 0;\n}",
                 "compilerCode": "#include <stdio.h>\n\nint main() {\n    printf(\"C Language - Chapter 11: Switch-Case Selection Control\\n\");\n    printf(\"Status: Verified & Running on LearningPath Online Compiler!\\n\");\n    return 0;\n}",
                 "expectedOutput": "C Language - Chapter 11: Switch-Case Selection Control\nStatus: Verified & Running on LearningPath Online Compiler!",
-                "videoStart": 3600,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "KJgsSFOSQv0",
-                        "start": 3600
+                        "start": 0
                     },
                     "te": {
-                        "id": "rukBywrtqII",
+                        "id": "uLfCFa1Vaj0",
                         "start": 0
                     },
                     "ta": {
@@ -984,14 +983,14 @@ window.LEARNING_DATA = {
                 "practical": "#include <stdio.h>\n\n// Chapter 12: While Loop Fundamentals\nint main() {\n    printf(\"=== Chapter 12: While Loop Fundamentals ===\\n\");\n    printf(\"Executing practical demonstration in C...\\n\");\n    int status = 1;\n    if (status) {\n        printf(\"Demonstration completed successfully.\\n\");\n    }\n    return 0;\n}",
                 "compilerCode": "#include <stdio.h>\n\nint main() {\n    printf(\"C Language - Chapter 12: While Loop Fundamentals\\n\");\n    printf(\"Status: Verified & Running on LearningPath Online Compiler!\\n\");\n    return 0;\n}",
                 "expectedOutput": "C Language - Chapter 12: While Loop Fundamentals\nStatus: Verified & Running on LearningPath Online Compiler!",
-                "videoStart": 3960,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "KJgsSFOSQv0",
-                        "start": 3960
+                        "start": 0
                     },
                     "te": {
-                        "id": "rukBywrtqII",
+                        "id": "uLfCFa1Vaj0",
                         "start": 0
                     },
                     "ta": {
@@ -1070,14 +1069,14 @@ window.LEARNING_DATA = {
                 "practical": "#include <stdio.h>\n\n// Chapter 13: For Loops & Nested Loop Iterations\nint main() {\n    printf(\"=== Chapter 13: For Loops & Nested Loop Iterations ===\\n\");\n    printf(\"Executing practical demonstration in C...\\n\");\n    int status = 1;\n    if (status) {\n        printf(\"Demonstration completed successfully.\\n\");\n    }\n    return 0;\n}",
                 "compilerCode": "#include <stdio.h>\n\nint main() {\n    printf(\"C Language - Chapter 13: For Loops & Nested Loop Iterations\\n\");\n    printf(\"Status: Verified & Running on LearningPath Online Compiler!\\n\");\n    return 0;\n}",
                 "expectedOutput": "C Language - Chapter 13: For Loops & Nested Loop Iterations\nStatus: Verified & Running on LearningPath Online Compiler!",
-                "videoStart": 4320,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "KJgsSFOSQv0",
-                        "start": 4320
+                        "start": 0
                     },
                     "te": {
-                        "id": "rukBywrtqII",
+                        "id": "uLfCFa1Vaj0",
                         "start": 0
                     },
                     "ta": {
@@ -1156,14 +1155,14 @@ window.LEARNING_DATA = {
                 "practical": "#include <stdio.h>\n\n// Chapter 14: Do-While Loops & Iteration Differences\nint main() {\n    printf(\"=== Chapter 14: Do-While Loops & Iteration Differences ===\\n\");\n    printf(\"Executing practical demonstration in C...\\n\");\n    int status = 1;\n    if (status) {\n        printf(\"Demonstration completed successfully.\\n\");\n    }\n    return 0;\n}",
                 "compilerCode": "#include <stdio.h>\n\nint main() {\n    printf(\"C Language - Chapter 14: Do-While Loops & Iteration Differences\\n\");\n    printf(\"Status: Verified & Running on LearningPath Online Compiler!\\n\");\n    return 0;\n}",
                 "expectedOutput": "C Language - Chapter 14: Do-While Loops & Iteration Differences\nStatus: Verified & Running on LearningPath Online Compiler!",
-                "videoStart": 4680,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "KJgsSFOSQv0",
-                        "start": 4680
+                        "start": 0
                     },
                     "te": {
-                        "id": "rukBywrtqII",
+                        "id": "uLfCFa1Vaj0",
                         "start": 0
                     },
                     "ta": {
@@ -1242,14 +1241,14 @@ window.LEARNING_DATA = {
                 "practical": "#include <stdio.h>\n\n// Chapter 15: Break, Continue & Goto Statements\nint main() {\n    printf(\"=== Chapter 15: Break, Continue & Goto Statements ===\\n\");\n    printf(\"Executing practical demonstration in C...\\n\");\n    int status = 1;\n    if (status) {\n        printf(\"Demonstration completed successfully.\\n\");\n    }\n    return 0;\n}",
                 "compilerCode": "#include <stdio.h>\n\nint main() {\n    printf(\"C Language - Chapter 15: Break, Continue & Goto Statements\\n\");\n    printf(\"Status: Verified & Running on LearningPath Online Compiler!\\n\");\n    return 0;\n}",
                 "expectedOutput": "C Language - Chapter 15: Break, Continue & Goto Statements\nStatus: Verified & Running on LearningPath Online Compiler!",
-                "videoStart": 5040,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "KJgsSFOSQv0",
-                        "start": 5040
+                        "start": 0
                     },
                     "te": {
-                        "id": "rukBywrtqII",
+                        "id": "uLfCFa1Vaj0",
                         "start": 0
                     },
                     "ta": {
@@ -1328,14 +1327,14 @@ window.LEARNING_DATA = {
                 "practical": "#include <stdio.h>\n\n// Chapter 16: User Defined Functions & Prototypes\nint main() {\n    printf(\"=== Chapter 16: User Defined Functions & Prototypes ===\\n\");\n    printf(\"Executing practical demonstration in C...\\n\");\n    int status = 1;\n    if (status) {\n        printf(\"Demonstration completed successfully.\\n\");\n    }\n    return 0;\n}",
                 "compilerCode": "#include <stdio.h>\n\nint main() {\n    printf(\"C Language - Chapter 16: User Defined Functions & Prototypes\\n\");\n    printf(\"Status: Verified & Running on LearningPath Online Compiler!\\n\");\n    return 0;\n}",
                 "expectedOutput": "C Language - Chapter 16: User Defined Functions & Prototypes\nStatus: Verified & Running on LearningPath Online Compiler!",
-                "videoStart": 5400,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "KJgsSFOSQv0",
-                        "start": 5400
+                        "start": 0
                     },
                     "te": {
-                        "id": "rukBywrtqII",
+                        "id": "uLfCFa1Vaj0",
                         "start": 0
                     },
                     "ta": {
@@ -1414,14 +1413,14 @@ window.LEARNING_DATA = {
                 "practical": "#include <stdio.h>\n\n// Chapter 17: Call by Value vs Call by Reference\nint main() {\n    printf(\"=== Chapter 17: Call by Value vs Call by Reference ===\\n\");\n    printf(\"Executing practical demonstration in C...\\n\");\n    int status = 1;\n    if (status) {\n        printf(\"Demonstration completed successfully.\\n\");\n    }\n    return 0;\n}",
                 "compilerCode": "#include <stdio.h>\n\nint main() {\n    printf(\"C Language - Chapter 17: Call by Value vs Call by Reference\\n\");\n    printf(\"Status: Verified & Running on LearningPath Online Compiler!\\n\");\n    return 0;\n}",
                 "expectedOutput": "C Language - Chapter 17: Call by Value vs Call by Reference\nStatus: Verified & Running on LearningPath Online Compiler!",
-                "videoStart": 5760,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "KJgsSFOSQv0",
-                        "start": 5760
+                        "start": 0
                     },
                     "te": {
-                        "id": "rukBywrtqII",
+                        "id": "uLfCFa1Vaj0",
                         "start": 0
                     },
                     "ta": {
@@ -1500,14 +1499,14 @@ window.LEARNING_DATA = {
                 "practical": "#include <stdio.h>\n\n// Chapter 18: Recursion & Recursive Problem Solving\nint main() {\n    printf(\"=== Chapter 18: Recursion & Recursive Problem Solving ===\\n\");\n    printf(\"Executing practical demonstration in C...\\n\");\n    int status = 1;\n    if (status) {\n        printf(\"Demonstration completed successfully.\\n\");\n    }\n    return 0;\n}",
                 "compilerCode": "#include <stdio.h>\n\nint main() {\n    printf(\"C Language - Chapter 18: Recursion & Recursive Problem Solving\\n\");\n    printf(\"Status: Verified & Running on LearningPath Online Compiler!\\n\");\n    return 0;\n}",
                 "expectedOutput": "C Language - Chapter 18: Recursion & Recursive Problem Solving\nStatus: Verified & Running on LearningPath Online Compiler!",
-                "videoStart": 6120,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "KJgsSFOSQv0",
-                        "start": 6120
+                        "start": 0
                     },
                     "te": {
-                        "id": "rukBywrtqII",
+                        "id": "uLfCFa1Vaj0",
                         "start": 0
                     },
                     "ta": {
@@ -1586,14 +1585,14 @@ window.LEARNING_DATA = {
                 "practical": "#include <stdio.h>\n\n// Chapter 19: Storage Classes (auto, static, extern, register)\nint main() {\n    printf(\"=== Chapter 19: Storage Classes (auto, static, extern, register) ===\\n\");\n    printf(\"Executing practical demonstration in C...\\n\");\n    int status = 1;\n    if (status) {\n        printf(\"Demonstration completed successfully.\\n\");\n    }\n    return 0;\n}",
                 "compilerCode": "#include <stdio.h>\n\nint main() {\n    printf(\"C Language - Chapter 19: Storage Classes (auto, static, extern, register)\\n\");\n    printf(\"Status: Verified & Running on LearningPath Online Compiler!\\n\");\n    return 0;\n}",
                 "expectedOutput": "C Language - Chapter 19: Storage Classes (auto, static, extern, register)\nStatus: Verified & Running on LearningPath Online Compiler!",
-                "videoStart": 6480,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "KJgsSFOSQv0",
-                        "start": 6480
+                        "start": 0
                     },
                     "te": {
-                        "id": "rukBywrtqII",
+                        "id": "uLfCFa1Vaj0",
                         "start": 0
                     },
                     "ta": {
@@ -1672,14 +1671,14 @@ window.LEARNING_DATA = {
                 "practical": "#include <stdio.h>\n\n// Chapter 20: Single-Dimensional Arrays & Memory Layout\nint main() {\n    printf(\"=== Chapter 20: Single-Dimensional Arrays & Memory Layout ===\\n\");\n    printf(\"Executing practical demonstration in C...\\n\");\n    int status = 1;\n    if (status) {\n        printf(\"Demonstration completed successfully.\\n\");\n    }\n    return 0;\n}",
                 "compilerCode": "#include <stdio.h>\n\nint main() {\n    printf(\"C Language - Chapter 20: Single-Dimensional Arrays & Memory Layout\\n\");\n    printf(\"Status: Verified & Running on LearningPath Online Compiler!\\n\");\n    return 0;\n}",
                 "expectedOutput": "C Language - Chapter 20: Single-Dimensional Arrays & Memory Layout\nStatus: Verified & Running on LearningPath Online Compiler!",
-                "videoStart": 6840,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "KJgsSFOSQv0",
-                        "start": 6840
+                        "start": 0
                     },
                     "te": {
-                        "id": "rukBywrtqII",
+                        "id": "uLfCFa1Vaj0",
                         "start": 0
                     },
                     "ta": {
@@ -1758,14 +1757,14 @@ window.LEARNING_DATA = {
                 "practical": "#include <stdio.h>\n\n// Chapter 21: Two-Dimensional Arrays & Matrices\nint main() {\n    printf(\"=== Chapter 21: Two-Dimensional Arrays & Matrices ===\\n\");\n    printf(\"Executing practical demonstration in C...\\n\");\n    int status = 1;\n    if (status) {\n        printf(\"Demonstration completed successfully.\\n\");\n    }\n    return 0;\n}",
                 "compilerCode": "#include <stdio.h>\n\nint main() {\n    printf(\"C Language - Chapter 21: Two-Dimensional Arrays & Matrices\\n\");\n    printf(\"Status: Verified & Running on LearningPath Online Compiler!\\n\");\n    return 0;\n}",
                 "expectedOutput": "C Language - Chapter 21: Two-Dimensional Arrays & Matrices\nStatus: Verified & Running on LearningPath Online Compiler!",
-                "videoStart": 7200,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "KJgsSFOSQv0",
-                        "start": 7200
+                        "start": 0
                     },
                     "te": {
-                        "id": "rukBywrtqII",
+                        "id": "uLfCFa1Vaj0",
                         "start": 0
                     },
                     "ta": {
@@ -1844,14 +1843,14 @@ window.LEARNING_DATA = {
                 "practical": "#include <stdio.h>\n\n// Chapter 22: Strings & Character Arrays\nint main() {\n    printf(\"=== Chapter 22: Strings & Character Arrays ===\\n\");\n    printf(\"Executing practical demonstration in C...\\n\");\n    int status = 1;\n    if (status) {\n        printf(\"Demonstration completed successfully.\\n\");\n    }\n    return 0;\n}",
                 "compilerCode": "#include <stdio.h>\n\nint main() {\n    printf(\"C Language - Chapter 22: Strings & Character Arrays\\n\");\n    printf(\"Status: Verified & Running on LearningPath Online Compiler!\\n\");\n    return 0;\n}",
                 "expectedOutput": "C Language - Chapter 22: Strings & Character Arrays\nStatus: Verified & Running on LearningPath Online Compiler!",
-                "videoStart": 7560,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "KJgsSFOSQv0",
-                        "start": 7560
+                        "start": 0
                     },
                     "te": {
-                        "id": "rukBywrtqII",
+                        "id": "uLfCFa1Vaj0",
                         "start": 0
                     },
                     "ta": {
@@ -1930,14 +1929,14 @@ window.LEARNING_DATA = {
                 "practical": "#include <stdio.h>\n\n// Chapter 23: String Library Functions (string.h)\nint main() {\n    printf(\"=== Chapter 23: String Library Functions (string.h) ===\\n\");\n    printf(\"Executing practical demonstration in C...\\n\");\n    int status = 1;\n    if (status) {\n        printf(\"Demonstration completed successfully.\\n\");\n    }\n    return 0;\n}",
                 "compilerCode": "#include <stdio.h>\n\nint main() {\n    printf(\"C Language - Chapter 23: String Library Functions (string.h)\\n\");\n    printf(\"Status: Verified & Running on LearningPath Online Compiler!\\n\");\n    return 0;\n}",
                 "expectedOutput": "C Language - Chapter 23: String Library Functions (string.h)\nStatus: Verified & Running on LearningPath Online Compiler!",
-                "videoStart": 7920,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "KJgsSFOSQv0",
-                        "start": 7920
+                        "start": 0
                     },
                     "te": {
-                        "id": "rukBywrtqII",
+                        "id": "uLfCFa1Vaj0",
                         "start": 0
                     },
                     "ta": {
@@ -2016,14 +2015,14 @@ window.LEARNING_DATA = {
                 "practical": "#include <stdio.h>\n\n// Chapter 24: Pointers & Memory Addresses (&, *)\nint main() {\n    printf(\"=== Chapter 24: Pointers & Memory Addresses (&, *) ===\\n\");\n    printf(\"Executing practical demonstration in C...\\n\");\n    int status = 1;\n    if (status) {\n        printf(\"Demonstration completed successfully.\\n\");\n    }\n    return 0;\n}",
                 "compilerCode": "#include <stdio.h>\n\nint main() {\n    printf(\"C Language - Chapter 24: Pointers & Memory Addresses (&, *)\\n\");\n    printf(\"Status: Verified & Running on LearningPath Online Compiler!\\n\");\n    return 0;\n}",
                 "expectedOutput": "C Language - Chapter 24: Pointers & Memory Addresses (&, *)\nStatus: Verified & Running on LearningPath Online Compiler!",
-                "videoStart": 8280,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "KJgsSFOSQv0",
-                        "start": 8280
+                        "start": 0
                     },
                     "te": {
-                        "id": "rukBywrtqII",
+                        "id": "uLfCFa1Vaj0",
                         "start": 0
                     },
                     "ta": {
@@ -2102,14 +2101,14 @@ window.LEARNING_DATA = {
                 "practical": "#include <stdio.h>\n\n// Chapter 25: Pointer Arithmetic & Array Navigation\nint main() {\n    printf(\"=== Chapter 25: Pointer Arithmetic & Array Navigation ===\\n\");\n    printf(\"Executing practical demonstration in C...\\n\");\n    int status = 1;\n    if (status) {\n        printf(\"Demonstration completed successfully.\\n\");\n    }\n    return 0;\n}",
                 "compilerCode": "#include <stdio.h>\n\nint main() {\n    printf(\"C Language - Chapter 25: Pointer Arithmetic & Array Navigation\\n\");\n    printf(\"Status: Verified & Running on LearningPath Online Compiler!\\n\");\n    return 0;\n}",
                 "expectedOutput": "C Language - Chapter 25: Pointer Arithmetic & Array Navigation\nStatus: Verified & Running on LearningPath Online Compiler!",
-                "videoStart": 8640,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "KJgsSFOSQv0",
-                        "start": 8640
+                        "start": 0
                     },
                     "te": {
-                        "id": "rukBywrtqII",
+                        "id": "uLfCFa1Vaj0",
                         "start": 0
                     },
                     "ta": {
@@ -2188,14 +2187,14 @@ window.LEARNING_DATA = {
                 "practical": "#include <stdio.h>\n\n// Chapter 26: Pointers to Pointers (Double Pointers)\nint main() {\n    printf(\"=== Chapter 26: Pointers to Pointers (Double Pointers) ===\\n\");\n    printf(\"Executing practical demonstration in C...\\n\");\n    int status = 1;\n    if (status) {\n        printf(\"Demonstration completed successfully.\\n\");\n    }\n    return 0;\n}",
                 "compilerCode": "#include <stdio.h>\n\nint main() {\n    printf(\"C Language - Chapter 26: Pointers to Pointers (Double Pointers)\\n\");\n    printf(\"Status: Verified & Running on LearningPath Online Compiler!\\n\");\n    return 0;\n}",
                 "expectedOutput": "C Language - Chapter 26: Pointers to Pointers (Double Pointers)\nStatus: Verified & Running on LearningPath Online Compiler!",
-                "videoStart": 9000,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "KJgsSFOSQv0",
-                        "start": 9000
+                        "start": 0
                     },
                     "te": {
-                        "id": "rukBywrtqII",
+                        "id": "uLfCFa1Vaj0",
                         "start": 0
                     },
                     "ta": {
@@ -2274,14 +2273,14 @@ window.LEARNING_DATA = {
                 "practical": "#include <stdio.h>\n\n// Chapter 27: Function Pointers & Callbacks\nint main() {\n    printf(\"=== Chapter 27: Function Pointers & Callbacks ===\\n\");\n    printf(\"Executing practical demonstration in C...\\n\");\n    int status = 1;\n    if (status) {\n        printf(\"Demonstration completed successfully.\\n\");\n    }\n    return 0;\n}",
                 "compilerCode": "#include <stdio.h>\n\nint main() {\n    printf(\"C Language - Chapter 27: Function Pointers & Callbacks\\n\");\n    printf(\"Status: Verified & Running on LearningPath Online Compiler!\\n\");\n    return 0;\n}",
                 "expectedOutput": "C Language - Chapter 27: Function Pointers & Callbacks\nStatus: Verified & Running on LearningPath Online Compiler!",
-                "videoStart": 9360,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "KJgsSFOSQv0",
-                        "start": 9360
+                        "start": 0
                     },
                     "te": {
-                        "id": "rukBywrtqII",
+                        "id": "uLfCFa1Vaj0",
                         "start": 0
                     },
                     "ta": {
@@ -2360,14 +2359,14 @@ window.LEARNING_DATA = {
                 "practical": "#include <stdio.h>\n\n// Chapter 28: Dynamic Memory Allocation (malloc, calloc)\nint main() {\n    printf(\"=== Chapter 28: Dynamic Memory Allocation (malloc, calloc) ===\\n\");\n    printf(\"Executing practical demonstration in C...\\n\");\n    int status = 1;\n    if (status) {\n        printf(\"Demonstration completed successfully.\\n\");\n    }\n    return 0;\n}",
                 "compilerCode": "#include <stdio.h>\n\nint main() {\n    printf(\"C Language - Chapter 28: Dynamic Memory Allocation (malloc, calloc)\\n\");\n    printf(\"Status: Verified & Running on LearningPath Online Compiler!\\n\");\n    return 0;\n}",
                 "expectedOutput": "C Language - Chapter 28: Dynamic Memory Allocation (malloc, calloc)\nStatus: Verified & Running on LearningPath Online Compiler!",
-                "videoStart": 9720,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "KJgsSFOSQv0",
-                        "start": 9720
+                        "start": 0
                     },
                     "te": {
-                        "id": "rukBywrtqII",
+                        "id": "uLfCFa1Vaj0",
                         "start": 0
                     },
                     "ta": {
@@ -2446,14 +2445,14 @@ window.LEARNING_DATA = {
                 "practical": "#include <stdio.h>\n\n// Chapter 29: Memory Reallocation & Deallocation (realloc, free)\nint main() {\n    printf(\"=== Chapter 29: Memory Reallocation & Deallocation (realloc, free) ===\\n\");\n    printf(\"Executing practical demonstration in C...\\n\");\n    int status = 1;\n    if (status) {\n        printf(\"Demonstration completed successfully.\\n\");\n    }\n    return 0;\n}",
                 "compilerCode": "#include <stdio.h>\n\nint main() {\n    printf(\"C Language - Chapter 29: Memory Reallocation & Deallocation (realloc, free)\\n\");\n    printf(\"Status: Verified & Running on LearningPath Online Compiler!\\n\");\n    return 0;\n}",
                 "expectedOutput": "C Language - Chapter 29: Memory Reallocation & Deallocation (realloc, free)\nStatus: Verified & Running on LearningPath Online Compiler!",
-                "videoStart": 10080,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "KJgsSFOSQv0",
-                        "start": 10080
+                        "start": 0
                     },
                     "te": {
-                        "id": "rukBywrtqII",
+                        "id": "uLfCFa1Vaj0",
                         "start": 0
                     },
                     "ta": {
@@ -2532,14 +2531,14 @@ window.LEARNING_DATA = {
                 "practical": "#include <stdio.h>\n\n// Chapter 30: Structures (struct) & Member Access\nint main() {\n    printf(\"=== Chapter 30: Structures (struct) & Member Access ===\\n\");\n    printf(\"Executing practical demonstration in C...\\n\");\n    int status = 1;\n    if (status) {\n        printf(\"Demonstration completed successfully.\\n\");\n    }\n    return 0;\n}",
                 "compilerCode": "#include <stdio.h>\n\nint main() {\n    printf(\"C Language - Chapter 30: Structures (struct) & Member Access\\n\");\n    printf(\"Status: Verified & Running on LearningPath Online Compiler!\\n\");\n    return 0;\n}",
                 "expectedOutput": "C Language - Chapter 30: Structures (struct) & Member Access\nStatus: Verified & Running on LearningPath Online Compiler!",
-                "videoStart": 10440,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "KJgsSFOSQv0",
-                        "start": 10440
+                        "start": 0
                     },
                     "te": {
-                        "id": "rukBywrtqII",
+                        "id": "uLfCFa1Vaj0",
                         "start": 0
                     },
                     "ta": {
@@ -2618,14 +2617,14 @@ window.LEARNING_DATA = {
                 "practical": "#include <stdio.h>\n\n// Chapter 31: Nested Structures & Array of Structures\nint main() {\n    printf(\"=== Chapter 31: Nested Structures & Array of Structures ===\\n\");\n    printf(\"Executing practical demonstration in C...\\n\");\n    int status = 1;\n    if (status) {\n        printf(\"Demonstration completed successfully.\\n\");\n    }\n    return 0;\n}",
                 "compilerCode": "#include <stdio.h>\n\nint main() {\n    printf(\"C Language - Chapter 31: Nested Structures & Array of Structures\\n\");\n    printf(\"Status: Verified & Running on LearningPath Online Compiler!\\n\");\n    return 0;\n}",
                 "expectedOutput": "C Language - Chapter 31: Nested Structures & Array of Structures\nStatus: Verified & Running on LearningPath Online Compiler!",
-                "videoStart": 10800,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "KJgsSFOSQv0",
-                        "start": 10800
+                        "start": 0
                     },
                     "te": {
-                        "id": "rukBywrtqII",
+                        "id": "uLfCFa1Vaj0",
                         "start": 0
                     },
                     "ta": {
@@ -2704,14 +2703,14 @@ window.LEARNING_DATA = {
                 "practical": "#include <stdio.h>\n\n// Chapter 32: Unions & Bit Fields\nint main() {\n    printf(\"=== Chapter 32: Unions & Bit Fields ===\\n\");\n    printf(\"Executing practical demonstration in C...\\n\");\n    int status = 1;\n    if (status) {\n        printf(\"Demonstration completed successfully.\\n\");\n    }\n    return 0;\n}",
                 "compilerCode": "#include <stdio.h>\n\nint main() {\n    printf(\"C Language - Chapter 32: Unions & Bit Fields\\n\");\n    printf(\"Status: Verified & Running on LearningPath Online Compiler!\\n\");\n    return 0;\n}",
                 "expectedOutput": "C Language - Chapter 32: Unions & Bit Fields\nStatus: Verified & Running on LearningPath Online Compiler!",
-                "videoStart": 11160,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "KJgsSFOSQv0",
-                        "start": 11160
+                        "start": 0
                     },
                     "te": {
-                        "id": "rukBywrtqII",
+                        "id": "uLfCFa1Vaj0",
                         "start": 0
                     },
                     "ta": {
@@ -2790,14 +2789,14 @@ window.LEARNING_DATA = {
                 "practical": "#include <stdio.h>\n\n// Chapter 33: Typedef & Enumerations (enum)\nint main() {\n    printf(\"=== Chapter 33: Typedef & Enumerations (enum) ===\\n\");\n    printf(\"Executing practical demonstration in C...\\n\");\n    int status = 1;\n    if (status) {\n        printf(\"Demonstration completed successfully.\\n\");\n    }\n    return 0;\n}",
                 "compilerCode": "#include <stdio.h>\n\nint main() {\n    printf(\"C Language - Chapter 33: Typedef & Enumerations (enum)\\n\");\n    printf(\"Status: Verified & Running on LearningPath Online Compiler!\\n\");\n    return 0;\n}",
                 "expectedOutput": "C Language - Chapter 33: Typedef & Enumerations (enum)\nStatus: Verified & Running on LearningPath Online Compiler!",
-                "videoStart": 11520,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "KJgsSFOSQv0",
-                        "start": 11520
+                        "start": 0
                     },
                     "te": {
-                        "id": "rukBywrtqII",
+                        "id": "uLfCFa1Vaj0",
                         "start": 0
                     },
                     "ta": {
@@ -2876,14 +2875,14 @@ window.LEARNING_DATA = {
                 "practical": "#include <stdio.h>\n\n// Chapter 34: File I/O: Reading & Writing Text Files\nint main() {\n    printf(\"=== Chapter 34: File I/O: Reading & Writing Text Files ===\\n\");\n    printf(\"Executing practical demonstration in C...\\n\");\n    int status = 1;\n    if (status) {\n        printf(\"Demonstration completed successfully.\\n\");\n    }\n    return 0;\n}",
                 "compilerCode": "#include <stdio.h>\n\nint main() {\n    printf(\"C Language - Chapter 34: File I/O: Reading & Writing Text Files\\n\");\n    printf(\"Status: Verified & Running on LearningPath Online Compiler!\\n\");\n    return 0;\n}",
                 "expectedOutput": "C Language - Chapter 34: File I/O: Reading & Writing Text Files\nStatus: Verified & Running on LearningPath Online Compiler!",
-                "videoStart": 11880,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "KJgsSFOSQv0",
-                        "start": 11880
+                        "start": 0
                     },
                     "te": {
-                        "id": "rukBywrtqII",
+                        "id": "uLfCFa1Vaj0",
                         "start": 0
                     },
                     "ta": {
@@ -2962,14 +2961,14 @@ window.LEARNING_DATA = {
                 "practical": "#include <stdio.h>\n\n// Chapter 35: Binary File Handling, Preprocessor & Capstone Project\nint main() {\n    printf(\"=== Chapter 35: Binary File Handling, Preprocessor & Capstone Project ===\\n\");\n    printf(\"Executing practical demonstration in C...\\n\");\n    int status = 1;\n    if (status) {\n        printf(\"Demonstration completed successfully.\\n\");\n    }\n    return 0;\n}",
                 "compilerCode": "#include <stdio.h>\n\nint main() {\n    printf(\"C Language - Chapter 35: Binary File Handling, Preprocessor & Capstone Project\\n\");\n    printf(\"Status: Verified & Running on LearningPath Online Compiler!\\n\");\n    return 0;\n}",
                 "expectedOutput": "C Language - Chapter 35: Binary File Handling, Preprocessor & Capstone Project\nStatus: Verified & Running on LearningPath Online Compiler!",
-                "videoStart": 12240,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "KJgsSFOSQv0",
-                        "start": 12240
+                        "start": 0
                     },
                     "te": {
-                        "id": "rukBywrtqII",
+                        "id": "uLfCFa1Vaj0",
                         "start": 0
                     },
                     "ta": {
@@ -3053,12 +3052,12 @@ window.LEARNING_DATA = {
                 "title": "C++ Tutorial for Beginners (English)"
             },
             "te": {
-                "id": "B31LgI4Y4DQ",
+                "id": "rPaOM4D-18A",
                 "title": "C++ Full Course in Telugu (తెలుగు)"
             },
             "ta": {
-                "id": "m67-bOpOoPU",
-                "title": "C++ Tutorial in Tamil (தமிழ்)"
+                "id": "VnaKu8_H3jU",
+                "title": "C++ Programming Full Course in Tamil (தமிழ்)"
             },
             "hi": {
                 "id": "z9bZufPHFLU",
@@ -3082,11 +3081,11 @@ window.LEARNING_DATA = {
                         "start": 0
                     },
                     "te": {
-                        "id": "B31LgI4Y4DQ",
+                        "id": "rPaOM4D-18A",
                         "start": 0
                     },
                     "ta": {
-                        "id": "m67-bOpOoPU",
+                        "id": "VnaKu8_H3jU",
                         "start": 0
                     },
                     "hi": {
@@ -3161,18 +3160,18 @@ window.LEARNING_DATA = {
                 "practical": "#include <iostream>\n#include <string>\n\n// Chapter 2: Variables, Basic Types & cin/cout Streams\nint main() {\n    std::cout << \"=== Chapter 2: Variables, Basic Types & cin/cout Streams ===\" << std::endl;\n    std::cout << \"Modern C++ Execution verified.\" << std::endl;\n    return 0;\n}",
                 "compilerCode": "#include <iostream>\n\nint main() {\n    std::cout << \"C++ - Chapter 2: Variables, Basic Types & cin/cout Streams\" << std::endl;\n    std::cout << \"Compiled and Executed with code 0.\" << std::endl;\n    return 0;\n}",
                 "expectedOutput": "C++ - Chapter 2: Variables, Basic Types & cin/cout Streams\nCompiled and Executed with code 0.",
-                "videoStart": 360,
+                "videoStart": 800,
                 "videos": {
                     "en": {
                         "id": "vLnPwxZdW4Y",
-                        "start": 360
+                        "start": 800
                     },
                     "te": {
-                        "id": "B31LgI4Y4DQ",
+                        "id": "rPaOM4D-18A",
                         "start": 0
                     },
                     "ta": {
-                        "id": "m67-bOpOoPU",
+                        "id": "VnaKu8_H3jU",
                         "start": 0
                     },
                     "hi": {
@@ -3247,18 +3246,18 @@ window.LEARNING_DATA = {
                 "practical": "#include <iostream>\n#include <string>\n\n// Chapter 3: Operators, Expressions & Math Library\nint main() {\n    std::cout << \"=== Chapter 3: Operators, Expressions & Math Library ===\" << std::endl;\n    std::cout << \"Modern C++ Execution verified.\" << std::endl;\n    return 0;\n}",
                 "compilerCode": "#include <iostream>\n\nint main() {\n    std::cout << \"C++ - Chapter 3: Operators, Expressions & Math Library\" << std::endl;\n    std::cout << \"Compiled and Executed with code 0.\" << std::endl;\n    return 0;\n}",
                 "expectedOutput": "C++ - Chapter 3: Operators, Expressions & Math Library\nCompiled and Executed with code 0.",
-                "videoStart": 720,
+                "videoStart": 1600,
                 "videos": {
                     "en": {
                         "id": "vLnPwxZdW4Y",
-                        "start": 720
+                        "start": 1600
                     },
                     "te": {
-                        "id": "B31LgI4Y4DQ",
+                        "id": "rPaOM4D-18A",
                         "start": 0
                     },
                     "ta": {
-                        "id": "m67-bOpOoPU",
+                        "id": "VnaKu8_H3jU",
                         "start": 0
                     },
                     "hi": {
@@ -3333,18 +3332,18 @@ window.LEARNING_DATA = {
                 "practical": "#include <iostream>\n#include <string>\n\n// Chapter 4: Control Flow: If-Else & Switch Statements\nint main() {\n    std::cout << \"=== Chapter 4: Control Flow: If-Else & Switch Statements ===\" << std::endl;\n    std::cout << \"Modern C++ Execution verified.\" << std::endl;\n    return 0;\n}",
                 "compilerCode": "#include <iostream>\n\nint main() {\n    std::cout << \"C++ - Chapter 4: Control Flow: If-Else & Switch Statements\" << std::endl;\n    std::cout << \"Compiled and Executed with code 0.\" << std::endl;\n    return 0;\n}",
                 "expectedOutput": "C++ - Chapter 4: Control Flow: If-Else & Switch Statements\nCompiled and Executed with code 0.",
-                "videoStart": 1080,
+                "videoStart": 2500,
                 "videos": {
                     "en": {
                         "id": "vLnPwxZdW4Y",
-                        "start": 1080
+                        "start": 2500
                     },
                     "te": {
-                        "id": "B31LgI4Y4DQ",
+                        "id": "rPaOM4D-18A",
                         "start": 0
                     },
                     "ta": {
-                        "id": "m67-bOpOoPU",
+                        "id": "VnaKu8_H3jU",
                         "start": 0
                     },
                     "hi": {
@@ -3419,18 +3418,18 @@ window.LEARNING_DATA = {
                 "practical": "#include <iostream>\n#include <string>\n\n// Chapter 5: Loops: for, while, do-while & range-for\nint main() {\n    std::cout << \"=== Chapter 5: Loops: for, while, do-while & range-for ===\" << std::endl;\n    std::cout << \"Modern C++ Execution verified.\" << std::endl;\n    return 0;\n}",
                 "compilerCode": "#include <iostream>\n\nint main() {\n    std::cout << \"C++ - Chapter 5: Loops: for, while, do-while & range-for\" << std::endl;\n    std::cout << \"Compiled and Executed with code 0.\" << std::endl;\n    return 0;\n}",
                 "expectedOutput": "C++ - Chapter 5: Loops: for, while, do-while & range-for\nCompiled and Executed with code 0.",
-                "videoStart": 1440,
+                "videoStart": 3800,
                 "videos": {
                     "en": {
                         "id": "vLnPwxZdW4Y",
-                        "start": 1440
+                        "start": 3800
                     },
                     "te": {
-                        "id": "B31LgI4Y4DQ",
+                        "id": "rPaOM4D-18A",
                         "start": 0
                     },
                     "ta": {
-                        "id": "m67-bOpOoPU",
+                        "id": "VnaKu8_H3jU",
                         "start": 0
                     },
                     "hi": {
@@ -3505,18 +3504,18 @@ window.LEARNING_DATA = {
                 "practical": "#include <iostream>\n#include <string>\n\n// Chapter 6: Functions, Default Arguments & Inline Functions\nint main() {\n    std::cout << \"=== Chapter 6: Functions, Default Arguments & Inline Functions ===\" << std::endl;\n    std::cout << \"Modern C++ Execution verified.\" << std::endl;\n    return 0;\n}",
                 "compilerCode": "#include <iostream>\n\nint main() {\n    std::cout << \"C++ - Chapter 6: Functions, Default Arguments & Inline Functions\" << std::endl;\n    std::cout << \"Compiled and Executed with code 0.\" << std::endl;\n    return 0;\n}",
                 "expectedOutput": "C++ - Chapter 6: Functions, Default Arguments & Inline Functions\nCompiled and Executed with code 0.",
-                "videoStart": 1800,
+                "videoStart": 5100,
                 "videos": {
                     "en": {
                         "id": "vLnPwxZdW4Y",
-                        "start": 1800
+                        "start": 5100
                     },
                     "te": {
-                        "id": "B31LgI4Y4DQ",
+                        "id": "rPaOM4D-18A",
                         "start": 0
                     },
                     "ta": {
-                        "id": "m67-bOpOoPU",
+                        "id": "VnaKu8_H3jU",
                         "start": 0
                     },
                     "hi": {
@@ -3591,18 +3590,18 @@ window.LEARNING_DATA = {
                 "practical": "#include <iostream>\n#include <string>\n\n// Chapter 7: Function Overloading & Ambiguity Resolution\nint main() {\n    std::cout << \"=== Chapter 7: Function Overloading & Ambiguity Resolution ===\" << std::endl;\n    std::cout << \"Modern C++ Execution verified.\" << std::endl;\n    return 0;\n}",
                 "compilerCode": "#include <iostream>\n\nint main() {\n    std::cout << \"C++ - Chapter 7: Function Overloading & Ambiguity Resolution\" << std::endl;\n    std::cout << \"Compiled and Executed with code 0.\" << std::endl;\n    return 0;\n}",
                 "expectedOutput": "C++ - Chapter 7: Function Overloading & Ambiguity Resolution\nCompiled and Executed with code 0.",
-                "videoStart": 2160,
+                "videoStart": 6600,
                 "videos": {
                     "en": {
                         "id": "vLnPwxZdW4Y",
-                        "start": 2160
+                        "start": 6600
                     },
                     "te": {
-                        "id": "B31LgI4Y4DQ",
+                        "id": "rPaOM4D-18A",
                         "start": 0
                     },
                     "ta": {
-                        "id": "m67-bOpOoPU",
+                        "id": "VnaKu8_H3jU",
                         "start": 0
                     },
                     "hi": {
@@ -3677,18 +3676,18 @@ window.LEARNING_DATA = {
                 "practical": "#include <iostream>\n#include <string>\n\n// Chapter 8: References vs Pointers in C++\nint main() {\n    std::cout << \"=== Chapter 8: References vs Pointers in C++ ===\" << std::endl;\n    std::cout << \"Modern C++ Execution verified.\" << std::endl;\n    return 0;\n}",
                 "compilerCode": "#include <iostream>\n\nint main() {\n    std::cout << \"C++ - Chapter 8: References vs Pointers in C++\" << std::endl;\n    std::cout << \"Compiled and Executed with code 0.\" << std::endl;\n    return 0;\n}",
                 "expectedOutput": "C++ - Chapter 8: References vs Pointers in C++\nCompiled and Executed with code 0.",
-                "videoStart": 2520,
+                "videoStart": 8200,
                 "videos": {
                     "en": {
                         "id": "vLnPwxZdW4Y",
-                        "start": 2520
+                        "start": 8200
                     },
                     "te": {
-                        "id": "B31LgI4Y4DQ",
+                        "id": "rPaOM4D-18A",
                         "start": 0
                     },
                     "ta": {
-                        "id": "m67-bOpOoPU",
+                        "id": "VnaKu8_H3jU",
                         "start": 0
                     },
                     "hi": {
@@ -3763,18 +3762,18 @@ window.LEARNING_DATA = {
                 "practical": "#include <iostream>\n#include <string>\n\n// Chapter 9: Namespaces & Scope Resolution Operator\nint main() {\n    std::cout << \"=== Chapter 9: Namespaces & Scope Resolution Operator ===\" << std::endl;\n    std::cout << \"Modern C++ Execution verified.\" << std::endl;\n    return 0;\n}",
                 "compilerCode": "#include <iostream>\n\nint main() {\n    std::cout << \"C++ - Chapter 9: Namespaces & Scope Resolution Operator\" << std::endl;\n    std::cout << \"Compiled and Executed with code 0.\" << std::endl;\n    return 0;\n}",
                 "expectedOutput": "C++ - Chapter 9: Namespaces & Scope Resolution Operator\nCompiled and Executed with code 0.",
-                "videoStart": 2880,
+                "videoStart": 10000,
                 "videos": {
                     "en": {
                         "id": "vLnPwxZdW4Y",
-                        "start": 2880
+                        "start": 10000
                     },
                     "te": {
-                        "id": "B31LgI4Y4DQ",
+                        "id": "rPaOM4D-18A",
                         "start": 0
                     },
                     "ta": {
-                        "id": "m67-bOpOoPU",
+                        "id": "VnaKu8_H3jU",
                         "start": 0
                     },
                     "hi": {
@@ -3849,18 +3848,18 @@ window.LEARNING_DATA = {
                 "practical": "#include <iostream>\n#include <string>\n\n// Chapter 10: Dynamic Memory Allocation: new and delete\nint main() {\n    std::cout << \"=== Chapter 10: Dynamic Memory Allocation: new and delete ===\" << std::endl;\n    std::cout << \"Modern C++ Execution verified.\" << std::endl;\n    return 0;\n}",
                 "compilerCode": "#include <iostream>\n\nint main() {\n    std::cout << \"C++ - Chapter 10: Dynamic Memory Allocation: new and delete\" << std::endl;\n    std::cout << \"Compiled and Executed with code 0.\" << std::endl;\n    return 0;\n}",
                 "expectedOutput": "C++ - Chapter 10: Dynamic Memory Allocation: new and delete\nCompiled and Executed with code 0.",
-                "videoStart": 3240,
+                "videoStart": 12000,
                 "videos": {
                     "en": {
                         "id": "vLnPwxZdW4Y",
-                        "start": 3240
+                        "start": 12000
                     },
                     "te": {
-                        "id": "B31LgI4Y4DQ",
+                        "id": "rPaOM4D-18A",
                         "start": 0
                     },
                     "ta": {
-                        "id": "m67-bOpOoPU",
+                        "id": "VnaKu8_H3jU",
                         "start": 0
                     },
                     "hi": {
@@ -3935,18 +3934,18 @@ window.LEARNING_DATA = {
                 "practical": "#include <iostream>\n#include <string>\n\n// Chapter 11: Introduction to OOP & Encapsulation\nint main() {\n    std::cout << \"=== Chapter 11: Introduction to OOP & Encapsulation ===\" << std::endl;\n    std::cout << \"Modern C++ Execution verified.\" << std::endl;\n    return 0;\n}",
                 "compilerCode": "#include <iostream>\n\nint main() {\n    std::cout << \"C++ - Chapter 11: Introduction to OOP & Encapsulation\" << std::endl;\n    std::cout << \"Compiled and Executed with code 0.\" << std::endl;\n    return 0;\n}",
                 "expectedOutput": "C++ - Chapter 11: Introduction to OOP & Encapsulation\nCompiled and Executed with code 0.",
-                "videoStart": 3600,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "vLnPwxZdW4Y",
-                        "start": 3600
+                        "start": 0
                     },
                     "te": {
-                        "id": "B31LgI4Y4DQ",
+                        "id": "rPaOM4D-18A",
                         "start": 0
                     },
                     "ta": {
-                        "id": "m67-bOpOoPU",
+                        "id": "VnaKu8_H3jU",
                         "start": 0
                     },
                     "hi": {
@@ -4021,18 +4020,18 @@ window.LEARNING_DATA = {
                 "practical": "#include <iostream>\n#include <string>\n\n// Chapter 12: Constructors & Member Initializer Lists\nint main() {\n    std::cout << \"=== Chapter 12: Constructors & Member Initializer Lists ===\" << std::endl;\n    std::cout << \"Modern C++ Execution verified.\" << std::endl;\n    return 0;\n}",
                 "compilerCode": "#include <iostream>\n\nint main() {\n    std::cout << \"C++ - Chapter 12: Constructors & Member Initializer Lists\" << std::endl;\n    std::cout << \"Compiled and Executed with code 0.\" << std::endl;\n    return 0;\n}",
                 "expectedOutput": "C++ - Chapter 12: Constructors & Member Initializer Lists\nCompiled and Executed with code 0.",
-                "videoStart": 3960,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "vLnPwxZdW4Y",
-                        "start": 3960
+                        "start": 0
                     },
                     "te": {
-                        "id": "B31LgI4Y4DQ",
+                        "id": "rPaOM4D-18A",
                         "start": 0
                     },
                     "ta": {
-                        "id": "m67-bOpOoPU",
+                        "id": "VnaKu8_H3jU",
                         "start": 0
                     },
                     "hi": {
@@ -4107,18 +4106,18 @@ window.LEARNING_DATA = {
                 "practical": "#include <iostream>\n#include <string>\n\n// Chapter 13: Destructors & Resource Acquisition (RAII)\nint main() {\n    std::cout << \"=== Chapter 13: Destructors & Resource Acquisition (RAII) ===\" << std::endl;\n    std::cout << \"Modern C++ Execution verified.\" << std::endl;\n    return 0;\n}",
                 "compilerCode": "#include <iostream>\n\nint main() {\n    std::cout << \"C++ - Chapter 13: Destructors & Resource Acquisition (RAII)\" << std::endl;\n    std::cout << \"Compiled and Executed with code 0.\" << std::endl;\n    return 0;\n}",
                 "expectedOutput": "C++ - Chapter 13: Destructors & Resource Acquisition (RAII)\nCompiled and Executed with code 0.",
-                "videoStart": 4320,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "vLnPwxZdW4Y",
-                        "start": 4320
+                        "start": 0
                     },
                     "te": {
-                        "id": "B31LgI4Y4DQ",
+                        "id": "rPaOM4D-18A",
                         "start": 0
                     },
                     "ta": {
-                        "id": "m67-bOpOoPU",
+                        "id": "VnaKu8_H3jU",
                         "start": 0
                     },
                     "hi": {
@@ -4193,18 +4192,18 @@ window.LEARNING_DATA = {
                 "practical": "#include <iostream>\n#include <string>\n\n// Chapter 14: Copy Constructors: Deep vs Shallow Copy\nint main() {\n    std::cout << \"=== Chapter 14: Copy Constructors: Deep vs Shallow Copy ===\" << std::endl;\n    std::cout << \"Modern C++ Execution verified.\" << std::endl;\n    return 0;\n}",
                 "compilerCode": "#include <iostream>\n\nint main() {\n    std::cout << \"C++ - Chapter 14: Copy Constructors: Deep vs Shallow Copy\" << std::endl;\n    std::cout << \"Compiled and Executed with code 0.\" << std::endl;\n    return 0;\n}",
                 "expectedOutput": "C++ - Chapter 14: Copy Constructors: Deep vs Shallow Copy\nCompiled and Executed with code 0.",
-                "videoStart": 4680,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "vLnPwxZdW4Y",
-                        "start": 4680
+                        "start": 0
                     },
                     "te": {
-                        "id": "B31LgI4Y4DQ",
+                        "id": "rPaOM4D-18A",
                         "start": 0
                     },
                     "ta": {
-                        "id": "m67-bOpOoPU",
+                        "id": "VnaKu8_H3jU",
                         "start": 0
                     },
                     "hi": {
@@ -4279,18 +4278,18 @@ window.LEARNING_DATA = {
                 "practical": "#include <iostream>\n#include <string>\n\n// Chapter 15: Move Semantics & Rvalue References\nint main() {\n    std::cout << \"=== Chapter 15: Move Semantics & Rvalue References ===\" << std::endl;\n    std::cout << \"Modern C++ Execution verified.\" << std::endl;\n    return 0;\n}",
                 "compilerCode": "#include <iostream>\n\nint main() {\n    std::cout << \"C++ - Chapter 15: Move Semantics & Rvalue References\" << std::endl;\n    std::cout << \"Compiled and Executed with code 0.\" << std::endl;\n    return 0;\n}",
                 "expectedOutput": "C++ - Chapter 15: Move Semantics & Rvalue References\nCompiled and Executed with code 0.",
-                "videoStart": 5040,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "vLnPwxZdW4Y",
-                        "start": 5040
+                        "start": 0
                     },
                     "te": {
-                        "id": "B31LgI4Y4DQ",
+                        "id": "rPaOM4D-18A",
                         "start": 0
                     },
                     "ta": {
-                        "id": "m67-bOpOoPU",
+                        "id": "VnaKu8_H3jU",
                         "start": 0
                     },
                     "hi": {
@@ -4365,18 +4364,18 @@ window.LEARNING_DATA = {
                 "practical": "#include <iostream>\n#include <string>\n\n// Chapter 16: The this Pointer & Const Member Functions\nint main() {\n    std::cout << \"=== Chapter 16: The this Pointer & Const Member Functions ===\" << std::endl;\n    std::cout << \"Modern C++ Execution verified.\" << std::endl;\n    return 0;\n}",
                 "compilerCode": "#include <iostream>\n\nint main() {\n    std::cout << \"C++ - Chapter 16: The this Pointer & Const Member Functions\" << std::endl;\n    std::cout << \"Compiled and Executed with code 0.\" << std::endl;\n    return 0;\n}",
                 "expectedOutput": "C++ - Chapter 16: The this Pointer & Const Member Functions\nCompiled and Executed with code 0.",
-                "videoStart": 5400,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "vLnPwxZdW4Y",
-                        "start": 5400
+                        "start": 0
                     },
                     "te": {
-                        "id": "B31LgI4Y4DQ",
+                        "id": "rPaOM4D-18A",
                         "start": 0
                     },
                     "ta": {
-                        "id": "m67-bOpOoPU",
+                        "id": "VnaKu8_H3jU",
                         "start": 0
                     },
                     "hi": {
@@ -4451,18 +4450,18 @@ window.LEARNING_DATA = {
                 "practical": "#include <iostream>\n#include <string>\n\n// Chapter 17: Static Members & Static Member Functions\nint main() {\n    std::cout << \"=== Chapter 17: Static Members & Static Member Functions ===\" << std::endl;\n    std::cout << \"Modern C++ Execution verified.\" << std::endl;\n    return 0;\n}",
                 "compilerCode": "#include <iostream>\n\nint main() {\n    std::cout << \"C++ - Chapter 17: Static Members & Static Member Functions\" << std::endl;\n    std::cout << \"Compiled and Executed with code 0.\" << std::endl;\n    return 0;\n}",
                 "expectedOutput": "C++ - Chapter 17: Static Members & Static Member Functions\nCompiled and Executed with code 0.",
-                "videoStart": 5760,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "vLnPwxZdW4Y",
-                        "start": 5760
+                        "start": 0
                     },
                     "te": {
-                        "id": "B31LgI4Y4DQ",
+                        "id": "rPaOM4D-18A",
                         "start": 0
                     },
                     "ta": {
-                        "id": "m67-bOpOoPU",
+                        "id": "VnaKu8_H3jU",
                         "start": 0
                     },
                     "hi": {
@@ -4537,18 +4536,18 @@ window.LEARNING_DATA = {
                 "practical": "#include <iostream>\n#include <string>\n\n// Chapter 18: Friend Functions & Friend Classes\nint main() {\n    std::cout << \"=== Chapter 18: Friend Functions & Friend Classes ===\" << std::endl;\n    std::cout << \"Modern C++ Execution verified.\" << std::endl;\n    return 0;\n}",
                 "compilerCode": "#include <iostream>\n\nint main() {\n    std::cout << \"C++ - Chapter 18: Friend Functions & Friend Classes\" << std::endl;\n    std::cout << \"Compiled and Executed with code 0.\" << std::endl;\n    return 0;\n}",
                 "expectedOutput": "C++ - Chapter 18: Friend Functions & Friend Classes\nCompiled and Executed with code 0.",
-                "videoStart": 6120,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "vLnPwxZdW4Y",
-                        "start": 6120
+                        "start": 0
                     },
                     "te": {
-                        "id": "B31LgI4Y4DQ",
+                        "id": "rPaOM4D-18A",
                         "start": 0
                     },
                     "ta": {
-                        "id": "m67-bOpOoPU",
+                        "id": "VnaKu8_H3jU",
                         "start": 0
                     },
                     "hi": {
@@ -4623,18 +4622,18 @@ window.LEARNING_DATA = {
                 "practical": "#include <iostream>\n#include <string>\n\n// Chapter 19: Operator Overloading (Binary & Unary)\nint main() {\n    std::cout << \"=== Chapter 19: Operator Overloading (Binary & Unary) ===\" << std::endl;\n    std::cout << \"Modern C++ Execution verified.\" << std::endl;\n    return 0;\n}",
                 "compilerCode": "#include <iostream>\n\nint main() {\n    std::cout << \"C++ - Chapter 19: Operator Overloading (Binary & Unary)\" << std::endl;\n    std::cout << \"Compiled and Executed with code 0.\" << std::endl;\n    return 0;\n}",
                 "expectedOutput": "C++ - Chapter 19: Operator Overloading (Binary & Unary)\nCompiled and Executed with code 0.",
-                "videoStart": 6480,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "vLnPwxZdW4Y",
-                        "start": 6480
+                        "start": 0
                     },
                     "te": {
-                        "id": "B31LgI4Y4DQ",
+                        "id": "rPaOM4D-18A",
                         "start": 0
                     },
                     "ta": {
-                        "id": "m67-bOpOoPU",
+                        "id": "VnaKu8_H3jU",
                         "start": 0
                     },
                     "hi": {
@@ -4709,18 +4708,18 @@ window.LEARNING_DATA = {
                 "practical": "#include <iostream>\n#include <string>\n\n// Chapter 20: Inheritance: Single, Multilevel & Hierarchical\nint main() {\n    std::cout << \"=== Chapter 20: Inheritance: Single, Multilevel & Hierarchical ===\" << std::endl;\n    std::cout << \"Modern C++ Execution verified.\" << std::endl;\n    return 0;\n}",
                 "compilerCode": "#include <iostream>\n\nint main() {\n    std::cout << \"C++ - Chapter 20: Inheritance: Single, Multilevel & Hierarchical\" << std::endl;\n    std::cout << \"Compiled and Executed with code 0.\" << std::endl;\n    return 0;\n}",
                 "expectedOutput": "C++ - Chapter 20: Inheritance: Single, Multilevel & Hierarchical\nCompiled and Executed with code 0.",
-                "videoStart": 6840,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "vLnPwxZdW4Y",
-                        "start": 6840
+                        "start": 0
                     },
                     "te": {
-                        "id": "B31LgI4Y4DQ",
+                        "id": "rPaOM4D-18A",
                         "start": 0
                     },
                     "ta": {
-                        "id": "m67-bOpOoPU",
+                        "id": "VnaKu8_H3jU",
                         "start": 0
                     },
                     "hi": {
@@ -4795,18 +4794,18 @@ window.LEARNING_DATA = {
                 "practical": "#include <iostream>\n#include <string>\n\n// Chapter 21: Multiple & Virtual Inheritance (Diamond Problem)\nint main() {\n    std::cout << \"=== Chapter 21: Multiple & Virtual Inheritance (Diamond Problem) ===\" << std::endl;\n    std::cout << \"Modern C++ Execution verified.\" << std::endl;\n    return 0;\n}",
                 "compilerCode": "#include <iostream>\n\nint main() {\n    std::cout << \"C++ - Chapter 21: Multiple & Virtual Inheritance (Diamond Problem)\" << std::endl;\n    std::cout << \"Compiled and Executed with code 0.\" << std::endl;\n    return 0;\n}",
                 "expectedOutput": "C++ - Chapter 21: Multiple & Virtual Inheritance (Diamond Problem)\nCompiled and Executed with code 0.",
-                "videoStart": 7200,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "vLnPwxZdW4Y",
-                        "start": 7200
+                        "start": 0
                     },
                     "te": {
-                        "id": "B31LgI4Y4DQ",
+                        "id": "rPaOM4D-18A",
                         "start": 0
                     },
                     "ta": {
-                        "id": "m67-bOpOoPU",
+                        "id": "VnaKu8_H3jU",
                         "start": 0
                     },
                     "hi": {
@@ -4881,18 +4880,18 @@ window.LEARNING_DATA = {
                 "practical": "#include <iostream>\n#include <string>\n\n// Chapter 22: Polymorphism & Virtual Functions\nint main() {\n    std::cout << \"=== Chapter 22: Polymorphism & Virtual Functions ===\" << std::endl;\n    std::cout << \"Modern C++ Execution verified.\" << std::endl;\n    return 0;\n}",
                 "compilerCode": "#include <iostream>\n\nint main() {\n    std::cout << \"C++ - Chapter 22: Polymorphism & Virtual Functions\" << std::endl;\n    std::cout << \"Compiled and Executed with code 0.\" << std::endl;\n    return 0;\n}",
                 "expectedOutput": "C++ - Chapter 22: Polymorphism & Virtual Functions\nCompiled and Executed with code 0.",
-                "videoStart": 7560,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "vLnPwxZdW4Y",
-                        "start": 7560
+                        "start": 0
                     },
                     "te": {
-                        "id": "B31LgI4Y4DQ",
+                        "id": "rPaOM4D-18A",
                         "start": 0
                     },
                     "ta": {
-                        "id": "m67-bOpOoPU",
+                        "id": "VnaKu8_H3jU",
                         "start": 0
                     },
                     "hi": {
@@ -4967,18 +4966,18 @@ window.LEARNING_DATA = {
                 "practical": "#include <iostream>\n#include <string>\n\n// Chapter 23: Pure Virtual Functions & Abstract Classes\nint main() {\n    std::cout << \"=== Chapter 23: Pure Virtual Functions & Abstract Classes ===\" << std::endl;\n    std::cout << \"Modern C++ Execution verified.\" << std::endl;\n    return 0;\n}",
                 "compilerCode": "#include <iostream>\n\nint main() {\n    std::cout << \"C++ - Chapter 23: Pure Virtual Functions & Abstract Classes\" << std::endl;\n    std::cout << \"Compiled and Executed with code 0.\" << std::endl;\n    return 0;\n}",
                 "expectedOutput": "C++ - Chapter 23: Pure Virtual Functions & Abstract Classes\nCompiled and Executed with code 0.",
-                "videoStart": 7920,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "vLnPwxZdW4Y",
-                        "start": 7920
+                        "start": 0
                     },
                     "te": {
-                        "id": "B31LgI4Y4DQ",
+                        "id": "rPaOM4D-18A",
                         "start": 0
                     },
                     "ta": {
-                        "id": "m67-bOpOoPU",
+                        "id": "VnaKu8_H3jU",
                         "start": 0
                     },
                     "hi": {
@@ -5053,18 +5052,18 @@ window.LEARNING_DATA = {
                 "practical": "#include <iostream>\n#include <string>\n\n// Chapter 24: Virtual Destructors & RTTI (dynamic_cast)\nint main() {\n    std::cout << \"=== Chapter 24: Virtual Destructors & RTTI (dynamic_cast) ===\" << std::endl;\n    std::cout << \"Modern C++ Execution verified.\" << std::endl;\n    return 0;\n}",
                 "compilerCode": "#include <iostream>\n\nint main() {\n    std::cout << \"C++ - Chapter 24: Virtual Destructors & RTTI (dynamic_cast)\" << std::endl;\n    std::cout << \"Compiled and Executed with code 0.\" << std::endl;\n    return 0;\n}",
                 "expectedOutput": "C++ - Chapter 24: Virtual Destructors & RTTI (dynamic_cast)\nCompiled and Executed with code 0.",
-                "videoStart": 8280,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "vLnPwxZdW4Y",
-                        "start": 8280
+                        "start": 0
                     },
                     "te": {
-                        "id": "B31LgI4Y4DQ",
+                        "id": "rPaOM4D-18A",
                         "start": 0
                     },
                     "ta": {
-                        "id": "m67-bOpOoPU",
+                        "id": "VnaKu8_H3jU",
                         "start": 0
                     },
                     "hi": {
@@ -5139,18 +5138,18 @@ window.LEARNING_DATA = {
                 "practical": "#include <iostream>\n#include <string>\n\n// Chapter 25: Templates: Function Templates\nint main() {\n    std::cout << \"=== Chapter 25: Templates: Function Templates ===\" << std::endl;\n    std::cout << \"Modern C++ Execution verified.\" << std::endl;\n    return 0;\n}",
                 "compilerCode": "#include <iostream>\n\nint main() {\n    std::cout << \"C++ - Chapter 25: Templates: Function Templates\" << std::endl;\n    std::cout << \"Compiled and Executed with code 0.\" << std::endl;\n    return 0;\n}",
                 "expectedOutput": "C++ - Chapter 25: Templates: Function Templates\nCompiled and Executed with code 0.",
-                "videoStart": 8640,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "vLnPwxZdW4Y",
-                        "start": 8640
+                        "start": 0
                     },
                     "te": {
-                        "id": "B31LgI4Y4DQ",
+                        "id": "rPaOM4D-18A",
                         "start": 0
                     },
                     "ta": {
-                        "id": "m67-bOpOoPU",
+                        "id": "VnaKu8_H3jU",
                         "start": 0
                     },
                     "hi": {
@@ -5225,18 +5224,18 @@ window.LEARNING_DATA = {
                 "practical": "#include <iostream>\n#include <string>\n\n// Chapter 26: Class Templates & Template Specialization\nint main() {\n    std::cout << \"=== Chapter 26: Class Templates & Template Specialization ===\" << std::endl;\n    std::cout << \"Modern C++ Execution verified.\" << std::endl;\n    return 0;\n}",
                 "compilerCode": "#include <iostream>\n\nint main() {\n    std::cout << \"C++ - Chapter 26: Class Templates & Template Specialization\" << std::endl;\n    std::cout << \"Compiled and Executed with code 0.\" << std::endl;\n    return 0;\n}",
                 "expectedOutput": "C++ - Chapter 26: Class Templates & Template Specialization\nCompiled and Executed with code 0.",
-                "videoStart": 9000,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "vLnPwxZdW4Y",
-                        "start": 9000
+                        "start": 0
                     },
                     "te": {
-                        "id": "B31LgI4Y4DQ",
+                        "id": "rPaOM4D-18A",
                         "start": 0
                     },
                     "ta": {
-                        "id": "m67-bOpOoPU",
+                        "id": "VnaKu8_H3jU",
                         "start": 0
                     },
                     "hi": {
@@ -5311,18 +5310,18 @@ window.LEARNING_DATA = {
                 "practical": "#include <iostream>\n#include <string>\n\n// Chapter 27: STL Containers: Vectors & Deques\nint main() {\n    std::cout << \"=== Chapter 27: STL Containers: Vectors & Deques ===\" << std::endl;\n    std::cout << \"Modern C++ Execution verified.\" << std::endl;\n    return 0;\n}",
                 "compilerCode": "#include <iostream>\n\nint main() {\n    std::cout << \"C++ - Chapter 27: STL Containers: Vectors & Deques\" << std::endl;\n    std::cout << \"Compiled and Executed with code 0.\" << std::endl;\n    return 0;\n}",
                 "expectedOutput": "C++ - Chapter 27: STL Containers: Vectors & Deques\nCompiled and Executed with code 0.",
-                "videoStart": 9360,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "vLnPwxZdW4Y",
-                        "start": 9360
+                        "start": 0
                     },
                     "te": {
-                        "id": "B31LgI4Y4DQ",
+                        "id": "rPaOM4D-18A",
                         "start": 0
                     },
                     "ta": {
-                        "id": "m67-bOpOoPU",
+                        "id": "VnaKu8_H3jU",
                         "start": 0
                     },
                     "hi": {
@@ -5397,18 +5396,18 @@ window.LEARNING_DATA = {
                 "practical": "#include <iostream>\n#include <string>\n\n// Chapter 28: STL Lists, Forward Lists & Iterators\nint main() {\n    std::cout << \"=== Chapter 28: STL Lists, Forward Lists & Iterators ===\" << std::endl;\n    std::cout << \"Modern C++ Execution verified.\" << std::endl;\n    return 0;\n}",
                 "compilerCode": "#include <iostream>\n\nint main() {\n    std::cout << \"C++ - Chapter 28: STL Lists, Forward Lists & Iterators\" << std::endl;\n    std::cout << \"Compiled and Executed with code 0.\" << std::endl;\n    return 0;\n}",
                 "expectedOutput": "C++ - Chapter 28: STL Lists, Forward Lists & Iterators\nCompiled and Executed with code 0.",
-                "videoStart": 9720,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "vLnPwxZdW4Y",
-                        "start": 9720
+                        "start": 0
                     },
                     "te": {
-                        "id": "B31LgI4Y4DQ",
+                        "id": "rPaOM4D-18A",
                         "start": 0
                     },
                     "ta": {
-                        "id": "m67-bOpOoPU",
+                        "id": "VnaKu8_H3jU",
                         "start": 0
                     },
                     "hi": {
@@ -5483,18 +5482,18 @@ window.LEARNING_DATA = {
                 "practical": "#include <iostream>\n#include <string>\n\n// Chapter 29: STL Associative Containers: Sets & Maps\nint main() {\n    std::cout << \"=== Chapter 29: STL Associative Containers: Sets & Maps ===\" << std::endl;\n    std::cout << \"Modern C++ Execution verified.\" << std::endl;\n    return 0;\n}",
                 "compilerCode": "#include <iostream>\n\nint main() {\n    std::cout << \"C++ - Chapter 29: STL Associative Containers: Sets & Maps\" << std::endl;\n    std::cout << \"Compiled and Executed with code 0.\" << std::endl;\n    return 0;\n}",
                 "expectedOutput": "C++ - Chapter 29: STL Associative Containers: Sets & Maps\nCompiled and Executed with code 0.",
-                "videoStart": 10080,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "vLnPwxZdW4Y",
-                        "start": 10080
+                        "start": 0
                     },
                     "te": {
-                        "id": "B31LgI4Y4DQ",
+                        "id": "rPaOM4D-18A",
                         "start": 0
                     },
                     "ta": {
-                        "id": "m67-bOpOoPU",
+                        "id": "VnaKu8_H3jU",
                         "start": 0
                     },
                     "hi": {
@@ -5569,18 +5568,18 @@ window.LEARNING_DATA = {
                 "practical": "#include <iostream>\n#include <string>\n\n// Chapter 30: STL Unordered Containers & Hash Tables\nint main() {\n    std::cout << \"=== Chapter 30: STL Unordered Containers & Hash Tables ===\" << std::endl;\n    std::cout << \"Modern C++ Execution verified.\" << std::endl;\n    return 0;\n}",
                 "compilerCode": "#include <iostream>\n\nint main() {\n    std::cout << \"C++ - Chapter 30: STL Unordered Containers & Hash Tables\" << std::endl;\n    std::cout << \"Compiled and Executed with code 0.\" << std::endl;\n    return 0;\n}",
                 "expectedOutput": "C++ - Chapter 30: STL Unordered Containers & Hash Tables\nCompiled and Executed with code 0.",
-                "videoStart": 10440,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "vLnPwxZdW4Y",
-                        "start": 10440
+                        "start": 0
                     },
                     "te": {
-                        "id": "B31LgI4Y4DQ",
+                        "id": "rPaOM4D-18A",
                         "start": 0
                     },
                     "ta": {
-                        "id": "m67-bOpOoPU",
+                        "id": "VnaKu8_H3jU",
                         "start": 0
                     },
                     "hi": {
@@ -5655,18 +5654,18 @@ window.LEARNING_DATA = {
                 "practical": "#include <iostream>\n#include <string>\n\n// Chapter 31: STL Algorithms: Sorting, Searching, Transforms\nint main() {\n    std::cout << \"=== Chapter 31: STL Algorithms: Sorting, Searching, Transforms ===\" << std::endl;\n    std::cout << \"Modern C++ Execution verified.\" << std::endl;\n    return 0;\n}",
                 "compilerCode": "#include <iostream>\n\nint main() {\n    std::cout << \"C++ - Chapter 31: STL Algorithms: Sorting, Searching, Transforms\" << std::endl;\n    std::cout << \"Compiled and Executed with code 0.\" << std::endl;\n    return 0;\n}",
                 "expectedOutput": "C++ - Chapter 31: STL Algorithms: Sorting, Searching, Transforms\nCompiled and Executed with code 0.",
-                "videoStart": 10800,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "vLnPwxZdW4Y",
-                        "start": 10800
+                        "start": 0
                     },
                     "te": {
-                        "id": "B31LgI4Y4DQ",
+                        "id": "rPaOM4D-18A",
                         "start": 0
                     },
                     "ta": {
-                        "id": "m67-bOpOoPU",
+                        "id": "VnaKu8_H3jU",
                         "start": 0
                     },
                     "hi": {
@@ -5741,18 +5740,18 @@ window.LEARNING_DATA = {
                 "practical": "#include <iostream>\n#include <string>\n\n// Chapter 32: Lambda Expressions & std::function\nint main() {\n    std::cout << \"=== Chapter 32: Lambda Expressions & std::function ===\" << std::endl;\n    std::cout << \"Modern C++ Execution verified.\" << std::endl;\n    return 0;\n}",
                 "compilerCode": "#include <iostream>\n\nint main() {\n    std::cout << \"C++ - Chapter 32: Lambda Expressions & std::function\" << std::endl;\n    std::cout << \"Compiled and Executed with code 0.\" << std::endl;\n    return 0;\n}",
                 "expectedOutput": "C++ - Chapter 32: Lambda Expressions & std::function\nCompiled and Executed with code 0.",
-                "videoStart": 11160,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "vLnPwxZdW4Y",
-                        "start": 11160
+                        "start": 0
                     },
                     "te": {
-                        "id": "B31LgI4Y4DQ",
+                        "id": "rPaOM4D-18A",
                         "start": 0
                     },
                     "ta": {
-                        "id": "m67-bOpOoPU",
+                        "id": "VnaKu8_H3jU",
                         "start": 0
                     },
                     "hi": {
@@ -5827,18 +5826,18 @@ window.LEARNING_DATA = {
                 "practical": "#include <iostream>\n#include <string>\n\n// Chapter 33: Smart Pointers: unique_ptr, shared_ptr, weak_ptr\nint main() {\n    std::cout << \"=== Chapter 33: Smart Pointers: unique_ptr, shared_ptr, weak_ptr ===\" << std::endl;\n    std::cout << \"Modern C++ Execution verified.\" << std::endl;\n    return 0;\n}",
                 "compilerCode": "#include <iostream>\n\nint main() {\n    std::cout << \"C++ - Chapter 33: Smart Pointers: unique_ptr, shared_ptr, weak_ptr\" << std::endl;\n    std::cout << \"Compiled and Executed with code 0.\" << std::endl;\n    return 0;\n}",
                 "expectedOutput": "C++ - Chapter 33: Smart Pointers: unique_ptr, shared_ptr, weak_ptr\nCompiled and Executed with code 0.",
-                "videoStart": 11520,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "vLnPwxZdW4Y",
-                        "start": 11520
+                        "start": 0
                     },
                     "te": {
-                        "id": "B31LgI4Y4DQ",
+                        "id": "rPaOM4D-18A",
                         "start": 0
                     },
                     "ta": {
-                        "id": "m67-bOpOoPU",
+                        "id": "VnaKu8_H3jU",
                         "start": 0
                     },
                     "hi": {
@@ -5913,18 +5912,18 @@ window.LEARNING_DATA = {
                 "practical": "#include <iostream>\n#include <string>\n\n// Chapter 34: Exception Handling (try, catch, throw)\nint main() {\n    std::cout << \"=== Chapter 34: Exception Handling (try, catch, throw) ===\" << std::endl;\n    std::cout << \"Modern C++ Execution verified.\" << std::endl;\n    return 0;\n}",
                 "compilerCode": "#include <iostream>\n\nint main() {\n    std::cout << \"C++ - Chapter 34: Exception Handling (try, catch, throw)\" << std::endl;\n    std::cout << \"Compiled and Executed with code 0.\" << std::endl;\n    return 0;\n}",
                 "expectedOutput": "C++ - Chapter 34: Exception Handling (try, catch, throw)\nCompiled and Executed with code 0.",
-                "videoStart": 11880,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "vLnPwxZdW4Y",
-                        "start": 11880
+                        "start": 0
                     },
                     "te": {
-                        "id": "B31LgI4Y4DQ",
+                        "id": "rPaOM4D-18A",
                         "start": 0
                     },
                     "ta": {
-                        "id": "m67-bOpOoPU",
+                        "id": "VnaKu8_H3jU",
                         "start": 0
                     },
                     "hi": {
@@ -5999,18 +5998,18 @@ window.LEARNING_DATA = {
                 "practical": "#include <iostream>\n#include <string>\n\n// Chapter 35: File Streams (fstream) & Advanced C++ Capstone\nint main() {\n    std::cout << \"=== Chapter 35: File Streams (fstream) & Advanced C++ Capstone ===\" << std::endl;\n    std::cout << \"Modern C++ Execution verified.\" << std::endl;\n    return 0;\n}",
                 "compilerCode": "#include <iostream>\n\nint main() {\n    std::cout << \"C++ - Chapter 35: File Streams (fstream) & Advanced C++ Capstone\" << std::endl;\n    std::cout << \"Compiled and Executed with code 0.\" << std::endl;\n    return 0;\n}",
                 "expectedOutput": "C++ - Chapter 35: File Streams (fstream) & Advanced C++ Capstone\nCompiled and Executed with code 0.",
-                "videoStart": 12240,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "vLnPwxZdW4Y",
-                        "start": 12240
+                        "start": 0
                     },
                     "te": {
-                        "id": "B31LgI4Y4DQ",
+                        "id": "rPaOM4D-18A",
                         "start": 0
                     },
                     "ta": {
-                        "id": "m67-bOpOoPU",
+                        "id": "VnaKu8_H3jU",
                         "start": 0
                     },
                     "hi": {
@@ -6090,7 +6089,7 @@ window.LEARNING_DATA = {
                 "title": "Python Tutorial for Beginners (English)"
             },
             "te": {
-                "id": "uOsCjqAg5gI",
+                "id": "fHKPQEVCX-s",
                 "title": "Python Full Course in Telugu (తెలుగు)"
             },
             "ta": {
@@ -6119,7 +6118,7 @@ window.LEARNING_DATA = {
                         "start": 0
                     },
                     "te": {
-                        "id": "uOsCjqAg5gI",
+                        "id": "fHKPQEVCX-s",
                         "start": 0
                     },
                     "ta": {
@@ -6198,14 +6197,14 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 2: Variables, Comments & Dynamic Typing\ndef demonstrate_topic():\n    print(\"=== Chapter 2: Variables, Comments & Dynamic Typing ===\")\n    print(\"Python execution verified.\")\n    return True\n\ndemonstrate_topic()",
                 "compilerCode": "# Chapter 2: Variables, Comments & Dynamic Typing\nprint(\"Python 3 - Chapter 2: Variables, Comments & Dynamic Typing\")\nprint(\"Status: Execution Successful in LearningPath Sandbox.\")",
                 "expectedOutput": "Python 3 - Chapter 2: Variables, Comments & Dynamic Typing\nStatus: Execution Successful in LearningPath Sandbox.",
-                "videoStart": 360,
+                "videoStart": 520,
                 "videos": {
                     "en": {
                         "id": "_uQrJ0TkZlc",
-                        "start": 360
+                        "start": 520
                     },
                     "te": {
-                        "id": "uOsCjqAg5gI",
+                        "id": "fHKPQEVCX-s",
                         "start": 0
                     },
                     "ta": {
@@ -6284,14 +6283,14 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 3: Numeric Data Types & Boolean Logic\ndef demonstrate_topic():\n    print(\"=== Chapter 3: Numeric Data Types & Boolean Logic ===\")\n    print(\"Python execution verified.\")\n    return True\n\ndemonstrate_topic()",
                 "compilerCode": "# Chapter 3: Numeric Data Types & Boolean Logic\nprint(\"Python 3 - Chapter 3: Numeric Data Types & Boolean Logic\")\nprint(\"Status: Execution Successful in LearningPath Sandbox.\")",
                 "expectedOutput": "Python 3 - Chapter 3: Numeric Data Types & Boolean Logic\nStatus: Execution Successful in LearningPath Sandbox.",
-                "videoStart": 720,
+                "videoStart": 1150,
                 "videos": {
                     "en": {
                         "id": "_uQrJ0TkZlc",
-                        "start": 720
+                        "start": 1150
                     },
                     "te": {
-                        "id": "uOsCjqAg5gI",
+                        "id": "fHKPQEVCX-s",
                         "start": 0
                     },
                     "ta": {
@@ -6370,14 +6369,14 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 4: Strings: Indexing, Slicing & Formatting\ndef demonstrate_topic():\n    print(\"=== Chapter 4: Strings: Indexing, Slicing & Formatting ===\")\n    print(\"Python execution verified.\")\n    return True\n\ndemonstrate_topic()",
                 "compilerCode": "# Chapter 4: Strings: Indexing, Slicing & Formatting\nprint(\"Python 3 - Chapter 4: Strings: Indexing, Slicing & Formatting\")\nprint(\"Status: Execution Successful in LearningPath Sandbox.\")",
                 "expectedOutput": "Python 3 - Chapter 4: Strings: Indexing, Slicing & Formatting\nStatus: Execution Successful in LearningPath Sandbox.",
-                "videoStart": 1080,
+                "videoStart": 1900,
                 "videos": {
                     "en": {
                         "id": "_uQrJ0TkZlc",
-                        "start": 1080
+                        "start": 1900
                     },
                     "te": {
-                        "id": "uOsCjqAg5gI",
+                        "id": "fHKPQEVCX-s",
                         "start": 0
                     },
                     "ta": {
@@ -6456,14 +6455,14 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 5: Arithmetic, Comparison & Logical Operators\ndef demonstrate_topic():\n    print(\"=== Chapter 5: Arithmetic, Comparison & Logical Operators ===\")\n    print(\"Python execution verified.\")\n    return True\n\ndemonstrate_topic()",
                 "compilerCode": "# Chapter 5: Arithmetic, Comparison & Logical Operators\nprint(\"Python 3 - Chapter 5: Arithmetic, Comparison & Logical Operators\")\nprint(\"Status: Execution Successful in LearningPath Sandbox.\")",
                 "expectedOutput": "Python 3 - Chapter 5: Arithmetic, Comparison & Logical Operators\nStatus: Execution Successful in LearningPath Sandbox.",
-                "videoStart": 1440,
+                "videoStart": 2750,
                 "videos": {
                     "en": {
                         "id": "_uQrJ0TkZlc",
-                        "start": 1440
+                        "start": 2750
                     },
                     "te": {
-                        "id": "uOsCjqAg5gI",
+                        "id": "fHKPQEVCX-s",
                         "start": 0
                     },
                     "ta": {
@@ -6542,14 +6541,14 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 6: Conditional Control: if, elif, else\ndef demonstrate_topic():\n    print(\"=== Chapter 6: Conditional Control: if, elif, else ===\")\n    print(\"Python execution verified.\")\n    return True\n\ndemonstrate_topic()",
                 "compilerCode": "# Chapter 6: Conditional Control: if, elif, else\nprint(\"Python 3 - Chapter 6: Conditional Control: if, elif, else\")\nprint(\"Status: Execution Successful in LearningPath Sandbox.\")",
                 "expectedOutput": "Python 3 - Chapter 6: Conditional Control: if, elif, else\nStatus: Execution Successful in LearningPath Sandbox.",
-                "videoStart": 1800,
+                "videoStart": 3700,
                 "videos": {
                     "en": {
                         "id": "_uQrJ0TkZlc",
-                        "start": 1800
+                        "start": 3700
                     },
                     "te": {
-                        "id": "uOsCjqAg5gI",
+                        "id": "fHKPQEVCX-s",
                         "start": 0
                     },
                     "ta": {
@@ -6628,14 +6627,14 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 7: Loops: while Loops & Loop Guards\ndef demonstrate_topic():\n    print(\"=== Chapter 7: Loops: while Loops & Loop Guards ===\")\n    print(\"Python execution verified.\")\n    return True\n\ndemonstrate_topic()",
                 "compilerCode": "# Chapter 7: Loops: while Loops & Loop Guards\nprint(\"Python 3 - Chapter 7: Loops: while Loops & Loop Guards\")\nprint(\"Status: Execution Successful in LearningPath Sandbox.\")",
                 "expectedOutput": "Python 3 - Chapter 7: Loops: while Loops & Loop Guards\nStatus: Execution Successful in LearningPath Sandbox.",
-                "videoStart": 2160,
+                "videoStart": 4900,
                 "videos": {
                     "en": {
                         "id": "_uQrJ0TkZlc",
-                        "start": 2160
+                        "start": 4900
                     },
                     "te": {
-                        "id": "uOsCjqAg5gI",
+                        "id": "fHKPQEVCX-s",
                         "start": 0
                     },
                     "ta": {
@@ -6714,14 +6713,14 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 8: Loops: for Loops & range() Function\ndef demonstrate_topic():\n    print(\"=== Chapter 8: Loops: for Loops & range() Function ===\")\n    print(\"Python execution verified.\")\n    return True\n\ndemonstrate_topic()",
                 "compilerCode": "# Chapter 8: Loops: for Loops & range() Function\nprint(\"Python 3 - Chapter 8: Loops: for Loops & range() Function\")\nprint(\"Status: Execution Successful in LearningPath Sandbox.\")",
                 "expectedOutput": "Python 3 - Chapter 8: Loops: for Loops & range() Function\nStatus: Execution Successful in LearningPath Sandbox.",
-                "videoStart": 2520,
+                "videoStart": 6200,
                 "videos": {
                     "en": {
                         "id": "_uQrJ0TkZlc",
-                        "start": 2520
+                        "start": 6200
                     },
                     "te": {
-                        "id": "uOsCjqAg5gI",
+                        "id": "fHKPQEVCX-s",
                         "start": 0
                     },
                     "ta": {
@@ -6800,14 +6799,14 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 9: Loop Control: break, continue, pass & else\ndef demonstrate_topic():\n    print(\"=== Chapter 9: Loop Control: break, continue, pass & else ===\")\n    print(\"Python execution verified.\")\n    return True\n\ndemonstrate_topic()",
                 "compilerCode": "# Chapter 9: Loop Control: break, continue, pass & else\nprint(\"Python 3 - Chapter 9: Loop Control: break, continue, pass & else\")\nprint(\"Status: Execution Successful in LearningPath Sandbox.\")",
                 "expectedOutput": "Python 3 - Chapter 9: Loop Control: break, continue, pass & else\nStatus: Execution Successful in LearningPath Sandbox.",
-                "videoStart": 2880,
+                "videoStart": 7700,
                 "videos": {
                     "en": {
                         "id": "_uQrJ0TkZlc",
-                        "start": 2880
+                        "start": 7700
                     },
                     "te": {
-                        "id": "uOsCjqAg5gI",
+                        "id": "fHKPQEVCX-s",
                         "start": 0
                     },
                     "ta": {
@@ -6886,14 +6885,14 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 10: Defining Functions: def, return & Docstrings\ndef demonstrate_topic():\n    print(\"=== Chapter 10: Defining Functions: def, return & Docstrings ===\")\n    print(\"Python execution verified.\")\n    return True\n\ndemonstrate_topic()",
                 "compilerCode": "# Chapter 10: Defining Functions: def, return & Docstrings\nprint(\"Python 3 - Chapter 10: Defining Functions: def, return & Docstrings\")\nprint(\"Status: Execution Successful in LearningPath Sandbox.\")",
                 "expectedOutput": "Python 3 - Chapter 10: Defining Functions: def, return & Docstrings\nStatus: Execution Successful in LearningPath Sandbox.",
-                "videoStart": 3240,
+                "videoStart": 9500,
                 "videos": {
                     "en": {
                         "id": "_uQrJ0TkZlc",
-                        "start": 3240
+                        "start": 9500
                     },
                     "te": {
-                        "id": "uOsCjqAg5gI",
+                        "id": "fHKPQEVCX-s",
                         "start": 0
                     },
                     "ta": {
@@ -6972,14 +6971,14 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 11: Default Arguments & Keyword Arguments\ndef demonstrate_topic():\n    print(\"=== Chapter 11: Default Arguments & Keyword Arguments ===\")\n    print(\"Python execution verified.\")\n    return True\n\ndemonstrate_topic()",
                 "compilerCode": "# Chapter 11: Default Arguments & Keyword Arguments\nprint(\"Python 3 - Chapter 11: Default Arguments & Keyword Arguments\")\nprint(\"Status: Execution Successful in LearningPath Sandbox.\")",
                 "expectedOutput": "Python 3 - Chapter 11: Default Arguments & Keyword Arguments\nStatus: Execution Successful in LearningPath Sandbox.",
-                "videoStart": 3600,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "_uQrJ0TkZlc",
-                        "start": 3600
+                        "start": 0
                     },
                     "te": {
-                        "id": "uOsCjqAg5gI",
+                        "id": "fHKPQEVCX-s",
                         "start": 0
                     },
                     "ta": {
@@ -7058,14 +7057,14 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 12: Variable Arguments: *args and **kwargs\ndef demonstrate_topic():\n    print(\"=== Chapter 12: Variable Arguments: *args and **kwargs ===\")\n    print(\"Python execution verified.\")\n    return True\n\ndemonstrate_topic()",
                 "compilerCode": "# Chapter 12: Variable Arguments: *args and **kwargs\nprint(\"Python 3 - Chapter 12: Variable Arguments: *args and **kwargs\")\nprint(\"Status: Execution Successful in LearningPath Sandbox.\")",
                 "expectedOutput": "Python 3 - Chapter 12: Variable Arguments: *args and **kwargs\nStatus: Execution Successful in LearningPath Sandbox.",
-                "videoStart": 3960,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "_uQrJ0TkZlc",
-                        "start": 3960
+                        "start": 0
                     },
                     "te": {
-                        "id": "uOsCjqAg5gI",
+                        "id": "fHKPQEVCX-s",
                         "start": 0
                     },
                     "ta": {
@@ -7144,14 +7143,14 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 13: Lambda Functions & Functional Programming\ndef demonstrate_topic():\n    print(\"=== Chapter 13: Lambda Functions & Functional Programming ===\")\n    print(\"Python execution verified.\")\n    return True\n\ndemonstrate_topic()",
                 "compilerCode": "# Chapter 13: Lambda Functions & Functional Programming\nprint(\"Python 3 - Chapter 13: Lambda Functions & Functional Programming\")\nprint(\"Status: Execution Successful in LearningPath Sandbox.\")",
                 "expectedOutput": "Python 3 - Chapter 13: Lambda Functions & Functional Programming\nStatus: Execution Successful in LearningPath Sandbox.",
-                "videoStart": 4320,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "_uQrJ0TkZlc",
-                        "start": 4320
+                        "start": 0
                     },
                     "te": {
-                        "id": "uOsCjqAg5gI",
+                        "id": "fHKPQEVCX-s",
                         "start": 0
                     },
                     "ta": {
@@ -7230,14 +7229,14 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 14: Lists: Methods, Slicing & Operations\ndef demonstrate_topic():\n    print(\"=== Chapter 14: Lists: Methods, Slicing & Operations ===\")\n    print(\"Python execution verified.\")\n    return True\n\ndemonstrate_topic()",
                 "compilerCode": "# Chapter 14: Lists: Methods, Slicing & Operations\nprint(\"Python 3 - Chapter 14: Lists: Methods, Slicing & Operations\")\nprint(\"Status: Execution Successful in LearningPath Sandbox.\")",
                 "expectedOutput": "Python 3 - Chapter 14: Lists: Methods, Slicing & Operations\nStatus: Execution Successful in LearningPath Sandbox.",
-                "videoStart": 4680,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "_uQrJ0TkZlc",
-                        "start": 4680
+                        "start": 0
                     },
                     "te": {
-                        "id": "uOsCjqAg5gI",
+                        "id": "fHKPQEVCX-s",
                         "start": 0
                     },
                     "ta": {
@@ -7316,14 +7315,14 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 15: List Comprehensions & Nested Lists\ndef demonstrate_topic():\n    print(\"=== Chapter 15: List Comprehensions & Nested Lists ===\")\n    print(\"Python execution verified.\")\n    return True\n\ndemonstrate_topic()",
                 "compilerCode": "# Chapter 15: List Comprehensions & Nested Lists\nprint(\"Python 3 - Chapter 15: List Comprehensions & Nested Lists\")\nprint(\"Status: Execution Successful in LearningPath Sandbox.\")",
                 "expectedOutput": "Python 3 - Chapter 15: List Comprehensions & Nested Lists\nStatus: Execution Successful in LearningPath Sandbox.",
-                "videoStart": 5040,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "_uQrJ0TkZlc",
-                        "start": 5040
+                        "start": 0
                     },
                     "te": {
-                        "id": "uOsCjqAg5gI",
+                        "id": "fHKPQEVCX-s",
                         "start": 0
                     },
                     "ta": {
@@ -7402,14 +7401,14 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 16: Tuples: Immutability & Packing/Unpacking\ndef demonstrate_topic():\n    print(\"=== Chapter 16: Tuples: Immutability & Packing/Unpacking ===\")\n    print(\"Python execution verified.\")\n    return True\n\ndemonstrate_topic()",
                 "compilerCode": "# Chapter 16: Tuples: Immutability & Packing/Unpacking\nprint(\"Python 3 - Chapter 16: Tuples: Immutability & Packing/Unpacking\")\nprint(\"Status: Execution Successful in LearningPath Sandbox.\")",
                 "expectedOutput": "Python 3 - Chapter 16: Tuples: Immutability & Packing/Unpacking\nStatus: Execution Successful in LearningPath Sandbox.",
-                "videoStart": 5400,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "_uQrJ0TkZlc",
-                        "start": 5400
+                        "start": 0
                     },
                     "te": {
-                        "id": "uOsCjqAg5gI",
+                        "id": "fHKPQEVCX-s",
                         "start": 0
                     },
                     "ta": {
@@ -7488,14 +7487,14 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 17: Dictionaries: Key-Value Pairs & Operations\ndef demonstrate_topic():\n    print(\"=== Chapter 17: Dictionaries: Key-Value Pairs & Operations ===\")\n    print(\"Python execution verified.\")\n    return True\n\ndemonstrate_topic()",
                 "compilerCode": "# Chapter 17: Dictionaries: Key-Value Pairs & Operations\nprint(\"Python 3 - Chapter 17: Dictionaries: Key-Value Pairs & Operations\")\nprint(\"Status: Execution Successful in LearningPath Sandbox.\")",
                 "expectedOutput": "Python 3 - Chapter 17: Dictionaries: Key-Value Pairs & Operations\nStatus: Execution Successful in LearningPath Sandbox.",
-                "videoStart": 5760,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "_uQrJ0TkZlc",
-                        "start": 5760
+                        "start": 0
                     },
                     "te": {
-                        "id": "uOsCjqAg5gI",
+                        "id": "fHKPQEVCX-s",
                         "start": 0
                     },
                     "ta": {
@@ -7574,14 +7573,14 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 18: Dictionary & Set Comprehensions\ndef demonstrate_topic():\n    print(\"=== Chapter 18: Dictionary & Set Comprehensions ===\")\n    print(\"Python execution verified.\")\n    return True\n\ndemonstrate_topic()",
                 "compilerCode": "# Chapter 18: Dictionary & Set Comprehensions\nprint(\"Python 3 - Chapter 18: Dictionary & Set Comprehensions\")\nprint(\"Status: Execution Successful in LearningPath Sandbox.\")",
                 "expectedOutput": "Python 3 - Chapter 18: Dictionary & Set Comprehensions\nStatus: Execution Successful in LearningPath Sandbox.",
-                "videoStart": 6120,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "_uQrJ0TkZlc",
-                        "start": 6120
+                        "start": 0
                     },
                     "te": {
-                        "id": "uOsCjqAg5gI",
+                        "id": "fHKPQEVCX-s",
                         "start": 0
                     },
                     "ta": {
@@ -7660,14 +7659,14 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 19: Sets: Mathematical Set Operations\ndef demonstrate_topic():\n    print(\"=== Chapter 19: Sets: Mathematical Set Operations ===\")\n    print(\"Python execution verified.\")\n    return True\n\ndemonstrate_topic()",
                 "compilerCode": "# Chapter 19: Sets: Mathematical Set Operations\nprint(\"Python 3 - Chapter 19: Sets: Mathematical Set Operations\")\nprint(\"Status: Execution Successful in LearningPath Sandbox.\")",
                 "expectedOutput": "Python 3 - Chapter 19: Sets: Mathematical Set Operations\nStatus: Execution Successful in LearningPath Sandbox.",
-                "videoStart": 6480,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "_uQrJ0TkZlc",
-                        "start": 6480
+                        "start": 0
                     },
                     "te": {
-                        "id": "uOsCjqAg5gI",
+                        "id": "fHKPQEVCX-s",
                         "start": 0
                     },
                     "ta": {
@@ -7746,14 +7745,14 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 20: Modules & Importing System (import, from)\ndef demonstrate_topic():\n    print(\"=== Chapter 20: Modules & Importing System (import, from) ===\")\n    print(\"Python execution verified.\")\n    return True\n\ndemonstrate_topic()",
                 "compilerCode": "# Chapter 20: Modules & Importing System (import, from)\nprint(\"Python 3 - Chapter 20: Modules & Importing System (import, from)\")\nprint(\"Status: Execution Successful in LearningPath Sandbox.\")",
                 "expectedOutput": "Python 3 - Chapter 20: Modules & Importing System (import, from)\nStatus: Execution Successful in LearningPath Sandbox.",
-                "videoStart": 6840,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "_uQrJ0TkZlc",
-                        "start": 6840
+                        "start": 0
                     },
                     "te": {
-                        "id": "uOsCjqAg5gI",
+                        "id": "fHKPQEVCX-s",
                         "start": 0
                     },
                     "ta": {
@@ -7832,14 +7831,14 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 21: Packages & Virtual Environments (venv, pip)\ndef demonstrate_topic():\n    print(\"=== Chapter 21: Packages & Virtual Environments (venv, pip) ===\")\n    print(\"Python execution verified.\")\n    return True\n\ndemonstrate_topic()",
                 "compilerCode": "# Chapter 21: Packages & Virtual Environments (venv, pip)\nprint(\"Python 3 - Chapter 21: Packages & Virtual Environments (venv, pip)\")\nprint(\"Status: Execution Successful in LearningPath Sandbox.\")",
                 "expectedOutput": "Python 3 - Chapter 21: Packages & Virtual Environments (venv, pip)\nStatus: Execution Successful in LearningPath Sandbox.",
-                "videoStart": 7200,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "_uQrJ0TkZlc",
-                        "start": 7200
+                        "start": 0
                     },
                     "te": {
-                        "id": "uOsCjqAg5gI",
+                        "id": "fHKPQEVCX-s",
                         "start": 0
                     },
                     "ta": {
@@ -7918,14 +7917,14 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 22: File I/O: Reading & Writing Files\ndef demonstrate_topic():\n    print(\"=== Chapter 22: File I/O: Reading & Writing Files ===\")\n    print(\"Python execution verified.\")\n    return True\n\ndemonstrate_topic()",
                 "compilerCode": "# Chapter 22: File I/O: Reading & Writing Files\nprint(\"Python 3 - Chapter 22: File I/O: Reading & Writing Files\")\nprint(\"Status: Execution Successful in LearningPath Sandbox.\")",
                 "expectedOutput": "Python 3 - Chapter 22: File I/O: Reading & Writing Files\nStatus: Execution Successful in LearningPath Sandbox.",
-                "videoStart": 7560,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "_uQrJ0TkZlc",
-                        "start": 7560
+                        "start": 0
                     },
                     "te": {
-                        "id": "uOsCjqAg5gI",
+                        "id": "fHKPQEVCX-s",
                         "start": 0
                     },
                     "ta": {
@@ -8004,14 +8003,14 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 23: Working with JSON, CSV & Filesystem Paths\ndef demonstrate_topic():\n    print(\"=== Chapter 23: Working with JSON, CSV & Filesystem Paths ===\")\n    print(\"Python execution verified.\")\n    return True\n\ndemonstrate_topic()",
                 "compilerCode": "# Chapter 23: Working with JSON, CSV & Filesystem Paths\nprint(\"Python 3 - Chapter 23: Working with JSON, CSV & Filesystem Paths\")\nprint(\"Status: Execution Successful in LearningPath Sandbox.\")",
                 "expectedOutput": "Python 3 - Chapter 23: Working with JSON, CSV & Filesystem Paths\nStatus: Execution Successful in LearningPath Sandbox.",
-                "videoStart": 7920,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "_uQrJ0TkZlc",
-                        "start": 7920
+                        "start": 0
                     },
                     "te": {
-                        "id": "uOsCjqAg5gI",
+                        "id": "fHKPQEVCX-s",
                         "start": 0
                     },
                     "ta": {
@@ -8090,14 +8089,14 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 24: Exception Handling: try, except, finally\ndef demonstrate_topic():\n    print(\"=== Chapter 24: Exception Handling: try, except, finally ===\")\n    print(\"Python execution verified.\")\n    return True\n\ndemonstrate_topic()",
                 "compilerCode": "# Chapter 24: Exception Handling: try, except, finally\nprint(\"Python 3 - Chapter 24: Exception Handling: try, except, finally\")\nprint(\"Status: Execution Successful in LearningPath Sandbox.\")",
                 "expectedOutput": "Python 3 - Chapter 24: Exception Handling: try, except, finally\nStatus: Execution Successful in LearningPath Sandbox.",
-                "videoStart": 8280,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "_uQrJ0TkZlc",
-                        "start": 8280
+                        "start": 0
                     },
                     "te": {
-                        "id": "uOsCjqAg5gI",
+                        "id": "fHKPQEVCX-s",
                         "start": 0
                     },
                     "ta": {
@@ -8176,14 +8175,14 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 25: Custom Exceptions & Raising Errors\ndef demonstrate_topic():\n    print(\"=== Chapter 25: Custom Exceptions & Raising Errors ===\")\n    print(\"Python execution verified.\")\n    return True\n\ndemonstrate_topic()",
                 "compilerCode": "# Chapter 25: Custom Exceptions & Raising Errors\nprint(\"Python 3 - Chapter 25: Custom Exceptions & Raising Errors\")\nprint(\"Status: Execution Successful in LearningPath Sandbox.\")",
                 "expectedOutput": "Python 3 - Chapter 25: Custom Exceptions & Raising Errors\nStatus: Execution Successful in LearningPath Sandbox.",
-                "videoStart": 8640,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "_uQrJ0TkZlc",
-                        "start": 8640
+                        "start": 0
                     },
                     "te": {
-                        "id": "uOsCjqAg5gI",
+                        "id": "fHKPQEVCX-s",
                         "start": 0
                     },
                     "ta": {
@@ -8262,14 +8261,14 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 26: OOP: Classes, Instances & Methods\ndef demonstrate_topic():\n    print(\"=== Chapter 26: OOP: Classes, Instances & Methods ===\")\n    print(\"Python execution verified.\")\n    return True\n\ndemonstrate_topic()",
                 "compilerCode": "# Chapter 26: OOP: Classes, Instances & Methods\nprint(\"Python 3 - Chapter 26: OOP: Classes, Instances & Methods\")\nprint(\"Status: Execution Successful in LearningPath Sandbox.\")",
                 "expectedOutput": "Python 3 - Chapter 26: OOP: Classes, Instances & Methods\nStatus: Execution Successful in LearningPath Sandbox.",
-                "videoStart": 9000,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "_uQrJ0TkZlc",
-                        "start": 9000
+                        "start": 0
                     },
                     "te": {
-                        "id": "uOsCjqAg5gI",
+                        "id": "fHKPQEVCX-s",
                         "start": 0
                     },
                     "ta": {
@@ -8348,14 +8347,14 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 27: Constructor (__init__) & Instance Attributes\ndef demonstrate_topic():\n    print(\"=== Chapter 27: Constructor (__init__) & Instance Attributes ===\")\n    print(\"Python execution verified.\")\n    return True\n\ndemonstrate_topic()",
                 "compilerCode": "# Chapter 27: Constructor (__init__) & Instance Attributes\nprint(\"Python 3 - Chapter 27: Constructor (__init__) & Instance Attributes\")\nprint(\"Status: Execution Successful in LearningPath Sandbox.\")",
                 "expectedOutput": "Python 3 - Chapter 27: Constructor (__init__) & Instance Attributes\nStatus: Execution Successful in LearningPath Sandbox.",
-                "videoStart": 9360,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "_uQrJ0TkZlc",
-                        "start": 9360
+                        "start": 0
                     },
                     "te": {
-                        "id": "uOsCjqAg5gI",
+                        "id": "fHKPQEVCX-s",
                         "start": 0
                     },
                     "ta": {
@@ -8434,14 +8433,14 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 28: Class Attributes & Class/Static Methods\ndef demonstrate_topic():\n    print(\"=== Chapter 28: Class Attributes & Class/Static Methods ===\")\n    print(\"Python execution verified.\")\n    return True\n\ndemonstrate_topic()",
                 "compilerCode": "# Chapter 28: Class Attributes & Class/Static Methods\nprint(\"Python 3 - Chapter 28: Class Attributes & Class/Static Methods\")\nprint(\"Status: Execution Successful in LearningPath Sandbox.\")",
                 "expectedOutput": "Python 3 - Chapter 28: Class Attributes & Class/Static Methods\nStatus: Execution Successful in LearningPath Sandbox.",
-                "videoStart": 9720,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "_uQrJ0TkZlc",
-                        "start": 9720
+                        "start": 0
                     },
                     "te": {
-                        "id": "uOsCjqAg5gI",
+                        "id": "fHKPQEVCX-s",
                         "start": 0
                     },
                     "ta": {
@@ -8520,14 +8519,14 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 29: Inheritance & Method Overriding (super)\ndef demonstrate_topic():\n    print(\"=== Chapter 29: Inheritance & Method Overriding (super) ===\")\n    print(\"Python execution verified.\")\n    return True\n\ndemonstrate_topic()",
                 "compilerCode": "# Chapter 29: Inheritance & Method Overriding (super)\nprint(\"Python 3 - Chapter 29: Inheritance & Method Overriding (super)\")\nprint(\"Status: Execution Successful in LearningPath Sandbox.\")",
                 "expectedOutput": "Python 3 - Chapter 29: Inheritance & Method Overriding (super)\nStatus: Execution Successful in LearningPath Sandbox.",
-                "videoStart": 10080,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "_uQrJ0TkZlc",
-                        "start": 10080
+                        "start": 0
                     },
                     "te": {
-                        "id": "uOsCjqAg5gI",
+                        "id": "fHKPQEVCX-s",
                         "start": 0
                     },
                     "ta": {
@@ -8606,14 +8605,14 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 30: Multiple Inheritance & Method Resolution Order\ndef demonstrate_topic():\n    print(\"=== Chapter 30: Multiple Inheritance & Method Resolution Order ===\")\n    print(\"Python execution verified.\")\n    return True\n\ndemonstrate_topic()",
                 "compilerCode": "# Chapter 30: Multiple Inheritance & Method Resolution Order\nprint(\"Python 3 - Chapter 30: Multiple Inheritance & Method Resolution Order\")\nprint(\"Status: Execution Successful in LearningPath Sandbox.\")",
                 "expectedOutput": "Python 3 - Chapter 30: Multiple Inheritance & Method Resolution Order\nStatus: Execution Successful in LearningPath Sandbox.",
-                "videoStart": 10440,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "_uQrJ0TkZlc",
-                        "start": 10440
+                        "start": 0
                     },
                     "te": {
-                        "id": "uOsCjqAg5gI",
+                        "id": "fHKPQEVCX-s",
                         "start": 0
                     },
                     "ta": {
@@ -8692,14 +8691,14 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 31: Special Dunder Methods (__str__, __len__)\ndef demonstrate_topic():\n    print(\"=== Chapter 31: Special Dunder Methods (__str__, __len__) ===\")\n    print(\"Python execution verified.\")\n    return True\n\ndemonstrate_topic()",
                 "compilerCode": "# Chapter 31: Special Dunder Methods (__str__, __len__)\nprint(\"Python 3 - Chapter 31: Special Dunder Methods (__str__, __len__)\")\nprint(\"Status: Execution Successful in LearningPath Sandbox.\")",
                 "expectedOutput": "Python 3 - Chapter 31: Special Dunder Methods (__str__, __len__)\nStatus: Execution Successful in LearningPath Sandbox.",
-                "videoStart": 10800,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "_uQrJ0TkZlc",
-                        "start": 10800
+                        "start": 0
                     },
                     "te": {
-                        "id": "uOsCjqAg5gI",
+                        "id": "fHKPQEVCX-s",
                         "start": 0
                     },
                     "ta": {
@@ -8778,14 +8777,14 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 32: Decorators & Function Wrappers\ndef demonstrate_topic():\n    print(\"=== Chapter 32: Decorators & Function Wrappers ===\")\n    print(\"Python execution verified.\")\n    return True\n\ndemonstrate_topic()",
                 "compilerCode": "# Chapter 32: Decorators & Function Wrappers\nprint(\"Python 3 - Chapter 32: Decorators & Function Wrappers\")\nprint(\"Status: Execution Successful in LearningPath Sandbox.\")",
                 "expectedOutput": "Python 3 - Chapter 32: Decorators & Function Wrappers\nStatus: Execution Successful in LearningPath Sandbox.",
-                "videoStart": 11160,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "_uQrJ0TkZlc",
-                        "start": 11160
+                        "start": 0
                     },
                     "te": {
-                        "id": "uOsCjqAg5gI",
+                        "id": "fHKPQEVCX-s",
                         "start": 0
                     },
                     "ta": {
@@ -8864,14 +8863,14 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 33: Generators & the yield Statement\ndef demonstrate_topic():\n    print(\"=== Chapter 33: Generators & the yield Statement ===\")\n    print(\"Python execution verified.\")\n    return True\n\ndemonstrate_topic()",
                 "compilerCode": "# Chapter 33: Generators & the yield Statement\nprint(\"Python 3 - Chapter 33: Generators & the yield Statement\")\nprint(\"Status: Execution Successful in LearningPath Sandbox.\")",
                 "expectedOutput": "Python 3 - Chapter 33: Generators & the yield Statement\nStatus: Execution Successful in LearningPath Sandbox.",
-                "videoStart": 11520,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "_uQrJ0TkZlc",
-                        "start": 11520
+                        "start": 0
                     },
                     "te": {
-                        "id": "uOsCjqAg5gI",
+                        "id": "fHKPQEVCX-s",
                         "start": 0
                     },
                     "ta": {
@@ -8950,14 +8949,14 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 34: Context Managers (the with Statement)\ndef demonstrate_topic():\n    print(\"=== Chapter 34: Context Managers (the with Statement) ===\")\n    print(\"Python execution verified.\")\n    return True\n\ndemonstrate_topic()",
                 "compilerCode": "# Chapter 34: Context Managers (the with Statement)\nprint(\"Python 3 - Chapter 34: Context Managers (the with Statement)\")\nprint(\"Status: Execution Successful in LearningPath Sandbox.\")",
                 "expectedOutput": "Python 3 - Chapter 34: Context Managers (the with Statement)\nStatus: Execution Successful in LearningPath Sandbox.",
-                "videoStart": 11880,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "_uQrJ0TkZlc",
-                        "start": 11880
+                        "start": 0
                     },
                     "te": {
-                        "id": "uOsCjqAg5gI",
+                        "id": "fHKPQEVCX-s",
                         "start": 0
                     },
                     "ta": {
@@ -9036,14 +9035,14 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 35: Asyncio Basics & Complete Python Capstone\ndef demonstrate_topic():\n    print(\"=== Chapter 35: Asyncio Basics & Complete Python Capstone ===\")\n    print(\"Python execution verified.\")\n    return True\n\ndemonstrate_topic()",
                 "compilerCode": "# Chapter 35: Asyncio Basics & Complete Python Capstone\nprint(\"Python 3 - Chapter 35: Asyncio Basics & Complete Python Capstone\")\nprint(\"Status: Execution Successful in LearningPath Sandbox.\")",
                 "expectedOutput": "Python 3 - Chapter 35: Asyncio Basics & Complete Python Capstone\nStatus: Execution Successful in LearningPath Sandbox.",
-                "videoStart": 12240,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "_uQrJ0TkZlc",
-                        "start": 12240
+                        "start": 0
                     },
                     "te": {
-                        "id": "uOsCjqAg5gI",
+                        "id": "fHKPQEVCX-s",
                         "start": 0
                     },
                     "ta": {
@@ -9127,7 +9126,7 @@ window.LEARNING_DATA = {
                 "title": "Java Tutorial for Beginners (English)"
             },
             "te": {
-                "id": "pTB0EiLXUC8",
+                "id": "d530rd7m_1E",
                 "title": "Java Full Course in Telugu (తెలుగు)"
             },
             "ta": {
@@ -9156,7 +9155,7 @@ window.LEARNING_DATA = {
                         "start": 0
                     },
                     "te": {
-                        "id": "pTB0EiLXUC8",
+                        "id": "d530rd7m_1E",
                         "start": 0
                     },
                     "ta": {
@@ -9235,14 +9234,14 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 2: Variables, Identifiers & Primitive Data Types\npublic class Main {\n    public static void main(String[] args) {\n        System.out.println(\"=== Chapter 2: Variables, Identifiers & Primitive Data Types ===\");\n        System.out.println(\"Java Virtual Machine execution verified.\");\n    }\n}",
                 "compilerCode": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"Java - Chapter 2: Variables, Identifiers & Primitive Data Types\");\n        System.out.println(\"Program executed with exit code 0.\");\n    }\n}",
                 "expectedOutput": "Java - Chapter 2: Variables, Identifiers & Primitive Data Types\nProgram executed with exit code 0.",
-                "videoStart": 360,
+                "videoStart": 600,
                 "videos": {
                     "en": {
                         "id": "A74TOX803D0",
-                        "start": 360
+                        "start": 600
                     },
                     "te": {
-                        "id": "pTB0EiLXUC8",
+                        "id": "d530rd7m_1E",
                         "start": 0
                     },
                     "ta": {
@@ -9321,14 +9320,14 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 3: Operators & Type Casting\npublic class Main {\n    public static void main(String[] args) {\n        System.out.println(\"=== Chapter 3: Operators & Type Casting ===\");\n        System.out.println(\"Java Virtual Machine execution verified.\");\n    }\n}",
                 "compilerCode": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"Java - Chapter 3: Operators & Type Casting\");\n        System.out.println(\"Program executed with exit code 0.\");\n    }\n}",
                 "expectedOutput": "Java - Chapter 3: Operators & Type Casting\nProgram executed with exit code 0.",
-                "videoStart": 720,
+                "videoStart": 1200,
                 "videos": {
                     "en": {
                         "id": "A74TOX803D0",
-                        "start": 720
+                        "start": 1200
                     },
                     "te": {
-                        "id": "pTB0EiLXUC8",
+                        "id": "d530rd7m_1E",
                         "start": 0
                     },
                     "ta": {
@@ -9407,14 +9406,14 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 4: Conditionals: if-else & Switch Expressions\npublic class Main {\n    public static void main(String[] args) {\n        System.out.println(\"=== Chapter 4: Conditionals: if-else & Switch Expressions ===\");\n        System.out.println(\"Java Virtual Machine execution verified.\");\n    }\n}",
                 "compilerCode": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"Java - Chapter 4: Conditionals: if-else & Switch Expressions\");\n        System.out.println(\"Program executed with exit code 0.\");\n    }\n}",
                 "expectedOutput": "Java - Chapter 4: Conditionals: if-else & Switch Expressions\nProgram executed with exit code 0.",
-                "videoStart": 1080,
+                "videoStart": 1900,
                 "videos": {
                     "en": {
                         "id": "A74TOX803D0",
-                        "start": 1080
+                        "start": 1900
                     },
                     "te": {
-                        "id": "pTB0EiLXUC8",
+                        "id": "d530rd7m_1E",
                         "start": 0
                     },
                     "ta": {
@@ -9493,14 +9492,14 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 5: Loops: while, do-while & for Loops\npublic class Main {\n    public static void main(String[] args) {\n        System.out.println(\"=== Chapter 5: Loops: while, do-while & for Loops ===\");\n        System.out.println(\"Java Virtual Machine execution verified.\");\n    }\n}",
                 "compilerCode": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"Java - Chapter 5: Loops: while, do-while & for Loops\");\n        System.out.println(\"Program executed with exit code 0.\");\n    }\n}",
                 "expectedOutput": "Java - Chapter 5: Loops: while, do-while & for Loops\nProgram executed with exit code 0.",
-                "videoStart": 1440,
+                "videoStart": 2700,
                 "videos": {
                     "en": {
                         "id": "A74TOX803D0",
-                        "start": 1440
+                        "start": 2700
                     },
                     "te": {
-                        "id": "pTB0EiLXUC8",
+                        "id": "d530rd7m_1E",
                         "start": 0
                     },
                     "ta": {
@@ -9579,14 +9578,14 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 6: Enhanced for-each Loop & Break/Continue\npublic class Main {\n    public static void main(String[] args) {\n        System.out.println(\"=== Chapter 6: Enhanced for-each Loop & Break/Continue ===\");\n        System.out.println(\"Java Virtual Machine execution verified.\");\n    }\n}",
                 "compilerCode": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"Java - Chapter 6: Enhanced for-each Loop & Break/Continue\");\n        System.out.println(\"Program executed with exit code 0.\");\n    }\n}",
                 "expectedOutput": "Java - Chapter 6: Enhanced for-each Loop & Break/Continue\nProgram executed with exit code 0.",
-                "videoStart": 1800,
+                "videoStart": 3600,
                 "videos": {
                     "en": {
                         "id": "A74TOX803D0",
-                        "start": 1800
+                        "start": 3600
                     },
                     "te": {
-                        "id": "pTB0EiLXUC8",
+                        "id": "d530rd7m_1E",
                         "start": 0
                     },
                     "ta": {
@@ -9665,14 +9664,14 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 7: 1D Arrays: Creation, Indexing & Bounds\npublic class Main {\n    public static void main(String[] args) {\n        System.out.println(\"=== Chapter 7: 1D Arrays: Creation, Indexing & Bounds ===\");\n        System.out.println(\"Java Virtual Machine execution verified.\");\n    }\n}",
                 "compilerCode": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"Java - Chapter 7: 1D Arrays: Creation, Indexing & Bounds\");\n        System.out.println(\"Program executed with exit code 0.\");\n    }\n}",
                 "expectedOutput": "Java - Chapter 7: 1D Arrays: Creation, Indexing & Bounds\nProgram executed with exit code 0.",
-                "videoStart": 2160,
+                "videoStart": 4600,
                 "videos": {
                     "en": {
                         "id": "A74TOX803D0",
-                        "start": 2160
+                        "start": 4600
                     },
                     "te": {
-                        "id": "pTB0EiLXUC8",
+                        "id": "d530rd7m_1E",
                         "start": 0
                     },
                     "ta": {
@@ -9751,14 +9750,14 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 8: 2D Multi-Dimensional Arrays & Matrices\npublic class Main {\n    public static void main(String[] args) {\n        System.out.println(\"=== Chapter 8: 2D Multi-Dimensional Arrays & Matrices ===\");\n        System.out.println(\"Java Virtual Machine execution verified.\");\n    }\n}",
                 "compilerCode": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"Java - Chapter 8: 2D Multi-Dimensional Arrays & Matrices\");\n        System.out.println(\"Program executed with exit code 0.\");\n    }\n}",
                 "expectedOutput": "Java - Chapter 8: 2D Multi-Dimensional Arrays & Matrices\nProgram executed with exit code 0.",
-                "videoStart": 2520,
+                "videoStart": 5700,
                 "videos": {
                     "en": {
                         "id": "A74TOX803D0",
-                        "start": 2520
+                        "start": 5700
                     },
                     "te": {
-                        "id": "pTB0EiLXUC8",
+                        "id": "d530rd7m_1E",
                         "start": 0
                     },
                     "ta": {
@@ -9837,14 +9836,14 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 9: Methods: Definition, Parameters & Return Types\npublic class Main {\n    public static void main(String[] args) {\n        System.out.println(\"=== Chapter 9: Methods: Definition, Parameters & Return Types ===\");\n        System.out.println(\"Java Virtual Machine execution verified.\");\n    }\n}",
                 "compilerCode": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"Java - Chapter 9: Methods: Definition, Parameters & Return Types\");\n        System.out.println(\"Program executed with exit code 0.\");\n    }\n}",
                 "expectedOutput": "Java - Chapter 9: Methods: Definition, Parameters & Return Types\nProgram executed with exit code 0.",
-                "videoStart": 2880,
+                "videoStart": 6900,
                 "videos": {
                     "en": {
                         "id": "A74TOX803D0",
-                        "start": 2880
+                        "start": 6900
                     },
                     "te": {
-                        "id": "pTB0EiLXUC8",
+                        "id": "d530rd7m_1E",
                         "start": 0
                     },
                     "ta": {
@@ -9923,14 +9922,14 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 10: Method Overloading & Parameter Polymorphism\npublic class Main {\n    public static void main(String[] args) {\n        System.out.println(\"=== Chapter 10: Method Overloading & Parameter Polymorphism ===\");\n        System.out.println(\"Java Virtual Machine execution verified.\");\n    }\n}",
                 "compilerCode": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"Java - Chapter 10: Method Overloading & Parameter Polymorphism\");\n        System.out.println(\"Program executed with exit code 0.\");\n    }\n}",
                 "expectedOutput": "Java - Chapter 10: Method Overloading & Parameter Polymorphism\nProgram executed with exit code 0.",
-                "videoStart": 3240,
+                "videoStart": 8100,
                 "videos": {
                     "en": {
                         "id": "A74TOX803D0",
-                        "start": 3240
+                        "start": 8100
                     },
                     "te": {
-                        "id": "pTB0EiLXUC8",
+                        "id": "d530rd7m_1E",
                         "start": 0
                     },
                     "ta": {
@@ -10009,14 +10008,14 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 11: OOP Fundamentals: Classes & Objects\npublic class Main {\n    public static void main(String[] args) {\n        System.out.println(\"=== Chapter 11: OOP Fundamentals: Classes & Objects ===\");\n        System.out.println(\"Java Virtual Machine execution verified.\");\n    }\n}",
                 "compilerCode": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"Java - Chapter 11: OOP Fundamentals: Classes & Objects\");\n        System.out.println(\"Program executed with exit code 0.\");\n    }\n}",
                 "expectedOutput": "Java - Chapter 11: OOP Fundamentals: Classes & Objects\nProgram executed with exit code 0.",
-                "videoStart": 3600,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "A74TOX803D0",
-                        "start": 3600
+                        "start": 0
                     },
                     "te": {
-                        "id": "pTB0EiLXUC8",
+                        "id": "d530rd7m_1E",
                         "start": 0
                     },
                     "ta": {
@@ -10095,14 +10094,14 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 12: Constructors & 'this' Reference\npublic class Main {\n    public static void main(String[] args) {\n        System.out.println(\"=== Chapter 12: Constructors & 'this' Reference ===\");\n        System.out.println(\"Java Virtual Machine execution verified.\");\n    }\n}",
                 "compilerCode": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"Java - Chapter 12: Constructors & 'this' Reference\");\n        System.out.println(\"Program executed with exit code 0.\");\n    }\n}",
                 "expectedOutput": "Java - Chapter 12: Constructors & 'this' Reference\nProgram executed with exit code 0.",
-                "videoStart": 3960,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "A74TOX803D0",
-                        "start": 3960
+                        "start": 0
                     },
                     "te": {
-                        "id": "pTB0EiLXUC8",
+                        "id": "d530rd7m_1E",
                         "start": 0
                     },
                     "ta": {
@@ -10181,14 +10180,14 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 13: Access Modifiers (public, private, protected)\npublic class Main {\n    public static void main(String[] args) {\n        System.out.println(\"=== Chapter 13: Access Modifiers (public, private, protected) ===\");\n        System.out.println(\"Java Virtual Machine execution verified.\");\n    }\n}",
                 "compilerCode": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"Java - Chapter 13: Access Modifiers (public, private, protected)\");\n        System.out.println(\"Program executed with exit code 0.\");\n    }\n}",
                 "expectedOutput": "Java - Chapter 13: Access Modifiers (public, private, protected)\nProgram executed with exit code 0.",
-                "videoStart": 4320,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "A74TOX803D0",
-                        "start": 4320
+                        "start": 0
                     },
                     "te": {
-                        "id": "pTB0EiLXUC8",
+                        "id": "d530rd7m_1E",
                         "start": 0
                     },
                     "ta": {
@@ -10267,14 +10266,14 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 14: Encapsulation: Getters, Setters & Java Beans\npublic class Main {\n    public static void main(String[] args) {\n        System.out.println(\"=== Chapter 14: Encapsulation: Getters, Setters & Java Beans ===\");\n        System.out.println(\"Java Virtual Machine execution verified.\");\n    }\n}",
                 "compilerCode": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"Java - Chapter 14: Encapsulation: Getters, Setters & Java Beans\");\n        System.out.println(\"Program executed with exit code 0.\");\n    }\n}",
                 "expectedOutput": "Java - Chapter 14: Encapsulation: Getters, Setters & Java Beans\nProgram executed with exit code 0.",
-                "videoStart": 4680,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "A74TOX803D0",
-                        "start": 4680
+                        "start": 0
                     },
                     "te": {
-                        "id": "pTB0EiLXUC8",
+                        "id": "d530rd7m_1E",
                         "start": 0
                     },
                     "ta": {
@@ -10353,14 +10352,14 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 15: Inheritance: Subclasses & super Keyword\npublic class Main {\n    public static void main(String[] args) {\n        System.out.println(\"=== Chapter 15: Inheritance: Subclasses & super Keyword ===\");\n        System.out.println(\"Java Virtual Machine execution verified.\");\n    }\n}",
                 "compilerCode": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"Java - Chapter 15: Inheritance: Subclasses & super Keyword\");\n        System.out.println(\"Program executed with exit code 0.\");\n    }\n}",
                 "expectedOutput": "Java - Chapter 15: Inheritance: Subclasses & super Keyword\nProgram executed with exit code 0.",
-                "videoStart": 5040,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "A74TOX803D0",
-                        "start": 5040
+                        "start": 0
                     },
                     "te": {
-                        "id": "pTB0EiLXUC8",
+                        "id": "d530rd7m_1E",
                         "start": 0
                     },
                     "ta": {
@@ -10439,14 +10438,14 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 16: Method Overriding & Runtime Polymorphism\npublic class Main {\n    public static void main(String[] args) {\n        System.out.println(\"=== Chapter 16: Method Overriding & Runtime Polymorphism ===\");\n        System.out.println(\"Java Virtual Machine execution verified.\");\n    }\n}",
                 "compilerCode": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"Java - Chapter 16: Method Overriding & Runtime Polymorphism\");\n        System.out.println(\"Program executed with exit code 0.\");\n    }\n}",
                 "expectedOutput": "Java - Chapter 16: Method Overriding & Runtime Polymorphism\nProgram executed with exit code 0.",
-                "videoStart": 5400,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "A74TOX803D0",
-                        "start": 5400
+                        "start": 0
                     },
                     "te": {
-                        "id": "pTB0EiLXUC8",
+                        "id": "d530rd7m_1E",
                         "start": 0
                     },
                     "ta": {
@@ -10525,14 +10524,14 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 17: Abstract Classes & Abstract Methods\npublic class Main {\n    public static void main(String[] args) {\n        System.out.println(\"=== Chapter 17: Abstract Classes & Abstract Methods ===\");\n        System.out.println(\"Java Virtual Machine execution verified.\");\n    }\n}",
                 "compilerCode": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"Java - Chapter 17: Abstract Classes & Abstract Methods\");\n        System.out.println(\"Program executed with exit code 0.\");\n    }\n}",
                 "expectedOutput": "Java - Chapter 17: Abstract Classes & Abstract Methods\nProgram executed with exit code 0.",
-                "videoStart": 5760,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "A74TOX803D0",
-                        "start": 5760
+                        "start": 0
                     },
                     "te": {
-                        "id": "pTB0EiLXUC8",
+                        "id": "d530rd7m_1E",
                         "start": 0
                     },
                     "ta": {
@@ -10611,14 +10610,14 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 18: Interfaces & Multiple Interface Inheritance\npublic class Main {\n    public static void main(String[] args) {\n        System.out.println(\"=== Chapter 18: Interfaces & Multiple Interface Inheritance ===\");\n        System.out.println(\"Java Virtual Machine execution verified.\");\n    }\n}",
                 "compilerCode": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"Java - Chapter 18: Interfaces & Multiple Interface Inheritance\");\n        System.out.println(\"Program executed with exit code 0.\");\n    }\n}",
                 "expectedOutput": "Java - Chapter 18: Interfaces & Multiple Interface Inheritance\nProgram executed with exit code 0.",
-                "videoStart": 6120,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "A74TOX803D0",
-                        "start": 6120
+                        "start": 0
                     },
                     "te": {
-                        "id": "pTB0EiLXUC8",
+                        "id": "d530rd7m_1E",
                         "start": 0
                     },
                     "ta": {
@@ -10697,14 +10696,14 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 19: Java 8 Default & Static Interface Methods\npublic class Main {\n    public static void main(String[] args) {\n        System.out.println(\"=== Chapter 19: Java 8 Default & Static Interface Methods ===\");\n        System.out.println(\"Java Virtual Machine execution verified.\");\n    }\n}",
                 "compilerCode": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"Java - Chapter 19: Java 8 Default & Static Interface Methods\");\n        System.out.println(\"Program executed with exit code 0.\");\n    }\n}",
                 "expectedOutput": "Java - Chapter 19: Java 8 Default & Static Interface Methods\nProgram executed with exit code 0.",
-                "videoStart": 6480,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "A74TOX803D0",
-                        "start": 6480
+                        "start": 0
                     },
                     "te": {
-                        "id": "pTB0EiLXUC8",
+                        "id": "d530rd7m_1E",
                         "start": 0
                     },
                     "ta": {
@@ -10783,14 +10782,14 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 20: Packages, Classpath & Access Control\npublic class Main {\n    public static void main(String[] args) {\n        System.out.println(\"=== Chapter 20: Packages, Classpath & Access Control ===\");\n        System.out.println(\"Java Virtual Machine execution verified.\");\n    }\n}",
                 "compilerCode": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"Java - Chapter 20: Packages, Classpath & Access Control\");\n        System.out.println(\"Program executed with exit code 0.\");\n    }\n}",
                 "expectedOutput": "Java - Chapter 20: Packages, Classpath & Access Control\nProgram executed with exit code 0.",
-                "videoStart": 6840,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "A74TOX803D0",
-                        "start": 6840
+                        "start": 0
                     },
                     "te": {
-                        "id": "pTB0EiLXUC8",
+                        "id": "d530rd7m_1E",
                         "start": 0
                     },
                     "ta": {
@@ -10869,14 +10868,14 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 21: Strings: String Pool, Immutability & Methods\npublic class Main {\n    public static void main(String[] args) {\n        System.out.println(\"=== Chapter 21: Strings: String Pool, Immutability & Methods ===\");\n        System.out.println(\"Java Virtual Machine execution verified.\");\n    }\n}",
                 "compilerCode": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"Java - Chapter 21: Strings: String Pool, Immutability & Methods\");\n        System.out.println(\"Program executed with exit code 0.\");\n    }\n}",
                 "expectedOutput": "Java - Chapter 21: Strings: String Pool, Immutability & Methods\nProgram executed with exit code 0.",
-                "videoStart": 7200,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "A74TOX803D0",
-                        "start": 7200
+                        "start": 0
                     },
                     "te": {
-                        "id": "pTB0EiLXUC8",
+                        "id": "d530rd7m_1E",
                         "start": 0
                     },
                     "ta": {
@@ -10955,14 +10954,14 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 22: StringBuilder & StringBuffer for Performance\npublic class Main {\n    public static void main(String[] args) {\n        System.out.println(\"=== Chapter 22: StringBuilder & StringBuffer for Performance ===\");\n        System.out.println(\"Java Virtual Machine execution verified.\");\n    }\n}",
                 "compilerCode": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"Java - Chapter 22: StringBuilder & StringBuffer for Performance\");\n        System.out.println(\"Program executed with exit code 0.\");\n    }\n}",
                 "expectedOutput": "Java - Chapter 22: StringBuilder & StringBuffer for Performance\nProgram executed with exit code 0.",
-                "videoStart": 7560,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "A74TOX803D0",
-                        "start": 7560
+                        "start": 0
                     },
                     "te": {
-                        "id": "pTB0EiLXUC8",
+                        "id": "d530rd7m_1E",
                         "start": 0
                     },
                     "ta": {
@@ -11041,14 +11040,14 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 23: Wrapper Classes & Autoboxing/Unboxing\npublic class Main {\n    public static void main(String[] args) {\n        System.out.println(\"=== Chapter 23: Wrapper Classes & Autoboxing/Unboxing ===\");\n        System.out.println(\"Java Virtual Machine execution verified.\");\n    }\n}",
                 "compilerCode": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"Java - Chapter 23: Wrapper Classes & Autoboxing/Unboxing\");\n        System.out.println(\"Program executed with exit code 0.\");\n    }\n}",
                 "expectedOutput": "Java - Chapter 23: Wrapper Classes & Autoboxing/Unboxing\nProgram executed with exit code 0.",
-                "videoStart": 7920,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "A74TOX803D0",
-                        "start": 7920
+                        "start": 0
                     },
                     "te": {
-                        "id": "pTB0EiLXUC8",
+                        "id": "d530rd7m_1E",
                         "start": 0
                     },
                     "ta": {
@@ -11127,14 +11126,14 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 24: Exception Handling: try, catch, finally\npublic class Main {\n    public static void main(String[] args) {\n        System.out.println(\"=== Chapter 24: Exception Handling: try, catch, finally ===\");\n        System.out.println(\"Java Virtual Machine execution verified.\");\n    }\n}",
                 "compilerCode": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"Java - Chapter 24: Exception Handling: try, catch, finally\");\n        System.out.println(\"Program executed with exit code 0.\");\n    }\n}",
                 "expectedOutput": "Java - Chapter 24: Exception Handling: try, catch, finally\nProgram executed with exit code 0.",
-                "videoStart": 8280,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "A74TOX803D0",
-                        "start": 8280
+                        "start": 0
                     },
                     "te": {
-                        "id": "pTB0EiLXUC8",
+                        "id": "d530rd7m_1E",
                         "start": 0
                     },
                     "ta": {
@@ -11213,14 +11212,14 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 25: Custom Exceptions & throws Declaration\npublic class Main {\n    public static void main(String[] args) {\n        System.out.println(\"=== Chapter 25: Custom Exceptions & throws Declaration ===\");\n        System.out.println(\"Java Virtual Machine execution verified.\");\n    }\n}",
                 "compilerCode": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"Java - Chapter 25: Custom Exceptions & throws Declaration\");\n        System.out.println(\"Program executed with exit code 0.\");\n    }\n}",
                 "expectedOutput": "Java - Chapter 25: Custom Exceptions & throws Declaration\nProgram executed with exit code 0.",
-                "videoStart": 8640,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "A74TOX803D0",
-                        "start": 8640
+                        "start": 0
                     },
                     "te": {
-                        "id": "pTB0EiLXUC8",
+                        "id": "d530rd7m_1E",
                         "start": 0
                     },
                     "ta": {
@@ -11299,14 +11298,14 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 26: Generics: Generic Classes & Methods\npublic class Main {\n    public static void main(String[] args) {\n        System.out.println(\"=== Chapter 26: Generics: Generic Classes & Methods ===\");\n        System.out.println(\"Java Virtual Machine execution verified.\");\n    }\n}",
                 "compilerCode": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"Java - Chapter 26: Generics: Generic Classes & Methods\");\n        System.out.println(\"Program executed with exit code 0.\");\n    }\n}",
                 "expectedOutput": "Java - Chapter 26: Generics: Generic Classes & Methods\nProgram executed with exit code 0.",
-                "videoStart": 9000,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "A74TOX803D0",
-                        "start": 9000
+                        "start": 0
                     },
                     "te": {
-                        "id": "pTB0EiLXUC8",
+                        "id": "d530rd7m_1E",
                         "start": 0
                     },
                     "ta": {
@@ -11385,14 +11384,14 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 27: Collections Framework: List & ArrayList\npublic class Main {\n    public static void main(String[] args) {\n        System.out.println(\"=== Chapter 27: Collections Framework: List & ArrayList ===\");\n        System.out.println(\"Java Virtual Machine execution verified.\");\n    }\n}",
                 "compilerCode": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"Java - Chapter 27: Collections Framework: List & ArrayList\");\n        System.out.println(\"Program executed with exit code 0.\");\n    }\n}",
                 "expectedOutput": "Java - Chapter 27: Collections Framework: List & ArrayList\nProgram executed with exit code 0.",
-                "videoStart": 9360,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "A74TOX803D0",
-                        "start": 9360
+                        "start": 0
                     },
                     "te": {
-                        "id": "pTB0EiLXUC8",
+                        "id": "d530rd7m_1E",
                         "start": 0
                     },
                     "ta": {
@@ -11471,14 +11470,14 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 28: LinkedList & Vector Implementations\npublic class Main {\n    public static void main(String[] args) {\n        System.out.println(\"=== Chapter 28: LinkedList & Vector Implementations ===\");\n        System.out.println(\"Java Virtual Machine execution verified.\");\n    }\n}",
                 "compilerCode": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"Java - Chapter 28: LinkedList & Vector Implementations\");\n        System.out.println(\"Program executed with exit code 0.\");\n    }\n}",
                 "expectedOutput": "Java - Chapter 28: LinkedList & Vector Implementations\nProgram executed with exit code 0.",
-                "videoStart": 9720,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "A74TOX803D0",
-                        "start": 9720
+                        "start": 0
                     },
                     "te": {
-                        "id": "pTB0EiLXUC8",
+                        "id": "d530rd7m_1E",
                         "start": 0
                     },
                     "ta": {
@@ -11557,14 +11556,14 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 29: Sets: HashSet, LinkedHashSet & TreeSet\npublic class Main {\n    public static void main(String[] args) {\n        System.out.println(\"=== Chapter 29: Sets: HashSet, LinkedHashSet & TreeSet ===\");\n        System.out.println(\"Java Virtual Machine execution verified.\");\n    }\n}",
                 "compilerCode": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"Java - Chapter 29: Sets: HashSet, LinkedHashSet & TreeSet\");\n        System.out.println(\"Program executed with exit code 0.\");\n    }\n}",
                 "expectedOutput": "Java - Chapter 29: Sets: HashSet, LinkedHashSet & TreeSet\nProgram executed with exit code 0.",
-                "videoStart": 10080,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "A74TOX803D0",
-                        "start": 10080
+                        "start": 0
                     },
                     "te": {
-                        "id": "pTB0EiLXUC8",
+                        "id": "d530rd7m_1E",
                         "start": 0
                     },
                     "ta": {
@@ -11643,14 +11642,14 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 30: Maps: HashMap, LinkedHashMap & TreeMap\npublic class Main {\n    public static void main(String[] args) {\n        System.out.println(\"=== Chapter 30: Maps: HashMap, LinkedHashMap & TreeMap ===\");\n        System.out.println(\"Java Virtual Machine execution verified.\");\n    }\n}",
                 "compilerCode": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"Java - Chapter 30: Maps: HashMap, LinkedHashMap & TreeMap\");\n        System.out.println(\"Program executed with exit code 0.\");\n    }\n}",
                 "expectedOutput": "Java - Chapter 30: Maps: HashMap, LinkedHashMap & TreeMap\nProgram executed with exit code 0.",
-                "videoStart": 10440,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "A74TOX803D0",
-                        "start": 10440
+                        "start": 0
                     },
                     "te": {
-                        "id": "pTB0EiLXUC8",
+                        "id": "d530rd7m_1E",
                         "start": 0
                     },
                     "ta": {
@@ -11729,14 +11728,14 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 31: Comparable & Comparator for Sorting\npublic class Main {\n    public static void main(String[] args) {\n        System.out.println(\"=== Chapter 31: Comparable & Comparator for Sorting ===\");\n        System.out.println(\"Java Virtual Machine execution verified.\");\n    }\n}",
                 "compilerCode": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"Java - Chapter 31: Comparable & Comparator for Sorting\");\n        System.out.println(\"Program executed with exit code 0.\");\n    }\n}",
                 "expectedOutput": "Java - Chapter 31: Comparable & Comparator for Sorting\nProgram executed with exit code 0.",
-                "videoStart": 10800,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "A74TOX803D0",
-                        "start": 10800
+                        "start": 0
                     },
                     "te": {
-                        "id": "pTB0EiLXUC8",
+                        "id": "d530rd7m_1E",
                         "start": 0
                     },
                     "ta": {
@@ -11815,14 +11814,14 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 32: Java 8 Lambda Expressions & Functional Interfaces\npublic class Main {\n    public static void main(String[] args) {\n        System.out.println(\"=== Chapter 32: Java 8 Lambda Expressions & Functional Interfaces ===\");\n        System.out.println(\"Java Virtual Machine execution verified.\");\n    }\n}",
                 "compilerCode": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"Java - Chapter 32: Java 8 Lambda Expressions & Functional Interfaces\");\n        System.out.println(\"Program executed with exit code 0.\");\n    }\n}",
                 "expectedOutput": "Java - Chapter 32: Java 8 Lambda Expressions & Functional Interfaces\nProgram executed with exit code 0.",
-                "videoStart": 11160,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "A74TOX803D0",
-                        "start": 11160
+                        "start": 0
                     },
                     "te": {
-                        "id": "pTB0EiLXUC8",
+                        "id": "d530rd7m_1E",
                         "start": 0
                     },
                     "ta": {
@@ -11901,14 +11900,14 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 33: Streams API: filter, map, reduce, collect\npublic class Main {\n    public static void main(String[] args) {\n        System.out.println(\"=== Chapter 33: Streams API: filter, map, reduce, collect ===\");\n        System.out.println(\"Java Virtual Machine execution verified.\");\n    }\n}",
                 "compilerCode": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"Java - Chapter 33: Streams API: filter, map, reduce, collect\");\n        System.out.println(\"Program executed with exit code 0.\");\n    }\n}",
                 "expectedOutput": "Java - Chapter 33: Streams API: filter, map, reduce, collect\nProgram executed with exit code 0.",
-                "videoStart": 11520,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "A74TOX803D0",
-                        "start": 11520
+                        "start": 0
                     },
                     "te": {
-                        "id": "pTB0EiLXUC8",
+                        "id": "d530rd7m_1E",
                         "start": 0
                     },
                     "ta": {
@@ -11987,14 +11986,14 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 34: File I/O: java.nio.file & Streams\npublic class Main {\n    public static void main(String[] args) {\n        System.out.println(\"=== Chapter 34: File I/O: java.nio.file & Streams ===\");\n        System.out.println(\"Java Virtual Machine execution verified.\");\n    }\n}",
                 "compilerCode": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"Java - Chapter 34: File I/O: java.nio.file & Streams\");\n        System.out.println(\"Program executed with exit code 0.\");\n    }\n}",
                 "expectedOutput": "Java - Chapter 34: File I/O: java.nio.file & Streams\nProgram executed with exit code 0.",
-                "videoStart": 11880,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "A74TOX803D0",
-                        "start": 11880
+                        "start": 0
                     },
                     "te": {
-                        "id": "pTB0EiLXUC8",
+                        "id": "d530rd7m_1E",
                         "start": 0
                     },
                     "ta": {
@@ -12073,14 +12072,14 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 35: Multithreading, Concurrency & Enterprise Capstone\npublic class Main {\n    public static void main(String[] args) {\n        System.out.println(\"=== Chapter 35: Multithreading, Concurrency & Enterprise Capstone ===\");\n        System.out.println(\"Java Virtual Machine execution verified.\");\n    }\n}",
                 "compilerCode": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"Java - Chapter 35: Multithreading, Concurrency & Enterprise Capstone\");\n        System.out.println(\"Program executed with exit code 0.\");\n    }\n}",
                 "expectedOutput": "Java - Chapter 35: Multithreading, Concurrency & Enterprise Capstone\nProgram executed with exit code 0.",
-                "videoStart": 12240,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "A74TOX803D0",
-                        "start": 12240
+                        "start": 0
                     },
                     "te": {
-                        "id": "pTB0EiLXUC8",
+                        "id": "d530rd7m_1E",
                         "start": 0
                     },
                     "ta": {
@@ -12164,7 +12163,7 @@ window.LEARNING_DATA = {
                 "title": "JavaScript Tutorial (English)"
             },
             "te": {
-                "id": "8dWL3wF_OMw",
+                "id": "Es_5ldiBc70",
                 "title": "JavaScript Full Course in Telugu (తెలుగు)"
             },
             "ta": {
@@ -12193,7 +12192,7 @@ window.LEARNING_DATA = {
                         "start": 0
                     },
                     "te": {
-                        "id": "8dWL3wF_OMw",
+                        "id": "Es_5ldiBc70",
                         "start": 0
                     },
                     "ta": {
@@ -12272,14 +12271,14 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 2: Variables: var, let, const & Block Scope\nfunction runLesson() {\n    console.log(\"=== Chapter 2: Variables: var, let, const & Block Scope ===\");\n    console.log(\"JavaScript ES6+ execution verified.\");\n}\nrunLesson();",
                 "compilerCode": "console.log(\"JavaScript - Chapter 2: Variables: var, let, const & Block Scope\");\nconsole.log(\"Output: Ready for interactive frontend & backend tasks!\");",
                 "expectedOutput": "JavaScript - Chapter 2: Variables: var, let, const & Block Scope\nOutput: Ready for interactive frontend & backend tasks!",
-                "videoStart": 360,
+                "videoStart": 240,
                 "videos": {
                     "en": {
                         "id": "W6NZfCO5SIk",
-                        "start": 360
+                        "start": 240
                     },
                     "te": {
-                        "id": "8dWL3wF_OMw",
+                        "id": "Es_5ldiBc70",
                         "start": 0
                     },
                     "ta": {
@@ -12358,14 +12357,14 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 3: Data Types: Primitives vs Objects\nfunction runLesson() {\n    console.log(\"=== Chapter 3: Data Types: Primitives vs Objects ===\");\n    console.log(\"JavaScript ES6+ execution verified.\");\n}\nrunLesson();",
                 "compilerCode": "console.log(\"JavaScript - Chapter 3: Data Types: Primitives vs Objects\");\nconsole.log(\"Output: Ready for interactive frontend & backend tasks!\");",
                 "expectedOutput": "JavaScript - Chapter 3: Data Types: Primitives vs Objects\nOutput: Ready for interactive frontend & backend tasks!",
-                "videoStart": 720,
+                "videoStart": 540,
                 "videos": {
                     "en": {
                         "id": "W6NZfCO5SIk",
-                        "start": 720
+                        "start": 540
                     },
                     "te": {
-                        "id": "8dWL3wF_OMw",
+                        "id": "Es_5ldiBc70",
                         "start": 0
                     },
                     "ta": {
@@ -12444,14 +12443,14 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 4: Operators: Arithmetic, Equality & Logical\nfunction runLesson() {\n    console.log(\"=== Chapter 4: Operators: Arithmetic, Equality & Logical ===\");\n    console.log(\"JavaScript ES6+ execution verified.\");\n}\nrunLesson();",
                 "compilerCode": "console.log(\"JavaScript - Chapter 4: Operators: Arithmetic, Equality & Logical\");\nconsole.log(\"Output: Ready for interactive frontend & backend tasks!\");",
                 "expectedOutput": "JavaScript - Chapter 4: Operators: Arithmetic, Equality & Logical\nOutput: Ready for interactive frontend & backend tasks!",
-                "videoStart": 1080,
+                "videoStart": 900,
                 "videos": {
                     "en": {
                         "id": "W6NZfCO5SIk",
-                        "start": 1080
+                        "start": 900
                     },
                     "te": {
-                        "id": "8dWL3wF_OMw",
+                        "id": "Es_5ldiBc70",
                         "start": 0
                     },
                     "ta": {
@@ -12530,14 +12529,14 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 5: Conditionals: if-else, Ternary & Switch\nfunction runLesson() {\n    console.log(\"=== Chapter 5: Conditionals: if-else, Ternary & Switch ===\");\n    console.log(\"JavaScript ES6+ execution verified.\");\n}\nrunLesson();",
                 "compilerCode": "console.log(\"JavaScript - Chapter 5: Conditionals: if-else, Ternary & Switch\");\nconsole.log(\"Output: Ready for interactive frontend & backend tasks!\");",
                 "expectedOutput": "JavaScript - Chapter 5: Conditionals: if-else, Ternary & Switch\nOutput: Ready for interactive frontend & backend tasks!",
-                "videoStart": 1440,
+                "videoStart": 1320,
                 "videos": {
                     "en": {
                         "id": "W6NZfCO5SIk",
-                        "start": 1440
+                        "start": 1320
                     },
                     "te": {
-                        "id": "8dWL3wF_OMw",
+                        "id": "Es_5ldiBc70",
                         "start": 0
                     },
                     "ta": {
@@ -12623,7 +12622,7 @@ window.LEARNING_DATA = {
                         "start": 1800
                     },
                     "te": {
-                        "id": "8dWL3wF_OMw",
+                        "id": "Es_5ldiBc70",
                         "start": 0
                     },
                     "ta": {
@@ -12702,14 +12701,14 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 7: Functions: Declarations, Expressions & Arrows\nfunction runLesson() {\n    console.log(\"=== Chapter 7: Functions: Declarations, Expressions & Arrows ===\");\n    console.log(\"JavaScript ES6+ execution verified.\");\n}\nrunLesson();",
                 "compilerCode": "console.log(\"JavaScript - Chapter 7: Functions: Declarations, Expressions & Arrows\");\nconsole.log(\"Output: Ready for interactive frontend & backend tasks!\");",
                 "expectedOutput": "JavaScript - Chapter 7: Functions: Declarations, Expressions & Arrows\nOutput: Ready for interactive frontend & backend tasks!",
-                "videoStart": 2160,
+                "videoStart": 2280,
                 "videos": {
                     "en": {
                         "id": "W6NZfCO5SIk",
-                        "start": 2160
+                        "start": 2280
                     },
                     "te": {
-                        "id": "8dWL3wF_OMw",
+                        "id": "Es_5ldiBc70",
                         "start": 0
                     },
                     "ta": {
@@ -12788,14 +12787,14 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 8: Default Parameters & Rest/Spread Syntax\nfunction runLesson() {\n    console.log(\"=== Chapter 8: Default Parameters & Rest/Spread Syntax ===\");\n    console.log(\"JavaScript ES6+ execution verified.\");\n}\nrunLesson();",
                 "compilerCode": "console.log(\"JavaScript - Chapter 8: Default Parameters & Rest/Spread Syntax\");\nconsole.log(\"Output: Ready for interactive frontend & backend tasks!\");",
                 "expectedOutput": "JavaScript - Chapter 8: Default Parameters & Rest/Spread Syntax\nOutput: Ready for interactive frontend & backend tasks!",
-                "videoStart": 2520,
+                "videoStart": 2760,
                 "videos": {
                     "en": {
                         "id": "W6NZfCO5SIk",
-                        "start": 2520
+                        "start": 2760
                     },
                     "te": {
-                        "id": "8dWL3wF_OMw",
+                        "id": "Es_5ldiBc70",
                         "start": 0
                     },
                     "ta": {
@@ -12874,14 +12873,14 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 9: Scope, Execution Context & Call Stack\nfunction runLesson() {\n    console.log(\"=== Chapter 9: Scope, Execution Context & Call Stack ===\");\n    console.log(\"JavaScript ES6+ execution verified.\");\n}\nrunLesson();",
                 "compilerCode": "console.log(\"JavaScript - Chapter 9: Scope, Execution Context & Call Stack\");\nconsole.log(\"Output: Ready for interactive frontend & backend tasks!\");",
                 "expectedOutput": "JavaScript - Chapter 9: Scope, Execution Context & Call Stack\nOutput: Ready for interactive frontend & backend tasks!",
-                "videoStart": 2880,
+                "videoStart": 3180,
                 "videos": {
                     "en": {
                         "id": "W6NZfCO5SIk",
-                        "start": 2880
+                        "start": 3180
                     },
                     "te": {
-                        "id": "8dWL3wF_OMw",
+                        "id": "Es_5ldiBc70",
                         "start": 0
                     },
                     "ta": {
@@ -12960,14 +12959,14 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 10: Closures & Lexical Environment\nfunction runLesson() {\n    console.log(\"=== Chapter 10: Closures & Lexical Environment ===\");\n    console.log(\"JavaScript ES6+ execution verified.\");\n}\nrunLesson();",
                 "compilerCode": "console.log(\"JavaScript - Chapter 10: Closures & Lexical Environment\");\nconsole.log(\"Output: Ready for interactive frontend & backend tasks!\");",
                 "expectedOutput": "JavaScript - Chapter 10: Closures & Lexical Environment\nOutput: Ready for interactive frontend & backend tasks!",
-                "videoStart": 3240,
+                "videoStart": 3480,
                 "videos": {
                     "en": {
                         "id": "W6NZfCO5SIk",
-                        "start": 3240
+                        "start": 3480
                     },
                     "te": {
-                        "id": "8dWL3wF_OMw",
+                        "id": "Es_5ldiBc70",
                         "start": 0
                     },
                     "ta": {
@@ -13046,14 +13045,14 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 11: Array Basics: Creation, Indexing & Length\nfunction runLesson() {\n    console.log(\"=== Chapter 11: Array Basics: Creation, Indexing & Length ===\");\n    console.log(\"JavaScript ES6+ execution verified.\");\n}\nrunLesson();",
                 "compilerCode": "console.log(\"JavaScript - Chapter 11: Array Basics: Creation, Indexing & Length\");\nconsole.log(\"Output: Ready for interactive frontend & backend tasks!\");",
                 "expectedOutput": "JavaScript - Chapter 11: Array Basics: Creation, Indexing & Length\nOutput: Ready for interactive frontend & backend tasks!",
-                "videoStart": 3600,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "W6NZfCO5SIk",
-                        "start": 3600
+                        "start": 0
                     },
                     "te": {
-                        "id": "8dWL3wF_OMw",
+                        "id": "Es_5ldiBc70",
                         "start": 0
                     },
                     "ta": {
@@ -13132,14 +13131,14 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 12: Array Mutator Methods (push, pop, splice)\nfunction runLesson() {\n    console.log(\"=== Chapter 12: Array Mutator Methods (push, pop, splice) ===\");\n    console.log(\"JavaScript ES6+ execution verified.\");\n}\nrunLesson();",
                 "compilerCode": "console.log(\"JavaScript - Chapter 12: Array Mutator Methods (push, pop, splice)\");\nconsole.log(\"Output: Ready for interactive frontend & backend tasks!\");",
                 "expectedOutput": "JavaScript - Chapter 12: Array Mutator Methods (push, pop, splice)\nOutput: Ready for interactive frontend & backend tasks!",
-                "videoStart": 3960,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "W6NZfCO5SIk",
-                        "start": 3960
+                        "start": 0
                     },
                     "te": {
-                        "id": "8dWL3wF_OMw",
+                        "id": "Es_5ldiBc70",
                         "start": 0
                     },
                     "ta": {
@@ -13218,14 +13217,14 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 13: Array Iterators: map, filter, reduce\nfunction runLesson() {\n    console.log(\"=== Chapter 13: Array Iterators: map, filter, reduce ===\");\n    console.log(\"JavaScript ES6+ execution verified.\");\n}\nrunLesson();",
                 "compilerCode": "console.log(\"JavaScript - Chapter 13: Array Iterators: map, filter, reduce\");\nconsole.log(\"Output: Ready for interactive frontend & backend tasks!\");",
                 "expectedOutput": "JavaScript - Chapter 13: Array Iterators: map, filter, reduce\nOutput: Ready for interactive frontend & backend tasks!",
-                "videoStart": 4320,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "W6NZfCO5SIk",
-                        "start": 4320
+                        "start": 0
                     },
                     "te": {
-                        "id": "8dWL3wF_OMw",
+                        "id": "Es_5ldiBc70",
                         "start": 0
                     },
                     "ta": {
@@ -13304,14 +13303,14 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 14: Array Search: find, findIndex, includes\nfunction runLesson() {\n    console.log(\"=== Chapter 14: Array Search: find, findIndex, includes ===\");\n    console.log(\"JavaScript ES6+ execution verified.\");\n}\nrunLesson();",
                 "compilerCode": "console.log(\"JavaScript - Chapter 14: Array Search: find, findIndex, includes\");\nconsole.log(\"Output: Ready for interactive frontend & backend tasks!\");",
                 "expectedOutput": "JavaScript - Chapter 14: Array Search: find, findIndex, includes\nOutput: Ready for interactive frontend & backend tasks!",
-                "videoStart": 4680,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "W6NZfCO5SIk",
-                        "start": 4680
+                        "start": 0
                     },
                     "te": {
-                        "id": "8dWL3wF_OMw",
+                        "id": "Es_5ldiBc70",
                         "start": 0
                     },
                     "ta": {
@@ -13390,14 +13389,14 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 15: Object Literals, Properties & Methods\nfunction runLesson() {\n    console.log(\"=== Chapter 15: Object Literals, Properties & Methods ===\");\n    console.log(\"JavaScript ES6+ execution verified.\");\n}\nrunLesson();",
                 "compilerCode": "console.log(\"JavaScript - Chapter 15: Object Literals, Properties & Methods\");\nconsole.log(\"Output: Ready for interactive frontend & backend tasks!\");",
                 "expectedOutput": "JavaScript - Chapter 15: Object Literals, Properties & Methods\nOutput: Ready for interactive frontend & backend tasks!",
-                "videoStart": 5040,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "W6NZfCO5SIk",
-                        "start": 5040
+                        "start": 0
                     },
                     "te": {
-                        "id": "8dWL3wF_OMw",
+                        "id": "Es_5ldiBc70",
                         "start": 0
                     },
                     "ta": {
@@ -13476,14 +13475,14 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 16: Object Destructuring & Shorthand Syntax\nfunction runLesson() {\n    console.log(\"=== Chapter 16: Object Destructuring & Shorthand Syntax ===\");\n    console.log(\"JavaScript ES6+ execution verified.\");\n}\nrunLesson();",
                 "compilerCode": "console.log(\"JavaScript - Chapter 16: Object Destructuring & Shorthand Syntax\");\nconsole.log(\"Output: Ready for interactive frontend & backend tasks!\");",
                 "expectedOutput": "JavaScript - Chapter 16: Object Destructuring & Shorthand Syntax\nOutput: Ready for interactive frontend & backend tasks!",
-                "videoStart": 5400,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "W6NZfCO5SIk",
-                        "start": 5400
+                        "start": 0
                     },
                     "te": {
-                        "id": "8dWL3wF_OMw",
+                        "id": "Es_5ldiBc70",
                         "start": 0
                     },
                     "ta": {
@@ -13562,14 +13561,14 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 17: Array Destructuring & Swapping Variables\nfunction runLesson() {\n    console.log(\"=== Chapter 17: Array Destructuring & Swapping Variables ===\");\n    console.log(\"JavaScript ES6+ execution verified.\");\n}\nrunLesson();",
                 "compilerCode": "console.log(\"JavaScript - Chapter 17: Array Destructuring & Swapping Variables\");\nconsole.log(\"Output: Ready for interactive frontend & backend tasks!\");",
                 "expectedOutput": "JavaScript - Chapter 17: Array Destructuring & Swapping Variables\nOutput: Ready for interactive frontend & backend tasks!",
-                "videoStart": 5760,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "W6NZfCO5SIk",
-                        "start": 5760
+                        "start": 0
                     },
                     "te": {
-                        "id": "8dWL3wF_OMw",
+                        "id": "Es_5ldiBc70",
                         "start": 0
                     },
                     "ta": {
@@ -13648,14 +13647,14 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 18: The 'this' Keyword & Explicit Binding\nfunction runLesson() {\n    console.log(\"=== Chapter 18: The 'this' Keyword & Explicit Binding ===\");\n    console.log(\"JavaScript ES6+ execution verified.\");\n}\nrunLesson();",
                 "compilerCode": "console.log(\"JavaScript - Chapter 18: The 'this' Keyword & Explicit Binding\");\nconsole.log(\"Output: Ready for interactive frontend & backend tasks!\");",
                 "expectedOutput": "JavaScript - Chapter 18: The 'this' Keyword & Explicit Binding\nOutput: Ready for interactive frontend & backend tasks!",
-                "videoStart": 6120,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "W6NZfCO5SIk",
-                        "start": 6120
+                        "start": 0
                     },
                     "te": {
-                        "id": "8dWL3wF_OMw",
+                        "id": "Es_5ldiBc70",
                         "start": 0
                     },
                     "ta": {
@@ -13734,14 +13733,14 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 19: Prototypes & Prototypal Inheritance\nfunction runLesson() {\n    console.log(\"=== Chapter 19: Prototypes & Prototypal Inheritance ===\");\n    console.log(\"JavaScript ES6+ execution verified.\");\n}\nrunLesson();",
                 "compilerCode": "console.log(\"JavaScript - Chapter 19: Prototypes & Prototypal Inheritance\");\nconsole.log(\"Output: Ready for interactive frontend & backend tasks!\");",
                 "expectedOutput": "JavaScript - Chapter 19: Prototypes & Prototypal Inheritance\nOutput: Ready for interactive frontend & backend tasks!",
-                "videoStart": 6480,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "W6NZfCO5SIk",
-                        "start": 6480
+                        "start": 0
                     },
                     "te": {
-                        "id": "8dWL3wF_OMw",
+                        "id": "Es_5ldiBc70",
                         "start": 0
                     },
                     "ta": {
@@ -13820,14 +13819,14 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 20: ES6 Classes, Constructors & Methods\nfunction runLesson() {\n    console.log(\"=== Chapter 20: ES6 Classes, Constructors & Methods ===\");\n    console.log(\"JavaScript ES6+ execution verified.\");\n}\nrunLesson();",
                 "compilerCode": "console.log(\"JavaScript - Chapter 20: ES6 Classes, Constructors & Methods\");\nconsole.log(\"Output: Ready for interactive frontend & backend tasks!\");",
                 "expectedOutput": "JavaScript - Chapter 20: ES6 Classes, Constructors & Methods\nOutput: Ready for interactive frontend & backend tasks!",
-                "videoStart": 6840,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "W6NZfCO5SIk",
-                        "start": 6840
+                        "start": 0
                     },
                     "te": {
-                        "id": "8dWL3wF_OMw",
+                        "id": "Es_5ldiBc70",
                         "start": 0
                     },
                     "ta": {
@@ -13906,14 +13905,14 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 21: Class Inheritance (extends & super)\nfunction runLesson() {\n    console.log(\"=== Chapter 21: Class Inheritance (extends & super) ===\");\n    console.log(\"JavaScript ES6+ execution verified.\");\n}\nrunLesson();",
                 "compilerCode": "console.log(\"JavaScript - Chapter 21: Class Inheritance (extends & super)\");\nconsole.log(\"Output: Ready for interactive frontend & backend tasks!\");",
                 "expectedOutput": "JavaScript - Chapter 21: Class Inheritance (extends & super)\nOutput: Ready for interactive frontend & backend tasks!",
-                "videoStart": 7200,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "W6NZfCO5SIk",
-                        "start": 7200
+                        "start": 0
                     },
                     "te": {
-                        "id": "8dWL3wF_OMw",
+                        "id": "Es_5ldiBc70",
                         "start": 0
                     },
                     "ta": {
@@ -13992,14 +13991,14 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 22: Getters, Setters & Static Class Members\nfunction runLesson() {\n    console.log(\"=== Chapter 22: Getters, Setters & Static Class Members ===\");\n    console.log(\"JavaScript ES6+ execution verified.\");\n}\nrunLesson();",
                 "compilerCode": "console.log(\"JavaScript - Chapter 22: Getters, Setters & Static Class Members\");\nconsole.log(\"Output: Ready for interactive frontend & backend tasks!\");",
                 "expectedOutput": "JavaScript - Chapter 22: Getters, Setters & Static Class Members\nOutput: Ready for interactive frontend & backend tasks!",
-                "videoStart": 7560,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "W6NZfCO5SIk",
-                        "start": 7560
+                        "start": 0
                     },
                     "te": {
-                        "id": "8dWL3wF_OMw",
+                        "id": "Es_5ldiBc70",
                         "start": 0
                     },
                     "ta": {
@@ -14078,14 +14077,14 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 23: Error Handling: try, catch, finally\nfunction runLesson() {\n    console.log(\"=== Chapter 23: Error Handling: try, catch, finally ===\");\n    console.log(\"JavaScript ES6+ execution verified.\");\n}\nrunLesson();",
                 "compilerCode": "console.log(\"JavaScript - Chapter 23: Error Handling: try, catch, finally\");\nconsole.log(\"Output: Ready for interactive frontend & backend tasks!\");",
                 "expectedOutput": "JavaScript - Chapter 23: Error Handling: try, catch, finally\nOutput: Ready for interactive frontend & backend tasks!",
-                "videoStart": 7920,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "W6NZfCO5SIk",
-                        "start": 7920
+                        "start": 0
                     },
                     "te": {
-                        "id": "8dWL3wF_OMw",
+                        "id": "Es_5ldiBc70",
                         "start": 0
                     },
                     "ta": {
@@ -14164,14 +14163,14 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 24: Asynchronous JS: Callbacks & Async Nature\nfunction runLesson() {\n    console.log(\"=== Chapter 24: Asynchronous JS: Callbacks & Async Nature ===\");\n    console.log(\"JavaScript ES6+ execution verified.\");\n}\nrunLesson();",
                 "compilerCode": "console.log(\"JavaScript - Chapter 24: Asynchronous JS: Callbacks & Async Nature\");\nconsole.log(\"Output: Ready for interactive frontend & backend tasks!\");",
                 "expectedOutput": "JavaScript - Chapter 24: Asynchronous JS: Callbacks & Async Nature\nOutput: Ready for interactive frontend & backend tasks!",
-                "videoStart": 8280,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "W6NZfCO5SIk",
-                        "start": 8280
+                        "start": 0
                     },
                     "te": {
-                        "id": "8dWL3wF_OMw",
+                        "id": "Es_5ldiBc70",
                         "start": 0
                     },
                     "ta": {
@@ -14250,14 +14249,14 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 25: Promises: Creating, Resolving & Rejecting\nfunction runLesson() {\n    console.log(\"=== Chapter 25: Promises: Creating, Resolving & Rejecting ===\");\n    console.log(\"JavaScript ES6+ execution verified.\");\n}\nrunLesson();",
                 "compilerCode": "console.log(\"JavaScript - Chapter 25: Promises: Creating, Resolving & Rejecting\");\nconsole.log(\"Output: Ready for interactive frontend & backend tasks!\");",
                 "expectedOutput": "JavaScript - Chapter 25: Promises: Creating, Resolving & Rejecting\nOutput: Ready for interactive frontend & backend tasks!",
-                "videoStart": 8640,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "W6NZfCO5SIk",
-                        "start": 8640
+                        "start": 0
                     },
                     "te": {
-                        "id": "8dWL3wF_OMw",
+                        "id": "Es_5ldiBc70",
                         "start": 0
                     },
                     "ta": {
@@ -14336,14 +14335,14 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 26: Promise Chaining & Error Propagation\nfunction runLesson() {\n    console.log(\"=== Chapter 26: Promise Chaining & Error Propagation ===\");\n    console.log(\"JavaScript ES6+ execution verified.\");\n}\nrunLesson();",
                 "compilerCode": "console.log(\"JavaScript - Chapter 26: Promise Chaining & Error Propagation\");\nconsole.log(\"Output: Ready for interactive frontend & backend tasks!\");",
                 "expectedOutput": "JavaScript - Chapter 26: Promise Chaining & Error Propagation\nOutput: Ready for interactive frontend & backend tasks!",
-                "videoStart": 9000,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "W6NZfCO5SIk",
-                        "start": 9000
+                        "start": 0
                     },
                     "te": {
-                        "id": "8dWL3wF_OMw",
+                        "id": "Es_5ldiBc70",
                         "start": 0
                     },
                     "ta": {
@@ -14422,14 +14421,14 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 27: Promise.all, allSettled, race & any\nfunction runLesson() {\n    console.log(\"=== Chapter 27: Promise.all, allSettled, race & any ===\");\n    console.log(\"JavaScript ES6+ execution verified.\");\n}\nrunLesson();",
                 "compilerCode": "console.log(\"JavaScript - Chapter 27: Promise.all, allSettled, race & any\");\nconsole.log(\"Output: Ready for interactive frontend & backend tasks!\");",
                 "expectedOutput": "JavaScript - Chapter 27: Promise.all, allSettled, race & any\nOutput: Ready for interactive frontend & backend tasks!",
-                "videoStart": 9360,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "W6NZfCO5SIk",
-                        "start": 9360
+                        "start": 0
                     },
                     "te": {
-                        "id": "8dWL3wF_OMw",
+                        "id": "Es_5ldiBc70",
                         "start": 0
                     },
                     "ta": {
@@ -14508,14 +14507,14 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 28: Async/Await Syntax & Error Handling\nfunction runLesson() {\n    console.log(\"=== Chapter 28: Async/Await Syntax & Error Handling ===\");\n    console.log(\"JavaScript ES6+ execution verified.\");\n}\nrunLesson();",
                 "compilerCode": "console.log(\"JavaScript - Chapter 28: Async/Await Syntax & Error Handling\");\nconsole.log(\"Output: Ready for interactive frontend & backend tasks!\");",
                 "expectedOutput": "JavaScript - Chapter 28: Async/Await Syntax & Error Handling\nOutput: Ready for interactive frontend & backend tasks!",
-                "videoStart": 9720,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "W6NZfCO5SIk",
-                        "start": 9720
+                        "start": 0
                     },
                     "te": {
-                        "id": "8dWL3wF_OMw",
+                        "id": "Es_5ldiBc70",
                         "start": 0
                     },
                     "ta": {
@@ -14594,14 +14593,14 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 29: The Event Loop: Microtasks & Macrotasks\nfunction runLesson() {\n    console.log(\"=== Chapter 29: The Event Loop: Microtasks & Macrotasks ===\");\n    console.log(\"JavaScript ES6+ execution verified.\");\n}\nrunLesson();",
                 "compilerCode": "console.log(\"JavaScript - Chapter 29: The Event Loop: Microtasks & Macrotasks\");\nconsole.log(\"Output: Ready for interactive frontend & backend tasks!\");",
                 "expectedOutput": "JavaScript - Chapter 29: The Event Loop: Microtasks & Macrotasks\nOutput: Ready for interactive frontend & backend tasks!",
-                "videoStart": 10080,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "W6NZfCO5SIk",
-                        "start": 10080
+                        "start": 0
                     },
                     "te": {
-                        "id": "8dWL3wF_OMw",
+                        "id": "Es_5ldiBc70",
                         "start": 0
                     },
                     "ta": {
@@ -14680,14 +14679,14 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 30: DOM Selection & Property Modification\nfunction runLesson() {\n    console.log(\"=== Chapter 30: DOM Selection & Property Modification ===\");\n    console.log(\"JavaScript ES6+ execution verified.\");\n}\nrunLesson();",
                 "compilerCode": "console.log(\"JavaScript - Chapter 30: DOM Selection & Property Modification\");\nconsole.log(\"Output: Ready for interactive frontend & backend tasks!\");",
                 "expectedOutput": "JavaScript - Chapter 30: DOM Selection & Property Modification\nOutput: Ready for interactive frontend & backend tasks!",
-                "videoStart": 10440,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "W6NZfCO5SIk",
-                        "start": 10440
+                        "start": 0
                     },
                     "te": {
-                        "id": "8dWL3wF_OMw",
+                        "id": "Es_5ldiBc70",
                         "start": 0
                     },
                     "ta": {
@@ -14766,14 +14765,14 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 31: DOM Event Listeners & Event Delegation\nfunction runLesson() {\n    console.log(\"=== Chapter 31: DOM Event Listeners & Event Delegation ===\");\n    console.log(\"JavaScript ES6+ execution verified.\");\n}\nrunLesson();",
                 "compilerCode": "console.log(\"JavaScript - Chapter 31: DOM Event Listeners & Event Delegation\");\nconsole.log(\"Output: Ready for interactive frontend & backend tasks!\");",
                 "expectedOutput": "JavaScript - Chapter 31: DOM Event Listeners & Event Delegation\nOutput: Ready for interactive frontend & backend tasks!",
-                "videoStart": 10800,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "W6NZfCO5SIk",
-                        "start": 10800
+                        "start": 0
                     },
                     "te": {
-                        "id": "8dWL3wF_OMw",
+                        "id": "Es_5ldiBc70",
                         "start": 0
                     },
                     "ta": {
@@ -14852,14 +14851,14 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 32: Web Storage: localStorage & sessionStorage\nfunction runLesson() {\n    console.log(\"=== Chapter 32: Web Storage: localStorage & sessionStorage ===\");\n    console.log(\"JavaScript ES6+ execution verified.\");\n}\nrunLesson();",
                 "compilerCode": "console.log(\"JavaScript - Chapter 32: Web Storage: localStorage & sessionStorage\");\nconsole.log(\"Output: Ready for interactive frontend & backend tasks!\");",
                 "expectedOutput": "JavaScript - Chapter 32: Web Storage: localStorage & sessionStorage\nOutput: Ready for interactive frontend & backend tasks!",
-                "videoStart": 11160,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "W6NZfCO5SIk",
-                        "start": 11160
+                        "start": 0
                     },
                     "te": {
-                        "id": "8dWL3wF_OMw",
+                        "id": "Es_5ldiBc70",
                         "start": 0
                     },
                     "ta": {
@@ -14938,14 +14937,14 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 33: Fetch API & Consuming JSON REST Endpoints\nfunction runLesson() {\n    console.log(\"=== Chapter 33: Fetch API & Consuming JSON REST Endpoints ===\");\n    console.log(\"JavaScript ES6+ execution verified.\");\n}\nrunLesson();",
                 "compilerCode": "console.log(\"JavaScript - Chapter 33: Fetch API & Consuming JSON REST Endpoints\");\nconsole.log(\"Output: Ready for interactive frontend & backend tasks!\");",
                 "expectedOutput": "JavaScript - Chapter 33: Fetch API & Consuming JSON REST Endpoints\nOutput: Ready for interactive frontend & backend tasks!",
-                "videoStart": 11520,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "W6NZfCO5SIk",
-                        "start": 11520
+                        "start": 0
                     },
                     "te": {
-                        "id": "8dWL3wF_OMw",
+                        "id": "Es_5ldiBc70",
                         "start": 0
                     },
                     "ta": {
@@ -15024,14 +15023,14 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 34: ES Modules: import, export & Bundling\nfunction runLesson() {\n    console.log(\"=== Chapter 34: ES Modules: import, export & Bundling ===\");\n    console.log(\"JavaScript ES6+ execution verified.\");\n}\nrunLesson();",
                 "compilerCode": "console.log(\"JavaScript - Chapter 34: ES Modules: import, export & Bundling\");\nconsole.log(\"Output: Ready for interactive frontend & backend tasks!\");",
                 "expectedOutput": "JavaScript - Chapter 34: ES Modules: import, export & Bundling\nOutput: Ready for interactive frontend & backend tasks!",
-                "videoStart": 11880,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "W6NZfCO5SIk",
-                        "start": 11880
+                        "start": 0
                     },
                     "te": {
-                        "id": "8dWL3wF_OMw",
+                        "id": "Es_5ldiBc70",
                         "start": 0
                     },
                     "ta": {
@@ -15110,14 +15109,14 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 35: Modern Single Page App (SPA) Capstone\nfunction runLesson() {\n    console.log(\"=== Chapter 35: Modern Single Page App (SPA) Capstone ===\");\n    console.log(\"JavaScript ES6+ execution verified.\");\n}\nrunLesson();",
                 "compilerCode": "console.log(\"JavaScript - Chapter 35: Modern Single Page App (SPA) Capstone\");\nconsole.log(\"Output: Ready for interactive frontend & backend tasks!\");",
                 "expectedOutput": "JavaScript - Chapter 35: Modern Single Page App (SPA) Capstone\nOutput: Ready for interactive frontend & backend tasks!",
-                "videoStart": 12240,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "W6NZfCO5SIk",
-                        "start": 12240
+                        "start": 0
                     },
                     "te": {
-                        "id": "8dWL3wF_OMw",
+                        "id": "Es_5ldiBc70",
                         "start": 0
                     },
                     "ta": {
@@ -15309,11 +15308,11 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 2: Setting Up TS, tsc Compiler & tsconfig\ninterface LessonMeta {\n    chapter: number;\n    title: string;\n}\n\nconst meta: LessonMeta = { chapter: 2, title: \"Setting Up TS, tsc Compiler & tsconfig\" };\nconsole.log(`Chapter ${meta.chapter}: ${meta.title}`);",
                 "compilerCode": "const chapterName: string = \"Setting Up TS, tsc Compiler & tsconfig\";\nconsole.log(\"TypeScript - Chapter 2: \" + chapterName);\nconsole.log(\"Type-checking completed with 0 errors.\");",
                 "expectedOutput": "TypeScript - Chapter 2: Setting Up TS, tsc Compiler & tsconfig\nType-checking completed with 0 errors.",
-                "videoStart": 360,
+                "videoStart": 260,
                 "videos": {
                     "en": {
                         "id": "d56mG7DezGs",
-                        "start": 360
+                        "start": 260
                     },
                     "te": {
                         "id": "30LWjhZzg50",
@@ -15395,11 +15394,11 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 3: Primitive Types: number, string, boolean\ninterface LessonMeta {\n    chapter: number;\n    title: string;\n}\n\nconst meta: LessonMeta = { chapter: 3, title: \"Primitive Types: number, string, boolean\" };\nconsole.log(`Chapter ${meta.chapter}: ${meta.title}`);",
                 "compilerCode": "const chapterName: string = \"Primitive Types: number, string, boolean\";\nconsole.log(\"TypeScript - Chapter 3: \" + chapterName);\nconsole.log(\"Type-checking completed with 0 errors.\");",
                 "expectedOutput": "TypeScript - Chapter 3: Primitive Types: number, string, boolean\nType-checking completed with 0 errors.",
-                "videoStart": 720,
+                "videoStart": 580,
                 "videos": {
                     "en": {
                         "id": "d56mG7DezGs",
-                        "start": 720
+                        "start": 580
                     },
                     "te": {
                         "id": "30LWjhZzg50",
@@ -15481,11 +15480,11 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 4: Special Types: any, unknown & void\ninterface LessonMeta {\n    chapter: number;\n    title: string;\n}\n\nconst meta: LessonMeta = { chapter: 4, title: \"Special Types: any, unknown & void\" };\nconsole.log(`Chapter ${meta.chapter}: ${meta.title}`);",
                 "compilerCode": "const chapterName: string = \"Special Types: any, unknown & void\";\nconsole.log(\"TypeScript - Chapter 4: \" + chapterName);\nconsole.log(\"Type-checking completed with 0 errors.\");",
                 "expectedOutput": "TypeScript - Chapter 4: Special Types: any, unknown & void\nType-checking completed with 0 errors.",
-                "videoStart": 1080,
+                "videoStart": 960,
                 "videos": {
                     "en": {
                         "id": "d56mG7DezGs",
-                        "start": 1080
+                        "start": 960
                     },
                     "te": {
                         "id": "30LWjhZzg50",
@@ -15567,11 +15566,11 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 5: Type Annotations vs Type Inference\ninterface LessonMeta {\n    chapter: number;\n    title: string;\n}\n\nconst meta: LessonMeta = { chapter: 5, title: \"Type Annotations vs Type Inference\" };\nconsole.log(`Chapter ${meta.chapter}: ${meta.title}`);",
                 "compilerCode": "const chapterName: string = \"Type Annotations vs Type Inference\";\nconsole.log(\"TypeScript - Chapter 5: \" + chapterName);\nconsole.log(\"Type-checking completed with 0 errors.\");",
                 "expectedOutput": "TypeScript - Chapter 5: Type Annotations vs Type Inference\nType-checking completed with 0 errors.",
-                "videoStart": 1440,
+                "videoStart": 1380,
                 "videos": {
                     "en": {
                         "id": "d56mG7DezGs",
-                        "start": 1440
+                        "start": 1380
                     },
                     "te": {
                         "id": "30LWjhZzg50",
@@ -15653,11 +15652,11 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 6: Arrays & Tuple Types in TypeScript\ninterface LessonMeta {\n    chapter: number;\n    title: string;\n}\n\nconst meta: LessonMeta = { chapter: 6, title: \"Arrays & Tuple Types in TypeScript\" };\nconsole.log(`Chapter ${meta.chapter}: ${meta.title}`);",
                 "compilerCode": "const chapterName: string = \"Arrays & Tuple Types in TypeScript\";\nconsole.log(\"TypeScript - Chapter 6: \" + chapterName);\nconsole.log(\"Type-checking completed with 0 errors.\");",
                 "expectedOutput": "TypeScript - Chapter 6: Arrays & Tuple Types in TypeScript\nType-checking completed with 0 errors.",
-                "videoStart": 1800,
+                "videoStart": 1860,
                 "videos": {
                     "en": {
                         "id": "d56mG7DezGs",
-                        "start": 1800
+                        "start": 1860
                     },
                     "te": {
                         "id": "30LWjhZzg50",
@@ -15739,11 +15738,11 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 7: Enums: Numeric, String & Const Enums\ninterface LessonMeta {\n    chapter: number;\n    title: string;\n}\n\nconst meta: LessonMeta = { chapter: 7, title: \"Enums: Numeric, String & Const Enums\" };\nconsole.log(`Chapter ${meta.chapter}: ${meta.title}`);",
                 "compilerCode": "const chapterName: string = \"Enums: Numeric, String & Const Enums\";\nconsole.log(\"TypeScript - Chapter 7: \" + chapterName);\nconsole.log(\"Type-checking completed with 0 errors.\");",
                 "expectedOutput": "TypeScript - Chapter 7: Enums: Numeric, String & Const Enums\nType-checking completed with 0 errors.",
-                "videoStart": 2160,
+                "videoStart": 2340,
                 "videos": {
                     "en": {
                         "id": "d56mG7DezGs",
-                        "start": 2160
+                        "start": 2340
                     },
                     "te": {
                         "id": "30LWjhZzg50",
@@ -15825,11 +15824,11 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 8: Functions: Parameter & Return Type Annotations\ninterface LessonMeta {\n    chapter: number;\n    title: string;\n}\n\nconst meta: LessonMeta = { chapter: 8, title: \"Functions: Parameter & Return Type Annotations\" };\nconsole.log(`Chapter ${meta.chapter}: ${meta.title}`);",
                 "compilerCode": "const chapterName: string = \"Functions: Parameter & Return Type Annotations\";\nconsole.log(\"TypeScript - Chapter 8: \" + chapterName);\nconsole.log(\"Type-checking completed with 0 errors.\");",
                 "expectedOutput": "TypeScript - Chapter 8: Functions: Parameter & Return Type Annotations\nType-checking completed with 0 errors.",
-                "videoStart": 2520,
+                "videoStart": 2760,
                 "videos": {
                     "en": {
                         "id": "d56mG7DezGs",
-                        "start": 2520
+                        "start": 2760
                     },
                     "te": {
                         "id": "30LWjhZzg50",
@@ -15911,11 +15910,11 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 9: Optional, Default & Rest Parameters\ninterface LessonMeta {\n    chapter: number;\n    title: string;\n}\n\nconst meta: LessonMeta = { chapter: 9, title: \"Optional, Default & Rest Parameters\" };\nconsole.log(`Chapter ${meta.chapter}: ${meta.title}`);",
                 "compilerCode": "const chapterName: string = \"Optional, Default & Rest Parameters\";\nconsole.log(\"TypeScript - Chapter 9: \" + chapterName);\nconsole.log(\"Type-checking completed with 0 errors.\");",
                 "expectedOutput": "TypeScript - Chapter 9: Optional, Default & Rest Parameters\nType-checking completed with 0 errors.",
-                "videoStart": 2880,
+                "videoStart": 3120,
                 "videos": {
                     "en": {
                         "id": "d56mG7DezGs",
-                        "start": 2880
+                        "start": 3120
                     },
                     "te": {
                         "id": "30LWjhZzg50",
@@ -15997,11 +15996,11 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 10: Function Signatures & Function Overloading\ninterface LessonMeta {\n    chapter: number;\n    title: string;\n}\n\nconst meta: LessonMeta = { chapter: 10, title: \"Function Signatures & Function Overloading\" };\nconsole.log(`Chapter ${meta.chapter}: ${meta.title}`);",
                 "compilerCode": "const chapterName: string = \"Function Signatures & Function Overloading\";\nconsole.log(\"TypeScript - Chapter 10: \" + chapterName);\nconsole.log(\"Type-checking completed with 0 errors.\");",
                 "expectedOutput": "TypeScript - Chapter 10: Function Signatures & Function Overloading\nType-checking completed with 0 errors.",
-                "videoStart": 3240,
+                "videoStart": 3360,
                 "videos": {
                     "en": {
                         "id": "d56mG7DezGs",
-                        "start": 3240
+                        "start": 3360
                     },
                     "te": {
                         "id": "30LWjhZzg50",
@@ -16083,11 +16082,11 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 11: Union Types & Type Narrowing (typeof)\ninterface LessonMeta {\n    chapter: number;\n    title: string;\n}\n\nconst meta: LessonMeta = { chapter: 11, title: \"Union Types & Type Narrowing (typeof)\" };\nconsole.log(`Chapter ${meta.chapter}: ${meta.title}`);",
                 "compilerCode": "const chapterName: string = \"Union Types & Type Narrowing (typeof)\";\nconsole.log(\"TypeScript - Chapter 11: \" + chapterName);\nconsole.log(\"Type-checking completed with 0 errors.\");",
                 "expectedOutput": "TypeScript - Chapter 11: Union Types & Type Narrowing (typeof)\nType-checking completed with 0 errors.",
-                "videoStart": 3600,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "d56mG7DezGs",
-                        "start": 3600
+                        "start": 0
                     },
                     "te": {
                         "id": "30LWjhZzg50",
@@ -16169,11 +16168,11 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 12: Intersection Types & Combining Types\ninterface LessonMeta {\n    chapter: number;\n    title: string;\n}\n\nconst meta: LessonMeta = { chapter: 12, title: \"Intersection Types & Combining Types\" };\nconsole.log(`Chapter ${meta.chapter}: ${meta.title}`);",
                 "compilerCode": "const chapterName: string = \"Intersection Types & Combining Types\";\nconsole.log(\"TypeScript - Chapter 12: \" + chapterName);\nconsole.log(\"Type-checking completed with 0 errors.\");",
                 "expectedOutput": "TypeScript - Chapter 12: Intersection Types & Combining Types\nType-checking completed with 0 errors.",
-                "videoStart": 3960,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "d56mG7DezGs",
-                        "start": 3960
+                        "start": 0
                     },
                     "te": {
                         "id": "30LWjhZzg50",
@@ -16255,11 +16254,11 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 13: Type Aliases (type Keyword)\ninterface LessonMeta {\n    chapter: number;\n    title: string;\n}\n\nconst meta: LessonMeta = { chapter: 13, title: \"Type Aliases (type Keyword)\" };\nconsole.log(`Chapter ${meta.chapter}: ${meta.title}`);",
                 "compilerCode": "const chapterName: string = \"Type Aliases (type Keyword)\";\nconsole.log(\"TypeScript - Chapter 13: \" + chapterName);\nconsole.log(\"Type-checking completed with 0 errors.\");",
                 "expectedOutput": "TypeScript - Chapter 13: Type Aliases (type Keyword)\nType-checking completed with 0 errors.",
-                "videoStart": 4320,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "d56mG7DezGs",
-                        "start": 4320
+                        "start": 0
                     },
                     "te": {
                         "id": "30LWjhZzg50",
@@ -16341,11 +16340,11 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 14: Interfaces: Declaring & Extending Interfaces\ninterface LessonMeta {\n    chapter: number;\n    title: string;\n}\n\nconst meta: LessonMeta = { chapter: 14, title: \"Interfaces: Declaring & Extending Interfaces\" };\nconsole.log(`Chapter ${meta.chapter}: ${meta.title}`);",
                 "compilerCode": "const chapterName: string = \"Interfaces: Declaring & Extending Interfaces\";\nconsole.log(\"TypeScript - Chapter 14: \" + chapterName);\nconsole.log(\"Type-checking completed with 0 errors.\");",
                 "expectedOutput": "TypeScript - Chapter 14: Interfaces: Declaring & Extending Interfaces\nType-checking completed with 0 errors.",
-                "videoStart": 4680,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "d56mG7DezGs",
-                        "start": 4680
+                        "start": 0
                     },
                     "te": {
                         "id": "30LWjhZzg50",
@@ -16427,11 +16426,11 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 15: Interfaces vs Type Aliases Comparison\ninterface LessonMeta {\n    chapter: number;\n    title: string;\n}\n\nconst meta: LessonMeta = { chapter: 15, title: \"Interfaces vs Type Aliases Comparison\" };\nconsole.log(`Chapter ${meta.chapter}: ${meta.title}`);",
                 "compilerCode": "const chapterName: string = \"Interfaces vs Type Aliases Comparison\";\nconsole.log(\"TypeScript - Chapter 15: \" + chapterName);\nconsole.log(\"Type-checking completed with 0 errors.\");",
                 "expectedOutput": "TypeScript - Chapter 15: Interfaces vs Type Aliases Comparison\nType-checking completed with 0 errors.",
-                "videoStart": 5040,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "d56mG7DezGs",
-                        "start": 5040
+                        "start": 0
                     },
                     "te": {
                         "id": "30LWjhZzg50",
@@ -16513,11 +16512,11 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 16: Classes in TS: Access Modifiers & readonly\ninterface LessonMeta {\n    chapter: number;\n    title: string;\n}\n\nconst meta: LessonMeta = { chapter: 16, title: \"Classes in TS: Access Modifiers & readonly\" };\nconsole.log(`Chapter ${meta.chapter}: ${meta.title}`);",
                 "compilerCode": "const chapterName: string = \"Classes in TS: Access Modifiers & readonly\";\nconsole.log(\"TypeScript - Chapter 16: \" + chapterName);\nconsole.log(\"Type-checking completed with 0 errors.\");",
                 "expectedOutput": "TypeScript - Chapter 16: Classes in TS: Access Modifiers & readonly\nType-checking completed with 0 errors.",
-                "videoStart": 5400,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "d56mG7DezGs",
-                        "start": 5400
+                        "start": 0
                     },
                     "te": {
                         "id": "30LWjhZzg50",
@@ -16599,11 +16598,11 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 17: Parameter Properties & Class Initializers\ninterface LessonMeta {\n    chapter: number;\n    title: string;\n}\n\nconst meta: LessonMeta = { chapter: 17, title: \"Parameter Properties & Class Initializers\" };\nconsole.log(`Chapter ${meta.chapter}: ${meta.title}`);",
                 "compilerCode": "const chapterName: string = \"Parameter Properties & Class Initializers\";\nconsole.log(\"TypeScript - Chapter 17: \" + chapterName);\nconsole.log(\"Type-checking completed with 0 errors.\");",
                 "expectedOutput": "TypeScript - Chapter 17: Parameter Properties & Class Initializers\nType-checking completed with 0 errors.",
-                "videoStart": 5760,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "d56mG7DezGs",
-                        "start": 5760
+                        "start": 0
                     },
                     "te": {
                         "id": "30LWjhZzg50",
@@ -16685,11 +16684,11 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 18: Abstract Classes & Interface Implements\ninterface LessonMeta {\n    chapter: number;\n    title: string;\n}\n\nconst meta: LessonMeta = { chapter: 18, title: \"Abstract Classes & Interface Implements\" };\nconsole.log(`Chapter ${meta.chapter}: ${meta.title}`);",
                 "compilerCode": "const chapterName: string = \"Abstract Classes & Interface Implements\";\nconsole.log(\"TypeScript - Chapter 18: \" + chapterName);\nconsole.log(\"Type-checking completed with 0 errors.\");",
                 "expectedOutput": "TypeScript - Chapter 18: Abstract Classes & Interface Implements\nType-checking completed with 0 errors.",
-                "videoStart": 6120,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "d56mG7DezGs",
-                        "start": 6120
+                        "start": 0
                     },
                     "te": {
                         "id": "30LWjhZzg50",
@@ -16771,11 +16770,11 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 19: Generics: Generic Functions & Inferred Types\ninterface LessonMeta {\n    chapter: number;\n    title: string;\n}\n\nconst meta: LessonMeta = { chapter: 19, title: \"Generics: Generic Functions & Inferred Types\" };\nconsole.log(`Chapter ${meta.chapter}: ${meta.title}`);",
                 "compilerCode": "const chapterName: string = \"Generics: Generic Functions & Inferred Types\";\nconsole.log(\"TypeScript - Chapter 19: \" + chapterName);\nconsole.log(\"Type-checking completed with 0 errors.\");",
                 "expectedOutput": "TypeScript - Chapter 19: Generics: Generic Functions & Inferred Types\nType-checking completed with 0 errors.",
-                "videoStart": 6480,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "d56mG7DezGs",
-                        "start": 6480
+                        "start": 0
                     },
                     "te": {
                         "id": "30LWjhZzg50",
@@ -16857,11 +16856,11 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 20: Generic Interfaces & Generic Classes\ninterface LessonMeta {\n    chapter: number;\n    title: string;\n}\n\nconst meta: LessonMeta = { chapter: 20, title: \"Generic Interfaces & Generic Classes\" };\nconsole.log(`Chapter ${meta.chapter}: ${meta.title}`);",
                 "compilerCode": "const chapterName: string = \"Generic Interfaces & Generic Classes\";\nconsole.log(\"TypeScript - Chapter 20: \" + chapterName);\nconsole.log(\"Type-checking completed with 0 errors.\");",
                 "expectedOutput": "TypeScript - Chapter 20: Generic Interfaces & Generic Classes\nType-checking completed with 0 errors.",
-                "videoStart": 6840,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "d56mG7DezGs",
-                        "start": 6840
+                        "start": 0
                     },
                     "te": {
                         "id": "30LWjhZzg50",
@@ -16943,11 +16942,11 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 21: Generic Constraints (extends Keyword)\ninterface LessonMeta {\n    chapter: number;\n    title: string;\n}\n\nconst meta: LessonMeta = { chapter: 21, title: \"Generic Constraints (extends Keyword)\" };\nconsole.log(`Chapter ${meta.chapter}: ${meta.title}`);",
                 "compilerCode": "const chapterName: string = \"Generic Constraints (extends Keyword)\";\nconsole.log(\"TypeScript - Chapter 21: \" + chapterName);\nconsole.log(\"Type-checking completed with 0 errors.\");",
                 "expectedOutput": "TypeScript - Chapter 21: Generic Constraints (extends Keyword)\nType-checking completed with 0 errors.",
-                "videoStart": 7200,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "d56mG7DezGs",
-                        "start": 7200
+                        "start": 0
                     },
                     "te": {
                         "id": "30LWjhZzg50",
@@ -17029,11 +17028,11 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 22: Utility Types: Partial, Required, Readonly\ninterface LessonMeta {\n    chapter: number;\n    title: string;\n}\n\nconst meta: LessonMeta = { chapter: 22, title: \"Utility Types: Partial, Required, Readonly\" };\nconsole.log(`Chapter ${meta.chapter}: ${meta.title}`);",
                 "compilerCode": "const chapterName: string = \"Utility Types: Partial, Required, Readonly\";\nconsole.log(\"TypeScript - Chapter 22: \" + chapterName);\nconsole.log(\"Type-checking completed with 0 errors.\");",
                 "expectedOutput": "TypeScript - Chapter 22: Utility Types: Partial, Required, Readonly\nType-checking completed with 0 errors.",
-                "videoStart": 7560,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "d56mG7DezGs",
-                        "start": 7560
+                        "start": 0
                     },
                     "te": {
                         "id": "30LWjhZzg50",
@@ -17115,11 +17114,11 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 23: Utility Types: Pick, Omit & Record\ninterface LessonMeta {\n    chapter: number;\n    title: string;\n}\n\nconst meta: LessonMeta = { chapter: 23, title: \"Utility Types: Pick, Omit & Record\" };\nconsole.log(`Chapter ${meta.chapter}: ${meta.title}`);",
                 "compilerCode": "const chapterName: string = \"Utility Types: Pick, Omit & Record\";\nconsole.log(\"TypeScript - Chapter 23: \" + chapterName);\nconsole.log(\"Type-checking completed with 0 errors.\");",
                 "expectedOutput": "TypeScript - Chapter 23: Utility Types: Pick, Omit & Record\nType-checking completed with 0 errors.",
-                "videoStart": 7920,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "d56mG7DezGs",
-                        "start": 7920
+                        "start": 0
                     },
                     "te": {
                         "id": "30LWjhZzg50",
@@ -17201,11 +17200,11 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 24: Utility Types: Exclude, Extract, NonNullable\ninterface LessonMeta {\n    chapter: number;\n    title: string;\n}\n\nconst meta: LessonMeta = { chapter: 24, title: \"Utility Types: Exclude, Extract, NonNullable\" };\nconsole.log(`Chapter ${meta.chapter}: ${meta.title}`);",
                 "compilerCode": "const chapterName: string = \"Utility Types: Exclude, Extract, NonNullable\";\nconsole.log(\"TypeScript - Chapter 24: \" + chapterName);\nconsole.log(\"Type-checking completed with 0 errors.\");",
                 "expectedOutput": "TypeScript - Chapter 24: Utility Types: Exclude, Extract, NonNullable\nType-checking completed with 0 errors.",
-                "videoStart": 8280,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "d56mG7DezGs",
-                        "start": 8280
+                        "start": 0
                     },
                     "te": {
                         "id": "30LWjhZzg50",
@@ -17287,11 +17286,11 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 25: The keyof Operator & Lookup Types\ninterface LessonMeta {\n    chapter: number;\n    title: string;\n}\n\nconst meta: LessonMeta = { chapter: 25, title: \"The keyof Operator & Lookup Types\" };\nconsole.log(`Chapter ${meta.chapter}: ${meta.title}`);",
                 "compilerCode": "const chapterName: string = \"The keyof Operator & Lookup Types\";\nconsole.log(\"TypeScript - Chapter 25: \" + chapterName);\nconsole.log(\"Type-checking completed with 0 errors.\");",
                 "expectedOutput": "TypeScript - Chapter 25: The keyof Operator & Lookup Types\nType-checking completed with 0 errors.",
-                "videoStart": 8640,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "d56mG7DezGs",
-                        "start": 8640
+                        "start": 0
                     },
                     "te": {
                         "id": "30LWjhZzg50",
@@ -17373,11 +17372,11 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 26: Mapped Types & Index Signatures\ninterface LessonMeta {\n    chapter: number;\n    title: string;\n}\n\nconst meta: LessonMeta = { chapter: 26, title: \"Mapped Types & Index Signatures\" };\nconsole.log(`Chapter ${meta.chapter}: ${meta.title}`);",
                 "compilerCode": "const chapterName: string = \"Mapped Types & Index Signatures\";\nconsole.log(\"TypeScript - Chapter 26: \" + chapterName);\nconsole.log(\"Type-checking completed with 0 errors.\");",
                 "expectedOutput": "TypeScript - Chapter 26: Mapped Types & Index Signatures\nType-checking completed with 0 errors.",
-                "videoStart": 9000,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "d56mG7DezGs",
-                        "start": 9000
+                        "start": 0
                     },
                     "te": {
                         "id": "30LWjhZzg50",
@@ -17459,11 +17458,11 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 27: Conditional Types & Type Inference (infer)\ninterface LessonMeta {\n    chapter: number;\n    title: string;\n}\n\nconst meta: LessonMeta = { chapter: 27, title: \"Conditional Types & Type Inference (infer)\" };\nconsole.log(`Chapter ${meta.chapter}: ${meta.title}`);",
                 "compilerCode": "const chapterName: string = \"Conditional Types & Type Inference (infer)\";\nconsole.log(\"TypeScript - Chapter 27: \" + chapterName);\nconsole.log(\"Type-checking completed with 0 errors.\");",
                 "expectedOutput": "TypeScript - Chapter 27: Conditional Types & Type Inference (infer)\nType-checking completed with 0 errors.",
-                "videoStart": 9360,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "d56mG7DezGs",
-                        "start": 9360
+                        "start": 0
                     },
                     "te": {
                         "id": "30LWjhZzg50",
@@ -17545,11 +17544,11 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 28: Type Guards: Custom Type Predicates (is)\ninterface LessonMeta {\n    chapter: number;\n    title: string;\n}\n\nconst meta: LessonMeta = { chapter: 28, title: \"Type Guards: Custom Type Predicates (is)\" };\nconsole.log(`Chapter ${meta.chapter}: ${meta.title}`);",
                 "compilerCode": "const chapterName: string = \"Type Guards: Custom Type Predicates (is)\";\nconsole.log(\"TypeScript - Chapter 28: \" + chapterName);\nconsole.log(\"Type-checking completed with 0 errors.\");",
                 "expectedOutput": "TypeScript - Chapter 28: Type Guards: Custom Type Predicates (is)\nType-checking completed with 0 errors.",
-                "videoStart": 9720,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "d56mG7DezGs",
-                        "start": 9720
+                        "start": 0
                     },
                     "te": {
                         "id": "30LWjhZzg50",
@@ -17631,11 +17630,11 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 29: Discriminated Unions & Exhaustiveness Check\ninterface LessonMeta {\n    chapter: number;\n    title: string;\n}\n\nconst meta: LessonMeta = { chapter: 29, title: \"Discriminated Unions & Exhaustiveness Check\" };\nconsole.log(`Chapter ${meta.chapter}: ${meta.title}`);",
                 "compilerCode": "const chapterName: string = \"Discriminated Unions & Exhaustiveness Check\";\nconsole.log(\"TypeScript - Chapter 29: \" + chapterName);\nconsole.log(\"Type-checking completed with 0 errors.\");",
                 "expectedOutput": "TypeScript - Chapter 29: Discriminated Unions & Exhaustiveness Check\nType-checking completed with 0 errors.",
-                "videoStart": 10080,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "d56mG7DezGs",
-                        "start": 10080
+                        "start": 0
                     },
                     "te": {
                         "id": "30LWjhZzg50",
@@ -17717,11 +17716,11 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 30: Ambient Declarations & .d.ts Type Files\ninterface LessonMeta {\n    chapter: number;\n    title: string;\n}\n\nconst meta: LessonMeta = { chapter: 30, title: \"Ambient Declarations & .d.ts Type Files\" };\nconsole.log(`Chapter ${meta.chapter}: ${meta.title}`);",
                 "compilerCode": "const chapterName: string = \"Ambient Declarations & .d.ts Type Files\";\nconsole.log(\"TypeScript - Chapter 30: \" + chapterName);\nconsole.log(\"Type-checking completed with 0 errors.\");",
                 "expectedOutput": "TypeScript - Chapter 30: Ambient Declarations & .d.ts Type Files\nType-checking completed with 0 errors.",
-                "videoStart": 10440,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "d56mG7DezGs",
-                        "start": 10440
+                        "start": 0
                     },
                     "te": {
                         "id": "30LWjhZzg50",
@@ -17803,11 +17802,11 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 31: Namespaces vs ES Modules in TypeScript\ninterface LessonMeta {\n    chapter: number;\n    title: string;\n}\n\nconst meta: LessonMeta = { chapter: 31, title: \"Namespaces vs ES Modules in TypeScript\" };\nconsole.log(`Chapter ${meta.chapter}: ${meta.title}`);",
                 "compilerCode": "const chapterName: string = \"Namespaces vs ES Modules in TypeScript\";\nconsole.log(\"TypeScript - Chapter 31: \" + chapterName);\nconsole.log(\"Type-checking completed with 0 errors.\");",
                 "expectedOutput": "TypeScript - Chapter 31: Namespaces vs ES Modules in TypeScript\nType-checking completed with 0 errors.",
-                "videoStart": 10800,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "d56mG7DezGs",
-                        "start": 10800
+                        "start": 0
                     },
                     "te": {
                         "id": "30LWjhZzg50",
@@ -17889,11 +17888,11 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 32: Decorators: Class, Method & Property\ninterface LessonMeta {\n    chapter: number;\n    title: string;\n}\n\nconst meta: LessonMeta = { chapter: 32, title: \"Decorators: Class, Method & Property\" };\nconsole.log(`Chapter ${meta.chapter}: ${meta.title}`);",
                 "compilerCode": "const chapterName: string = \"Decorators: Class, Method & Property\";\nconsole.log(\"TypeScript - Chapter 32: \" + chapterName);\nconsole.log(\"Type-checking completed with 0 errors.\");",
                 "expectedOutput": "TypeScript - Chapter 32: Decorators: Class, Method & Property\nType-checking completed with 0 errors.",
-                "videoStart": 11160,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "d56mG7DezGs",
-                        "start": 11160
+                        "start": 0
                     },
                     "te": {
                         "id": "30LWjhZzg50",
@@ -17975,11 +17974,11 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 33: Strict Null Checks & tsconfig Best Practices\ninterface LessonMeta {\n    chapter: number;\n    title: string;\n}\n\nconst meta: LessonMeta = { chapter: 33, title: \"Strict Null Checks & tsconfig Best Practices\" };\nconsole.log(`Chapter ${meta.chapter}: ${meta.title}`);",
                 "compilerCode": "const chapterName: string = \"Strict Null Checks & tsconfig Best Practices\";\nconsole.log(\"TypeScript - Chapter 33: \" + chapterName);\nconsole.log(\"Type-checking completed with 0 errors.\");",
                 "expectedOutput": "TypeScript - Chapter 33: Strict Null Checks & tsconfig Best Practices\nType-checking completed with 0 errors.",
-                "videoStart": 11520,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "d56mG7DezGs",
-                        "start": 11520
+                        "start": 0
                     },
                     "te": {
                         "id": "30LWjhZzg50",
@@ -18061,11 +18060,11 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 34: TypeScript with DOM Elements & Events\ninterface LessonMeta {\n    chapter: number;\n    title: string;\n}\n\nconst meta: LessonMeta = { chapter: 34, title: \"TypeScript with DOM Elements & Events\" };\nconsole.log(`Chapter ${meta.chapter}: ${meta.title}`);",
                 "compilerCode": "const chapterName: string = \"TypeScript with DOM Elements & Events\";\nconsole.log(\"TypeScript - Chapter 34: \" + chapterName);\nconsole.log(\"Type-checking completed with 0 errors.\");",
                 "expectedOutput": "TypeScript - Chapter 34: TypeScript with DOM Elements & Events\nType-checking completed with 0 errors.",
-                "videoStart": 11880,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "d56mG7DezGs",
-                        "start": 11880
+                        "start": 0
                     },
                     "te": {
                         "id": "30LWjhZzg50",
@@ -18147,11 +18146,11 @@ window.LEARNING_DATA = {
                 "practical": "// Chapter 35: Full Enterprise TypeScript Clean Architecture\ninterface LessonMeta {\n    chapter: number;\n    title: string;\n}\n\nconst meta: LessonMeta = { chapter: 35, title: \"Full Enterprise TypeScript Clean Architecture\" };\nconsole.log(`Chapter ${meta.chapter}: ${meta.title}`);",
                 "compilerCode": "const chapterName: string = \"Full Enterprise TypeScript Clean Architecture\";\nconsole.log(\"TypeScript - Chapter 35: \" + chapterName);\nconsole.log(\"Type-checking completed with 0 errors.\");",
                 "expectedOutput": "TypeScript - Chapter 35: Full Enterprise TypeScript Clean Architecture\nType-checking completed with 0 errors.",
-                "videoStart": 12240,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "d56mG7DezGs",
-                        "start": 12240
+                        "start": 0
                     },
                     "te": {
                         "id": "30LWjhZzg50",
@@ -18346,11 +18345,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 2: Variables, Assignment & Basic Data Types\n# Language: R Programming\nprint(\"Executing Chapter 2: Variables, Assignment & Basic Data Types\")",
                 "compilerCode": "print(\"R Programming - Chapter 2: Variables, Assignment & Basic Data Types\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "R Programming - Chapter 2: Variables, Assignment & Basic Data Types\nStatus: 0 errors detected.",
-                "videoStart": 360,
+                "videoStart": 540,
                 "videos": {
                     "en": {
                         "id": "_V8eKsto3Ug",
-                        "start": 360
+                        "start": 540
                     },
                     "te": {
                         "id": "fDRa82lxzaU",
@@ -18432,11 +18431,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 3: Vectors: Creation, Arithmetic & Vectorization\n# Language: R Programming\nprint(\"Executing Chapter 3: Vectors: Creation, Arithmetic & Vectorization\")",
                 "compilerCode": "print(\"R Programming - Chapter 3: Vectors: Creation, Arithmetic & Vectorization\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "R Programming - Chapter 3: Vectors: Creation, Arithmetic & Vectorization\nStatus: 0 errors detected.",
-                "videoStart": 720,
+                "videoStart": 1140,
                 "videos": {
                     "en": {
                         "id": "_V8eKsto3Ug",
-                        "start": 720
+                        "start": 1140
                     },
                     "te": {
                         "id": "fDRa82lxzaU",
@@ -18518,11 +18517,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 4: Vector Indexing, Filtering & Logical Subsets\n# Language: R Programming\nprint(\"Executing Chapter 4: Vector Indexing, Filtering & Logical Subsets\")",
                 "compilerCode": "print(\"R Programming - Chapter 4: Vector Indexing, Filtering & Logical Subsets\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "R Programming - Chapter 4: Vector Indexing, Filtering & Logical Subsets\nStatus: 0 errors detected.",
-                "videoStart": 1080,
+                "videoStart": 1800,
                 "videos": {
                     "en": {
                         "id": "_V8eKsto3Ug",
-                        "start": 1080
+                        "start": 1800
                     },
                     "te": {
                         "id": "fDRa82lxzaU",
@@ -18604,11 +18603,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 5: Factors & Categorical Variables\n# Language: R Programming\nprint(\"Executing Chapter 5: Factors & Categorical Variables\")",
                 "compilerCode": "print(\"R Programming - Chapter 5: Factors & Categorical Variables\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "R Programming - Chapter 5: Factors & Categorical Variables\nStatus: 0 errors detected.",
-                "videoStart": 1440,
+                "videoStart": 2520,
                 "videos": {
                     "en": {
                         "id": "_V8eKsto3Ug",
-                        "start": 1440
+                        "start": 2520
                     },
                     "te": {
                         "id": "fDRa82lxzaU",
@@ -18690,11 +18689,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 6: Matrices: Creation, Naming & Transpose\n# Language: R Programming\nprint(\"Executing Chapter 6: Matrices: Creation, Naming & Transpose\")",
                 "compilerCode": "print(\"R Programming - Chapter 6: Matrices: Creation, Naming & Transpose\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "R Programming - Chapter 6: Matrices: Creation, Naming & Transpose\nStatus: 0 errors detected.",
-                "videoStart": 1800,
+                "videoStart": 3300,
                 "videos": {
                     "en": {
                         "id": "_V8eKsto3Ug",
-                        "start": 1800
+                        "start": 3300
                     },
                     "te": {
                         "id": "fDRa82lxzaU",
@@ -18776,11 +18775,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 7: Matrix Operations & Matrix Multiplication\n# Language: R Programming\nprint(\"Executing Chapter 7: Matrix Operations & Matrix Multiplication\")",
                 "compilerCode": "print(\"R Programming - Chapter 7: Matrix Operations & Matrix Multiplication\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "R Programming - Chapter 7: Matrix Operations & Matrix Multiplication\nStatus: 0 errors detected.",
-                "videoStart": 2160,
+                "videoStart": 4140,
                 "videos": {
                     "en": {
                         "id": "_V8eKsto3Ug",
-                        "start": 2160
+                        "start": 4140
                     },
                     "te": {
                         "id": "fDRa82lxzaU",
@@ -18862,11 +18861,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 8: Multi-Dimensional Arrays in R\n# Language: R Programming\nprint(\"Executing Chapter 8: Multi-Dimensional Arrays in R\")",
                 "compilerCode": "print(\"R Programming - Chapter 8: Multi-Dimensional Arrays in R\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "R Programming - Chapter 8: Multi-Dimensional Arrays in R\nStatus: 0 errors detected.",
-                "videoStart": 2520,
+                "videoStart": 5040,
                 "videos": {
                     "en": {
                         "id": "_V8eKsto3Ug",
-                        "start": 2520
+                        "start": 5040
                     },
                     "te": {
                         "id": "fDRa82lxzaU",
@@ -18948,11 +18947,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 9: Lists: Heterogeneous Collections & Access\n# Language: R Programming\nprint(\"Executing Chapter 9: Lists: Heterogeneous Collections & Access\")",
                 "compilerCode": "print(\"R Programming - Chapter 9: Lists: Heterogeneous Collections & Access\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "R Programming - Chapter 9: Lists: Heterogeneous Collections & Access\nStatus: 0 errors detected.",
-                "videoStart": 2880,
+                "videoStart": 6000,
                 "videos": {
                     "en": {
                         "id": "_V8eKsto3Ug",
-                        "start": 2880
+                        "start": 6000
                     },
                     "te": {
                         "id": "fDRa82lxzaU",
@@ -19034,11 +19033,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 10: Data Frames: Creation, Structure & Summary\n# Language: R Programming\nprint(\"Executing Chapter 10: Data Frames: Creation, Structure & Summary\")",
                 "compilerCode": "print(\"R Programming - Chapter 10: Data Frames: Creation, Structure & Summary\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "R Programming - Chapter 10: Data Frames: Creation, Structure & Summary\nStatus: 0 errors detected.",
-                "videoStart": 3240,
+                "videoStart": 7020,
                 "videos": {
                     "en": {
                         "id": "_V8eKsto3Ug",
-                        "start": 3240
+                        "start": 7020
                     },
                     "te": {
                         "id": "fDRa82lxzaU",
@@ -19120,11 +19119,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 11: Data Frame Slicing, Columns & Rows\n# Language: R Programming\nprint(\"Executing Chapter 11: Data Frame Slicing, Columns & Rows\")",
                 "compilerCode": "print(\"R Programming - Chapter 11: Data Frame Slicing, Columns & Rows\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "R Programming - Chapter 11: Data Frame Slicing, Columns & Rows\nStatus: 0 errors detected.",
-                "videoStart": 3600,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "_V8eKsto3Ug",
-                        "start": 3600
+                        "start": 0
                     },
                     "te": {
                         "id": "fDRa82lxzaU",
@@ -19206,11 +19205,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 12: Operators: Arithmetic, Relational & Logical\n# Language: R Programming\nprint(\"Executing Chapter 12: Operators: Arithmetic, Relational & Logical\")",
                 "compilerCode": "print(\"R Programming - Chapter 12: Operators: Arithmetic, Relational & Logical\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "R Programming - Chapter 12: Operators: Arithmetic, Relational & Logical\nStatus: 0 errors detected.",
-                "videoStart": 3960,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "_V8eKsto3Ug",
-                        "start": 3960
+                        "start": 0
                     },
                     "te": {
                         "id": "fDRa82lxzaU",
@@ -19292,11 +19291,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 13: Conditionals: if, else & ifelse() Vectorized\n# Language: R Programming\nprint(\"Executing Chapter 13: Conditionals: if, else & ifelse() Vectorized\")",
                 "compilerCode": "print(\"R Programming - Chapter 13: Conditionals: if, else & ifelse() Vectorized\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "R Programming - Chapter 13: Conditionals: if, else & ifelse() Vectorized\nStatus: 0 errors detected.",
-                "videoStart": 4320,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "_V8eKsto3Ug",
-                        "start": 4320
+                        "start": 0
                     },
                     "te": {
                         "id": "fDRa82lxzaU",
@@ -19378,11 +19377,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 14: Loops: for Loops & Sequence Iterations\n# Language: R Programming\nprint(\"Executing Chapter 14: Loops: for Loops & Sequence Iterations\")",
                 "compilerCode": "print(\"R Programming - Chapter 14: Loops: for Loops & Sequence Iterations\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "R Programming - Chapter 14: Loops: for Loops & Sequence Iterations\nStatus: 0 errors detected.",
-                "videoStart": 4680,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "_V8eKsto3Ug",
-                        "start": 4680
+                        "start": 0
                     },
                     "te": {
                         "id": "fDRa82lxzaU",
@@ -19464,11 +19463,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 15: Loops: while & repeat with break/next\n# Language: R Programming\nprint(\"Executing Chapter 15: Loops: while & repeat with break/next\")",
                 "compilerCode": "print(\"R Programming - Chapter 15: Loops: while & repeat with break/next\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "R Programming - Chapter 15: Loops: while & repeat with break/next\nStatus: 0 errors detected.",
-                "videoStart": 5040,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "_V8eKsto3Ug",
-                        "start": 5040
+                        "start": 0
                     },
                     "te": {
                         "id": "fDRa82lxzaU",
@@ -19550,11 +19549,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 16: Writing Custom Functions & Scope Rules\n# Language: R Programming\nprint(\"Executing Chapter 16: Writing Custom Functions & Scope Rules\")",
                 "compilerCode": "print(\"R Programming - Chapter 16: Writing Custom Functions & Scope Rules\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "R Programming - Chapter 16: Writing Custom Functions & Scope Rules\nStatus: 0 errors detected.",
-                "videoStart": 5400,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "_V8eKsto3Ug",
-                        "start": 5400
+                        "start": 0
                     },
                     "te": {
                         "id": "fDRa82lxzaU",
@@ -19636,11 +19635,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 17: The apply() Function on Matrices\n# Language: R Programming\nprint(\"Executing Chapter 17: The apply() Function on Matrices\")",
                 "compilerCode": "print(\"R Programming - Chapter 17: The apply() Function on Matrices\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "R Programming - Chapter 17: The apply() Function on Matrices\nStatus: 0 errors detected.",
-                "videoStart": 5760,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "_V8eKsto3Ug",
-                        "start": 5760
+                        "start": 0
                     },
                     "te": {
                         "id": "fDRa82lxzaU",
@@ -19722,11 +19721,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 18: lapply() and sapply() on Lists & Vectors\n# Language: R Programming\nprint(\"Executing Chapter 18: lapply() and sapply() on Lists & Vectors\")",
                 "compilerCode": "print(\"R Programming - Chapter 18: lapply() and sapply() on Lists & Vectors\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "R Programming - Chapter 18: lapply() and sapply() on Lists & Vectors\nStatus: 0 errors detected.",
-                "videoStart": 6120,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "_V8eKsto3Ug",
-                        "start": 6120
+                        "start": 0
                     },
                     "te": {
                         "id": "fDRa82lxzaU",
@@ -19808,11 +19807,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 19: tapply() and mapply() for Grouped Math\n# Language: R Programming\nprint(\"Executing Chapter 19: tapply() and mapply() for Grouped Math\")",
                 "compilerCode": "print(\"R Programming - Chapter 19: tapply() and mapply() for Grouped Math\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "R Programming - Chapter 19: tapply() and mapply() for Grouped Math\nStatus: 0 errors detected.",
-                "videoStart": 6480,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "_V8eKsto3Ug",
-                        "start": 6480
+                        "start": 0
                     },
                     "te": {
                         "id": "fDRa82lxzaU",
@@ -19894,11 +19893,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 20: String Manipulation: paste, grep, sub\n# Language: R Programming\nprint(\"Executing Chapter 20: String Manipulation: paste, grep, sub\")",
                 "compilerCode": "print(\"R Programming - Chapter 20: String Manipulation: paste, grep, sub\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "R Programming - Chapter 20: String Manipulation: paste, grep, sub\nStatus: 0 errors detected.",
-                "videoStart": 6840,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "_V8eKsto3Ug",
-                        "start": 6840
+                        "start": 0
                     },
                     "te": {
                         "id": "fDRa82lxzaU",
@@ -19980,11 +19979,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 21: Date & Time Handling with lubridate\n# Language: R Programming\nprint(\"Executing Chapter 21: Date & Time Handling with lubridate\")",
                 "compilerCode": "print(\"R Programming - Chapter 21: Date & Time Handling with lubridate\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "R Programming - Chapter 21: Date & Time Handling with lubridate\nStatus: 0 errors detected.",
-                "videoStart": 7200,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "_V8eKsto3Ug",
-                        "start": 7200
+                        "start": 0
                     },
                     "te": {
                         "id": "fDRa82lxzaU",
@@ -20066,11 +20065,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 22: Reading Data: read.csv & read.table\n# Language: R Programming\nprint(\"Executing Chapter 22: Reading Data: read.csv & read.table\")",
                 "compilerCode": "print(\"R Programming - Chapter 22: Reading Data: read.csv & read.table\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "R Programming - Chapter 22: Reading Data: read.csv & read.table\nStatus: 0 errors detected.",
-                "videoStart": 7560,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "_V8eKsto3Ug",
-                        "start": 7560
+                        "start": 0
                     },
                     "te": {
                         "id": "fDRa82lxzaU",
@@ -20152,11 +20151,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 23: Exporting Data: write.csv & Save RDS\n# Language: R Programming\nprint(\"Executing Chapter 23: Exporting Data: write.csv & Save RDS\")",
                 "compilerCode": "print(\"R Programming - Chapter 23: Exporting Data: write.csv & Save RDS\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "R Programming - Chapter 23: Exporting Data: write.csv & Save RDS\nStatus: 0 errors detected.",
-                "videoStart": 7920,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "_V8eKsto3Ug",
-                        "start": 7920
+                        "start": 0
                     },
                     "te": {
                         "id": "fDRa82lxzaU",
@@ -20238,11 +20237,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 24: Data Cleaning: Missing Values (NA, is.na)\n# Language: R Programming\nprint(\"Executing Chapter 24: Data Cleaning: Missing Values (NA, is.na)\")",
                 "compilerCode": "print(\"R Programming - Chapter 24: Data Cleaning: Missing Values (NA, is.na)\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "R Programming - Chapter 24: Data Cleaning: Missing Values (NA, is.na)\nStatus: 0 errors detected.",
-                "videoStart": 8280,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "_V8eKsto3Ug",
-                        "start": 8280
+                        "start": 0
                     },
                     "te": {
                         "id": "fDRa82lxzaU",
@@ -20324,11 +20323,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 25: dplyr Basics: select() and filter()\n# Language: R Programming\nprint(\"Executing Chapter 25: dplyr Basics: select() and filter()\")",
                 "compilerCode": "print(\"R Programming - Chapter 25: dplyr Basics: select() and filter()\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "R Programming - Chapter 25: dplyr Basics: select() and filter()\nStatus: 0 errors detected.",
-                "videoStart": 8640,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "_V8eKsto3Ug",
-                        "start": 8640
+                        "start": 0
                     },
                     "te": {
                         "id": "fDRa82lxzaU",
@@ -20410,11 +20409,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 26: dplyr Transformations: mutate() and arrange()\n# Language: R Programming\nprint(\"Executing Chapter 26: dplyr Transformations: mutate() and arrange()\")",
                 "compilerCode": "print(\"R Programming - Chapter 26: dplyr Transformations: mutate() and arrange()\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "R Programming - Chapter 26: dplyr Transformations: mutate() and arrange()\nStatus: 0 errors detected.",
-                "videoStart": 9000,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "_V8eKsto3Ug",
-                        "start": 9000
+                        "start": 0
                     },
                     "te": {
                         "id": "fDRa82lxzaU",
@@ -20496,11 +20495,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 27: dplyr Aggregations: group_by() & summarize()\n# Language: R Programming\nprint(\"Executing Chapter 27: dplyr Aggregations: group_by() & summarize()\")",
                 "compilerCode": "print(\"R Programming - Chapter 27: dplyr Aggregations: group_by() & summarize()\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "R Programming - Chapter 27: dplyr Aggregations: group_by() & summarize()\nStatus: 0 errors detected.",
-                "videoStart": 9360,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "_V8eKsto3Ug",
-                        "start": 9360
+                        "start": 0
                     },
                     "te": {
                         "id": "fDRa82lxzaU",
@@ -20582,11 +20581,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 28: Data Reshaping: tidyr pivot_longer & wider\n# Language: R Programming\nprint(\"Executing Chapter 28: Data Reshaping: tidyr pivot_longer & wider\")",
                 "compilerCode": "print(\"R Programming - Chapter 28: Data Reshaping: tidyr pivot_longer & wider\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "R Programming - Chapter 28: Data Reshaping: tidyr pivot_longer & wider\nStatus: 0 errors detected.",
-                "videoStart": 9720,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "_V8eKsto3Ug",
-                        "start": 9720
+                        "start": 0
                     },
                     "te": {
                         "id": "fDRa82lxzaU",
@@ -20668,11 +20667,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 29: Data Merging: inner_join, left_join\n# Language: R Programming\nprint(\"Executing Chapter 29: Data Merging: inner_join, left_join\")",
                 "compilerCode": "print(\"R Programming - Chapter 29: Data Merging: inner_join, left_join\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "R Programming - Chapter 29: Data Merging: inner_join, left_join\nStatus: 0 errors detected.",
-                "videoStart": 10080,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "_V8eKsto3Ug",
-                        "start": 10080
+                        "start": 0
                     },
                     "te": {
                         "id": "fDRa82lxzaU",
@@ -20754,11 +20753,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 30: Base R Plotting: plot, hist, boxplot\n# Language: R Programming\nprint(\"Executing Chapter 30: Base R Plotting: plot, hist, boxplot\")",
                 "compilerCode": "print(\"R Programming - Chapter 30: Base R Plotting: plot, hist, boxplot\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "R Programming - Chapter 30: Base R Plotting: plot, hist, boxplot\nStatus: 0 errors detected.",
-                "videoStart": 10440,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "_V8eKsto3Ug",
-                        "start": 10440
+                        "start": 0
                     },
                     "te": {
                         "id": "fDRa82lxzaU",
@@ -20840,11 +20839,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 31: ggplot2 Fundamentals & Aesthetics (aes)\n# Language: R Programming\nprint(\"Executing Chapter 31: ggplot2 Fundamentals & Aesthetics (aes)\")",
                 "compilerCode": "print(\"R Programming - Chapter 31: ggplot2 Fundamentals & Aesthetics (aes)\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "R Programming - Chapter 31: ggplot2 Fundamentals & Aesthetics (aes)\nStatus: 0 errors detected.",
-                "videoStart": 10800,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "_V8eKsto3Ug",
-                        "start": 10800
+                        "start": 0
                     },
                     "te": {
                         "id": "fDRa82lxzaU",
@@ -20926,11 +20925,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 32: ggplot2 Geoms: geom_point, geom_line\n# Language: R Programming\nprint(\"Executing Chapter 32: ggplot2 Geoms: geom_point, geom_line\")",
                 "compilerCode": "print(\"R Programming - Chapter 32: ggplot2 Geoms: geom_point, geom_line\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "R Programming - Chapter 32: ggplot2 Geoms: geom_point, geom_line\nStatus: 0 errors detected.",
-                "videoStart": 11160,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "_V8eKsto3Ug",
-                        "start": 11160
+                        "start": 0
                     },
                     "te": {
                         "id": "fDRa82lxzaU",
@@ -21012,11 +21011,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 33: ggplot2 Geoms: geom_bar, geom_histogram\n# Language: R Programming\nprint(\"Executing Chapter 33: ggplot2 Geoms: geom_bar, geom_histogram\")",
                 "compilerCode": "print(\"R Programming - Chapter 33: ggplot2 Geoms: geom_bar, geom_histogram\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "R Programming - Chapter 33: ggplot2 Geoms: geom_bar, geom_histogram\nStatus: 0 errors detected.",
-                "videoStart": 11520,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "_V8eKsto3Ug",
-                        "start": 11520
+                        "start": 0
                     },
                     "te": {
                         "id": "fDRa82lxzaU",
@@ -21098,11 +21097,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 34: Statistical Testing: t.test, chisq & ANOVA\n# Language: R Programming\nprint(\"Executing Chapter 34: Statistical Testing: t.test, chisq & ANOVA\")",
                 "compilerCode": "print(\"R Programming - Chapter 34: Statistical Testing: t.test, chisq & ANOVA\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "R Programming - Chapter 34: Statistical Testing: t.test, chisq & ANOVA\nStatus: 0 errors detected.",
-                "videoStart": 11880,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "_V8eKsto3Ug",
-                        "start": 11880
+                        "start": 0
                     },
                     "te": {
                         "id": "fDRa82lxzaU",
@@ -21184,11 +21183,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 35: Linear Regression (lm) & R Data Science Project\n# Language: R Programming\nprint(\"Executing Chapter 35: Linear Regression (lm) & R Data Science Project\")",
                 "compilerCode": "print(\"R Programming - Chapter 35: Linear Regression (lm) & R Data Science Project\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "R Programming - Chapter 35: Linear Regression (lm) & R Data Science Project\nStatus: 0 errors detected.",
-                "videoStart": 12240,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "_V8eKsto3Ug",
-                        "start": 12240
+                        "start": 0
                     },
                     "te": {
                         "id": "fDRa82lxzaU",
@@ -21276,7 +21275,7 @@ window.LEARNING_DATA = {
             },
             "te": {
                 "id": "9fp0T6CBB9I",
-                "title": "CUDA GPU Course with Telugu Notes (తెలుగు)"
+                "title": "CUDA GPU Course (తెలుగు Notes)"
             },
             "ta": {
                 "id": "9fp0T6CBB9I",
@@ -21383,11 +21382,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 2: CPU vs GPU Architecture: SIMD vs SIMT\n# Language: CUDA Programming\nprint(\"Executing Chapter 2: CPU vs GPU Architecture: SIMD vs SIMT\")",
                 "compilerCode": "print(\"CUDA Programming - Chapter 2: CPU vs GPU Architecture: SIMD vs SIMT\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "CUDA Programming - Chapter 2: CPU vs GPU Architecture: SIMD vs SIMT\nStatus: 0 errors detected.",
-                "videoStart": 360,
+                "videoStart": 600,
                 "videos": {
                     "en": {
                         "id": "9fp0T6CBB9I",
-                        "start": 360
+                        "start": 600
                     },
                     "te": {
                         "id": "9fp0T6CBB9I",
@@ -21469,11 +21468,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 3: CUDA Software Stack & Driver API vs Runtime\n# Language: CUDA Programming\nprint(\"Executing Chapter 3: CUDA Software Stack & Driver API vs Runtime\")",
                 "compilerCode": "print(\"CUDA Programming - Chapter 3: CUDA Software Stack & Driver API vs Runtime\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "CUDA Programming - Chapter 3: CUDA Software Stack & Driver API vs Runtime\nStatus: 0 errors detected.",
-                "videoStart": 720,
+                "videoStart": 1300,
                 "videos": {
                     "en": {
                         "id": "9fp0T6CBB9I",
-                        "start": 720
+                        "start": 1300
                     },
                     "te": {
                         "id": "9fp0T6CBB9I",
@@ -21555,11 +21554,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 4: Setting Up CUDA Toolkit & nvcc Compiler\n# Language: CUDA Programming\nprint(\"Executing Chapter 4: Setting Up CUDA Toolkit & nvcc Compiler\")",
                 "compilerCode": "print(\"CUDA Programming - Chapter 4: Setting Up CUDA Toolkit & nvcc Compiler\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "CUDA Programming - Chapter 4: Setting Up CUDA Toolkit & nvcc Compiler\nStatus: 0 errors detected.",
-                "videoStart": 1080,
+                "videoStart": 2100,
                 "videos": {
                     "en": {
                         "id": "9fp0T6CBB9I",
-                        "start": 1080
+                        "start": 2100
                     },
                     "te": {
                         "id": "9fp0T6CBB9I",
@@ -21641,11 +21640,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 5: Structure of a CUDA Application\n# Language: CUDA Programming\nprint(\"Executing Chapter 5: Structure of a CUDA Application\")",
                 "compilerCode": "print(\"CUDA Programming - Chapter 5: Structure of a CUDA Application\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "CUDA Programming - Chapter 5: Structure of a CUDA Application\nStatus: 0 errors detected.",
-                "videoStart": 1440,
+                "videoStart": 3000,
                 "videos": {
                     "en": {
                         "id": "9fp0T6CBB9I",
-                        "start": 1440
+                        "start": 3000
                     },
                     "te": {
                         "id": "9fp0T6CBB9I",
@@ -21727,11 +21726,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 6: Device Memory: cudaMalloc and cudaFree\n# Language: CUDA Programming\nprint(\"Executing Chapter 6: Device Memory: cudaMalloc and cudaFree\")",
                 "compilerCode": "print(\"CUDA Programming - Chapter 6: Device Memory: cudaMalloc and cudaFree\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "CUDA Programming - Chapter 6: Device Memory: cudaMalloc and cudaFree\nStatus: 0 errors detected.",
-                "videoStart": 1800,
+                "videoStart": 4000,
                 "videos": {
                     "en": {
                         "id": "9fp0T6CBB9I",
-                        "start": 1800
+                        "start": 4000
                     },
                     "te": {
                         "id": "9fp0T6CBB9I",
@@ -21813,11 +21812,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 7: Data Transfer: cudaMemcpy Host to Device\n# Language: CUDA Programming\nprint(\"Executing Chapter 7: Data Transfer: cudaMemcpy Host to Device\")",
                 "compilerCode": "print(\"CUDA Programming - Chapter 7: Data Transfer: cudaMemcpy Host to Device\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "CUDA Programming - Chapter 7: Data Transfer: cudaMemcpy Host to Device\nStatus: 0 errors detected.",
-                "videoStart": 2160,
+                "videoStart": 5100,
                 "videos": {
                     "en": {
                         "id": "9fp0T6CBB9I",
-                        "start": 2160
+                        "start": 5100
                     },
                     "te": {
                         "id": "9fp0T6CBB9I",
@@ -21899,11 +21898,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 8: Kernel Declarations: __global__, __device__, __host__\n# Language: CUDA Programming\nprint(\"Executing Chapter 8: Kernel Declarations: __global__, __device__, __host__\")",
                 "compilerCode": "print(\"CUDA Programming - Chapter 8: Kernel Declarations: __global__, __device__, __host__\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "CUDA Programming - Chapter 8: Kernel Declarations: __global__, __device__, __host__\nStatus: 0 errors detected.",
-                "videoStart": 2520,
+                "videoStart": 6300,
                 "videos": {
                     "en": {
                         "id": "9fp0T6CBB9I",
-                        "start": 2520
+                        "start": 6300
                     },
                     "te": {
                         "id": "9fp0T6CBB9I",
@@ -21985,11 +21984,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 9: Grid, Block & Thread Dimensions (dim3)\n# Language: CUDA Programming\nprint(\"Executing Chapter 9: Grid, Block & Thread Dimensions (dim3)\")",
                 "compilerCode": "print(\"CUDA Programming - Chapter 9: Grid, Block & Thread Dimensions (dim3)\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "CUDA Programming - Chapter 9: Grid, Block & Thread Dimensions (dim3)\nStatus: 0 errors detected.",
-                "videoStart": 2880,
+                "videoStart": 7600,
                 "videos": {
                     "en": {
                         "id": "9fp0T6CBB9I",
-                        "start": 2880
+                        "start": 7600
                     },
                     "te": {
                         "id": "9fp0T6CBB9I",
@@ -22071,11 +22070,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 10: Thread Index Calculations in 1D Grids\n# Language: CUDA Programming\nprint(\"Executing Chapter 10: Thread Index Calculations in 1D Grids\")",
                 "compilerCode": "print(\"CUDA Programming - Chapter 10: Thread Index Calculations in 1D Grids\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "CUDA Programming - Chapter 10: Thread Index Calculations in 1D Grids\nStatus: 0 errors detected.",
-                "videoStart": 3240,
+                "videoStart": 9000,
                 "videos": {
                     "en": {
                         "id": "9fp0T6CBB9I",
-                        "start": 3240
+                        "start": 9000
                     },
                     "te": {
                         "id": "9fp0T6CBB9I",
@@ -22157,11 +22156,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 11: 2D and 3D Grids & Block Indexing\n# Language: CUDA Programming\nprint(\"Executing Chapter 11: 2D and 3D Grids & Block Indexing\")",
                 "compilerCode": "print(\"CUDA Programming - Chapter 11: 2D and 3D Grids & Block Indexing\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "CUDA Programming - Chapter 11: 2D and 3D Grids & Block Indexing\nStatus: 0 errors detected.",
-                "videoStart": 3600,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "9fp0T6CBB9I",
-                        "start": 3600
+                        "start": 0
                     },
                     "te": {
                         "id": "9fp0T6CBB9I",
@@ -22243,11 +22242,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 12: Warp Execution & 32-Thread Scheduling\n# Language: CUDA Programming\nprint(\"Executing Chapter 12: Warp Execution & 32-Thread Scheduling\")",
                 "compilerCode": "print(\"CUDA Programming - Chapter 12: Warp Execution & 32-Thread Scheduling\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "CUDA Programming - Chapter 12: Warp Execution & 32-Thread Scheduling\nStatus: 0 errors detected.",
-                "videoStart": 3960,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "9fp0T6CBB9I",
-                        "start": 3960
+                        "start": 0
                     },
                     "te": {
                         "id": "9fp0T6CBB9I",
@@ -22329,11 +22328,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 13: Warp Divergence: Branching Penalty & Fixes\n# Language: CUDA Programming\nprint(\"Executing Chapter 13: Warp Divergence: Branching Penalty & Fixes\")",
                 "compilerCode": "print(\"CUDA Programming - Chapter 13: Warp Divergence: Branching Penalty & Fixes\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "CUDA Programming - Chapter 13: Warp Divergence: Branching Penalty & Fixes\nStatus: 0 errors detected.",
-                "videoStart": 4320,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "9fp0T6CBB9I",
-                        "start": 4320
+                        "start": 0
                     },
                     "te": {
                         "id": "9fp0T6CBB9I",
@@ -22415,11 +22414,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 14: GPU Memory Hierarchy: Registers & Local Memory\n# Language: CUDA Programming\nprint(\"Executing Chapter 14: GPU Memory Hierarchy: Registers & Local Memory\")",
                 "compilerCode": "print(\"CUDA Programming - Chapter 14: GPU Memory Hierarchy: Registers & Local Memory\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "CUDA Programming - Chapter 14: GPU Memory Hierarchy: Registers & Local Memory\nStatus: 0 errors detected.",
-                "videoStart": 4680,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "9fp0T6CBB9I",
-                        "start": 4680
+                        "start": 0
                     },
                     "te": {
                         "id": "9fp0T6CBB9I",
@@ -22501,11 +22500,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 15: Global Memory: Bandwidth & Architecture\n# Language: CUDA Programming\nprint(\"Executing Chapter 15: Global Memory: Bandwidth & Architecture\")",
                 "compilerCode": "print(\"CUDA Programming - Chapter 15: Global Memory: Bandwidth & Architecture\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "CUDA Programming - Chapter 15: Global Memory: Bandwidth & Architecture\nStatus: 0 errors detected.",
-                "videoStart": 5040,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "9fp0T6CBB9I",
-                        "start": 5040
+                        "start": 0
                     },
                     "te": {
                         "id": "9fp0T6CBB9I",
@@ -22587,11 +22586,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 16: Memory Coalescing: Aligned Access Patterns\n# Language: CUDA Programming\nprint(\"Executing Chapter 16: Memory Coalescing: Aligned Access Patterns\")",
                 "compilerCode": "print(\"CUDA Programming - Chapter 16: Memory Coalescing: Aligned Access Patterns\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "CUDA Programming - Chapter 16: Memory Coalescing: Aligned Access Patterns\nStatus: 0 errors detected.",
-                "videoStart": 5400,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "9fp0T6CBB9I",
-                        "start": 5400
+                        "start": 0
                     },
                     "te": {
                         "id": "9fp0T6CBB9I",
@@ -22673,11 +22672,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 17: Shared Memory: Fast On-Chip Data Sharing\n# Language: CUDA Programming\nprint(\"Executing Chapter 17: Shared Memory: Fast On-Chip Data Sharing\")",
                 "compilerCode": "print(\"CUDA Programming - Chapter 17: Shared Memory: Fast On-Chip Data Sharing\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "CUDA Programming - Chapter 17: Shared Memory: Fast On-Chip Data Sharing\nStatus: 0 errors detected.",
-                "videoStart": 5760,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "9fp0T6CBB9I",
-                        "start": 5760
+                        "start": 0
                     },
                     "te": {
                         "id": "9fp0T6CBB9I",
@@ -22759,11 +22758,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 18: Thread Synchronization: __syncthreads()\n# Language: CUDA Programming\nprint(\"Executing Chapter 18: Thread Synchronization: __syncthreads()\")",
                 "compilerCode": "print(\"CUDA Programming - Chapter 18: Thread Synchronization: __syncthreads()\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "CUDA Programming - Chapter 18: Thread Synchronization: __syncthreads()\nStatus: 0 errors detected.",
-                "videoStart": 6120,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "9fp0T6CBB9I",
-                        "start": 6120
+                        "start": 0
                     },
                     "te": {
                         "id": "9fp0T6CBB9I",
@@ -22845,11 +22844,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 19: Shared Memory Bank Conflicts & Resolution\n# Language: CUDA Programming\nprint(\"Executing Chapter 19: Shared Memory Bank Conflicts & Resolution\")",
                 "compilerCode": "print(\"CUDA Programming - Chapter 19: Shared Memory Bank Conflicts & Resolution\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "CUDA Programming - Chapter 19: Shared Memory Bank Conflicts & Resolution\nStatus: 0 errors detected.",
-                "videoStart": 6480,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "9fp0T6CBB9I",
-                        "start": 6480
+                        "start": 0
                     },
                     "te": {
                         "id": "9fp0T6CBB9I",
@@ -22931,11 +22930,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 20: Parallel Reduction in Shared Memory\n# Language: CUDA Programming\nprint(\"Executing Chapter 20: Parallel Reduction in Shared Memory\")",
                 "compilerCode": "print(\"CUDA Programming - Chapter 20: Parallel Reduction in Shared Memory\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "CUDA Programming - Chapter 20: Parallel Reduction in Shared Memory\nStatus: 0 errors detected.",
-                "videoStart": 6840,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "9fp0T6CBB9I",
-                        "start": 6840
+                        "start": 0
                     },
                     "te": {
                         "id": "9fp0T6CBB9I",
@@ -23017,11 +23016,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 21: Matrix Addition on GPU (1D & 2D)\n# Language: CUDA Programming\nprint(\"Executing Chapter 21: Matrix Addition on GPU (1D & 2D)\")",
                 "compilerCode": "print(\"CUDA Programming - Chapter 21: Matrix Addition on GPU (1D & 2D)\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "CUDA Programming - Chapter 21: Matrix Addition on GPU (1D & 2D)\nStatus: 0 errors detected.",
-                "videoStart": 7200,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "9fp0T6CBB9I",
-                        "start": 7200
+                        "start": 0
                     },
                     "te": {
                         "id": "9fp0T6CBB9I",
@@ -23103,11 +23102,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 22: Naive Matrix Multiplication on GPU\n# Language: CUDA Programming\nprint(\"Executing Chapter 22: Naive Matrix Multiplication on GPU\")",
                 "compilerCode": "print(\"CUDA Programming - Chapter 22: Naive Matrix Multiplication on GPU\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "CUDA Programming - Chapter 22: Naive Matrix Multiplication on GPU\nStatus: 0 errors detected.",
-                "videoStart": 7560,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "9fp0T6CBB9I",
-                        "start": 7560
+                        "start": 0
                     },
                     "te": {
                         "id": "9fp0T6CBB9I",
@@ -23189,11 +23188,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 23: Tiled Matrix Multiplication with Shared Memory\n# Language: CUDA Programming\nprint(\"Executing Chapter 23: Tiled Matrix Multiplication with Shared Memory\")",
                 "compilerCode": "print(\"CUDA Programming - Chapter 23: Tiled Matrix Multiplication with Shared Memory\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "CUDA Programming - Chapter 23: Tiled Matrix Multiplication with Shared Memory\nStatus: 0 errors detected.",
-                "videoStart": 7920,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "9fp0T6CBB9I",
-                        "start": 7920
+                        "start": 0
                     },
                     "te": {
                         "id": "9fp0T6CBB9I",
@@ -23275,11 +23274,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 24: Constant Memory (__constant__) & Caching\n# Language: CUDA Programming\nprint(\"Executing Chapter 24: Constant Memory (__constant__) & Caching\")",
                 "compilerCode": "print(\"CUDA Programming - Chapter 24: Constant Memory (__constant__) & Caching\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "CUDA Programming - Chapter 24: Constant Memory (__constant__) & Caching\nStatus: 0 errors detected.",
-                "videoStart": 8280,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "9fp0T6CBB9I",
-                        "start": 8280
+                        "start": 0
                     },
                     "te": {
                         "id": "9fp0T6CBB9I",
@@ -23361,11 +23360,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 25: Atomic Operations: atomicAdd, atomicCAS\n# Language: CUDA Programming\nprint(\"Executing Chapter 25: Atomic Operations: atomicAdd, atomicCAS\")",
                 "compilerCode": "print(\"CUDA Programming - Chapter 25: Atomic Operations: atomicAdd, atomicCAS\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "CUDA Programming - Chapter 25: Atomic Operations: atomicAdd, atomicCAS\nStatus: 0 errors detected.",
-                "videoStart": 8640,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "9fp0T6CBB9I",
-                        "start": 8640
+                        "start": 0
                     },
                     "te": {
                         "id": "9fp0T6CBB9I",
@@ -23447,11 +23446,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 26: CUDA Streams: Asynchronous Execution\n# Language: CUDA Programming\nprint(\"Executing Chapter 26: CUDA Streams: Asynchronous Execution\")",
                 "compilerCode": "print(\"CUDA Programming - Chapter 26: CUDA Streams: Asynchronous Execution\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "CUDA Programming - Chapter 26: CUDA Streams: Asynchronous Execution\nStatus: 0 errors detected.",
-                "videoStart": 9000,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "9fp0T6CBB9I",
-                        "start": 9000
+                        "start": 0
                     },
                     "te": {
                         "id": "9fp0T6CBB9I",
@@ -23533,11 +23532,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 27: Overlapping Kernel Execution & cudaMemcpyAsync\n# Language: CUDA Programming\nprint(\"Executing Chapter 27: Overlapping Kernel Execution & cudaMemcpyAsync\")",
                 "compilerCode": "print(\"CUDA Programming - Chapter 27: Overlapping Kernel Execution & cudaMemcpyAsync\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "CUDA Programming - Chapter 27: Overlapping Kernel Execution & cudaMemcpyAsync\nStatus: 0 errors detected.",
-                "videoStart": 9360,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "9fp0T6CBB9I",
-                        "start": 9360
+                        "start": 0
                     },
                     "te": {
                         "id": "9fp0T6CBB9I",
@@ -23619,11 +23618,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 28: CUDA Events: High-Precision Kernel Timing\n# Language: CUDA Programming\nprint(\"Executing Chapter 28: CUDA Events: High-Precision Kernel Timing\")",
                 "compilerCode": "print(\"CUDA Programming - Chapter 28: CUDA Events: High-Precision Kernel Timing\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "CUDA Programming - Chapter 28: CUDA Events: High-Precision Kernel Timing\nStatus: 0 errors detected.",
-                "videoStart": 9720,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "9fp0T6CBB9I",
-                        "start": 9720
+                        "start": 0
                     },
                     "te": {
                         "id": "9fp0T6CBB9I",
@@ -23705,11 +23704,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 29: Unified Memory: cudaMallocManaged & Page Migration\n# Language: CUDA Programming\nprint(\"Executing Chapter 29: Unified Memory: cudaMallocManaged & Page Migration\")",
                 "compilerCode": "print(\"CUDA Programming - Chapter 29: Unified Memory: cudaMallocManaged & Page Migration\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "CUDA Programming - Chapter 29: Unified Memory: cudaMallocManaged & Page Migration\nStatus: 0 errors detected.",
-                "videoStart": 10080,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "9fp0T6CBB9I",
-                        "start": 10080
+                        "start": 0
                     },
                     "te": {
                         "id": "9fp0T6CBB9I",
@@ -23791,11 +23790,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 30: Dynamic Parallelism: Launching Kernels from GPU\n# Language: CUDA Programming\nprint(\"Executing Chapter 30: Dynamic Parallelism: Launching Kernels from GPU\")",
                 "compilerCode": "print(\"CUDA Programming - Chapter 30: Dynamic Parallelism: Launching Kernels from GPU\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "CUDA Programming - Chapter 30: Dynamic Parallelism: Launching Kernels from GPU\nStatus: 0 errors detected.",
-                "videoStart": 10440,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "9fp0T6CBB9I",
-                        "start": 10440
+                        "start": 0
                     },
                     "te": {
                         "id": "9fp0T6CBB9I",
@@ -23877,11 +23876,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 31: Thrust Library: Device Vectors & Sorting\n# Language: CUDA Programming\nprint(\"Executing Chapter 31: Thrust Library: Device Vectors & Sorting\")",
                 "compilerCode": "print(\"CUDA Programming - Chapter 31: Thrust Library: Device Vectors & Sorting\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "CUDA Programming - Chapter 31: Thrust Library: Device Vectors & Sorting\nStatus: 0 errors detected.",
-                "videoStart": 10800,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "9fp0T6CBB9I",
-                        "start": 10800
+                        "start": 0
                     },
                     "te": {
                         "id": "9fp0T6CBB9I",
@@ -23963,11 +23962,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 32: cuBLAS: Fast GPU Matrix Math\n# Language: CUDA Programming\nprint(\"Executing Chapter 32: cuBLAS: Fast GPU Matrix Math\")",
                 "compilerCode": "print(\"CUDA Programming - Chapter 32: cuBLAS: Fast GPU Matrix Math\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "CUDA Programming - Chapter 32: cuBLAS: Fast GPU Matrix Math\nStatus: 0 errors detected.",
-                "videoStart": 11160,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "9fp0T6CBB9I",
-                        "start": 11160
+                        "start": 0
                     },
                     "te": {
                         "id": "9fp0T6CBB9I",
@@ -24049,11 +24048,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 33: CUDA Debugging: cudaGetLastError & cuda-memcheck\n# Language: CUDA Programming\nprint(\"Executing Chapter 33: CUDA Debugging: cudaGetLastError & cuda-memcheck\")",
                 "compilerCode": "print(\"CUDA Programming - Chapter 33: CUDA Debugging: cudaGetLastError & cuda-memcheck\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "CUDA Programming - Chapter 33: CUDA Debugging: cudaGetLastError & cuda-memcheck\nStatus: 0 errors detected.",
-                "videoStart": 11520,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "9fp0T6CBB9I",
-                        "start": 11520
+                        "start": 0
                     },
                     "te": {
                         "id": "9fp0T6CBB9I",
@@ -24135,11 +24134,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 34: Profiling GPU Code with NVIDIA Nsight\n# Language: CUDA Programming\nprint(\"Executing Chapter 34: Profiling GPU Code with NVIDIA Nsight\")",
                 "compilerCode": "print(\"CUDA Programming - Chapter 34: Profiling GPU Code with NVIDIA Nsight\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "CUDA Programming - Chapter 34: Profiling GPU Code with NVIDIA Nsight\nStatus: 0 errors detected.",
-                "videoStart": 11880,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "9fp0T6CBB9I",
-                        "start": 11880
+                        "start": 0
                     },
                     "te": {
                         "id": "9fp0T6CBB9I",
@@ -24221,11 +24220,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 35: Production GPU Acceleration Capstone Project\n# Language: CUDA Programming\nprint(\"Executing Chapter 35: Production GPU Acceleration Capstone Project\")",
                 "compilerCode": "print(\"CUDA Programming - Chapter 35: Production GPU Acceleration Capstone Project\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "CUDA Programming - Chapter 35: Production GPU Acceleration Capstone Project\nStatus: 0 errors detected.",
-                "videoStart": 12240,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "9fp0T6CBB9I",
-                        "start": 12240
+                        "start": 0
                     },
                     "te": {
                         "id": "9fp0T6CBB9I",
@@ -24313,7 +24312,7 @@ window.LEARNING_DATA = {
             },
             "te": {
                 "id": "t_ispmWmdjY",
-                "title": "Ruby Full Course in Telugu (తెలుగు)"
+                "title": "Ruby Full Course (తెలుగు Notes)"
             },
             "ta": {
                 "id": "t_ispmWmdjY",
@@ -24420,11 +24419,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 2: Interactive Ruby (IRB) & Running Scripts\n# Language: Ruby Programming\nprint(\"Executing Chapter 2: Interactive Ruby (IRB) & Running Scripts\")",
                 "compilerCode": "print(\"Ruby Programming - Chapter 2: Interactive Ruby (IRB) & Running Scripts\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "Ruby Programming - Chapter 2: Interactive Ruby (IRB) & Running Scripts\nStatus: 0 errors detected.",
-                "videoStart": 360,
+                "videoStart": 800,
                 "videos": {
                     "en": {
                         "id": "t_ispmWmdjY",
-                        "start": 360
+                        "start": 800
                     },
                     "te": {
                         "id": "t_ispmWmdjY",
@@ -24506,11 +24505,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 3: Variables: Local, Global, Instance & Class\n# Language: Ruby Programming\nprint(\"Executing Chapter 3: Variables: Local, Global, Instance & Class\")",
                 "compilerCode": "print(\"Ruby Programming - Chapter 3: Variables: Local, Global, Instance & Class\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "Ruby Programming - Chapter 3: Variables: Local, Global, Instance & Class\nStatus: 0 errors detected.",
-                "videoStart": 720,
+                "videoStart": 1700,
                 "videos": {
                     "en": {
                         "id": "t_ispmWmdjY",
-                        "start": 720
+                        "start": 1700
                     },
                     "te": {
                         "id": "t_ispmWmdjY",
@@ -24592,11 +24591,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 4: Data Types: Fixnum, Float, String & NilClass\n# Language: Ruby Programming\nprint(\"Executing Chapter 4: Data Types: Fixnum, Float, String & NilClass\")",
                 "compilerCode": "print(\"Ruby Programming - Chapter 4: Data Types: Fixnum, Float, String & NilClass\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "Ruby Programming - Chapter 4: Data Types: Fixnum, Float, String & NilClass\nStatus: 0 errors detected.",
-                "videoStart": 1080,
+                "videoStart": 2700,
                 "videos": {
                     "en": {
                         "id": "t_ispmWmdjY",
-                        "start": 1080
+                        "start": 2700
                     },
                     "te": {
                         "id": "t_ispmWmdjY",
@@ -24678,11 +24677,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 5: String Operations, Interpolation & Slicing\n# Language: Ruby Programming\nprint(\"Executing Chapter 5: String Operations, Interpolation & Slicing\")",
                 "compilerCode": "print(\"Ruby Programming - Chapter 5: String Operations, Interpolation & Slicing\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "Ruby Programming - Chapter 5: String Operations, Interpolation & Slicing\nStatus: 0 errors detected.",
-                "videoStart": 1440,
+                "videoStart": 3800,
                 "videos": {
                     "en": {
                         "id": "t_ispmWmdjY",
-                        "start": 1440
+                        "start": 3800
                     },
                     "te": {
                         "id": "t_ispmWmdjY",
@@ -24764,11 +24763,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 6: Symbols: Memory-Efficient Identifiers\n# Language: Ruby Programming\nprint(\"Executing Chapter 6: Symbols: Memory-Efficient Identifiers\")",
                 "compilerCode": "print(\"Ruby Programming - Chapter 6: Symbols: Memory-Efficient Identifiers\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "Ruby Programming - Chapter 6: Symbols: Memory-Efficient Identifiers\nStatus: 0 errors detected.",
-                "videoStart": 1800,
+                "videoStart": 5000,
                 "videos": {
                     "en": {
                         "id": "t_ispmWmdjY",
-                        "start": 1800
+                        "start": 5000
                     },
                     "te": {
                         "id": "t_ispmWmdjY",
@@ -24850,11 +24849,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 7: Operators: Arithmetic, Comparison & Spaceship (<=>)\n# Language: Ruby Programming\nprint(\"Executing Chapter 7: Operators: Arithmetic, Comparison & Spaceship (<=>)\")",
                 "compilerCode": "print(\"Ruby Programming - Chapter 7: Operators: Arithmetic, Comparison & Spaceship (<=>)\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "Ruby Programming - Chapter 7: Operators: Arithmetic, Comparison & Spaceship (<=>)\nStatus: 0 errors detected.",
-                "videoStart": 2160,
+                "videoStart": 6400,
                 "videos": {
                     "en": {
                         "id": "t_ispmWmdjY",
-                        "start": 2160
+                        "start": 6400
                     },
                     "te": {
                         "id": "t_ispmWmdjY",
@@ -24936,11 +24935,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 8: Conditionals: if, elsif, else & unless\n# Language: Ruby Programming\nprint(\"Executing Chapter 8: Conditionals: if, elsif, else & unless\")",
                 "compilerCode": "print(\"Ruby Programming - Chapter 8: Conditionals: if, elsif, else & unless\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "Ruby Programming - Chapter 8: Conditionals: if, elsif, else & unless\nStatus: 0 errors detected.",
-                "videoStart": 2520,
+                "videoStart": 7900,
                 "videos": {
                     "en": {
                         "id": "t_ispmWmdjY",
-                        "start": 2520
+                        "start": 7900
                     },
                     "te": {
                         "id": "t_ispmWmdjY",
@@ -25022,11 +25021,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 9: Ternary Operator & Inline Conditionals\n# Language: Ruby Programming\nprint(\"Executing Chapter 9: Ternary Operator & Inline Conditionals\")",
                 "compilerCode": "print(\"Ruby Programming - Chapter 9: Ternary Operator & Inline Conditionals\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "Ruby Programming - Chapter 9: Ternary Operator & Inline Conditionals\nStatus: 0 errors detected.",
-                "videoStart": 2880,
+                "videoStart": 9500,
                 "videos": {
                     "en": {
                         "id": "t_ispmWmdjY",
-                        "start": 2880
+                        "start": 9500
                     },
                     "te": {
                         "id": "t_ispmWmdjY",
@@ -25108,11 +25107,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 10: Loops: while, until & Infinite loop do\n# Language: Ruby Programming\nprint(\"Executing Chapter 10: Loops: while, until & Infinite loop do\")",
                 "compilerCode": "print(\"Ruby Programming - Chapter 10: Loops: while, until & Infinite loop do\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "Ruby Programming - Chapter 10: Loops: while, until & Infinite loop do\nStatus: 0 errors detected.",
-                "videoStart": 3240,
+                "videoStart": 11200,
                 "videos": {
                     "en": {
                         "id": "t_ispmWmdjY",
-                        "start": 3240
+                        "start": 11200
                     },
                     "te": {
                         "id": "t_ispmWmdjY",
@@ -25194,11 +25193,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 11: Iterators: times, upto, downto & step\n# Language: Ruby Programming\nprint(\"Executing Chapter 11: Iterators: times, upto, downto & step\")",
                 "compilerCode": "print(\"Ruby Programming - Chapter 11: Iterators: times, upto, downto & step\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "Ruby Programming - Chapter 11: Iterators: times, upto, downto & step\nStatus: 0 errors detected.",
-                "videoStart": 3600,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "t_ispmWmdjY",
-                        "start": 3600
+                        "start": 0
                     },
                     "te": {
                         "id": "t_ispmWmdjY",
@@ -25280,11 +25279,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 12: Loop Control: break, next, redo, retry\n# Language: Ruby Programming\nprint(\"Executing Chapter 12: Loop Control: break, next, redo, retry\")",
                 "compilerCode": "print(\"Ruby Programming - Chapter 12: Loop Control: break, next, redo, retry\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "Ruby Programming - Chapter 12: Loop Control: break, next, redo, retry\nStatus: 0 errors detected.",
-                "videoStart": 3960,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "t_ispmWmdjY",
-                        "start": 3960
+                        "start": 0
                     },
                     "te": {
                         "id": "t_ispmWmdjY",
@@ -25366,11 +25365,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 13: Methods: Definition, Arguments & Return Values\n# Language: Ruby Programming\nprint(\"Executing Chapter 13: Methods: Definition, Arguments & Return Values\")",
                 "compilerCode": "print(\"Ruby Programming - Chapter 13: Methods: Definition, Arguments & Return Values\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "Ruby Programming - Chapter 13: Methods: Definition, Arguments & Return Values\nStatus: 0 errors detected.",
-                "videoStart": 4320,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "t_ispmWmdjY",
-                        "start": 4320
+                        "start": 0
                     },
                     "te": {
                         "id": "t_ispmWmdjY",
@@ -25452,11 +25451,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 14: Method Arguments: Default & Keyword Arguments\n# Language: Ruby Programming\nprint(\"Executing Chapter 14: Method Arguments: Default & Keyword Arguments\")",
                 "compilerCode": "print(\"Ruby Programming - Chapter 14: Method Arguments: Default & Keyword Arguments\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "Ruby Programming - Chapter 14: Method Arguments: Default & Keyword Arguments\nStatus: 0 errors detected.",
-                "videoStart": 4680,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "t_ispmWmdjY",
-                        "start": 4680
+                        "start": 0
                     },
                     "te": {
                         "id": "t_ispmWmdjY",
@@ -25538,11 +25537,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 15: Variable Arguments: Splat Operator (*args)\n# Language: Ruby Programming\nprint(\"Executing Chapter 15: Variable Arguments: Splat Operator (*args)\")",
                 "compilerCode": "print(\"Ruby Programming - Chapter 15: Variable Arguments: Splat Operator (*args)\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "Ruby Programming - Chapter 15: Variable Arguments: Splat Operator (*args)\nStatus: 0 errors detected.",
-                "videoStart": 5040,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "t_ispmWmdjY",
-                        "start": 5040
+                        "start": 0
                     },
                     "te": {
                         "id": "t_ispmWmdjY",
@@ -25624,11 +25623,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 16: Blocks: Defining Blocks & yield Keyword\n# Language: Ruby Programming\nprint(\"Executing Chapter 16: Blocks: Defining Blocks & yield Keyword\")",
                 "compilerCode": "print(\"Ruby Programming - Chapter 16: Blocks: Defining Blocks & yield Keyword\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "Ruby Programming - Chapter 16: Blocks: Defining Blocks & yield Keyword\nStatus: 0 errors detected.",
-                "videoStart": 5400,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "t_ispmWmdjY",
-                        "start": 5400
+                        "start": 0
                     },
                     "te": {
                         "id": "t_ispmWmdjY",
@@ -25710,11 +25709,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 17: Block Arguments & block_given? Check\n# Language: Ruby Programming\nprint(\"Executing Chapter 17: Block Arguments & block_given? Check\")",
                 "compilerCode": "print(\"Ruby Programming - Chapter 17: Block Arguments & block_given? Check\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "Ruby Programming - Chapter 17: Block Arguments & block_given? Check\nStatus: 0 errors detected.",
-                "videoStart": 5760,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "t_ispmWmdjY",
-                        "start": 5760
+                        "start": 0
                     },
                     "te": {
                         "id": "t_ispmWmdjY",
@@ -25796,11 +25795,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 18: Procs: Reusable Blocks of Code\n# Language: Ruby Programming\nprint(\"Executing Chapter 18: Procs: Reusable Blocks of Code\")",
                 "compilerCode": "print(\"Ruby Programming - Chapter 18: Procs: Reusable Blocks of Code\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "Ruby Programming - Chapter 18: Procs: Reusable Blocks of Code\nStatus: 0 errors detected.",
-                "videoStart": 6120,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "t_ispmWmdjY",
-                        "start": 6120
+                        "start": 0
                     },
                     "te": {
                         "id": "t_ispmWmdjY",
@@ -25882,11 +25881,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 19: Lambdas vs Procs: Return and Arity Differences\n# Language: Ruby Programming\nprint(\"Executing Chapter 19: Lambdas vs Procs: Return and Arity Differences\")",
                 "compilerCode": "print(\"Ruby Programming - Chapter 19: Lambdas vs Procs: Return and Arity Differences\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "Ruby Programming - Chapter 19: Lambdas vs Procs: Return and Arity Differences\nStatus: 0 errors detected.",
-                "videoStart": 6480,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "t_ispmWmdjY",
-                        "start": 6480
+                        "start": 0
                     },
                     "te": {
                         "id": "t_ispmWmdjY",
@@ -25968,11 +25967,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 20: Arrays: Creation, Indexing & Common Methods\n# Language: Ruby Programming\nprint(\"Executing Chapter 20: Arrays: Creation, Indexing & Common Methods\")",
                 "compilerCode": "print(\"Ruby Programming - Chapter 20: Arrays: Creation, Indexing & Common Methods\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "Ruby Programming - Chapter 20: Arrays: Creation, Indexing & Common Methods\nStatus: 0 errors detected.",
-                "videoStart": 6840,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "t_ispmWmdjY",
-                        "start": 6840
+                        "start": 0
                     },
                     "te": {
                         "id": "t_ispmWmdjY",
@@ -26054,11 +26053,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 21: Array Iteration: each, map, select, reject\n# Language: Ruby Programming\nprint(\"Executing Chapter 21: Array Iteration: each, map, select, reject\")",
                 "compilerCode": "print(\"Ruby Programming - Chapter 21: Array Iteration: each, map, select, reject\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "Ruby Programming - Chapter 21: Array Iteration: each, map, select, reject\nStatus: 0 errors detected.",
-                "videoStart": 7200,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "t_ispmWmdjY",
-                        "start": 7200
+                        "start": 0
                     },
                     "te": {
                         "id": "t_ispmWmdjY",
@@ -26140,11 +26139,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 22: Hashes: Key-Value Associations & Methods\n# Language: Ruby Programming\nprint(\"Executing Chapter 22: Hashes: Key-Value Associations & Methods\")",
                 "compilerCode": "print(\"Ruby Programming - Chapter 22: Hashes: Key-Value Associations & Methods\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "Ruby Programming - Chapter 22: Hashes: Key-Value Associations & Methods\nStatus: 0 errors detected.",
-                "videoStart": 7560,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "t_ispmWmdjY",
-                        "start": 7560
+                        "start": 0
                     },
                     "te": {
                         "id": "t_ispmWmdjY",
@@ -26226,11 +26225,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 23: Hash Iteration: each_key, each_value, transform\n# Language: Ruby Programming\nprint(\"Executing Chapter 23: Hash Iteration: each_key, each_value, transform\")",
                 "compilerCode": "print(\"Ruby Programming - Chapter 23: Hash Iteration: each_key, each_value, transform\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "Ruby Programming - Chapter 23: Hash Iteration: each_key, each_value, transform\nStatus: 0 errors detected.",
-                "videoStart": 7920,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "t_ispmWmdjY",
-                        "start": 7920
+                        "start": 0
                     },
                     "te": {
                         "id": "t_ispmWmdjY",
@@ -26312,11 +26311,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 24: The Enumerable Module: all?, any?, none?\n# Language: Ruby Programming\nprint(\"Executing Chapter 24: The Enumerable Module: all?, any?, none?\")",
                 "compilerCode": "print(\"Ruby Programming - Chapter 24: The Enumerable Module: all?, any?, none?\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "Ruby Programming - Chapter 24: The Enumerable Module: all?, any?, none?\nStatus: 0 errors detected.",
-                "videoStart": 8280,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "t_ispmWmdjY",
-                        "start": 8280
+                        "start": 0
                     },
                     "te": {
                         "id": "t_ispmWmdjY",
@@ -26398,11 +26397,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 25: Enumerable Reductions: inject and reduce\n# Language: Ruby Programming\nprint(\"Executing Chapter 25: Enumerable Reductions: inject and reduce\")",
                 "compilerCode": "print(\"Ruby Programming - Chapter 25: Enumerable Reductions: inject and reduce\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "Ruby Programming - Chapter 25: Enumerable Reductions: inject and reduce\nStatus: 0 errors detected.",
-                "videoStart": 8640,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "t_ispmWmdjY",
-                        "start": 8640
+                        "start": 0
                     },
                     "te": {
                         "id": "t_ispmWmdjY",
@@ -26484,11 +26483,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 26: Ranges: Inclusive (..) vs Exclusive (...) Ranges\n# Language: Ruby Programming\nprint(\"Executing Chapter 26: Ranges: Inclusive (..) vs Exclusive (...) Ranges\")",
                 "compilerCode": "print(\"Ruby Programming - Chapter 26: Ranges: Inclusive (..) vs Exclusive (...) Ranges\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "Ruby Programming - Chapter 26: Ranges: Inclusive (..) vs Exclusive (...) Ranges\nStatus: 0 errors detected.",
-                "videoStart": 9000,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "t_ispmWmdjY",
-                        "start": 9000
+                        "start": 0
                     },
                     "te": {
                         "id": "t_ispmWmdjY",
@@ -26570,11 +26569,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 27: Classes & Objects: Definition & Instantiation\n# Language: Ruby Programming\nprint(\"Executing Chapter 27: Classes & Objects: Definition & Instantiation\")",
                 "compilerCode": "print(\"Ruby Programming - Chapter 27: Classes & Objects: Definition & Instantiation\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "Ruby Programming - Chapter 27: Classes & Objects: Definition & Instantiation\nStatus: 0 errors detected.",
-                "videoStart": 9360,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "t_ispmWmdjY",
-                        "start": 9360
+                        "start": 0
                     },
                     "te": {
                         "id": "t_ispmWmdjY",
@@ -26656,11 +26655,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 28: The initialize Constructor & @instance_variables\n# Language: Ruby Programming\nprint(\"Executing Chapter 28: The initialize Constructor & @instance_variables\")",
                 "compilerCode": "print(\"Ruby Programming - Chapter 28: The initialize Constructor & @instance_variables\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "Ruby Programming - Chapter 28: The initialize Constructor & @instance_variables\nStatus: 0 errors detected.",
-                "videoStart": 9720,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "t_ispmWmdjY",
-                        "start": 9720
+                        "start": 0
                     },
                     "te": {
                         "id": "t_ispmWmdjY",
@@ -26742,11 +26741,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 29: Attribute Accessors: attr_reader, writer, accessor\n# Language: Ruby Programming\nprint(\"Executing Chapter 29: Attribute Accessors: attr_reader, writer, accessor\")",
                 "compilerCode": "print(\"Ruby Programming - Chapter 29: Attribute Accessors: attr_reader, writer, accessor\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "Ruby Programming - Chapter 29: Attribute Accessors: attr_reader, writer, accessor\nStatus: 0 errors detected.",
-                "videoStart": 10080,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "t_ispmWmdjY",
-                        "start": 10080
+                        "start": 0
                     },
                     "te": {
                         "id": "t_ispmWmdjY",
@@ -26828,11 +26827,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 30: Class Methods (def self.method) & @@class_vars\n# Language: Ruby Programming\nprint(\"Executing Chapter 30: Class Methods (def self.method) & @@class_vars\")",
                 "compilerCode": "print(\"Ruby Programming - Chapter 30: Class Methods (def self.method) & @@class_vars\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "Ruby Programming - Chapter 30: Class Methods (def self.method) & @@class_vars\nStatus: 0 errors detected.",
-                "videoStart": 10440,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "t_ispmWmdjY",
-                        "start": 10440
+                        "start": 0
                     },
                     "te": {
                         "id": "t_ispmWmdjY",
@@ -26914,11 +26913,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 31: Inheritance: Subclassing with < and super\n# Language: Ruby Programming\nprint(\"Executing Chapter 31: Inheritance: Subclassing with < and super\")",
                 "compilerCode": "print(\"Ruby Programming - Chapter 31: Inheritance: Subclassing with < and super\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "Ruby Programming - Chapter 31: Inheritance: Subclassing with < and super\nStatus: 0 errors detected.",
-                "videoStart": 10800,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "t_ispmWmdjY",
-                        "start": 10800
+                        "start": 0
                     },
                     "te": {
                         "id": "t_ispmWmdjY",
@@ -27000,11 +26999,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 32: Method Overriding & Polymorphism in Ruby\n# Language: Ruby Programming\nprint(\"Executing Chapter 32: Method Overriding & Polymorphism in Ruby\")",
                 "compilerCode": "print(\"Ruby Programming - Chapter 32: Method Overriding & Polymorphism in Ruby\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "Ruby Programming - Chapter 32: Method Overriding & Polymorphism in Ruby\nStatus: 0 errors detected.",
-                "videoStart": 11160,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "t_ispmWmdjY",
-                        "start": 11160
+                        "start": 0
                     },
                     "te": {
                         "id": "t_ispmWmdjY",
@@ -27086,11 +27085,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 33: Modules as Namespaces & Mixins (include/extend)\n# Language: Ruby Programming\nprint(\"Executing Chapter 33: Modules as Namespaces & Mixins (include/extend)\")",
                 "compilerCode": "print(\"Ruby Programming - Chapter 33: Modules as Namespaces & Mixins (include/extend)\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "Ruby Programming - Chapter 33: Modules as Namespaces & Mixins (include/extend)\nStatus: 0 errors detected.",
-                "videoStart": 11520,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "t_ispmWmdjY",
-                        "start": 11520
+                        "start": 0
                     },
                     "te": {
                         "id": "t_ispmWmdjY",
@@ -27172,11 +27171,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 34: Exception Handling: begin, rescue, ensure, raise\n# Language: Ruby Programming\nprint(\"Executing Chapter 34: Exception Handling: begin, rescue, ensure, raise\")",
                 "compilerCode": "print(\"Ruby Programming - Chapter 34: Exception Handling: begin, rescue, ensure, raise\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "Ruby Programming - Chapter 34: Exception Handling: begin, rescue, ensure, raise\nStatus: 0 errors detected.",
-                "videoStart": 11880,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "t_ispmWmdjY",
-                        "start": 11880
+                        "start": 0
                     },
                     "te": {
                         "id": "t_ispmWmdjY",
@@ -27258,11 +27257,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 35: File I/O & Complete Ruby CLI Capstone Project\n# Language: Ruby Programming\nprint(\"Executing Chapter 35: File I/O & Complete Ruby CLI Capstone Project\")",
                 "compilerCode": "print(\"Ruby Programming - Chapter 35: File I/O & Complete Ruby CLI Capstone Project\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "Ruby Programming - Chapter 35: File I/O & Complete Ruby CLI Capstone Project\nStatus: 0 errors detected.",
-                "videoStart": 12240,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "t_ispmWmdjY",
-                        "start": 12240
+                        "start": 0
                     },
                     "te": {
                         "id": "t_ispmWmdjY",
@@ -27457,11 +27456,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 2: PHP Syntax, Delimiters & Embedding in HTML\n# Language: PHP Programming\nprint(\"Executing Chapter 2: PHP Syntax, Delimiters & Embedding in HTML\")",
                 "compilerCode": "print(\"PHP Programming - Chapter 2: PHP Syntax, Delimiters & Embedding in HTML\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "PHP Programming - Chapter 2: PHP Syntax, Delimiters & Embedding in HTML\nStatus: 0 errors detected.",
-                "videoStart": 360,
+                "videoStart": 850,
                 "videos": {
                     "en": {
                         "id": "OK_JCtrrv-c",
-                        "start": 360
+                        "start": 850
                     },
                     "te": {
                         "id": "2eebptXfEvw",
@@ -27543,11 +27542,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 3: Variables, Data Types & Type Juggling\n# Language: PHP Programming\nprint(\"Executing Chapter 3: Variables, Data Types & Type Juggling\")",
                 "compilerCode": "print(\"PHP Programming - Chapter 3: Variables, Data Types & Type Juggling\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "PHP Programming - Chapter 3: Variables, Data Types & Type Juggling\nStatus: 0 errors detected.",
-                "videoStart": 720,
+                "videoStart": 1800,
                 "videos": {
                     "en": {
                         "id": "OK_JCtrrv-c",
-                        "start": 720
+                        "start": 1800
                     },
                     "te": {
                         "id": "2eebptXfEvw",
@@ -27629,11 +27628,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 4: Constants: define() vs const Keyword\n# Language: PHP Programming\nprint(\"Executing Chapter 4: Constants: define() vs const Keyword\")",
                 "compilerCode": "print(\"PHP Programming - Chapter 4: Constants: define() vs const Keyword\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "PHP Programming - Chapter 4: Constants: define() vs const Keyword\nStatus: 0 errors detected.",
-                "videoStart": 1080,
+                "videoStart": 2900,
                 "videos": {
                     "en": {
                         "id": "OK_JCtrrv-c",
-                        "start": 1080
+                        "start": 2900
                     },
                     "te": {
                         "id": "2eebptXfEvw",
@@ -27715,11 +27714,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 5: Operators: Arithmetic, Assignment & Comparison\n# Language: PHP Programming\nprint(\"Executing Chapter 5: Operators: Arithmetic, Assignment & Comparison\")",
                 "compilerCode": "print(\"PHP Programming - Chapter 5: Operators: Arithmetic, Assignment & Comparison\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "PHP Programming - Chapter 5: Operators: Arithmetic, Assignment & Comparison\nStatus: 0 errors detected.",
-                "videoStart": 1440,
+                "videoStart": 4100,
                 "videos": {
                     "en": {
                         "id": "OK_JCtrrv-c",
-                        "start": 1440
+                        "start": 4100
                     },
                     "te": {
                         "id": "2eebptXfEvw",
@@ -27801,11 +27800,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 6: PHP 8 Spaceship (<=>) & Null Coalesce (??)\n# Language: PHP Programming\nprint(\"Executing Chapter 6: PHP 8 Spaceship (<=>) & Null Coalesce (??)\")",
                 "compilerCode": "print(\"PHP Programming - Chapter 6: PHP 8 Spaceship (<=>) & Null Coalesce (??)\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "PHP Programming - Chapter 6: PHP 8 Spaceship (<=>) & Null Coalesce (??)\nStatus: 0 errors detected.",
-                "videoStart": 1800,
+                "videoStart": 5400,
                 "videos": {
                     "en": {
                         "id": "OK_JCtrrv-c",
-                        "start": 1800
+                        "start": 5400
                     },
                     "te": {
                         "id": "2eebptXfEvw",
@@ -27887,11 +27886,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 7: Conditional Statements: if, elseif, else\n# Language: PHP Programming\nprint(\"Executing Chapter 7: Conditional Statements: if, elseif, else\")",
                 "compilerCode": "print(\"PHP Programming - Chapter 7: Conditional Statements: if, elseif, else\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "PHP Programming - Chapter 7: Conditional Statements: if, elseif, else\nStatus: 0 errors detected.",
-                "videoStart": 2160,
+                "videoStart": 6800,
                 "videos": {
                     "en": {
                         "id": "OK_JCtrrv-c",
-                        "start": 2160
+                        "start": 6800
                     },
                     "te": {
                         "id": "2eebptXfEvw",
@@ -27973,11 +27972,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 8: Switch-Case & PHP 8 match Expressions\n# Language: PHP Programming\nprint(\"Executing Chapter 8: Switch-Case & PHP 8 match Expressions\")",
                 "compilerCode": "print(\"PHP Programming - Chapter 8: Switch-Case & PHP 8 match Expressions\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "PHP Programming - Chapter 8: Switch-Case & PHP 8 match Expressions\nStatus: 0 errors detected.",
-                "videoStart": 2520,
+                "videoStart": 8300,
                 "videos": {
                     "en": {
                         "id": "OK_JCtrrv-c",
-                        "start": 2520
+                        "start": 8300
                     },
                     "te": {
                         "id": "2eebptXfEvw",
@@ -28059,11 +28058,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 9: Loops: while, do-while & for Loops\n# Language: PHP Programming\nprint(\"Executing Chapter 9: Loops: while, do-while & for Loops\")",
                 "compilerCode": "print(\"PHP Programming - Chapter 9: Loops: while, do-while & for Loops\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "PHP Programming - Chapter 9: Loops: while, do-while & for Loops\nStatus: 0 errors detected.",
-                "videoStart": 2880,
+                "videoStart": 10000,
                 "videos": {
                     "en": {
                         "id": "OK_JCtrrv-c",
-                        "start": 2880
+                        "start": 10000
                     },
                     "te": {
                         "id": "2eebptXfEvw",
@@ -28145,11 +28144,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 10: Foreach Loop: Iterating Over Key-Value Pairs\n# Language: PHP Programming\nprint(\"Executing Chapter 10: Foreach Loop: Iterating Over Key-Value Pairs\")",
                 "compilerCode": "print(\"PHP Programming - Chapter 10: Foreach Loop: Iterating Over Key-Value Pairs\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "PHP Programming - Chapter 10: Foreach Loop: Iterating Over Key-Value Pairs\nStatus: 0 errors detected.",
-                "videoStart": 3240,
+                "videoStart": 11800,
                 "videos": {
                     "en": {
                         "id": "OK_JCtrrv-c",
-                        "start": 3240
+                        "start": 11800
                     },
                     "te": {
                         "id": "2eebptXfEvw",
@@ -28231,11 +28230,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 11: Loop Control: break, continue & Nested Exits\n# Language: PHP Programming\nprint(\"Executing Chapter 11: Loop Control: break, continue & Nested Exits\")",
                 "compilerCode": "print(\"PHP Programming - Chapter 11: Loop Control: break, continue & Nested Exits\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "PHP Programming - Chapter 11: Loop Control: break, continue & Nested Exits\nStatus: 0 errors detected.",
-                "videoStart": 3600,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "OK_JCtrrv-c",
-                        "start": 3600
+                        "start": 0
                     },
                     "te": {
                         "id": "2eebptXfEvw",
@@ -28317,11 +28316,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 12: Functions: Defining, Calling & Return Types\n# Language: PHP Programming\nprint(\"Executing Chapter 12: Functions: Defining, Calling & Return Types\")",
                 "compilerCode": "print(\"PHP Programming - Chapter 12: Functions: Defining, Calling & Return Types\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "PHP Programming - Chapter 12: Functions: Defining, Calling & Return Types\nStatus: 0 errors detected.",
-                "videoStart": 3960,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "OK_JCtrrv-c",
-                        "start": 3960
+                        "start": 0
                     },
                     "te": {
                         "id": "2eebptXfEvw",
@@ -28403,11 +28402,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 13: Function Parameters: Default, Variadic & Named\n# Language: PHP Programming\nprint(\"Executing Chapter 13: Function Parameters: Default, Variadic & Named\")",
                 "compilerCode": "print(\"PHP Programming - Chapter 13: Function Parameters: Default, Variadic & Named\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "PHP Programming - Chapter 13: Function Parameters: Default, Variadic & Named\nStatus: 0 errors detected.",
-                "videoStart": 4320,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "OK_JCtrrv-c",
-                        "start": 4320
+                        "start": 0
                     },
                     "te": {
                         "id": "2eebptXfEvw",
@@ -28489,11 +28488,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 14: Variable Scope: local, global & static\n# Language: PHP Programming\nprint(\"Executing Chapter 14: Variable Scope: local, global & static\")",
                 "compilerCode": "print(\"PHP Programming - Chapter 14: Variable Scope: local, global & static\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "PHP Programming - Chapter 14: Variable Scope: local, global & static\nStatus: 0 errors detected.",
-                "videoStart": 4680,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "OK_JCtrrv-c",
-                        "start": 4680
+                        "start": 0
                     },
                     "te": {
                         "id": "2eebptXfEvw",
@@ -28575,11 +28574,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 15: Anonymous Functions (Closures) & Arrow Functions\n# Language: PHP Programming\nprint(\"Executing Chapter 15: Anonymous Functions (Closures) & Arrow Functions\")",
                 "compilerCode": "print(\"PHP Programming - Chapter 15: Anonymous Functions (Closures) & Arrow Functions\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "PHP Programming - Chapter 15: Anonymous Functions (Closures) & Arrow Functions\nStatus: 0 errors detected.",
-                "videoStart": 5040,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "OK_JCtrrv-c",
-                        "start": 5040
+                        "start": 0
                     },
                     "te": {
                         "id": "2eebptXfEvw",
@@ -28661,11 +28660,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 16: Strings: Single vs Double Quotes & Concatenation\n# Language: PHP Programming\nprint(\"Executing Chapter 16: Strings: Single vs Double Quotes & Concatenation\")",
                 "compilerCode": "print(\"PHP Programming - Chapter 16: Strings: Single vs Double Quotes & Concatenation\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "PHP Programming - Chapter 16: Strings: Single vs Double Quotes & Concatenation\nStatus: 0 errors detected.",
-                "videoStart": 5400,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "OK_JCtrrv-c",
-                        "start": 5400
+                        "start": 0
                     },
                     "te": {
                         "id": "2eebptXfEvw",
@@ -28747,11 +28746,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 17: Essential String Functions (strlen, strpos, substr)\n# Language: PHP Programming\nprint(\"Executing Chapter 17: Essential String Functions (strlen, strpos, substr)\")",
                 "compilerCode": "print(\"PHP Programming - Chapter 17: Essential String Functions (strlen, strpos, substr)\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "PHP Programming - Chapter 17: Essential String Functions (strlen, strpos, substr)\nStatus: 0 errors detected.",
-                "videoStart": 5760,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "OK_JCtrrv-c",
-                        "start": 5760
+                        "start": 0
                     },
                     "te": {
                         "id": "2eebptXfEvw",
@@ -28833,11 +28832,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 18: Indexed Arrays: Creation & Array Functions\n# Language: PHP Programming\nprint(\"Executing Chapter 18: Indexed Arrays: Creation & Array Functions\")",
                 "compilerCode": "print(\"PHP Programming - Chapter 18: Indexed Arrays: Creation & Array Functions\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "PHP Programming - Chapter 18: Indexed Arrays: Creation & Array Functions\nStatus: 0 errors detected.",
-                "videoStart": 6120,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "OK_JCtrrv-c",
-                        "start": 6120
+                        "start": 0
                     },
                     "te": {
                         "id": "2eebptXfEvw",
@@ -28919,11 +28918,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 19: Associative Arrays & Multi-Dimensional Arrays\n# Language: PHP Programming\nprint(\"Executing Chapter 19: Associative Arrays & Multi-Dimensional Arrays\")",
                 "compilerCode": "print(\"PHP Programming - Chapter 19: Associative Arrays & Multi-Dimensional Arrays\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "PHP Programming - Chapter 19: Associative Arrays & Multi-Dimensional Arrays\nStatus: 0 errors detected.",
-                "videoStart": 6480,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "OK_JCtrrv-c",
-                        "start": 6480
+                        "start": 0
                     },
                     "te": {
                         "id": "2eebptXfEvw",
@@ -29005,11 +29004,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 20: Array Manipulation: array_map, filter, reduce\n# Language: PHP Programming\nprint(\"Executing Chapter 20: Array Manipulation: array_map, filter, reduce\")",
                 "compilerCode": "print(\"PHP Programming - Chapter 20: Array Manipulation: array_map, filter, reduce\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "PHP Programming - Chapter 20: Array Manipulation: array_map, filter, reduce\nStatus: 0 errors detected.",
-                "videoStart": 6840,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "OK_JCtrrv-c",
-                        "start": 6840
+                        "start": 0
                     },
                     "te": {
                         "id": "2eebptXfEvw",
@@ -29091,11 +29090,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 21: Superglobals: $_GET & Query String Handling\n# Language: PHP Programming\nprint(\"Executing Chapter 21: Superglobals: $_GET & Query String Handling\")",
                 "compilerCode": "print(\"PHP Programming - Chapter 21: Superglobals: $_GET & Query String Handling\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "PHP Programming - Chapter 21: Superglobals: $_GET & Query String Handling\nStatus: 0 errors detected.",
-                "videoStart": 7200,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "OK_JCtrrv-c",
-                        "start": 7200
+                        "start": 0
                     },
                     "te": {
                         "id": "2eebptXfEvw",
@@ -29177,11 +29176,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 22: Superglobals: $_POST & Form Submissions\n# Language: PHP Programming\nprint(\"Executing Chapter 22: Superglobals: $_POST & Form Submissions\")",
                 "compilerCode": "print(\"PHP Programming - Chapter 22: Superglobals: $_POST & Form Submissions\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "PHP Programming - Chapter 22: Superglobals: $_POST & Form Submissions\nStatus: 0 errors detected.",
-                "videoStart": 7560,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "OK_JCtrrv-c",
-                        "start": 7560
+                        "start": 0
                     },
                     "te": {
                         "id": "2eebptXfEvw",
@@ -29263,11 +29262,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 23: Form Validation & Cross-Site Scripting (XSS) Prevention\n# Language: PHP Programming\nprint(\"Executing Chapter 23: Form Validation & Cross-Site Scripting (XSS) Prevention\")",
                 "compilerCode": "print(\"PHP Programming - Chapter 23: Form Validation & Cross-Site Scripting (XSS) Prevention\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "PHP Programming - Chapter 23: Form Validation & Cross-Site Scripting (XSS) Prevention\nStatus: 0 errors detected.",
-                "videoStart": 7920,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "OK_JCtrrv-c",
-                        "start": 7920
+                        "start": 0
                     },
                     "te": {
                         "id": "2eebptXfEvw",
@@ -29349,11 +29348,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 24: Superglobals: $_SERVER, $_ENV & Configuration\n# Language: PHP Programming\nprint(\"Executing Chapter 24: Superglobals: $_SERVER, $_ENV & Configuration\")",
                 "compilerCode": "print(\"PHP Programming - Chapter 24: Superglobals: $_SERVER, $_ENV & Configuration\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "PHP Programming - Chapter 24: Superglobals: $_SERVER, $_ENV & Configuration\nStatus: 0 errors detected.",
-                "videoStart": 8280,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "OK_JCtrrv-c",
-                        "start": 8280
+                        "start": 0
                     },
                     "te": {
                         "id": "2eebptXfEvw",
@@ -29435,11 +29434,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 25: Cookies: Creating, Reading & Deleting Cookies\n# Language: PHP Programming\nprint(\"Executing Chapter 25: Cookies: Creating, Reading & Deleting Cookies\")",
                 "compilerCode": "print(\"PHP Programming - Chapter 25: Cookies: Creating, Reading & Deleting Cookies\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "PHP Programming - Chapter 25: Cookies: Creating, Reading & Deleting Cookies\nStatus: 0 errors detected.",
-                "videoStart": 8640,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "OK_JCtrrv-c",
-                        "start": 8640
+                        "start": 0
                     },
                     "te": {
                         "id": "2eebptXfEvw",
@@ -29521,11 +29520,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 26: Sessions: session_start() & User State\n# Language: PHP Programming\nprint(\"Executing Chapter 26: Sessions: session_start() & User State\")",
                 "compilerCode": "print(\"PHP Programming - Chapter 26: Sessions: session_start() & User State\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "PHP Programming - Chapter 26: Sessions: session_start() & User State\nStatus: 0 errors detected.",
-                "videoStart": 9000,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "OK_JCtrrv-c",
-                        "start": 9000
+                        "start": 0
                     },
                     "te": {
                         "id": "2eebptXfEvw",
@@ -29607,11 +29606,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 27: File I/O: fopen, fread, fwrite & file_get_contents\n# Language: PHP Programming\nprint(\"Executing Chapter 27: File I/O: fopen, fread, fwrite & file_get_contents\")",
                 "compilerCode": "print(\"PHP Programming - Chapter 27: File I/O: fopen, fread, fwrite & file_get_contents\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "PHP Programming - Chapter 27: File I/O: fopen, fread, fwrite & file_get_contents\nStatus: 0 errors detected.",
-                "videoStart": 9360,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "OK_JCtrrv-c",
-                        "start": 9360
+                        "start": 0
                     },
                     "te": {
                         "id": "2eebptXfEvw",
@@ -29693,11 +29692,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 28: File Uploads: $_FILES & Validation Security\n# Language: PHP Programming\nprint(\"Executing Chapter 28: File Uploads: $_FILES & Validation Security\")",
                 "compilerCode": "print(\"PHP Programming - Chapter 28: File Uploads: $_FILES & Validation Security\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "PHP Programming - Chapter 28: File Uploads: $_FILES & Validation Security\nStatus: 0 errors detected.",
-                "videoStart": 9720,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "OK_JCtrrv-c",
-                        "start": 9720
+                        "start": 0
                     },
                     "te": {
                         "id": "2eebptXfEvw",
@@ -29779,11 +29778,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 29: JSON in PHP: json_encode & json_decode\n# Language: PHP Programming\nprint(\"Executing Chapter 29: JSON in PHP: json_encode & json_decode\")",
                 "compilerCode": "print(\"PHP Programming - Chapter 29: JSON in PHP: json_encode & json_decode\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "PHP Programming - Chapter 29: JSON in PHP: json_encode & json_decode\nStatus: 0 errors detected.",
-                "videoStart": 10080,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "OK_JCtrrv-c",
-                        "start": 10080
+                        "start": 0
                     },
                     "te": {
                         "id": "2eebptXfEvw",
@@ -29865,11 +29864,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 30: Error Handling & Custom Exceptions (try/catch)\n# Language: PHP Programming\nprint(\"Executing Chapter 30: Error Handling & Custom Exceptions (try/catch)\")",
                 "compilerCode": "print(\"PHP Programming - Chapter 30: Error Handling & Custom Exceptions (try/catch)\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "PHP Programming - Chapter 30: Error Handling & Custom Exceptions (try/catch)\nStatus: 0 errors detected.",
-                "videoStart": 10440,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "OK_JCtrrv-c",
-                        "start": 10440
+                        "start": 0
                     },
                     "te": {
                         "id": "2eebptXfEvw",
@@ -29951,11 +29950,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 31: OOP in PHP: Classes, Objects & $this Pointer\n# Language: PHP Programming\nprint(\"Executing Chapter 31: OOP in PHP: Classes, Objects & $this Pointer\")",
                 "compilerCode": "print(\"PHP Programming - Chapter 31: OOP in PHP: Classes, Objects & $this Pointer\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "PHP Programming - Chapter 31: OOP in PHP: Classes, Objects & $this Pointer\nStatus: 0 errors detected.",
-                "videoStart": 10800,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "OK_JCtrrv-c",
-                        "start": 10800
+                        "start": 0
                     },
                     "te": {
                         "id": "2eebptXfEvw",
@@ -30037,11 +30036,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 32: Constructors & Constructor Property Promotion\n# Language: PHP Programming\nprint(\"Executing Chapter 32: Constructors & Constructor Property Promotion\")",
                 "compilerCode": "print(\"PHP Programming - Chapter 32: Constructors & Constructor Property Promotion\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "PHP Programming - Chapter 32: Constructors & Constructor Property Promotion\nStatus: 0 errors detected.",
-                "videoStart": 11160,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "OK_JCtrrv-c",
-                        "start": 11160
+                        "start": 0
                     },
                     "te": {
                         "id": "2eebptXfEvw",
@@ -30123,11 +30122,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 33: Inheritance: Subclasses, extends & parent\n# Language: PHP Programming\nprint(\"Executing Chapter 33: Inheritance: Subclasses, extends & parent\")",
                 "compilerCode": "print(\"PHP Programming - Chapter 33: Inheritance: Subclasses, extends & parent\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "PHP Programming - Chapter 33: Inheritance: Subclasses, extends & parent\nStatus: 0 errors detected.",
-                "videoStart": 11520,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "OK_JCtrrv-c",
-                        "start": 11520
+                        "start": 0
                     },
                     "te": {
                         "id": "2eebptXfEvw",
@@ -30209,11 +30208,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 34: Interfaces, Abstract Classes & Traits\n# Language: PHP Programming\nprint(\"Executing Chapter 34: Interfaces, Abstract Classes & Traits\")",
                 "compilerCode": "print(\"PHP Programming - Chapter 34: Interfaces, Abstract Classes & Traits\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "PHP Programming - Chapter 34: Interfaces, Abstract Classes & Traits\nStatus: 0 errors detected.",
-                "videoStart": 11880,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "OK_JCtrrv-c",
-                        "start": 11880
+                        "start": 0
                     },
                     "te": {
                         "id": "2eebptXfEvw",
@@ -30295,11 +30294,11 @@ window.LEARNING_DATA = {
                 "practical": "# Chapter 35: Database Access with PDO & Secure CRUD Capstone\n# Language: PHP Programming\nprint(\"Executing Chapter 35: Database Access with PDO & Secure CRUD Capstone\")",
                 "compilerCode": "print(\"PHP Programming - Chapter 35: Database Access with PDO & Secure CRUD Capstone\")\nprint(\"Status: 0 errors detected.\")",
                 "expectedOutput": "PHP Programming - Chapter 35: Database Access with PDO & Secure CRUD Capstone\nStatus: 0 errors detected.",
-                "videoStart": 12240,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "OK_JCtrrv-c",
-                        "start": 12240
+                        "start": 0
                     },
                     "te": {
                         "id": "2eebptXfEvw",
@@ -30386,7 +30385,7 @@ window.LEARNING_DATA = {
                 "title": "HTML Full Course (English)"
             },
             "te": {
-                "id": "88PXJAA6szs",
+                "id": "7jaQv6xfQjY",
                 "title": "HTML5 Course in Telugu (తెలుగు)"
             },
             "ta": {
@@ -30415,7 +30414,7 @@ window.LEARNING_DATA = {
                         "start": 0
                     },
                     "te": {
-                        "id": "88PXJAA6szs",
+                        "id": "7jaQv6xfQjY",
                         "start": 0
                     },
                     "ta": {
@@ -30494,14 +30493,14 @@ window.LEARNING_DATA = {
                 "practical": "<!-- Chapter 2: Anatomy of an HTML Document & <!DOCTYPE html> -->\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <title>Anatomy of an HTML Document & <!DOCTYPE html></title>\n</head>\n<body>\n    <h1>Chapter 2: Anatomy of an HTML Document & <!DOCTYPE html></h1>\n    <p>HTML5 semantic structure rendered correctly.</p>\n</body>\n</html>",
                 "compilerCode": "<!DOCTYPE html>\n<html>\n<body>\n    <h2>HTML5 - Chapter 2: Anatomy of an HTML Document & <!DOCTYPE html></h2>\n    <p>Rendered in LearningPath Browser Engine.</p>\n</body>\n</html>",
                 "expectedOutput": "HTML5 DOM Tree Rendered:\n<h1>Chapter 2: Anatomy of an HTML Document & <!DOCTYPE html></h1>\n<p>Rendered in LearningPath Browser Engine.</p>",
-                "videoStart": 360,
+                "videoStart": 500,
                 "videos": {
                     "en": {
                         "id": "pQN-pnXPaVg",
-                        "start": 360
+                        "start": 500
                     },
                     "te": {
-                        "id": "88PXJAA6szs",
+                        "id": "7jaQv6xfQjY",
                         "start": 0
                     },
                     "ta": {
@@ -30580,14 +30579,14 @@ window.LEARNING_DATA = {
                 "practical": "<!-- Chapter 3: The <head> Tag, Meta Tags, Charset & Title -->\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <title>The <head> Tag, Meta Tags, Charset & Title</title>\n</head>\n<body>\n    <h1>Chapter 3: The <head> Tag, Meta Tags, Charset & Title</h1>\n    <p>HTML5 semantic structure rendered correctly.</p>\n</body>\n</html>",
                 "compilerCode": "<!DOCTYPE html>\n<html>\n<body>\n    <h2>HTML5 - Chapter 3: The <head> Tag, Meta Tags, Charset & Title</h2>\n    <p>Rendered in LearningPath Browser Engine.</p>\n</body>\n</html>",
                 "expectedOutput": "HTML5 DOM Tree Rendered:\n<h1>Chapter 3: The <head> Tag, Meta Tags, Charset & Title</h1>\n<p>Rendered in LearningPath Browser Engine.</p>",
-                "videoStart": 720,
+                "videoStart": 1100,
                 "videos": {
                     "en": {
                         "id": "pQN-pnXPaVg",
-                        "start": 720
+                        "start": 1100
                     },
                     "te": {
-                        "id": "88PXJAA6szs",
+                        "id": "7jaQv6xfQjY",
                         "start": 0
                     },
                     "ta": {
@@ -30666,14 +30665,14 @@ window.LEARNING_DATA = {
                 "practical": "<!-- Chapter 4: Text Headings: h1 Through h6 Best Practices -->\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <title>Text Headings: h1 Through h6 Best Practices</title>\n</head>\n<body>\n    <h1>Chapter 4: Text Headings: h1 Through h6 Best Practices</h1>\n    <p>HTML5 semantic structure rendered correctly.</p>\n</body>\n</html>",
                 "compilerCode": "<!DOCTYPE html>\n<html>\n<body>\n    <h2>HTML5 - Chapter 4: Text Headings: h1 Through h6 Best Practices</h2>\n    <p>Rendered in LearningPath Browser Engine.</p>\n</body>\n</html>",
                 "expectedOutput": "HTML5 DOM Tree Rendered:\n<h1>Chapter 4: Text Headings: h1 Through h6 Best Practices</h1>\n<p>Rendered in LearningPath Browser Engine.</p>",
-                "videoStart": 1080,
+                "videoStart": 1750,
                 "videos": {
                     "en": {
                         "id": "pQN-pnXPaVg",
-                        "start": 1080
+                        "start": 1750
                     },
                     "te": {
-                        "id": "88PXJAA6szs",
+                        "id": "7jaQv6xfQjY",
                         "start": 0
                     },
                     "ta": {
@@ -30752,14 +30751,14 @@ window.LEARNING_DATA = {
                 "practical": "<!-- Chapter 5: Paragraphs (<p>), Line Breaks (<br>) & Rules (<hr>) -->\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <title>Paragraphs (<p>), Line Breaks (<br>) & Rules (<hr>)</title>\n</head>\n<body>\n    <h1>Chapter 5: Paragraphs (<p>), Line Breaks (<br>) & Rules (<hr>)</h1>\n    <p>HTML5 semantic structure rendered correctly.</p>\n</body>\n</html>",
                 "compilerCode": "<!DOCTYPE html>\n<html>\n<body>\n    <h2>HTML5 - Chapter 5: Paragraphs (<p>), Line Breaks (<br>) & Rules (<hr>)</h2>\n    <p>Rendered in LearningPath Browser Engine.</p>\n</body>\n</html>",
                 "expectedOutput": "HTML5 DOM Tree Rendered:\n<h1>Chapter 5: Paragraphs (<p>), Line Breaks (<br>) & Rules (<hr>)</h1>\n<p>Rendered in LearningPath Browser Engine.</p>",
-                "videoStart": 1440,
+                "videoStart": 2450,
                 "videos": {
                     "en": {
                         "id": "pQN-pnXPaVg",
-                        "start": 1440
+                        "start": 2450
                     },
                     "te": {
-                        "id": "88PXJAA6szs",
+                        "id": "7jaQv6xfQjY",
                         "start": 0
                     },
                     "ta": {
@@ -30838,14 +30837,14 @@ window.LEARNING_DATA = {
                 "practical": "<!-- Chapter 6: Text Formatting: strong, em, mark, small, sub, sup -->\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <title>Text Formatting: strong, em, mark, small, sub, sup</title>\n</head>\n<body>\n    <h1>Chapter 6: Text Formatting: strong, em, mark, small, sub, sup</h1>\n    <p>HTML5 semantic structure rendered correctly.</p>\n</body>\n</html>",
                 "compilerCode": "<!DOCTYPE html>\n<html>\n<body>\n    <h2>HTML5 - Chapter 6: Text Formatting: strong, em, mark, small, sub, sup</h2>\n    <p>Rendered in LearningPath Browser Engine.</p>\n</body>\n</html>",
                 "expectedOutput": "HTML5 DOM Tree Rendered:\n<h1>Chapter 6: Text Formatting: strong, em, mark, small, sub, sup</h1>\n<p>Rendered in LearningPath Browser Engine.</p>",
-                "videoStart": 1800,
+                "videoStart": 3200,
                 "videos": {
                     "en": {
                         "id": "pQN-pnXPaVg",
-                        "start": 1800
+                        "start": 3200
                     },
                     "te": {
-                        "id": "88PXJAA6szs",
+                        "id": "7jaQv6xfQjY",
                         "start": 0
                     },
                     "ta": {
@@ -30924,14 +30923,14 @@ window.LEARNING_DATA = {
                 "practical": "<!-- Chapter 7: Hyperlinks: <a> Tag, href, target & Bookmarks -->\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <title>Hyperlinks: <a> Tag, href, target & Bookmarks</title>\n</head>\n<body>\n    <h1>Chapter 7: Hyperlinks: <a> Tag, href, target & Bookmarks</h1>\n    <p>HTML5 semantic structure rendered correctly.</p>\n</body>\n</html>",
                 "compilerCode": "<!DOCTYPE html>\n<html>\n<body>\n    <h2>HTML5 - Chapter 7: Hyperlinks: <a> Tag, href, target & Bookmarks</h2>\n    <p>Rendered in LearningPath Browser Engine.</p>\n</body>\n</html>",
                 "expectedOutput": "HTML5 DOM Tree Rendered:\n<h1>Chapter 7: Hyperlinks: <a> Tag, href, target & Bookmarks</h1>\n<p>Rendered in LearningPath Browser Engine.</p>",
-                "videoStart": 2160,
+                "videoStart": 4000,
                 "videos": {
                     "en": {
                         "id": "pQN-pnXPaVg",
-                        "start": 2160
+                        "start": 4000
                     },
                     "te": {
-                        "id": "88PXJAA6szs",
+                        "id": "7jaQv6xfQjY",
                         "start": 0
                     },
                     "ta": {
@@ -31010,14 +31009,14 @@ window.LEARNING_DATA = {
                 "practical": "<!-- Chapter 8: Images: <img> Tag, src, alt & Image Dimensions -->\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <title>Images: <img> Tag, src, alt & Image Dimensions</title>\n</head>\n<body>\n    <h1>Chapter 8: Images: <img> Tag, src, alt & Image Dimensions</h1>\n    <p>HTML5 semantic structure rendered correctly.</p>\n</body>\n</html>",
                 "compilerCode": "<!DOCTYPE html>\n<html>\n<body>\n    <h2>HTML5 - Chapter 8: Images: <img> Tag, src, alt & Image Dimensions</h2>\n    <p>Rendered in LearningPath Browser Engine.</p>\n</body>\n</html>",
                 "expectedOutput": "HTML5 DOM Tree Rendered:\n<h1>Chapter 8: Images: <img> Tag, src, alt & Image Dimensions</h1>\n<p>Rendered in LearningPath Browser Engine.</p>",
-                "videoStart": 2520,
+                "videoStart": 4850,
                 "videos": {
                     "en": {
                         "id": "pQN-pnXPaVg",
-                        "start": 2520
+                        "start": 4850
                     },
                     "te": {
-                        "id": "88PXJAA6szs",
+                        "id": "7jaQv6xfQjY",
                         "start": 0
                     },
                     "ta": {
@@ -31096,14 +31095,14 @@ window.LEARNING_DATA = {
                 "practical": "<!-- Chapter 9: Responsive Images: srcset & the <picture> Tag -->\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <title>Responsive Images: srcset & the <picture> Tag</title>\n</head>\n<body>\n    <h1>Chapter 9: Responsive Images: srcset & the <picture> Tag</h1>\n    <p>HTML5 semantic structure rendered correctly.</p>\n</body>\n</html>",
                 "compilerCode": "<!DOCTYPE html>\n<html>\n<body>\n    <h2>HTML5 - Chapter 9: Responsive Images: srcset & the <picture> Tag</h2>\n    <p>Rendered in LearningPath Browser Engine.</p>\n</body>\n</html>",
                 "expectedOutput": "HTML5 DOM Tree Rendered:\n<h1>Chapter 9: Responsive Images: srcset & the <picture> Tag</h1>\n<p>Rendered in LearningPath Browser Engine.</p>",
-                "videoStart": 2880,
+                "videoStart": 5750,
                 "videos": {
                     "en": {
                         "id": "pQN-pnXPaVg",
-                        "start": 2880
+                        "start": 5750
                     },
                     "te": {
-                        "id": "88PXJAA6szs",
+                        "id": "7jaQv6xfQjY",
                         "start": 0
                     },
                     "ta": {
@@ -31182,14 +31181,14 @@ window.LEARNING_DATA = {
                 "practical": "<!-- Chapter 10: Unordered Lists (<ul>) & List Items (<li>) -->\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <title>Unordered Lists (<ul>) & List Items (<li>)</title>\n</head>\n<body>\n    <h1>Chapter 10: Unordered Lists (<ul>) & List Items (<li>)</h1>\n    <p>HTML5 semantic structure rendered correctly.</p>\n</body>\n</html>",
                 "compilerCode": "<!DOCTYPE html>\n<html>\n<body>\n    <h2>HTML5 - Chapter 10: Unordered Lists (<ul>) & List Items (<li>)</h2>\n    <p>Rendered in LearningPath Browser Engine.</p>\n</body>\n</html>",
                 "expectedOutput": "HTML5 DOM Tree Rendered:\n<h1>Chapter 10: Unordered Lists (<ul>) & List Items (<li>)</h1>\n<p>Rendered in LearningPath Browser Engine.</p>",
-                "videoStart": 3240,
+                "videoStart": 6700,
                 "videos": {
                     "en": {
                         "id": "pQN-pnXPaVg",
-                        "start": 3240
+                        "start": 6700
                     },
                     "te": {
-                        "id": "88PXJAA6szs",
+                        "id": "7jaQv6xfQjY",
                         "start": 0
                     },
                     "ta": {
@@ -31268,14 +31267,14 @@ window.LEARNING_DATA = {
                 "practical": "<!-- Chapter 11: Ordered Lists (<ol>) with Types & Start Attributes -->\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <title>Ordered Lists (<ol>) with Types & Start Attributes</title>\n</head>\n<body>\n    <h1>Chapter 11: Ordered Lists (<ol>) with Types & Start Attributes</h1>\n    <p>HTML5 semantic structure rendered correctly.</p>\n</body>\n</html>",
                 "compilerCode": "<!DOCTYPE html>\n<html>\n<body>\n    <h2>HTML5 - Chapter 11: Ordered Lists (<ol>) with Types & Start Attributes</h2>\n    <p>Rendered in LearningPath Browser Engine.</p>\n</body>\n</html>",
                 "expectedOutput": "HTML5 DOM Tree Rendered:\n<h1>Chapter 11: Ordered Lists (<ol>) with Types & Start Attributes</h1>\n<p>Rendered in LearningPath Browser Engine.</p>",
-                "videoStart": 3600,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "pQN-pnXPaVg",
-                        "start": 3600
+                        "start": 0
                     },
                     "te": {
-                        "id": "88PXJAA6szs",
+                        "id": "7jaQv6xfQjY",
                         "start": 0
                     },
                     "ta": {
@@ -31354,14 +31353,14 @@ window.LEARNING_DATA = {
                 "practical": "<!-- Chapter 12: Description Lists: <dl>, <dt> and <dd> -->\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <title>Description Lists: <dl>, <dt> and <dd></title>\n</head>\n<body>\n    <h1>Chapter 12: Description Lists: <dl>, <dt> and <dd></h1>\n    <p>HTML5 semantic structure rendered correctly.</p>\n</body>\n</html>",
                 "compilerCode": "<!DOCTYPE html>\n<html>\n<body>\n    <h2>HTML5 - Chapter 12: Description Lists: <dl>, <dt> and <dd></h2>\n    <p>Rendered in LearningPath Browser Engine.</p>\n</body>\n</html>",
                 "expectedOutput": "HTML5 DOM Tree Rendered:\n<h1>Chapter 12: Description Lists: <dl>, <dt> and <dd></h1>\n<p>Rendered in LearningPath Browser Engine.</p>",
-                "videoStart": 3960,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "pQN-pnXPaVg",
-                        "start": 3960
+                        "start": 0
                     },
                     "te": {
-                        "id": "88PXJAA6szs",
+                        "id": "7jaQv6xfQjY",
                         "start": 0
                     },
                     "ta": {
@@ -31440,14 +31439,14 @@ window.LEARNING_DATA = {
                 "practical": "<!-- Chapter 13: Block-Level vs Inline HTML Elements -->\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <title>Block-Level vs Inline HTML Elements</title>\n</head>\n<body>\n    <h1>Chapter 13: Block-Level vs Inline HTML Elements</h1>\n    <p>HTML5 semantic structure rendered correctly.</p>\n</body>\n</html>",
                 "compilerCode": "<!DOCTYPE html>\n<html>\n<body>\n    <h2>HTML5 - Chapter 13: Block-Level vs Inline HTML Elements</h2>\n    <p>Rendered in LearningPath Browser Engine.</p>\n</body>\n</html>",
                 "expectedOutput": "HTML5 DOM Tree Rendered:\n<h1>Chapter 13: Block-Level vs Inline HTML Elements</h1>\n<p>Rendered in LearningPath Browser Engine.</p>",
-                "videoStart": 4320,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "pQN-pnXPaVg",
-                        "start": 4320
+                        "start": 0
                     },
                     "te": {
-                        "id": "88PXJAA6szs",
+                        "id": "7jaQv6xfQjY",
                         "start": 0
                     },
                     "ta": {
@@ -31526,14 +31525,14 @@ window.LEARNING_DATA = {
                 "practical": "<!-- Chapter 14: Generic Containers: <div> vs <span> Usage -->\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <title>Generic Containers: <div> vs <span> Usage</title>\n</head>\n<body>\n    <h1>Chapter 14: Generic Containers: <div> vs <span> Usage</h1>\n    <p>HTML5 semantic structure rendered correctly.</p>\n</body>\n</html>",
                 "compilerCode": "<!DOCTYPE html>\n<html>\n<body>\n    <h2>HTML5 - Chapter 14: Generic Containers: <div> vs <span> Usage</h2>\n    <p>Rendered in LearningPath Browser Engine.</p>\n</body>\n</html>",
                 "expectedOutput": "HTML5 DOM Tree Rendered:\n<h1>Chapter 14: Generic Containers: <div> vs <span> Usage</h1>\n<p>Rendered in LearningPath Browser Engine.</p>",
-                "videoStart": 4680,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "pQN-pnXPaVg",
-                        "start": 4680
+                        "start": 0
                     },
                     "te": {
-                        "id": "88PXJAA6szs",
+                        "id": "7jaQv6xfQjY",
                         "start": 0
                     },
                     "ta": {
@@ -31612,14 +31611,14 @@ window.LEARNING_DATA = {
                 "practical": "<!-- Chapter 15: HTML Tables: <table>, <tr>, <th> and <td> -->\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <title>HTML Tables: <table>, <tr>, <th> and <td></title>\n</head>\n<body>\n    <h1>Chapter 15: HTML Tables: <table>, <tr>, <th> and <td></h1>\n    <p>HTML5 semantic structure rendered correctly.</p>\n</body>\n</html>",
                 "compilerCode": "<!DOCTYPE html>\n<html>\n<body>\n    <h2>HTML5 - Chapter 15: HTML Tables: <table>, <tr>, <th> and <td></h2>\n    <p>Rendered in LearningPath Browser Engine.</p>\n</body>\n</html>",
                 "expectedOutput": "HTML5 DOM Tree Rendered:\n<h1>Chapter 15: HTML Tables: <table>, <tr>, <th> and <td></h1>\n<p>Rendered in LearningPath Browser Engine.</p>",
-                "videoStart": 5040,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "pQN-pnXPaVg",
-                        "start": 5040
+                        "start": 0
                     },
                     "te": {
-                        "id": "88PXJAA6szs",
+                        "id": "7jaQv6xfQjY",
                         "start": 0
                     },
                     "ta": {
@@ -31698,14 +31697,14 @@ window.LEARNING_DATA = {
                 "practical": "<!-- Chapter 16: Advanced Tables: thead, tbody, tfoot & Colspan -->\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <title>Advanced Tables: thead, tbody, tfoot & Colspan</title>\n</head>\n<body>\n    <h1>Chapter 16: Advanced Tables: thead, tbody, tfoot & Colspan</h1>\n    <p>HTML5 semantic structure rendered correctly.</p>\n</body>\n</html>",
                 "compilerCode": "<!DOCTYPE html>\n<html>\n<body>\n    <h2>HTML5 - Chapter 16: Advanced Tables: thead, tbody, tfoot & Colspan</h2>\n    <p>Rendered in LearningPath Browser Engine.</p>\n</body>\n</html>",
                 "expectedOutput": "HTML5 DOM Tree Rendered:\n<h1>Chapter 16: Advanced Tables: thead, tbody, tfoot & Colspan</h1>\n<p>Rendered in LearningPath Browser Engine.</p>",
-                "videoStart": 5400,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "pQN-pnXPaVg",
-                        "start": 5400
+                        "start": 0
                     },
                     "te": {
-                        "id": "88PXJAA6szs",
+                        "id": "7jaQv6xfQjY",
                         "start": 0
                     },
                     "ta": {
@@ -31784,14 +31783,14 @@ window.LEARNING_DATA = {
                 "practical": "<!-- Chapter 17: HTML Forms: <form>, action & method Attributes -->\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <title>HTML Forms: <form>, action & method Attributes</title>\n</head>\n<body>\n    <h1>Chapter 17: HTML Forms: <form>, action & method Attributes</h1>\n    <p>HTML5 semantic structure rendered correctly.</p>\n</body>\n</html>",
                 "compilerCode": "<!DOCTYPE html>\n<html>\n<body>\n    <h2>HTML5 - Chapter 17: HTML Forms: <form>, action & method Attributes</h2>\n    <p>Rendered in LearningPath Browser Engine.</p>\n</body>\n</html>",
                 "expectedOutput": "HTML5 DOM Tree Rendered:\n<h1>Chapter 17: HTML Forms: <form>, action & method Attributes</h1>\n<p>Rendered in LearningPath Browser Engine.</p>",
-                "videoStart": 5760,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "pQN-pnXPaVg",
-                        "start": 5760
+                        "start": 0
                     },
                     "te": {
-                        "id": "88PXJAA6szs",
+                        "id": "7jaQv6xfQjY",
                         "start": 0
                     },
                     "ta": {
@@ -31870,14 +31869,14 @@ window.LEARNING_DATA = {
                 "practical": "<!-- Chapter 18: Form Inputs: text, password, email & number -->\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <title>Form Inputs: text, password, email & number</title>\n</head>\n<body>\n    <h1>Chapter 18: Form Inputs: text, password, email & number</h1>\n    <p>HTML5 semantic structure rendered correctly.</p>\n</body>\n</html>",
                 "compilerCode": "<!DOCTYPE html>\n<html>\n<body>\n    <h2>HTML5 - Chapter 18: Form Inputs: text, password, email & number</h2>\n    <p>Rendered in LearningPath Browser Engine.</p>\n</body>\n</html>",
                 "expectedOutput": "HTML5 DOM Tree Rendered:\n<h1>Chapter 18: Form Inputs: text, password, email & number</h1>\n<p>Rendered in LearningPath Browser Engine.</p>",
-                "videoStart": 6120,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "pQN-pnXPaVg",
-                        "start": 6120
+                        "start": 0
                     },
                     "te": {
-                        "id": "88PXJAA6szs",
+                        "id": "7jaQv6xfQjY",
                         "start": 0
                     },
                     "ta": {
@@ -31956,14 +31955,14 @@ window.LEARNING_DATA = {
                 "practical": "<!-- Chapter 19: Form Selection: radio Buttons & Checkboxes -->\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <title>Form Selection: radio Buttons & Checkboxes</title>\n</head>\n<body>\n    <h1>Chapter 19: Form Selection: radio Buttons & Checkboxes</h1>\n    <p>HTML5 semantic structure rendered correctly.</p>\n</body>\n</html>",
                 "compilerCode": "<!DOCTYPE html>\n<html>\n<body>\n    <h2>HTML5 - Chapter 19: Form Selection: radio Buttons & Checkboxes</h2>\n    <p>Rendered in LearningPath Browser Engine.</p>\n</body>\n</html>",
                 "expectedOutput": "HTML5 DOM Tree Rendered:\n<h1>Chapter 19: Form Selection: radio Buttons & Checkboxes</h1>\n<p>Rendered in LearningPath Browser Engine.</p>",
-                "videoStart": 6480,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "pQN-pnXPaVg",
-                        "start": 6480
+                        "start": 0
                     },
                     "te": {
-                        "id": "88PXJAA6szs",
+                        "id": "7jaQv6xfQjY",
                         "start": 0
                     },
                     "ta": {
@@ -32042,14 +32041,14 @@ window.LEARNING_DATA = {
                 "practical": "<!-- Chapter 20: Form Dropdowns: <select>, <option> & optgroup -->\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <title>Form Dropdowns: <select>, <option> & optgroup</title>\n</head>\n<body>\n    <h1>Chapter 20: Form Dropdowns: <select>, <option> & optgroup</h1>\n    <p>HTML5 semantic structure rendered correctly.</p>\n</body>\n</html>",
                 "compilerCode": "<!DOCTYPE html>\n<html>\n<body>\n    <h2>HTML5 - Chapter 20: Form Dropdowns: <select>, <option> & optgroup</h2>\n    <p>Rendered in LearningPath Browser Engine.</p>\n</body>\n</html>",
                 "expectedOutput": "HTML5 DOM Tree Rendered:\n<h1>Chapter 20: Form Dropdowns: <select>, <option> & optgroup</h1>\n<p>Rendered in LearningPath Browser Engine.</p>",
-                "videoStart": 6840,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "pQN-pnXPaVg",
-                        "start": 6840
+                        "start": 0
                     },
                     "te": {
-                        "id": "88PXJAA6szs",
+                        "id": "7jaQv6xfQjY",
                         "start": 0
                     },
                     "ta": {
@@ -32128,14 +32127,14 @@ window.LEARNING_DATA = {
                 "practical": "<!-- Chapter 21: Multi-Line Text: The <textarea> Element -->\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <title>Multi-Line Text: The <textarea> Element</title>\n</head>\n<body>\n    <h1>Chapter 21: Multi-Line Text: The <textarea> Element</h1>\n    <p>HTML5 semantic structure rendered correctly.</p>\n</body>\n</html>",
                 "compilerCode": "<!DOCTYPE html>\n<html>\n<body>\n    <h2>HTML5 - Chapter 21: Multi-Line Text: The <textarea> Element</h2>\n    <p>Rendered in LearningPath Browser Engine.</p>\n</body>\n</html>",
                 "expectedOutput": "HTML5 DOM Tree Rendered:\n<h1>Chapter 21: Multi-Line Text: The <textarea> Element</h1>\n<p>Rendered in LearningPath Browser Engine.</p>",
-                "videoStart": 7200,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "pQN-pnXPaVg",
-                        "start": 7200
+                        "start": 0
                     },
                     "te": {
-                        "id": "88PXJAA6szs",
+                        "id": "7jaQv6xfQjY",
                         "start": 0
                     },
                     "ta": {
@@ -32214,14 +32213,14 @@ window.LEARNING_DATA = {
                 "practical": "<!-- Chapter 22: Form Buttons: submit, reset & custom <button> -->\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <title>Form Buttons: submit, reset & custom <button></title>\n</head>\n<body>\n    <h1>Chapter 22: Form Buttons: submit, reset & custom <button></h1>\n    <p>HTML5 semantic structure rendered correctly.</p>\n</body>\n</html>",
                 "compilerCode": "<!DOCTYPE html>\n<html>\n<body>\n    <h2>HTML5 - Chapter 22: Form Buttons: submit, reset & custom <button></h2>\n    <p>Rendered in LearningPath Browser Engine.</p>\n</body>\n</html>",
                 "expectedOutput": "HTML5 DOM Tree Rendered:\n<h1>Chapter 22: Form Buttons: submit, reset & custom <button></h1>\n<p>Rendered in LearningPath Browser Engine.</p>",
-                "videoStart": 7560,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "pQN-pnXPaVg",
-                        "start": 7560
+                        "start": 0
                     },
                     "te": {
-                        "id": "88PXJAA6szs",
+                        "id": "7jaQv6xfQjY",
                         "start": 0
                     },
                     "ta": {
@@ -32300,14 +32299,14 @@ window.LEARNING_DATA = {
                 "practical": "<!-- Chapter 23: HTML5 Form Validation: required, min, max, pattern -->\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <title>HTML5 Form Validation: required, min, max, pattern</title>\n</head>\n<body>\n    <h1>Chapter 23: HTML5 Form Validation: required, min, max, pattern</h1>\n    <p>HTML5 semantic structure rendered correctly.</p>\n</body>\n</html>",
                 "compilerCode": "<!DOCTYPE html>\n<html>\n<body>\n    <h2>HTML5 - Chapter 23: HTML5 Form Validation: required, min, max, pattern</h2>\n    <p>Rendered in LearningPath Browser Engine.</p>\n</body>\n</html>",
                 "expectedOutput": "HTML5 DOM Tree Rendered:\n<h1>Chapter 23: HTML5 Form Validation: required, min, max, pattern</h1>\n<p>Rendered in LearningPath Browser Engine.</p>",
-                "videoStart": 7920,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "pQN-pnXPaVg",
-                        "start": 7920
+                        "start": 0
                     },
                     "te": {
-                        "id": "88PXJAA6szs",
+                        "id": "7jaQv6xfQjY",
                         "start": 0
                     },
                     "ta": {
@@ -32386,14 +32385,14 @@ window.LEARNING_DATA = {
                 "practical": "<!-- Chapter 24: HTML5 Inputs: date, time, range, color, search -->\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <title>HTML5 Inputs: date, time, range, color, search</title>\n</head>\n<body>\n    <h1>Chapter 24: HTML5 Inputs: date, time, range, color, search</h1>\n    <p>HTML5 semantic structure rendered correctly.</p>\n</body>\n</html>",
                 "compilerCode": "<!DOCTYPE html>\n<html>\n<body>\n    <h2>HTML5 - Chapter 24: HTML5 Inputs: date, time, range, color, search</h2>\n    <p>Rendered in LearningPath Browser Engine.</p>\n</body>\n</html>",
                 "expectedOutput": "HTML5 DOM Tree Rendered:\n<h1>Chapter 24: HTML5 Inputs: date, time, range, color, search</h1>\n<p>Rendered in LearningPath Browser Engine.</p>",
-                "videoStart": 8280,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "pQN-pnXPaVg",
-                        "start": 8280
+                        "start": 0
                     },
                     "te": {
-                        "id": "88PXJAA6szs",
+                        "id": "7jaQv6xfQjY",
                         "start": 0
                     },
                     "ta": {
@@ -32472,14 +32471,14 @@ window.LEARNING_DATA = {
                 "practical": "<!-- Chapter 25: Semantic Structure: <header>, <nav> and <main> -->\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <title>Semantic Structure: <header>, <nav> and <main></title>\n</head>\n<body>\n    <h1>Chapter 25: Semantic Structure: <header>, <nav> and <main></h1>\n    <p>HTML5 semantic structure rendered correctly.</p>\n</body>\n</html>",
                 "compilerCode": "<!DOCTYPE html>\n<html>\n<body>\n    <h2>HTML5 - Chapter 25: Semantic Structure: <header>, <nav> and <main></h2>\n    <p>Rendered in LearningPath Browser Engine.</p>\n</body>\n</html>",
                 "expectedOutput": "HTML5 DOM Tree Rendered:\n<h1>Chapter 25: Semantic Structure: <header>, <nav> and <main></h1>\n<p>Rendered in LearningPath Browser Engine.</p>",
-                "videoStart": 8640,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "pQN-pnXPaVg",
-                        "start": 8640
+                        "start": 0
                     },
                     "te": {
-                        "id": "88PXJAA6szs",
+                        "id": "7jaQv6xfQjY",
                         "start": 0
                     },
                     "ta": {
@@ -32558,14 +32557,14 @@ window.LEARNING_DATA = {
                 "practical": "<!-- Chapter 26: Semantic Content: <article>, <section> and <aside> -->\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <title>Semantic Content: <article>, <section> and <aside></title>\n</head>\n<body>\n    <h1>Chapter 26: Semantic Content: <article>, <section> and <aside></h1>\n    <p>HTML5 semantic structure rendered correctly.</p>\n</body>\n</html>",
                 "compilerCode": "<!DOCTYPE html>\n<html>\n<body>\n    <h2>HTML5 - Chapter 26: Semantic Content: <article>, <section> and <aside></h2>\n    <p>Rendered in LearningPath Browser Engine.</p>\n</body>\n</html>",
                 "expectedOutput": "HTML5 DOM Tree Rendered:\n<h1>Chapter 26: Semantic Content: <article>, <section> and <aside></h1>\n<p>Rendered in LearningPath Browser Engine.</p>",
-                "videoStart": 9000,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "pQN-pnXPaVg",
-                        "start": 9000
+                        "start": 0
                     },
                     "te": {
-                        "id": "88PXJAA6szs",
+                        "id": "7jaQv6xfQjY",
                         "start": 0
                     },
                     "ta": {
@@ -32644,14 +32643,14 @@ window.LEARNING_DATA = {
                 "practical": "<!-- Chapter 27: Semantic Footers: <footer> and Contact Info -->\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <title>Semantic Footers: <footer> and Contact Info</title>\n</head>\n<body>\n    <h1>Chapter 27: Semantic Footers: <footer> and Contact Info</h1>\n    <p>HTML5 semantic structure rendered correctly.</p>\n</body>\n</html>",
                 "compilerCode": "<!DOCTYPE html>\n<html>\n<body>\n    <h2>HTML5 - Chapter 27: Semantic Footers: <footer> and Contact Info</h2>\n    <p>Rendered in LearningPath Browser Engine.</p>\n</body>\n</html>",
                 "expectedOutput": "HTML5 DOM Tree Rendered:\n<h1>Chapter 27: Semantic Footers: <footer> and Contact Info</h1>\n<p>Rendered in LearningPath Browser Engine.</p>",
-                "videoStart": 9360,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "pQN-pnXPaVg",
-                        "start": 9360
+                        "start": 0
                     },
                     "te": {
-                        "id": "88PXJAA6szs",
+                        "id": "7jaQv6xfQjY",
                         "start": 0
                     },
                     "ta": {
@@ -32730,14 +32729,14 @@ window.LEARNING_DATA = {
                 "practical": "<!-- Chapter 28: Figure & Figcaption: Associating Image Captions -->\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <title>Figure & Figcaption: Associating Image Captions</title>\n</head>\n<body>\n    <h1>Chapter 28: Figure & Figcaption: Associating Image Captions</h1>\n    <p>HTML5 semantic structure rendered correctly.</p>\n</body>\n</html>",
                 "compilerCode": "<!DOCTYPE html>\n<html>\n<body>\n    <h2>HTML5 - Chapter 28: Figure & Figcaption: Associating Image Captions</h2>\n    <p>Rendered in LearningPath Browser Engine.</p>\n</body>\n</html>",
                 "expectedOutput": "HTML5 DOM Tree Rendered:\n<h1>Chapter 28: Figure & Figcaption: Associating Image Captions</h1>\n<p>Rendered in LearningPath Browser Engine.</p>",
-                "videoStart": 9720,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "pQN-pnXPaVg",
-                        "start": 9720
+                        "start": 0
                     },
                     "te": {
-                        "id": "88PXJAA6szs",
+                        "id": "7jaQv6xfQjY",
                         "start": 0
                     },
                     "ta": {
@@ -32816,14 +32815,14 @@ window.LEARNING_DATA = {
                 "practical": "<!-- Chapter 29: Embedding Audio: <audio> Tag & Audio Formats -->\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <title>Embedding Audio: <audio> Tag & Audio Formats</title>\n</head>\n<body>\n    <h1>Chapter 29: Embedding Audio: <audio> Tag & Audio Formats</h1>\n    <p>HTML5 semantic structure rendered correctly.</p>\n</body>\n</html>",
                 "compilerCode": "<!DOCTYPE html>\n<html>\n<body>\n    <h2>HTML5 - Chapter 29: Embedding Audio: <audio> Tag & Audio Formats</h2>\n    <p>Rendered in LearningPath Browser Engine.</p>\n</body>\n</html>",
                 "expectedOutput": "HTML5 DOM Tree Rendered:\n<h1>Chapter 29: Embedding Audio: <audio> Tag & Audio Formats</h1>\n<p>Rendered in LearningPath Browser Engine.</p>",
-                "videoStart": 10080,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "pQN-pnXPaVg",
-                        "start": 10080
+                        "start": 0
                     },
                     "te": {
-                        "id": "88PXJAA6szs",
+                        "id": "7jaQv6xfQjY",
                         "start": 0
                     },
                     "ta": {
@@ -32902,14 +32901,14 @@ window.LEARNING_DATA = {
                 "practical": "<!-- Chapter 30: Embedding Video: <video> Tag & Video Controls -->\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <title>Embedding Video: <video> Tag & Video Controls</title>\n</head>\n<body>\n    <h1>Chapter 30: Embedding Video: <video> Tag & Video Controls</h1>\n    <p>HTML5 semantic structure rendered correctly.</p>\n</body>\n</html>",
                 "compilerCode": "<!DOCTYPE html>\n<html>\n<body>\n    <h2>HTML5 - Chapter 30: Embedding Video: <video> Tag & Video Controls</h2>\n    <p>Rendered in LearningPath Browser Engine.</p>\n</body>\n</html>",
                 "expectedOutput": "HTML5 DOM Tree Rendered:\n<h1>Chapter 30: Embedding Video: <video> Tag & Video Controls</h1>\n<p>Rendered in LearningPath Browser Engine.</p>",
-                "videoStart": 10440,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "pQN-pnXPaVg",
-                        "start": 10440
+                        "start": 0
                     },
                     "te": {
-                        "id": "88PXJAA6szs",
+                        "id": "7jaQv6xfQjY",
                         "start": 0
                     },
                     "ta": {
@@ -32988,14 +32987,14 @@ window.LEARNING_DATA = {
                 "practical": "<!-- Chapter 31: Embedding Webpages: The <iframe> Tag & Sandbox -->\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <title>Embedding Webpages: The <iframe> Tag & Sandbox</title>\n</head>\n<body>\n    <h1>Chapter 31: Embedding Webpages: The <iframe> Tag & Sandbox</h1>\n    <p>HTML5 semantic structure rendered correctly.</p>\n</body>\n</html>",
                 "compilerCode": "<!DOCTYPE html>\n<html>\n<body>\n    <h2>HTML5 - Chapter 31: Embedding Webpages: The <iframe> Tag & Sandbox</h2>\n    <p>Rendered in LearningPath Browser Engine.</p>\n</body>\n</html>",
                 "expectedOutput": "HTML5 DOM Tree Rendered:\n<h1>Chapter 31: Embedding Webpages: The <iframe> Tag & Sandbox</h1>\n<p>Rendered in LearningPath Browser Engine.</p>",
-                "videoStart": 10800,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "pQN-pnXPaVg",
-                        "start": 10800
+                        "start": 0
                     },
                     "te": {
-                        "id": "88PXJAA6szs",
+                        "id": "7jaQv6xfQjY",
                         "start": 0
                     },
                     "ta": {
@@ -33074,14 +33073,14 @@ window.LEARNING_DATA = {
                 "practical": "<!-- Chapter 32: HTML Entities: Special Symbols & Reserved Characters -->\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <title>HTML Entities: Special Symbols & Reserved Characters</title>\n</head>\n<body>\n    <h1>Chapter 32: HTML Entities: Special Symbols & Reserved Characters</h1>\n    <p>HTML5 semantic structure rendered correctly.</p>\n</body>\n</html>",
                 "compilerCode": "<!DOCTYPE html>\n<html>\n<body>\n    <h2>HTML5 - Chapter 32: HTML Entities: Special Symbols & Reserved Characters</h2>\n    <p>Rendered in LearningPath Browser Engine.</p>\n</body>\n</html>",
                 "expectedOutput": "HTML5 DOM Tree Rendered:\n<h1>Chapter 32: HTML Entities: Special Symbols & Reserved Characters</h1>\n<p>Rendered in LearningPath Browser Engine.</p>",
-                "videoStart": 11160,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "pQN-pnXPaVg",
-                        "start": 11160
+                        "start": 0
                     },
                     "te": {
-                        "id": "88PXJAA6szs",
+                        "id": "7jaQv6xfQjY",
                         "start": 0
                     },
                     "ta": {
@@ -33160,14 +33159,14 @@ window.LEARNING_DATA = {
                 "practical": "<!-- Chapter 33: The <details> and <summary> Interactive Widgets -->\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <title>The <details> and <summary> Interactive Widgets</title>\n</head>\n<body>\n    <h1>Chapter 33: The <details> and <summary> Interactive Widgets</h1>\n    <p>HTML5 semantic structure rendered correctly.</p>\n</body>\n</html>",
                 "compilerCode": "<!DOCTYPE html>\n<html>\n<body>\n    <h2>HTML5 - Chapter 33: The <details> and <summary> Interactive Widgets</h2>\n    <p>Rendered in LearningPath Browser Engine.</p>\n</body>\n</html>",
                 "expectedOutput": "HTML5 DOM Tree Rendered:\n<h1>Chapter 33: The <details> and <summary> Interactive Widgets</h1>\n<p>Rendered in LearningPath Browser Engine.</p>",
-                "videoStart": 11520,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "pQN-pnXPaVg",
-                        "start": 11520
+                        "start": 0
                     },
                     "te": {
-                        "id": "88PXJAA6szs",
+                        "id": "7jaQv6xfQjY",
                         "start": 0
                     },
                     "ta": {
@@ -33246,14 +33245,14 @@ window.LEARNING_DATA = {
                 "practical": "<!-- Chapter 34: Web Accessibility (a11y): ARIA Roles & Landmarks -->\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <title>Web Accessibility (a11y): ARIA Roles & Landmarks</title>\n</head>\n<body>\n    <h1>Chapter 34: Web Accessibility (a11y): ARIA Roles & Landmarks</h1>\n    <p>HTML5 semantic structure rendered correctly.</p>\n</body>\n</html>",
                 "compilerCode": "<!DOCTYPE html>\n<html>\n<body>\n    <h2>HTML5 - Chapter 34: Web Accessibility (a11y): ARIA Roles & Landmarks</h2>\n    <p>Rendered in LearningPath Browser Engine.</p>\n</body>\n</html>",
                 "expectedOutput": "HTML5 DOM Tree Rendered:\n<h1>Chapter 34: Web Accessibility (a11y): ARIA Roles & Landmarks</h1>\n<p>Rendered in LearningPath Browser Engine.</p>",
-                "videoStart": 11880,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "pQN-pnXPaVg",
-                        "start": 11880
+                        "start": 0
                     },
                     "te": {
-                        "id": "88PXJAA6szs",
+                        "id": "7jaQv6xfQjY",
                         "start": 0
                     },
                     "ta": {
@@ -33332,14 +33331,14 @@ window.LEARNING_DATA = {
                 "practical": "<!-- Chapter 35: SEO Optimization: Meta Tags & Complete HTML5 Capstone -->\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <title>SEO Optimization: Meta Tags & Complete HTML5 Capstone</title>\n</head>\n<body>\n    <h1>Chapter 35: SEO Optimization: Meta Tags & Complete HTML5 Capstone</h1>\n    <p>HTML5 semantic structure rendered correctly.</p>\n</body>\n</html>",
                 "compilerCode": "<!DOCTYPE html>\n<html>\n<body>\n    <h2>HTML5 - Chapter 35: SEO Optimization: Meta Tags & Complete HTML5 Capstone</h2>\n    <p>Rendered in LearningPath Browser Engine.</p>\n</body>\n</html>",
                 "expectedOutput": "HTML5 DOM Tree Rendered:\n<h1>Chapter 35: SEO Optimization: Meta Tags & Complete HTML5 Capstone</h1>\n<p>Rendered in LearningPath Browser Engine.</p>",
-                "videoStart": 12240,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "pQN-pnXPaVg",
-                        "start": 12240
+                        "start": 0
                     },
                     "te": {
-                        "id": "88PXJAA6szs",
+                        "id": "7jaQv6xfQjY",
                         "start": 0
                     },
                     "ta": {
@@ -33423,7 +33422,7 @@ window.LEARNING_DATA = {
                 "title": "CSS Tutorial (English)"
             },
             "te": {
-                "id": "u31qwQUeGuM",
+                "id": "4oSvAEuAQII",
                 "title": "CSS Full Course in Telugu (తెలుగు)"
             },
             "ta": {
@@ -33452,7 +33451,7 @@ window.LEARNING_DATA = {
                         "start": 0
                     },
                     "te": {
-                        "id": "u31qwQUeGuM",
+                        "id": "4oSvAEuAQII",
                         "start": 0
                     },
                     "ta": {
@@ -33531,14 +33530,14 @@ window.LEARNING_DATA = {
                 "practical": "/* Chapter 2: Three Ways to Apply CSS: Inline, Internal, External */\n.container {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    padding: 20px;\n    background: #080d20;\n    color: #38bdf8;\n    border-radius: 12px;\n}",
                 "compilerCode": "/* CSS3 - Chapter 2: Three Ways to Apply CSS: Inline, Internal, External */\n.lesson-card {\n    background: linear-gradient(135deg, #2563eb, #3b82f6);\n    color: #ffffff;\n    padding: 16px;\n    border-radius: 8px;\n}",
                 "expectedOutput": "CSS Rules Compiled Successfully:\n.lesson-card { background: #2563eb; color: #fff; }\nComputed Styles Applied.",
-                "videoStart": 360,
+                "videoStart": 650,
                 "videos": {
                     "en": {
                         "id": "1PnVor36_40",
-                        "start": 360
+                        "start": 650
                     },
                     "te": {
-                        "id": "u31qwQUeGuM",
+                        "id": "4oSvAEuAQII",
                         "start": 0
                     },
                     "ta": {
@@ -33617,14 +33616,14 @@ window.LEARNING_DATA = {
                 "practical": "/* Chapter 3: CSS Syntax: Selectors, Properties & Values */\n.container {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    padding: 20px;\n    background: #080d20;\n    color: #38bdf8;\n    border-radius: 12px;\n}",
                 "compilerCode": "/* CSS3 - Chapter 3: CSS Syntax: Selectors, Properties & Values */\n.lesson-card {\n    background: linear-gradient(135deg, #2563eb, #3b82f6);\n    color: #ffffff;\n    padding: 16px;\n    border-radius: 8px;\n}",
                 "expectedOutput": "CSS Rules Compiled Successfully:\n.lesson-card { background: #2563eb; color: #fff; }\nComputed Styles Applied.",
-                "videoStart": 720,
+                "videoStart": 1400,
                 "videos": {
                     "en": {
                         "id": "1PnVor36_40",
-                        "start": 720
+                        "start": 1400
                     },
                     "te": {
-                        "id": "u31qwQUeGuM",
+                        "id": "4oSvAEuAQII",
                         "start": 0
                     },
                     "ta": {
@@ -33703,14 +33702,14 @@ window.LEARNING_DATA = {
                 "practical": "/* Chapter 4: Basic Selectors: Element, Class & ID Selectors */\n.container {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    padding: 20px;\n    background: #080d20;\n    color: #38bdf8;\n    border-radius: 12px;\n}",
                 "compilerCode": "/* CSS3 - Chapter 4: Basic Selectors: Element, Class & ID Selectors */\n.lesson-card {\n    background: linear-gradient(135deg, #2563eb, #3b82f6);\n    color: #ffffff;\n    padding: 16px;\n    border-radius: 8px;\n}",
                 "expectedOutput": "CSS Rules Compiled Successfully:\n.lesson-card { background: #2563eb; color: #fff; }\nComputed Styles Applied.",
-                "videoStart": 1080,
+                "videoStart": 2250,
                 "videos": {
                     "en": {
                         "id": "1PnVor36_40",
-                        "start": 1080
+                        "start": 2250
                     },
                     "te": {
-                        "id": "u31qwQUeGuM",
+                        "id": "4oSvAEuAQII",
                         "start": 0
                     },
                     "ta": {
@@ -33789,14 +33788,14 @@ window.LEARNING_DATA = {
                 "practical": "/* Chapter 5: Grouping & Universal Selectors (* and comma) */\n.container {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    padding: 20px;\n    background: #080d20;\n    color: #38bdf8;\n    border-radius: 12px;\n}",
                 "compilerCode": "/* CSS3 - Chapter 5: Grouping & Universal Selectors (* and comma) */\n.lesson-card {\n    background: linear-gradient(135deg, #2563eb, #3b82f6);\n    color: #ffffff;\n    padding: 16px;\n    border-radius: 8px;\n}",
                 "expectedOutput": "CSS Rules Compiled Successfully:\n.lesson-card { background: #2563eb; color: #fff; }\nComputed Styles Applied.",
-                "videoStart": 1440,
+                "videoStart": 3200,
                 "videos": {
                     "en": {
                         "id": "1PnVor36_40",
-                        "start": 1440
+                        "start": 3200
                     },
                     "te": {
-                        "id": "u31qwQUeGuM",
+                        "id": "4oSvAEuAQII",
                         "start": 0
                     },
                     "ta": {
@@ -33875,14 +33874,14 @@ window.LEARNING_DATA = {
                 "practical": "/* Chapter 6: Combinators: Descendant, Child, Sibling Selectors */\n.container {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    padding: 20px;\n    background: #080d20;\n    color: #38bdf8;\n    border-radius: 12px;\n}",
                 "compilerCode": "/* CSS3 - Chapter 6: Combinators: Descendant, Child, Sibling Selectors */\n.lesson-card {\n    background: linear-gradient(135deg, #2563eb, #3b82f6);\n    color: #ffffff;\n    padding: 16px;\n    border-radius: 8px;\n}",
                 "expectedOutput": "CSS Rules Compiled Successfully:\n.lesson-card { background: #2563eb; color: #fff; }\nComputed Styles Applied.",
-                "videoStart": 1800,
+                "videoStart": 4250,
                 "videos": {
                     "en": {
                         "id": "1PnVor36_40",
-                        "start": 1800
+                        "start": 4250
                     },
                     "te": {
-                        "id": "u31qwQUeGuM",
+                        "id": "4oSvAEuAQII",
                         "start": 0
                     },
                     "ta": {
@@ -33961,14 +33960,14 @@ window.LEARNING_DATA = {
                 "practical": "/* Chapter 7: Pseudo-Classes: :hover, :active, :focus, :visited */\n.container {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    padding: 20px;\n    background: #080d20;\n    color: #38bdf8;\n    border-radius: 12px;\n}",
                 "compilerCode": "/* CSS3 - Chapter 7: Pseudo-Classes: :hover, :active, :focus, :visited */\n.lesson-card {\n    background: linear-gradient(135deg, #2563eb, #3b82f6);\n    color: #ffffff;\n    padding: 16px;\n    border-radius: 8px;\n}",
                 "expectedOutput": "CSS Rules Compiled Successfully:\n.lesson-card { background: #2563eb; color: #fff; }\nComputed Styles Applied.",
-                "videoStart": 2160,
+                "videoStart": 5400,
                 "videos": {
                     "en": {
                         "id": "1PnVor36_40",
-                        "start": 2160
+                        "start": 5400
                     },
                     "te": {
-                        "id": "u31qwQUeGuM",
+                        "id": "4oSvAEuAQII",
                         "start": 0
                     },
                     "ta": {
@@ -34047,14 +34046,14 @@ window.LEARNING_DATA = {
                 "practical": "/* Chapter 8: Structural Pseudo-Classes: :first-child, :nth-child */\n.container {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    padding: 20px;\n    background: #080d20;\n    color: #38bdf8;\n    border-radius: 12px;\n}",
                 "compilerCode": "/* CSS3 - Chapter 8: Structural Pseudo-Classes: :first-child, :nth-child */\n.lesson-card {\n    background: linear-gradient(135deg, #2563eb, #3b82f6);\n    color: #ffffff;\n    padding: 16px;\n    border-radius: 8px;\n}",
                 "expectedOutput": "CSS Rules Compiled Successfully:\n.lesson-card { background: #2563eb; color: #fff; }\nComputed Styles Applied.",
-                "videoStart": 2520,
+                "videoStart": 6650,
                 "videos": {
                     "en": {
                         "id": "1PnVor36_40",
-                        "start": 2520
+                        "start": 6650
                     },
                     "te": {
-                        "id": "u31qwQUeGuM",
+                        "id": "4oSvAEuAQII",
                         "start": 0
                     },
                     "ta": {
@@ -34133,14 +34132,14 @@ window.LEARNING_DATA = {
                 "practical": "/* Chapter 9: Pseudo-Elements: ::before and ::after Magic */\n.container {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    padding: 20px;\n    background: #080d20;\n    color: #38bdf8;\n    border-radius: 12px;\n}",
                 "compilerCode": "/* CSS3 - Chapter 9: Pseudo-Elements: ::before and ::after Magic */\n.lesson-card {\n    background: linear-gradient(135deg, #2563eb, #3b82f6);\n    color: #ffffff;\n    padding: 16px;\n    border-radius: 8px;\n}",
                 "expectedOutput": "CSS Rules Compiled Successfully:\n.lesson-card { background: #2563eb; color: #fff; }\nComputed Styles Applied.",
-                "videoStart": 2880,
+                "videoStart": 8000,
                 "videos": {
                     "en": {
                         "id": "1PnVor36_40",
-                        "start": 2880
+                        "start": 8000
                     },
                     "te": {
-                        "id": "u31qwQUeGuM",
+                        "id": "4oSvAEuAQII",
                         "start": 0
                     },
                     "ta": {
@@ -34219,14 +34218,14 @@ window.LEARNING_DATA = {
                 "practical": "/* Chapter 10: The CSS Box Model: Margin, Border, Padding, Content */\n.container {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    padding: 20px;\n    background: #080d20;\n    color: #38bdf8;\n    border-radius: 12px;\n}",
                 "compilerCode": "/* CSS3 - Chapter 10: The CSS Box Model: Margin, Border, Padding, Content */\n.lesson-card {\n    background: linear-gradient(135deg, #2563eb, #3b82f6);\n    color: #ffffff;\n    padding: 16px;\n    border-radius: 8px;\n}",
                 "expectedOutput": "CSS Rules Compiled Successfully:\n.lesson-card { background: #2563eb; color: #fff; }\nComputed Styles Applied.",
-                "videoStart": 3240,
+                "videoStart": 9500,
                 "videos": {
                     "en": {
                         "id": "1PnVor36_40",
-                        "start": 3240
+                        "start": 9500
                     },
                     "te": {
-                        "id": "u31qwQUeGuM",
+                        "id": "4oSvAEuAQII",
                         "start": 0
                     },
                     "ta": {
@@ -34305,14 +34304,14 @@ window.LEARNING_DATA = {
                 "practical": "/* Chapter 11: Box Sizing: content-box vs border-box */\n.container {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    padding: 20px;\n    background: #080d20;\n    color: #38bdf8;\n    border-radius: 12px;\n}",
                 "compilerCode": "/* CSS3 - Chapter 11: Box Sizing: content-box vs border-box */\n.lesson-card {\n    background: linear-gradient(135deg, #2563eb, #3b82f6);\n    color: #ffffff;\n    padding: 16px;\n    border-radius: 8px;\n}",
                 "expectedOutput": "CSS Rules Compiled Successfully:\n.lesson-card { background: #2563eb; color: #fff; }\nComputed Styles Applied.",
-                "videoStart": 3600,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "1PnVor36_40",
-                        "start": 3600
+                        "start": 0
                     },
                     "te": {
-                        "id": "u31qwQUeGuM",
+                        "id": "4oSvAEuAQII",
                         "start": 0
                     },
                     "ta": {
@@ -34391,14 +34390,14 @@ window.LEARNING_DATA = {
                 "practical": "/* Chapter 12: Colors: Hex, RGB, RGBA, HSL & Named Colors */\n.container {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    padding: 20px;\n    background: #080d20;\n    color: #38bdf8;\n    border-radius: 12px;\n}",
                 "compilerCode": "/* CSS3 - Chapter 12: Colors: Hex, RGB, RGBA, HSL & Named Colors */\n.lesson-card {\n    background: linear-gradient(135deg, #2563eb, #3b82f6);\n    color: #ffffff;\n    padding: 16px;\n    border-radius: 8px;\n}",
                 "expectedOutput": "CSS Rules Compiled Successfully:\n.lesson-card { background: #2563eb; color: #fff; }\nComputed Styles Applied.",
-                "videoStart": 3960,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "1PnVor36_40",
-                        "start": 3960
+                        "start": 0
                     },
                     "te": {
-                        "id": "u31qwQUeGuM",
+                        "id": "4oSvAEuAQII",
                         "start": 0
                     },
                     "ta": {
@@ -34477,14 +34476,14 @@ window.LEARNING_DATA = {
                 "practical": "/* Chapter 13: Typography: font-family, font-size & Web Fonts */\n.container {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    padding: 20px;\n    background: #080d20;\n    color: #38bdf8;\n    border-radius: 12px;\n}",
                 "compilerCode": "/* CSS3 - Chapter 13: Typography: font-family, font-size & Web Fonts */\n.lesson-card {\n    background: linear-gradient(135deg, #2563eb, #3b82f6);\n    color: #ffffff;\n    padding: 16px;\n    border-radius: 8px;\n}",
                 "expectedOutput": "CSS Rules Compiled Successfully:\n.lesson-card { background: #2563eb; color: #fff; }\nComputed Styles Applied.",
-                "videoStart": 4320,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "1PnVor36_40",
-                        "start": 4320
+                        "start": 0
                     },
                     "te": {
-                        "id": "u31qwQUeGuM",
+                        "id": "4oSvAEuAQII",
                         "start": 0
                     },
                     "ta": {
@@ -34563,14 +34562,14 @@ window.LEARNING_DATA = {
                 "practical": "/* Chapter 14: Font Weight, Style & Google Fonts Integration */\n.container {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    padding: 20px;\n    background: #080d20;\n    color: #38bdf8;\n    border-radius: 12px;\n}",
                 "compilerCode": "/* CSS3 - Chapter 14: Font Weight, Style & Google Fonts Integration */\n.lesson-card {\n    background: linear-gradient(135deg, #2563eb, #3b82f6);\n    color: #ffffff;\n    padding: 16px;\n    border-radius: 8px;\n}",
                 "expectedOutput": "CSS Rules Compiled Successfully:\n.lesson-card { background: #2563eb; color: #fff; }\nComputed Styles Applied.",
-                "videoStart": 4680,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "1PnVor36_40",
-                        "start": 4680
+                        "start": 0
                     },
                     "te": {
-                        "id": "u31qwQUeGuM",
+                        "id": "4oSvAEuAQII",
                         "start": 0
                     },
                     "ta": {
@@ -34649,14 +34648,14 @@ window.LEARNING_DATA = {
                 "practical": "/* Chapter 15: Text Alignment, Decoration & Letter Spacing */\n.container {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    padding: 20px;\n    background: #080d20;\n    color: #38bdf8;\n    border-radius: 12px;\n}",
                 "compilerCode": "/* CSS3 - Chapter 15: Text Alignment, Decoration & Letter Spacing */\n.lesson-card {\n    background: linear-gradient(135deg, #2563eb, #3b82f6);\n    color: #ffffff;\n    padding: 16px;\n    border-radius: 8px;\n}",
                 "expectedOutput": "CSS Rules Compiled Successfully:\n.lesson-card { background: #2563eb; color: #fff; }\nComputed Styles Applied.",
-                "videoStart": 5040,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "1PnVor36_40",
-                        "start": 5040
+                        "start": 0
                     },
                     "te": {
-                        "id": "u31qwQUeGuM",
+                        "id": "4oSvAEuAQII",
                         "start": 0
                     },
                     "ta": {
@@ -34735,14 +34734,14 @@ window.LEARNING_DATA = {
                 "practical": "/* Chapter 16: Background Colors, Gradients & Linear/Radial Fills */\n.container {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    padding: 20px;\n    background: #080d20;\n    color: #38bdf8;\n    border-radius: 12px;\n}",
                 "compilerCode": "/* CSS3 - Chapter 16: Background Colors, Gradients & Linear/Radial Fills */\n.lesson-card {\n    background: linear-gradient(135deg, #2563eb, #3b82f6);\n    color: #ffffff;\n    padding: 16px;\n    border-radius: 8px;\n}",
                 "expectedOutput": "CSS Rules Compiled Successfully:\n.lesson-card { background: #2563eb; color: #fff; }\nComputed Styles Applied.",
-                "videoStart": 5400,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "1PnVor36_40",
-                        "start": 5400
+                        "start": 0
                     },
                     "te": {
-                        "id": "u31qwQUeGuM",
+                        "id": "4oSvAEuAQII",
                         "start": 0
                     },
                     "ta": {
@@ -34821,14 +34820,14 @@ window.LEARNING_DATA = {
                 "practical": "/* Chapter 17: Background Images: repeat, size, position, attachment */\n.container {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    padding: 20px;\n    background: #080d20;\n    color: #38bdf8;\n    border-radius: 12px;\n}",
                 "compilerCode": "/* CSS3 - Chapter 17: Background Images: repeat, size, position, attachment */\n.lesson-card {\n    background: linear-gradient(135deg, #2563eb, #3b82f6);\n    color: #ffffff;\n    padding: 16px;\n    border-radius: 8px;\n}",
                 "expectedOutput": "CSS Rules Compiled Successfully:\n.lesson-card { background: #2563eb; color: #fff; }\nComputed Styles Applied.",
-                "videoStart": 5760,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "1PnVor36_40",
-                        "start": 5760
+                        "start": 0
                     },
                     "te": {
-                        "id": "u31qwQUeGuM",
+                        "id": "4oSvAEuAQII",
                         "start": 0
                     },
                     "ta": {
@@ -34907,14 +34906,14 @@ window.LEARNING_DATA = {
                 "practical": "/* Chapter 18: Borders: Styles, Widths & border-radius Curves */\n.container {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    padding: 20px;\n    background: #080d20;\n    color: #38bdf8;\n    border-radius: 12px;\n}",
                 "compilerCode": "/* CSS3 - Chapter 18: Borders: Styles, Widths & border-radius Curves */\n.lesson-card {\n    background: linear-gradient(135deg, #2563eb, #3b82f6);\n    color: #ffffff;\n    padding: 16px;\n    border-radius: 8px;\n}",
                 "expectedOutput": "CSS Rules Compiled Successfully:\n.lesson-card { background: #2563eb; color: #fff; }\nComputed Styles Applied.",
-                "videoStart": 6120,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "1PnVor36_40",
-                        "start": 6120
+                        "start": 0
                     },
                     "te": {
-                        "id": "u31qwQUeGuM",
+                        "id": "4oSvAEuAQII",
                         "start": 0
                     },
                     "ta": {
@@ -34993,14 +34992,14 @@ window.LEARNING_DATA = {
                 "practical": "/* Chapter 19: Shadow Effects: box-shadow and text-shadow */\n.container {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    padding: 20px;\n    background: #080d20;\n    color: #38bdf8;\n    border-radius: 12px;\n}",
                 "compilerCode": "/* CSS3 - Chapter 19: Shadow Effects: box-shadow and text-shadow */\n.lesson-card {\n    background: linear-gradient(135deg, #2563eb, #3b82f6);\n    color: #ffffff;\n    padding: 16px;\n    border-radius: 8px;\n}",
                 "expectedOutput": "CSS Rules Compiled Successfully:\n.lesson-card { background: #2563eb; color: #fff; }\nComputed Styles Applied.",
-                "videoStart": 6480,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "1PnVor36_40",
-                        "start": 6480
+                        "start": 0
                     },
                     "te": {
-                        "id": "u31qwQUeGuM",
+                        "id": "4oSvAEuAQII",
                         "start": 0
                     },
                     "ta": {
@@ -35079,14 +35078,14 @@ window.LEARNING_DATA = {
                 "practical": "/* Chapter 20: The display Property: block, inline, inline-block */\n.container {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    padding: 20px;\n    background: #080d20;\n    color: #38bdf8;\n    border-radius: 12px;\n}",
                 "compilerCode": "/* CSS3 - Chapter 20: The display Property: block, inline, inline-block */\n.lesson-card {\n    background: linear-gradient(135deg, #2563eb, #3b82f6);\n    color: #ffffff;\n    padding: 16px;\n    border-radius: 8px;\n}",
                 "expectedOutput": "CSS Rules Compiled Successfully:\n.lesson-card { background: #2563eb; color: #fff; }\nComputed Styles Applied.",
-                "videoStart": 6840,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "1PnVor36_40",
-                        "start": 6840
+                        "start": 0
                     },
                     "te": {
-                        "id": "u31qwQUeGuM",
+                        "id": "4oSvAEuAQII",
                         "start": 0
                     },
                     "ta": {
@@ -35165,14 +35164,14 @@ window.LEARNING_DATA = {
                 "practical": "/* Chapter 21: Hiding Elements: display:none vs visibility:hidden */\n.container {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    padding: 20px;\n    background: #080d20;\n    color: #38bdf8;\n    border-radius: 12px;\n}",
                 "compilerCode": "/* CSS3 - Chapter 21: Hiding Elements: display:none vs visibility:hidden */\n.lesson-card {\n    background: linear-gradient(135deg, #2563eb, #3b82f6);\n    color: #ffffff;\n    padding: 16px;\n    border-radius: 8px;\n}",
                 "expectedOutput": "CSS Rules Compiled Successfully:\n.lesson-card { background: #2563eb; color: #fff; }\nComputed Styles Applied.",
-                "videoStart": 7200,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "1PnVor36_40",
-                        "start": 7200
+                        "start": 0
                     },
                     "te": {
-                        "id": "u31qwQUeGuM",
+                        "id": "4oSvAEuAQII",
                         "start": 0
                     },
                     "ta": {
@@ -35251,14 +35250,14 @@ window.LEARNING_DATA = {
                 "practical": "/* Chapter 22: CSS Positioning: static and relative Positioning */\n.container {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    padding: 20px;\n    background: #080d20;\n    color: #38bdf8;\n    border-radius: 12px;\n}",
                 "compilerCode": "/* CSS3 - Chapter 22: CSS Positioning: static and relative Positioning */\n.lesson-card {\n    background: linear-gradient(135deg, #2563eb, #3b82f6);\n    color: #ffffff;\n    padding: 16px;\n    border-radius: 8px;\n}",
                 "expectedOutput": "CSS Rules Compiled Successfully:\n.lesson-card { background: #2563eb; color: #fff; }\nComputed Styles Applied.",
-                "videoStart": 7560,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "1PnVor36_40",
-                        "start": 7560
+                        "start": 0
                     },
                     "te": {
-                        "id": "u31qwQUeGuM",
+                        "id": "4oSvAEuAQII",
                         "start": 0
                     },
                     "ta": {
@@ -35337,14 +35336,14 @@ window.LEARNING_DATA = {
                 "practical": "/* Chapter 23: Absolute Positioning & Nearest Positioned Ancestor */\n.container {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    padding: 20px;\n    background: #080d20;\n    color: #38bdf8;\n    border-radius: 12px;\n}",
                 "compilerCode": "/* CSS3 - Chapter 23: Absolute Positioning & Nearest Positioned Ancestor */\n.lesson-card {\n    background: linear-gradient(135deg, #2563eb, #3b82f6);\n    color: #ffffff;\n    padding: 16px;\n    border-radius: 8px;\n}",
                 "expectedOutput": "CSS Rules Compiled Successfully:\n.lesson-card { background: #2563eb; color: #fff; }\nComputed Styles Applied.",
-                "videoStart": 7920,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "1PnVor36_40",
-                        "start": 7920
+                        "start": 0
                     },
                     "te": {
-                        "id": "u31qwQUeGuM",
+                        "id": "4oSvAEuAQII",
                         "start": 0
                     },
                     "ta": {
@@ -35423,14 +35422,14 @@ window.LEARNING_DATA = {
                 "practical": "/* Chapter 24: Fixed and Sticky Positioning with Top/Bottom Offsets */\n.container {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    padding: 20px;\n    background: #080d20;\n    color: #38bdf8;\n    border-radius: 12px;\n}",
                 "compilerCode": "/* CSS3 - Chapter 24: Fixed and Sticky Positioning with Top/Bottom Offsets */\n.lesson-card {\n    background: linear-gradient(135deg, #2563eb, #3b82f6);\n    color: #ffffff;\n    padding: 16px;\n    border-radius: 8px;\n}",
                 "expectedOutput": "CSS Rules Compiled Successfully:\n.lesson-card { background: #2563eb; color: #fff; }\nComputed Styles Applied.",
-                "videoStart": 8280,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "1PnVor36_40",
-                        "start": 8280
+                        "start": 0
                     },
                     "te": {
-                        "id": "u31qwQUeGuM",
+                        "id": "4oSvAEuAQII",
                         "start": 0
                     },
                     "ta": {
@@ -35509,14 +35508,14 @@ window.LEARNING_DATA = {
                 "practical": "/* Chapter 25: Z-Index & The Stacking Context in CSS */\n.container {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    padding: 20px;\n    background: #080d20;\n    color: #38bdf8;\n    border-radius: 12px;\n}",
                 "compilerCode": "/* CSS3 - Chapter 25: Z-Index & The Stacking Context in CSS */\n.lesson-card {\n    background: linear-gradient(135deg, #2563eb, #3b82f6);\n    color: #ffffff;\n    padding: 16px;\n    border-radius: 8px;\n}",
                 "expectedOutput": "CSS Rules Compiled Successfully:\n.lesson-card { background: #2563eb; color: #fff; }\nComputed Styles Applied.",
-                "videoStart": 8640,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "1PnVor36_40",
-                        "start": 8640
+                        "start": 0
                     },
                     "te": {
-                        "id": "u31qwQUeGuM",
+                        "id": "4oSvAEuAQII",
                         "start": 0
                     },
                     "ta": {
@@ -35595,14 +35594,14 @@ window.LEARNING_DATA = {
                 "practical": "/* Chapter 26: Handling Content Overflow: visible, hidden, scroll, auto */\n.container {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    padding: 20px;\n    background: #080d20;\n    color: #38bdf8;\n    border-radius: 12px;\n}",
                 "compilerCode": "/* CSS3 - Chapter 26: Handling Content Overflow: visible, hidden, scroll, auto */\n.lesson-card {\n    background: linear-gradient(135deg, #2563eb, #3b82f6);\n    color: #ffffff;\n    padding: 16px;\n    border-radius: 8px;\n}",
                 "expectedOutput": "CSS Rules Compiled Successfully:\n.lesson-card { background: #2563eb; color: #fff; }\nComputed Styles Applied.",
-                "videoStart": 9000,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "1PnVor36_40",
-                        "start": 9000
+                        "start": 0
                     },
                     "te": {
-                        "id": "u31qwQUeGuM",
+                        "id": "4oSvAEuAQII",
                         "start": 0
                     },
                     "ta": {
@@ -35681,14 +35680,14 @@ window.LEARNING_DATA = {
                 "practical": "/* Chapter 27: Flexbox Fundamentals: flex-direction & justify-content */\n.container {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    padding: 20px;\n    background: #080d20;\n    color: #38bdf8;\n    border-radius: 12px;\n}",
                 "compilerCode": "/* CSS3 - Chapter 27: Flexbox Fundamentals: flex-direction & justify-content */\n.lesson-card {\n    background: linear-gradient(135deg, #2563eb, #3b82f6);\n    color: #ffffff;\n    padding: 16px;\n    border-radius: 8px;\n}",
                 "expectedOutput": "CSS Rules Compiled Successfully:\n.lesson-card { background: #2563eb; color: #fff; }\nComputed Styles Applied.",
-                "videoStart": 9360,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "1PnVor36_40",
-                        "start": 9360
+                        "start": 0
                     },
                     "te": {
-                        "id": "u31qwQUeGuM",
+                        "id": "4oSvAEuAQII",
                         "start": 0
                     },
                     "ta": {
@@ -35767,14 +35766,14 @@ window.LEARNING_DATA = {
                 "practical": "/* Chapter 28: Flexbox Alignment: align-items, align-content & gap */\n.container {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    padding: 20px;\n    background: #080d20;\n    color: #38bdf8;\n    border-radius: 12px;\n}",
                 "compilerCode": "/* CSS3 - Chapter 28: Flexbox Alignment: align-items, align-content & gap */\n.lesson-card {\n    background: linear-gradient(135deg, #2563eb, #3b82f6);\n    color: #ffffff;\n    padding: 16px;\n    border-radius: 8px;\n}",
                 "expectedOutput": "CSS Rules Compiled Successfully:\n.lesson-card { background: #2563eb; color: #fff; }\nComputed Styles Applied.",
-                "videoStart": 9720,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "1PnVor36_40",
-                        "start": 9720
+                        "start": 0
                     },
                     "te": {
-                        "id": "u31qwQUeGuM",
+                        "id": "4oSvAEuAQII",
                         "start": 0
                     },
                     "ta": {
@@ -35853,14 +35852,14 @@ window.LEARNING_DATA = {
                 "practical": "/* Chapter 29: Flex Items: flex-grow, flex-shrink & flex-basis */\n.container {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    padding: 20px;\n    background: #080d20;\n    color: #38bdf8;\n    border-radius: 12px;\n}",
                 "compilerCode": "/* CSS3 - Chapter 29: Flex Items: flex-grow, flex-shrink & flex-basis */\n.lesson-card {\n    background: linear-gradient(135deg, #2563eb, #3b82f6);\n    color: #ffffff;\n    padding: 16px;\n    border-radius: 8px;\n}",
                 "expectedOutput": "CSS Rules Compiled Successfully:\n.lesson-card { background: #2563eb; color: #fff; }\nComputed Styles Applied.",
-                "videoStart": 10080,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "1PnVor36_40",
-                        "start": 10080
+                        "start": 0
                     },
                     "te": {
-                        "id": "u31qwQUeGuM",
+                        "id": "4oSvAEuAQII",
                         "start": 0
                     },
                     "ta": {
@@ -35939,14 +35938,14 @@ window.LEARNING_DATA = {
                 "practical": "/* Chapter 30: CSS Grid Layout: grid-template-columns & fr Units */\n.container {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    padding: 20px;\n    background: #080d20;\n    color: #38bdf8;\n    border-radius: 12px;\n}",
                 "compilerCode": "/* CSS3 - Chapter 30: CSS Grid Layout: grid-template-columns & fr Units */\n.lesson-card {\n    background: linear-gradient(135deg, #2563eb, #3b82f6);\n    color: #ffffff;\n    padding: 16px;\n    border-radius: 8px;\n}",
                 "expectedOutput": "CSS Rules Compiled Successfully:\n.lesson-card { background: #2563eb; color: #fff; }\nComputed Styles Applied.",
-                "videoStart": 10440,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "1PnVor36_40",
-                        "start": 10440
+                        "start": 0
                     },
                     "te": {
-                        "id": "u31qwQUeGuM",
+                        "id": "4oSvAEuAQII",
                         "start": 0
                     },
                     "ta": {
@@ -36025,14 +36024,14 @@ window.LEARNING_DATA = {
                 "practical": "/* Chapter 31: CSS Grid Placement: grid-column, grid-row & gap */\n.container {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    padding: 20px;\n    background: #080d20;\n    color: #38bdf8;\n    border-radius: 12px;\n}",
                 "compilerCode": "/* CSS3 - Chapter 31: CSS Grid Placement: grid-column, grid-row & gap */\n.lesson-card {\n    background: linear-gradient(135deg, #2563eb, #3b82f6);\n    color: #ffffff;\n    padding: 16px;\n    border-radius: 8px;\n}",
                 "expectedOutput": "CSS Rules Compiled Successfully:\n.lesson-card { background: #2563eb; color: #fff; }\nComputed Styles Applied.",
-                "videoStart": 10800,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "1PnVor36_40",
-                        "start": 10800
+                        "start": 0
                     },
                     "te": {
-                        "id": "u31qwQUeGuM",
+                        "id": "4oSvAEuAQII",
                         "start": 0
                     },
                     "ta": {
@@ -36111,14 +36110,14 @@ window.LEARNING_DATA = {
                 "practical": "/* Chapter 32: Responsive Grid with auto-fit, auto-fill & minmax() */\n.container {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    padding: 20px;\n    background: #080d20;\n    color: #38bdf8;\n    border-radius: 12px;\n}",
                 "compilerCode": "/* CSS3 - Chapter 32: Responsive Grid with auto-fit, auto-fill & minmax() */\n.lesson-card {\n    background: linear-gradient(135deg, #2563eb, #3b82f6);\n    color: #ffffff;\n    padding: 16px;\n    border-radius: 8px;\n}",
                 "expectedOutput": "CSS Rules Compiled Successfully:\n.lesson-card { background: #2563eb; color: #fff; }\nComputed Styles Applied.",
-                "videoStart": 11160,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "1PnVor36_40",
-                        "start": 11160
+                        "start": 0
                     },
                     "te": {
-                        "id": "u31qwQUeGuM",
+                        "id": "4oSvAEuAQII",
                         "start": 0
                     },
                     "ta": {
@@ -36197,14 +36196,14 @@ window.LEARNING_DATA = {
                 "practical": "/* Chapter 33: CSS Transitions: Transitioning Properties Smoothly */\n.container {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    padding: 20px;\n    background: #080d20;\n    color: #38bdf8;\n    border-radius: 12px;\n}",
                 "compilerCode": "/* CSS3 - Chapter 33: CSS Transitions: Transitioning Properties Smoothly */\n.lesson-card {\n    background: linear-gradient(135deg, #2563eb, #3b82f6);\n    color: #ffffff;\n    padding: 16px;\n    border-radius: 8px;\n}",
                 "expectedOutput": "CSS Rules Compiled Successfully:\n.lesson-card { background: #2563eb; color: #fff; }\nComputed Styles Applied.",
-                "videoStart": 11520,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "1PnVor36_40",
-                        "start": 11520
+                        "start": 0
                     },
                     "te": {
-                        "id": "u31qwQUeGuM",
+                        "id": "4oSvAEuAQII",
                         "start": 0
                     },
                     "ta": {
@@ -36283,14 +36282,14 @@ window.LEARNING_DATA = {
                 "practical": "/* Chapter 34: CSS Transforms: translate, rotate, scale & skew */\n.container {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    padding: 20px;\n    background: #080d20;\n    color: #38bdf8;\n    border-radius: 12px;\n}",
                 "compilerCode": "/* CSS3 - Chapter 34: CSS Transforms: translate, rotate, scale & skew */\n.lesson-card {\n    background: linear-gradient(135deg, #2563eb, #3b82f6);\n    color: #ffffff;\n    padding: 16px;\n    border-radius: 8px;\n}",
                 "expectedOutput": "CSS Rules Compiled Successfully:\n.lesson-card { background: #2563eb; color: #fff; }\nComputed Styles Applied.",
-                "videoStart": 11880,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "1PnVor36_40",
-                        "start": 11880
+                        "start": 0
                     },
                     "te": {
-                        "id": "u31qwQUeGuM",
+                        "id": "4oSvAEuAQII",
                         "start": 0
                     },
                     "ta": {
@@ -36369,14 +36368,14 @@ window.LEARNING_DATA = {
                 "practical": "/* Chapter 35: CSS @keyframes Animations & Production Theme Capstone */\n.container {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    padding: 20px;\n    background: #080d20;\n    color: #38bdf8;\n    border-radius: 12px;\n}",
                 "compilerCode": "/* CSS3 - Chapter 35: CSS @keyframes Animations & Production Theme Capstone */\n.lesson-card {\n    background: linear-gradient(135deg, #2563eb, #3b82f6);\n    color: #ffffff;\n    padding: 16px;\n    border-radius: 8px;\n}",
                 "expectedOutput": "CSS Rules Compiled Successfully:\n.lesson-card { background: #2563eb; color: #fff; }\nComputed Styles Applied.",
-                "videoStart": 12240,
+                "videoStart": 0,
                 "videos": {
                     "en": {
                         "id": "1PnVor36_40",
-                        "start": 12240
+                        "start": 0
                     },
                     "te": {
-                        "id": "u31qwQUeGuM",
+                        "id": "4oSvAEuAQII",
                         "start": 0
                     },
                     "ta": {
