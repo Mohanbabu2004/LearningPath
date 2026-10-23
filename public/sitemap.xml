@@ -6,16 +6,6 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://learningpath-m83v.onrender.com/pages/home.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://learningpath-m83v.onrender.com/pages/dashboard/home.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://learningpath-m83v.onrender.com/pages/learning/roadmap.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -23,6 +13,11 @@
   <url>
     <loc>https://learningpath-m83v.onrender.com/pages/auth/login.html</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://learningpath-m83v.onrender.com/pages/auth/create-account.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 </urlset>

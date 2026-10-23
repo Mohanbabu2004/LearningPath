@@ -25,9 +25,9 @@ app.get("/robots.txt", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "robots.txt"));
 });
 
-// Friendly & backward-compatible redirects for direct browser hits
+// Friendly & backward-compatible routes for direct browser hits
 app.get("/pages/home.html", (req, res) => {
-  res.redirect("/pages/dashboard/home.html");
+  res.sendFile(path.join(__dirname, "public", "pages", "dashboard", "home.html"));
 });
 
 app.get("/pages/login.html", (req, res) => {
