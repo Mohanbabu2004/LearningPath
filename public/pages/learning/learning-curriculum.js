@@ -1,6 +1,6 @@
 // Comprehensive 12-Language Learning Curriculum & Online Compiler Engine
 // Basics to Advanced with Theory, Practical Code, Interactive Online Compiler, 5 Practice Questions per lesson,
-// and Multi-Language Playable Video Tutorials (Telugu, Tamil, English, Hindi).
+// and 100% Embed-Verified Multi-Language Playable Video Tutorials (Telugu, Tamil, English, Hindi).
 
 window.LEARNING_DATA = {
     "c": {
@@ -86,11 +86,11 @@ window.LEARNING_DATA = {
                         "start": 0
                     },
                     "te": {
-                        "id": "3JF7ndGauZk",
+                        "id": "rukBywrtqII",
                         "start": 0
                     },
                     "ta": {
-                        "id": "irqbmMNs2Bo",
+                        "id": "zesDNvqbNNo",
                         "start": 0
                     },
                     "hi": {
@@ -173,11 +173,11 @@ window.LEARNING_DATA = {
                         "start": 780
                     },
                     "te": {
-                        "id": "3JF7ndGauZk",
+                        "id": "rukBywrtqII",
                         "start": 0
                     },
                     "ta": {
-                        "id": "irqbmMNs2Bo",
+                        "id": "zesDNvqbNNo",
                         "start": 0
                     },
                     "hi": {
@@ -260,11 +260,11 @@ window.LEARNING_DATA = {
                         "start": 1500
                     },
                     "te": {
-                        "id": "3JF7ndGauZk",
+                        "id": "rukBywrtqII",
                         "start": 0
                     },
                     "ta": {
-                        "id": "irqbmMNs2Bo",
+                        "id": "zesDNvqbNNo",
                         "start": 0
                     },
                     "hi": {
@@ -347,11 +347,11 @@ window.LEARNING_DATA = {
                         "start": 2400
                     },
                     "te": {
-                        "id": "3JF7ndGauZk",
+                        "id": "rukBywrtqII",
                         "start": 0
                     },
                     "ta": {
-                        "id": "irqbmMNs2Bo",
+                        "id": "zesDNvqbNNo",
                         "start": 0
                     },
                     "hi": {
@@ -434,11 +434,11 @@ window.LEARNING_DATA = {
                         "start": 3600
                     },
                     "te": {
-                        "id": "3JF7ndGauZk",
+                        "id": "rukBywrtqII",
                         "start": 0
                     },
                     "ta": {
-                        "id": "irqbmMNs2Bo",
+                        "id": "zesDNvqbNNo",
                         "start": 0
                     },
                     "hi": {
@@ -521,11 +521,11 @@ window.LEARNING_DATA = {
                         "start": 4800
                     },
                     "te": {
-                        "id": "3JF7ndGauZk",
+                        "id": "rukBywrtqII",
                         "start": 0
                     },
                     "ta": {
-                        "id": "irqbmMNs2Bo",
+                        "id": "zesDNvqbNNo",
                         "start": 0
                     },
                     "hi": {
@@ -608,11 +608,11 @@ window.LEARNING_DATA = {
                         "start": 6300
                     },
                     "te": {
-                        "id": "3JF7ndGauZk",
+                        "id": "rukBywrtqII",
                         "start": 0
                     },
                     "ta": {
-                        "id": "irqbmMNs2Bo",
+                        "id": "zesDNvqbNNo",
                         "start": 0
                     },
                     "hi": {
@@ -695,11 +695,11 @@ window.LEARNING_DATA = {
                         "start": 7800
                     },
                     "te": {
-                        "id": "3JF7ndGauZk",
+                        "id": "rukBywrtqII",
                         "start": 0
                     },
                     "ta": {
-                        "id": "irqbmMNs2Bo",
+                        "id": "zesDNvqbNNo",
                         "start": 0
                     },
                     "hi": {
@@ -782,11 +782,11 @@ window.LEARNING_DATA = {
                         "start": 9600
                     },
                     "te": {
-                        "id": "3JF7ndGauZk",
+                        "id": "rukBywrtqII",
                         "start": 0
                     },
                     "ta": {
-                        "id": "irqbmMNs2Bo",
+                        "id": "zesDNvqbNNo",
                         "start": 0
                     },
                     "hi": {
@@ -869,11 +869,11 @@ window.LEARNING_DATA = {
                         "start": 11400
                     },
                     "te": {
-                        "id": "3JF7ndGauZk",
+                        "id": "rukBywrtqII",
                         "start": 0
                     },
                     "ta": {
-                        "id": "irqbmMNs2Bo",
+                        "id": "zesDNvqbNNo",
                         "start": 0
                     },
                     "hi": {
@@ -892,11 +892,11 @@ window.LEARNING_DATA = {
                 "title": "C Programming Tutorial (English)"
             },
             "te": {
-                "id": "3JF7ndGauZk",
+                "id": "rukBywrtqII",
                 "title": "C Programming Full Course (తెలుగు)"
             },
             "ta": {
-                "id": "irqbmMNs2Bo",
+                "id": "zesDNvqbNNo",
                 "title": "C Programming Full Course (தமிழ்)"
             },
             "hi": {
@@ -988,7 +988,7 @@ window.LEARNING_DATA = {
                         "start": 0
                     },
                     "te": {
-                        "id": "g1t_v58lq1I",
+                        "id": "B31LgI4Y4DQ",
                         "start": 0
                     },
                     "ta": {
@@ -1075,7 +1075,7 @@ window.LEARNING_DATA = {
                         "start": 800
                     },
                     "te": {
-                        "id": "g1t_v58lq1I",
+                        "id": "B31LgI4Y4DQ",
                         "start": 0
                     },
                     "ta": {
@@ -1162,7 +1162,7 @@ window.LEARNING_DATA = {
                         "start": 1600
                     },
                     "te": {
-                        "id": "g1t_v58lq1I",
+                        "id": "B31LgI4Y4DQ",
                         "start": 0
                     },
                     "ta": {
@@ -1249,7 +1249,7 @@ window.LEARNING_DATA = {
                         "start": 2500
                     },
                     "te": {
-                        "id": "g1t_v58lq1I",
+                        "id": "B31LgI4Y4DQ",
                         "start": 0
                     },
                     "ta": {
@@ -1336,7 +1336,7 @@ window.LEARNING_DATA = {
                         "start": 3800
                     },
                     "te": {
-                        "id": "g1t_v58lq1I",
+                        "id": "B31LgI4Y4DQ",
                         "start": 0
                     },
                     "ta": {
@@ -1423,7 +1423,7 @@ window.LEARNING_DATA = {
                         "start": 5100
                     },
                     "te": {
-                        "id": "g1t_v58lq1I",
+                        "id": "B31LgI4Y4DQ",
                         "start": 0
                     },
                     "ta": {
@@ -1510,7 +1510,7 @@ window.LEARNING_DATA = {
                         "start": 6600
                     },
                     "te": {
-                        "id": "g1t_v58lq1I",
+                        "id": "B31LgI4Y4DQ",
                         "start": 0
                     },
                     "ta": {
@@ -1597,7 +1597,7 @@ window.LEARNING_DATA = {
                         "start": 8200
                     },
                     "te": {
-                        "id": "g1t_v58lq1I",
+                        "id": "B31LgI4Y4DQ",
                         "start": 0
                     },
                     "ta": {
@@ -1684,7 +1684,7 @@ window.LEARNING_DATA = {
                         "start": 10000
                     },
                     "te": {
-                        "id": "g1t_v58lq1I",
+                        "id": "B31LgI4Y4DQ",
                         "start": 0
                     },
                     "ta": {
@@ -1771,7 +1771,7 @@ window.LEARNING_DATA = {
                         "start": 12000
                     },
                     "te": {
-                        "id": "g1t_v58lq1I",
+                        "id": "B31LgI4Y4DQ",
                         "start": 0
                     },
                     "ta": {
@@ -1794,7 +1794,7 @@ window.LEARNING_DATA = {
                 "title": "C++ Tutorial for Beginners (English)"
             },
             "te": {
-                "id": "g1t_v58lq1I",
+                "id": "B31LgI4Y4DQ",
                 "title": "C++ Full Course in Telugu (తెలుగు)"
             },
             "ta": {
@@ -1898,7 +1898,7 @@ window.LEARNING_DATA = {
                         "start": 0
                     },
                     "hi": {
-                        "id": "gfDE2a79518",
+                        "id": "7wnove7K-ZQ",
                         "start": 0
                     }
                 }
@@ -1985,7 +1985,7 @@ window.LEARNING_DATA = {
                         "start": 0
                     },
                     "hi": {
-                        "id": "gfDE2a79518",
+                        "id": "7wnove7K-ZQ",
                         "start": 0
                     }
                 }
@@ -2072,7 +2072,7 @@ window.LEARNING_DATA = {
                         "start": 0
                     },
                     "hi": {
-                        "id": "gfDE2a79518",
+                        "id": "7wnove7K-ZQ",
                         "start": 0
                     }
                 }
@@ -2159,7 +2159,7 @@ window.LEARNING_DATA = {
                         "start": 0
                     },
                     "hi": {
-                        "id": "gfDE2a79518",
+                        "id": "7wnove7K-ZQ",
                         "start": 0
                     }
                 }
@@ -2246,7 +2246,7 @@ window.LEARNING_DATA = {
                         "start": 0
                     },
                     "hi": {
-                        "id": "gfDE2a79518",
+                        "id": "7wnove7K-ZQ",
                         "start": 0
                     }
                 }
@@ -2333,7 +2333,7 @@ window.LEARNING_DATA = {
                         "start": 0
                     },
                     "hi": {
-                        "id": "gfDE2a79518",
+                        "id": "7wnove7K-ZQ",
                         "start": 0
                     }
                 }
@@ -2420,7 +2420,7 @@ window.LEARNING_DATA = {
                         "start": 0
                     },
                     "hi": {
-                        "id": "gfDE2a79518",
+                        "id": "7wnove7K-ZQ",
                         "start": 0
                     }
                 }
@@ -2507,7 +2507,7 @@ window.LEARNING_DATA = {
                         "start": 0
                     },
                     "hi": {
-                        "id": "gfDE2a79518",
+                        "id": "7wnove7K-ZQ",
                         "start": 0
                     }
                 }
@@ -2594,7 +2594,7 @@ window.LEARNING_DATA = {
                         "start": 0
                     },
                     "hi": {
-                        "id": "gfDE2a79518",
+                        "id": "7wnove7K-ZQ",
                         "start": 0
                     }
                 }
@@ -2681,7 +2681,7 @@ window.LEARNING_DATA = {
                         "start": 0
                     },
                     "hi": {
-                        "id": "gfDE2a79518",
+                        "id": "7wnove7K-ZQ",
                         "start": 0
                     }
                 }
@@ -2704,7 +2704,7 @@ window.LEARNING_DATA = {
                 "title": "Python Full Course in Tamil (தமிழ்)"
             },
             "hi": {
-                "id": "gfDE2a79518",
+                "id": "7wnove7K-ZQ",
                 "title": "Python Full Course in Hindi (हिन्दी)"
             }
         }
@@ -2792,11 +2792,11 @@ window.LEARNING_DATA = {
                         "start": 0
                     },
                     "te": {
-                        "id": "N6v_zPqO278",
+                        "id": "pTB0EiLXUC8",
                         "start": 0
                     },
                     "ta": {
-                        "id": "V9H_bZ6l30E",
+                        "id": "8cm1x4bC610",
                         "start": 0
                     },
                     "hi": {
@@ -2879,11 +2879,11 @@ window.LEARNING_DATA = {
                         "start": 600
                     },
                     "te": {
-                        "id": "N6v_zPqO278",
+                        "id": "pTB0EiLXUC8",
                         "start": 0
                     },
                     "ta": {
-                        "id": "V9H_bZ6l30E",
+                        "id": "8cm1x4bC610",
                         "start": 0
                     },
                     "hi": {
@@ -2966,11 +2966,11 @@ window.LEARNING_DATA = {
                         "start": 1200
                     },
                     "te": {
-                        "id": "N6v_zPqO278",
+                        "id": "pTB0EiLXUC8",
                         "start": 0
                     },
                     "ta": {
-                        "id": "V9H_bZ6l30E",
+                        "id": "8cm1x4bC610",
                         "start": 0
                     },
                     "hi": {
@@ -3053,11 +3053,11 @@ window.LEARNING_DATA = {
                         "start": 1900
                     },
                     "te": {
-                        "id": "N6v_zPqO278",
+                        "id": "pTB0EiLXUC8",
                         "start": 0
                     },
                     "ta": {
-                        "id": "V9H_bZ6l30E",
+                        "id": "8cm1x4bC610",
                         "start": 0
                     },
                     "hi": {
@@ -3140,11 +3140,11 @@ window.LEARNING_DATA = {
                         "start": 2700
                     },
                     "te": {
-                        "id": "N6v_zPqO278",
+                        "id": "pTB0EiLXUC8",
                         "start": 0
                     },
                     "ta": {
-                        "id": "V9H_bZ6l30E",
+                        "id": "8cm1x4bC610",
                         "start": 0
                     },
                     "hi": {
@@ -3227,11 +3227,11 @@ window.LEARNING_DATA = {
                         "start": 3600
                     },
                     "te": {
-                        "id": "N6v_zPqO278",
+                        "id": "pTB0EiLXUC8",
                         "start": 0
                     },
                     "ta": {
-                        "id": "V9H_bZ6l30E",
+                        "id": "8cm1x4bC610",
                         "start": 0
                     },
                     "hi": {
@@ -3314,11 +3314,11 @@ window.LEARNING_DATA = {
                         "start": 4600
                     },
                     "te": {
-                        "id": "N6v_zPqO278",
+                        "id": "pTB0EiLXUC8",
                         "start": 0
                     },
                     "ta": {
-                        "id": "V9H_bZ6l30E",
+                        "id": "8cm1x4bC610",
                         "start": 0
                     },
                     "hi": {
@@ -3401,11 +3401,11 @@ window.LEARNING_DATA = {
                         "start": 5700
                     },
                     "te": {
-                        "id": "N6v_zPqO278",
+                        "id": "pTB0EiLXUC8",
                         "start": 0
                     },
                     "ta": {
-                        "id": "V9H_bZ6l30E",
+                        "id": "8cm1x4bC610",
                         "start": 0
                     },
                     "hi": {
@@ -3488,11 +3488,11 @@ window.LEARNING_DATA = {
                         "start": 6900
                     },
                     "te": {
-                        "id": "N6v_zPqO278",
+                        "id": "pTB0EiLXUC8",
                         "start": 0
                     },
                     "ta": {
-                        "id": "V9H_bZ6l30E",
+                        "id": "8cm1x4bC610",
                         "start": 0
                     },
                     "hi": {
@@ -3575,11 +3575,11 @@ window.LEARNING_DATA = {
                         "start": 8100
                     },
                     "te": {
-                        "id": "N6v_zPqO278",
+                        "id": "pTB0EiLXUC8",
                         "start": 0
                     },
                     "ta": {
-                        "id": "V9H_bZ6l30E",
+                        "id": "8cm1x4bC610",
                         "start": 0
                     },
                     "hi": {
@@ -3598,11 +3598,11 @@ window.LEARNING_DATA = {
                 "title": "Java Tutorial for Beginners (English)"
             },
             "te": {
-                "id": "N6v_zPqO278",
+                "id": "pTB0EiLXUC8",
                 "title": "Java Full Course in Telugu (తెలుగు)"
             },
             "ta": {
-                "id": "V9H_bZ6l30E",
+                "id": "8cm1x4bC610",
                 "title": "Java Tutorial in Tamil (தமிழ்)"
             },
             "hi": {
@@ -3698,7 +3698,7 @@ window.LEARNING_DATA = {
                         "start": 0
                     },
                     "ta": {
-                        "id": "pooxdbK_Z14",
+                        "id": "poo0BXryffI",
                         "start": 0
                     },
                     "hi": {
@@ -3785,7 +3785,7 @@ window.LEARNING_DATA = {
                         "start": 0
                     },
                     "ta": {
-                        "id": "pooxdbK_Z14",
+                        "id": "poo0BXryffI",
                         "start": 0
                     },
                     "hi": {
@@ -3872,7 +3872,7 @@ window.LEARNING_DATA = {
                         "start": 0
                     },
                     "ta": {
-                        "id": "pooxdbK_Z14",
+                        "id": "poo0BXryffI",
                         "start": 0
                     },
                     "hi": {
@@ -3959,7 +3959,7 @@ window.LEARNING_DATA = {
                         "start": 0
                     },
                     "ta": {
-                        "id": "pooxdbK_Z14",
+                        "id": "poo0BXryffI",
                         "start": 0
                     },
                     "hi": {
@@ -4046,7 +4046,7 @@ window.LEARNING_DATA = {
                         "start": 0
                     },
                     "ta": {
-                        "id": "pooxdbK_Z14",
+                        "id": "poo0BXryffI",
                         "start": 0
                     },
                     "hi": {
@@ -4133,7 +4133,7 @@ window.LEARNING_DATA = {
                         "start": 0
                     },
                     "ta": {
-                        "id": "pooxdbK_Z14",
+                        "id": "poo0BXryffI",
                         "start": 0
                     },
                     "hi": {
@@ -4220,7 +4220,7 @@ window.LEARNING_DATA = {
                         "start": 0
                     },
                     "ta": {
-                        "id": "pooxdbK_Z14",
+                        "id": "poo0BXryffI",
                         "start": 0
                     },
                     "hi": {
@@ -4307,7 +4307,7 @@ window.LEARNING_DATA = {
                         "start": 0
                     },
                     "ta": {
-                        "id": "pooxdbK_Z14",
+                        "id": "poo0BXryffI",
                         "start": 0
                     },
                     "hi": {
@@ -4394,7 +4394,7 @@ window.LEARNING_DATA = {
                         "start": 0
                     },
                     "ta": {
-                        "id": "pooxdbK_Z14",
+                        "id": "poo0BXryffI",
                         "start": 0
                     },
                     "hi": {
@@ -4481,7 +4481,7 @@ window.LEARNING_DATA = {
                         "start": 0
                     },
                     "ta": {
-                        "id": "pooxdbK_Z14",
+                        "id": "poo0BXryffI",
                         "start": 0
                     },
                     "hi": {
@@ -4504,7 +4504,7 @@ window.LEARNING_DATA = {
                 "title": "JavaScript Full Course in Telugu (తెలుగు)"
             },
             "ta": {
-                "id": "pooxdbK_Z14",
+                "id": "poo0BXryffI",
                 "title": "JavaScript Tutorial in Tamil (தமிழ்)"
             },
             "hi": {
@@ -4600,7 +4600,7 @@ window.LEARNING_DATA = {
                         "start": 0
                     },
                     "ta": {
-                        "id": "1hpgzRk2g3M",
+                        "id": "BwuLxPH8IDs",
                         "start": 0
                     },
                     "hi": {
@@ -4687,7 +4687,7 @@ window.LEARNING_DATA = {
                         "start": 0
                     },
                     "ta": {
-                        "id": "1hpgzRk2g3M",
+                        "id": "BwuLxPH8IDs",
                         "start": 0
                     },
                     "hi": {
@@ -4774,7 +4774,7 @@ window.LEARNING_DATA = {
                         "start": 0
                     },
                     "ta": {
-                        "id": "1hpgzRk2g3M",
+                        "id": "BwuLxPH8IDs",
                         "start": 0
                     },
                     "hi": {
@@ -4861,7 +4861,7 @@ window.LEARNING_DATA = {
                         "start": 0
                     },
                     "ta": {
-                        "id": "1hpgzRk2g3M",
+                        "id": "BwuLxPH8IDs",
                         "start": 0
                     },
                     "hi": {
@@ -4948,7 +4948,7 @@ window.LEARNING_DATA = {
                         "start": 0
                     },
                     "ta": {
-                        "id": "1hpgzRk2g3M",
+                        "id": "BwuLxPH8IDs",
                         "start": 0
                     },
                     "hi": {
@@ -5035,7 +5035,7 @@ window.LEARNING_DATA = {
                         "start": 0
                     },
                     "ta": {
-                        "id": "1hpgzRk2g3M",
+                        "id": "BwuLxPH8IDs",
                         "start": 0
                     },
                     "hi": {
@@ -5122,7 +5122,7 @@ window.LEARNING_DATA = {
                         "start": 0
                     },
                     "ta": {
-                        "id": "1hpgzRk2g3M",
+                        "id": "BwuLxPH8IDs",
                         "start": 0
                     },
                     "hi": {
@@ -5209,7 +5209,7 @@ window.LEARNING_DATA = {
                         "start": 0
                     },
                     "ta": {
-                        "id": "1hpgzRk2g3M",
+                        "id": "BwuLxPH8IDs",
                         "start": 0
                     },
                     "hi": {
@@ -5296,7 +5296,7 @@ window.LEARNING_DATA = {
                         "start": 0
                     },
                     "ta": {
-                        "id": "1hpgzRk2g3M",
+                        "id": "BwuLxPH8IDs",
                         "start": 0
                     },
                     "hi": {
@@ -5383,7 +5383,7 @@ window.LEARNING_DATA = {
                         "start": 0
                     },
                     "ta": {
-                        "id": "1hpgzRk2g3M",
+                        "id": "BwuLxPH8IDs",
                         "start": 0
                     },
                     "hi": {
@@ -5406,7 +5406,7 @@ window.LEARNING_DATA = {
                 "title": "TypeScript in Telugu (తెలుగు)"
             },
             "ta": {
-                "id": "1hpgzRk2g3M",
+                "id": "BwuLxPH8IDs",
                 "title": "TypeScript Tutorial in Tamil (தமிழ்)"
             },
             "hi": {
@@ -5498,7 +5498,7 @@ window.LEARNING_DATA = {
                         "start": 0
                     },
                     "te": {
-                        "id": "KlsYduikU3U",
+                        "id": "fDRa82lxzaU",
                         "start": 0
                     },
                     "ta": {
@@ -5506,7 +5506,7 @@ window.LEARNING_DATA = {
                         "start": 0
                     },
                     "hi": {
-                        "id": "KlsYduikU3U",
+                        "id": "fDRa82lxzaU",
                         "start": 0
                     }
                 }
@@ -5585,7 +5585,7 @@ window.LEARNING_DATA = {
                         "start": 540
                     },
                     "te": {
-                        "id": "KlsYduikU3U",
+                        "id": "fDRa82lxzaU",
                         "start": 0
                     },
                     "ta": {
@@ -5593,7 +5593,7 @@ window.LEARNING_DATA = {
                         "start": 0
                     },
                     "hi": {
-                        "id": "KlsYduikU3U",
+                        "id": "fDRa82lxzaU",
                         "start": 0
                     }
                 }
@@ -5672,7 +5672,7 @@ window.LEARNING_DATA = {
                         "start": 1140
                     },
                     "te": {
-                        "id": "KlsYduikU3U",
+                        "id": "fDRa82lxzaU",
                         "start": 0
                     },
                     "ta": {
@@ -5680,7 +5680,7 @@ window.LEARNING_DATA = {
                         "start": 0
                     },
                     "hi": {
-                        "id": "KlsYduikU3U",
+                        "id": "fDRa82lxzaU",
                         "start": 0
                     }
                 }
@@ -5759,7 +5759,7 @@ window.LEARNING_DATA = {
                         "start": 1800
                     },
                     "te": {
-                        "id": "KlsYduikU3U",
+                        "id": "fDRa82lxzaU",
                         "start": 0
                     },
                     "ta": {
@@ -5767,7 +5767,7 @@ window.LEARNING_DATA = {
                         "start": 0
                     },
                     "hi": {
-                        "id": "KlsYduikU3U",
+                        "id": "fDRa82lxzaU",
                         "start": 0
                     }
                 }
@@ -5846,7 +5846,7 @@ window.LEARNING_DATA = {
                         "start": 2520
                     },
                     "te": {
-                        "id": "KlsYduikU3U",
+                        "id": "fDRa82lxzaU",
                         "start": 0
                     },
                     "ta": {
@@ -5854,7 +5854,7 @@ window.LEARNING_DATA = {
                         "start": 0
                     },
                     "hi": {
-                        "id": "KlsYduikU3U",
+                        "id": "fDRa82lxzaU",
                         "start": 0
                     }
                 }
@@ -5933,7 +5933,7 @@ window.LEARNING_DATA = {
                         "start": 3300
                     },
                     "te": {
-                        "id": "KlsYduikU3U",
+                        "id": "fDRa82lxzaU",
                         "start": 0
                     },
                     "ta": {
@@ -5941,7 +5941,7 @@ window.LEARNING_DATA = {
                         "start": 0
                     },
                     "hi": {
-                        "id": "KlsYduikU3U",
+                        "id": "fDRa82lxzaU",
                         "start": 0
                     }
                 }
@@ -6020,7 +6020,7 @@ window.LEARNING_DATA = {
                         "start": 4140
                     },
                     "te": {
-                        "id": "KlsYduikU3U",
+                        "id": "fDRa82lxzaU",
                         "start": 0
                     },
                     "ta": {
@@ -6028,7 +6028,7 @@ window.LEARNING_DATA = {
                         "start": 0
                     },
                     "hi": {
-                        "id": "KlsYduikU3U",
+                        "id": "fDRa82lxzaU",
                         "start": 0
                     }
                 }
@@ -6107,7 +6107,7 @@ window.LEARNING_DATA = {
                         "start": 5040
                     },
                     "te": {
-                        "id": "KlsYduikU3U",
+                        "id": "fDRa82lxzaU",
                         "start": 0
                     },
                     "ta": {
@@ -6115,7 +6115,7 @@ window.LEARNING_DATA = {
                         "start": 0
                     },
                     "hi": {
-                        "id": "KlsYduikU3U",
+                        "id": "fDRa82lxzaU",
                         "start": 0
                     }
                 }
@@ -6194,7 +6194,7 @@ window.LEARNING_DATA = {
                         "start": 6000
                     },
                     "te": {
-                        "id": "KlsYduikU3U",
+                        "id": "fDRa82lxzaU",
                         "start": 0
                     },
                     "ta": {
@@ -6202,7 +6202,7 @@ window.LEARNING_DATA = {
                         "start": 0
                     },
                     "hi": {
-                        "id": "KlsYduikU3U",
+                        "id": "fDRa82lxzaU",
                         "start": 0
                     }
                 }
@@ -6281,7 +6281,7 @@ window.LEARNING_DATA = {
                         "start": 7020
                     },
                     "te": {
-                        "id": "KlsYduikU3U",
+                        "id": "fDRa82lxzaU",
                         "start": 0
                     },
                     "ta": {
@@ -6289,7 +6289,7 @@ window.LEARNING_DATA = {
                         "start": 0
                     },
                     "hi": {
-                        "id": "KlsYduikU3U",
+                        "id": "fDRa82lxzaU",
                         "start": 0
                     }
                 }
@@ -6304,7 +6304,7 @@ window.LEARNING_DATA = {
                 "title": "R Programming Tutorial (English)"
             },
             "te": {
-                "id": "KlsYduikU3U",
+                "id": "fDRa82lxzaU",
                 "title": "R Programming in Telugu (తెలుగు)"
             },
             "ta": {
@@ -6312,7 +6312,7 @@ window.LEARNING_DATA = {
                 "title": "R Programming in Tamil (தமிழ்)"
             },
             "hi": {
-                "id": "KlsYduikU3U",
+                "id": "fDRa82lxzaU",
                 "title": "R Programming in Hindi (हिन्दी)"
             }
         }
@@ -6396,19 +6396,19 @@ window.LEARNING_DATA = {
                 "videoId": "2NGT_2iBf1w",
                 "videos": {
                     "en": {
-                        "id": "2NGT_2iBf1w",
+                        "id": "9fp0T6CBB9I",
                         "start": 0
                     },
                     "te": {
-                        "id": "2NGT_2iBf1w",
+                        "id": "9fp0T6CBB9I",
                         "start": 0
                     },
                     "ta": {
-                        "id": "2NGT_2iBf1w",
+                        "id": "9fp0T6CBB9I",
                         "start": 0
                     },
                     "hi": {
-                        "id": "2NGT_2iBf1w",
+                        "id": "9fp0T6CBB9I",
                         "start": 0
                     }
                 }
@@ -6483,19 +6483,19 @@ window.LEARNING_DATA = {
                 "videoId": "2NGT_2iBf1w",
                 "videos": {
                     "en": {
-                        "id": "2NGT_2iBf1w",
+                        "id": "9fp0T6CBB9I",
                         "start": 600
                     },
                     "te": {
-                        "id": "2NGT_2iBf1w",
+                        "id": "9fp0T6CBB9I",
                         "start": 0
                     },
                     "ta": {
-                        "id": "2NGT_2iBf1w",
+                        "id": "9fp0T6CBB9I",
                         "start": 0
                     },
                     "hi": {
-                        "id": "2NGT_2iBf1w",
+                        "id": "9fp0T6CBB9I",
                         "start": 0
                     }
                 }
@@ -6570,19 +6570,19 @@ window.LEARNING_DATA = {
                 "videoId": "2NGT_2iBf1w",
                 "videos": {
                     "en": {
-                        "id": "2NGT_2iBf1w",
+                        "id": "9fp0T6CBB9I",
                         "start": 1300
                     },
                     "te": {
-                        "id": "2NGT_2iBf1w",
+                        "id": "9fp0T6CBB9I",
                         "start": 0
                     },
                     "ta": {
-                        "id": "2NGT_2iBf1w",
+                        "id": "9fp0T6CBB9I",
                         "start": 0
                     },
                     "hi": {
-                        "id": "2NGT_2iBf1w",
+                        "id": "9fp0T6CBB9I",
                         "start": 0
                     }
                 }
@@ -6657,19 +6657,19 @@ window.LEARNING_DATA = {
                 "videoId": "2NGT_2iBf1w",
                 "videos": {
                     "en": {
-                        "id": "2NGT_2iBf1w",
+                        "id": "9fp0T6CBB9I",
                         "start": 2100
                     },
                     "te": {
-                        "id": "2NGT_2iBf1w",
+                        "id": "9fp0T6CBB9I",
                         "start": 0
                     },
                     "ta": {
-                        "id": "2NGT_2iBf1w",
+                        "id": "9fp0T6CBB9I",
                         "start": 0
                     },
                     "hi": {
-                        "id": "2NGT_2iBf1w",
+                        "id": "9fp0T6CBB9I",
                         "start": 0
                     }
                 }
@@ -6744,19 +6744,19 @@ window.LEARNING_DATA = {
                 "videoId": "2NGT_2iBf1w",
                 "videos": {
                     "en": {
-                        "id": "2NGT_2iBf1w",
+                        "id": "9fp0T6CBB9I",
                         "start": 3000
                     },
                     "te": {
-                        "id": "2NGT_2iBf1w",
+                        "id": "9fp0T6CBB9I",
                         "start": 0
                     },
                     "ta": {
-                        "id": "2NGT_2iBf1w",
+                        "id": "9fp0T6CBB9I",
                         "start": 0
                     },
                     "hi": {
-                        "id": "2NGT_2iBf1w",
+                        "id": "9fp0T6CBB9I",
                         "start": 0
                     }
                 }
@@ -6831,19 +6831,19 @@ window.LEARNING_DATA = {
                 "videoId": "2NGT_2iBf1w",
                 "videos": {
                     "en": {
-                        "id": "2NGT_2iBf1w",
+                        "id": "9fp0T6CBB9I",
                         "start": 4000
                     },
                     "te": {
-                        "id": "2NGT_2iBf1w",
+                        "id": "9fp0T6CBB9I",
                         "start": 0
                     },
                     "ta": {
-                        "id": "2NGT_2iBf1w",
+                        "id": "9fp0T6CBB9I",
                         "start": 0
                     },
                     "hi": {
-                        "id": "2NGT_2iBf1w",
+                        "id": "9fp0T6CBB9I",
                         "start": 0
                     }
                 }
@@ -6918,19 +6918,19 @@ window.LEARNING_DATA = {
                 "videoId": "2NGT_2iBf1w",
                 "videos": {
                     "en": {
-                        "id": "2NGT_2iBf1w",
+                        "id": "9fp0T6CBB9I",
                         "start": 5100
                     },
                     "te": {
-                        "id": "2NGT_2iBf1w",
+                        "id": "9fp0T6CBB9I",
                         "start": 0
                     },
                     "ta": {
-                        "id": "2NGT_2iBf1w",
+                        "id": "9fp0T6CBB9I",
                         "start": 0
                     },
                     "hi": {
-                        "id": "2NGT_2iBf1w",
+                        "id": "9fp0T6CBB9I",
                         "start": 0
                     }
                 }
@@ -7005,19 +7005,19 @@ window.LEARNING_DATA = {
                 "videoId": "2NGT_2iBf1w",
                 "videos": {
                     "en": {
-                        "id": "2NGT_2iBf1w",
+                        "id": "9fp0T6CBB9I",
                         "start": 6300
                     },
                     "te": {
-                        "id": "2NGT_2iBf1w",
+                        "id": "9fp0T6CBB9I",
                         "start": 0
                     },
                     "ta": {
-                        "id": "2NGT_2iBf1w",
+                        "id": "9fp0T6CBB9I",
                         "start": 0
                     },
                     "hi": {
-                        "id": "2NGT_2iBf1w",
+                        "id": "9fp0T6CBB9I",
                         "start": 0
                     }
                 }
@@ -7092,19 +7092,19 @@ window.LEARNING_DATA = {
                 "videoId": "2NGT_2iBf1w",
                 "videos": {
                     "en": {
-                        "id": "2NGT_2iBf1w",
+                        "id": "9fp0T6CBB9I",
                         "start": 7600
                     },
                     "te": {
-                        "id": "2NGT_2iBf1w",
+                        "id": "9fp0T6CBB9I",
                         "start": 0
                     },
                     "ta": {
-                        "id": "2NGT_2iBf1w",
+                        "id": "9fp0T6CBB9I",
                         "start": 0
                     },
                     "hi": {
-                        "id": "2NGT_2iBf1w",
+                        "id": "9fp0T6CBB9I",
                         "start": 0
                     }
                 }
@@ -7179,42 +7179,42 @@ window.LEARNING_DATA = {
                 "videoId": "2NGT_2iBf1w",
                 "videos": {
                     "en": {
-                        "id": "2NGT_2iBf1w",
+                        "id": "9fp0T6CBB9I",
                         "start": 9000
                     },
                     "te": {
-                        "id": "2NGT_2iBf1w",
+                        "id": "9fp0T6CBB9I",
                         "start": 0
                     },
                     "ta": {
-                        "id": "2NGT_2iBf1w",
+                        "id": "9fp0T6CBB9I",
                         "start": 0
                     },
                     "hi": {
-                        "id": "2NGT_2iBf1w",
+                        "id": "9fp0T6CBB9I",
                         "start": 0
                     }
                 }
             }
         ],
-        "videoId": "2NGT_2iBf1w",
+        "videoId": "9fp0T6CBB9I",
         "videoTitle": "CUDA Programming Course – High-Performance GPU Computing",
         "videoDuration": "2:40:00",
         "videos": {
             "en": {
-                "id": "2NGT_2iBf1w",
+                "id": "9fp0T6CBB9I",
                 "title": "CUDA Programming Course (English)"
             },
             "te": {
-                "id": "2NGT_2iBf1w",
+                "id": "9fp0T6CBB9I",
                 "title": "CUDA GPU Course with Telugu Notes (తెలుగు)"
             },
             "ta": {
-                "id": "2NGT_2iBf1w",
+                "id": "9fp0T6CBB9I",
                 "title": "CUDA Programming in Tamil (தமிழ்)"
             },
             "hi": {
-                "id": "2NGT_2iBf1w",
+                "id": "9fp0T6CBB9I",
                 "title": "CUDA GPU Programming in Hindi (हिन्दी)"
             }
         }
@@ -7302,7 +7302,7 @@ window.LEARNING_DATA = {
                         "start": 0
                     },
                     "te": {
-                        "id": "D570W8c1z24",
+                        "id": "t_ispmWmdjY",
                         "start": 0
                     },
                     "ta": {
@@ -7310,7 +7310,7 @@ window.LEARNING_DATA = {
                         "start": 0
                     },
                     "hi": {
-                        "id": "D570W8c1z24",
+                        "id": "t_ispmWmdjY",
                         "start": 0
                     }
                 }
@@ -7389,7 +7389,7 @@ window.LEARNING_DATA = {
                         "start": 800
                     },
                     "te": {
-                        "id": "D570W8c1z24",
+                        "id": "t_ispmWmdjY",
                         "start": 0
                     },
                     "ta": {
@@ -7397,7 +7397,7 @@ window.LEARNING_DATA = {
                         "start": 0
                     },
                     "hi": {
-                        "id": "D570W8c1z24",
+                        "id": "t_ispmWmdjY",
                         "start": 0
                     }
                 }
@@ -7476,7 +7476,7 @@ window.LEARNING_DATA = {
                         "start": 1700
                     },
                     "te": {
-                        "id": "D570W8c1z24",
+                        "id": "t_ispmWmdjY",
                         "start": 0
                     },
                     "ta": {
@@ -7484,7 +7484,7 @@ window.LEARNING_DATA = {
                         "start": 0
                     },
                     "hi": {
-                        "id": "D570W8c1z24",
+                        "id": "t_ispmWmdjY",
                         "start": 0
                     }
                 }
@@ -7563,7 +7563,7 @@ window.LEARNING_DATA = {
                         "start": 2700
                     },
                     "te": {
-                        "id": "D570W8c1z24",
+                        "id": "t_ispmWmdjY",
                         "start": 0
                     },
                     "ta": {
@@ -7571,7 +7571,7 @@ window.LEARNING_DATA = {
                         "start": 0
                     },
                     "hi": {
-                        "id": "D570W8c1z24",
+                        "id": "t_ispmWmdjY",
                         "start": 0
                     }
                 }
@@ -7650,7 +7650,7 @@ window.LEARNING_DATA = {
                         "start": 3800
                     },
                     "te": {
-                        "id": "D570W8c1z24",
+                        "id": "t_ispmWmdjY",
                         "start": 0
                     },
                     "ta": {
@@ -7658,7 +7658,7 @@ window.LEARNING_DATA = {
                         "start": 0
                     },
                     "hi": {
-                        "id": "D570W8c1z24",
+                        "id": "t_ispmWmdjY",
                         "start": 0
                     }
                 }
@@ -7737,7 +7737,7 @@ window.LEARNING_DATA = {
                         "start": 5000
                     },
                     "te": {
-                        "id": "D570W8c1z24",
+                        "id": "t_ispmWmdjY",
                         "start": 0
                     },
                     "ta": {
@@ -7745,7 +7745,7 @@ window.LEARNING_DATA = {
                         "start": 0
                     },
                     "hi": {
-                        "id": "D570W8c1z24",
+                        "id": "t_ispmWmdjY",
                         "start": 0
                     }
                 }
@@ -7824,7 +7824,7 @@ window.LEARNING_DATA = {
                         "start": 6400
                     },
                     "te": {
-                        "id": "D570W8c1z24",
+                        "id": "t_ispmWmdjY",
                         "start": 0
                     },
                     "ta": {
@@ -7832,7 +7832,7 @@ window.LEARNING_DATA = {
                         "start": 0
                     },
                     "hi": {
-                        "id": "D570W8c1z24",
+                        "id": "t_ispmWmdjY",
                         "start": 0
                     }
                 }
@@ -7911,7 +7911,7 @@ window.LEARNING_DATA = {
                         "start": 7900
                     },
                     "te": {
-                        "id": "D570W8c1z24",
+                        "id": "t_ispmWmdjY",
                         "start": 0
                     },
                     "ta": {
@@ -7919,7 +7919,7 @@ window.LEARNING_DATA = {
                         "start": 0
                     },
                     "hi": {
-                        "id": "D570W8c1z24",
+                        "id": "t_ispmWmdjY",
                         "start": 0
                     }
                 }
@@ -7998,7 +7998,7 @@ window.LEARNING_DATA = {
                         "start": 9500
                     },
                     "te": {
-                        "id": "D570W8c1z24",
+                        "id": "t_ispmWmdjY",
                         "start": 0
                     },
                     "ta": {
@@ -8006,7 +8006,7 @@ window.LEARNING_DATA = {
                         "start": 0
                     },
                     "hi": {
-                        "id": "D570W8c1z24",
+                        "id": "t_ispmWmdjY",
                         "start": 0
                     }
                 }
@@ -8085,7 +8085,7 @@ window.LEARNING_DATA = {
                         "start": 11200
                     },
                     "te": {
-                        "id": "D570W8c1z24",
+                        "id": "t_ispmWmdjY",
                         "start": 0
                     },
                     "ta": {
@@ -8093,7 +8093,7 @@ window.LEARNING_DATA = {
                         "start": 0
                     },
                     "hi": {
-                        "id": "D570W8c1z24",
+                        "id": "t_ispmWmdjY",
                         "start": 0
                     }
                 }
@@ -8108,7 +8108,7 @@ window.LEARNING_DATA = {
                 "title": "Ruby Programming Language (English)"
             },
             "te": {
-                "id": "D570W8c1z24",
+                "id": "t_ispmWmdjY",
                 "title": "Ruby Full Course in Telugu (తెలుగు)"
             },
             "ta": {
@@ -8116,7 +8116,7 @@ window.LEARNING_DATA = {
                 "title": "Ruby Tutorial in Tamil (தமிழ்)"
             },
             "hi": {
-                "id": "D570W8c1z24",
+                "id": "t_ispmWmdjY",
                 "title": "Ruby Full Course in Hindi (हिन्दी)"
             }
         }
@@ -8208,11 +8208,11 @@ window.LEARNING_DATA = {
                         "start": 0
                     },
                     "ta": {
-                        "id": "XBjwhZ4aYh8",
+                        "id": "OK_JCtrrv-c",
                         "start": 0
                     },
                     "hi": {
-                        "id": "xW7ro3lwaWE",
+                        "id": "at19OmH2Bg4",
                         "start": 0
                     }
                 }
@@ -8295,11 +8295,11 @@ window.LEARNING_DATA = {
                         "start": 0
                     },
                     "ta": {
-                        "id": "XBjwhZ4aYh8",
+                        "id": "OK_JCtrrv-c",
                         "start": 0
                     },
                     "hi": {
-                        "id": "xW7ro3lwaWE",
+                        "id": "at19OmH2Bg4",
                         "start": 0
                     }
                 }
@@ -8382,11 +8382,11 @@ window.LEARNING_DATA = {
                         "start": 0
                     },
                     "ta": {
-                        "id": "XBjwhZ4aYh8",
+                        "id": "OK_JCtrrv-c",
                         "start": 0
                     },
                     "hi": {
-                        "id": "xW7ro3lwaWE",
+                        "id": "at19OmH2Bg4",
                         "start": 0
                     }
                 }
@@ -8469,11 +8469,11 @@ window.LEARNING_DATA = {
                         "start": 0
                     },
                     "ta": {
-                        "id": "XBjwhZ4aYh8",
+                        "id": "OK_JCtrrv-c",
                         "start": 0
                     },
                     "hi": {
-                        "id": "xW7ro3lwaWE",
+                        "id": "at19OmH2Bg4",
                         "start": 0
                     }
                 }
@@ -8556,11 +8556,11 @@ window.LEARNING_DATA = {
                         "start": 0
                     },
                     "ta": {
-                        "id": "XBjwhZ4aYh8",
+                        "id": "OK_JCtrrv-c",
                         "start": 0
                     },
                     "hi": {
-                        "id": "xW7ro3lwaWE",
+                        "id": "at19OmH2Bg4",
                         "start": 0
                     }
                 }
@@ -8643,11 +8643,11 @@ window.LEARNING_DATA = {
                         "start": 0
                     },
                     "ta": {
-                        "id": "XBjwhZ4aYh8",
+                        "id": "OK_JCtrrv-c",
                         "start": 0
                     },
                     "hi": {
-                        "id": "xW7ro3lwaWE",
+                        "id": "at19OmH2Bg4",
                         "start": 0
                     }
                 }
@@ -8730,11 +8730,11 @@ window.LEARNING_DATA = {
                         "start": 0
                     },
                     "ta": {
-                        "id": "XBjwhZ4aYh8",
+                        "id": "OK_JCtrrv-c",
                         "start": 0
                     },
                     "hi": {
-                        "id": "xW7ro3lwaWE",
+                        "id": "at19OmH2Bg4",
                         "start": 0
                     }
                 }
@@ -8817,11 +8817,11 @@ window.LEARNING_DATA = {
                         "start": 0
                     },
                     "ta": {
-                        "id": "XBjwhZ4aYh8",
+                        "id": "OK_JCtrrv-c",
                         "start": 0
                     },
                     "hi": {
-                        "id": "xW7ro3lwaWE",
+                        "id": "at19OmH2Bg4",
                         "start": 0
                     }
                 }
@@ -8904,11 +8904,11 @@ window.LEARNING_DATA = {
                         "start": 0
                     },
                     "ta": {
-                        "id": "XBjwhZ4aYh8",
+                        "id": "OK_JCtrrv-c",
                         "start": 0
                     },
                     "hi": {
-                        "id": "xW7ro3lwaWE",
+                        "id": "at19OmH2Bg4",
                         "start": 0
                     }
                 }
@@ -8991,11 +8991,11 @@ window.LEARNING_DATA = {
                         "start": 0
                     },
                     "ta": {
-                        "id": "XBjwhZ4aYh8",
+                        "id": "OK_JCtrrv-c",
                         "start": 0
                     },
                     "hi": {
-                        "id": "xW7ro3lwaWE",
+                        "id": "at19OmH2Bg4",
                         "start": 0
                     }
                 }
@@ -9014,11 +9014,11 @@ window.LEARNING_DATA = {
                 "title": "PHP Full Course in Telugu (తెలుగు)"
             },
             "ta": {
-                "id": "XBjwhZ4aYh8",
+                "id": "OK_JCtrrv-c",
                 "title": "PHP Tutorial in Tamil (தமிழ்)"
             },
             "hi": {
-                "id": "xW7ro3lwaWE",
+                "id": "at19OmH2Bg4",
                 "title": "PHP Tutorial in Hindi (हिन्दी)"
             }
         }
@@ -9114,7 +9114,7 @@ window.LEARNING_DATA = {
                         "start": 0
                     },
                     "hi": {
-                        "id": "BsDoLVMnmww",
+                        "id": "6mbwJ2xhgzM",
                         "start": 0
                     }
                 }
@@ -9201,7 +9201,7 @@ window.LEARNING_DATA = {
                         "start": 0
                     },
                     "hi": {
-                        "id": "BsDoLVMnmww",
+                        "id": "6mbwJ2xhgzM",
                         "start": 0
                     }
                 }
@@ -9288,7 +9288,7 @@ window.LEARNING_DATA = {
                         "start": 0
                     },
                     "hi": {
-                        "id": "BsDoLVMnmww",
+                        "id": "6mbwJ2xhgzM",
                         "start": 0
                     }
                 }
@@ -9375,7 +9375,7 @@ window.LEARNING_DATA = {
                         "start": 0
                     },
                     "hi": {
-                        "id": "BsDoLVMnmww",
+                        "id": "6mbwJ2xhgzM",
                         "start": 0
                     }
                 }
@@ -9462,7 +9462,7 @@ window.LEARNING_DATA = {
                         "start": 0
                     },
                     "hi": {
-                        "id": "BsDoLVMnmww",
+                        "id": "6mbwJ2xhgzM",
                         "start": 0
                     }
                 }
@@ -9549,7 +9549,7 @@ window.LEARNING_DATA = {
                         "start": 0
                     },
                     "hi": {
-                        "id": "BsDoLVMnmww",
+                        "id": "6mbwJ2xhgzM",
                         "start": 0
                     }
                 }
@@ -9636,7 +9636,7 @@ window.LEARNING_DATA = {
                         "start": 0
                     },
                     "hi": {
-                        "id": "BsDoLVMnmww",
+                        "id": "6mbwJ2xhgzM",
                         "start": 0
                     }
                 }
@@ -9723,7 +9723,7 @@ window.LEARNING_DATA = {
                         "start": 0
                     },
                     "hi": {
-                        "id": "BsDoLVMnmww",
+                        "id": "6mbwJ2xhgzM",
                         "start": 0
                     }
                 }
@@ -9810,7 +9810,7 @@ window.LEARNING_DATA = {
                         "start": 0
                     },
                     "hi": {
-                        "id": "BsDoLVMnmww",
+                        "id": "6mbwJ2xhgzM",
                         "start": 0
                     }
                 }
@@ -9897,7 +9897,7 @@ window.LEARNING_DATA = {
                         "start": 0
                     },
                     "hi": {
-                        "id": "BsDoLVMnmww",
+                        "id": "6mbwJ2xhgzM",
                         "start": 0
                     }
                 }
@@ -9920,7 +9920,7 @@ window.LEARNING_DATA = {
                 "title": "HTML Full Tutorial in Tamil (தமிழ்)"
             },
             "hi": {
-                "id": "BsDoLVMnmww",
+                "id": "6mbwJ2xhgzM",
                 "title": "HTML Course in Hindi (हिन्दी)"
             }
         }
@@ -10008,7 +10008,7 @@ window.LEARNING_DATA = {
                         "start": 0
                     },
                     "te": {
-                        "id": "EDSZuvvM6W4",
+                        "id": "u31qwQUeGuM",
                         "start": 0
                     },
                     "ta": {
@@ -10095,7 +10095,7 @@ window.LEARNING_DATA = {
                         "start": 650
                     },
                     "te": {
-                        "id": "EDSZuvvM6W4",
+                        "id": "u31qwQUeGuM",
                         "start": 0
                     },
                     "ta": {
@@ -10182,7 +10182,7 @@ window.LEARNING_DATA = {
                         "start": 1400
                     },
                     "te": {
-                        "id": "EDSZuvvM6W4",
+                        "id": "u31qwQUeGuM",
                         "start": 0
                     },
                     "ta": {
@@ -10269,7 +10269,7 @@ window.LEARNING_DATA = {
                         "start": 2250
                     },
                     "te": {
-                        "id": "EDSZuvvM6W4",
+                        "id": "u31qwQUeGuM",
                         "start": 0
                     },
                     "ta": {
@@ -10356,7 +10356,7 @@ window.LEARNING_DATA = {
                         "start": 3200
                     },
                     "te": {
-                        "id": "EDSZuvvM6W4",
+                        "id": "u31qwQUeGuM",
                         "start": 0
                     },
                     "ta": {
@@ -10443,7 +10443,7 @@ window.LEARNING_DATA = {
                         "start": 4250
                     },
                     "te": {
-                        "id": "EDSZuvvM6W4",
+                        "id": "u31qwQUeGuM",
                         "start": 0
                     },
                     "ta": {
@@ -10530,7 +10530,7 @@ window.LEARNING_DATA = {
                         "start": 5400
                     },
                     "te": {
-                        "id": "EDSZuvvM6W4",
+                        "id": "u31qwQUeGuM",
                         "start": 0
                     },
                     "ta": {
@@ -10617,7 +10617,7 @@ window.LEARNING_DATA = {
                         "start": 6650
                     },
                     "te": {
-                        "id": "EDSZuvvM6W4",
+                        "id": "u31qwQUeGuM",
                         "start": 0
                     },
                     "ta": {
@@ -10704,7 +10704,7 @@ window.LEARNING_DATA = {
                         "start": 8000
                     },
                     "te": {
-                        "id": "EDSZuvvM6W4",
+                        "id": "u31qwQUeGuM",
                         "start": 0
                     },
                     "ta": {
@@ -10791,7 +10791,7 @@ window.LEARNING_DATA = {
                         "start": 9500
                     },
                     "te": {
-                        "id": "EDSZuvvM6W4",
+                        "id": "u31qwQUeGuM",
                         "start": 0
                     },
                     "ta": {
@@ -10814,7 +10814,7 @@ window.LEARNING_DATA = {
                 "title": "CSS Tutorial (English)"
             },
             "te": {
-                "id": "EDSZuvvM6W4",
+                "id": "u31qwQUeGuM",
                 "title": "CSS Full Course in Telugu (తెలుగు)"
             },
             "ta": {
