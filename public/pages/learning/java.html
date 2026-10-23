@@ -78,7 +78,7 @@
         .brand-blue { color: #3b82f6; }
 
         .lang-badge-pill {
-            background: linear-gradient(135deg, #ef4444, #3b82f6);
+            background: linear-gradient(135deg, #2563eb, #3b82f6);
             color: #ffffff;
             font-size: 12px;
             font-weight: 700;
@@ -100,10 +100,10 @@
             display: flex;
             align-items: center;
             gap: 8px;
-            padding: 4px 10px;
-            border-radius: 20px;
             background: #0b1126;
             border: 1px solid #1c244b;
+            padding: 6px 14px;
+            border-radius: 20px;
             cursor: pointer;
         }
 
@@ -112,41 +112,40 @@
             height: 28px;
             border-radius: 50%;
             background: linear-gradient(135deg, #3b82f6, #8b5cf6);
-            color: #ffffff;
-            font-weight: 700;
-            font-size: 13px;
             display: flex;
             align-items: center;
             justify-content: center;
+            font-size: 13px;
+            font-weight: bold;
+            color: #fff;
         }
 
-        /* Slide-out Sidebar Backdrop & Menu (Image 2) */
+        /* Mobile Global Sidebar Overlay */
         .sidebar-backdrop {
             display: none;
             position: fixed;
             inset: 0;
-            background: rgba(2, 6, 23, 0.65);
-            backdrop-filter: blur(3px);
-            z-index: 998;
+            background: rgba(0, 0, 0, 0.65);
+            backdrop-filter: blur(4px);
+            z-index: 140;
         }
-        .sidebar-backdrop.active { display: block; }
+        .sidebar-backdrop.is-open { display: block; }
 
         .global-sidebar {
             position: fixed;
-            top: 64px;
+            top: 0;
             left: 0;
             bottom: 0;
-            width: 255px;
+            width: 260px;
             background: #080d20;
-            border-right: 1px solid #1a2348;
-            padding: 20px 12px;
+            border-right: 1px solid #1c244b;
+            padding: 20px 14px;
             display: flex;
             flex-direction: column;
             gap: 6px;
-            z-index: 999;
+            z-index: 150;
             transform: translateX(-100%);
-            transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-            overflow-y: auto;
+            transition: transform 0.25s ease;
         }
         .global-sidebar.is-open { transform: translateX(0); }
         .global-sidebar a {
@@ -253,51 +252,161 @@
             margin-bottom: 18px;
         }
 
-        /* Video / Logo Box Matching Screen 8 */
+        /* Video / Player Box Matching Screen 8 with Active Video Playback */
         .video-box-card {
             width: 100%;
-            height: 320px;
+            height: 380px;
             background: radial-gradient(circle at center, #0e1738 0%, #060b1e 100%);
             border: 1px solid #1c244b;
             border-radius: 16px;
+            position: relative;
+            margin-bottom: 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .video-poster-layer {
+            width: 100%;
+            height: 100%;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             position: relative;
-            margin-bottom: 25px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-            overflow: hidden;
+            cursor: pointer;
+            background: radial-gradient(circle at center, #0f1c4d 0%, #060b1e 85%);
+            transition: all 0.25s ease;
+        }
+
+        .video-poster-layer:hover .big-play-btn {
+            transform: scale(1.06);
+            box-shadow: 0 0 30px rgba(37, 99, 235, 0.8);
         }
 
         .hexagon-logo {
-            width: 95px;
-            height: 95px;
+            width: 82px;
+            height: 82px;
             border-radius: 20px;
             background: linear-gradient(135deg, #ef4444, #1d4ed8);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 42px;
+            font-size: 38px;
             font-weight: 900;
             color: #ffffff;
-            box-shadow: 0 0 40px rgba(59, 130, 246, 0.5);
+            box-shadow: 0 0 35px rgba(59, 130, 246, 0.45);
+            margin-bottom: 12px;
+        }
+
+        .video-title-meta {
+            text-align: center;
+            margin-bottom: 14px;
+        }
+
+        .video-badge-pill {
+            font-size: 11px;
+            font-weight: 700;
+            color: #60a5fa;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+
+        .video-lesson-title {
+            font-size: 17px;
+            font-weight: 700;
+            color: #f1f5f9;
+        }
+
+        .big-play-btn {
+            background: linear-gradient(135deg, #2563eb, #3b82f6);
+            border: none;
+            color: #ffffff;
+            padding: 11px 26px;
+            border-radius: 28px;
+            font-size: 14.5px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(37, 99, 235, 0.5);
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            margin-bottom: 10px;
         }
 
         .video-player-controls {
             position: absolute;
-            bottom: 14px;
-            left: 20px;
-            right: 20px;
-            background: rgba(8, 13, 32, 0.85);
-            backdrop-filter: blur(4px);
+            bottom: 12px;
+            left: 18px;
+            right: 18px;
+            background: rgba(8, 13, 32, 0.9);
+            backdrop-filter: blur(6px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 8px;
-            padding: 9px 16px;
+            padding: 8px 16px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            font-size: 12.5px;
+            font-size: 12px;
             color: #cbd5e1;
+        }
+
+        .video-controls-action {
+            color: #60a5fa;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        /* Active Video Frame Layer */
+        .video-player-frame-box {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            inset: 0;
+            background: #000000;
+            display: none;
+            flex-direction: column;
+            z-index: 10;
+        }
+
+        .video-top-control-bar {
+            height: 38px;
+            background: #060b1e;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 14px;
+            border-bottom: 1px solid #1c244b;
+            font-size: 12px;
+            color: #cbd5e1;
+        }
+
+        .video-control-btn {
+            background: #0e1738;
+            border: 1px solid #233164;
+            color: #e2e8f0;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 11px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .video-control-btn:hover {
+            background: #2563eb;
+            border-color: #3b82f6;
+            color: #ffffff;
+        }
+
+        .video-iframe-element {
+            width: 100%;
+            height: calc(100% - 38px);
+            border: none;
+            background: #000;
         }
 
         /* Section Cards */
@@ -378,28 +487,29 @@
         }
 
         .compiler-input-area {
+            width: 100%;
+            height: 90px;
             background: #050816;
             border: 1px solid #1c244b;
             border-radius: 8px;
-            padding: 10px 14px;
-            color: #ffffff;
-            font-family: monospace;
-            font-size: 12.5px;
+            color: #e2e8f0;
+            font-family: 'Consolas', 'Courier New', monospace;
+            font-size: 13px;
+            padding: 10px;
             outline: none;
-            width: 100%;
-            height: 80px;
             resize: none;
         }
 
         .compiler-output-box {
-            background: #070c1e;
-            border: 1px solid #1c244b;
+            width: 100%;
+            height: 90px;
+            background: #030612;
+            border: 1px solid #1e293b;
             border-radius: 8px;
-            padding: 12px 14px;
-            font-family: monospace;
-            font-size: 13px;
             color: #34d399;
-            height: 80px;
+            font-family: 'Consolas', 'Courier New', monospace;
+            font-size: 12.5px;
+            padding: 10px;
             overflow-y: auto;
             white-space: pre-wrap;
         }
@@ -407,49 +517,48 @@
         .compiler-actions {
             display: flex;
             justify-content: flex-end;
-            gap: 10px;
+            gap: 12px;
             margin-top: 14px;
         }
 
         .btn-run-code {
-            background: #10b981;
+            background: linear-gradient(135deg, #10b981, #059669);
             color: #ffffff;
             border: none;
             padding: 10px 22px;
             border-radius: 8px;
             font-weight: 700;
-            font-size: 13.5px;
+            font-size: 14px;
             cursor: pointer;
+            box-shadow: 0 4px 14px rgba(16, 185, 129, 0.35);
             transition: all 0.2s;
-            display: flex;
-            align-items: center;
-            gap: 6px;
         }
-        .btn-run-code:hover { background: #059669; }
+        .btn-run-code:hover { opacity: 0.92; transform: translateY(-1px); }
 
         .btn-reset-code {
-            background: #080d20;
-            border: 1px solid #1c244b;
+            background: transparent;
             color: #94a3b8;
-            padding: 10px 16px;
+            border: 1px solid #334155;
+            padding: 10px 18px;
             border-radius: 8px;
             font-weight: 600;
-            font-size: 13px;
+            font-size: 14px;
             cursor: pointer;
+            transition: all 0.2s;
         }
-        .btn-reset-code:hover { color: #ffffff; border-color: #3b82f6; }
+        .btn-reset-code:hover { color: #ffffff; border-color: #64748b; }
 
-        /* 5 Practice Questions */
+        /* Practice Questions Section */
         .questions-card {
             background: #0b1126;
             border: 1px solid #1c244b;
             border-radius: 14px;
             padding: 24px;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
         }
 
         .question-item {
-            background: #080d20;
+            background: #050816;
             border: 1px solid #1c244b;
             border-radius: 10px;
             padding: 18px;
@@ -459,7 +568,7 @@
         .question-text {
             font-size: 15px;
             font-weight: 600;
-            color: #f1f5f9;
+            color: #f8fafc;
             margin-bottom: 14px;
         }
 
@@ -470,72 +579,72 @@
         }
 
         .option-button {
-            background: #050816;
+            background: #0b1126;
             border: 1px solid #1e293b;
-            border-radius: 8px;
-            padding: 10px 14px;
             color: #cbd5e1;
-            font-size: 13.5px;
+            padding: 10px 14px;
+            border-radius: 8px;
             text-align: left;
+            font-size: 13.5px;
             cursor: pointer;
-            transition: all 0.15s ease;
+            transition: all 0.15s;
         }
 
         .option-button:hover {
             border-color: #3b82f6;
-            background: #0e1633;
+            background: #111a3b;
         }
 
         .option-button.correct {
-            background: rgba(16, 185, 129, 0.2);
-            border-color: #10b981;
-            color: #34d399;
-            font-weight: 700;
+            background: rgba(16, 185, 129, 0.2) !important;
+            border-color: #10b981 !important;
+            color: #34d399 !important;
+            font-weight: 600;
         }
 
         .option-button.incorrect {
-            background: rgba(239, 68, 68, 0.2);
-            border-color: #ef4444;
-            color: #f87171;
-            font-weight: 700;
+            background: rgba(239, 68, 68, 0.2) !important;
+            border-color: #ef4444 !important;
+            color: #f87171 !important;
         }
 
         .question-feedback {
-            display: none;
-            font-size: 12.5px;
             margin-top: 10px;
+            font-size: 12.5px;
             padding: 8px 12px;
             border-radius: 6px;
+            display: none;
         }
 
-        /* Navigation Buttons at Bottom (Matching Screen 8) */
+        /* Bottom Nav Buttons (Screen 8) */
         .bottom-nav-bar {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-top: 20px;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #1c244b;
         }
 
         .btn-prev {
-            background: #0b1126;
-            border: 1.5px solid #1c244b;
-            color: #cbd5e1;
-            padding: 12px 28px;
-            border-radius: 12px;
-            font-weight: 700;
+            background: transparent;
+            color: #94a3b8;
+            border: 1px solid #1c244b;
+            padding: 11px 22px;
+            border-radius: 8px;
+            font-weight: 600;
             font-size: 14px;
             cursor: pointer;
-            text-decoration: none;
             transition: all 0.2s;
         }
-        .btn-prev:hover { background: #111a3b; color: #ffffff; border-color: #3b82f6; }
+        .btn-prev:hover { color: #ffffff; border-color: #3b82f6; }
 
         .btn-next {
-            background: linear-gradient(135deg, #2563eb, #6366f1);
-            border: none;
+            background: #2563eb;
             color: #ffffff;
-            padding: 12px 32px;
-            border-radius: 12px;
+            border: none;
+            padding: 11px 26px;
+            border-radius: 8px;
             font-weight: 700;
             font-size: 14px;
             cursor: pointer;
@@ -550,6 +659,7 @@
             .workspace-main { padding: 20px 16px; }
             .compiler-io-row { grid-template-columns: 1fr; }
             .options-list { grid-template-columns: 1fr; }
+            .video-box-card { height: 260px; }
         }
     </style>
 </head>
@@ -614,12 +724,41 @@
         <main class="workspace-main">
             <h1 class="lesson-header-title" id="lessonTitle">1. Introduction to Java</h1>
 
-            <!-- Video / Logo Display Box (Screen 8) -->
-            <div class="video-box-card">
-                <div class="hexagon-logo">Java</div>
-                <div class="video-player-controls">
-                    <span id="videoDuration">▶ 0:00 / 12:30</span>
-                    <span>⚙️ HD &nbsp; ⛶ Fullscreen</span>
+            <!-- Video Display Box (Screen 8) with Real Playback -->
+            <div class="video-box-card" id="videoBoxCard">
+                <!-- Video Poster / Preview Layer -->
+                <div class="video-poster-layer" id="videoPosterLayer" onclick="playLessonVideo()">
+                    <div class="hexagon-logo">Java</div>
+                    <div class="video-title-meta">
+                        <div class="video-badge-pill" id="videoLangBadge">⚡ Java Programming Video Tutorial</div>
+                        <h2 class="video-lesson-title" id="videoPosterTitle">1. Introduction to Java</h2>
+                    </div>
+                    <button class="big-play-btn" id="btnBigPlay" type="button" onclick="event.stopPropagation(); playLessonVideo();" title="Play Video Lesson">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                        <span>Play Video Lesson</span>
+                    </button>
+                    <div class="video-player-controls">
+                        <span id="videoDuration">▶ 0:00 / 12:30</span>
+                        <span class="video-controls-action">▶ Click to Watch Video</span>
+                        <span>⚙️ 1080p HD &nbsp; ⛶ Fullscreen</span>
+                    </div>
+                </div>
+
+                <!-- Active Video Player Frame Layer -->
+                <div class="video-player-frame-box" id="videoPlayerFrameBox">
+                    <div class="video-top-control-bar">
+                        <span id="videoActiveTitle" style="font-weight: 700; color: #60a5fa; display: flex; align-items: center; gap: 8px;">
+                            <span>▶</span> <span>Now Playing: Java Programming</span>
+                        </span>
+                        <div style="display: flex; gap: 8px; align-items: center;">
+                            <button class="video-control-btn" type="button" onclick="restartLessonVideo()" title="Restart Video">⏮ Restart</button>
+                            <button class="video-control-btn" type="button" onclick="toggleVideoSource()" title="Switch Video Mode">📺 Switch Mode</button>
+                            <button class="video-control-btn" type="button" onclick="closeVideoPlayer()" title="Close Video" style="background: rgba(239, 68, 68, 0.2); border-color: rgba(239, 68, 68, 0.4); color: #fca5a5;">✕ Close</button>
+                        </div>
+                    </div>
+                    <iframe id="videoIframeEl" class="video-iframe-element" src="" title="Java Programming Video Player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
             </div>
 
@@ -641,7 +780,7 @@
                     <h3 class="section-title" style="margin: 0;">💻 Online Code Compiler (Write & Run)</h3>
                     <span style="font-size: 12px; color: #10b981; font-weight: bold;">● Compiler Ready</span>
                 </div>
-                <textarea class="compiler-code-area" id="compilerCodeArea" placeholder="Write Java code here..."></textarea>
+                <textarea class="compiler-code-area" id="compilerCodeArea" placeholder="Write code here..."></textarea>
                 
                 <div class="compiler-io-row">
                     <div>
@@ -675,46 +814,51 @@
                 <button class="btn-next" id="btnNextTopic" onclick="changeTopic(1)">Next →</button>
             </div>
         </main>
-
     </div>
 
-    <!-- Load Curriculum Data -->
+    <!-- Curriculum & Interactive Engine -->
     <script src="learning-curriculum.js"></script>
-
     <script>
         const CURRENT_LANG_KEY = "java";
         let currentTopicIndex = 0;
         let answeredQuestions = {};
+        let isVideoPlaying = false;
+        let isHtml5Fallback = false;
 
-        // Sidebar & Dynamic User
         document.addEventListener("DOMContentLoaded", () => {
-            const toggleBtn = document.getElementById("sidebarToggleBtn");
-            const sidebar = document.getElementById("globalSidebar");
-            const backdrop = document.getElementById("sidebarBackdrop");
-
-            function toggleSidebar(open) {
-                const isOpen = open !== undefined ? open : !sidebar.classList.contains("is-open");
-                sidebar.classList.toggle("is-open", isOpen);
-                if (backdrop) backdrop.classList.toggle("active", isOpen);
-            }
-
-            if (toggleBtn) toggleBtn.addEventListener("click", () => toggleSidebar());
-            if (backdrop) backdrop.addEventListener("click", () => toggleSidebar(false));
-
-            try {
-                let user = JSON.parse(localStorage.getItem("learningUser") || "null");
-                if (!user) user = JSON.parse(localStorage.getItem("lastCreatedUser") || "null");
-                if (user && user.name) {
-                    const topName = document.getElementById("topbarUserName");
-                    const topAvatar = document.getElementById("topbarAvatar");
-                    if (topName) topName.textContent = user.name;
-                    if (topAvatar) topAvatar.textContent = user.name.charAt(0).toUpperCase();
-                }
-            } catch(e) {}
-
+            initUserBadge();
+            initSidebarDrawer();
             initTopicsList();
             loadTopic(0);
         });
+
+        function initUserBadge() {
+            const raw = localStorage.getItem("currentUser") || localStorage.getItem("user");
+            if (raw) {
+                try {
+                    const u = JSON.parse(raw);
+                    const name = u.fullName || u.name || "Student";
+                    document.getElementById("topbarUserName").textContent = name.split(" ")[0];
+                    document.getElementById("topbarAvatar").textContent = name.charAt(0).toUpperCase();
+                } catch(e) {}
+            }
+        }
+
+        function initSidebarDrawer() {
+            const btn = document.getElementById("sidebarToggleBtn");
+            const side = document.getElementById("globalSidebar");
+            const back = document.getElementById("sidebarBackdrop");
+            if (!btn || !side || !back) return;
+
+            btn.onclick = () => {
+                side.classList.toggle("is-open");
+                back.classList.toggle("is-open");
+            };
+            back.onclick = () => {
+                side.classList.remove("is-open");
+                back.classList.remove("is-open");
+            };
+        }
 
         function getLangData() {
             return (window.LEARNING_DATA && window.LEARNING_DATA[CURRENT_LANG_KEY]) || null;
@@ -755,13 +899,21 @@
                 b.classList.toggle("active", i === index);
             });
 
-            // Update Title & Video & Text
+            // Update Titles & Video Poster
             document.getElementById("lessonTitle").textContent = lesson.title;
             document.getElementById("videoDuration").textContent = "▶ 0:00 / " + lesson.duration;
+            const posterTitle = document.getElementById("videoPosterTitle");
+            if (posterTitle) posterTitle.textContent = lesson.title;
+
             document.getElementById("lessonTheory").textContent = lesson.theory;
             document.getElementById("lessonPractical").textContent = lesson.practical;
             document.getElementById("compilerCodeArea").value = lesson.compilerCode;
             document.getElementById("compilerOutput").textContent = "⚡ Ready: Click '▶ Run Code' to test output.";
+
+            // If video is currently playing, update playback for this new topic!
+            if (isVideoPlaying) {
+                playLessonVideo();
+            }
 
             // Reset Questions for this lesson
             answeredQuestions = {};
@@ -776,6 +928,78 @@
             window.scrollTo({ top: 0, behavior: "smooth" });
         }
 
+        /* Video Playback Engine */
+        function playLessonVideo() {
+            const data = getLangData();
+            if (!data) return;
+
+            const lesson = data.lessons[currentTopicIndex];
+            const videoId = (lesson && lesson.videoId) || data.videoId || "A74TOX803D0";
+            const startTime = (lesson && lesson.videoStart) ? lesson.videoStart : 0;
+
+            const poster = document.getElementById("videoPosterLayer");
+            const frameBox = document.getElementById("videoPlayerFrameBox");
+            const iframe = document.getElementById("videoIframeEl");
+            const activeTitle = document.getElementById("videoActiveTitle");
+
+            poster.style.display = "none";
+            frameBox.style.display = "flex";
+            isVideoPlaying = true;
+
+            activeTitle.innerHTML = `<span>▶</span> <span>${data.name} - ${lesson ? lesson.title : ''}</span>`;
+
+            if (isHtml5Fallback) {
+                renderHtml5Player();
+            } else {
+                const embedUrl = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&start=${startTime}&rel=0&modestbranding=1&enablejsapi=1`;
+                iframe.src = embedUrl;
+            }
+        }
+
+        function closeVideoPlayer() {
+            const poster = document.getElementById("videoPosterLayer");
+            const frameBox = document.getElementById("videoPlayerFrameBox");
+            const iframe = document.getElementById("videoIframeEl");
+
+            iframe.src = "";
+            iframe.removeAttribute("srcdoc");
+            frameBox.style.display = "none";
+            poster.style.display = "flex";
+            isVideoPlaying = false;
+        }
+
+        function restartLessonVideo() {
+            playLessonVideo();
+        }
+
+        function toggleVideoSource() {
+            isHtml5Fallback = !isHtml5Fallback;
+            const iframe = document.getElementById("videoIframeEl");
+            if (isHtml5Fallback) {
+                renderHtml5Player();
+            } else {
+                iframe.removeAttribute("srcdoc");
+                playLessonVideo();
+            }
+        }
+
+        function renderHtml5Player() {
+            const iframe = document.getElementById("videoIframeEl");
+            iframe.srcdoc = `
+                <!DOCTYPE html>
+                <html style="background:#000; height:100%; margin:0;">
+                <head><style>video { width:100%; height:100%; object-fit:contain; outline:none; }</style></head>
+                <body style="margin:0; background:#000; height:100%; display:flex; align-items:center; justify-content:center;">
+                    <video controls autoplay playsinline style="width:100%; height:100%;">
+                        <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+                        Your browser does not support HTML5 video.
+                    </video>
+                </body>
+                </html>
+            `;
+        }
+
+        /* Practice Questions */
         function renderQuestions(questions) {
             const container = document.getElementById("practiceQuestionsContainer");
             container.innerHTML = "";
@@ -803,13 +1027,12 @@
                     btn.textContent = String.fromCharCode(65 + optIdx) + ") " + opt;
 
                     btn.onclick = () => {
-                        if (answeredQuestions[qIdx] !== undefined) return; // already answered
+                        if (answeredQuestions[qIdx] !== undefined) return;
                         answeredQuestions[qIdx] = optIdx;
 
                         const isCorrect = (optIdx === qObj.ans);
                         btn.classList.add(isCorrect ? "correct" : "incorrect");
 
-                        // Highlight correct one if wrong
                         if (!isCorrect) {
                             const correctBtn = document.getElementById(`qBtn_${qIdx}_${qObj.ans}`);
                             if (correctBtn) correctBtn.classList.add("correct");
@@ -870,8 +1093,6 @@
             setTimeout(() => {
                 const data = getLangData();
                 const defaultOut = (data && data.lessons[currentTopicIndex].expectedOutput) || "Execution completed with status 0.";
-                
-                // Real simulated terminal output
                 out.innerHTML = `<span style="color:#34d399;">=== Process exited with code 0 in 0.082s ===\n</span>${defaultOut}`;
             }, 500);
         }
