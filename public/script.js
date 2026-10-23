@@ -211,7 +211,7 @@ function initSignup() {
       if (!u || !u.email) return false;
       const norm = (u.email || '').trim().toLowerCase();
       if (dummyEmailsToPurge.includes(norm)) return false;
-      if (u.name === 'R.Mohan' || u.name === 'ramesh' || (u.name === 'mohan' && norm !== 'mohan@example.com')) return false;
+      // allowed
       return true;
     });
 
