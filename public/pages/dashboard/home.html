@@ -41,12 +41,12 @@
 
         /* 3 Lines Hamburger Menu Button */
         .hamburger-btn {
-            background: transparent;
-            border: 1px solid #1c244b;
+            background: #080d20;
+            border: 1px solid #1e293b;
             border-radius: 8px;
             cursor: pointer;
-            width: 38px;
-            height: 38px;
+            width: 40px;
+            height: 40px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -64,7 +64,7 @@
         .hamburger-btn span {
             display: block;
             width: 20px;
-            height: 2px;
+            height: 2.2px;
             background: #cbd5e1;
             border-radius: 2px;
             transition: all 0.2s ease;
@@ -166,38 +166,56 @@
         }
 
         .dashboard-container {
-            display: flex;
+            position: relative;
             min-height: calc(100vh - 64px);
         }
 
-        /* Sidebar Navigation Menu (Screen 5 - Image 2) */
+        /* Backdrop overlay when menu is open */
+        .sidebar-backdrop {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(2, 6, 23, 0.6);
+            backdrop-filter: blur(2px);
+            z-index: 998;
+        }
+
+        .sidebar-backdrop.active {
+            display: block;
+        }
+
+        /* Slide-out Sidebar Menu (Matching media_1792726893985_c09d6532.png) */
         .sidebar {
-            width: 250px;
+            position: fixed;
+            top: 64px;
+            left: 0;
+            bottom: 0;
+            width: 255px;
             background: #080d20;
-            border-right: 1px solid #1c244b;
-            padding: 20px 14px;
+            border-right: 1px solid #1a2348;
+            padding: 20px 12px;
             display: flex;
             flex-direction: column;
             gap: 6px;
-            transition: width 0.3s ease, transform 0.3s ease, padding 0.3s ease;
+            z-index: 999;
+            transform: translateX(-100%);
+            transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+            box-shadow: 10px 0 30px rgba(0, 0, 0, 0.5);
         }
 
-        .sidebar.collapsed {
-            width: 0;
-            padding: 0;
-            overflow: hidden;
-            border-right: none;
+        .sidebar.is-open {
+            transform: translateX(0);
         }
 
         .sidebar a {
             display: flex;
             align-items: center;
-            gap: 12px;
-            padding: 11px 16px;
-            color: #a0aec0;
+            gap: 14px;
+            padding: 12px 18px;
+            color: #94a3b8;
             text-decoration: none;
-            border-radius: 10px;
-            font-size: 14px;
+            border-radius: 8px;
+            font-size: 15px;
             font-weight: 500;
             transition: 0.15s ease;
         }
@@ -211,13 +229,14 @@
             background: #2563eb;
             color: #ffffff;
             font-weight: 600;
+            box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
         }
 
-        /* Main Content (Screen 4) */
+        /* Main Content */
         .main-dashboard {
-            flex: 1;
             padding: 35px 40px;
-            max-width: 1100px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .welcome-header {
@@ -364,8 +383,6 @@
         }
 
         @media (max-width: 900px) {
-            .dashboard-container { flex-direction: column; }
-            .sidebar { width: 100%; }
             .stats-grid, .path-grid { grid-template-columns: repeat(2, 1fr); }
             .topbar-search { display: none; }
         }
@@ -400,6 +417,7 @@
         </div>
     </header>
 
+    <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
     <div class="dashboard-container">
 
         <!-- Navigation Sidebar (Screen 5 - Exact 8 Menu Items Matching Image 2) -->
@@ -559,26 +577,48 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            const quizResult = JSON.parse(localStorage.getItem("learningPathQuizResult"));
-            if (quizResult && quizResult.language === "C") {
-                const fill = document.getElementById("homeProgressFill");
-                const text = document.getElementById("homeProgressText");
-                if (fill && text) {
-                    fill.style.width = `${quizResult.percentage}%`;
-                    text.textContent = `${quizResult.percentage}%`;
-                }
-            }
-        });
-    </script>
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
             const toggleBtn = document.getElementById("sidebarToggleBtn");
             const sidebar = document.getElementById("dashboardSidebar");
-            if (toggleBtn && sidebar) {
-                toggleBtn.addEventListener("click", () => {
-                    sidebar.classList.toggle("collapsed");
+            const backdrop = document.getElementById("sidebarBackdrop");
+
+            function toggleSidebar(open) {
+                const isOpen = open !== undefined ? open : !sidebar.classList.contains("is-open");
+                sidebar.classList.toggle("is-open", isOpen);
+                if (backdrop) backdrop.classList.toggle("active", isOpen);
+            }
+
+            if (toggleBtn) {
+                toggleBtn.addEventListener("click", (e) => {
+                    e.stopPropagation();
+                    toggleSidebar();
                 });
             }
+
+            if (backdrop) {
+                backdrop.addEventListener("click", () => toggleSidebar(false));
+            }
+
+            document.addEventListener("keydown", (e) => {
+                if (e.key === "Escape") toggleSidebar(false);
+            });
+
+            if (sidebar) {
+                sidebar.querySelectorAll("a").forEach(link => {
+                    link.addEventListener("click", () => toggleSidebar(false));
+                });
+            }
+
+            try {
+                const quizResult = JSON.parse(localStorage.getItem("learningPathQuizResult"));
+                if (quizResult && quizResult.language === "C") {
+                    const fill = document.getElementById("homeProgressFill");
+                    const text = document.getElementById("homeProgressText");
+                    if (fill && text) {
+                        fill.style.width = `${quizResult.percentage}%`;
+                        text.textContent = `${quizResult.percentage}%`;
+                    }
+                }
+            } catch (err) {}
         });
     </script>
 </body>
