@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TypeScript Programming - Basics to Advanced Learning | LearningPath</title>
+    <title>TypeScript Programming - 35 In-Depth Chapters (Basics to Advanced) | LearningPath</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
     <link rel="apple-touch-icon" href="/favicon.png">
@@ -171,31 +171,55 @@
         /* Learning Layout (Exact Matching Image 8) */
         .learn-layout {
             display: grid;
-            grid-template-columns: 290px 1fr;
+            grid-template-columns: 310px 1fr;
             min-height: calc(100vh - 64px);
         }
 
-        /* Left Panel Topics Sidebar */
+        /* Left Panel Topics Sidebar with 35 Chapters */
         .topics-sidebar {
             background: #080d20;
             border-right: 1px solid #1c244b;
-            padding: 24px 16px;
+            padding: 20px 14px;
+            max-height: calc(100vh - 64px);
             overflow-y: auto;
+            position: sticky;
+            top: 64px;
+        }
+
+        .topics-sidebar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .topics-sidebar::-webkit-scrollbar-thumb {
+            background: #1e293b;
+            border-radius: 4px;
+        }
+        .topics-sidebar::-webkit-scrollbar-thumb:hover {
+            background: #334155;
         }
 
         .topics-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 20px;
+            margin-bottom: 16px;
             padding-bottom: 12px;
             border-bottom: 1px solid #1c244b;
         }
 
         .topics-header h2 {
-            font-size: 18px;
+            font-size: 17px;
             font-weight: 800;
             color: #f8fafc;
+        }
+
+        .topics-count-badge {
+            background: rgba(37, 99, 235, 0.2);
+            color: #60a5fa;
+            border: 1px solid rgba(37, 99, 235, 0.4);
+            border-radius: 12px;
+            padding: 2px 8px;
+            font-size: 11px;
+            font-weight: 700;
         }
 
         .level-badge-tag {
@@ -203,7 +227,7 @@
             font-weight: 700;
             text-transform: uppercase;
             color: #64748b;
-            margin: 16px 0 8px 8px;
+            margin: 14px 0 6px 6px;
             letter-spacing: 0.5px;
             display: block;
         }
@@ -212,17 +236,20 @@
             display: flex;
             align-items: center;
             width: 100%;
-            padding: 11px 16px;
-            border-radius: 10px;
+            padding: 9px 12px;
+            border-radius: 8px;
             background: transparent;
             border: none;
             color: #94a3b8;
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 500;
             text-align: left;
             cursor: pointer;
-            transition: all 0.2s ease;
-            margin-bottom: 4px;
+            transition: all 0.18s ease;
+            margin-bottom: 3px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
         .topic-btn:hover {
@@ -235,21 +262,21 @@
             background: #2563eb;
             color: #ffffff;
             font-weight: 700;
-            box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
+            box-shadow: 0 3px 12px rgba(37, 99, 235, 0.35);
         }
 
         /* Right Panel Content Workspace */
         .workspace-main {
-            padding: 30px 40px 60px;
+            padding: 26px 36px 60px;
             max-width: 980px;
             overflow-y: auto;
         }
 
         .lesson-header-title {
-            font-size: 28px;
+            font-size: 26px;
             font-weight: 800;
             color: #ffffff;
-            margin-bottom: 18px;
+            margin-bottom: 16px;
         }
 
         /* Video Language Option Bar */
@@ -718,6 +745,7 @@
 
         @media (max-width: 900px) {
             .learn-layout { grid-template-columns: 1fr; }
+            .topics-sidebar { position: static; max-height: 350px; }
             .workspace-main { padding: 20px 16px; }
             .compiler-io-row { grid-template-columns: 1fr; }
             .options-list { grid-template-columns: 1fr; }
@@ -766,26 +794,26 @@
 
     <div class="learn-layout">
 
-        <!-- Left Panel: Topics Sidebar (Screen 8) -->
+        <!-- Left Panel: Topics Sidebar (Screen 8) with 35 Chapters -->
         <aside class="topics-sidebar">
             <div class="topics-header">
                 <h2>TypeScript Programming</h2>
-                <span style="font-size: 18px;">📘</span>
+                <span class="topics-count-badge">35 Chapters</span>
             </div>
 
-            <span class="level-badge-tag">🟢 Basics (1 - 5)</span>
+            <span class="level-badge-tag">🟢 Basics (Chapters 1 - 12)</span>
             <div id="topicsListBasics"></div>
 
-            <span class="level-badge-tag">🟡 Intermediate (6 - 8)</span>
+            <span class="level-badge-tag">🟡 Intermediate (Chapters 13 - 24)</span>
             <div id="topicsListIntermediate"></div>
 
-            <span class="level-badge-tag">🟣 Advanced (9 - 10)</span>
+            <span class="level-badge-tag">🟣 Advanced (Chapters 25 - 35)</span>
             <div id="topicsListAdvanced"></div>
         </aside>
 
         <!-- Right Panel: Lesson Workspace (Screen 8) -->
         <main class="workspace-main">
-            <h1 class="lesson-header-title" id="lessonTitle">1. Introduction to TypeScript</h1>
+            <h1 class="lesson-header-title" id="lessonTitle">1. Introduction</h1>
 
             <!-- Video Language Option Toolbar (Telugu, Tamil, English, Hindi) -->
             <div class="video-lang-toolbar">
@@ -983,7 +1011,7 @@
                 }
             }
 
-            // AUTOMATIC PLAYBACK: As requested, clicking language option immediately starts playback!
+            // AUTOMATIC PLAYBACK: Clicking language option immediately starts playback!
             playLessonVideo();
         }
 
@@ -1016,10 +1044,12 @@
                 btn.className = "topic-btn" + (idx === 0 ? " active" : "");
                 btn.id = "topicBtn_" + idx;
                 btn.textContent = lesson.title;
+                btn.title = lesson.title;
                 btn.onclick = () => loadTopic(idx);
 
-                if (idx < 5) cBasics.appendChild(btn);
-                else if (idx < 8) cInter.appendChild(btn);
+                // 35 Chapters: 1-12 Basics, 13-24 Intermediate, 25-35 Advanced
+                if (idx < 12) cBasics.appendChild(btn);
+                else if (idx < 24) cInter.appendChild(btn);
                 else cAdv.appendChild(btn);
             });
         }
@@ -1233,7 +1263,7 @@
             if (newIdx >= 0 && newIdx < data.lessons.length) {
                 loadTopic(newIdx);
             } else if (newIdx >= data.lessons.length) {
-                alert("🎉 Congratulations! You have completed all 10 topics of " + data.name + "!");
+                alert("🎉 Congratulations! You have completed all 35 chapters of " + data.name + "!");
                 window.location.href = "../quiz/select-language.html";
             }
         }
