@@ -252,13 +252,72 @@
             margin-bottom: 18px;
         }
 
+        /* Video Language Option Bar */
+        .video-lang-toolbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #080d20;
+            border: 1px solid #1c244b;
+            border-bottom: none;
+            border-top-left-radius: 16px;
+            border-top-right-radius: 16px;
+            padding: 10px 18px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .video-lang-label {
+            font-size: 13.5px;
+            font-weight: 700;
+            color: #94a3b8;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .video-lang-options {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .v-lang-btn {
+            background: #0e1738;
+            border: 1px solid #1f2d60;
+            color: #cbd5e1;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 12.5px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .v-lang-btn:hover {
+            border-color: #3b82f6;
+            color: #ffffff;
+            background: #111a3b;
+        }
+
+        .v-lang-btn.active {
+            background: linear-gradient(135deg, #2563eb, #3b82f6);
+            border-color: #3b82f6;
+            color: #ffffff;
+            box-shadow: 0 2px 10px rgba(37, 99, 235, 0.45);
+        }
+
         /* Video / Player Box Matching Screen 8 with Active Video Playback */
         .video-box-card {
             width: 100%;
             height: 380px;
             background: radial-gradient(circle at center, #0e1738 0%, #060b1e 100%);
             border: 1px solid #1c244b;
-            border-radius: 16px;
+            border-bottom-left-radius: 16px;
+            border-bottom-right-radius: 16px;
             position: relative;
             margin-bottom: 25px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
@@ -374,7 +433,7 @@
         }
 
         .video-top-control-bar {
-            height: 38px;
+            height: 40px;
             background: #060b1e;
             display: flex;
             align-items: center;
@@ -404,7 +463,7 @@
 
         .video-iframe-element {
             width: 100%;
-            height: calc(100% - 38px);
+            height: calc(100% - 40px);
             border: none;
             background: #000;
         }
@@ -660,6 +719,7 @@
             .compiler-io-row { grid-template-columns: 1fr; }
             .options-list { grid-template-columns: 1fr; }
             .video-box-card { height: 260px; }
+            .video-lang-toolbar { flex-direction: column; align-items: flex-start; }
         }
     </style>
 </head>
@@ -724,6 +784,28 @@
         <main class="workspace-main">
             <h1 class="lesson-header-title" id="lessonTitle">1. Introduction to CSS</h1>
 
+            <!-- Video Language Option Toolbar (Telugu, Tamil, English, Hindi) -->
+            <div class="video-lang-toolbar">
+                <span class="video-lang-label">
+                    <span style="font-size: 15px;">🌐</span>
+                    <span>Video Language:</span>
+                </span>
+                <div class="video-lang-options">
+                    <button class="v-lang-btn active" id="vLangBtn_en" type="button" onclick="setVideoLanguage('en')">
+                        <span>🇬🇧</span> English
+                    </button>
+                    <button class="v-lang-btn" id="vLangBtn_te" type="button" onclick="setVideoLanguage('te')">
+                        <span>🇮🇳</span> తెలుగు (Telugu)
+                    </button>
+                    <button class="v-lang-btn" id="vLangBtn_ta" type="button" onclick="setVideoLanguage('ta')">
+                        <span>🇮🇳</span> தமிழ் (Tamil)
+                    </button>
+                    <button class="v-lang-btn" id="vLangBtn_hi" type="button" onclick="setVideoLanguage('hi')">
+                        <span>🇮🇳</span> हिन्दी (Hindi)
+                    </button>
+                </div>
+            </div>
+
             <!-- Video Display Box (Screen 8) with Real Playback -->
             <div class="video-box-card" id="videoBoxCard">
                 <!-- Video Poster / Preview Layer -->
@@ -737,7 +819,7 @@
                         <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
                             <path d="M8 5v14l11-7z"/>
                         </svg>
-                        <span>Play Video Lesson</span>
+                        <span id="btnPlayLabel">Play Video Lesson</span>
                     </button>
                     <div class="video-player-controls">
                         <span id="videoDuration">▶ 0:00 / 12:30</span>
@@ -753,6 +835,12 @@
                             <span>▶</span> <span>Now Playing: CSS3 Web Styling</span>
                         </span>
                         <div style="display: flex; gap: 8px; align-items: center;">
+                            <select id="videoActiveLangSelect" onchange="setVideoLanguage(this.value)" style="background: #0e1738; color: #60a5fa; border: 1px solid #233164; border-radius: 6px; padding: 3px 8px; font-size: 11px; font-weight: 600; outline: none; cursor: pointer;">
+                                <option value="en">🇬🇧 English</option>
+                                <option value="te">🇮🇳 తెలుగు</option>
+                                <option value="ta">🇮🇳 தமிழ்</option>
+                                <option value="hi">🇮🇳 हिन्दी</option>
+                            </select>
                             <button class="video-control-btn" type="button" onclick="restartLessonVideo()" title="Restart Video">⏮ Restart</button>
                             <button class="video-control-btn" type="button" onclick="toggleVideoSource()" title="Switch Video Mode">📺 Switch Mode</button>
                             <button class="video-control-btn" type="button" onclick="closeVideoPlayer()" title="Close Video" style="background: rgba(239, 68, 68, 0.2); border-color: rgba(239, 68, 68, 0.4); color: #fca5a5;">✕ Close</button>
@@ -824,11 +912,20 @@
         let answeredQuestions = {};
         let isVideoPlaying = false;
         let isHtml5Fallback = false;
+        let selectedVideoLang = localStorage.getItem("preferred_video_lang") || "en";
+
+        const LANG_NAMES = {
+            en: "English",
+            te: "తెలుగు (Telugu)",
+            ta: "தமிழ் (Tamil)",
+            hi: "हिन्दी (Hindi)"
+        };
 
         document.addEventListener("DOMContentLoaded", () => {
             initUserBadge();
             initSidebarDrawer();
             initTopicsList();
+            syncVideoLangUI();
             loadTopic(0);
         });
 
@@ -862,6 +959,44 @@
 
         function getLangData() {
             return (window.LEARNING_DATA && window.LEARNING_DATA[CURRENT_LANG_KEY]) || null;
+        }
+
+        /* Video Language Switching: Telugu, Tamil, English, Hindi */
+        function setVideoLanguage(langCode) {
+            if (!LANG_NAMES[langCode]) langCode = "en";
+            selectedVideoLang = langCode;
+            try {
+                localStorage.setItem("preferred_video_lang", langCode);
+            } catch(e) {}
+
+            syncVideoLangUI();
+
+            const data = getLangData();
+            if (data) {
+                const badge = document.getElementById("videoLangBadge");
+                if (badge) {
+                    badge.textContent = "⚡ " + data.name + " (" + LANG_NAMES[langCode] + ")";
+                }
+            }
+
+            // If video is currently playing, smoothly transition to the new language video
+            if (isVideoPlaying) {
+                playLessonVideo();
+            }
+        }
+
+        function syncVideoLangUI() {
+            ["en", "te", "ta", "hi"].forEach(code => {
+                const btn = document.getElementById("vLangBtn_" + code);
+                if (btn) {
+                    btn.classList.toggle("active", code === selectedVideoLang);
+                }
+            });
+
+            const sel = document.getElementById("videoActiveLangSelect");
+            if (sel) {
+                sel.value = selectedVideoLang;
+            }
         }
 
         function initTopicsList() {
@@ -905,6 +1040,11 @@
             const posterTitle = document.getElementById("videoPosterTitle");
             if (posterTitle) posterTitle.textContent = lesson.title;
 
+            const badge = document.getElementById("videoLangBadge");
+            if (badge) {
+                badge.textContent = "⚡ " + data.name + " (" + LANG_NAMES[selectedVideoLang] + ")";
+            }
+
             document.getElementById("lessonTheory").textContent = lesson.theory;
             document.getElementById("lessonPractical").textContent = lesson.practical;
             document.getElementById("compilerCodeArea").value = lesson.compilerCode;
@@ -928,14 +1068,27 @@
             window.scrollTo({ top: 0, behavior: "smooth" });
         }
 
-        /* Video Playback Engine */
+        /* Video Playback Engine with Multi-Language Support */
         function playLessonVideo() {
             const data = getLangData();
             if (!data) return;
 
             const lesson = data.lessons[currentTopicIndex];
-            const videoId = (lesson && lesson.videoId) || data.videoId || "1PnVor36_40";
-            const startTime = (lesson && lesson.videoStart) ? lesson.videoStart : 0;
+            
+            // Resolve language-specific video
+            let videoId = "1PnVor36_40";
+            let startTime = 0;
+
+            if (lesson && lesson.videos && lesson.videos[selectedVideoLang]) {
+                videoId = lesson.videos[selectedVideoLang].id;
+                startTime = lesson.videos[selectedVideoLang].start || 0;
+            } else if (data.videos && data.videos[selectedVideoLang]) {
+                videoId = data.videos[selectedVideoLang].id;
+                startTime = (lesson && lesson.videoStart) ? lesson.videoStart : 0;
+            } else {
+                videoId = (lesson && lesson.videoId) || data.videoId || "1PnVor36_40";
+                startTime = (lesson && lesson.videoStart) ? lesson.videoStart : 0;
+            }
 
             const poster = document.getElementById("videoPosterLayer");
             const frameBox = document.getElementById("videoPlayerFrameBox");
@@ -946,7 +1099,7 @@
             frameBox.style.display = "flex";
             isVideoPlaying = true;
 
-            activeTitle.innerHTML = `<span>▶</span> <span>${data.name} - ${lesson ? lesson.title : ''}</span>`;
+            activeTitle.innerHTML = `<span>▶</span> <span>${data.name} (${LANG_NAMES[selectedVideoLang]}) - ${lesson ? lesson.title : ''}</span>`;
 
             if (isHtml5Fallback) {
                 renderHtml5Player();

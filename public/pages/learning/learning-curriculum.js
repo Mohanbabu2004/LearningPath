@@ -1,5 +1,6 @@
 // Comprehensive 12-Language Learning Curriculum & Online Compiler Engine
-// Basics to Advanced with Theory, Practical Code, Interactive Online Compiler, 5 Practice Questions per lesson, and Playable Video Tutorials.
+// Basics to Advanced with Theory, Practical Code, Interactive Online Compiler, 5 Practice Questions per lesson,
+// and Multi-Language Playable Video Tutorials (Telugu, Tamil, English, Hindi).
 
 window.LEARNING_DATA = {
     "c": {
@@ -78,7 +79,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 0,
-                "videoId": "KJgsSFOSQv0"
+                "videoId": "KJgsSFOSQv0",
+                "videos": {
+                    "en": {
+                        "id": "KJgsSFOSQv0",
+                        "start": 0
+                    },
+                    "te": {
+                        "id": "3JF7ndGauZk",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "irqbmMNs2Bo",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "aZb0iu4uGwA",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 2,
@@ -147,7 +166,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 780,
-                "videoId": "KJgsSFOSQv0"
+                "videoId": "KJgsSFOSQv0",
+                "videos": {
+                    "en": {
+                        "id": "KJgsSFOSQv0",
+                        "start": 780
+                    },
+                    "te": {
+                        "id": "3JF7ndGauZk",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "irqbmMNs2Bo",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "aZb0iu4uGwA",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 3,
@@ -216,7 +253,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 1500,
-                "videoId": "KJgsSFOSQv0"
+                "videoId": "KJgsSFOSQv0",
+                "videos": {
+                    "en": {
+                        "id": "KJgsSFOSQv0",
+                        "start": 1500
+                    },
+                    "te": {
+                        "id": "3JF7ndGauZk",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "irqbmMNs2Bo",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "aZb0iu4uGwA",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 4,
@@ -285,7 +340,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 2400,
-                "videoId": "KJgsSFOSQv0"
+                "videoId": "KJgsSFOSQv0",
+                "videos": {
+                    "en": {
+                        "id": "KJgsSFOSQv0",
+                        "start": 2400
+                    },
+                    "te": {
+                        "id": "3JF7ndGauZk",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "irqbmMNs2Bo",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "aZb0iu4uGwA",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 5,
@@ -354,7 +427,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 3600,
-                "videoId": "KJgsSFOSQv0"
+                "videoId": "KJgsSFOSQv0",
+                "videos": {
+                    "en": {
+                        "id": "KJgsSFOSQv0",
+                        "start": 3600
+                    },
+                    "te": {
+                        "id": "3JF7ndGauZk",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "irqbmMNs2Bo",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "aZb0iu4uGwA",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 6,
@@ -423,7 +514,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 4800,
-                "videoId": "KJgsSFOSQv0"
+                "videoId": "KJgsSFOSQv0",
+                "videos": {
+                    "en": {
+                        "id": "KJgsSFOSQv0",
+                        "start": 4800
+                    },
+                    "te": {
+                        "id": "3JF7ndGauZk",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "irqbmMNs2Bo",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "aZb0iu4uGwA",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 7,
@@ -492,7 +601,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 6300,
-                "videoId": "KJgsSFOSQv0"
+                "videoId": "KJgsSFOSQv0",
+                "videos": {
+                    "en": {
+                        "id": "KJgsSFOSQv0",
+                        "start": 6300
+                    },
+                    "te": {
+                        "id": "3JF7ndGauZk",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "irqbmMNs2Bo",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "aZb0iu4uGwA",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 8,
@@ -561,7 +688,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 7800,
-                "videoId": "KJgsSFOSQv0"
+                "videoId": "KJgsSFOSQv0",
+                "videos": {
+                    "en": {
+                        "id": "KJgsSFOSQv0",
+                        "start": 7800
+                    },
+                    "te": {
+                        "id": "3JF7ndGauZk",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "irqbmMNs2Bo",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "aZb0iu4uGwA",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 9,
@@ -630,7 +775,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 9600,
-                "videoId": "KJgsSFOSQv0"
+                "videoId": "KJgsSFOSQv0",
+                "videos": {
+                    "en": {
+                        "id": "KJgsSFOSQv0",
+                        "start": 9600
+                    },
+                    "te": {
+                        "id": "3JF7ndGauZk",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "irqbmMNs2Bo",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "aZb0iu4uGwA",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 10,
@@ -699,12 +862,48 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 11400,
-                "videoId": "KJgsSFOSQv0"
+                "videoId": "KJgsSFOSQv0",
+                "videos": {
+                    "en": {
+                        "id": "KJgsSFOSQv0",
+                        "start": 11400
+                    },
+                    "te": {
+                        "id": "3JF7ndGauZk",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "irqbmMNs2Bo",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "aZb0iu4uGwA",
+                        "start": 0
+                    }
+                }
             }
         ],
         "videoId": "KJgsSFOSQv0",
         "videoTitle": "C Programming Tutorial for Beginners",
-        "videoDuration": "3:46:15"
+        "videoDuration": "3:46:15",
+        "videos": {
+            "en": {
+                "id": "KJgsSFOSQv0",
+                "title": "C Programming Tutorial (English)"
+            },
+            "te": {
+                "id": "3JF7ndGauZk",
+                "title": "C Programming Full Course (తెలుగు)"
+            },
+            "ta": {
+                "id": "irqbmMNs2Bo",
+                "title": "C Programming Full Course (தமிழ்)"
+            },
+            "hi": {
+                "id": "aZb0iu4uGwA",
+                "title": "C Programming Tutorial in Hindi (हिन्दी)"
+            }
+        }
     },
     "cpp": {
         "id": "cpp",
@@ -782,7 +981,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 0,
-                "videoId": "vLnPwxZdW4Y"
+                "videoId": "vLnPwxZdW4Y",
+                "videos": {
+                    "en": {
+                        "id": "vLnPwxZdW4Y",
+                        "start": 0
+                    },
+                    "te": {
+                        "id": "g1t_v58lq1I",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "m67-bOpOoPU",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "z9bZufPHFLU",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 2,
@@ -851,7 +1068,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 800,
-                "videoId": "vLnPwxZdW4Y"
+                "videoId": "vLnPwxZdW4Y",
+                "videos": {
+                    "en": {
+                        "id": "vLnPwxZdW4Y",
+                        "start": 800
+                    },
+                    "te": {
+                        "id": "g1t_v58lq1I",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "m67-bOpOoPU",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "z9bZufPHFLU",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 3,
@@ -920,7 +1155,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 1600,
-                "videoId": "vLnPwxZdW4Y"
+                "videoId": "vLnPwxZdW4Y",
+                "videos": {
+                    "en": {
+                        "id": "vLnPwxZdW4Y",
+                        "start": 1600
+                    },
+                    "te": {
+                        "id": "g1t_v58lq1I",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "m67-bOpOoPU",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "z9bZufPHFLU",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 4,
@@ -989,7 +1242,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 2500,
-                "videoId": "vLnPwxZdW4Y"
+                "videoId": "vLnPwxZdW4Y",
+                "videos": {
+                    "en": {
+                        "id": "vLnPwxZdW4Y",
+                        "start": 2500
+                    },
+                    "te": {
+                        "id": "g1t_v58lq1I",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "m67-bOpOoPU",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "z9bZufPHFLU",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 5,
@@ -1058,7 +1329,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 3800,
-                "videoId": "vLnPwxZdW4Y"
+                "videoId": "vLnPwxZdW4Y",
+                "videos": {
+                    "en": {
+                        "id": "vLnPwxZdW4Y",
+                        "start": 3800
+                    },
+                    "te": {
+                        "id": "g1t_v58lq1I",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "m67-bOpOoPU",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "z9bZufPHFLU",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 6,
@@ -1127,7 +1416,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 5100,
-                "videoId": "vLnPwxZdW4Y"
+                "videoId": "vLnPwxZdW4Y",
+                "videos": {
+                    "en": {
+                        "id": "vLnPwxZdW4Y",
+                        "start": 5100
+                    },
+                    "te": {
+                        "id": "g1t_v58lq1I",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "m67-bOpOoPU",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "z9bZufPHFLU",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 7,
@@ -1196,7 +1503,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 6600,
-                "videoId": "vLnPwxZdW4Y"
+                "videoId": "vLnPwxZdW4Y",
+                "videos": {
+                    "en": {
+                        "id": "vLnPwxZdW4Y",
+                        "start": 6600
+                    },
+                    "te": {
+                        "id": "g1t_v58lq1I",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "m67-bOpOoPU",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "z9bZufPHFLU",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 8,
@@ -1265,7 +1590,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 8200,
-                "videoId": "vLnPwxZdW4Y"
+                "videoId": "vLnPwxZdW4Y",
+                "videos": {
+                    "en": {
+                        "id": "vLnPwxZdW4Y",
+                        "start": 8200
+                    },
+                    "te": {
+                        "id": "g1t_v58lq1I",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "m67-bOpOoPU",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "z9bZufPHFLU",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 9,
@@ -1334,7 +1677,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 10000,
-                "videoId": "vLnPwxZdW4Y"
+                "videoId": "vLnPwxZdW4Y",
+                "videos": {
+                    "en": {
+                        "id": "vLnPwxZdW4Y",
+                        "start": 10000
+                    },
+                    "te": {
+                        "id": "g1t_v58lq1I",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "m67-bOpOoPU",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "z9bZufPHFLU",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 10,
@@ -1403,12 +1764,48 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 12000,
-                "videoId": "vLnPwxZdW4Y"
+                "videoId": "vLnPwxZdW4Y",
+                "videos": {
+                    "en": {
+                        "id": "vLnPwxZdW4Y",
+                        "start": 12000
+                    },
+                    "te": {
+                        "id": "g1t_v58lq1I",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "m67-bOpOoPU",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "z9bZufPHFLU",
+                        "start": 0
+                    }
+                }
             }
         ],
         "videoId": "vLnPwxZdW4Y",
         "videoTitle": "C++ Tutorial for Beginners - Full Course",
-        "videoDuration": "4:01:19"
+        "videoDuration": "4:01:19",
+        "videos": {
+            "en": {
+                "id": "vLnPwxZdW4Y",
+                "title": "C++ Tutorial for Beginners (English)"
+            },
+            "te": {
+                "id": "g1t_v58lq1I",
+                "title": "C++ Full Course in Telugu (తెలుగు)"
+            },
+            "ta": {
+                "id": "m67-bOpOoPU",
+                "title": "C++ Tutorial in Tamil (தமிழ்)"
+            },
+            "hi": {
+                "id": "z9bZufPHFLU",
+                "title": "C++ Full Course in Hindi (हिन्दी)"
+            }
+        }
     },
     "python": {
         "id": "python",
@@ -1486,7 +1883,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 0,
-                "videoId": "_uQrJ0TkZlc"
+                "videoId": "_uQrJ0TkZlc",
+                "videos": {
+                    "en": {
+                        "id": "_uQrJ0TkZlc",
+                        "start": 0
+                    },
+                    "te": {
+                        "id": "uOsCjqAg5gI",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "m67-bOpOoPU",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "gfDE2a79518",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 2,
@@ -1555,7 +1970,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 520,
-                "videoId": "_uQrJ0TkZlc"
+                "videoId": "_uQrJ0TkZlc",
+                "videos": {
+                    "en": {
+                        "id": "_uQrJ0TkZlc",
+                        "start": 520
+                    },
+                    "te": {
+                        "id": "uOsCjqAg5gI",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "m67-bOpOoPU",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "gfDE2a79518",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 3,
@@ -1624,7 +2057,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 1150,
-                "videoId": "_uQrJ0TkZlc"
+                "videoId": "_uQrJ0TkZlc",
+                "videos": {
+                    "en": {
+                        "id": "_uQrJ0TkZlc",
+                        "start": 1150
+                    },
+                    "te": {
+                        "id": "uOsCjqAg5gI",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "m67-bOpOoPU",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "gfDE2a79518",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 4,
@@ -1693,7 +2144,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 1900,
-                "videoId": "_uQrJ0TkZlc"
+                "videoId": "_uQrJ0TkZlc",
+                "videos": {
+                    "en": {
+                        "id": "_uQrJ0TkZlc",
+                        "start": 1900
+                    },
+                    "te": {
+                        "id": "uOsCjqAg5gI",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "m67-bOpOoPU",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "gfDE2a79518",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 5,
@@ -1762,7 +2231,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 2750,
-                "videoId": "_uQrJ0TkZlc"
+                "videoId": "_uQrJ0TkZlc",
+                "videos": {
+                    "en": {
+                        "id": "_uQrJ0TkZlc",
+                        "start": 2750
+                    },
+                    "te": {
+                        "id": "uOsCjqAg5gI",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "m67-bOpOoPU",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "gfDE2a79518",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 6,
@@ -1831,7 +2318,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 3700,
-                "videoId": "_uQrJ0TkZlc"
+                "videoId": "_uQrJ0TkZlc",
+                "videos": {
+                    "en": {
+                        "id": "_uQrJ0TkZlc",
+                        "start": 3700
+                    },
+                    "te": {
+                        "id": "uOsCjqAg5gI",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "m67-bOpOoPU",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "gfDE2a79518",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 7,
@@ -1900,7 +2405,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 4900,
-                "videoId": "_uQrJ0TkZlc"
+                "videoId": "_uQrJ0TkZlc",
+                "videos": {
+                    "en": {
+                        "id": "_uQrJ0TkZlc",
+                        "start": 4900
+                    },
+                    "te": {
+                        "id": "uOsCjqAg5gI",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "m67-bOpOoPU",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "gfDE2a79518",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 8,
@@ -1969,7 +2492,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 6200,
-                "videoId": "_uQrJ0TkZlc"
+                "videoId": "_uQrJ0TkZlc",
+                "videos": {
+                    "en": {
+                        "id": "_uQrJ0TkZlc",
+                        "start": 6200
+                    },
+                    "te": {
+                        "id": "uOsCjqAg5gI",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "m67-bOpOoPU",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "gfDE2a79518",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 9,
@@ -2038,7 +2579,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 7700,
-                "videoId": "_uQrJ0TkZlc"
+                "videoId": "_uQrJ0TkZlc",
+                "videos": {
+                    "en": {
+                        "id": "_uQrJ0TkZlc",
+                        "start": 7700
+                    },
+                    "te": {
+                        "id": "uOsCjqAg5gI",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "m67-bOpOoPU",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "gfDE2a79518",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 10,
@@ -2107,12 +2666,48 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 9500,
-                "videoId": "_uQrJ0TkZlc"
+                "videoId": "_uQrJ0TkZlc",
+                "videos": {
+                    "en": {
+                        "id": "_uQrJ0TkZlc",
+                        "start": 9500
+                    },
+                    "te": {
+                        "id": "uOsCjqAg5gI",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "m67-bOpOoPU",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "gfDE2a79518",
+                        "start": 0
+                    }
+                }
             }
         ],
         "videoId": "_uQrJ0TkZlc",
         "videoTitle": "Python Tutorial for Beginners [Full Course]",
-        "videoDuration": "6:14:07"
+        "videoDuration": "6:14:07",
+        "videos": {
+            "en": {
+                "id": "_uQrJ0TkZlc",
+                "title": "Python Tutorial for Beginners (English)"
+            },
+            "te": {
+                "id": "uOsCjqAg5gI",
+                "title": "Python Full Course in Telugu (తెలుగు)"
+            },
+            "ta": {
+                "id": "m67-bOpOoPU",
+                "title": "Python Full Course in Tamil (தமிழ்)"
+            },
+            "hi": {
+                "id": "gfDE2a79518",
+                "title": "Python Full Course in Hindi (हिन्दी)"
+            }
+        }
     },
     "java": {
         "id": "java",
@@ -2190,7 +2785,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 0,
-                "videoId": "A74TOX803D0"
+                "videoId": "A74TOX803D0",
+                "videos": {
+                    "en": {
+                        "id": "A74TOX803D0",
+                        "start": 0
+                    },
+                    "te": {
+                        "id": "N6v_zPqO278",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "V9H_bZ6l30E",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "ntLJmHOJ0ME",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 2,
@@ -2259,7 +2872,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 600,
-                "videoId": "A74TOX803D0"
+                "videoId": "A74TOX803D0",
+                "videos": {
+                    "en": {
+                        "id": "A74TOX803D0",
+                        "start": 600
+                    },
+                    "te": {
+                        "id": "N6v_zPqO278",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "V9H_bZ6l30E",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "ntLJmHOJ0ME",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 3,
@@ -2328,7 +2959,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 1200,
-                "videoId": "A74TOX803D0"
+                "videoId": "A74TOX803D0",
+                "videos": {
+                    "en": {
+                        "id": "A74TOX803D0",
+                        "start": 1200
+                    },
+                    "te": {
+                        "id": "N6v_zPqO278",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "V9H_bZ6l30E",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "ntLJmHOJ0ME",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 4,
@@ -2397,7 +3046,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 1900,
-                "videoId": "A74TOX803D0"
+                "videoId": "A74TOX803D0",
+                "videos": {
+                    "en": {
+                        "id": "A74TOX803D0",
+                        "start": 1900
+                    },
+                    "te": {
+                        "id": "N6v_zPqO278",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "V9H_bZ6l30E",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "ntLJmHOJ0ME",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 5,
@@ -2466,7 +3133,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 2700,
-                "videoId": "A74TOX803D0"
+                "videoId": "A74TOX803D0",
+                "videos": {
+                    "en": {
+                        "id": "A74TOX803D0",
+                        "start": 2700
+                    },
+                    "te": {
+                        "id": "N6v_zPqO278",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "V9H_bZ6l30E",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "ntLJmHOJ0ME",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 6,
@@ -2535,7 +3220,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 3600,
-                "videoId": "A74TOX803D0"
+                "videoId": "A74TOX803D0",
+                "videos": {
+                    "en": {
+                        "id": "A74TOX803D0",
+                        "start": 3600
+                    },
+                    "te": {
+                        "id": "N6v_zPqO278",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "V9H_bZ6l30E",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "ntLJmHOJ0ME",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 7,
@@ -2604,7 +3307,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 4600,
-                "videoId": "A74TOX803D0"
+                "videoId": "A74TOX803D0",
+                "videos": {
+                    "en": {
+                        "id": "A74TOX803D0",
+                        "start": 4600
+                    },
+                    "te": {
+                        "id": "N6v_zPqO278",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "V9H_bZ6l30E",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "ntLJmHOJ0ME",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 8,
@@ -2673,7 +3394,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 5700,
-                "videoId": "A74TOX803D0"
+                "videoId": "A74TOX803D0",
+                "videos": {
+                    "en": {
+                        "id": "A74TOX803D0",
+                        "start": 5700
+                    },
+                    "te": {
+                        "id": "N6v_zPqO278",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "V9H_bZ6l30E",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "ntLJmHOJ0ME",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 9,
@@ -2742,7 +3481,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 6900,
-                "videoId": "A74TOX803D0"
+                "videoId": "A74TOX803D0",
+                "videos": {
+                    "en": {
+                        "id": "A74TOX803D0",
+                        "start": 6900
+                    },
+                    "te": {
+                        "id": "N6v_zPqO278",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "V9H_bZ6l30E",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "ntLJmHOJ0ME",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 10,
@@ -2811,12 +3568,48 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 8100,
-                "videoId": "A74TOX803D0"
+                "videoId": "A74TOX803D0",
+                "videos": {
+                    "en": {
+                        "id": "A74TOX803D0",
+                        "start": 8100
+                    },
+                    "te": {
+                        "id": "N6v_zPqO278",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "V9H_bZ6l30E",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "ntLJmHOJ0ME",
+                        "start": 0
+                    }
+                }
             }
         ],
         "videoId": "A74TOX803D0",
         "videoTitle": "Java Tutorial for Beginners",
-        "videoDuration": "2:31:00"
+        "videoDuration": "2:31:00",
+        "videos": {
+            "en": {
+                "id": "A74TOX803D0",
+                "title": "Java Tutorial for Beginners (English)"
+            },
+            "te": {
+                "id": "N6v_zPqO278",
+                "title": "Java Full Course in Telugu (తెలుగు)"
+            },
+            "ta": {
+                "id": "V9H_bZ6l30E",
+                "title": "Java Tutorial in Tamil (தமிழ்)"
+            },
+            "hi": {
+                "id": "ntLJmHOJ0ME",
+                "title": "Java Full Course in Hindi (हिन्दी)"
+            }
+        }
     },
     "javascript": {
         "id": "javascript",
@@ -2894,7 +3687,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 0,
-                "videoId": "W6NZfCO5SIk"
+                "videoId": "W6NZfCO5SIk",
+                "videos": {
+                    "en": {
+                        "id": "W6NZfCO5SIk",
+                        "start": 0
+                    },
+                    "te": {
+                        "id": "8dWL3wF_OMw",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "pooxdbK_Z14",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "ER9SspLe4Hg",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 2,
@@ -2963,7 +3774,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 240,
-                "videoId": "W6NZfCO5SIk"
+                "videoId": "W6NZfCO5SIk",
+                "videos": {
+                    "en": {
+                        "id": "W6NZfCO5SIk",
+                        "start": 240
+                    },
+                    "te": {
+                        "id": "8dWL3wF_OMw",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "pooxdbK_Z14",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "ER9SspLe4Hg",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 3,
@@ -3032,7 +3861,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 540,
-                "videoId": "W6NZfCO5SIk"
+                "videoId": "W6NZfCO5SIk",
+                "videos": {
+                    "en": {
+                        "id": "W6NZfCO5SIk",
+                        "start": 540
+                    },
+                    "te": {
+                        "id": "8dWL3wF_OMw",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "pooxdbK_Z14",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "ER9SspLe4Hg",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 4,
@@ -3101,7 +3948,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 900,
-                "videoId": "W6NZfCO5SIk"
+                "videoId": "W6NZfCO5SIk",
+                "videos": {
+                    "en": {
+                        "id": "W6NZfCO5SIk",
+                        "start": 900
+                    },
+                    "te": {
+                        "id": "8dWL3wF_OMw",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "pooxdbK_Z14",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "ER9SspLe4Hg",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 5,
@@ -3170,7 +4035,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 1320,
-                "videoId": "W6NZfCO5SIk"
+                "videoId": "W6NZfCO5SIk",
+                "videos": {
+                    "en": {
+                        "id": "W6NZfCO5SIk",
+                        "start": 1320
+                    },
+                    "te": {
+                        "id": "8dWL3wF_OMw",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "pooxdbK_Z14",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "ER9SspLe4Hg",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 6,
@@ -3239,7 +4122,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 1800,
-                "videoId": "W6NZfCO5SIk"
+                "videoId": "W6NZfCO5SIk",
+                "videos": {
+                    "en": {
+                        "id": "W6NZfCO5SIk",
+                        "start": 1800
+                    },
+                    "te": {
+                        "id": "8dWL3wF_OMw",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "pooxdbK_Z14",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "ER9SspLe4Hg",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 7,
@@ -3308,7 +4209,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 2280,
-                "videoId": "W6NZfCO5SIk"
+                "videoId": "W6NZfCO5SIk",
+                "videos": {
+                    "en": {
+                        "id": "W6NZfCO5SIk",
+                        "start": 2280
+                    },
+                    "te": {
+                        "id": "8dWL3wF_OMw",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "pooxdbK_Z14",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "ER9SspLe4Hg",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 8,
@@ -3377,7 +4296,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 2760,
-                "videoId": "W6NZfCO5SIk"
+                "videoId": "W6NZfCO5SIk",
+                "videos": {
+                    "en": {
+                        "id": "W6NZfCO5SIk",
+                        "start": 2760
+                    },
+                    "te": {
+                        "id": "8dWL3wF_OMw",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "pooxdbK_Z14",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "ER9SspLe4Hg",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 9,
@@ -3446,7 +4383,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 3180,
-                "videoId": "W6NZfCO5SIk"
+                "videoId": "W6NZfCO5SIk",
+                "videos": {
+                    "en": {
+                        "id": "W6NZfCO5SIk",
+                        "start": 3180
+                    },
+                    "te": {
+                        "id": "8dWL3wF_OMw",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "pooxdbK_Z14",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "ER9SspLe4Hg",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 10,
@@ -3515,12 +4470,48 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 3480,
-                "videoId": "W6NZfCO5SIk"
+                "videoId": "W6NZfCO5SIk",
+                "videos": {
+                    "en": {
+                        "id": "W6NZfCO5SIk",
+                        "start": 3480
+                    },
+                    "te": {
+                        "id": "8dWL3wF_OMw",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "pooxdbK_Z14",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "ER9SspLe4Hg",
+                        "start": 0
+                    }
+                }
             }
         ],
         "videoId": "W6NZfCO5SIk",
         "videoTitle": "JavaScript Tutorial for Beginners: Crash Course",
-        "videoDuration": "1:00:00"
+        "videoDuration": "1:00:00",
+        "videos": {
+            "en": {
+                "id": "W6NZfCO5SIk",
+                "title": "JavaScript Tutorial (English)"
+            },
+            "te": {
+                "id": "8dWL3wF_OMw",
+                "title": "JavaScript Full Course in Telugu (తెలుగు)"
+            },
+            "ta": {
+                "id": "pooxdbK_Z14",
+                "title": "JavaScript Tutorial in Tamil (தமிழ்)"
+            },
+            "hi": {
+                "id": "ER9SspLe4Hg",
+                "title": "JavaScript Full Course in Hindi (हिन्दी)"
+            }
+        }
     },
     "typescript": {
         "id": "typescript",
@@ -3598,7 +4589,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 0,
-                "videoId": "d56mG7DezGs"
+                "videoId": "d56mG7DezGs",
+                "videos": {
+                    "en": {
+                        "id": "d56mG7DezGs",
+                        "start": 0
+                    },
+                    "te": {
+                        "id": "30LWjhZzg50",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "1hpgzRk2g3M",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "30LWjhZzg50",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 2,
@@ -3667,7 +4676,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 260,
-                "videoId": "d56mG7DezGs"
+                "videoId": "d56mG7DezGs",
+                "videos": {
+                    "en": {
+                        "id": "d56mG7DezGs",
+                        "start": 260
+                    },
+                    "te": {
+                        "id": "30LWjhZzg50",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "1hpgzRk2g3M",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "30LWjhZzg50",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 3,
@@ -3736,7 +4763,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 580,
-                "videoId": "d56mG7DezGs"
+                "videoId": "d56mG7DezGs",
+                "videos": {
+                    "en": {
+                        "id": "d56mG7DezGs",
+                        "start": 580
+                    },
+                    "te": {
+                        "id": "30LWjhZzg50",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "1hpgzRk2g3M",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "30LWjhZzg50",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 4,
@@ -3805,7 +4850,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 960,
-                "videoId": "d56mG7DezGs"
+                "videoId": "d56mG7DezGs",
+                "videos": {
+                    "en": {
+                        "id": "d56mG7DezGs",
+                        "start": 960
+                    },
+                    "te": {
+                        "id": "30LWjhZzg50",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "1hpgzRk2g3M",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "30LWjhZzg50",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 5,
@@ -3874,7 +4937,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 1380,
-                "videoId": "d56mG7DezGs"
+                "videoId": "d56mG7DezGs",
+                "videos": {
+                    "en": {
+                        "id": "d56mG7DezGs",
+                        "start": 1380
+                    },
+                    "te": {
+                        "id": "30LWjhZzg50",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "1hpgzRk2g3M",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "30LWjhZzg50",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 6,
@@ -3943,7 +5024,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 1860,
-                "videoId": "d56mG7DezGs"
+                "videoId": "d56mG7DezGs",
+                "videos": {
+                    "en": {
+                        "id": "d56mG7DezGs",
+                        "start": 1860
+                    },
+                    "te": {
+                        "id": "30LWjhZzg50",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "1hpgzRk2g3M",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "30LWjhZzg50",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 7,
@@ -4012,7 +5111,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 2340,
-                "videoId": "d56mG7DezGs"
+                "videoId": "d56mG7DezGs",
+                "videos": {
+                    "en": {
+                        "id": "d56mG7DezGs",
+                        "start": 2340
+                    },
+                    "te": {
+                        "id": "30LWjhZzg50",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "1hpgzRk2g3M",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "30LWjhZzg50",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 8,
@@ -4081,7 +5198,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 2760,
-                "videoId": "d56mG7DezGs"
+                "videoId": "d56mG7DezGs",
+                "videos": {
+                    "en": {
+                        "id": "d56mG7DezGs",
+                        "start": 2760
+                    },
+                    "te": {
+                        "id": "30LWjhZzg50",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "1hpgzRk2g3M",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "30LWjhZzg50",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 9,
@@ -4150,7 +5285,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 3120,
-                "videoId": "d56mG7DezGs"
+                "videoId": "d56mG7DezGs",
+                "videos": {
+                    "en": {
+                        "id": "d56mG7DezGs",
+                        "start": 3120
+                    },
+                    "te": {
+                        "id": "30LWjhZzg50",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "1hpgzRk2g3M",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "30LWjhZzg50",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 10,
@@ -4219,12 +5372,48 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 3360,
-                "videoId": "d56mG7DezGs"
+                "videoId": "d56mG7DezGs",
+                "videos": {
+                    "en": {
+                        "id": "d56mG7DezGs",
+                        "start": 3360
+                    },
+                    "te": {
+                        "id": "30LWjhZzg50",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "1hpgzRk2g3M",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "30LWjhZzg50",
+                        "start": 0
+                    }
+                }
             }
         ],
         "videoId": "d56mG7DezGs",
         "videoTitle": "TypeScript Tutorial for Beginners",
-        "videoDuration": "58:00"
+        "videoDuration": "58:00",
+        "videos": {
+            "en": {
+                "id": "d56mG7DezGs",
+                "title": "TypeScript Tutorial (English)"
+            },
+            "te": {
+                "id": "30LWjhZzg50",
+                "title": "TypeScript in Telugu (తెలుగు)"
+            },
+            "ta": {
+                "id": "1hpgzRk2g3M",
+                "title": "TypeScript Tutorial in Tamil (தமிழ்)"
+            },
+            "hi": {
+                "id": "30LWjhZzg50",
+                "title": "TypeScript Tutorial in Hindi (हिन्दी)"
+            }
+        }
     },
     "r": {
         "id": "r",
@@ -4302,7 +5491,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 0,
-                "videoId": "_V8eKsto3Ug"
+                "videoId": "_V8eKsto3Ug",
+                "videos": {
+                    "en": {
+                        "id": "_V8eKsto3Ug",
+                        "start": 0
+                    },
+                    "te": {
+                        "id": "KlsYduikU3U",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "_V8eKsto3Ug",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "KlsYduikU3U",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 2,
@@ -4371,7 +5578,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 540,
-                "videoId": "_V8eKsto3Ug"
+                "videoId": "_V8eKsto3Ug",
+                "videos": {
+                    "en": {
+                        "id": "_V8eKsto3Ug",
+                        "start": 540
+                    },
+                    "te": {
+                        "id": "KlsYduikU3U",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "_V8eKsto3Ug",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "KlsYduikU3U",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 3,
@@ -4440,7 +5665,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 1140,
-                "videoId": "_V8eKsto3Ug"
+                "videoId": "_V8eKsto3Ug",
+                "videos": {
+                    "en": {
+                        "id": "_V8eKsto3Ug",
+                        "start": 1140
+                    },
+                    "te": {
+                        "id": "KlsYduikU3U",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "_V8eKsto3Ug",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "KlsYduikU3U",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 4,
@@ -4509,7 +5752,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 1800,
-                "videoId": "_V8eKsto3Ug"
+                "videoId": "_V8eKsto3Ug",
+                "videos": {
+                    "en": {
+                        "id": "_V8eKsto3Ug",
+                        "start": 1800
+                    },
+                    "te": {
+                        "id": "KlsYduikU3U",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "_V8eKsto3Ug",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "KlsYduikU3U",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 5,
@@ -4578,7 +5839,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 2520,
-                "videoId": "_V8eKsto3Ug"
+                "videoId": "_V8eKsto3Ug",
+                "videos": {
+                    "en": {
+                        "id": "_V8eKsto3Ug",
+                        "start": 2520
+                    },
+                    "te": {
+                        "id": "KlsYduikU3U",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "_V8eKsto3Ug",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "KlsYduikU3U",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 6,
@@ -4647,7 +5926,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 3300,
-                "videoId": "_V8eKsto3Ug"
+                "videoId": "_V8eKsto3Ug",
+                "videos": {
+                    "en": {
+                        "id": "_V8eKsto3Ug",
+                        "start": 3300
+                    },
+                    "te": {
+                        "id": "KlsYduikU3U",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "_V8eKsto3Ug",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "KlsYduikU3U",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 7,
@@ -4716,7 +6013,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 4140,
-                "videoId": "_V8eKsto3Ug"
+                "videoId": "_V8eKsto3Ug",
+                "videos": {
+                    "en": {
+                        "id": "_V8eKsto3Ug",
+                        "start": 4140
+                    },
+                    "te": {
+                        "id": "KlsYduikU3U",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "_V8eKsto3Ug",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "KlsYduikU3U",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 8,
@@ -4785,7 +6100,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 5040,
-                "videoId": "_V8eKsto3Ug"
+                "videoId": "_V8eKsto3Ug",
+                "videos": {
+                    "en": {
+                        "id": "_V8eKsto3Ug",
+                        "start": 5040
+                    },
+                    "te": {
+                        "id": "KlsYduikU3U",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "_V8eKsto3Ug",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "KlsYduikU3U",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 9,
@@ -4854,7 +6187,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 6000,
-                "videoId": "_V8eKsto3Ug"
+                "videoId": "_V8eKsto3Ug",
+                "videos": {
+                    "en": {
+                        "id": "_V8eKsto3Ug",
+                        "start": 6000
+                    },
+                    "te": {
+                        "id": "KlsYduikU3U",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "_V8eKsto3Ug",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "KlsYduikU3U",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 10,
@@ -4923,12 +6274,48 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 7020,
-                "videoId": "_V8eKsto3Ug"
+                "videoId": "_V8eKsto3Ug",
+                "videos": {
+                    "en": {
+                        "id": "_V8eKsto3Ug",
+                        "start": 7020
+                    },
+                    "te": {
+                        "id": "KlsYduikU3U",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "_V8eKsto3Ug",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "KlsYduikU3U",
+                        "start": 0
+                    }
+                }
             }
         ],
         "videoId": "_V8eKsto3Ug",
         "videoTitle": "R Programming Tutorial - Learn the Basics",
-        "videoDuration": "2:10:00"
+        "videoDuration": "2:10:00",
+        "videos": {
+            "en": {
+                "id": "_V8eKsto3Ug",
+                "title": "R Programming Tutorial (English)"
+            },
+            "te": {
+                "id": "KlsYduikU3U",
+                "title": "R Programming in Telugu (తెలుగు)"
+            },
+            "ta": {
+                "id": "_V8eKsto3Ug",
+                "title": "R Programming in Tamil (தமிழ்)"
+            },
+            "hi": {
+                "id": "KlsYduikU3U",
+                "title": "R Programming in Hindi (हिन्दी)"
+            }
+        }
     },
     "cuda": {
         "id": "cuda",
@@ -5006,7 +6393,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 0,
-                "videoId": "2NGT_2iBf1w"
+                "videoId": "2NGT_2iBf1w",
+                "videos": {
+                    "en": {
+                        "id": "2NGT_2iBf1w",
+                        "start": 0
+                    },
+                    "te": {
+                        "id": "2NGT_2iBf1w",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "2NGT_2iBf1w",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "2NGT_2iBf1w",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 2,
@@ -5075,7 +6480,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 600,
-                "videoId": "2NGT_2iBf1w"
+                "videoId": "2NGT_2iBf1w",
+                "videos": {
+                    "en": {
+                        "id": "2NGT_2iBf1w",
+                        "start": 600
+                    },
+                    "te": {
+                        "id": "2NGT_2iBf1w",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "2NGT_2iBf1w",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "2NGT_2iBf1w",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 3,
@@ -5144,7 +6567,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 1300,
-                "videoId": "2NGT_2iBf1w"
+                "videoId": "2NGT_2iBf1w",
+                "videos": {
+                    "en": {
+                        "id": "2NGT_2iBf1w",
+                        "start": 1300
+                    },
+                    "te": {
+                        "id": "2NGT_2iBf1w",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "2NGT_2iBf1w",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "2NGT_2iBf1w",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 4,
@@ -5213,7 +6654,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 2100,
-                "videoId": "2NGT_2iBf1w"
+                "videoId": "2NGT_2iBf1w",
+                "videos": {
+                    "en": {
+                        "id": "2NGT_2iBf1w",
+                        "start": 2100
+                    },
+                    "te": {
+                        "id": "2NGT_2iBf1w",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "2NGT_2iBf1w",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "2NGT_2iBf1w",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 5,
@@ -5282,7 +6741,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 3000,
-                "videoId": "2NGT_2iBf1w"
+                "videoId": "2NGT_2iBf1w",
+                "videos": {
+                    "en": {
+                        "id": "2NGT_2iBf1w",
+                        "start": 3000
+                    },
+                    "te": {
+                        "id": "2NGT_2iBf1w",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "2NGT_2iBf1w",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "2NGT_2iBf1w",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 6,
@@ -5351,7 +6828,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 4000,
-                "videoId": "2NGT_2iBf1w"
+                "videoId": "2NGT_2iBf1w",
+                "videos": {
+                    "en": {
+                        "id": "2NGT_2iBf1w",
+                        "start": 4000
+                    },
+                    "te": {
+                        "id": "2NGT_2iBf1w",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "2NGT_2iBf1w",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "2NGT_2iBf1w",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 7,
@@ -5420,7 +6915,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 5100,
-                "videoId": "2NGT_2iBf1w"
+                "videoId": "2NGT_2iBf1w",
+                "videos": {
+                    "en": {
+                        "id": "2NGT_2iBf1w",
+                        "start": 5100
+                    },
+                    "te": {
+                        "id": "2NGT_2iBf1w",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "2NGT_2iBf1w",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "2NGT_2iBf1w",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 8,
@@ -5489,7 +7002,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 6300,
-                "videoId": "2NGT_2iBf1w"
+                "videoId": "2NGT_2iBf1w",
+                "videos": {
+                    "en": {
+                        "id": "2NGT_2iBf1w",
+                        "start": 6300
+                    },
+                    "te": {
+                        "id": "2NGT_2iBf1w",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "2NGT_2iBf1w",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "2NGT_2iBf1w",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 9,
@@ -5558,7 +7089,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 7600,
-                "videoId": "2NGT_2iBf1w"
+                "videoId": "2NGT_2iBf1w",
+                "videos": {
+                    "en": {
+                        "id": "2NGT_2iBf1w",
+                        "start": 7600
+                    },
+                    "te": {
+                        "id": "2NGT_2iBf1w",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "2NGT_2iBf1w",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "2NGT_2iBf1w",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 10,
@@ -5627,12 +7176,48 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 9000,
-                "videoId": "2NGT_2iBf1w"
+                "videoId": "2NGT_2iBf1w",
+                "videos": {
+                    "en": {
+                        "id": "2NGT_2iBf1w",
+                        "start": 9000
+                    },
+                    "te": {
+                        "id": "2NGT_2iBf1w",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "2NGT_2iBf1w",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "2NGT_2iBf1w",
+                        "start": 0
+                    }
+                }
             }
         ],
         "videoId": "2NGT_2iBf1w",
         "videoTitle": "CUDA Programming Course – High-Performance GPU Computing",
-        "videoDuration": "2:40:00"
+        "videoDuration": "2:40:00",
+        "videos": {
+            "en": {
+                "id": "2NGT_2iBf1w",
+                "title": "CUDA Programming Course (English)"
+            },
+            "te": {
+                "id": "2NGT_2iBf1w",
+                "title": "CUDA GPU Course with Telugu Notes (తెలుగు)"
+            },
+            "ta": {
+                "id": "2NGT_2iBf1w",
+                "title": "CUDA Programming in Tamil (தமிழ்)"
+            },
+            "hi": {
+                "id": "2NGT_2iBf1w",
+                "title": "CUDA GPU Programming in Hindi (हिन्दी)"
+            }
+        }
     },
     "ruby": {
         "id": "ruby",
@@ -5710,7 +7295,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 0,
-                "videoId": "t_ispmWmdjY"
+                "videoId": "t_ispmWmdjY",
+                "videos": {
+                    "en": {
+                        "id": "t_ispmWmdjY",
+                        "start": 0
+                    },
+                    "te": {
+                        "id": "D570W8c1z24",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "t_ispmWmdjY",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "D570W8c1z24",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 2,
@@ -5779,7 +7382,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 800,
-                "videoId": "t_ispmWmdjY"
+                "videoId": "t_ispmWmdjY",
+                "videos": {
+                    "en": {
+                        "id": "t_ispmWmdjY",
+                        "start": 800
+                    },
+                    "te": {
+                        "id": "D570W8c1z24",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "t_ispmWmdjY",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "D570W8c1z24",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 3,
@@ -5848,7 +7469,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 1700,
-                "videoId": "t_ispmWmdjY"
+                "videoId": "t_ispmWmdjY",
+                "videos": {
+                    "en": {
+                        "id": "t_ispmWmdjY",
+                        "start": 1700
+                    },
+                    "te": {
+                        "id": "D570W8c1z24",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "t_ispmWmdjY",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "D570W8c1z24",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 4,
@@ -5917,7 +7556,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 2700,
-                "videoId": "t_ispmWmdjY"
+                "videoId": "t_ispmWmdjY",
+                "videos": {
+                    "en": {
+                        "id": "t_ispmWmdjY",
+                        "start": 2700
+                    },
+                    "te": {
+                        "id": "D570W8c1z24",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "t_ispmWmdjY",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "D570W8c1z24",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 5,
@@ -5986,7 +7643,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 3800,
-                "videoId": "t_ispmWmdjY"
+                "videoId": "t_ispmWmdjY",
+                "videos": {
+                    "en": {
+                        "id": "t_ispmWmdjY",
+                        "start": 3800
+                    },
+                    "te": {
+                        "id": "D570W8c1z24",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "t_ispmWmdjY",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "D570W8c1z24",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 6,
@@ -6055,7 +7730,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 5000,
-                "videoId": "t_ispmWmdjY"
+                "videoId": "t_ispmWmdjY",
+                "videos": {
+                    "en": {
+                        "id": "t_ispmWmdjY",
+                        "start": 5000
+                    },
+                    "te": {
+                        "id": "D570W8c1z24",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "t_ispmWmdjY",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "D570W8c1z24",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 7,
@@ -6124,7 +7817,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 6400,
-                "videoId": "t_ispmWmdjY"
+                "videoId": "t_ispmWmdjY",
+                "videos": {
+                    "en": {
+                        "id": "t_ispmWmdjY",
+                        "start": 6400
+                    },
+                    "te": {
+                        "id": "D570W8c1z24",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "t_ispmWmdjY",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "D570W8c1z24",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 8,
@@ -6193,7 +7904,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 7900,
-                "videoId": "t_ispmWmdjY"
+                "videoId": "t_ispmWmdjY",
+                "videos": {
+                    "en": {
+                        "id": "t_ispmWmdjY",
+                        "start": 7900
+                    },
+                    "te": {
+                        "id": "D570W8c1z24",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "t_ispmWmdjY",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "D570W8c1z24",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 9,
@@ -6262,7 +7991,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 9500,
-                "videoId": "t_ispmWmdjY"
+                "videoId": "t_ispmWmdjY",
+                "videos": {
+                    "en": {
+                        "id": "t_ispmWmdjY",
+                        "start": 9500
+                    },
+                    "te": {
+                        "id": "D570W8c1z24",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "t_ispmWmdjY",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "D570W8c1z24",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 10,
@@ -6331,12 +8078,48 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 11200,
-                "videoId": "t_ispmWmdjY"
+                "videoId": "t_ispmWmdjY",
+                "videos": {
+                    "en": {
+                        "id": "t_ispmWmdjY",
+                        "start": 11200
+                    },
+                    "te": {
+                        "id": "D570W8c1z24",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "t_ispmWmdjY",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "D570W8c1z24",
+                        "start": 0
+                    }
+                }
             }
         ],
         "videoId": "t_ispmWmdjY",
         "videoTitle": "Ruby Programming Language - Full Course",
-        "videoDuration": "4:02:42"
+        "videoDuration": "4:02:42",
+        "videos": {
+            "en": {
+                "id": "t_ispmWmdjY",
+                "title": "Ruby Programming Language (English)"
+            },
+            "te": {
+                "id": "D570W8c1z24",
+                "title": "Ruby Full Course in Telugu (తెలుగు)"
+            },
+            "ta": {
+                "id": "t_ispmWmdjY",
+                "title": "Ruby Tutorial in Tamil (தமிழ்)"
+            },
+            "hi": {
+                "id": "D570W8c1z24",
+                "title": "Ruby Full Course in Hindi (हिन्दी)"
+            }
+        }
     },
     "php": {
         "id": "php",
@@ -6414,7 +8197,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 0,
-                "videoId": "OK_JCtrrv-c"
+                "videoId": "OK_JCtrrv-c",
+                "videos": {
+                    "en": {
+                        "id": "OK_JCtrrv-c",
+                        "start": 0
+                    },
+                    "te": {
+                        "id": "2eebptXfEvw",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "XBjwhZ4aYh8",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "xW7ro3lwaWE",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 2,
@@ -6483,7 +8284,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 850,
-                "videoId": "OK_JCtrrv-c"
+                "videoId": "OK_JCtrrv-c",
+                "videos": {
+                    "en": {
+                        "id": "OK_JCtrrv-c",
+                        "start": 850
+                    },
+                    "te": {
+                        "id": "2eebptXfEvw",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "XBjwhZ4aYh8",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "xW7ro3lwaWE",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 3,
@@ -6552,7 +8371,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 1800,
-                "videoId": "OK_JCtrrv-c"
+                "videoId": "OK_JCtrrv-c",
+                "videos": {
+                    "en": {
+                        "id": "OK_JCtrrv-c",
+                        "start": 1800
+                    },
+                    "te": {
+                        "id": "2eebptXfEvw",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "XBjwhZ4aYh8",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "xW7ro3lwaWE",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 4,
@@ -6621,7 +8458,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 2900,
-                "videoId": "OK_JCtrrv-c"
+                "videoId": "OK_JCtrrv-c",
+                "videos": {
+                    "en": {
+                        "id": "OK_JCtrrv-c",
+                        "start": 2900
+                    },
+                    "te": {
+                        "id": "2eebptXfEvw",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "XBjwhZ4aYh8",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "xW7ro3lwaWE",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 5,
@@ -6690,7 +8545,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 4100,
-                "videoId": "OK_JCtrrv-c"
+                "videoId": "OK_JCtrrv-c",
+                "videos": {
+                    "en": {
+                        "id": "OK_JCtrrv-c",
+                        "start": 4100
+                    },
+                    "te": {
+                        "id": "2eebptXfEvw",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "XBjwhZ4aYh8",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "xW7ro3lwaWE",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 6,
@@ -6759,7 +8632,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 5400,
-                "videoId": "OK_JCtrrv-c"
+                "videoId": "OK_JCtrrv-c",
+                "videos": {
+                    "en": {
+                        "id": "OK_JCtrrv-c",
+                        "start": 5400
+                    },
+                    "te": {
+                        "id": "2eebptXfEvw",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "XBjwhZ4aYh8",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "xW7ro3lwaWE",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 7,
@@ -6828,7 +8719,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 6800,
-                "videoId": "OK_JCtrrv-c"
+                "videoId": "OK_JCtrrv-c",
+                "videos": {
+                    "en": {
+                        "id": "OK_JCtrrv-c",
+                        "start": 6800
+                    },
+                    "te": {
+                        "id": "2eebptXfEvw",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "XBjwhZ4aYh8",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "xW7ro3lwaWE",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 8,
@@ -6897,7 +8806,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 8300,
-                "videoId": "OK_JCtrrv-c"
+                "videoId": "OK_JCtrrv-c",
+                "videos": {
+                    "en": {
+                        "id": "OK_JCtrrv-c",
+                        "start": 8300
+                    },
+                    "te": {
+                        "id": "2eebptXfEvw",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "XBjwhZ4aYh8",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "xW7ro3lwaWE",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 9,
@@ -6966,7 +8893,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 10000,
-                "videoId": "OK_JCtrrv-c"
+                "videoId": "OK_JCtrrv-c",
+                "videos": {
+                    "en": {
+                        "id": "OK_JCtrrv-c",
+                        "start": 10000
+                    },
+                    "te": {
+                        "id": "2eebptXfEvw",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "XBjwhZ4aYh8",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "xW7ro3lwaWE",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 10,
@@ -7035,12 +8980,48 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 11800,
-                "videoId": "OK_JCtrrv-c"
+                "videoId": "OK_JCtrrv-c",
+                "videos": {
+                    "en": {
+                        "id": "OK_JCtrrv-c",
+                        "start": 11800
+                    },
+                    "te": {
+                        "id": "2eebptXfEvw",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "XBjwhZ4aYh8",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "xW7ro3lwaWE",
+                        "start": 0
+                    }
+                }
             }
         ],
         "videoId": "OK_JCtrrv-c",
         "videoTitle": "PHP for Beginners - Full Course",
-        "videoDuration": "4:36:00"
+        "videoDuration": "4:36:00",
+        "videos": {
+            "en": {
+                "id": "OK_JCtrrv-c",
+                "title": "PHP Full Course (English)"
+            },
+            "te": {
+                "id": "2eebptXfEvw",
+                "title": "PHP Full Course in Telugu (తెలుగు)"
+            },
+            "ta": {
+                "id": "XBjwhZ4aYh8",
+                "title": "PHP Tutorial in Tamil (தமிழ்)"
+            },
+            "hi": {
+                "id": "xW7ro3lwaWE",
+                "title": "PHP Tutorial in Hindi (हिन्दी)"
+            }
+        }
     },
     "html": {
         "id": "html",
@@ -7118,7 +9099,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 0,
-                "videoId": "pQN-pnXPaVg"
+                "videoId": "pQN-pnXPaVg",
+                "videos": {
+                    "en": {
+                        "id": "pQN-pnXPaVg",
+                        "start": 0
+                    },
+                    "te": {
+                        "id": "88PXJAA6szs",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "kUMe1FH4CHE",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "BsDoLVMnmww",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 2,
@@ -7187,7 +9186,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 500,
-                "videoId": "pQN-pnXPaVg"
+                "videoId": "pQN-pnXPaVg",
+                "videos": {
+                    "en": {
+                        "id": "pQN-pnXPaVg",
+                        "start": 500
+                    },
+                    "te": {
+                        "id": "88PXJAA6szs",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "kUMe1FH4CHE",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "BsDoLVMnmww",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 3,
@@ -7256,7 +9273,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 1100,
-                "videoId": "pQN-pnXPaVg"
+                "videoId": "pQN-pnXPaVg",
+                "videos": {
+                    "en": {
+                        "id": "pQN-pnXPaVg",
+                        "start": 1100
+                    },
+                    "te": {
+                        "id": "88PXJAA6szs",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "kUMe1FH4CHE",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "BsDoLVMnmww",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 4,
@@ -7325,7 +9360,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 1750,
-                "videoId": "pQN-pnXPaVg"
+                "videoId": "pQN-pnXPaVg",
+                "videos": {
+                    "en": {
+                        "id": "pQN-pnXPaVg",
+                        "start": 1750
+                    },
+                    "te": {
+                        "id": "88PXJAA6szs",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "kUMe1FH4CHE",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "BsDoLVMnmww",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 5,
@@ -7394,7 +9447,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 2450,
-                "videoId": "pQN-pnXPaVg"
+                "videoId": "pQN-pnXPaVg",
+                "videos": {
+                    "en": {
+                        "id": "pQN-pnXPaVg",
+                        "start": 2450
+                    },
+                    "te": {
+                        "id": "88PXJAA6szs",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "kUMe1FH4CHE",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "BsDoLVMnmww",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 6,
@@ -7463,7 +9534,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 3200,
-                "videoId": "pQN-pnXPaVg"
+                "videoId": "pQN-pnXPaVg",
+                "videos": {
+                    "en": {
+                        "id": "pQN-pnXPaVg",
+                        "start": 3200
+                    },
+                    "te": {
+                        "id": "88PXJAA6szs",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "kUMe1FH4CHE",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "BsDoLVMnmww",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 7,
@@ -7532,7 +9621,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 4000,
-                "videoId": "pQN-pnXPaVg"
+                "videoId": "pQN-pnXPaVg",
+                "videos": {
+                    "en": {
+                        "id": "pQN-pnXPaVg",
+                        "start": 4000
+                    },
+                    "te": {
+                        "id": "88PXJAA6szs",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "kUMe1FH4CHE",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "BsDoLVMnmww",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 8,
@@ -7601,7 +9708,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 4850,
-                "videoId": "pQN-pnXPaVg"
+                "videoId": "pQN-pnXPaVg",
+                "videos": {
+                    "en": {
+                        "id": "pQN-pnXPaVg",
+                        "start": 4850
+                    },
+                    "te": {
+                        "id": "88PXJAA6szs",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "kUMe1FH4CHE",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "BsDoLVMnmww",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 9,
@@ -7670,7 +9795,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 5750,
-                "videoId": "pQN-pnXPaVg"
+                "videoId": "pQN-pnXPaVg",
+                "videos": {
+                    "en": {
+                        "id": "pQN-pnXPaVg",
+                        "start": 5750
+                    },
+                    "te": {
+                        "id": "88PXJAA6szs",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "kUMe1FH4CHE",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "BsDoLVMnmww",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 10,
@@ -7739,12 +9882,48 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 6700,
-                "videoId": "pQN-pnXPaVg"
+                "videoId": "pQN-pnXPaVg",
+                "videos": {
+                    "en": {
+                        "id": "pQN-pnXPaVg",
+                        "start": 6700
+                    },
+                    "te": {
+                        "id": "88PXJAA6szs",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "kUMe1FH4CHE",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "BsDoLVMnmww",
+                        "start": 0
+                    }
+                }
             }
         ],
         "videoId": "pQN-pnXPaVg",
         "videoTitle": "HTML Full Course - Build a Website Tutorial",
-        "videoDuration": "2:02:32"
+        "videoDuration": "2:02:32",
+        "videos": {
+            "en": {
+                "id": "pQN-pnXPaVg",
+                "title": "HTML Full Course (English)"
+            },
+            "te": {
+                "id": "88PXJAA6szs",
+                "title": "HTML5 Course in Telugu (తెలుగు)"
+            },
+            "ta": {
+                "id": "kUMe1FH4CHE",
+                "title": "HTML Full Tutorial in Tamil (தமிழ்)"
+            },
+            "hi": {
+                "id": "BsDoLVMnmww",
+                "title": "HTML Course in Hindi (हिन्दी)"
+            }
+        }
     },
     "css": {
         "id": "css",
@@ -7822,7 +10001,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 0,
-                "videoId": "1PnVor36_40"
+                "videoId": "1PnVor36_40",
+                "videos": {
+                    "en": {
+                        "id": "1PnVor36_40",
+                        "start": 0
+                    },
+                    "te": {
+                        "id": "EDSZuvvM6W4",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "wRNinF7YQqQ",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "ESnrn1kAD4E",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 2,
@@ -7891,7 +10088,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 650,
-                "videoId": "1PnVor36_40"
+                "videoId": "1PnVor36_40",
+                "videos": {
+                    "en": {
+                        "id": "1PnVor36_40",
+                        "start": 650
+                    },
+                    "te": {
+                        "id": "EDSZuvvM6W4",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "wRNinF7YQqQ",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "ESnrn1kAD4E",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 3,
@@ -7960,7 +10175,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 1400,
-                "videoId": "1PnVor36_40"
+                "videoId": "1PnVor36_40",
+                "videos": {
+                    "en": {
+                        "id": "1PnVor36_40",
+                        "start": 1400
+                    },
+                    "te": {
+                        "id": "EDSZuvvM6W4",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "wRNinF7YQqQ",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "ESnrn1kAD4E",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 4,
@@ -8029,7 +10262,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 2250,
-                "videoId": "1PnVor36_40"
+                "videoId": "1PnVor36_40",
+                "videos": {
+                    "en": {
+                        "id": "1PnVor36_40",
+                        "start": 2250
+                    },
+                    "te": {
+                        "id": "EDSZuvvM6W4",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "wRNinF7YQqQ",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "ESnrn1kAD4E",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 5,
@@ -8098,7 +10349,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 3200,
-                "videoId": "1PnVor36_40"
+                "videoId": "1PnVor36_40",
+                "videos": {
+                    "en": {
+                        "id": "1PnVor36_40",
+                        "start": 3200
+                    },
+                    "te": {
+                        "id": "EDSZuvvM6W4",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "wRNinF7YQqQ",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "ESnrn1kAD4E",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 6,
@@ -8167,7 +10436,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 4250,
-                "videoId": "1PnVor36_40"
+                "videoId": "1PnVor36_40",
+                "videos": {
+                    "en": {
+                        "id": "1PnVor36_40",
+                        "start": 4250
+                    },
+                    "te": {
+                        "id": "EDSZuvvM6W4",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "wRNinF7YQqQ",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "ESnrn1kAD4E",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 7,
@@ -8236,7 +10523,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 5400,
-                "videoId": "1PnVor36_40"
+                "videoId": "1PnVor36_40",
+                "videos": {
+                    "en": {
+                        "id": "1PnVor36_40",
+                        "start": 5400
+                    },
+                    "te": {
+                        "id": "EDSZuvvM6W4",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "wRNinF7YQqQ",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "ESnrn1kAD4E",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 8,
@@ -8305,7 +10610,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 6650,
-                "videoId": "1PnVor36_40"
+                "videoId": "1PnVor36_40",
+                "videos": {
+                    "en": {
+                        "id": "1PnVor36_40",
+                        "start": 6650
+                    },
+                    "te": {
+                        "id": "EDSZuvvM6W4",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "wRNinF7YQqQ",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "ESnrn1kAD4E",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 9,
@@ -8374,7 +10697,25 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 8000,
-                "videoId": "1PnVor36_40"
+                "videoId": "1PnVor36_40",
+                "videos": {
+                    "en": {
+                        "id": "1PnVor36_40",
+                        "start": 8000
+                    },
+                    "te": {
+                        "id": "EDSZuvvM6W4",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "wRNinF7YQqQ",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "ESnrn1kAD4E",
+                        "start": 0
+                    }
+                }
             },
             {
                 "id": 10,
@@ -8443,11 +10784,47 @@ window.LEARNING_DATA = {
                     }
                 ],
                 "videoStart": 9500,
-                "videoId": "1PnVor36_40"
+                "videoId": "1PnVor36_40",
+                "videos": {
+                    "en": {
+                        "id": "1PnVor36_40",
+                        "start": 9500
+                    },
+                    "te": {
+                        "id": "EDSZuvvM6W4",
+                        "start": 0
+                    },
+                    "ta": {
+                        "id": "wRNinF7YQqQ",
+                        "start": 0
+                    },
+                    "hi": {
+                        "id": "ESnrn1kAD4E",
+                        "start": 0
+                    }
+                }
             }
         ],
         "videoId": "1PnVor36_40",
         "videoTitle": "CSS Tutorial - Zero to Hero (Complete Course)",
-        "videoDuration": "6:18:37"
+        "videoDuration": "6:18:37",
+        "videos": {
+            "en": {
+                "id": "1PnVor36_40",
+                "title": "CSS Tutorial (English)"
+            },
+            "te": {
+                "id": "EDSZuvvM6W4",
+                "title": "CSS Full Course in Telugu (తెలుగు)"
+            },
+            "ta": {
+                "id": "wRNinF7YQqQ",
+                "title": "CSS Tutorial in Tamil (தமிழ்)"
+            },
+            "hi": {
+                "id": "ESnrn1kAD4E",
+                "title": "CSS Full Course in Hindi (हिन्दी)"
+            }
+        }
     }
 };
