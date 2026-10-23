@@ -584,6 +584,7 @@
 
       // 4. Save active session & sync to multi-user registry
       localStorage.setItem('learningUser', JSON.stringify(loggedInUser));
+      localStorage.setItem('accountCompleted', 'true');
       localStorage.setItem('lastCreatedUser', JSON.stringify({
         name: loggedInUser.name,
         email: loggedInUser.email,

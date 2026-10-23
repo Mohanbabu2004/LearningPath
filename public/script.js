@@ -236,6 +236,7 @@ function initSignup() {
       quizScore: "0/100",
       learningProgress: "0%"
     }));
+    localStorage.setItem('accountCompleted', 'true');
 
     // Send to backend API
     try {

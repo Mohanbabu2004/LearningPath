@@ -809,6 +809,60 @@
     }
 
     /* Auth Required Modal Popup */
+    
+    /* Toast Alert for "your create an account not completed" */
+    .account-not-completed-toast {
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: linear-gradient(135deg, #991b1b, #dc2626);
+      color: #ffffff;
+      padding: 12px 22px;
+      border-radius: 14px;
+      box-shadow: 0 10px 30px rgba(220, 38, 38, 0.45), 0 0 0 1px rgba(255, 255, 255, 0.2);
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      z-index: 10002;
+      animation: toastSlideDown 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      max-width: 92%;
+    }
+
+    @keyframes toastSlideDown {
+      from { opacity: 0; transform: translate(-50%, -24px) scale(0.96); }
+      to { opacity: 1; transform: translate(-50%, 0) scale(1); }
+    }
+
+    .toast-icon { font-size: 24px; flex-shrink: 0; }
+    .toast-body { display: flex; flex-direction: column; text-align: left; }
+    .toast-title { font-size: 14.5px; font-weight: 800; letter-spacing: 0.3px; text-transform: uppercase; }
+    .toast-sub { font-size: 12px; color: #fecaca; margin-top: 2px; }
+    .toast-action-btn {
+      background: #ffffff;
+      color: #dc2626;
+      font-weight: 800;
+      font-size: 12.5px;
+      padding: 6px 16px;
+      border-radius: 20px;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: all 0.2s;
+      flex-shrink: 0;
+    }
+    .toast-action-btn:hover { background: #fee2e2; transform: scale(1.05); }
+    .toast-close-x {
+      background: transparent;
+      border: none;
+      color: #ffffff;
+      font-size: 16px;
+      cursor: pointer;
+      opacity: 0.8;
+      padding: 4px;
+      margin-left: 4px;
+    }
+    .toast-close-x:hover { opacity: 1; }
+
     .auth-modal-overlay {
       position: fixed;
       inset: 0;
@@ -1236,9 +1290,9 @@
     <div class="auth-modal-card">
       <button type="button" class="auth-modal-close" id="authModalCloseBtn" aria-label="Close dialog">&times;</button>
       <div class="auth-modal-icon-badge">🔒</div>
-      <h3 class="auth-modal-title" id="authModalTitle">Create an Account to Start</h3>
-      <p class="auth-modal-desc">
-        Before you can start learning, please create your free account or login. Complete your registration to unlock all 12 programming courses, interactive quizzes, and certificates!
+      <h3 class="auth-modal-title" id="authModalTitle">your create an account not completed</h3>
+      <p class="auth-modal-desc" id="authModalDesc">
+        Please complete creating your account to access Popular Courses and unlock interactive learning, quizzes, and certificates!
       </p>
       <div class="auth-modal-buttons">
         <a href="create-account.html" class="btn-modal-create" id="modalCreateAccountBtn">
@@ -1249,6 +1303,17 @@
         </a>
       </div>
     </div>
+  </div>
+
+  <!-- On-Screen Floating Toast Alert -->
+  <div id="accountNotCompletedToast" class="account-not-completed-toast" style="display: none;">
+    <span class="toast-icon">⚠️</span>
+    <div class="toast-body">
+      <span class="toast-title">your create an account not completed</span>
+      <span class="toast-sub">Please create an account or login to access Popular Courses.</span>
+    </div>
+    <a href="create-account.html" class="toast-action-btn">Create Account</a>
+    <button type="button" class="toast-close-x" onclick="document.getElementById('accountNotCompletedToast').style.display='none'">✕</button>
   </div>
 
   <!-- FOOTER -->
@@ -1374,27 +1439,52 @@
       }
     });
 
-    // Check if user is logged in or completed account creation
+    
+    // Check if user has completed account creation or is authenticated
     function isUserAuthenticated() {
       try {
+        if (localStorage.getItem('accountCompleted') === 'true') return true;
+
         const user = JSON.parse(localStorage.getItem('learningUser') || 'null');
-        if (user && (user.email || user.name)) return true;
+        if (user && (user.email || user.name || user.id)) return true;
+
         const lastCreated = JSON.parse(localStorage.getItem('lastCreatedUser') || 'null');
         if (lastCreated && (lastCreated.email || lastCreated.name)) return true;
+
+        const currentUser = JSON.parse(localStorage.getItem('currentUser') || 'null');
+        if (currentUser && (currentUser.email || currentUser.name || currentUser.fullName)) return true;
+
+        const token = localStorage.getItem('token') || localStorage.getItem('authToken');
+        if (token) return true;
       } catch (e) {}
       return false;
     }
 
     const authModal = document.getElementById('authRequiredModal');
     const authModalClose = document.getElementById('authModalCloseBtn');
+    let toastTimeout = null;
 
-    function openAuthModal(targetCourseName) {
+    function showAccountNotCompleted(targetCourseName) {
+      // 1. Show floating toast on display
+      const toast = document.getElementById('accountNotCompletedToast');
+      if (toast) {
+        toast.style.display = 'flex';
+        clearTimeout(toastTimeout);
+        toastTimeout = setTimeout(() => {
+          toast.style.display = 'none';
+        }, 6000);
+      }
+
+      // 2. Open Modal Dialog displaying "your create an account not completed"
       if (authModal) {
-        if (targetCourseName) {
-          const desc = authModal.querySelector('.auth-modal-desc');
-          if (desc) {
-            desc.textContent = `Before you can start learning ${targetCourseName}, please create your account or login. Complete your registration to unlock all 12 programming courses, quizzes, and certificates!`;
-          }
+        const titleEl = document.getElementById('authModalTitle');
+        if (titleEl) {
+          titleEl.textContent = 'your create an account not completed';
+        }
+        const descEl = document.getElementById('authModalDesc');
+        if (descEl) {
+          const cName = targetCourseName ? ' "' + targetCourseName + '"' : '';
+          descEl.textContent = 'To access' + cName + ' in Popular Courses, please complete creating your account. Create your free account now or login!';
         }
         authModal.classList.add('is-active');
       }
@@ -1418,29 +1508,44 @@
       });
     }
 
-    // Intercept course card clicks for new users who haven't completed registration
+    // Intercept Popular Course card clicks for new users who haven't completed registration
     const courseCards = document.querySelectorAll('.course-tile-card');
     courseCards.forEach(card => {
       card.addEventListener('click', (e) => {
         if (!isUserAuthenticated()) {
           e.preventDefault();
+          e.stopPropagation();
           const nameEl = card.querySelector('.course-card-name');
-          const courseName = nameEl ? nameEl.textContent.trim() : 'this course';
-          openAuthModal(courseName);
+          const courseName = nameEl ? nameEl.textContent.trim() : 'Popular Course';
+          showAccountNotCompleted(courseName);
         }
       });
     });
 
-    // Also guard the dropdown search links
+    // Also guard "View All →" button in Popular Courses header
+    const viewAllBtn = document.querySelector('.view-all-roadmap');
+    if (viewAllBtn) {
+      viewAllBtn.addEventListener('click', (e) => {
+        if (!isUserAuthenticated()) {
+          e.preventDefault();
+          e.stopPropagation();
+          showAccountNotCompleted('Popular Courses');
+        }
+      });
+    }
+
+    // Also guard the search dropdown course links
     const dropdownLinks = document.querySelectorAll('#searchDropdown a');
     dropdownLinks.forEach(link => {
       link.addEventListener('click', (e) => {
         if (!isUserAuthenticated()) {
           e.preventDefault();
-          openAuthModal(link.textContent.replace(/[^\w\s\+\#]/g, '').trim());
+          e.stopPropagation();
+          showAccountNotCompleted(link.textContent.replace(/[^\w\s\+\#]/g, '').trim());
         }
       });
     });
+
   </script>
 </body>
 </html>
