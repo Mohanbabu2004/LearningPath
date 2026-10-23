@@ -15,48 +15,202 @@
             background: #050816;
             color: #ffffff;
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Top Header Bar */
+        .dashboard-topbar {
+            height: 64px;
+            background: #080d20;
+            border-bottom: 1px solid #1c244b;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 24px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .topbar-left {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        /* 3 Lines Hamburger Menu Button */
+        .hamburger-btn {
+            background: transparent;
+            border: 1px solid #1c244b;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 38px;
+            height: 38px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            padding: 0;
+            transition: all 0.2s ease;
+        }
+
+        .hamburger-btn:hover {
+            background: #111a3b;
+            border-color: #3b82f6;
+        }
+
+        .hamburger-btn span {
+            display: block;
+            width: 20px;
+            height: 2px;
+            background: #cbd5e1;
+            border-radius: 2px;
+            transition: all 0.2s ease;
+        }
+
+        .brand-link {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: 800;
+            font-size: 19px;
+        }
+
+        .brand-blue {
+            color: #3b82f6;
+        }
+
+        .topbar-search {
+            flex: 1;
+            max-width: 420px;
+            margin: 0 20px;
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .topbar-search .search-icon {
+            position: absolute;
+            left: 12px;
+            font-size: 14px;
+            color: #64748b;
+        }
+
+        .topbar-search-input {
+            width: 100%;
+            background: #0b1126;
+            border: 1px solid #1c244b;
+            border-radius: 20px;
+            padding: 9px 16px 9px 36px;
+            color: #ffffff;
+            font-size: 13.5px;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .topbar-search-input:focus {
+            border-color: #3b82f6;
+        }
+
+        .topbar-right {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .bell-btn {
+            cursor: pointer;
+            font-size: 16px;
+            padding: 6px;
+            border-radius: 50%;
+            transition: background 0.2s;
+        }
+
+        .user-profile-badge {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            padding: 4px 10px;
+            border-radius: 20px;
+            background: #0b1126;
+            border: 1px solid #1c244b;
+        }
+
+        .avatar-circle {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .user-name-text {
+            font-size: 13.5px;
+            font-weight: 600;
+            color: #f1f5f9;
+        }
+
+        .arrow-icon {
+            font-size: 11px;
+            color: #64748b;
         }
 
         .dashboard-container {
             display: flex;
-            min-height: calc(100vh - 90px);
+            min-height: calc(100vh - 64px);
         }
 
-        /* Sidebar Navigation Menu (Screen 5) */
+        /* Sidebar Navigation Menu (Screen 5 - Image 2) */
         .sidebar {
             width: 250px;
             background: #080d20;
             border-right: 1px solid #1c244b;
-            padding: 25px 15px;
+            padding: 20px 14px;
             display: flex;
             flex-direction: column;
-            gap: 8px;
+            gap: 6px;
+            transition: width 0.3s ease, transform 0.3s ease, padding 0.3s ease;
+        }
+
+        .sidebar.collapsed {
+            width: 0;
+            padding: 0;
+            overflow: hidden;
+            border-right: none;
         }
 
         .sidebar a {
             display: flex;
             align-items: center;
             gap: 12px;
-            padding: 12px 16px;
+            padding: 11px 16px;
             color: #a0aec0;
             text-decoration: none;
-            border-radius: 8px;
+            border-radius: 10px;
             font-size: 14px;
-            transition: 0.2s;
+            font-weight: 500;
+            transition: 0.15s ease;
         }
 
-        .sidebar a:hover, .sidebar a.active {
-            background: #6645ff;
+        .sidebar a:hover {
+            background: #111a3b;
             color: #ffffff;
         }
 
-        .sidebar-section-title {
-            color: #64748b;
-            font-size: 11px;
-            font-weight: bold;
-            letter-spacing: 0.05em;
-            margin: 20px 0 5px 12px;
-            text-transform: uppercase;
+        .sidebar a.active {
+            background: #2563eb;
+            color: #ffffff;
+            font-weight: 600;
         }
 
         /* Main Content (Screen 4) */
@@ -76,6 +230,7 @@
         .welcome-header h1 {
             font-size: 28px;
             font-weight: 700;
+            margin: 0;
         }
 
         .welcome-header p {
@@ -101,22 +256,25 @@
         }
 
         .stat-card span {
-            color: #94a3b8;
+            color: #64748b;
             font-size: 12px;
-            display: block;
-            margin-bottom: 8px;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
         }
 
         .stat-card strong {
-            font-size: 26px;
-            color: #6645ff;
+            display: block;
+            font-size: 30px;
+            margin-top: 10px;
+            color: #3b82f6;
         }
 
-        /* Continue Learning Box */
+        /* Continue Learning Card */
         .continue-card {
             background: #0b1126;
             border: 1px solid #1c244b;
-            border-radius: 12px;
+            border-radius: 15px;
             padding: 25px;
             margin-bottom: 35px;
         }
@@ -125,7 +283,6 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 15px;
         }
 
         .continue-info {
@@ -135,18 +292,20 @@
         }
 
         .course-badge {
-            width: 44px;
-            height: 44px;
-            background: #6645ff;
-            border-radius: 10px;
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            background: #103f35;
+            color: #20d99a;
             display: flex;
             align-items: center;
             justify-content: center;
+            font-size: 24px;
             font-weight: bold;
-            font-size: 20px;
         }
 
         .progress-bar-bg {
+            width: 100%;
             height: 10px;
             background: #1b2547;
             border-radius: 10px;
@@ -175,6 +334,12 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            transition: all 0.2s;
+        }
+
+        .path-card:hover {
+            transform: translateY(-2px);
+            border-color: #3b82f6;
         }
 
         .path-card.open {
@@ -202,40 +367,54 @@
             .dashboard-container { flex-direction: column; }
             .sidebar { width: 100%; }
             .stats-grid, .path-grid { grid-template-columns: repeat(2, 1fr); }
+            .topbar-search { display: none; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Header Navbar -->
-    <header class="navbar">
-        <div class="logo">
-            <div class="logo-bars"><span></span><span></span><span></span></div>
-            <span class="logo-white">Learning</span><span class="logo-purple">Path</span>
+    <!-- Header Navbar (Clean Top Bar with 3 Lines Hamburger Menu - Matching Image 1 & 2) -->
+    <header class="dashboard-topbar">
+        <div class="topbar-left">
+            <button id="sidebarToggleBtn" class="hamburger-btn" aria-label="Toggle Menu (3 lines)" title="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <a href="/" class="brand-link">
+                <span style="font-size: 22px;">🎓</span>
+                <span><span class="brand-blue">Learning</span>Path</span>
+            </a>
         </div>
-        <div class="user-name">Welcome, Mohan!</div>
+        <div class="topbar-search">
+            <span class="search-icon">🔍</span>
+            <input type="text" placeholder="Search courses, lessons, projects..." class="topbar-search-input">
+        </div>
+        <div class="topbar-right">
+            <span class="bell-btn" title="Notifications">🔔</span>
+            <div class="user-profile-badge" onclick="location.href='profile.html'">
+                <div class="avatar-circle">M</div>
+                <span class="user-name-text">Mohan</span>
+                <span class="arrow-icon">➔</span>
+            </div>
+        </div>
     </header>
 
     <div class="dashboard-container">
 
-        <!-- Navigation Sidebar (Screen 5) -->
-        <aside class="sidebar">
+        <!-- Navigation Sidebar (Screen 5 - Exact 8 Menu Items Matching Image 2) -->
+        <aside class="sidebar" id="dashboardSidebar">
             <a href="home.html" class="active">🏠 Home</a>
             <a href="../learning/roadmap.html">🗺️ Roadmap</a>
             <a href="../learning/c.html">▶ Continue Learning</a>
             <a href="../quiz/select-language.html">📝 Quiz</a>
             <a href="../practice/practice.html">💻 Practice Coding</a>
-            <a href="../projects/projects.html">🚀 Projects</a>
-
-            <div class="sidebar-section-title">Settings</div>
-            <a href="profile.html">👤 Profile</a>
-            <a href="settings.html">🎨 Appearance</a>
-            <a href="notifications.html">🔔 Notifications</a>
-            <a href="../admin/dashboard.html">🛡️ Admin Portal</a>
-            <a href="../auth/login.html" style="color: #ff5268;">🚪 Logout</a>
+            <a href="../projects/projects.html">📁 Projects</a>
+            <a href="#ai-tutor" onclick="alert('AI Tutor is active! Ask any coding question.')">🤖 AI Tutor</a>
+            <a href="settings.html">⚙️ Settings</a>
+            <a href="../auth/login.html" style="color: #ff5268; margin-top: auto;">🚪 Logout</a>
         </aside>
 
-        <!-- Main Dashboard (Screen 4) -->
         <main class="main-dashboard">
 
             <div class="welcome-header">
@@ -388,6 +567,17 @@
                     fill.style.width = `${quizResult.percentage}%`;
                     text.textContent = `${quizResult.percentage}%`;
                 }
+            }
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const toggleBtn = document.getElementById("sidebarToggleBtn");
+            const sidebar = document.getElementById("dashboardSidebar");
+            if (toggleBtn && sidebar) {
+                toggleBtn.addEventListener("click", () => {
+                    sidebar.classList.toggle("collapsed");
+                });
             }
         });
     </script>
