@@ -48,6 +48,56 @@ function updateTimerDisplay() {
    QUESTION BANK
 ===================================== */
 
+
+/* =====================================
+   LANGUAGE & LEVEL NORMALIZERS
+===================================== */
+function normalizeLanguage(lang) {
+    if (!lang) return "C";
+    const cleaned = lang.trim().toUpperCase();
+    if (cleaned === "C++" || cleaned === "CPP") return "CPP";
+    if (cleaned === "C") return "C";
+    if (cleaned === "PYTHON") return "Python";
+    if (cleaned === "TYPESCRIPT" || cleaned === "TS") return "TypeScript";
+    if (cleaned === "JAVASCRIPT" || cleaned === "JS") return "JavaScript";
+    if (cleaned === "JAVA") return "Java";
+    if (cleaned === "R") return "R";
+    if (cleaned === "CUDA") return "CUDA";
+    if (cleaned === "RUBY") return "Ruby";
+    if (cleaned === "PHP") return "PHP";
+    if (cleaned === "HTML") return "HTML";
+    if (cleaned === "CSS") return "CSS";
+    return lang;
+}
+
+function getLanguageDisplayName(lang) {
+    const norm = normalizeLanguage(lang);
+    const map = {
+        "CPP": "C++",
+        "HTML": "HTML",
+        "CSS": "CSS",
+        "PHP": "PHP",
+        "CUDA": "CUDA",
+        "JavaScript": "JavaScript",
+        "TypeScript": "TypeScript",
+        "Python": "Python",
+        "Java": "Java",
+        "Ruby": "Ruby",
+        "R": "R",
+        "C": "C"
+    };
+    return map[norm] || norm;
+}
+
+function normalizeLevel(lvl) {
+    if (!lvl) return "Beginner";
+    const l = lvl.trim().toLowerCase();
+    if (l.startsWith("beg") || l.startsWith("basic")) return "Beginner";
+    if (l.startsWith("int") || l.startsWith("med")) return "Intermediate";
+    if (l.startsWith("adv")) return "Advanced";
+    return "Beginner";
+}
+
 const questionBank = window.questionBank || {};
 
 
@@ -56,20 +106,22 @@ const questionBank = window.questionBank || {};
 ===================================== */
 
 function createQuestions() {
+    const normLang = normalizeLanguage(language);
+    const normLevel = normalizeLevel(level);
 
     const selectedQuestions =
-        questionBank[language]?.[level];
+        questionBank[normLang]?.[normLevel] || questionBank[language]?.[level];
 
     if (!selectedQuestions) {
         alert(
-            `${language} - ${level} questions are not available yet.`
+            `${getLanguageDisplayName(normLang)} - ${normLevel} questions are not available yet.`
         );
         return false;
     }
 
     if (selectedQuestions.length !== 100) {
         alert(
-            `${language} - ${level} must contain exactly 100 questions.`
+            `${getLanguageDisplayName(normLang)} - ${normLevel} must contain exactly 100 questions (found ${selectedQuestions.length}).`
         );
         return false;
     }
@@ -128,7 +180,7 @@ function showQuestion() {
 
     const quizTitle = document.getElementById("quizTitle");
     if (quizTitle) {
-        quizTitle.textContent = `${language} Programming – ${level}`;
+        quizTitle.textContent = `${getLanguageDisplayName(language)} Programming – ${level}`;
     }
 
     const currentNumber = document.getElementById("currentNumber");
@@ -692,73 +744,82 @@ document
    LEVEL SELECTION & LOCK STATUS
 ===================================== */
 
+/* =====================================
+   LEVEL SELECTION & ALL 12 LANGUAGES
+===================================== */
+
 function updateSelectScreenLockState() {
+    const normLang = normalizeLanguage(language);
     const progress = JSON.parse(localStorage.getItem("learningPathProgress")) || {};
-    const langProgress = progress[language] || {};
+    const langProgress = progress[normLang] || progress[language] || {};
     const results = langProgress.result || {};
 
-    const intBtn = document.querySelector('.level[data-level="Intermediate"]');
-    const advBtn = document.querySelector('.level[data-level="Advanced"]');
+    document.querySelectorAll(".level").forEach(btn => {
+        const lvl = normalizeLevel(btn.dataset.level);
+        const passed = results[lvl] === "PASS";
+        const score = langProgress[lvl];
 
-    if (intBtn) {
-        if (results.Beginner === "PASS") {
-            intBtn.classList.remove("locked");
-            intBtn.innerHTML = "🔓 Intermediate";
+        if (passed) {
+            btn.classList.add("passed");
+            btn.setAttribute("title", `Passed with score ${score || 0}%`);
         } else {
-            intBtn.classList.add("locked");
-            intBtn.innerHTML = "🔒 Intermediate";
+            btn.classList.remove("passed");
+            btn.removeAttribute("title");
         }
+    });
+}
+
+function initQuizSelection() {
+    const params = new URLSearchParams(window.location.search);
+    if (params.has("lang") || params.has("language")) {
+        const rawLang = params.get("lang") || params.get("language");
+        const normLang = normalizeLanguage(rawLang);
+        language = normLang;
+        document.querySelectorAll(".language").forEach(btn => {
+            if (normalizeLanguage(btn.dataset.language) === normLang) {
+                btn.classList.add("selected");
+            } else {
+                btn.classList.remove("selected");
+            }
+        });
     }
 
-    if (advBtn) {
-        if (results.Intermediate === "PASS") {
-            advBtn.classList.remove("locked");
-            advBtn.innerHTML = "🔓 Advanced";
-        } else {
-            advBtn.classList.add("locked");
-            advBtn.innerHTML = "🔒 Advanced";
-        }
+    if (params.has("level")) {
+        const rawLevel = params.get("level");
+        const normLevel = normalizeLevel(rawLevel);
+        level = normLevel;
+        document.querySelectorAll(".level").forEach(btn => {
+            if (normalizeLevel(btn.dataset.level) === normLevel) {
+                btn.classList.add("selected");
+            } else {
+                btn.classList.remove("selected");
+            }
+        });
     }
+
+    updateSelectScreenLockState();
 }
 
 // Language Selection Listeners for All 12 Languages
 document.querySelectorAll(".language").forEach(btn => {
     btn.addEventListener("click", () => {
-        const langCode = btn.dataset.language;
+        const langCode = normalizeLanguage(btn.dataset.language);
         language = langCode;
         document.querySelectorAll(".language").forEach(b => b.classList.remove("selected"));
         btn.classList.add("selected");
-        
-        // Reset level to Beginner on language change
-        level = "Beginner";
-        document.querySelectorAll(".level").forEach(b => b.classList.remove("selected"));
-        const begBtn = document.querySelector('.level[data-level="Beginner"]');
-        if (begBtn) begBtn.classList.add("selected");
-        
         updateSelectScreenLockState();
     });
 });
 
+// Level Selection Listeners (Basics to Advanced — 100 Questions Each)
 document.querySelectorAll(".level").forEach(btn => {
     btn.addEventListener("click", () => {
-        const targetLevel = btn.dataset.level;
-        const progress = JSON.parse(localStorage.getItem("learningPathProgress")) || {};
-        const results = progress[language]?.result || {};
-
-        const isUnlocked = targetLevel === "Beginner" ||
-            (targetLevel === "Intermediate" && results.Beginner === "PASS") ||
-            (targetLevel === "Advanced" && results.Intermediate === "PASS");
-
-        if (!isUnlocked) {
-            alert(`You must score at least 35 marks in ${targetLevel === "Intermediate" ? "Beginner" : "Intermediate"} to unlock ${targetLevel}.`);
-            return;
-        }
-
+        const targetLevel = normalizeLevel(btn.dataset.level);
         level = targetLevel;
         document.querySelectorAll(".level").forEach(b => b.classList.remove("selected"));
         btn.classList.add("selected");
     });
 });
 
-document.addEventListener("DOMContentLoaded", updateSelectScreenLockState);
+document.addEventListener("DOMContentLoaded", initQuizSelection);
 
