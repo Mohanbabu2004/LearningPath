@@ -350,7 +350,7 @@
       background: #080d20;
       border-right: 1px solid #1a2348;
       box-shadow: 10px 0 35px rgba(0, 0, 0, 0.55);
-      padding: 18px 12px 20px;
+      padding: 24px 14px 20px;
       display: flex;
       flex-direction: column;
       gap: 6px;
@@ -359,6 +359,14 @@
       transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
       box-sizing: border-box;
       overflow-y: auto;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+
+    .nav-drawer-menu::-webkit-scrollbar {
+      display: none;
+      width: 0;
+      height: 0;
     }
 
     .nav-drawer-menu.is-open {
@@ -1236,13 +1244,6 @@
 
         <!-- Hamburger Sidebar Menu -->
         <aside id="navDrawerMenu" class="nav-drawer-menu" role="menu">
-          <div class="drawer-header">
-            <a href="/" class="drawer-brand">
-              <span style="font-size: 20px;">🎓</span>
-              <span><span class="drawer-brand-blue">Learning</span>Path</span>
-            </a>
-            <button id="drawerCloseBtn" class="drawer-close-btn" aria-label="Close menu">&times;</button>
-          </div>
           <div class="drawer-links-list">
             <a href="/" class="drawer-link active" role="menuitem">
               <span class="drawer-link-icon">🏠</span>
