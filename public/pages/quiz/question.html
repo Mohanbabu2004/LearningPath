@@ -147,84 +147,88 @@
         </section>
 
 
-<!-- ================= RESULT SCREEN ================= -->
+        <!-- ================= RESULT SCREEN (SCREEN 12) ================= -->
 
-        <section id="resultScreen" class="screen hidden">
+        <section id="resultScreen" class="screen hidden quiz-screen-12-container">
 
-            <div id="resultIcon">🏆</div>
-
-            <h1>QUIZ COMPLETED!</h1>
-
-            <h2 id="resultTitle"></h2>
-
-            <div class="result-grid">
-
-                <div>
-                    <span>Total Questions</span>
-                    <strong>100</strong>
-                </div>
-
-                <div>
-                    <span>Total Marks</span>
-                    <strong>100</strong>
-                </div>
-
-                <div>
-                    <span>Pass Marks</span>
-                    <strong>35</strong>
-                </div>
-
-                <div>
-                    <span>Your Score</span>
-                    <strong id="score"></strong>
-                </div>
-
-                <div class="correct-box">
-                    <span>Correct</span>
-                    <strong id="correct"></strong>
-                </div>
-
-                <div class="wrong-box">
-                    <span>Incorrect</span>
-                    <strong id="incorrect"></strong>
-                </div>
-
-                <div>
-                    <span>Percentage</span>
-                    <strong id="percentage"></strong>
-                </div>
-
+            <!-- Screen 12 Topbar: 12 Badge & Quiz Result Title -->
+            <div class="screen-12-topbar">
+                <div class="screen-12-badge">12</div>
+                <div class="screen-12-title" id="screen12HeaderTitle">Quiz Result (Pass)</div>
             </div>
 
-            <div id="passFail"></div>
+            <!-- Screen 12 Main White Card -->
+            <div class="screen-12-card">
 
-            <div class="progress-section">
-
-                <h3>Your Progress</h3>
-
-                <div class="big-progress">
-                    <div id="finalProgress"></div>
+                <!-- Celebratory Trophy & Confetti -->
+                <div class="screen-12-trophy-box">
+                    <div class="confetti-particles">✨ 🌟 🎊 ⭐ 🎈</div>
+                    <div class="screen-12-trophy" id="resultIcon">🏆</div>
+                    <h1 class="screen-12-completed-title" id="screen12MainTitle">QUIZ COMPLETED!</h1>
+                    <h2 class="screen-12-course-title" id="resultTitle">C Programming - Beginner</h2>
                 </div>
 
-                <strong id="progressText"></strong>
+                <!-- 4 Info Metrics Grid -->
+                <div class="screen-12-stats-row">
+                    <div class="stat-mini-pill">
+                        <span class="stat-mini-label">Total Questions</span>
+                        <strong class="stat-mini-val" id="totalQuestionsVal">100</strong>
+                    </div>
+                    <div class="stat-mini-pill">
+                        <span class="stat-mini-label">Total Marks</span>
+                        <strong class="stat-mini-val" id="totalMarksVal">100</strong>
+                    </div>
+                    <div class="stat-mini-pill">
+                        <span class="stat-mini-label">Pass Marks</span>
+                        <strong class="stat-mini-val" id="passMarksVal">35</strong>
+                    </div>
+                    <div class="stat-mini-pill">
+                        <span class="stat-mini-label">Percentage</span>
+                        <strong class="stat-mini-val" id="percentageVal">72%</strong>
+                    </div>
+                </div>
 
-            </div>
+                <!-- 2 Big Colorful Metric Cards: Correct (Green) & Incorrect (Red) -->
+                <div class="screen-12-metrics-row">
+                    <div class="metric-card metric-correct">
+                        <span class="metric-card-label">Correct</span>
+                        <strong class="metric-card-val" id="correct">72</strong>
+                    </div>
+                    <div class="metric-card metric-incorrect">
+                        <span class="metric-card-label">Incorrect</span>
+                        <strong class="metric-card-val" id="incorrect">28</strong>
+                    </div>
+                </div>
 
-            <div id="nextLevel"></div>
+                <!-- Result Status Banner -->
+                <div id="screen12Banner" class="screen-12-banner pass">
+                    <div class="banner-title" id="screen12BannerTitle">RESULT: PASS</div>
+                    <div class="banner-subtitle" id="screen12BannerSubtitle">Congratulations! You passed the quiz.</div>
+                </div>
 
-            <div class="result-buttons">
+                <!-- Hidden elements for backward compatibility -->
+                <span id="score" style="display:none;"></span>
+                <span id="percentage" style="display:none;"></span>
+                <div id="passFail" style="display:none;"></div>
+                <div id="finalProgress" style="display:none;"></div>
+                <div id="progressText" style="display:none;"></div>
+                <div id="nextLevel" style="display:none;"></div>
 
-                <button id="answersBtn" class="primary">
-                    View All 100 Answers
-                </button>
-
-                <button id="retryBtn">
-                    Retry Quiz
-                </button>
-
-                <button id="nextLevelBtn" class="primary">
-                    Next Level →
-                </button>
+                <!-- Action Buttons: View Answers & Continue Quiz / Next Level -->
+                <div class="screen-12-action-buttons">
+                    <button id="answersBtn" type="button" class="btn-view-answers">
+                        View All Answers
+                    </button>
+                    <button id="continueQuizBtn" type="button" class="btn-continue-quiz hidden">
+                        Continue Quiz →
+                    </button>
+                    <button id="nextLevelBtn" type="button" class="btn-next-level">
+                        Next Level →
+                    </button>
+                    <button id="retryBtn" type="button" class="btn-retry-quiz hidden">
+                        Retry Quiz
+                    </button>
+                </div>
 
             </div>
 

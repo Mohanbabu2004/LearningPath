@@ -10,6 +10,12 @@ let userAnswers = [];
 let questions = [];
 
 /* =====================================
+   CHECKPOINT MANAGEMENT (EVERY 10 QUESTIONS)
+===================================== */
+let isCheckpointMode = false;
+let checkpointCompletedCount = 0;
+
+/* =====================================
    SCREEN 10 COUNTDOWN TIMER (60 MINUTES)
 ===================================== */
 let timerInterval = null;
@@ -245,11 +251,16 @@ function showQuestion() {
 document
     .getElementById("nextBtn")
     .addEventListener("click", () => {
+        const questionNumber = currentQuestion + 1;
+
+        // Checkpoint: trigger every 10 questions (10, 20, 30, ... 90)
+        if (questionNumber % 10 === 0 && questionNumber < TOTAL_QUESTIONS) {
+            showCheckpointResult(questionNumber);
+            return;
+        }
 
         if (currentQuestion < TOTAL_QUESTIONS - 1) {
-
             currentQuestion++;
-
             showQuestion();
         }
     });
@@ -312,43 +323,83 @@ document
     .addEventListener("click", finishQuiz);
 
 
+function showCheckpointResult(completedCount) {
+    isCheckpointMode = true;
+    checkpointCompletedCount = completedCount;
+
+    let score = 0;
+    let correct = 0;
+    let incorrect = 0;
+
+    for (let i = 0; i < completedCount; i++) {
+        if (userAnswers[i] === questions[i].answer) {
+            score++;
+            correct++;
+        } else {
+            incorrect++;
+        }
+    }
+
+    const percentage = Math.round((score / completedCount) * 100);
+    const passMarksForChunk = Math.ceil(completedCount * (PASS_MARKS / 100));
+    const passed = score >= passMarksForChunk;
+
+    const checkpointResult = {
+        isCheckpoint: true,
+        checkpointNum: completedCount / 10,
+        totalCheckpoints: TOTAL_QUESTIONS / 10,
+        completedCount,
+        totalQuestions: completedCount,
+        totalMarks: completedCount,
+        passMarks: passMarksForChunk,
+        score,
+        correct,
+        incorrect,
+        percentage,
+        passed,
+        language,
+        level,
+        answers: questions.slice(0, completedCount).map((q, i) => ({
+            question: q.question,
+            yourAnswer: userAnswers[i],
+            correctAnswer: q.answer,
+            marks: userAnswers[i] === q.answer ? 1 : 0,
+            status: userAnswers[i] === q.answer ? "Correct" : "Incorrect"
+        }))
+    };
+
+    localStorage.setItem("learningPathQuizResult", JSON.stringify(checkpointResult));
+    renderScreen12Result(checkpointResult);
+}
+
 function finishQuiz() {
+    clearInterval(timerInterval);
+    isCheckpointMode = false;
+    checkpointCompletedCount = TOTAL_QUESTIONS;
 
     let score = 0;
     let correct = 0;
     let incorrect = 0;
 
     questions.forEach((question, index) => {
-
-        const userAnswer =
-            userAnswers[index];
-
-        if (userAnswer === question.answer) {
-
+        if (userAnswers[index] === question.answer) {
             score++;
             correct++;
-
         } else {
-
             incorrect++;
         }
     });
 
-    const percentage = score;
-
+    const percentage = Math.round((score / TOTAL_QUESTIONS) * 100);
     const passed = score >= PASS_MARKS;
 
-    /*
-       IMPORTANT:
-       Wrong answer = 0 marks.
-       Negative marking లేదు.
-    */
-
     const result = {
+        isCheckpoint: false,
+        completedCount: TOTAL_QUESTIONS,
         language,
         level,
         totalQuestions: TOTAL_QUESTIONS,
-        totalMarks: 100,
+        totalMarks: TOTAL_QUESTIONS,
         passMarks: PASS_MARKS,
         score,
         correct,
@@ -359,167 +410,126 @@ function finishQuiz() {
             question: question.question,
             yourAnswer: userAnswers[index],
             correctAnswer: question.answer,
-            marks:
-                userAnswers[index] === question.answer
-                    ? 1
-                    : 0,
-            status:
-                userAnswers[index] === question.answer
-                    ? "Correct"
-                    : "Incorrect"
+            marks: userAnswers[index] === question.answer ? 1 : 0,
+            status: userAnswers[index] === question.answer ? "Correct" : "Incorrect"
         }))
     };
 
-
-    /*
-       Save result.
-       Later backend APIకి పంపవచ్చు.
-    */
-
-    localStorage.setItem(
-        "learningPathQuizResult",
-        JSON.stringify(result)
-    );
-
+    localStorage.setItem("learningPathQuizResult", JSON.stringify(result));
     saveQuizProgress(result);
     sendQuizToBackend(result);
 
-
-    showResult(result);
+    renderScreen12Result(result);
 }
 
-function sendQuizToBackend(result) {
-    fetch("/api/quiz/submit", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-            userId: "student_1",
-            quizId: `${result.language}_${result.level}`,
-            ...result
-        })
-    })
-    .then(res => res.json())
-    .then(data => console.log("Backend Quiz API Response:", data))
-    .catch(err => console.warn("Backend Quiz Sync (Offline Mode):", err));
-}
+function renderScreen12Result(result) {
+    document.getElementById("quizScreen").classList.add("hidden");
+    document.getElementById("answersScreen").classList.add("hidden");
+    document.getElementById("resultScreen").classList.remove("hidden");
 
-
-/* =====================================
-   SAVE QUIZ PROGRESS
-===================================== */
-
-function saveQuizProgress(result) {
-
-    const progress =
-        JSON.parse(
-            localStorage.getItem("learningPathProgress")
-        ) || {};
-
-    if (!progress[language]) {
-        progress[language] = {
-            Beginner: 0,
-            Intermediate: 0,
-            Advanced: 0
-        };
+    // Header Title
+    const headerTitle = document.getElementById("screen12HeaderTitle");
+    if (headerTitle) {
+        if (result.isCheckpoint) {
+            headerTitle.textContent = `Quiz Result (Checkpoint ${result.checkpointNum}/${result.totalCheckpoints})`;
+        } else {
+            headerTitle.textContent = `Quiz Result (${result.passed ? 'Pass' : 'Fail'})`;
+        }
     }
 
-    // Score becomes progress percentage
-    progress[language][level] =
-        result.percentage;
-
-    // Save pass/fail
-    if (!progress[language].result) {
-        progress[language].result = {};
+    // Main Card Title
+    const mainTitle = document.getElementById("screen12MainTitle");
+    if (mainTitle) {
+        if (result.isCheckpoint) {
+            mainTitle.textContent = `${result.completedCount} QUESTIONS COMPLETED!`;
+        } else {
+            mainTitle.textContent = "QUIZ COMPLETED!";
+        }
     }
 
-    progress[language].result[level] =
-        result.passed ? "PASS" : "FAIL";
+    // Course Title
+    const courseTitle = document.getElementById("resultTitle");
+    if (courseTitle) {
+        courseTitle.textContent = `${getLanguageDisplayName(result.language)} Programming - ${result.level}`;
+    }
 
-    localStorage.setItem(
-        "learningPathProgress",
-        JSON.stringify(progress)
-    );
-}
+    // 4 Metrics
+    const totalQEl = document.getElementById("totalQuestionsVal");
+    if (totalQEl) totalQEl.textContent = result.totalQuestions;
 
+    const totalMarksEl = document.getElementById("totalMarksVal");
+    if (totalMarksEl) totalMarksEl.textContent = result.totalMarks;
 
-/* =====================================
-   RESULT
-===================================== */
+    const passMarksEl = document.getElementById("passMarksVal");
+    if (passMarksEl) passMarksEl.textContent = result.passMarks;
 
-function showResult(result) {
+    const pctEl = document.getElementById("percentageVal");
+    if (pctEl) pctEl.textContent = `${result.percentage}%`;
 
-    document
-        .getElementById("quizScreen")
-        .classList.add("hidden");
+    // 2 Big Metrics
+    const correctEl = document.getElementById("correct");
+    if (correctEl) correctEl.textContent = result.correct;
 
-    document
-        .getElementById("resultScreen")
-        .classList.remove("hidden");
+    const incorrectEl = document.getElementById("incorrect");
+    if (incorrectEl) incorrectEl.textContent = result.incorrect;
 
+    // Status Banner
+    const banner = document.getElementById("screen12Banner");
+    const bannerTitle = document.getElementById("screen12BannerTitle");
+    const bannerSubtitle = document.getElementById("screen12BannerSubtitle");
 
-    document.getElementById("resultTitle").textContent =
-        `${result.language} Programming – ${result.level}`;
+    if (banner && bannerTitle && bannerSubtitle) {
+        if (result.passed) {
+            banner.className = "screen-12-banner pass";
+            bannerTitle.textContent = "RESULT: PASS";
+            bannerSubtitle.textContent = result.isCheckpoint
+                ? `Great job! You answered ${result.correct} out of ${result.completedCount} correctly.`
+                : "Congratulations! You passed the quiz.";
+        } else {
+            banner.className = "screen-12-banner fail";
+            bannerTitle.textContent = result.isCheckpoint ? "RESULT: KEEP GOING" : "RESULT: FAIL";
+            bannerSubtitle.textContent = result.isCheckpoint
+                ? `You answered ${result.correct} out of ${result.completedCount} correctly. Push forward!`
+                : "Keep practicing! You need at least 35% to pass.";
+        }
+    }
 
+    // Buttons Visibility
+    const answersBtn = document.getElementById("answersBtn");
+    const continueBtn = document.getElementById("continueQuizBtn");
+    const nextLevelBtn = document.getElementById("nextLevelBtn");
+    const retryBtn = document.getElementById("retryBtn");
 
-    document.getElementById("score").textContent =
-        `${result.score} / 100`;
+    if (answersBtn) {
+        answersBtn.textContent = result.isCheckpoint
+            ? `View Answers (1-${result.completedCount})`
+            : "View All Answers";
+    }
 
-    document.getElementById("correct").textContent =
-        result.correct;
-
-    document.getElementById("incorrect").textContent =
-        result.incorrect;
-
-    document.getElementById("percentage").textContent =
-        `${result.percentage}%`;
-
-
-    const passFail =
-        document.getElementById("passFail");
-
-    if (result.passed) {
-
-        passFail.className = "pass";
-
-        passFail.innerHTML =
-            "✅ PASS — Congratulations!";
-
-        document.getElementById("resultIcon")
-            .textContent = "🏆";
-
-        document.getElementById("nextLevel")
-            .innerHTML =
-            "<h2>🔓 Next Level Unlocked</h2>";
-
-        document.getElementById("nextLevelBtn")
-            .classList.remove("hidden");
-
+    if (result.isCheckpoint) {
+        if (continueBtn) {
+            continueBtn.classList.remove("hidden");
+            const nextStart = result.completedCount + 1;
+            const nextEnd = Math.min(result.completedCount + 10, TOTAL_QUESTIONS);
+            continueBtn.textContent = `Continue Quiz (Q${nextStart}-${nextEnd}) →`;
+        }
+        if (nextLevelBtn) nextLevelBtn.classList.add("hidden");
+        if (retryBtn) retryBtn.classList.add("hidden");
     } else {
-
-        passFail.className = "fail";
-
-        passFail.innerHTML =
-            "❌ FAIL — You need at least 35 marks.";
-
-        document.getElementById("resultIcon")
-            .textContent = "❌";
-
-        document.getElementById("nextLevel")
-            .innerHTML =
-            "<h2>🔒 Next Level Locked</h2>";
-
-        document.getElementById("nextLevelBtn")
-            .classList.add("hidden");
+        if (continueBtn) continueBtn.classList.add("hidden");
+        if (result.passed) {
+            if (nextLevelBtn) nextLevelBtn.classList.remove("hidden");
+            if (retryBtn) retryBtn.classList.add("hidden");
+        } else {
+            if (nextLevelBtn) nextLevelBtn.classList.add("hidden");
+            if (retryBtn) retryBtn.classList.remove("hidden");
+        }
     }
+}
 
-
-    document.getElementById("finalProgress")
-        .style.width =
-        `${result.percentage}%`;
-
-    document.getElementById("progressText")
-        .textContent =
-        `${result.percentage}% Progress`;
+// Global showResult alias for backwards compatibility
+function showResult(result) {
+    renderScreen12Result(result);
 }
 
 
@@ -823,3 +833,16 @@ document.querySelectorAll(".level").forEach(btn => {
 
 document.addEventListener("DOMContentLoaded", initQuizSelection);
 
+
+// Attach continueQuizBtn handler if not present
+const continueQuizBtnEl = document.getElementById("continueQuizBtn");
+if (continueQuizBtnEl) {
+    continueQuizBtnEl.onclick = () => {
+        document.getElementById("resultScreen").classList.add("hidden");
+        document.getElementById("answersScreen").classList.add("hidden");
+        document.getElementById("quizScreen").classList.remove("hidden");
+
+        currentQuestion = checkpointCompletedCount;
+        showQuestion();
+    };
+}
