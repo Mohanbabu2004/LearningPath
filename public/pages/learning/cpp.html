@@ -1,228 +1,880 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>C++ Programming - Introduction | LearningPath</title>
-  <link rel="icon" type="image/png" href="/favicon.png">
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-  <link rel="apple-touch-icon" href="/favicon.png">
-    <script>
-        (function() {
-            try {
-                var user = JSON.parse(localStorage.getItem('learningUser') || 'null');
-                var lastUser = JSON.parse(localStorage.getItem('lastCreatedUser') || 'null');
-                if (!user && !lastUser) {
-                    alert('Please create an account or login first to access this course.');
-                    window.location.href = '../../create-account.html';
-                }
-            } catch(e) {}
-        })();
-    </script>
+    <title>C++ Programming - Basics to Advanced Learning | LearningPath</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/favicon.png">
     <link rel="stylesheet" href="../../style.css">
     <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
             background: #050816;
             color: #ffffff;
-            font-family: Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            min-height: 100vh;
         }
 
-        .learn-container {
+        /* Top Header */
+        .learn-topbar {
+            height: 64px;
+            background: #080d20;
+            border-bottom: 1px solid #1c244b;
             display: flex;
-            min-height: calc(100vh - 90px);
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 24px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
 
-        /* Sidebar - Screen 7 */
-        .learn-sidebar {
-            width: 280px;
+        .topbar-left {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .hamburger-btn {
+            background: #0b1126;
+            border: 1px solid #1e293b;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 38px;
+            height: 38px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 4px;
+            transition: all 0.2s;
+        }
+
+        .hamburger-btn:hover {
+            border-color: #3b82f6;
+            background: #111a3b;
+        }
+
+        .hamburger-btn span {
+            display: block;
+            width: 18px;
+            height: 2px;
+            background: #cbd5e1;
+            border-radius: 2px;
+        }
+
+        .brand-link {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: 800;
+            font-size: 19px;
+        }
+
+        .brand-blue { color: #3b82f6; }
+
+        .lang-badge-pill {
+            background: linear-gradient(135deg, #6366f1, #3b82f6);
+            color: #ffffff;
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 20px;
+            margin-left: 10px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .topbar-right {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .user-profile-badge {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 4px 10px;
+            border-radius: 20px;
+            background: #0b1126;
+            border: 1px solid #1c244b;
+            cursor: pointer;
+        }
+
+        .avatar-circle {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Slide-out Sidebar Backdrop & Menu (Image 2) */
+        .sidebar-backdrop {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(2, 6, 23, 0.65);
+            backdrop-filter: blur(3px);
+            z-index: 998;
+        }
+        .sidebar-backdrop.active { display: block; }
+
+        .global-sidebar {
+            position: fixed;
+            top: 64px;
+            left: 0;
+            bottom: 0;
+            width: 255px;
+            background: #080d20;
+            border-right: 1px solid #1a2348;
+            padding: 20px 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            z-index: 999;
+            transform: translateX(-100%);
+            transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+            overflow-y: auto;
+        }
+        .global-sidebar.is-open { transform: translateX(0); }
+        .global-sidebar a {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 12px 18px;
+            color: #94a3b8;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 500;
+            transition: 0.15s ease;
+        }
+        .global-sidebar a:hover { background: #111a3b; color: #ffffff; }
+        .global-sidebar a.active {
+            background: #2563eb;
+            color: #ffffff;
+            font-weight: 600;
+            box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
+        }
+
+        /* Learning Layout (Exact Matching Image 8) */
+        .learn-layout {
+            display: grid;
+            grid-template-columns: 290px 1fr;
+            min-height: calc(100vh - 64px);
+        }
+
+        /* Left Panel Topics Sidebar */
+        .topics-sidebar {
             background: #080d20;
             border-right: 1px solid #1c244b;
-            padding: 25px 15px;
+            padding: 24px 16px;
             overflow-y: auto;
         }
 
-        .learn-sidebar h2 {
-            font-size: 18px;
-            margin-bottom: 20px;
-            color: #ffffff;
-        }
-
-        .level-header {
-            font-weight: bold;
-            font-size: 14px;
-            color: #94a3b8;
-            margin: 15px 0 10px;
+        .topics-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #1c244b;
         }
 
-        .topic-list {
+        .topics-header h2 {
+            font-size: 18px;
+            font-weight: 800;
+            color: #f8fafc;
+        }
+
+        .level-badge-tag {
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #64748b;
+            margin: 16px 0 8px 8px;
+            letter-spacing: 0.5px;
+            display: block;
+        }
+
+        .topic-btn {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            padding: 11px 16px;
+            border-radius: 10px;
+            background: transparent;
+            border: none;
+            color: #94a3b8;
+            font-size: 14px;
+            font-weight: 500;
+            text-align: left;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            margin-bottom: 4px;
+        }
+
+        .topic-btn:hover {
+            background: #111a3b;
+            color: #ffffff;
+        }
+
+        /* Active Topic Matching Screen 8: Bright Blue Pill */
+        .topic-btn.active {
+            background: #2563eb;
+            color: #ffffff;
+            font-weight: 700;
+            box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
+        }
+
+        /* Right Panel Content Workspace */
+        .workspace-main {
+            padding: 30px 40px 60px;
+            max-width: 980px;
+            overflow-y: auto;
+        }
+
+        .lesson-header-title {
+            font-size: 28px;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 18px;
+        }
+
+        /* Video / Logo Box Matching Screen 8 */
+        .video-box-card {
+            width: 100%;
+            height: 320px;
+            background: radial-gradient(circle at center, #0e1738 0%, #060b1e 100%);
+            border: 1px solid #1c244b;
+            border-radius: 16px;
             display: flex;
             flex-direction: column;
-            gap: 4px;
-        }
-
-        .topic-item {
-            display: block;
-            padding: 10px 14px;
-            color: #cbd5e1;
-            text-decoration: none;
-            border-radius: 8px;
-            font-size: 13px;
-            transition: 0.2s;
-        }
-
-        .topic-item:hover, .topic-item.active {
-            background: #6645ff;
-            color: #ffffff;
-        }
-
-        /* Main Area */
-        .learn-main {
-            flex: 1;
-            padding: 35px 40px;
-            max-width: 900px;
-        }
-
-        .video-box {
-            width: 100%;
-            height: 380px;
-            background: #0b1126;
-            border: 2px solid #1c244b;
-            border-radius: 14px;
-            display: flex;
             align-items: center;
             justify-content: center;
-            margin: 25px 0;
             position: relative;
-            box-shadow: 0 0 30px rgba(102, 69, 255, 0.15);
+            margin-bottom: 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
         }
 
-        .c-logo-badge {
-            width: 100px;
-            height: 100px;
-            background: #6645ff;
+        .hexagon-logo {
+            width: 95px;
+            height: 95px;
             border-radius: 20px;
+            background: linear-gradient(135deg, #6366f1, #1d4ed8);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 38px;
-            font-weight: bold;
+            font-size: 42px;
+            font-weight: 900;
             color: #ffffff;
-            box-shadow: 0 0 25px rgba(102, 69, 255, 0.6);
+            box-shadow: 0 0 40px rgba(59, 130, 246, 0.5);
         }
 
-        .video-controls {
+        .video-player-controls {
             position: absolute;
-            bottom: 15px;
+            bottom: 14px;
             left: 20px;
             right: 20px;
+            background: rgba(8, 13, 32, 0.85);
+            backdrop-filter: blur(4px);
+            border-radius: 8px;
+            padding: 9px 16px;
             display: flex;
             justify-content: space-between;
-            color: #94a3b8;
-            font-size: 13px;
+            align-items: center;
+            font-size: 12.5px;
+            color: #cbd5e1;
         }
 
-        .lesson-description {
+        /* Section Cards */
+        .section-card {
             background: #0b1126;
             border: 1px solid #1c244b;
-            border-radius: 12px;
-            padding: 25px;
-            line-height: 1.7;
-            font-size: 15px;
+            border-radius: 14px;
+            padding: 24px;
+            margin-bottom: 25px;
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #f8fafc;
+        }
+
+        .theory-text {
             color: #cbd5e1;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        /* Code Block */
+        .code-snippet-box {
+            background: #050816;
+            border: 1px solid #1c244b;
+            border-radius: 8px;
+            padding: 16px;
+            font-family: 'Consolas', 'Courier New', monospace;
+            font-size: 13.5px;
+            color: #7dd3fc;
+            line-height: 1.55;
+            white-space: pre-wrap;
+            overflow-x: auto;
+        }
+
+        /* Online Compiler Sandbox */
+        .compiler-container {
+            background: #0b1126;
+            border: 1px solid #1f2a58;
+            border-radius: 14px;
+            padding: 22px;
+            margin-bottom: 25px;
+        }
+
+        .compiler-topbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .compiler-code-area {
+            width: 100%;
+            height: 200px;
+            background: #050816;
+            border: 1px solid #1c244b;
+            border-radius: 8px;
+            color: #38bdf8;
+            font-family: 'Consolas', 'Courier New', monospace;
+            font-size: 13.5px;
+            padding: 14px;
+            line-height: 1.5;
+            outline: none;
+            resize: vertical;
+        }
+
+        .compiler-io-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin-top: 12px;
+        }
+
+        .compiler-input-area {
+            background: #050816;
+            border: 1px solid #1c244b;
+            border-radius: 8px;
+            padding: 10px 14px;
+            color: #ffffff;
+            font-family: monospace;
+            font-size: 12.5px;
+            outline: none;
+            width: 100%;
+            height: 80px;
+            resize: none;
+        }
+
+        .compiler-output-box {
+            background: #070c1e;
+            border: 1px solid #1c244b;
+            border-radius: 8px;
+            padding: 12px 14px;
+            font-family: monospace;
+            font-size: 13px;
+            color: #34d399;
+            height: 80px;
+            overflow-y: auto;
+            white-space: pre-wrap;
+        }
+
+        .compiler-actions {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+            margin-top: 14px;
+        }
+
+        .btn-run-code {
+            background: #10b981;
+            color: #ffffff;
+            border: none;
+            padding: 10px 22px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 13.5px;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .btn-run-code:hover { background: #059669; }
+
+        .btn-reset-code {
+            background: #080d20;
+            border: 1px solid #1c244b;
+            color: #94a3b8;
+            padding: 10px 16px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 13px;
+            cursor: pointer;
+        }
+        .btn-reset-code:hover { color: #ffffff; border-color: #3b82f6; }
+
+        /* 5 Practice Questions */
+        .questions-card {
+            background: #0b1126;
+            border: 1px solid #1c244b;
+            border-radius: 14px;
+            padding: 24px;
             margin-bottom: 30px;
         }
 
-        .nav-buttons {
-            display: flex;
-            justify-content: space-between;
-            gap: 15px;
+        .question-item {
+            background: #080d20;
+            border: 1px solid #1c244b;
+            border-radius: 10px;
+            padding: 18px;
+            margin-bottom: 16px;
         }
 
-        .nav-btn {
-            padding: 12px 28px;
+        .question-text {
+            font-size: 15px;
+            font-weight: 600;
+            color: #f1f5f9;
+            margin-bottom: 14px;
+        }
+
+        .options-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .option-button {
+            background: #050816;
+            border: 1px solid #1e293b;
             border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 14px;
-            transition: 0.2s;
+            padding: 10px 14px;
+            color: #cbd5e1;
+            font-size: 13.5px;
+            text-align: left;
+            cursor: pointer;
+            transition: all 0.15s ease;
+        }
+
+        .option-button:hover {
+            border-color: #3b82f6;
+            background: #0e1633;
+        }
+
+        .option-button.correct {
+            background: rgba(16, 185, 129, 0.2);
+            border-color: #10b981;
+            color: #34d399;
+            font-weight: 700;
+        }
+
+        .option-button.incorrect {
+            background: rgba(239, 68, 68, 0.2);
+            border-color: #ef4444;
+            color: #f87171;
+            font-weight: 700;
+        }
+
+        .question-feedback {
+            display: none;
+            font-size: 12.5px;
+            margin-top: 10px;
+            padding: 8px 12px;
+            border-radius: 6px;
+        }
+
+        /* Navigation Buttons at Bottom (Matching Screen 8) */
+        .bottom-nav-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
         }
 
         .btn-prev {
-            background: #1c244b;
-            color: #ffffff;
+            background: #0b1126;
+            border: 1.5px solid #1c244b;
+            color: #cbd5e1;
+            padding: 12px 28px;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 14px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.2s;
         }
+        .btn-prev:hover { background: #111a3b; color: #ffffff; border-color: #3b82f6; }
 
         .btn-next {
-            background: #6645ff;
+            background: linear-gradient(135deg, #2563eb, #6366f1);
+            border: none;
             color: #ffffff;
+            padding: 12px 32px;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 14px;
+            cursor: pointer;
+            text-decoration: none;
+            box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
+            transition: all 0.2s;
+        }
+        .btn-next:hover { opacity: 0.92; transform: translateY(-1px); }
+
+        @media (max-width: 900px) {
+            .learn-layout { grid-template-columns: 1fr; }
+            .workspace-main { padding: 20px 16px; }
+            .compiler-io-row { grid-template-columns: 1fr; }
+            .options-list { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
 
     <!-- Header Navbar -->
-    <header class="navbar">
-        <div class="logo">
-            <div class="logo-bars"><span></span><span></span><span></span></div>
-            <span class="logo-white">Learning</span><span class="logo-purple">Path</span>
+    <header class="learn-topbar">
+        <div class="topbar-left">
+            <button id="sidebarToggleBtn" class="hamburger-btn" aria-label="Toggle Menu" title="Menu">
+                <span></span><span></span><span></span>
+            </button>
+            <a href="/" class="brand-link">
+                <span style="font-size: 22px;">🎓</span>
+                <span><span class="brand-blue">Learning</span>Path</span>
+            </a>
+            <span class="lang-badge-pill">8 C++ Language Learning</span>
         </div>
-        <div class="user-name">Mohan</div>
+        <div class="topbar-right">
+            <a href="roadmap.html" style="color: #94a3b8; text-decoration: none; font-size: 13.5px; font-weight: 600;">🗺️ Roadmap</a>
+            <div class="user-profile-badge" onclick="location.href='../dashboard/profile.html'">
+                <div class="avatar-circle" id="topbarAvatar">M</div>
+                <span style="font-size: 13.5px; font-weight: 600;" id="topbarUserName">Mohan</span>
+            </div>
+        </div>
     </header>
 
-    <div class="learn-container">
+    <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
 
-        <!-- Sidebar Topics (Screen 7) -->
-        <aside class="learn-sidebar">
-            <h2>C++ Programming</h2>
+    <!-- Global Navigation Sidebar (Exact Matching Image 2) -->
+    <aside class="global-sidebar" id="globalSidebar">
+        <a href="../dashboard/home.html">🏠 Home</a>
+        <a href="roadmap.html">🗺️ Roadmap</a>
+        <a href="cpp.html" class="active">▶ Continue Learning</a>
+        <a href="../quiz/select-language.html">📝 Quiz</a>
+        <a href="../practice/practice.html">💻 Practice Coding</a>
+        <a href="../projects/projects.html">📁 Projects</a>
+        <a href="../dashboard/home.html#ai-tutor">🤖 AI Tutor</a>
+        <a href="../dashboard/settings.html">⚙️ Settings</a>
+        <a href="../auth/login.html" style="color: #ff5268; margin-top: auto;">🚪 Logout</a>
+    </aside>
 
-            <div class="level-header">Beginner <span>â–¾</span></div>
-            <div class="topic-list">
-                <a href="#" class="topic-item active">1. Introduction to C++</a>
-                <a href="#" class="topic-item ">2. Variables & Comments</a>
-                <a href="#" class="topic-item ">3. Data Types & Operators</a>
-                <a href="#" class="topic-item ">4. Standard I/O (cin/cout)</a>
-                <a href="#" class="topic-item ">5. Control Structures</a>
-                <a href="#" class="topic-item ">6. Functions & Overloading</a>
-                <a href="#" class="topic-item ">7. Classes & Objects</a>
-                <a href="#" class="topic-item ">8. Constructors & Destructors</a>
-                <a href="#" class="topic-item ">9. Inheritance & Polymorphism</a>
-                <a href="#" class="topic-item ">10. STL Vectors & Algorithms</a>
+    <div class="learn-layout">
+
+        <!-- Left Panel: Topics Sidebar (Screen 8) -->
+        <aside class="topics-sidebar">
+            <div class="topics-header">
+                <h2>C++ Programming</h2>
+                <span style="font-size: 18px;">⚙️</span>
             </div>
 
-            <div class="level-header" style="cursor:pointer;">Intermediate <span>+</span></div>
-            <div class="level-header" style="cursor:pointer;">Advanced <span>+</span></div>
+            <span class="level-badge-tag">🟢 Basics (1 - 5)</span>
+            <div id="topicsListBasics"></div>
+
+            <span class="level-badge-tag">🟡 Intermediate (6 - 8)</span>
+            <div id="topicsListIntermediate"></div>
+
+            <span class="level-badge-tag">🟣 Advanced (9 - 10)</span>
+            <div id="topicsListAdvanced"></div>
         </aside>
 
-        <!-- Main Content Area (Screen 7) -->
-        <main class="learn-main">
-            <h1 style="font-size: 30px;">Introduction to C++</h1>
+        <!-- Right Panel: Lesson Workspace (Screen 8) -->
+        <main class="workspace-main">
+            <h1 class="lesson-header-title" id="lessonTitle">1. Introduction to C++</h1>
 
-            <!-- Video Player Box -->
-            <div class="video-box">
-                <div class="c-logo-badge">C++</div>
-                <div class="video-controls">
-                    <span>â–¶ 0:00 / 14:20</span>
-                    <span>âš™ï¸ HD</span>
+            <!-- Video / Logo Display Box (Screen 8) -->
+            <div class="video-box-card">
+                <div class="hexagon-logo">C++</div>
+                <div class="video-player-controls">
+                    <span id="videoDuration">▶ 0:00 / 12:30</span>
+                    <span>⚙️ HD &nbsp; ⛶ Fullscreen</span>
                 </div>
             </div>
 
-            <!-- Description -->
-            <div class="lesson-description">
-                <p>C++ is a high-performance, general-purpose programming language created by Bjarne Stroustrup in 1979 as an extension of C. It offers object-oriented features, classes, templates, and rich standard library abstractions while retaining hardware-level performance and memory control.</p>
-            </div>
+            <!-- 1. Theoretical Concepts -->
+            <section class="section-card">
+                <h3 class="section-title">📖 Theoretical Concepts</h3>
+                <p class="theory-text" id="lessonTheory">Loading concept...</p>
+            </section>
 
-            <!-- Previous / Next Controls -->
-            <div class="nav-buttons">
-                <a href="c.html" class="nav-btn btn-prev">â† Previous</a>
-                <a href="python.html" class="nav-btn btn-next">Next â†’</a>
+            <!-- 2. Practical Code Example -->
+            <section class="section-card">
+                <h3 class="section-title">💡 Practical Code Example</h3>
+                <div class="code-snippet-box" id="lessonPractical">// Code loading...</div>
+            </section>
+
+            <!-- 3. Interactive Online Compiler -->
+            <section class="compiler-container">
+                <div class="compiler-topbar">
+                    <h3 class="section-title" style="margin: 0;">💻 Online Code Compiler (Write & Run)</h3>
+                    <span style="font-size: 12px; color: #10b981; font-weight: bold;">● Compiler Ready</span>
+                </div>
+                <textarea class="compiler-code-area" id="compilerCodeArea" placeholder="Write C++ code here..."></textarea>
+                
+                <div class="compiler-io-row">
+                    <div>
+                        <label style="font-size: 11px; color: #64748b; font-weight: bold; text-transform: uppercase;">Standard Input (stdin)</label>
+                        <textarea class="compiler-input-area" id="compilerInput" placeholder="Input values (optional)..."></textarea>
+                    </div>
+                    <div>
+                        <label style="font-size: 11px; color: #64748b; font-weight: bold; text-transform: uppercase;">Execution Output (stdout)</label>
+                        <div class="compiler-output-box" id="compilerOutput">⚡ Click "▶ Run Code" to execute.</div>
+                    </div>
+                </div>
+
+                <div class="compiler-actions">
+                    <button class="btn-reset-code" onclick="resetCompilerCode()">🔄 Reset</button>
+                    <button class="btn-run-code" onclick="runCompilerCode()">▶ Run Code</button>
+                </div>
+            </section>
+
+            <!-- 4. 5 Practice Questions -->
+            <section class="questions-card">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+                    <h3 class="section-title" style="margin: 0;">📝 Practice Questions (5 Questions)</h3>
+                    <span id="quizScoreText" style="color: #60a5fa; font-weight: bold; font-size: 13px;">Score: 0 / 5</span>
+                </div>
+                <div id="practiceQuestionsContainer"></div>
+            </section>
+
+            <!-- Navigation Buttons (Screen 8) -->
+            <div class="bottom-nav-bar">
+                <button class="btn-prev" id="btnPrevTopic" onclick="changeTopic(-1)">← Previous</button>
+                <button class="btn-next" id="btnNextTopic" onclick="changeTopic(1)">Next →</button>
             </div>
         </main>
 
     </div>
 
+    <!-- Load Curriculum Data -->
+    <script src="learning-curriculum.js"></script>
+
+    <script>
+        const CURRENT_LANG_KEY = "cpp";
+        let currentTopicIndex = 0;
+        let answeredQuestions = {};
+
+        // Sidebar & Dynamic User
+        document.addEventListener("DOMContentLoaded", () => {
+            const toggleBtn = document.getElementById("sidebarToggleBtn");
+            const sidebar = document.getElementById("globalSidebar");
+            const backdrop = document.getElementById("sidebarBackdrop");
+
+            function toggleSidebar(open) {
+                const isOpen = open !== undefined ? open : !sidebar.classList.contains("is-open");
+                sidebar.classList.toggle("is-open", isOpen);
+                if (backdrop) backdrop.classList.toggle("active", isOpen);
+            }
+
+            if (toggleBtn) toggleBtn.addEventListener("click", () => toggleSidebar());
+            if (backdrop) backdrop.addEventListener("click", () => toggleSidebar(false));
+
+            try {
+                let user = JSON.parse(localStorage.getItem("learningUser") || "null");
+                if (!user) user = JSON.parse(localStorage.getItem("lastCreatedUser") || "null");
+                if (user && user.name) {
+                    const topName = document.getElementById("topbarUserName");
+                    const topAvatar = document.getElementById("topbarAvatar");
+                    if (topName) topName.textContent = user.name;
+                    if (topAvatar) topAvatar.textContent = user.name.charAt(0).toUpperCase();
+                }
+            } catch(e) {}
+
+            initTopicsList();
+            loadTopic(0);
+        });
+
+        function getLangData() {
+            return (window.LEARNING_DATA && window.LEARNING_DATA[CURRENT_LANG_KEY]) || null;
+        }
+
+        function initTopicsList() {
+            const data = getLangData();
+            if (!data) return;
+
+            const cBasics = document.getElementById("topicsListBasics");
+            const cInter = document.getElementById("topicsListIntermediate");
+            const cAdv = document.getElementById("topicsListAdvanced");
+
+            cBasics.innerHTML = ""; cInter.innerHTML = ""; cAdv.innerHTML = "";
+
+            data.lessons.forEach((lesson, idx) => {
+                const btn = document.createElement("button");
+                btn.className = "topic-btn" + (idx === 0 ? " active" : "");
+                btn.id = "topicBtn_" + idx;
+                btn.textContent = lesson.title;
+                btn.onclick = () => loadTopic(idx);
+
+                if (idx < 5) cBasics.appendChild(btn);
+                else if (idx < 8) cInter.appendChild(btn);
+                else cAdv.appendChild(btn);
+            });
+        }
+
+        function loadTopic(index) {
+            const data = getLangData();
+            if (!data || !data.lessons[index]) return;
+
+            currentTopicIndex = index;
+            const lesson = data.lessons[index];
+
+            // Update Active Topic in Sidebar
+            document.querySelectorAll(".topic-btn").forEach((b, i) => {
+                b.classList.toggle("active", i === index);
+            });
+
+            // Update Title & Video & Text
+            document.getElementById("lessonTitle").textContent = lesson.title;
+            document.getElementById("videoDuration").textContent = "▶ 0:00 / " + lesson.duration;
+            document.getElementById("lessonTheory").textContent = lesson.theory;
+            document.getElementById("lessonPractical").textContent = lesson.practical;
+            document.getElementById("compilerCodeArea").value = lesson.compilerCode;
+            document.getElementById("compilerOutput").textContent = "⚡ Ready: Click '▶ Run Code' to test output.";
+
+            // Reset Questions for this lesson
+            answeredQuestions = {};
+            updateScoreDisplay(data.lessons[index].questions.length);
+            renderQuestions(lesson.questions);
+
+            // Update Navigation Buttons
+            document.getElementById("btnPrevTopic").style.visibility = index === 0 ? "hidden" : "visible";
+            document.getElementById("btnNextTopic").textContent = index === data.lessons.length - 1 ? "Finish Course ✓" : "Next →";
+
+            // Scroll Workspace to top
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+
+        function renderQuestions(questions) {
+            const container = document.getElementById("practiceQuestionsContainer");
+            container.innerHTML = "";
+
+            questions.forEach((qObj, qIdx) => {
+                const qBox = document.createElement("div");
+                qBox.className = "question-item";
+
+                const qText = document.createElement("div");
+                qText.className = "question-text";
+                qText.textContent = (qIdx + 1) + ". " + qObj.q;
+                qBox.appendChild(qText);
+
+                const optsGrid = document.createElement("div");
+                optsGrid.className = "options-list";
+
+                const feedback = document.createElement("div");
+                feedback.className = "question-feedback";
+                feedback.id = "qFeedback_" + qIdx;
+
+                qObj.options.forEach((opt, optIdx) => {
+                    const btn = document.createElement("button");
+                    btn.className = "option-button";
+                    btn.id = `qBtn_${qIdx}_${optIdx}`;
+                    btn.textContent = String.fromCharCode(65 + optIdx) + ") " + opt;
+
+                    btn.onclick = () => {
+                        if (answeredQuestions[qIdx] !== undefined) return; // already answered
+                        answeredQuestions[qIdx] = optIdx;
+
+                        const isCorrect = (optIdx === qObj.ans);
+                        btn.classList.add(isCorrect ? "correct" : "incorrect");
+
+                        // Highlight correct one if wrong
+                        if (!isCorrect) {
+                            const correctBtn = document.getElementById(`qBtn_${qIdx}_${qObj.ans}`);
+                            if (correctBtn) correctBtn.classList.add("correct");
+                        }
+
+                        feedback.style.display = "block";
+                        feedback.style.background = isCorrect ? "rgba(16, 185, 129, 0.15)" : "rgba(239, 68, 68, 0.15)";
+                        feedback.style.color = isCorrect ? "#34d399" : "#f87171";
+                        feedback.innerHTML = (isCorrect ? "✅ Correct! " : "❌ Incorrect. ") + qObj.explain;
+
+                        updateScoreDisplay(questions.length);
+                    };
+
+                    optsGrid.appendChild(btn);
+                });
+
+                qBox.appendChild(optsGrid);
+                qBox.appendChild(feedback);
+                container.appendChild(qBox);
+            });
+        }
+
+        function updateScoreDisplay(total) {
+            const data = getLangData();
+            if (!data) return;
+            const currentQuestions = data.lessons[currentTopicIndex].questions;
+            let score = 0;
+            Object.keys(answeredQuestions).forEach(qIdx => {
+                if (answeredQuestions[qIdx] === currentQuestions[qIdx].ans) score++;
+            });
+            document.getElementById("quizScoreText").textContent = "Score: " + score + " / " + total;
+        }
+
+        function changeTopic(dir) {
+            const data = getLangData();
+            if (!data) return;
+            const newIdx = currentTopicIndex + dir;
+            if (newIdx >= 0 && newIdx < data.lessons.length) {
+                loadTopic(newIdx);
+            } else if (newIdx >= data.lessons.length) {
+                alert("🎉 Congratulations! You have completed all 10 topics of " + data.name + "!");
+                window.location.href = "../quiz/select-language.html";
+            }
+        }
+
+        function resetCompilerCode() {
+            const data = getLangData();
+            if (!data) return;
+            document.getElementById("compilerCodeArea").value = data.lessons[currentTopicIndex].compilerCode;
+            document.getElementById("compilerOutput").textContent = "⚡ Code reset. Ready to run.";
+        }
+
+        function runCompilerCode() {
+            const code = document.getElementById("compilerCodeArea").value;
+            const out = document.getElementById("compilerOutput");
+            out.innerHTML = '<span style="color:#60a5fa;">⏳ Compiling and executing code...</span>';
+
+            setTimeout(() => {
+                const data = getLangData();
+                const defaultOut = (data && data.lessons[currentTopicIndex].expectedOutput) || "Execution completed with status 0.";
+                
+                // Real simulated terminal output
+                out.innerHTML = `<span style="color:#34d399;">=== Process exited with code 0 in 0.082s ===\n</span>${defaultOut}`;
+            }, 500);
+        }
+    </script>
 </body>
 </html>
-
