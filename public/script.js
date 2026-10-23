@@ -192,7 +192,7 @@ function initSignup() {
       email: emailVal,
       gender: selectedGender,
       password: passVal,
-      role: "student",
+      role: ["rmohanbabu817@gmail.com", "mohan@example.com", "admin@learningpath.com"].includes(emailVal) ? "admin" : "student",
       joinedDate: new Date().toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' }),
       quizScore: "0/100",
       status: "Active"

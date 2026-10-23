@@ -14,18 +14,23 @@ exports.getDashboard = async (req, res) => {
 };
 
 exports.getUsers = async (req, res) => {
+    const OWNER_EMAILS = ["rmohanbabu817@gmail.com", "mohan@example.com", "admin@learningpath.com"];
     return res.status(200).json({
         success: true,
-        users: registeredUsers.map(u => ({
-            id: u.id,
-            name: u.name,
-            email: u.email,
-            gender: u.gender || "Male",
-            quizScore: u.quizScore || "0/100",
-            result: (parseInt(u.quizScore) >= 70) ? "PASS" : "IN_PROGRESS",
-            status: u.status || "Active",
-            joinedDate: u.joinedDate || "Today"
-        }))
+        users: registeredUsers.map(u => {
+            const isOwner = OWNER_EMAILS.includes((u.email || '').toLowerCase().trim()) || u.role === 'admin' || u.role === 'owner';
+            return {
+                id: u.id,
+                name: u.name,
+                email: u.email,
+                gender: u.gender || "Male",
+                role: isOwner ? "admin" : "student",
+                quizScore: u.quizScore || "0/100",
+                result: (parseInt(u.quizScore) >= 70) ? "PASS" : "IN_PROGRESS",
+                status: u.status || "Active",
+                joinedDate: u.joinedDate || "Today"
+            };
+        })
     });
 };
 

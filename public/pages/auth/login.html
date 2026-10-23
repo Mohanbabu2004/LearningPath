@@ -582,6 +582,15 @@
         } catch (err) {}
       }
 
+      // Enforce Owner role for verified owner emails
+      const OWNER_EMAILS = ['rmohanbabu817@gmail.com', 'mohan@example.com', 'admin@learningpath.com'];
+      if (OWNER_EMAILS.includes((email || '').toLowerCase().trim())) {
+        loggedInUser.role = 'admin';
+        loggedInUser.name = 'R. Mohan Babu';
+      } else {
+        loggedInUser.role = 'student';
+      }
+
       // 4. Save active session & sync to multi-user registry
       localStorage.setItem('learningUser', JSON.stringify(loggedInUser));
       localStorage.setItem('lastCreatedUser', JSON.stringify({
