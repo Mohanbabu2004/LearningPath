@@ -327,14 +327,17 @@
       color: #2563eb;
     }
 
-    /* Sidebar Drawer Menu */
+    
+    /* ========================================================
+       SIDEBAR DRAWER MENU - EXACT MATCH TO USER SCREENSHOT
+       ======================================================== */
     .nav-drawer-backdrop {
       display: none;
       position: fixed;
       inset: 0;
-      background: rgba(2, 6, 23, 0.65);
-      backdrop-filter: blur(3px);
-      z-index: 1040;
+      background: rgba(2, 6, 23, 0.7);
+      backdrop-filter: blur(4px);
+      z-index: 99998;
     }
 
     .nav-drawer-backdrop.is-active {
@@ -346,17 +349,17 @@
       top: 0;
       left: 0;
       bottom: 0;
-      width: 260px;
-      background: #080d20;
-      border-right: 1px solid #1a2348;
-      box-shadow: 10px 0 35px rgba(0, 0, 0, 0.55);
-      padding: 24px 14px 20px;
+      width: 280px;
+      background: #060b1e;
+      border-right: 1px solid #131d42;
+      box-shadow: 15px 0 45px rgba(0, 0, 0, 0.75);
+      padding: 24px 16px 20px;
       display: flex;
       flex-direction: column;
       gap: 6px;
-      z-index: 1050;
+      z-index: 99999;
       transform: translateX(-100%);
-      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
       box-sizing: border-box;
       overflow-y: auto;
       scrollbar-width: none;
@@ -365,8 +368,6 @@
 
     .nav-drawer-menu::-webkit-scrollbar {
       display: none;
-      width: 0;
-      height: 0;
     }
 
     .nav-drawer-menu.is-open {
@@ -377,44 +378,39 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 6px 10px 14px;
-      border-bottom: 1px solid #1a2348;
-      margin-bottom: 10px;
+      padding: 2px 6px 16px;
+      border-bottom: 1px solid #131d42;
+      margin-bottom: 12px;
     }
 
     .drawer-brand {
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
       color: #ffffff;
       font-weight: 800;
-      font-size: 17px;
+      font-size: 18px;
       text-decoration: none;
     }
 
-    .drawer-brand-blue {
-      color: #3b82f6;
-    }
-
     .drawer-close-btn {
-      background: #111a3b;
-      border: 1px solid #1e293b;
+      background: #0c1432;
+      border: 1px solid #1c2752;
       font-size: 18px;
       color: #94a3b8;
       cursor: pointer;
-      line-height: 1;
-      width: 30px;
-      height: 30px;
+      width: 32px;
+      height: 32px;
       border-radius: 8px;
       display: flex;
       align-items: center;
       justify-content: center;
-      transition: all 0.15s;
+      transition: all 0.2s;
     }
 
     .drawer-close-btn:hover {
       color: #ffffff;
-      background: #1e293b;
+      background: #19275c;
       border-color: #3b82f6;
     }
 
@@ -429,45 +425,62 @@
       display: flex;
       align-items: center;
       gap: 14px;
-      padding: 12px 18px;
-      border-radius: 8px;
+      padding: 13px 18px;
+      border-radius: 12px;
       color: #94a3b8;
-      font-size: 15px;
-      font-weight: 500;
+      font-size: 15.5px;
+      font-weight: 600;
       text-decoration: none;
-      transition: 0.15s ease;
+      transition: all 0.18s ease;
+      user-select: none;
     }
 
     .drawer-link:hover {
-      background: #111a3b;
+      background: #0d1738;
       color: #ffffff;
+      transform: translateX(2px);
     }
 
     .drawer-link.active {
-      background: #2563eb;
-      color: #ffffff;
-      font-weight: 600;
-      box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
+      background: #2563eb !important;
+      color: #ffffff !important;
+      font-weight: 700 !important;
+      box-shadow: 0 4px 16px rgba(37, 99, 235, 0.45) !important;
     }
 
     .drawer-link-icon {
-      font-size: 16px;
-      width: 20px;
+      font-size: 18px;
+      width: 24px;
       display: flex;
       align-items: center;
       justify-content: center;
+      flex-shrink: 0;
     }
 
-    .drawer-logout {
+    .drawer-link.drawer-logout {
       color: #ff5268 !important;
       margin-top: auto !important;
       padding-top: 14px;
     }
 
-    .drawer-logout:hover {
+    .drawer-link.drawer-logout:hover {
       background: rgba(239, 68, 68, 0.12) !important;
       color: #ff7b8d !important;
     }
+
+    .drawer-link.drawer-owner {
+      color: #64748b !important;
+      font-size: 13px !important;
+      padding: 8px 18px !important;
+      opacity: 0.85;
+    }
+
+    .drawer-link.drawer-owner:hover {
+      color: #94a3b8 !important;
+      background: transparent !important;
+      opacity: 1;
+    }
+
 
     /* MAIN CONTAINER */
     main.landing-main-content {
@@ -1218,6 +1231,63 @@
 <body class="landing-page">
 
   <!-- TOP HEADER NAVBAR: Left (Brand), Center (Nav Links), Right (Search, Theme, Profile) -->
+  
+  <!-- Dark Sidebar Backdrop (Fixed Fullscreen) -->
+  <div id="navDrawerBackdrop" class="nav-drawer-backdrop"></div>
+
+  <!-- Hamburger Sidebar Menu (Matching Screenshot: Home, Roadmap, Continue Learning, Quiz, Practice Coding, Projects, AI Tutor, Settings, Logout, Owner Access) -->
+  <aside id="navDrawerMenu" class="nav-drawer-menu" role="menu">
+    <div class="drawer-header">
+      <a href="/" class="drawer-brand">
+        <span style="font-size: 20px;">🎓</span>
+        <span>Learning<span style="color: #3b82f6;">Path</span></span>
+      </a>
+      <button type="button" id="drawerCloseBtn" class="drawer-close-btn" aria-label="Close menu">✕</button>
+    </div>
+    <div class="drawer-links-list">
+      <a href="/" class="drawer-link active" role="menuitem">
+        <span class="drawer-link-icon">🏠</span>
+        <span>Home</span>
+      </a>
+      <a href="pages/learning/roadmap.html" class="drawer-link" role="menuitem">
+        <span class="drawer-link-icon">🗺️</span>
+        <span>Roadmap</span>
+      </a>
+      <a href="pages/learning/c.html" class="drawer-link" role="menuitem">
+        <span class="drawer-link-icon">▶</span>
+        <span>Continue Learning</span>
+      </a>
+      <a href="pages/quiz/select-language.html" class="drawer-link" role="menuitem">
+        <span class="drawer-link-icon">📝</span>
+        <span>Quiz</span>
+      </a>
+      <a href="pages/practice/practice.html" class="drawer-link" role="menuitem">
+        <span class="drawer-link-icon">💻</span>
+        <span>Practice Coding</span>
+      </a>
+      <a href="pages/projects/projects.html" class="drawer-link" role="menuitem">
+        <span class="drawer-link-icon">📁</span>
+        <span>Projects</span>
+      </a>
+      <a href="pages/dashboard/home.html#ai-tutor" onclick="alert('AI Tutor is active! Ask any coding question.')" class="drawer-link" role="menuitem">
+        <span class="drawer-link-icon">🤖</span>
+        <span>AI Tutor</span>
+      </a>
+      <a href="pages/dashboard/settings.html" class="drawer-link" role="menuitem">
+        <span class="drawer-link-icon">⚙️</span>
+        <span>Settings</span>
+      </a>
+      <a href="login.html" class="drawer-link drawer-logout" role="menuitem">
+        <span class="drawer-link-icon">🚪</span>
+        <span>Logout</span>
+      </a>
+      <a href="javascript:void(0)" onclick="unlockOwnerMobile()" class="drawer-link drawer-owner" role="menuitem" title="Owner Mobile Access">
+        <span class="drawer-link-icon">🔐</span>
+        <span>Owner Mobile Access</span>
+      </a>
+    </div>
+  </aside>
+
   <header class="top-header-navbar">
     <div class="navbar-inner-wrap">
 
@@ -1239,50 +1309,7 @@
           <span><span class="brand-name-learn">Learning</span><span class="brand-name-path">Path</span></span>
         </a>
 
-        <!-- Dark Sidebar Backdrop -->
-        <div id="navDrawerBackdrop" class="nav-drawer-backdrop"></div>
-
-        <!-- Hamburger Sidebar Menu -->
-        <aside id="navDrawerMenu" class="nav-drawer-menu" role="menu">
-          <div class="drawer-links-list">
-            <a href="/" class="drawer-link active" role="menuitem">
-              <span class="drawer-link-icon">🏠</span>
-              <span>Home</span>
-            </a>
-            <a href="pages/learning/roadmap.html" class="drawer-link" role="menuitem">
-              <span class="drawer-link-icon">📚</span>
-              <span>Courses</span>
-            </a>
-            <a href="pages/learning/roadmap.html" class="drawer-link" role="menuitem">
-              <span class="drawer-link-icon">🗺️</span>
-              <span>Roadmap</span>
-            </a>
-            <a href="pages/projects/projects.html" class="drawer-link" role="menuitem">
-              <span class="drawer-link-icon">📁</span>
-              <span>Projects</span>
-            </a>
-            <a href="pages/quiz/select-language.html" class="drawer-link" role="menuitem">
-              <span class="drawer-link-icon">📝</span>
-              <span>Quiz</span>
-            </a>
-            <a href="pages/practice/practice.html" class="drawer-link" role="menuitem">
-              <span class="drawer-link-icon">💻</span>
-              <span>Practice</span>
-            </a>
-            <a href="pages/dashboard/home.html#ai-tutor" class="drawer-link" role="menuitem">
-              <span class="drawer-link-icon">🤖</span>
-              <span>AI Tutor</span>
-            </a>
-            <a href="pages/dashboard/settings.html" class="drawer-link" role="menuitem">
-              <span class="drawer-link-icon">⚙️</span>
-              <span>Settings</span>
-            </a>
-            <a href="login.html" class="drawer-link drawer-logout" role="menuitem">
-              <span class="drawer-link-icon">🚪</span>
-              <span>Logout</span>
-            </a>
-          </div>
-        </aside>
+        
       </div>
 
       <!-- Right: Search, Theme Toggle, Profile Avatar -->
@@ -1634,29 +1661,39 @@
       if (navDrawerBackdrop) navDrawerBackdrop.classList.toggle('is-active', willOpen);
       hamburgerBtn.classList.toggle('is-active', willOpen);
       hamburgerBtn.setAttribute('aria-expanded', String(willOpen));
+      document.body.style.overflow = willOpen ? 'hidden' : '';
     }
 
     if (hamburgerBtn) {
-      hamburgerBtn.addEventListener('click', (e) => {
+      hamburgerBtn.onclick = function(e) {
+        e.preventDefault();
         e.stopPropagation();
         toggleNavDrawer();
-      });
+      };
     }
 
     if (drawerCloseBtn) {
-      drawerCloseBtn.addEventListener('click', (e) => {
+      drawerCloseBtn.onclick = function(e) {
+        e.preventDefault();
         e.stopPropagation();
         toggleNavDrawer(true);
-      });
+      };
     }
 
     if (navDrawerBackdrop) {
-      navDrawerBackdrop.addEventListener('click', () => {
+      navDrawerBackdrop.onclick = function() {
         toggleNavDrawer(true);
-      });
+      };
     }
 
-    // Close when clicking any item inside drawer
+    // Close on ESC key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && navDrawerMenu && navDrawerMenu.classList.contains('is-open')) {
+        toggleNavDrawer(true);
+      }
+    });
+
+    // Close when clicking any link inside drawer
     if (navDrawerMenu) {
       navDrawerMenu.querySelectorAll('.drawer-link').forEach(link => {
         link.addEventListener('click', () => toggleNavDrawer(true));
