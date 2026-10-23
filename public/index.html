@@ -118,115 +118,138 @@
       transform: translateY(-6.2px) rotate(-45deg);
     }
 
-    /* Dropdown / Drawer Menu containing the removed links */
-    .nav-drawer-menu {
-      position: absolute;
-      top: calc(100% + 12px);
-      left: 0;
-      width: 270px;
-      background: #ffffff;
-      border: 1px solid #e2e8f0;
-      border-radius: 16px;
-      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.14), 0 2px 8px rgba(15, 23, 42, 0.04);
-      padding: 12px;
+    /* Slide-out Sidebar Drawer Menu (Matching Image 2 - media_1792729418273_66ced53c.png) */
+    .nav-drawer-backdrop {
       display: none;
-      flex-direction: column;
-      z-index: 1050;
-      animation: menuFadeIn 0.2s ease-out forwards;
+      position: fixed;
+      inset: 0;
+      background: rgba(2, 6, 23, 0.65);
+      backdrop-filter: blur(3px);
+      z-index: 1040;
     }
 
-    @keyframes menuFadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(-8px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    .nav-drawer-backdrop.is-active {
+      display: block;
+    }
+
+    .nav-drawer-menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 260px;
+      background: #080d20;
+      border-right: 1px solid #1a2348;
+      box-shadow: 10px 0 35px rgba(0, 0, 0, 0.55);
+      padding: 18px 12px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      z-index: 1050;
+      transform: translateX(-100%);
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      box-sizing: border-box;
+      overflow-y: auto;
     }
 
     .nav-drawer-menu.is-open {
-      display: flex;
+      transform: translateX(0);
     }
 
     .drawer-header {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 6px 8px 10px;
-      border-bottom: 1px solid #f1f5f9;
-      margin-bottom: 8px;
+      padding: 6px 10px 14px;
+      border-bottom: 1px solid #1a2348;
+      margin-bottom: 10px;
     }
 
-    .drawer-title {
-      font-size: 12px;
+    .drawer-brand {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #ffffff;
       font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: #94a3b8;
+      font-size: 17px;
+      text-decoration: none;
+    }
+
+    .drawer-brand-blue {
+      color: #3b82f6;
     }
 
     .drawer-close-btn {
-      background: transparent;
-      border: none;
-      font-size: 20px;
+      background: #111a3b;
+      border: 1px solid #1e293b;
+      font-size: 18px;
       color: #94a3b8;
       cursor: pointer;
       line-height: 1;
-      padding: 2px 8px;
-      border-radius: 6px;
+      width: 30px;
+      height: 30px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       transition: all 0.15s;
     }
 
     .drawer-close-btn:hover {
-      color: #0f172a;
-      background: #f1f5f9;
+      color: #ffffff;
+      background: #1e293b;
+      border-color: #3b82f6;
     }
 
     .drawer-links-list {
       display: flex;
       flex-direction: column;
-      gap: 4px;
+      gap: 6px;
+      flex: 1;
     }
 
     .drawer-link {
       display: flex;
       align-items: center;
-      gap: 12px;
-      padding: 10px 14px;
-      border-radius: 10px;
-      color: #334155;
-      font-size: 14.5px;
-      font-weight: 600;
+      gap: 14px;
+      padding: 12px 18px;
+      border-radius: 8px;
+      color: #94a3b8;
+      font-size: 15px;
+      font-weight: 500;
       text-decoration: none;
-      transition: all 0.15s ease;
+      transition: 0.15s ease;
     }
 
     .drawer-link:hover {
-      background: #f8fafc;
-      color: #2563eb;
-      transform: translateX(3px);
+      background: #111a3b;
+      color: #ffffff;
     }
 
     .drawer-link.active {
-      background: #eff6ff;
-      color: #2563eb;
-      font-weight: 700;
+      background: #2563eb;
+      color: #ffffff;
+      font-weight: 600;
+      box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
     }
 
     .drawer-link-icon {
       font-size: 16px;
-      width: 22px;
+      width: 20px;
       display: flex;
       align-items: center;
       justify-content: center;
     }
 
-    .drawer-divider {
-      height: 1px;
-      background: #e2e8f0;
-      margin: 6px 0;
+    .drawer-logout {
+      color: #ff5268 !important;
+      margin-top: auto !important;
+      padding-top: 14px;
+    }
+
+    .drawer-logout:hover {
+      background: rgba(239, 68, 68, 0.12) !important;
+      color: #ff7b8d !important;
     }
 
     .drawer-link-login {
@@ -944,10 +967,16 @@
           <span><span class="brand-name-learn">Learning</span><span class="brand-name-path">Path</span></span>
         </a>
 
-        <!-- Hamburger Dropdown Menu with removed items -->
-        <div id="navDrawerMenu" class="nav-drawer-menu" role="menu">
+        <!-- Dark Sidebar Backdrop (Matching Image 2) -->
+        <div id="navDrawerBackdrop" class="nav-drawer-backdrop"></div>
+
+        <!-- Hamburger Sidebar Menu (Matching Image 2 - media_1792729418273_66ced53c.png) -->
+        <aside id="navDrawerMenu" class="nav-drawer-menu" role="menu">
           <div class="drawer-header">
-            <span class="drawer-title">Navigation</span>
+            <a href="/" class="drawer-brand">
+              <span style="font-size: 20px;">🎓</span>
+              <span><span class="drawer-brand-blue">Learning</span>Path</span>
+            </a>
             <button id="drawerCloseBtn" class="drawer-close-btn" aria-label="Close menu">&times;</button>
           </div>
           <div class="drawer-links-list">
@@ -983,17 +1012,12 @@
               <span class="drawer-link-icon">⚙️</span>
               <span>Settings</span>
             </a>
-            <div class="drawer-divider"></div>
-            <a href="login.html" class="drawer-link drawer-link-login" role="menuitem">
-              <span class="drawer-link-icon">🔑</span>
-              <span>Login</span>
-            </a>
-            <a href="create-account.html" class="drawer-link drawer-link-create" role="menuitem">
-              <span class="drawer-link-icon">✨</span>
-              <span>Create Account</span>
+            <a href="login.html" class="drawer-link drawer-logout" role="menuitem">
+              <span class="drawer-link-icon">🚪</span>
+              <span>Logout</span>
             </a>
           </div>
-        </div>
+        </aside>
       </div>
 
       <!-- Right: Searching Bar with Searching Symbol -->
@@ -1238,11 +1262,13 @@
     const hamburgerBtn = document.getElementById('hamburgerMenuBtn');
     const navDrawerMenu = document.getElementById('navDrawerMenu');
     const drawerCloseBtn = document.getElementById('drawerCloseBtn');
+    const navDrawerBackdrop = document.getElementById('navDrawerBackdrop');
 
     function toggleNavDrawer(forceClose = false) {
       if (!navDrawerMenu || !hamburgerBtn) return;
       const willOpen = forceClose ? false : !navDrawerMenu.classList.contains('is-open');
       navDrawerMenu.classList.toggle('is-open', willOpen);
+      if (navDrawerBackdrop) navDrawerBackdrop.classList.toggle('is-active', willOpen);
       hamburgerBtn.classList.toggle('is-active', willOpen);
       hamburgerBtn.setAttribute('aria-expanded', String(willOpen));
     }
@@ -1257,6 +1283,12 @@
     if (drawerCloseBtn) {
       drawerCloseBtn.addEventListener('click', (e) => {
         e.stopPropagation();
+        toggleNavDrawer(true);
+      });
+    }
+
+    if (navDrawerBackdrop) {
+      navDrawerBackdrop.addEventListener('click', () => {
         toggleNavDrawer(true);
       });
     }

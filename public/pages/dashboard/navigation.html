@@ -43,9 +43,16 @@
             transition: 0.2s;
         }
 
-        .sidebar a:hover, .sidebar a.active {
-            background: #6645ff;
+        .sidebar a:hover {
+            background: #111a3b;
             color: #ffffff;
+        }
+
+        .sidebar a.active {
+            background: #2563eb;
+            color: #ffffff;
+            font-weight: 600;
+            box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
         }
 
         .sidebar-section-title {
@@ -216,21 +223,17 @@
 
     <div class="dashboard-container">
 
-        <!-- Navigation Sidebar (Screen 5) -->
+        <!-- Navigation Sidebar (Screen 5 - Exact Matching Image 2) -->
         <aside class="sidebar">
             <a href="home.html" class="active">🏠 Home</a>
             <a href="../learning/roadmap.html">🗺️ Roadmap</a>
             <a href="../learning/c.html">▶ Continue Learning</a>
             <a href="../quiz/select-language.html">📝 Quiz</a>
             <a href="../practice/practice.html">💻 Practice Coding</a>
-            <a href="../projects/projects.html">🚀 Projects</a>
-
-            <div class="sidebar-section-title">Settings</div>
-            <a href="profile.html">👤 Profile</a>
-            <a href="settings.html">🎨 Appearance</a>
-            <a href="notifications.html">🔔 Notifications</a>
-            <a href="../admin/dashboard.html">🛡️ Admin Portal</a>
-            <a href="../auth/login.html" style="color: #ff5268;">🚪 Logout</a>
+            <a href="../projects/projects.html">📁 Projects</a>
+            <a href="home.html#ai-tutor">🤖 AI Tutor</a>
+            <a href="settings.html">⚙️ Settings</a>
+            <a href="../auth/login.html" style="color: #ff5268; margin-top: auto;">🚪 Logout</a>
         </aside>
 
         <!-- Main Dashboard (Screen 4) -->
