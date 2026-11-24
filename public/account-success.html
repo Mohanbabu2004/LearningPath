@@ -405,6 +405,8 @@
   </nav>
 
   <script>
+    try { localStorage.setItem('accountCompleted', 'true'); } catch(e){}
+
     // Personalize with newly created user's name if available in localStorage
     try {
       const lastUser = JSON.parse(localStorage.getItem('lastCreatedUser') || 'null');

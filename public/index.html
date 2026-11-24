@@ -1269,7 +1269,7 @@
         <span class="drawer-link-icon">📁</span>
         <span>Projects</span>
       </a>
-      <a href="pages/dashboard/home.html#ai-tutor" onclick="alert('AI Tutor is active! Ask any coding question.')" class="drawer-link" role="menuitem">
+      <a href="pages/dashboard/home.html#ai-tutor" class="drawer-link" role="menuitem">
         <span class="drawer-link-icon">🤖</span>
         <span>AI Tutor</span>
       </a>
@@ -1827,7 +1827,7 @@
         const descEl = document.getElementById('authModalDesc');
         if (descEl) {
           const cName = targetCourseName ? ' "' + targetCourseName + '"' : '';
-          descEl.textContent = 'To access' + cName + ' in Popular Courses, please complete creating your account. Create your free account now or login!';
+          descEl.textContent = 'To access' + cName + ', please complete creating your account. Create your free account now or login!';
         }
         authModal.classList.add('is-active');
       }
@@ -1851,7 +1851,26 @@
       });
     }
 
-    // Intercept Popular Course card clicks for new users who haven't completed registration
+    // Intercept drawer menu links for unauthenticated users
+    if (navDrawerMenu) {
+      navDrawerMenu.querySelectorAll('.drawer-link').forEach(link => {
+        link.addEventListener('click', (e) => {
+          const href = link.getAttribute('href') || '';
+          if (href === '/' || href.includes('login.html') || href.startsWith('javascript:')) {
+            return;
+          }
+          if (!isUserAuthenticated()) {
+            e.preventDefault();
+            e.stopPropagation();
+            toggleNavDrawer(true);
+            const spanText = link.querySelector('span:last-child') ? link.querySelector('span:last-child').textContent.trim() : link.textContent.trim();
+            showAccountNotCompleted(spanText);
+          }
+        });
+      });
+    }
+
+    // // Intercept Popular Course card clicks for new users who haven't completed registration
     const courseCards = document.querySelectorAll('.course-tile-card');
     courseCards.forEach(card => {
       card.addEventListener('click', (e) => {
